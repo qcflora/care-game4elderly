@@ -1,0 +1,117 @@
+{
+  "id": "chen_nainai",
+  "name": "陈淑芬",
+  "nickname": "陈奶奶",
+  "age": 79,
+  "gender": "female",
+  "avatar": "/images/characters/chen_nainai.jpg",
+  "portrait": "/images/characters/chen_nainai.jpg",
+  "watercolorBase": "/images/characters/chen_nainai.jpg",
+  "background": "退休小学语文教师，教了四十年书，最骄傲的事是'没教过一个差学生'。老伴十年前去世，女儿在外地工作，每月寄生活费回来。陈奶奶性情温柔但骨子里固执，始终保留着教师的尊严感——即使记忆在流失，她也会下意识地把背挺直。患有中度阿尔茨海默症，做饭时忘了关火，反复问'吃饭了吗'，偶尔把来人认成她年轻时的学生。她不记得很多事，但她记得你爱吃的菜。数字生活度极低（10%），曾是知识分子、保持阅读和批改作业的习惯，但认知症让她的世界逐渐脱节——不是科技问题，是记忆问题。客厅墙上的老式挂历停在三月，旧语文课本的批注从工整变歪斜，最后一页写着'今天是几号'。",
+  "personality": [
+    "温柔",
+    "固执",
+    "教师尊严感",
+    "时间错乱",
+    "记不住事但记得感情",
+    "体面要强"
+  ],
+  "familyRelation": "独居，老伴十年前去世。女儿陈晓梅在外地工作，每月寄生活费，每周打一次电话。陈奶奶最牵挂女儿，但常常记不清女儿今年多大了。",
+  "healthCondition": {
+    "disease": "阿尔茨海默症",
+    "severity": "moderate",
+    "medications": [
+      "盐酸多奈哌齐片（安理申，改善认知）",
+      "盐酸美金刚片（中度阶段加用）",
+      "银杏叶提取物片（辅助改善脑循环）"
+    ],
+    "precautions": [
+      "防走失：佩戴定位手环，随身携带身份信息卡",
+      "规律服药不可自行停药，需监督用药",
+      "灶台安全：安装定时器和自动断火装置",
+      "保持规律作息，减少环境变化",
+      "家中环境简化，减少绊倒风险",
+      "不可独自远行外出",
+      "认知训练与回忆疗法辅助",
+      "注意情绪波动，避免激烈争执"
+    ],
+    "dailyDecay": 3
+  },
+  "baseAttributes": {
+    "health": 40,
+    "mood": 65,
+    "independence": 30,
+    "trust": 50
+  },
+  "tensionRules": [
+    {
+      "source": "trust",
+      "threshold": 30,
+      "operator": "<",
+      "target": "mood",
+      "perTurnDelta": -3,
+      "description": "信任值过低时（她不记得你或抗拒你），陈奶奶心情低落、更加封闭"
+    },
+    {
+      "source": "health",
+      "threshold": 30,
+      "operator": "<",
+      "target": "independence",
+      "perTurnDelta": -3,
+      "description": "健康值过低时，认知功能加速退化，自理能力进一步下降"
+    },
+    {
+      "source": "independence",
+      "threshold": 20,
+      "operator": "<",
+      "target": "mood",
+      "perTurnDelta": -2,
+      "description": "独立值过低时，陈奶奶感到自己'没用了'，教师尊严受挫导致心情下降"
+    }
+  ],
+  "storyActs": [
+    {
+      "act": 1,
+      "startDay": 1,
+      "endDay": 7,
+      "storyFile": "/data/stories/chen_nainai/act1.json",
+      "title": "第一幕：来自远方的信",
+      "theme": "解锁仪式与认知症初识"
+    },
+    {
+      "act": 2,
+      "startDay": 8,
+      "endDay": 21,
+      "storyFile": "/data/stories/chen_nainai/act2.json",
+      "title": "第二幕：她的时间",
+      "theme": "认知症沟通与身份认同"
+    },
+    {
+      "act": 3,
+      "startDay": 22,
+      "endDay": 30,
+      "storyFile": "/data/stories/chen_nainai/act3.json",
+      "title": "第三幕：谢谢你，同学",
+      "theme": "陪伴本身就是答案"
+    }
+  ],
+  "isLocked": true,
+  "unlockCondition": {
+    "dependsOn": "zhao_yeye",
+    "requiredDay": 30,
+    "requiredSkills": [
+      "psychological_support_cognitive_awareness"
+    ]
+  },
+  "spiritAppearance": {
+    "color": "#CE93D8",
+    "lottieAnimation": "spirit_appear_memory",
+    "name": "小忆"
+  },
+  "endingWeights": {
+    "health": 0.2,
+    "mood": 0.3,
+    "independence": 0.2,
+    "trust": 0.3
+  }
+}

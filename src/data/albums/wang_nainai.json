@@ -1,0 +1,210 @@
+[
+  {
+    "id": "album_wang_garden",
+    "characterId": "wang_nainai",
+    "title": "小菜园",
+    "image": "/images/placeholder/album.svg",
+    "caption": "王奶奶在自家小菜园里浇水，绿油油的蔬菜长势喜人",
+    "memory": "王奶奶一个人住，但把生活打理得井井有条。她最得意的是屋后那片小菜园，种着青菜、小葱、番茄和几株辣椒。每天清晨她都会到菜园里忙活一阵，浇水、除草、捉虫，忙得不亦乐乎。她说：“自己种的菜，吃着放心，还能省点钱。”菜园虽小，但被她打理得生机勃勃。邻居们都说，王奶奶的菜园是这片小区里最漂亮的。这张照片就是她正在给番茄苗搭架子，阳光洒在她花白的头发上，格外温暖。",
+    "unlockDay": 1,
+    "unlockCondition": "day >= 1",
+    "isUnlocked": false,
+    "scene": "自家小菜园",
+    "characters": [
+      "wang_nainai"
+    ],
+    "relatedDiaryId": "diary_wang_day1"
+  },
+  {
+    "id": "album_wang_blood_pressure",
+    "characterId": "wang_nainai",
+    "title": "量血压",
+    "image": "/images/placeholder/album.svg",
+    "caption": "第一次学会正确使用电子血压计，表情认真又谨慎",
+    "memory": "王奶奶患有高血压多年，但一直不太会正确使用血压计。她以前都是在社区诊所量，嫌麻烦，经常好几天不量一次。照护者教她使用电子血压计时，她学得很认真，戴上袖带后一动不动，生怕影响了读数。第一次量出145/90mmHg时，她撇了撇嘴：“又高了。”照护者安慰她别着急，慢慢来。从此她养成了每天早晚各量一次血压的习惯，在本子上工工整整地记录每一个数据，字迹虽然有些颤抖，但每一笔都写得认真。",
+    "unlockDay": 2,
+    "unlockCondition": "day >= 2",
+    "isUnlocked": false,
+    "scene": "家中客厅",
+    "characters": [
+      "wang_nainai"
+    ],
+    "relatedDiaryId": "diary_wang_day2"
+  },
+  {
+    "id": "album_wang_son_letter",
+    "characterId": "wang_nainai",
+    "title": "儿子的来信",
+    "image": "/images/placeholder/album.svg",
+    "caption": "收到在外地工作的儿子寄来的信，眼眶湿润",
+    "memory": "王奶奶的儿子在外地工作，平时很少回来，但每周都会寄一封信回来。这个习惯从儿子上大学时就开始，一直坚持了二十多年。信里儿子会写写自己的工作、生活，叮嘱母亲注意身体。王奶奶收到信后，会戴上老花镜反复读好几遍，然后小心翼翼地折好，放回信封里，和以前收到的信一起装在一个铁盒子里。她跟照护者说：“这孩子从小就爱写信，现在有手机了还是改不了这个习惯。”语气里满是骄傲和思念。",
+    "unlockDay": 4,
+    "unlockCondition": "day >= 4",
+    "isUnlocked": false,
+    "scene": "家中",
+    "characters": [
+      "wang_nainai"
+    ],
+    "relatedDiaryId": "diary_wang_day4"
+  },
+  {
+    "id": "album_wang_low_salt",
+    "characterId": "wang_nainai",
+    "title": "低盐饮食",
+    "image": "/images/placeholder/album.svg",
+    "caption": "学习低盐饮食烹饪，把盐罐换成了限盐勺",
+    "memory": "王奶奶做饭口味偏咸，吃了一辈子咸菜和腌制品，这是她血压控制不理想的重要原因。照护者建议她低盐饮食时，她第一反应是“没盐的菜怎么吃”。但在照护者的耐心劝导下，她答应试试看。她买了一把限盐勺，每顿饭严格控制在三克盐以内，还学会用醋、姜、蒜、花椒等调味品来替代部分盐分。慢慢地，她发现少盐的菜其实也挺好吃，舌头也慢慢变得敏感了，能尝出食材本身的鲜味。",
+    "unlockDay": 6,
+    "unlockCondition": "day >= 6",
+    "isUnlocked": false,
+    "scene": "家中厨房",
+    "characters": [
+      "wang_nainai"
+    ],
+    "relatedDiaryId": "diary_wang_day6"
+  },
+  {
+    "id": "album_wang_act1_complete",
+    "characterId": "wang_nainai",
+    "title": "第一章：血压管理入门",
+    "image": "/images/placeholder/album.svg",
+    "caption": "完成第一章，王奶奶掌握了高血压管理的基本方法",
+    "memory": "经过一周的学习和实践，王奶奶已经掌握了血压管理的基础知识。她学会了正确测量血压、记录数据、控制盐分摄入，还知道了哪些食物对血压有益、哪些应该避免。更重要的是，她从一开始的“将信将疑”变得“主动配合”，每天测量和记录血压已经成了习惯。她在菜园里种了几盆薄荷，说是泡茶喝能降血压。这个倔强了大半辈子的老人，正在用自己的方式学会与疾病和平共处。",
+    "unlockDay": 7,
+    "unlockCondition": "flag.wang_act1_complete == true",
+    "isUnlocked": false,
+    "scene": "家中",
+    "characters": [
+      "wang_nainai"
+    ],
+    "relatedDiaryId": "diary_wang_act1"
+  },
+  {
+    "id": "album_wang_dizziness",
+    "characterId": "wang_nainai",
+    "title": "头晕应对",
+    "image": "/images/placeholder/album.svg",
+    "caption": "学会识别头晕前兆，正确应对血压波动",
+    "memory": "那天王奶奶在菜园里蹲久了，站起来时突然一阵头晕，眼前发黑。她想起照护者教她的方法，没有慌张，扶着旁边的墙慢慢蹲下，闭上眼缓了几分钟。等头晕过去后，她回到屋里量了血压——160/100mmHg，偏高。她立刻按医嘱服用了降压药，然后在沙发上躺下休息。这件事后，她更加重视血压管理了，还在菜园里放了一张小凳子，干活时不再长时间蹲着。她跟照护者说：“差点就栽在菜地里了，多亏你教我的法子。”",
+    "unlockDay": 8,
+    "unlockCondition": "day >= 8",
+    "isUnlocked": false,
+    "scene": "自家小菜园",
+    "characters": [
+      "wang_nainai"
+    ],
+    "relatedDiaryId": "diary_wang_day8"
+  },
+  {
+    "id": "album_wang_morning_exercise",
+    "characterId": "wang_nainai",
+    "title": "晨练",
+    "image": "/images/placeholder/album.svg",
+    "caption": "每天清晨在社区广场做操，动作舒展而认真",
+    "memory": "王奶奶加入了社区的晨练队伍，每天早上六点半准时到广场做操。刚开始她手脚不协调，动作总是比别人慢半拍，但她不服输，回家后对着视频一遍遍练习。一周后，她已经能跟上节奏了，还学会了八段锦的前四式。晨练队的队长夸她进步快，她不好意思地笑了：“老了老了，不能偷懒，身体是自己的。”晨练不仅让她的血压更稳定了，还让她交到了几个好朋友，生活不再那么孤单了。",
+    "unlockDay": 10,
+    "unlockCondition": "day >= 10",
+    "isUnlocked": false,
+    "scene": "社区广场",
+    "characters": [
+      "wang_nainai"
+    ],
+    "relatedDiaryId": "diary_wang_day10"
+  },
+  {
+    "id": "album_wang_neighbor",
+    "characterId": "wang_nainai",
+    "title": "邻里互助",
+    "image": "/images/placeholder/album.svg",
+    "caption": "邻居大姐帮忙照看菜园，两人有说有笑",
+    "memory": "王奶奶独自居住，虽然习惯了，但偶尔也会觉得孤单。隔壁的张大姐知道她血压高后，经常过来串门，帮她照看菜园，还把自己做的低盐小菜送给她尝。王奶奶起初不好意思接受，但张大姐说：“远亲不如近邻，互相照应是应该的。”渐渐地，两人成了好朋友，每天傍晚一起在小区里散步，聊聊家常。王奶奶感慨道：“以前总觉得一个人挺好，现在才知道，有个人说说话，心里舒坦多了。",
+    "unlockDay": 14,
+    "unlockCondition": "day >= 14",
+    "isUnlocked": false,
+    "scene": "小区",
+    "characters": [
+      "wang_nainai"
+    ],
+    "relatedDiaryId": "diary_wang_day14"
+  },
+  {
+    "id": "album_wang_medication",
+    "characterId": "wang_nainai",
+    "title": "规律服药",
+    "image": "/images/placeholder/album.svg",
+    "caption": "养成按时服药的习惯，药盒放在最显眼的位置",
+    "memory": "王奶奶以前总是忘记吃药，有时候想起来就补一顿，想不起来就算了。照护者给她买了一个星期的分药盒，每天早晚帮她把药装好，还在手机上设了闹钟提醒。刚开始她还是不习惯，闹钟响了也不一定立刻去吃药。后来有一天她因为没按时吃药，血压又飙高了，头疼得厉害，这才意识到规律服药的重要性。从那以后，她把药盒放在了饭桌上最显眼的位置，闹钟一响就立刻去吃药。她对照护者说：“这一次可记住了，不吃药的亏，吃一次就够了。”",
+    "unlockDay": 18,
+    "unlockCondition": "day >= 18",
+    "isUnlocked": false,
+    "scene": "家中餐厅",
+    "characters": [
+      "wang_nainai"
+    ],
+    "relatedDiaryId": "diary_wang_day18"
+  },
+  {
+    "id": "album_wang_act2_complete",
+    "characterId": "wang_nainai",
+    "title": "第二章：血压稳定",
+    "image": "/images/placeholder/album.svg",
+    "caption": "完成第二章，王奶奶的血压控制在理想范围",
+    "memory": "经过二十天的努力，王奶奶的血压从最初的150-160/90-100mmHg稳定到了130/85mmHg左右。她坚持低盐饮食、规律服药、每天晨练，再加上乐观的心态，整个人看起来精神了很多。她的小菜园也迎来了丰收，番茄红了，辣椒挂满了枝头。她摘了一些送给邻居和照护者，笑得合不拢嘴。这场与高血压的“持久战”，她用毅力和智慧赢得了第一阶段的胜利。",
+    "unlockDay": 20,
+    "unlockCondition": "flag.wang_act2_complete == true",
+    "isUnlocked": false,
+    "scene": "家门口",
+    "characters": [
+      "wang_nainai"
+    ],
+    "relatedDiaryId": "diary_wang_act2"
+  },
+  {
+    "id": "album_wang_son_visit",
+    "characterId": "wang_nainai",
+    "title": "儿子回家",
+    "image": "/images/placeholder/album.svg",
+    "caption": "儿子专程回家探望，王奶奶做了一桌低盐健康菜",
+    "memory": "王奶奶的儿子请了年假，专程从外地回来探望母亲。他一进门就看到母亲气色好了很多，家里收拾得干干净净，冰箱上贴着血压记录表。王奶奶系着围裙在厨房里忙活，做了一桌低盐健康菜——清蒸鱼、白灼虾、蒜蓉西兰花、杂粮饭。儿子惊讶地问：“妈，您什么时候学会做这些了？”王奶奶笑着说：“你妈我学了新本事，以后你不用担心了。”吃饭时，儿子看着母亲精神矍铄的样子，偷偷抹了抹眼角。",
+    "unlockDay": 22,
+    "unlockCondition": "day >= 22",
+    "isUnlocked": false,
+    "scene": "家中",
+    "characters": [
+      "wang_nainai"
+    ],
+    "relatedDiaryId": "diary_wang_day22"
+  },
+  {
+    "id": "album_wang_bp_stable",
+    "characterId": "wang_nainai",
+    "title": "血压达标",
+    "image": "/images/placeholder/album.svg",
+    "caption": "连续一周血压稳定在正常范围，王奶奶开心地笑了",
+    "memory": "照护旅程接近尾声时，王奶奶已经连续一周血压稳定在125/80mmHg左右。她拿着血压记录本，一页页翻看，从第一天的145/90到现在的125/80，每一个数字都记录着她的努力和坚持。她把记录本拍下来发给儿子，配文是：“你妈我厉害吧。”儿子回复了一个大大的赞。她跟照护者说：“以前觉得高血压不是什么大病，现在才知道，管好它，日子才能过得舒坦。”这句话，是她用一个月的时间悟出来的道理。",
+    "unlockDay": 26,
+    "unlockCondition": "day >= 26",
+    "isUnlocked": false,
+    "scene": "家中客厅",
+    "characters": [
+      "wang_nainai"
+    ],
+    "relatedDiaryId": "diary_wang_day26"
+  },
+  {
+    "id": "album_wang_ending",
+    "characterId": "wang_nainai",
+    "title": "阳光正好",
+    "image": "/images/placeholder/album.svg",
+    "caption": "照护旅程结束，王奶奶在菜园里摘下一颗熟透的番茄",
+    "memory": "最后一天，王奶奶拉着照护者来到她的小菜园，摘下一颗最大最红的番茄，塞到照护者手里。“拿着，这是我自己种的，没打农药，甜着呢。”她笑着说，眼角的皱纹像阳光一样温暖。她的血压已经稳定，生活习惯也完全改变了，再也不是那个一个人硬撑的老太太了。她拿出一个布包，里面是她亲手缝制的鞋垫，上面绣着“平安”两个字。“给你做的，穿着走路踏实。”这个善良倔强了一辈子的老人，用最朴实的方式表达着她的感激。",
+    "unlockDay": 30,
+    "unlockCondition": "flag.wang_ending == true",
+    "isUnlocked": false,
+    "scene": "小菜园",
+    "characters": [
+      "wang_nainai"
+    ],
+    "relatedDiaryId": "diary_wang_ending"
+  }
+]

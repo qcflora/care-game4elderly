@@ -1,0 +1,1235 @@
+{
+  "characterId": "zhang_nainai",
+  "act": 1,
+  "title": "第一幕：晨间日常",
+  "theme": "建立照护节奏，学习基础观察与防跌倒",
+  "startDay": 1,
+  "endDay": 7,
+  "nodes": [
+    {
+      "id": "zhang_act1_d1_001",
+      "characterId": "zhang_nainai",
+      "act": 1,
+      "day": 1,
+      "type": "narrative",
+      "scene": "bedroom",
+      "illustrationId": "zhang_morning_light",
+      "dialogues": [
+        {
+          "id": "dlg_d1_1",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "清晨六点半，窗帘缝里透进一线光。张秀兰已经醒了，她侧过身，慢慢地把腿从被子里挪出来，动作很轻，像是怕吵醒隔壁房间的儿子。",
+          "layer": "essential",
+          "duration": 4500,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_d1_2",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "你好呀，我是家庭守护精灵。从今天起，我会陪在你身边，一起守护张奶奶——这位78岁的退休语文老师。",
+          "layer": "essential",
+          "emotion": "cheerful",
+          "lottieAnimation": "spirit_appear",
+          "typingSpeed": 35
+        },
+        {
+          "id": "dlg_d1_3",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "她和儿子一家同住，有心脏病和骨质疏松。两年前跌倒过一次，从那以后她就很怕走路。最让我担心的是——她身体不舒服的时候，总是忍着不说。",
+          "layer": "essential",
+          "emotion": "gentle",
+          "typingSpeed": 35
+        },
+        {
+          "id": "dlg_d1_4",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "你看，她正准备起床呢。这个时候可得小心，老人起床太急容易头晕。你觉得应该怎么做？",
+          "layer": "essential",
+          "emotion": "curious"
+        }
+      ],
+      "nextNode": "zhang_act1_d1_002",
+      "transition": {
+        "enter": "fade-in",
+        "illustrationTransition": "watercolor",
+        "duration": 800
+      },
+      "isCheckpoint": true,
+      "tags": ["intro", "tutorial", "morning"],
+      "devNote": "开场节点，精灵首次登场，介绍张奶奶背景"
+    },
+    {
+      "id": "zhang_act1_d1_002",
+      "characterId": "zhang_nainai",
+      "act": 1,
+      "day": 1,
+      "type": "choice",
+      "scene": "bedroom",
+      "illustrationId": "zhang_getting_up",
+      "dialogues": [
+        {
+          "id": "dlg_d1_5",
+          "speaker": "elder",
+          "speakerName": "张奶奶",
+          "text": "（撑着床沿想站起来，动作有些发颤）没事没事，我自己能行……",
+          "layer": "essential",
+          "emotion": "strained"
+        }
+      ],
+      "choices": [
+        {
+          "id": "zhang_act1_d1_002_a",
+          "text": "直接扶住她胳膊，帮她坐起来站好",
+          "description": "快速起身，避免她久坐受凉",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": 3, "reason": "减少了起身时间" },
+            { "type": "independence", "delta": -8, "reason": "过度代劳，剥夺自理" },
+            { "type": "mood", "delta": -3, "reason": "感到自己没用" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhang_act1_d1_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "嗯……你是好心，但张奶奶自己还能慢慢起身。直接代劳会让她觉得自己什么都做不了。而且起床太快反而容易头晕跌倒。",
+            "explanation": "过度代劳降低独立值。老人起床应遵循「三个30秒」：醒后躺30秒、坐30秒、站30秒，预防体位性低血压。"
+          }
+        },
+        {
+          "id": "zhang_act1_d1_002_b",
+          "text": "提醒她先坐30秒再站，在旁边护着但不搀扶",
+          "description": "辅助而非替代",
+          "isCorrect": true,
+          "effects": [
+            { "type": "health", "delta": 4, "reason": "预防体位性低血压" },
+            { "type": "independence", "delta": 8, "reason": "鼓励自理" },
+            { "type": "mood", "delta": 2, "reason": "被尊重的安心感" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "zhang_act1_d1_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "做得真好！让她自己起，你在旁边守着——这叫「辅助而非替代」。记住了吗？老人起床要「躺30秒、坐30秒、站30秒」。",
+            "explanation": "体位性低血压预防：起床先坐30秒。辅助而非替代是照护的核心原则，既保证安全又维护自理能力。"
+          }
+        },
+        {
+          "id": "zhang_act1_d1_002_c",
+          "text": "她说能行，那就让她自己起，先去准备早饭",
+          "description": "尊重她的意愿",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": -5, "reason": "无人保护，跌倒风险" },
+            { "type": "independence", "delta": 3, "reason": "自主行动" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhang_act1_d1_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "张奶奶有骨质疏松，又怕跌倒，完全没人看着很危险。她说「能行」往往是不想麻烦你——这正是她「忍着不说」的习惯。",
+            "explanation": "完全不管会增加跌倒风险。正确做法是在旁保护但不代劳。要学会听懂老人「不用帮」背后的真实需要。"
+          }
+        }
+      ],
+      "props": [
+        {
+          "propId": "bedroom_nightlight",
+          "layer": "display",
+          "autoShow": true
+        }
+      ],
+      "tags": ["choice", "tutorial", "morning", "fall-prevention"],
+      "devNote": "第一个选择，教学体位性低血压与辅助非替代"
+    },
+    {
+      "id": "zhang_act1_d1_003",
+      "characterId": "zhang_nainai",
+      "act": 1,
+      "day": 1,
+      "type": "dialogue",
+      "scene": "bedroom",
+      "illustrationId": "zhang_sitting_edge",
+      "dialogues": [
+        {
+          "id": "dlg_d1_6",
+          "speaker": "elder",
+          "speakerName": "张奶奶",
+          "text": "哎，坐一会儿再站起来好多了，头不那么晕了。谢谢你啊，孩子。",
+          "layer": "essential",
+          "emotion": "grateful"
+        },
+        {
+          "id": "dlg_d1_7",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "她在床边坐稳，慢慢穿上那双软底布鞋，目光落在床头柜上那本翻旧了的硬抄本——那是她的血压记录本。",
+          "layer": "emotional",
+          "typingSpeed": 40
+        }
+      ],
+      "nextNode": "zhang_act1_d1_004",
+      "isCheckpoint": true
+    },
+    {
+      "id": "zhang_act1_d1_004",
+      "characterId": "zhang_nainai",
+      "act": 1,
+      "day": 1,
+      "type": "dayEnd",
+      "scene": "bedroom",
+      "illustrationId": "zhang_night_rest",
+      "dialogues": [
+        {
+          "id": "dlg_d1_8",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "第一天结束了！今天你学会了第一条：起床「躺、坐、站」各30秒。明天我们会遇到新的挑战——张奶奶的一堆药。",
+          "layer": "essential",
+          "emotion": "proud"
+        },
+        {
+          "id": "dlg_d1_9",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "（精灵轻轻落在硬抄本上，像是在守护那些潦草的数字）她的世界很小，但每一个细节都值得被看见。",
+          "layer": "emotional",
+          "emotion": "gentle",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end"],
+      "devNote": "Day 1 结束，伏笔：纸质血压记录本"
+    },
+    {
+      "id": "zhang_act1_d2_001",
+      "characterId": "zhang_nainai",
+      "act": 1,
+      "day": 2,
+      "type": "narrative",
+      "scene": "bedroom",
+      "illustrationId": "zhang_dizzy_morning",
+      "dialogues": [
+        {
+          "id": "dlg_d2_1",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "第二天清晨，张奶奶照旧醒了。今天她坐起来的时候，身子晃了一下，扶住了床头才稳住。",
+          "layer": "essential",
+          "duration": 4000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_d2_2",
+          "speaker": "elder",
+          "speakerName": "张奶奶",
+          "text": "（低声）没事……就是起猛了，眼前有点花。",
+          "layer": "essential",
+          "emotion": "uneasy"
+        },
+        {
+          "id": "dlg_d2_3",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "她又说「没事」了。但这可不是小事——头晕可能是体位性低血压，也可能是血压控制不好。你怎么处理？",
+          "layer": "essential",
+          "emotion": "concerned"
+        }
+      ],
+      "nextNode": "zhang_act1_d2_002",
+      "tags": ["morning", "fall-prevention"]
+    },
+    {
+      "id": "zhang_act1_d2_002",
+      "characterId": "zhang_nainai",
+      "act": 1,
+      "day": 2,
+      "type": "choice",
+      "scene": "bedroom",
+      "illustrationId": "zhang_bp_check",
+      "dialogues": [
+        {
+          "id": "dlg_d2_4",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "她坐稳了，但脸色不太好。接下来你打算怎么做？",
+          "layer": "essential",
+          "emotion": "curious"
+        }
+      ],
+      "choices": [
+        {
+          "id": "zhang_act1_d2_002_a",
+          "text": "让她坐稳休息，询问头晕情况，等缓解后量血压",
+          "description": "先观察评估再行动",
+          "isCorrect": true,
+          "effects": [
+            { "type": "health", "delta": 8, "reason": "及时监测血压" },
+            { "type": "trust", "delta": 3, "reason": "被认真对待" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "zhang_act1_d2_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "非常好！头晕时不能急着站，先坐着休息观察。等缓解后再量血压，才能判断是体位性低血压还是血压波动。她「忍着不说」，所以你要主动问。",
+            "explanation": "体位性低血压处理：先坐稳休息，评估症状，必要时测量血压。主动询问是破解「忍着不说」的第一步。"
+          }
+        },
+        {
+          "id": "zhang_act1_d2_002_b",
+          "text": "赶紧扶她躺回床上，让她再多睡会儿",
+          "description": "让她休息恢复",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": 3, "reason": "暂时缓解" },
+            { "type": "independence", "delta": -8, "reason": "过度保护" },
+            { "type": "mood", "delta": -3, "reason": "感到被当成病人" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhang_act1_d2_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "让她躺回去看似安全，但没搞清楚头晕的原因，问题还在。而且她会觉得自己一不舒服就被按回床上，越来越不敢动。",
+            "explanation": "过度保护会让独立值和心情值同时下降。正确做法是先评估原因，而非简单回避活动。"
+          }
+        },
+        {
+          "id": "zhang_act1_d2_002_c",
+          "text": "让她慢慢站起来试试，看能不能走",
+          "description": "测试她的状态",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": -5, "reason": "头晕时站立增加跌倒风险" },
+            { "type": "trust", "delta": 1, "reason": "鼓励尝试" }
+          ],
+          "spiritPowerChange": 5,
+          "nextNode": "zhang_act1_d2_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "头晕还没缓解就让她站，万一腿软摔了呢？她有骨质疏松，摔一下可不得了。先坐稳，等好了再说。",
+            "explanation": "头晕未缓解时站立有跌倒风险。应遵循「躺、坐、站」节奏，确认缓解后再活动。"
+          }
+        }
+      ],
+      "props": [
+        {
+          "propId": "blood_pressure_monitor",
+          "layer": "display",
+          "autoShow": true
+        }
+      ],
+      "tags": ["choice", "morning", "fall-prevention", "heart-disease"]
+    },
+    {
+      "id": "zhang_act1_d2_003",
+      "characterId": "zhang_nainai",
+      "act": 1,
+      "day": 2,
+      "type": "dialogue",
+      "scene": "bedroom",
+      "illustrationId": "zhang_bp_recorded",
+      "dialogues": [
+        {
+          "id": "dlg_d2_5",
+          "speaker": "elder",
+          "speakerName": "张奶奶",
+          "text": "量出来150 over 90……比昨天高了一点。我记在本子上了。",
+          "layer": "essential",
+          "emotion": "calm"
+        },
+        {
+          "id": "dlg_d2_6",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "她从枕头底下摸出那本硬抄本，认认真真写下日期和数字，笔迹工整得像在批改学生作业。",
+          "layer": "emotional",
+          "typingSpeed": 40
+        }
+      ],
+      "nextNode": "zhang_act1_d2_004",
+      "isCheckpoint": true
+    },
+    {
+      "id": "zhang_act1_d2_004",
+      "characterId": "zhang_nainai",
+      "act": 1,
+      "day": 2,
+      "type": "dayEnd",
+      "scene": "bedroom",
+      "illustrationId": "zhang_night_rest",
+      "dialogues": [
+        {
+          "id": "dlg_d2_7",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "今天的收获：头晕别急着动，先坐稳评估，再量血压。明天是重头戏——张奶奶的一堆药，得好好分分类了。",
+          "layer": "essential",
+          "emotion": "encouraging"
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "zhang_act1_d3_001",
+      "characterId": "zhang_nainai",
+      "act": 1,
+      "day": 3,
+      "type": "narrative",
+      "scene": "living_room",
+      "illustrationId": "zhang_medicine_table",
+      "dialogues": [
+        {
+          "id": "dlg_d3_1",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "早餐桌上摆着好几个药瓶。张奶奶的药不少——心脏病的、骨质疏松的，还有钙片。她眯着眼挨个看标签，有些吃力。",
+          "layer": "essential",
+          "duration": 4000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_d3_2",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "今天的学习重点来了！张奶奶同时吃好几种药，每种吃药时间还不一样。有的空腹、有的餐后、有的睡前。我们得帮她把药盒分好类。",
+          "layer": "essential",
+          "emotion": "focused"
+        },
+        {
+          "id": "dlg_d3_3",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "你看这个药盒，分成早、中、晚、睡前四格。你来帮她把药分进去吧——记住，有些药有特殊要求哦。",
+          "layer": "essential",
+          "emotion": "curious"
+        }
+      ],
+      "nextNode": "zhang_act1_d3_002",
+      "props": [
+        {
+          "propId": "weekly_pill_box",
+          "layer": "operate",
+          "autoShow": true
+        }
+      ],
+      "tags": ["medication", "tutorial"]
+    },
+    {
+      "id": "zhang_act1_d3_002",
+      "characterId": "zhang_nainai",
+      "act": 1,
+      "day": 3,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "zhang_pill_sorting",
+      "dialogues": [
+        {
+          "id": "dlg_d3_4",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "阿司匹林肠溶片要空腹，美托洛尔要餐后，他汀类睡前吃，钙片餐后……还有一种阿仑膦酸钠，要求很特别。你会怎么分？",
+          "layer": "essential",
+          "emotion": "curious"
+        }
+      ],
+      "choices": [
+        {
+          "id": "zhang_act1_d3_002_a",
+          "text": "按服药时间分四格，阿仑膦酸钠放晨起空腹格并标注「满杯水+直立30分钟」",
+          "description": "严格按照每种药的要求分类",
+          "isCorrect": true,
+          "effects": [
+            { "type": "health", "delta": 8, "reason": "科学用药" },
+            { "type": "trust", "delta": 3, "reason": "认真负责" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "zhang_act1_d3_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "太棒了！阿仑膦酸钠必须晨起空腹用满杯水送服，服后保持直立30分钟，不然会刺激食道。你连这种细节都注意到了，张奶奶很安心。",
+            "explanation": "服药时间分类：空腹/随餐/餐后/睡前。阿仑膦酸钠特殊要求：空腹、满杯水、服后直立30分钟，避免食道刺激。"
+          }
+        },
+        {
+          "id": "zhang_act1_d3_002_b",
+          "text": "按早、晚两格简单分一下就好",
+          "description": "大致分类",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": 4, "reason": "基本按时吃药" },
+            { "type": "trust", "delta": 1, "reason": "有在帮忙" }
+          ],
+          "spiritPowerChange": 5,
+          "nextNode": "zhang_act1_d3_003",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "方向对了，但分得太粗。阿仑膦酸钠和空腹药放一起，钙片和餐后药放一起，时间搞混了会影响药效。来，我教你仔细分。",
+            "explanation": "药物分类要精确到空腹/随餐/餐后/睡前四类，混放会导致服药时间错误，影响疗效或增加副作用。"
+          }
+        },
+        {
+          "id": "zhang_act1_d3_002_c",
+          "text": "把药瓶都摆着，让她每次自己拿",
+          "description": "尊重她的自主",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": -5, "reason": "容易吃错或漏服" },
+            { "type": "trust", "delta": -3, "reason": "感觉被敷衍" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhang_act1_d3_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "药瓶摆一堆，老人家眼神不好，很容易拿错或重复吃。用药安全可马虎不得，分好药盒才是负责任的做法。",
+            "explanation": "外观相似的药物易混淆。应使用周药盒按时间分好，降低漏服、错服、重复服用的风险。"
+          }
+        }
+      ],
+      "props": [
+        {
+          "propId": "weekly_pill_box",
+          "layer": "operate",
+          "autoShow": true
+        },
+        {
+          "propId": "medicine_labels",
+          "layer": "inspect",
+          "autoShow": false
+        }
+      ],
+      "tags": ["choice", "medication", "tutorial"],
+      "devNote": "用药管理教学，操作型道具：药盒拖拽分类"
+    },
+    {
+      "id": "zhang_act1_d3_003",
+      "characterId": "zhang_nainai",
+      "act": 1,
+      "day": 3,
+      "type": "dialogue",
+      "scene": "living_room",
+      "illustrationId": "zhang_meds_done",
+      "dialogues": [
+        {
+          "id": "dlg_d3_5",
+          "speaker": "elder",
+          "speakerName": "张奶奶",
+          "text": "分得真清楚，比我那本子上的还明白。这阿仑膦酸钠我以前也不知道要站着吃，难怪嗓子不舒服过。",
+          "layer": "essential",
+          "emotion": "surprised"
+        },
+        {
+          "id": "dlg_d3_6",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "她拿起药盒端详了一会儿，像是在确认每一格的颜色和数量，然后满意地点点头。",
+          "layer": "emotional",
+          "typingSpeed": 40
+        }
+      ],
+      "nextNode": "zhang_act1_d3_004",
+      "isCheckpoint": true
+    },
+    {
+      "id": "zhang_act1_d3_004",
+      "characterId": "zhang_nainai",
+      "act": 1,
+      "day": 3,
+      "type": "dayEnd",
+      "scene": "living_room",
+      "illustrationId": "zhang_night_rest",
+      "dialogues": [
+        {
+          "id": "dlg_d3_7",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "用药管理的第一课：按时间分四格，特殊药物标注清楚。明天张奶奶要洗澡，那也是一道安全关卡。",
+          "layer": "essential",
+          "emotion": "encouraging"
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "zhang_act1_d4_001",
+      "characterId": "zhang_nainai",
+      "act": 1,
+      "day": 4,
+      "type": "narrative",
+      "scene": "bathroom",
+      "illustrationId": "zhang_bathroom_prep",
+      "dialogues": [
+        {
+          "id": "dlg_d4_1",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "上午，张奶奶说要洗个澡。卫生间地砖有些凉，浴缸边沿没有扶手，地上还湿漉漉的。",
+          "layer": "essential",
+          "duration": 4000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_d4_2",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "洗澡是老人最容易跌倒的场景之一，尤其是有骨质疏松的张奶奶。水温、时长、防滑，每一样都不能马虎。",
+          "layer": "essential",
+          "emotion": "concerned"
+        }
+      ],
+      "nextNode": "zhang_act1_d4_002",
+      "tags": ["bath-safety", "fall-prevention"]
+    },
+    {
+      "id": "zhang_act1_d4_002",
+      "characterId": "zhang_nainai",
+      "act": 1,
+      "day": 4,
+      "type": "choice",
+      "scene": "bathroom",
+      "illustrationId": "zhang_bath_choice",
+      "dialogues": [
+        {
+          "id": "dlg_d4_3",
+          "speaker": "elder",
+          "speakerName": "张奶奶",
+          "text": "我自己洗就行，你在外面等着就好。",
+          "layer": "essential",
+          "emotion": "polite"
+        },
+        {
+          "id": "dlg_d4_4",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "她想自己洗，这很好。但安全措施得做好。你打算怎么准备？",
+          "layer": "essential",
+          "emotion": "curious"
+        }
+      ],
+      "choices": [
+        {
+          "id": "zhang_act1_d4_002_a",
+          "text": "调好水温37-40°C，铺防滑垫，门虚掩，提醒不超过15分钟",
+          "description": "做好安全准备，尊重她自己洗",
+          "isCorrect": true,
+          "effects": [
+            { "type": "health", "delta": 8, "reason": "安全的洗澡环境" },
+            { "type": "independence", "delta": 3, "reason": "尊重自理" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "zhang_act1_d4_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "完美！水温37到40度刚好，防滑垫铺好，门虚掩既保护隐私又能听见动静。15分钟是安全上限，太久容易晕浴。她能自己洗，就让她自己洗。",
+            "explanation": "洗澡安全三要素：水温37-40°C、时长不超过15分钟、地面防滑。门虚掩兼顾隐私与安全。辅助而非替代。"
+          }
+        },
+        {
+          "id": "zhang_act1_d4_002_b",
+          "text": "帮她洗，全程在旁边盯着",
+          "description": "确保万无一失",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": 3, "reason": "有人看着" },
+            { "type": "independence", "delta": -8, "reason": "剥夺自理" },
+            { "type": "mood", "delta": -3, "reason": "难堪和自尊受损" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhang_act1_d4_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "张奶奶还能自己洗，全程盯着会让她非常难堪。她是个要强的人，被当成什么都做不了，心情会跌得很厉害。",
+            "explanation": "过度代劳在洗澡场景尤其伤害自尊。在能力范围内应尊重自理，做好环境安全即可。"
+          }
+        },
+        {
+          "id": "zhang_act1_d4_002_c",
+          "text": "调好水温让她自己洗，但没铺防滑垫",
+          "description": "基本准备，漏了关键",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": -5, "reason": "湿滑地面跌倒风险高" },
+            { "type": "independence", "delta": 3, "reason": "让她自己洗" }
+          ],
+          "spiritPowerChange": 5,
+          "nextNode": "zhang_act1_d4_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "水温对了，但地上没防滑垫！卫生间是最容易摔跤的地方，她有骨质疏松，一摔可能就是骨折。快把防滑垫铺上。",
+            "explanation": "防滑垫是洗澡安全的核心措施。骨质疏松患者跌倒后果严重，必须做好地面防滑。"
+          }
+        }
+      ],
+      "props": [
+        {
+          "propId": "anti_slip_mat",
+          "layer": "display",
+          "autoShow": true
+        },
+        {
+          "propId": "bathroom_grab_bar",
+          "layer": "display",
+          "autoShow": false
+        }
+      ],
+      "tags": ["choice", "bath-safety", "fall-prevention"]
+    },
+    {
+      "id": "zhang_act1_d4_003",
+      "characterId": "zhang_nainai",
+      "act": 1,
+      "day": 4,
+      "type": "dialogue",
+      "scene": "bathroom",
+      "illustrationId": "zhang_after_bath",
+      "dialogues": [
+        {
+          "id": "dlg_d4_5",
+          "speaker": "elder",
+          "speakerName": "张奶奶",
+          "text": "洗完了，舒坦。这防滑垫踩着踏实，以前总怕滑，洗得提心吊胆的。",
+          "layer": "essential",
+          "emotion": "relaxed"
+        },
+        {
+          "id": "dlg_d4_6",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "她换上干净衣裳，头发还有点湿，却笑得像个刚放学的小姑娘。",
+          "layer": "emotional",
+          "typingSpeed": 40
+        }
+      ],
+      "nextNode": "zhang_act1_d4_004",
+      "isCheckpoint": true
+    },
+    {
+      "id": "zhang_act1_d4_004",
+      "characterId": "zhang_nainai",
+      "act": 1,
+      "day": 4,
+      "type": "dayEnd",
+      "scene": "bathroom",
+      "illustrationId": "zhang_night_rest",
+      "dialogues": [
+        {
+          "id": "dlg_d4_7",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "洗澡安全记住了：37-40度、15分钟、防滑垫。明天我们来看看那本血压记录本——她量了却不爱记，这可不行。",
+          "layer": "essential",
+          "emotion": "encouraging"
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "zhang_act1_d5_001",
+      "characterId": "zhang_nainai",
+      "act": 1,
+      "day": 5,
+      "type": "narrative",
+      "scene": "living_room",
+      "illustrationId": "zhang_bp_notebook",
+      "dialogues": [
+        {
+          "id": "dlg_d5_1",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "张奶奶量完血压，电子血压计上显示148/92。她看了一眼数字，却没有按记录键，而是拿起硬抄本，用笔慢慢抄了下来。",
+          "layer": "essential",
+          "duration": 4500,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_d5_2",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "你看，电子血压计明明有记忆功能，她偏不用，非得手抄。而且我翻了翻她的本子——有些天的数字写得特别潦草，有些天干脆空着。她量了，但没好好记。",
+          "layer": "essential",
+          "emotion": "concerned"
+        },
+        {
+          "id": "dlg_d5_3",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "血压记录不规范，医生就没法判断药效。你觉得该怎么帮她？",
+          "layer": "essential",
+          "emotion": "curious"
+        }
+      ],
+      "nextNode": "zhang_act1_d5_002",
+      "props": [
+        {
+          "propId": "paper_bp_notebook",
+          "layer": "inspect",
+          "autoShow": true
+        },
+        {
+          "propId": "electronic_bp_monitor",
+          "layer": "display",
+          "autoShow": true
+        }
+      ],
+      "tags": ["bp-record", "heart-disease"]
+    },
+    {
+      "id": "zhang_act1_d5_002",
+      "characterId": "zhang_nainai",
+      "act": 1,
+      "day": 5,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "zhang_bp_record_choice",
+      "dialogues": [
+        {
+          "id": "dlg_d5_4",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "她习惯用纸和笔，这没什么不好。但记录得规范才行。你打算怎么做？",
+          "layer": "essential",
+          "emotion": "curious"
+        }
+      ],
+      "choices": [
+        {
+          "id": "zhang_act1_d5_002_a",
+          "text": "尊重她的纸笔习惯，帮她做一张规范的记录表（日期/时间/收缩压/舒张压/备注）",
+          "description": "顺应她的习惯，让记录更规范",
+          "isCorrect": true,
+          "effects": [
+            { "type": "trust", "delta": 8, "reason": "尊重她的习惯" },
+            { "type": "mood", "delta": 3, "reason": "被理解的温暖" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "zhang_act1_d5_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "做得好！关键不是用什么工具记，而是记下来、记得全。她喜欢纸笔，那就帮她把纸笔用得更好。这张表有日期、时间、两个血压值和备注栏，一目了然。",
+            "explanation": "尊重老人的记录习惯比强行改变更重要。规范记录应包含：日期、测量时间、收缩压、舒张压、特殊情况备注。"
+          }
+        },
+        {
+          "id": "zhang_act1_d5_002_b",
+          "text": "教她用电子血压计的记忆功能，以后自动记录",
+          "description": "用科技解决",
+          "isCorrect": false,
+          "effects": [
+            { "type": "trust", "delta": -5, "reason": "不尊重她的习惯" },
+            { "type": "mood", "delta": -3, "reason": "被强迫改变" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhang_act1_d5_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "她用了一辈子纸笔，电子血压计的按钮她按不利索，更别说调出历史记录了。强行让她改，她会抵触，最后可能连量都不量了。",
+            "explanation": "照护要顺应老人的能力和习惯，而非用「更先进」的工具替代。数字生活度低的老人，纸笔记录反而更可靠。"
+          }
+        },
+        {
+          "id": "zhang_act1_d5_002_c",
+          "text": "帮她在手机APP上记录，随时可以看趋势图",
+          "description": "用手机管理",
+          "isCorrect": false,
+          "effects": [
+            { "type": "trust", "delta": 4, "reason": "有在帮忙" },
+            { "type": "mood", "delta": 1, "reason": "新鲜感" }
+          ],
+          "spiritPowerChange": 5,
+          "nextNode": "zhang_act1_d5_003",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "手机APP趋势图是好看，但张奶奶不会用手机查，最后还是得你来记。而且她量血压的时候你不一定在旁边。不如让她自己能用纸笔记下来，更靠谱。",
+            "explanation": "工具选择应以老人能独立使用为前提。纸笔虽朴素，但老人能自主完成，可持续性更强。"
+          }
+        }
+      ],
+      "tags": ["choice", "bp-record", "heart-disease"]
+    },
+    {
+      "id": "zhang_act1_d5_003",
+      "characterId": "zhang_nainai",
+      "act": 1,
+      "day": 5,
+      "type": "dialogue",
+      "scene": "living_room",
+      "illustrationId": "zhang_bp_table",
+      "dialogues": [
+        {
+          "id": "dlg_d5_5",
+          "speaker": "elder",
+          "speakerName": "张奶奶",
+          "text": "这张表好，格子清楚，我照着填就行。以后给大夫看也明白。",
+          "layer": "essential",
+          "emotion": "pleased"
+        },
+        {
+          "id": "dlg_d5_6",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "她把新表格夹进硬抄本，郑重地像是把一份承诺收进了抽屉。",
+          "layer": "emotional",
+          "typingSpeed": 40
+        }
+      ],
+      "nextNode": "zhang_act1_d5_004",
+      "isCheckpoint": true,
+      "unlocks": [
+        {
+          "albumEntryId": "album_zhang_bp_table"
+        }
+      ]
+    },
+    {
+      "id": "zhang_act1_d5_004",
+      "characterId": "zhang_nainai",
+      "act": 1,
+      "day": 5,
+      "type": "dayEnd",
+      "scene": "living_room",
+      "illustrationId": "zhang_night_rest",
+      "dialogues": [
+        {
+          "id": "dlg_d5_7",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "今天的关键：记录比工具重要，习惯比科技重要。明天要面对张奶奶心里最大的阴影——她害怕走路。",
+          "layer": "essential",
+          "emotion": "gentle"
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "zhang_act1_d6_001",
+      "characterId": "zhang_nainai",
+      "act": 1,
+      "day": 6,
+      "type": "narrative",
+      "scene": "living_room",
+      "illustrationId": "zhang_afraid_to_walk",
+      "dialogues": [
+        {
+          "id": "dlg_d6_1",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "下午，张奶奶想去客厅另一头的沙发上拿毛线。她站起来，看了一眼那段不到五米的距离，犹豫了好一会儿，又坐了回去。",
+          "layer": "essential",
+          "duration": 4500,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_d6_2",
+          "speaker": "elder",
+          "speakerName": "张奶奶",
+          "text": "（低声）……算了，不拿了。",
+          "layer": "essential",
+          "emotion": "fearful"
+        },
+        {
+          "id": "dlg_d6_3",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "看到了吗？两年前那次跌倒，在她心里留下了很深的阴影。她不是走不动，是不敢走。这道坎，得慢慢帮她跨过去。",
+          "layer": "essential",
+          "emotion": "concerned"
+        }
+      ],
+      "nextNode": "zhang_act1_d6_002",
+      "tags": ["fall-fear", "psychology"]
+    },
+    {
+      "id": "zhang_act1_d6_002",
+      "characterId": "zhang_nainai",
+      "act": 1,
+      "day": 6,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "zhang_walking_choice",
+      "dialogues": [
+        {
+          "id": "dlg_d6_4",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "她害怕走路，但越不走路，腿越没劲，越容易摔——这是个恶性循环。你怎么帮她？",
+          "layer": "essential",
+          "emotion": "curious"
+        }
+      ],
+      "choices": [
+        {
+          "id": "zhang_act1_d6_002_a",
+          "text": "陪她慢慢走过去，在旁边保护但不搀扶，鼓励她用拐杖",
+          "description": "辅助而非替代，重建信心",
+          "isCorrect": true,
+          "effects": [
+            { "type": "independence", "delta": 8, "reason": "鼓励自主行走" },
+            { "type": "mood", "delta": 3, "reason": "重建信心" },
+            { "type": "trust", "delta": 2, "reason": "被支持的安全感" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "zhang_act1_d6_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "太好了！你在旁边守着，让她自己走，还鼓励她用拐杖——这就是「辅助而非替代」。她每走一步，信心就回来一点。拐杖不是衰老的标志，是让她重新敢走的依靠。",
+            "explanation": "跌倒恐惧的破解：陪伴保护+鼓励自主+合理使用辅具。越不动越容易摔，适度活动重建信心和肌力是关键。"
+          }
+        },
+        {
+          "id": "zhang_act1_d6_002_b",
+          "text": "直接帮她把毛线拿过来，不用她走",
+          "description": "省事又安全",
+          "isCorrect": false,
+          "effects": [
+            { "type": "independence", "delta": -8, "reason": "剥夺行动" },
+            { "type": "mood", "delta": -3, "reason": "更加恐惧和无力" },
+            { "type": "health", "delta": 3, "reason": "避免了跌倒" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhang_act1_d6_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "你帮她拿了，这次是安全了。但下次呢？她越来越不敢走，腿越来越没劲，以后真想走也走不动了。跌倒恐惧不是靠回避来解决的。",
+            "explanation": "过度保护会加重跌倒恐惧和肌力退化。应在安全环境下鼓励适度活动，打破「怕摔-不动-更易摔」的恶性循环。"
+          }
+        },
+        {
+          "id": "zhang_act1_d6_002_c",
+          "text": "扶着她的胳膊，带她走过去",
+          "description": "搀扶着走",
+          "isCorrect": false,
+          "effects": [
+            { "type": "independence", "delta": 2, "reason": "有在走" },
+            { "type": "mood", "delta": 1, "reason": "有人陪着" }
+          ],
+          "spiritPowerChange": 5,
+          "nextNode": "zhang_act1_d6_003",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "走了是好事，但一直搀着她会依赖你，自己反而不敢走了。更好的方式是让她用拐杖，你在旁边守着——把重心还给她自己。",
+            "explanation": "搀扶虽比代劳好，但易形成依赖。鼓励使用辅具（拐杖）自主行走，照护者在旁保护，更能重建独立信心。"
+          }
+        }
+      ],
+      "props": [
+        {
+          "propId": "walking_cane",
+          "layer": "display",
+          "autoShow": true
+        }
+      ],
+      "tags": ["choice", "fall-fear", "psychology", "assist-balance"]
+    },
+    {
+      "id": "zhang_act1_d6_003",
+      "characterId": "zhang_nainai",
+      "act": 1,
+      "day": 6,
+      "type": "dialogue",
+      "scene": "living_room",
+      "illustrationId": "zhang_walking_success",
+      "dialogues": [
+        {
+          "id": "dlg_d6_5",
+          "speaker": "elder",
+          "speakerName": "张奶奶",
+          "text": "（拄着拐杖，一步一步挪到沙发边）到了！嘿，也没那么吓人嘛。",
+          "layer": "essential",
+          "emotion": "proud"
+        },
+        {
+          "id": "dlg_d6_6",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "她拿起毛线团，回头看了看来时的路，嘴角有了一丝不易察觉的上扬。",
+          "layer": "emotional",
+          "typingSpeed": 40
+        }
+      ],
+      "nextNode": "zhang_act1_d6_004",
+      "isCheckpoint": true,
+      "unlocks": [
+        {
+          "albumEntryId": "album_zhang_first_walk"
+        }
+      ]
+    },
+    {
+      "id": "zhang_act1_d6_004",
+      "characterId": "zhang_nainai",
+      "act": 1,
+      "day": 6,
+      "type": "dayEnd",
+      "scene": "living_room",
+      "illustrationId": "zhang_night_rest",
+      "dialogues": [
+        {
+          "id": "dlg_d6_7",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "今天她走了五米，这五米比想象中重要。明天是第一幕的最后一天，我们来看看这一周的成果。",
+          "layer": "essential",
+          "emotion": "proud"
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "zhang_act1_d7_001",
+      "characterId": "zhang_nainai",
+      "act": 1,
+      "day": 7,
+      "type": "narrative",
+      "scene": "living_room",
+      "illustrationId": "zhang_week_review",
+      "dialogues": [
+        {
+          "id": "dlg_d7_1",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "一周过去了。傍晚，张奶奶坐在窗边，夕阳把她花白的头发染成淡金色。她手里的硬抄本翻到了新的一页，血压记录工工整整。",
+          "layer": "essential",
+          "duration": 4500,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_d7_2",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "第一周结束了！来回顾一下。这一周你学会了：起床「三个30秒」、药盒分类、洗澡安全、血压记录、还有帮她克服跌倒恐惧。",
+          "layer": "essential",
+          "emotion": "proud"
+        },
+        {
+          "id": "dlg_d7_3",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "最重要的原则是：辅助而非替代。张奶奶还能做的事，就让她自己做；你做的是保护和支持，不是替代。那接下来一周，你觉得最该关注什么？",
+          "layer": "essential",
+          "emotion": "curious"
+        }
+      ],
+      "nextNode": "zhang_act1_d7_002",
+      "tags": ["week-review", "checkpoint"]
+    },
+    {
+      "id": "zhang_act1_d7_002",
+      "characterId": "zhang_nainai",
+      "act": 1,
+      "day": 7,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "zhang_week_plan",
+      "dialogues": [
+        {
+          "id": "dlg_d7_4",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "第二周的主题是「心声与平衡」。张奶奶最大的问题是「忍着不说」——身体不舒服她不说，心里有顾虑她也不说。你打算怎么应对？",
+          "layer": "essential",
+          "emotion": "curious"
+        }
+      ],
+      "choices": [
+        {
+          "id": "zhang_act1_d7_002_a",
+          "text": "主动观察和询问，让她感到被关注，慢慢愿意开口",
+          "description": "建立信任，破解沉默",
+          "isCorrect": true,
+          "effects": [
+            { "type": "trust", "delta": 8, "reason": "被认真对待" },
+            { "type": "mood", "delta": 3, "reason": "被关心的温暖" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "zhang_act1_d7_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "说得好！她不是不想说，是怕给你添麻烦。你要做的是让她觉得「说出来不会被嫌烦」，这需要耐心和主动。信任是慢慢攒起来的。",
+            "explanation": "破解「忍着不说」的关键：主动观察+耐心询问+不评判的倾听。信任值是时间货币，需要长期积累。"
+          }
+        },
+        {
+          "id": "zhang_act1_d7_002_b",
+          "text": "重点盯用药和血压，身体好了自然心情好",
+          "description": "以身体健康为优先",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": 4, "reason": "关注身体健康" },
+            { "type": "trust", "delta": 1, "reason": "有在照顾" }
+          ],
+          "spiritPowerChange": 5,
+          "nextNode": "zhang_act1_d7_003",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "身体健康当然重要，但张奶奶的问题不只是身体。她忍着不说，你光盯数据发现不了。有时心情好了，身体反而跟着好。",
+            "explanation": "照护不只是管理身体指标。心理支持和身体健康同样重要，甚至相互影响。忽视心理信号会导致心情值跌破阈值。"
+          }
+        },
+        {
+          "id": "zhang_act1_d7_002_c",
+          "text": "全天陪护，寸步不离，确保她什么都跟我说",
+          "description": "全程陪伴",
+          "isCorrect": false,
+          "effects": [
+            { "type": "independence", "delta": -8, "reason": "过度保护" },
+            { "type": "mood", "delta": -3, "reason": "感到被监视" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhang_act1_d7_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "寸步不离听起来很用心，但张奶奶会觉得你在监视她，反而更不敢说了。她要的是「需要的时候你在」，不是「时时刻刻盯着」。",
+            "explanation": "过度陪护会让老人感到压力和被监视，反而降低信任和心情。适当的空间和主动的关心，比全天候监视更有效。"
+          }
+        }
+      ],
+      "tags": ["choice", "week-review"]
+    },
+    {
+      "id": "zhang_act1_d7_003",
+      "characterId": "zhang_nainai",
+      "act": 1,
+      "day": 7,
+      "type": "actEnd",
+      "scene": "living_room",
+      "illustrationId": "zhang_act1_end",
+      "dialogues": [
+        {
+          "id": "dlg_d7_5",
+          "speaker": "elder",
+          "speakerName": "张奶奶",
+          "text": "这一周，谢谢你。我活了大半辈子，没想到老了还得人教我怎么起床、怎么吃药。",
+          "layer": "essential",
+          "emotion": "moved"
+        },
+        {
+          "id": "dlg_d7_6",
+          "speaker": "elder",
+          "speakerName": "张奶奶",
+          "text": "不过……有你这么上心，我心里踏实多了。",
+          "layer": "essential",
+          "emotion": "grateful"
+        },
+        {
+          "id": "dlg_d7_7",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "第一幕结束了。基础照护的节奏已经建立。但真正的考验才刚开始——张奶奶心里的那些话，还一句都没说出口呢。",
+          "layer": "emotional",
+          "emotion": "gentle",
+          "typingSpeed": 35
+        }
+      ],
+      "isCheckpoint": true,
+      "unlocks": [
+        {
+          "albumEntryId": "album_zhang_act1_complete"
+        }
+      ],
+      "tags": ["act-end"],
+      "devNote": "第一幕结束，过场进入第二幕"
+    }
+  ]
+}

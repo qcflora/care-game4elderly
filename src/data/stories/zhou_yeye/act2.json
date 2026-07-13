@@ -1,0 +1,2075 @@
+{
+  "characterId": "zhou_yeye",
+  "act": 2,
+  "title": "第二幕：改造与突围",
+  "theme": "适老化改造、长护险与心理突破",
+  "startDay": 8,
+  "endDay": 21,
+  "nodes": [
+    {
+      "id": "zhou_act2_d8_001",
+      "characterId": "zhou_yeye",
+      "act": 2,
+      "day": 8,
+      "type": "narrative",
+      "scene": "living_room",
+      "illustrationId": "zhou_renovation_assessment",
+      "dialogues": [
+        {
+          "id": "dlg_001",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "上午，适老化改造评估师上门了。她拿着卷尺量了一圈，在笔记本上画了户型图。'周叔这个房子，二十年前的装修了，适老化改造空间很大。'她列出一张清单：卫生间扶手、淋浴防滑垫、马桶增高器、床边护栏、走廊坡道、门槛消除、感应夜灯、紧急呼叫按钮移位……总共十几项。",
+          "layer": "essential",
+          "duration": 5000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_002",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "适老化改造评估师来了。改造清单十几项，但预算有限——不是所有项目都能一次做完。评估师说：'要分轻重缓急，先解决跌倒风险最高的区域，再逐步完善。'这需要你来排优先级。",
+          "layer": "essential",
+          "emotion": "thoughtful"
+        },
+        {
+          "id": "dlg_003",
+          "speaker": "elder",
+          "speakerName": "周爷爷",
+          "text": "这么多项目……得花不少钱吧？我那点退休金够不够？别都弄了，捡要紧的来。",
+          "layer": "essential",
+          "emotion": "practical",
+          "typingSpeed": 40
+        },
+        {
+          "id": "dlg_004",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "周爷爷在心疼钱。适老化改造确实要考虑预算——但有些钱不能省。你需要帮他判断：哪些是'必须做'的安全项，哪些是'可以等等'的改善项。资源协调技能的核心，就是在有限预算里做最优配置。",
+          "layer": "essential",
+          "emotion": "serious"
+        }
+      ],
+      "nextNode": "zhou_act2_d8_002",
+      "isCheckpoint": true,
+      "tags": ["renovation", "resource-coordination"],
+      "devNote": "Day 8 适老化改造启动，评估师上门，引入预算约束"
+    },
+    {
+      "id": "zhou_act2_d8_002",
+      "characterId": "zhou_yeye",
+      "act": 2,
+      "day": 8,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "zhou_renovation_priority",
+      "dialogues": [
+        {
+          "id": "dlg_005",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "评估师把改造清单分成三类：安全必改项（防跌倒）、功能改善项（便利性）、舒适提升项（美观舒适）。预算只够先做一类。你建议先做哪类？",
+          "layer": "essential",
+          "emotion": "curious"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "先做安全必改项：卫生间扶手+防滑、床边护栏、走廊坡道、紧急呼叫按钮移到卫生间",
+          "description": "优先消除跌倒风险，预算花在刀刃上",
+          "isCorrect": true,
+          "effects": [
+            { "type": "health", "delta": 8, "reason": "系统性消除跌倒隐患" },
+            { "type": "independence", "delta": 5, "reason": "有扶手护栏后能更自主活动" },
+            { "type": "trust", "delta": 3, "reason": "把安全放在第一位让他安心" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "zhou_act2_d8_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "周爷爷听完方案点了点头：'行，先弄安全的。跌一跤什么都没了，其他的花不花无所谓。'工程师出身的他，理解'风险优先'的逻辑。安全必改项虽然不花哨，但每一分钱都在保命。",
+            "explanation": "最优策略：安全必改项优先。适老化改造的核心目的是'防跌倒'——脑梗后偏瘫老人跌倒可能导致骨折、二次脑梗甚至危及生命。卫生间扶手+防滑垫、床边护栏、走廊坡道、紧急呼叫按钮移位，这些直接消除跌倒源头和后果。预算有限时，安全永远排在第一位。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "先做舒适提升项：粉刷墙面、换新窗帘、换舒适沙发",
+          "description": "先改善居住环境美观度",
+          "isCorrect": false,
+          "effects": [
+            { "type": "mood", "delta": 3, "reason": "环境变好看确实心情好" },
+            { "type": "health", "delta": -5, "reason": "安全隐患未解决，跌倒风险持续" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhou_act2_d8_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "墙面粉刷了，窗帘换了，客厅确实亮堂了。但卫生间还是滑的、床边还是没护栏、走廊还是门槛——周爷爷每天还是在跌倒风险里走来走去。好看不等于安全，适老化改造不是装修。",
+            "explanation": "适老化改造不是普通装修。舒适提升项确实能改善心情，但如果安全风险没解决，一次跌倒就能把所有改善归零。预算有限时，美观和舒适必须让位于安全。这是资源协调的基本原则：先保命，再求好。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "全部都做，超预算也无所谓，安全最重要",
+          "description": "不计成本全部改造",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": 4, "reason": "全部改造安全确实到位" },
+            { "type": "mood", "delta": -3, "reason": "周爷爷心疼超出的钱，有心理负担" }
+          ],
+          "spiritPowerChange": 5,
+          "nextNode": "zhou_act2_d8_003",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "改造确实全面了，但预算超了不少。周爷爷看着账单，嘴上说'该花花'，但晚上翻来覆去睡不着——他不想给女儿增加经济负担。资源协调不是'全都做'，而是在有限资源里做最优选择。",
+            "explanation": "全部改造看似最安全，但忽略了经济承受力。周爷爷是心疼钱的人，超出预算会给他造成心理负担——'给女儿添麻烦了'这种想法会侵蚀他的心情值。资源协调的核心是'最优配置'，不是'全部都要'。"
+          }
+        }
+      ],
+      "tags": ["choice", "renovation", "resource-coordination"],
+      "devNote": "教学：适老化改造优先级——安全必改项优先 + 预算约束下的资源配置"
+    },
+    {
+      "id": "zhou_act2_d8_003",
+      "characterId": "zhou_yeye",
+      "act": 2,
+      "day": 8,
+      "type": "dayEnd",
+      "scene": "living_room",
+      "illustrationId": "zhou_day8_end",
+      "dialogues": [
+        {
+          "id": "dlg_006",
+          "speaker": "elder",
+          "speakerName": "周爷爷",
+          "text": "行，就这么定。安全先行，其他的以后再说。那个评估师……挺专业的。",
+          "layer": "essential",
+          "emotion": "satisfied"
+        },
+        {
+          "id": "dlg_007",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "改造方案定了。明天评估师会带来家居平面图，我们需要在上面标注每项改造的具体位置——扶手装哪里、坡道放哪里、防滑垫铺哪里。这就是周爷爷的专属道具：家居平面图。",
+          "layer": "essential",
+          "emotion": "encouraging",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "zhou_act2_d9_001",
+      "characterId": "zhou_yeye",
+      "act": 2,
+      "day": 9,
+      "type": "narrative",
+      "scene": "living_room",
+      "illustrationId": "zhou_floor_plan_intro",
+      "dialogues": [
+        {
+          "id": "dlg_008",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "评估师展开了周爷爷家的户型平面图——两室一厅的老户型，卫生间在走廊尽头，卧室和客厅之间有3厘米高的门槛。图上标注了现有的障碍物：湿滑地砖、门槛、无扶手马桶、无护栏床铺。旁边是一组改造配件的图标：L型扶手、坡道、防滑垫、夜灯。",
+          "layer": "essential",
+          "duration": 5000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_009",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "家居平面图展开了——这是周爷爷专属的操作型道具。你需要把改造配件拖拽到平面图上的正确位置。每个位置都有讲究：扶手装在哪面墙、坡道放在哪个门槛、防滑垫铺在哪个区域。来，我们一起规划。",
+          "layer": "essential",
+          "emotion": "curious"
+        },
+        {
+          "id": "dlg_010",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "适老化改造的黄金原则：扶手装在患侧发力方向、坡道替代门槛、防滑垫覆盖湿区、夜灯在起夜路线上、呼叫按钮在跌倒高风险区。现在，你来决定这些配件放在哪里。",
+          "layer": "essential",
+          "emotion": "thoughtful",
+          "typingSpeed": 35
+        }
+      ],
+      "props": [
+        {
+          "propId": "zhou_home_floor_plan",
+          "layer": "operate",
+          "autoShow": true
+        }
+      ],
+      "nextNode": "zhou_act2_d9_002",
+      "isCheckpoint": true,
+      "tags": ["renovation", "operate-prop", "floor-plan"],
+      "devNote": "Day 9 家居平面图操作型道具，拖拽放置扶手/坡道/防滑垫"
+    },
+    {
+      "id": "zhou_act2_d9_002",
+      "characterId": "zhou_yeye",
+      "act": 2,
+      "day": 9,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "zhou_floor_plan_operate",
+      "dialogues": [
+        {
+          "id": "dlg_011",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "平面图上有四个关键位置需要放置改造配件：①卫生间马桶旁 ②淋浴区 ③卧室到走廊的门槛 ④床到卫生间的起夜路线。每个位置该放什么？请选择最合理的配置方案。",
+          "layer": "essential",
+          "emotion": "curious"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "马桶旁装L型扶手、淋浴区铺防滑垫+扶手、门槛换坡道、起夜路线装感应夜灯",
+          "description": "每个位置都放了最匹配的配件",
+          "isCorrect": true,
+          "effects": [
+            { "type": "health", "delta": 8, "reason": "系统性消除所有跌倒高风险点" },
+            { "type": "independence", "delta": 5, "reason": "有扶手和坡道后行动更自主" },
+            { "type": "mood", "delta": 3, "reason": "家变得安全方便，安心" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "zhou_act2_d9_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "平面图上，每个位置都标注了正确的配件。马桶旁的L型扶手帮他起坐，淋浴区的防滑垫+扶手解决洗澡跌倒风险，门槛坡道让助行器能顺畅通过，起夜路线的感应夜灯让他不用摸黑。评估师竖起大拇指：'比很多专业方案都想得周到。'",
+            "explanation": "最优配置：每个位置匹配最合适的配件。马桶旁L型扶手（起坐发力方向）、淋浴区防滑垫+扶手（湿区最高危）、门槛坡道（消除绊脚+助行器通行）、感应夜灯（起夜照明）。适老化改造的核心是'精准匹配'——不是到处装扶手，而是在每个跌倒高风险点放对东西。周爷爷是左侧偏瘫，扶手应装在右侧（健侧发力方向）。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "只在客厅沙发旁装扶手，其他先不管",
+          "description": "只改了一个位置",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": -3, "reason": "卫生间和门槛等高风险点未解决" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhou_act2_d9_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "客厅沙发旁装了扶手，确实方便起身。但卫生间还是滑的、门槛还在、起夜还是摸黑——跌倒风险最高的是卫生间和起夜路线，这些都没动。改造要抓重点，不是随便装个扶手就算适老化了。",
+            "explanation": "适老化改造不是'装个扶手'那么简单。老人跌倒60%发生在卫生间，起夜跌倒占夜间意外的80%以上。只在客厅装扶手，等于在最安全的地方做了改造，最高危的区域反而没管。操作型道具的意义在于让你理解每个位置的风险等级和对应方案。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "到处都装扶手，卫生间、走廊、客厅、卧室墙上一字排开",
+          "description": "过度改造，遍地扶手",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": 3, "reason": "扶手多了确实安全些" },
+            { "type": "mood", "delta": -4, "reason": "家变得像医院病房，心理不适" },
+            { "type": "independence", "delta": -2, "reason": "过度依赖扶手，减少自主平衡训练" }
+          ],
+          "spiritPowerChange": 5,
+          "nextNode": "zhou_act2_d9_003",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "扶手是装了不少，安全确实提升了。但周爷爷看着满墙的扶手，皱了皱眉：'这是家还是医院？'过多的扶手会让家失去生活气息，也会让老人过度依赖——本来能自己走的地方也非要扶着，反而不利于康复。",
+            "explanation": "过度改造也有问题。适老化改造的目标是'让家适应老人的能力'，不是'把家变成康复中心'。扶手要精准安装在需要发力的位置（马桶旁、淋浴区、台阶处），不是到处都装。过多的辅具会让老人产生依赖心理，也会让家失去温馨感。精准比全面更重要。"
+          }
+        }
+      ],
+      "props": [
+        {
+          "propId": "zhou_home_floor_plan",
+          "layer": "operate",
+          "autoShow": true
+        }
+      ],
+      "tags": ["choice", "renovation", "operate-prop", "floor-plan"],
+      "devNote": "关键道具：操作型家居平面图——拖拽放置扶手/坡道/防滑垫/夜灯"
+    },
+    {
+      "id": "zhou_act2_d9_003",
+      "characterId": "zhou_yeye",
+      "act": 2,
+      "day": 9,
+      "type": "dayEnd",
+      "scene": "living_room",
+      "illustrationId": "zhou_day9_end",
+      "dialogues": [
+        {
+          "id": "dlg_012",
+          "speaker": "elder",
+          "speakerName": "周爷爷",
+          "text": "这个图画得好，一目了然。我那个卫生间确实该弄弄了，上次差点摔就是在那儿。以后有扶手有防滑，心里踏实。",
+          "layer": "essential",
+          "emotion": "relieved"
+        },
+        {
+          "id": "dlg_013",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "适老化改造方案定稿了。完成这个操作型道具后，你解锁了真实世界工具：'家居安全自查清单'——可以打印出来用在现实中。改造工程下周开始施工，我们先把另一件大事办了：长护险。",
+          "layer": "essential",
+          "emotion": "warm",
+          "typingSpeed": 40
+        }
+      ],
+      "unlocks": [
+        {
+          "flag": "zhou_renovation_plan_complete"
+        }
+      ],
+      "tags": ["day-end"],
+      "devNote": "完成适老化改造方案，解锁家居安全自查清单flag"
+    },
+    {
+      "id": "zhou_act2_d10_001",
+      "characterId": "zhou_yeye",
+      "act": 2,
+      "day": 10,
+      "type": "narrative",
+      "scene": "living_room",
+      "illustrationId": "zhou_ltc_intro",
+      "dialogues": [
+        {
+          "id": "dlg_014",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "社区居委会的小王上门了，带着一叠宣传册。'周叔，您这个情况可以申请长护险——长期护理保险。评定通过后，每月有专业护理员上门服务，费用大部分由保险报销。'周爷爷接过宣传册翻了翻，眉头微蹙。",
+          "layer": "essential",
+          "duration": 4500,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_015",
+          "speaker": "elder",
+          "speakerName": "周爷爷",
+          "text": "长护险……我听隔壁老张说过。这个保险……是不是得评残？我不想弄那个。我还没到那个份上吧？",
+          "layer": "essential",
+          "emotion": "hesitant",
+          "typingSpeed": 40
+        },
+        {
+          "id": "dlg_016",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "周爷爷对长护险有顾虑——他觉得申请长护险等于承认自己'到了那个份上'。其实长护险不是'评残'，而是失能等级评估，和残疾评定是两回事。它是国家给失能老人的照护保障。你怎么回应他的顾虑？",
+          "layer": "essential",
+          "emotion": "thoughtful"
+        }
+      ],
+      "props": [
+        {
+          "propId": "zhou_ltc_brochure",
+          "layer": "inspect",
+          "autoShow": true
+        }
+      ],
+      "nextNode": "zhou_act2_d10_002",
+      "isCheckpoint": true,
+      "tags": ["long-term-care", "resource-coordination"],
+      "devNote": "Day 10 长护险介绍，检视型道具：长护险宣传册"
+    },
+    {
+      "id": "zhou_act2_d10_002",
+      "characterId": "zhou_yeye",
+      "act": 2,
+      "day": 10,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "zhou_ltc_choice",
+      "dialogues": [
+        {
+          "id": "dlg_017",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "周爷爷把长护险等同于'评残'，有心理抵触。这是资源协调中常见的障碍——老人不愿申请福利因为觉得'丢人'。你选择怎么回应？",
+          "layer": "essential",
+          "emotion": "curious"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "积极建议申请，解释长护险是保险不是救济，交了医保就有资格",
+          "description": "消除误解，主动对接资源",
+          "isCorrect": true,
+          "effects": [
+            { "type": "health", "delta": 4, "reason": "专业护理员上门，照护质量提升" },
+            { "type": "independence", "delta": 5, "reason": "专业康复指导提升自理能力" },
+            { "type": "trust", "delta": 5, "reason": "帮他争取应得权益，被尊重" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "zhou_act2_d10_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "你说：'周爷爷，长护险不是救济，是保险——您交了一辈子医保，这就是医保里包含的待遇。就像您以前交的工伤保险，出了事就用，天经地义。不是承认自己没用，是用自己应得的权利。'周爷爷想了想：'这么说……那我该申请。'",
+            "explanation": "最优策略：消除误解，把长护险定义为'应得权益'而非'承认无能'。长护险是社会保险制度，参加医保即可申请，失能等级评估不是评残。关键是让老人理解：这是他交了一辈子保险换来的待遇，不是施舍。用工程师能理解的'权利义务对等'逻辑，他一下就通了。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "觉得麻烦，不申请也行，家里自己照顾",
+          "description": "放弃长护险资源",
+          "isCorrect": false,
+          "effects": [
+            { "type": "independence", "delta": -3, "reason": "缺少专业护理，照护质量下降" },
+            { "type": "mood", "delta": -2, "reason": "女儿照护负担重，周爷爷有心理负担" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhou_act2_d10_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "长护险没申请，女儿一个人扛着所有照护。她白天上班晚上照顾，越来越疲惫。周爷爷看在眼里，嘴上不说，心里越来越觉得自己是拖累——早知道就申请了，至少有专业护理员分担一些。",
+            "explanation": "放弃长护险是资源协调的失败。长护险提供的不仅是经济补贴，更是专业照护——护理员上门做康复指导、生活照料、健康监测，这些是家属很难替代的。照护不是一家人的事，善用社会支持系统才能可持续。女儿一个人扛，迟早会照护倦怠。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "让周爷爷自己决定要不要申请，不干涉",
+          "description": "尊重自主权但不提供信息",
+          "isCorrect": false,
+          "effects": [
+            { "type": "trust", "delta": 2, "reason": "尊重了他的意愿" },
+            { "type": "health", "delta": -2, "reason": "可能因误解错过资源" }
+          ],
+          "spiritPowerChange": 5,
+          "nextNode": "zhou_act2_d10_003",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "周爷爷因为'评残'的误解，大概率会选择不申请。尊重自主权是对的，但前提是他有充分的信息。他不知道长护险是保险待遇、不知道有专业护理员上门、不知道能减轻女儿负担——在信息不充分的情况下做的'自主决定'，不是真正的自主。",
+            "explanation": "尊重自主权不等于不提供信息。周爷爷对长护险有误解（以为是评残），在误解基础上的'自主决定'不是真正的自主。资源协调的核心是'提供充分信息+尊重最终选择'——先帮他理解什么是长护险、有什么好处，再让他决定。"
+          }
+        }
+      ],
+      "tags": ["choice", "long-term-care", "resource-coordination"],
+      "devNote": "教学：长护险是保险待遇非评残 + 资源协调中消除老人心理障碍"
+    },
+    {
+      "id": "zhou_act2_d10_003",
+      "characterId": "zhou_yeye",
+      "act": 2,
+      "day": 10,
+      "type": "dayEnd",
+      "scene": "living_room",
+      "illustrationId": "zhou_day10_end",
+      "dialogues": [
+        {
+          "id": "dlg_018",
+          "speaker": "elder",
+          "speakerName": "周爷爷",
+          "text": "行，那申请吧。小芳上班也累，有专业的来搭把手，大家都轻松些。需要什么材料？",
+          "layer": "essential",
+          "emotion": "decisive"
+        },
+        {
+          "id": "dlg_019",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "周爷爷同意申请了——而且他的理由是'减轻女儿负担'，不是为自己。这就是他：接受现实但不想拖累别人。明天我们准备申请材料。",
+          "layer": "essential",
+          "emotion": "warm",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "zhou_act2_d11_001",
+      "characterId": "zhou_yeye",
+      "act": 2,
+      "day": 11,
+      "type": "narrative",
+      "scene": "living_room",
+      "illustrationId": "zhou_ltc_application",
+      "dialogues": [
+        {
+          "id": "dlg_020",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "社区小王带来了长护险申请表，上面列着需要的材料：身份证、医保卡、近期住院病历、诊断证明、失能等级评估申请表。周爷爷翻着材料清单，看到'失能等级评估'几个字，手停了一下。",
+          "layer": "essential",
+          "duration": 4000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_021",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "长护险申请需要准备一整套材料。最关键的是住院病历和诊断证明——这是失能等级评估的依据。材料不齐会白跑一趟。周爷爷的脑梗住院病历在市人民医院，诊断证明需要找主治医生补开。你怎么安排？",
+          "layer": "essential",
+          "emotion": "thoughtful"
+        }
+      ],
+      "nextNode": "zhou_act2_d11_002",
+      "isCheckpoint": true,
+      "tags": ["long-term-care", "resource-coordination"],
+      "devNote": "Day 11 长护险申请材料准备"
+    },
+    {
+      "id": "zhou_act2_d11_002",
+      "characterId": "zhou_yeye",
+      "act": 2,
+      "day": 11,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "zhou_ltc_materials_choice",
+      "dialogues": [
+        {
+          "id": "dlg_022",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "申请材料涉及去医院补诊断证明、调取住院病历。周爷爷行动不便，女儿上班也没空。怎么安排最合理？",
+          "layer": "essential",
+          "emotion": "curious"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "列出材料清单逐项核对，先打电话确认医院需要什么，一次备齐再去",
+          "description": "系统规划，高效完成",
+          "isCorrect": true,
+          "effects": [
+            { "type": "trust", "delta": 5, "reason": "做事有条理，周爷爷放心" },
+            { "type": "mood", "delta": 3, "reason": "一次办成不用反复折腾" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "zhou_act2_d11_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "你先打了市人民医院病案室的电话，确认了调取住院病历需要身份证复印件和委托书；又联系了主治医生预约补开诊断证明的时间。材料一次备齐，周爷爷不用跑，女儿请假半天就办完了。工程师最欣赏这种'先规划后执行'的做事方式。",
+            "explanation": "最优策略：先规划后执行。长护险申请涉及多个机构（社区、医院、医保中心），材料不齐会反复跑。提前打电话确认要求、列清单逐项核对、合理安排时间——这是资源协调的基本功。周爷爷是工程师，他最理解'磨刀不误砍柴工'的道理。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "先去社区交表再说，缺什么材料再回来补",
+          "description": "走一步看一步",
+          "isCorrect": false,
+          "effects": [
+            { "type": "mood", "delta": -3, "reason": "反复跑腿折腾老人和家属" },
+            { "type": "trust", "delta": -2, "reason": "觉得做事不靠谱" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhou_act2_d11_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "第一次去社区，缺诊断证明，回来。第二次去医院，病历复印需要委托书，回来。第三次……周爷爷看着女儿来回跑，叹气：'早知道先问清楚。'反复折腾消耗的不只是时间，还有老人和家属的精力。",
+            "explanation": "走一步看一步在行政事务中效率极低。长护险申请涉及多个环节，每个环节有不同材料要求。不提前确认就出发，必然反复跑腿。更糟的是，周爷爷看着女儿为自己来回折腾，心理负担会加重——'我是个麻烦'的感觉会侵蚀他的心情值。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "让周爷爷自己去社区和医院办",
+          "description": "让他自己跑",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": -5, "reason": "行动不便的老人独自跑行政手续，体力消耗大且有跌倒风险" },
+            { "type": "mood", "delta": -5, "reason": "独自面对繁琐手续的挫败感" },
+            { "type": "trust", "delta": -3, "reason": "觉得不被关心" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhou_act2_d11_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "周爷爷拄着助行器在社区排队，站了半小时腿就开始抖。到了窗口，被告知材料不全。他慢慢往回走，在路上歇了三次。到家后一句话没说，坐在沙发上发了很久的呆。他不是不想自己办，是身体真的不允许。",
+            "explanation": "让行动不便的老人独自跑行政手续是不负责任的。周爷爷左侧偏瘫、用助行器行走，长时间排队站立会导致疲劳和跌倒风险。更深层的是心理伤害——独自面对'材料不全'的挫败，会让他觉得自己'什么都做不了了'。失能老人的行政事务需要家属代办或陪同。"
+          }
+        }
+      ],
+      "tags": ["choice", "long-term-care", "resource-coordination"],
+      "devNote": "教学：资源协调——先规划后执行，家属代办行政事务"
+    },
+    {
+      "id": "zhou_act2_d11_003",
+      "characterId": "zhou_yeye",
+      "act": 2,
+      "day": 11,
+      "type": "dayEnd",
+      "scene": "living_room",
+      "illustrationId": "zhou_day11_end",
+      "dialogues": [
+        {
+          "id": "dlg_023",
+          "speaker": "elder",
+          "speakerName": "周爷爷",
+          "text": "材料交上去了，等评估通知。小芳说大概两周出结果。唉，这办事效率……算了，等着吧。",
+          "layer": "essential",
+          "emotion": "patient"
+        },
+        {
+          "id": "dlg_024",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "长护险申请提交了，等失能等级评估结果。在等待的这段时间，我们把注意力转回周爷爷的内心——他配合康复、接受辅具、同意改造、申请长护险……但他心里的那股不甘心，还没人认真听过。",
+          "layer": "essential",
+          "emotion": "thoughtful",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "zhou_act2_d12_001",
+      "characterId": "zhou_yeye",
+      "act": 2,
+      "day": 12,
+      "type": "narrative",
+      "scene": "bedroom",
+      "illustrationId": "zhou_diary_window",
+      "dialogues": [
+        {
+          "id": "dlg_025",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "下午，周爷爷坐在窗边，看着楼下小广场上几个老人在打太极。他的目光跟着那些缓慢舒展的动作移动，手不自觉地在膝盖上比划了一下——然后停住了。他低下头，看着自己不太听使唤的左手，沉默了很久。",
+          "layer": "essential",
+          "duration": 5000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_026",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "周爷爷的日记出现了。他看着窗外打太极的老人，想起了以前——他也是打太极的，每天早上六点，雷打不动。脑梗之后，再也没下去过。他嘴上不说，但精灵看到了他眼里的失落。",
+          "layer": "essential",
+          "emotion": "thoughtful"
+        },
+        {
+          "id": "dlg_027",
+          "speaker": "elder",
+          "speakerName": "周爷爷",
+          "text": "以前我也是打太极的……二十四式，全会。现在……一只手都抬不平。",
+          "layer": "emotional",
+          "emotion": "sad",
+          "typingSpeed": 40
+        },
+        {
+          "id": "dlg_028",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "他说出口了。这是周爷爷第一次主动提起自己的失落——'以前我也是打太极的'。心理支持的关键时刻：你怎么回应他的不甘心？",
+          "layer": "essential",
+          "emotion": "serious"
+        }
+      ],
+      "nextNode": "zhou_act2_d12_002",
+      "isCheckpoint": true,
+      "tags": ["psychology", "emotional-support", "diary"],
+      "devNote": "Day 12 心理支持，周爷爷日记——不甘心的第一次流露"
+    },
+    {
+      "id": "zhou_act2_d12_002",
+      "characterId": "zhou_yeye",
+      "act": 2,
+      "day": 12,
+      "type": "choice",
+      "scene": "bedroom",
+      "illustrationId": "zhou_psychology_choice",
+      "dialogues": [
+        {
+          "id": "dlg_029",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "周爷爷说'以前我也是打太极的'，语气里有深深的不甘。心理支持知识点：倾听技巧——不打断、不否定、复述确认。你怎么回应？",
+          "layer": "essential",
+          "emotion": "curious"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "爸，您现在这样也挺好的，别想那些了",
+          "description": "否定感受，强行乐观",
+          "isCorrect": false,
+          "effects": [
+            { "type": "mood", "delta": -5, "reason": "感受被否定，更加封闭" },
+            { "type": "trust", "delta": -3, "reason": "觉得你不懂他" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhou_act2_d12_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "周爷爷听完，嘴角扯了一下，没再说话。他转回头继续看窗外，但眼神里的光灭了。'现在这样也挺好的'——这句话像是在说'你该知足了'。他的失落没有被看见，只是被盖住了。",
+            "explanation": "否定感受是心理支持最大的禁忌。'现在这样也挺好'听起来是安慰，实际是在说'你不该难过'。周爷爷的失落是真实的——他失去了打太极的能力，这是丧失，需要被承认。否定丧失不会让丧失消失，只会让老人把情绪压得更深，最终走向沉默和抑郁。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "您恢复得很好，说不定以后还能打呢",
+          "description": "虚假鼓励，给不切实际的希望",
+          "isCorrect": false,
+          "effects": [
+            { "type": "mood", "delta": 2, "reason": "暂时被安慰" },
+            { "type": "trust", "delta": -1, "reason": "工程师理性，知道这话不现实" }
+          ],
+          "spiritPowerChange": 5,
+          "nextNode": "zhou_act2_d12_003",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "周爷爷苦笑了一下：'别哄我了，我自己什么情况我知道。'他是工程师，理性得很——脑梗半年了，左手抬不平就是抬不平，'说不定'三个字骗不了他。虚假的鼓励反而让他觉得你不真诚。",
+            "explanation": "虚假鼓励对理性型老人无效甚至有害。周爷爷是工程师出身，他清楚脑梗后遗症的恢复曲线——半年后进入平台期，'说不定能打太极'是不切实际的。虚假希望被戳穿后，反而会降低信任。心理支持要真诚，承认现实的同时给予陪伴。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "您一定很怀念那时候。每天早上六点打太极，是什么感觉？",
+          "description": "倾听共情，引导他表达感受",
+          "isCorrect": true,
+          "effects": [
+            { "type": "mood", "delta": 5, "reason": "被理解、被倾听的温暖" },
+            { "type": "trust", "delta": 5, "reason": "你懂他的失落" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "zhou_act2_d12_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "周爷爷沉默了一会儿，然后慢慢开口：'那时候天还没亮，空气凉丝丝的。一套打下来，浑身通透……那种感觉，现在想想都觉得舒服。'他说着说着，眼里有了光——不是悲伤的光，是回忆的暖光。你没有否定他的失落，也没有给虚假希望，只是陪他回到了那个美好的早晨。",
+            "explanation": "最优策略：倾听共情。用'您一定很怀念'复述确认他的感受，用'是什么感觉'引导他表达。心理支持的核心不是'解决问题'或'让他开心'，而是'让他被看见'。周爷爷的失落需要被承认——失去打太极的能力是真实的丧失，陪他回忆那些美好的时刻，本身就是疗愈。回忆疗法：引导正向回忆，在回忆中找回自我价值。"
+          }
+        }
+      ],
+      "tags": ["choice", "psychology", "emotional-support", "listening"],
+      "devNote": "教学：倾听技巧——不否定不虚假鼓励，共情+引导表达+回忆疗法"
+    },
+    {
+      "id": "zhou_act2_d12_003",
+      "characterId": "zhou_yeye",
+      "act": 2,
+      "day": 12,
+      "type": "dayEnd",
+      "scene": "bedroom",
+      "illustrationId": "zhou_day12_end",
+      "dialogues": [
+        {
+          "id": "dlg_030",
+          "speaker": "elder",
+          "speakerName": "周爷爷",
+          "text": "好多年没跟人聊过这些了。小芳忙，我也不想跟她说这些……说了她也担心。今天跟你聊聊，心里敞亮了些。",
+          "layer": "essential",
+          "emotion": "relieved"
+        },
+        {
+          "id": "dlg_031",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "他说'心里敞亮了些'——这就是倾听的力量。周爷爷不是不想说，是没人听、怕给别人添麻烦。心理支持不是专业技能，是'愿意听'的态度。明天，我们继续走进他心里更深的地方。",
+          "layer": "essential",
+          "emotion": "warm",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "zhou_act2_d13_001",
+      "characterId": "zhou_yeye",
+      "act": 2,
+      "day": 13,
+      "type": "narrative",
+      "scene": "living_room",
+      "illustrationId": "zhou_old_photos",
+      "dialogues": [
+        {
+          "id": "dlg_032",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "今天女儿收拾柜子，翻出了一本旧相册。周爷爷接过来翻了几页——年轻时的他站在机床前，胸前别着'总工程师'的铭牌；另一张是他在技术鉴定会上发言，身后的黑板上画满了机械图纸。他的手在照片上停留了很久。",
+          "layer": "essential",
+          "duration": 4500,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_033",
+          "speaker": "elder",
+          "speakerName": "周爷爷",
+          "text": "这台机床是我参与设计的……当年全国就三台。现在让我拧个螺丝都拧不动了。",
+          "layer": "essential",
+          "emotion": "bitter",
+          "typingSpeed": 40
+        },
+        {
+          "id": "dlg_034",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "周爷爷在用'以前的自己'对比'现在的自己'，越比越觉得没用。他的核心心理危机不是'走不动'，是'没价值了'。工程师的价值感来自'能做事'，脑梗让他觉得'什么都做不了了'。这是心理支持最深层的问题：自我价值重建。",
+          "layer": "essential",
+          "emotion": "serious"
+        }
+      ],
+      "nextNode": "zhou_act2_d13_002",
+      "isCheckpoint": true,
+      "tags": ["psychology", "emotional-support", "self-worth"],
+      "devNote": "Day 13 心理支持——自我价值重建"
+    },
+    {
+      "id": "zhou_act2_d13_002",
+      "characterId": "zhou_yeye",
+      "act": 2,
+      "day": 13,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "zhou_self_worth_choice",
+      "dialogues": [
+        {
+          "id": "dlg_035",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "周爷爷说'拧个螺丝都拧不动了'——他觉得自己没用了。自我价值重建不是说'您有用'，而是帮他找到'现在还能做什么'。你怎么回应？",
+          "layer": "essential",
+          "emotion": "curious"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "爸，您的经验和脑子还在啊。我工作上遇到机械方面的问题，能向您请教吗？",
+          "description": "用请教的方式让他发挥经验价值",
+          "isCorrect": true,
+          "effects": [
+            { "type": "mood", "delta": 8, "reason": "被需要、被尊重的价值感回归" },
+            { "type": "independence", "delta": 3, "reason": "重新找到能做的事" },
+            { "type": "trust", "delta": 3, "reason": "感受到真诚的尊重" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "zhou_act2_d13_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "周爷爷愣了一下，然后眼睛亮了：'你遇到什么问题了？说来听听。'你把工作上一个小机械设计问题拿出来请教——他分析了十分钟，思路清晰，条理分明。说完他轻轻笑了：'脑子还没糊涂，还能转。'这一刻，他不是'拧不动螺丝的废人'，他是'总工程师'。",
+            "explanation": "最优策略：用请教的方式重建价值感。周爷爷的价值感来自'能做事'，手做不了了，但脑子还能用——四十年的机械工程经验是任何人替代不了的。请教他专业问题，让他从'被照顾者'变回'被需要者'。自我价值重建的核心不是安慰'您还有用'，而是创造机会让他真的'有用'。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "别想那些了，好好养病最重要",
+          "description": "忽视心理需求，转移话题",
+          "isCorrect": false,
+          "effects": [
+            { "type": "mood", "delta": -3, "reason": "心理需求被忽视，更加失落" },
+            { "type": "trust", "delta": -2, "reason": "觉得你不理解他" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhou_act2_d13_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "周爷爷合上相册，没再说话。'好好养病'——好像他活着就只剩'养病'一件事了。他的经验、他的智慧、他四十年的积累，都被'养病'两个字盖住了。没有价值感的康复，只是延续生命，不是生活。",
+            "explanation": "忽视心理需求是照护失能老人的常见误区。身体需要康复，心理也需要'康复'——重建自我价值。'好好养病'把老人定义为'病人'，剥夺了他作为'人'的其他身份。周爷爷是总工程师，这个身份不会因为脑梗消失，需要被看见、被激活。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "默默陪着他看相册，不说话",
+          "description": "陪伴但不引导",
+          "isCorrect": false,
+          "effects": [
+            { "type": "mood", "delta": 2, "reason": "有人陪伴确实好一些" },
+            { "type": "trust", "delta": 1, "reason": "至少没有否定他" }
+          ],
+          "spiritPowerChange": 5,
+          "nextNode": "zhou_act2_d13_003",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "陪伴是有力量的——周爷爷翻着相册，你在旁边坐着，他偶尔指指照片说两句。但他的自我价值感没有被激活，只是从'独自失落'变成了'有人陪着失落'。陪伴是基础，但有时候需要主动一步，帮他找到新的价值。",
+            "explanation": "陪伴是心理支持的基础，但不等于全部。默默陪伴比否定好，但周爷爷的核心问题是'觉得自己没用了'——光陪着不能解决这个问题。需要在陪伴的基础上，主动创造让他发挥价值的机会。陪伴+引导，才是完整的心理支持。"
+          }
+        }
+      ],
+      "tags": ["choice", "psychology", "emotional-support", "self-worth"],
+      "devNote": "教学：自我价值重建——用请教的方式激活老人经验价值"
+    },
+    {
+      "id": "zhou_act2_d13_003",
+      "characterId": "zhou_yeye",
+      "act": 2,
+      "day": 13,
+      "type": "dayEnd",
+      "scene": "living_room",
+      "illustrationId": "zhou_day13_end",
+      "dialogues": [
+        {
+          "id": "dlg_036",
+          "speaker": "elder",
+          "speakerName": "周爷爷",
+          "text": "以后有机械方面的问题，就来问我。别的干不了了，脑子还能动。哈哈，当年带徒弟都没这么上心过。",
+          "layer": "essential",
+          "emotion": "cheerful"
+        },
+        {
+          "id": "dlg_037",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "他笑了——这是这两周第一次听到周爷爷笑。'脑子还能动'——他重新找到了自己的价值。心理支持的精髓就在这里：不是让老人'接受无能'，而是帮他发现'我还有能'。",
+          "layer": "essential",
+          "emotion": "warm",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "zhou_act2_d14_001",
+      "characterId": "zhou_yeye",
+      "act": 2,
+      "day": 14,
+      "type": "narrative",
+      "scene": "living_room",
+      "illustrationId": "zhou_rehab_progress",
+      "dialogues": [
+        {
+          "id": "dlg_038",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "康复师小李今天来做中期评估。他让周爷爷做了几个测试：左手握力从3.5公斤到了4.2公斤，左臂能主动抬高到肩膀高度了，坐位平衡从需要扶持进步到独立坐稳。但在站立平衡测试时，周爷爷晃了几下，没能稳住。",
+          "layer": "essential",
+          "duration": 4500,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_039",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "中期评估结果出来了：上肢进步明显，下肢进步缓慢。康复师说这是正常的——脑梗后上肢恢复通常比下肢慢，但周爷爷因为坚持训练反而上肢先突破了。下肢需要更有针对性的训练。现在要设定下一阶段的康复目标。",
+          "layer": "essential",
+          "emotion": "thoughtful"
+        },
+        {
+          "id": "dlg_040",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "康复目标设定有一个原则：SMART——具体、可衡量、可实现、相关、有时限。目标不能太高（挫败）也不能太低（无动力）。周爷爷上肢进步让他信心提升，但下肢还是短板。怎么设目标？",
+          "layer": "essential",
+          "emotion": "curious"
+        }
+      ],
+      "nextNode": "zhou_act2_d14_002",
+      "isCheckpoint": true,
+      "tags": ["rehabilitation", "goal-setting"],
+      "devNote": "Day 14 康复进展评估，SMART目标设定"
+    },
+    {
+      "id": "zhou_act2_d14_002",
+      "characterId": "zhou_yeye",
+      "act": 2,
+      "day": 14,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "zhou_goal_choice",
+      "dialogues": [
+        {
+          "id": "dlg_041",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "下一阶段康复目标怎么设？周爷爷的当前状态：上肢4级、下肢3级、坐位平衡可、站立平衡差。",
+          "layer": "essential",
+          "emotion": "curious"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "设定大目标：一个月内能独立站立行走，摆脱助行器",
+          "description": "目标过高，不切实际",
+          "isCorrect": false,
+          "effects": [
+            { "type": "mood", "delta": -5, "reason": "目标过高无法达成，挫败感" },
+            { "type": "health", "delta": -3, "reason": "为达目标可能过度训练导致损伤" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhou_act2_d14_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "周爷爷眼睛亮了一下，但康复师摇了摇头：'周叔，以您现在下肢肌力，一个月独立行走不现实。目标太高达不到，反而打击信心。'周爷爷的光灭了——他不怕慢慢来，怕的是给了希望又落空。",
+            "explanation": "目标过高违背SMART原则中的'可实现'。周爷爷下肢肌力3级、站立平衡差，一个月内独立行走脱离助行器是不切实际的。过高的目标不仅无法达成导致挫败，还可能让老人为达目标过度训练造成损伤。康复目标要'跳一跳够得着'，不是'看得到摸不到'。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "设定小目标：两周内能扶着助行器独立站立30秒",
+          "description": "SMART目标——具体、可衡量、可实现",
+          "isCorrect": true,
+          "effects": [
+            { "type": "health", "delta": 8, "reason": "合理目标驱动有效训练" },
+            { "type": "mood", "delta": 3, "reason": "有明确可达成的小目标，有动力" },
+            { "type": "independence", "delta": 3, "reason": "站立平衡提升后自理能力增强" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "zhou_act2_d14_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "康复师点头：'这个目标好——扶助行器站立30秒，以您现在的能力，坚持练两周有望达成。'周爷爷想了想：'30秒……行，试试。'他不是在追求'能走'这个大目标，而是一步一步来——先站稳，再迈步。工程师理解'分解目标、逐步实现'的逻辑。",
+            "explanation": "最优策略：SMART小目标。'扶助行器站立30秒'——具体（站立30秒）、可衡量（计时）、可实现（当前坐位平衡已稳，站立是下一步）、相关（站立平衡是行走基础）、有时限（两周）。康复目标设定的核心是'小步快跑'——每达成一个小目标，信心就涨一分，动力就足一分。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "不设具体目标，顺其自然练就行",
+          "description": "没有目标，缺乏动力",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": 2, "reason": "训练在继续但缺乏方向性" },
+            { "type": "mood", "delta": -1, "reason": "看不到进步的里程碑，动力不足" }
+          ],
+          "spiritPowerChange": 5,
+          "nextNode": "zhou_act2_d14_003",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "没有目标，每天的训练变成了例行公事。周爷爷不知道自己练到什么程度算好，也不知道有没有进步。训练还在做，但少了那份'为了什么而练'的劲头。康复需要方向感，不然就像在跑步机上跑——很累，但不知道走多远了。",
+            "explanation": "没有目标的训练缺乏方向和动力。康复是一个长期过程，如果没有阶段性的里程碑，老人很容易在'看不到尽头'中丧失信心。目标不一定要大，但要有——它像路标，让老人知道自己确实在前进。SMART目标的意义不仅是'可达成'，更是'可感知进步'。"
+          }
+        }
+      ],
+      "tags": ["choice", "rehabilitation", "goal-setting"],
+      "devNote": "教学：康复目标SMART原则——具体、可衡量、可实现、相关、有时限"
+    },
+    {
+      "id": "zhou_act2_d14_003",
+      "characterId": "zhou_yeye",
+      "act": 2,
+      "day": 14,
+      "type": "dayEnd",
+      "scene": "living_room",
+      "illustrationId": "zhou_day14_end",
+      "dialogues": [
+        {
+          "id": "dlg_042",
+          "speaker": "elder",
+          "speakerName": "周爷爷",
+          "text": "30秒……我先站10秒试试。一步一步来，急不得。",
+          "layer": "essential",
+          "emotion": "determined"
+        },
+        {
+          "id": "dlg_043",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "他自己把目标又拆小了——先站10秒。这就是工程师的思维：大目标分解成小目标，小目标分解成第一步。第二幕过半了，周爷爷的身体在恢复，心态也在重建。接下来，该让他走出家门了。",
+          "layer": "essential",
+          "emotion": "warm",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "zhou_act2_d15_001",
+      "characterId": "zhou_yeye",
+      "act": 2,
+      "day": 15,
+      "type": "narrative",
+      "scene": "living_room",
+      "illustrationId": "zhou_outing_decision",
+      "dialogues": [
+        {
+          "id": "dlg_044",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "天气很好，阳光明媚。女儿提议推周爷爷去社区花园晒晒太阳——花园就在楼下，有无障碍坡道，距离不远。但周爷爷听到'推'这个字时，表情僵了一下。",
+          "layer": "essential",
+          "duration": 4500,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_045",
+          "speaker": "elder",
+          "speakerName": "周爷爷",
+          "text": "晒太阳……在阳台上晒不就行了？非得推我出去？",
+          "layer": "essential",
+          "emotion": "resistant",
+          "typingSpeed": 40
+        },
+        {
+          "id": "dlg_046",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "周爷爷抗拒出门——不是因为不想晒太阳，是因为'被推着出去'让他觉得丢人。他用的词是'推我出去'，这个'推'字暴露了他的心理：坐轮椅出门=被当成废人=让街坊邻居看见自己这样。社交促进的第一道坎，是心理障碍。",
+          "layer": "essential",
+          "emotion": "thoughtful"
+        }
+      ],
+      "nextNode": "zhou_act2_d15_002",
+      "isCheckpoint": true,
+      "tags": ["social", "psychology", "wheelchair"],
+      "devNote": "Day 15 社交促进——轮椅出行的心理障碍"
+    },
+    {
+      "id": "zhou_act2_d15_002",
+      "characterId": "zhou_yeye",
+      "act": 2,
+      "day": 15,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "zhou_outing_choice",
+      "dialogues": [
+        {
+          "id": "dlg_047",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "周爷爷不想坐轮椅出门。社交促进对脑梗后老人很重要——长期不出门会导致机能退化和抑郁。但强迫会伤害信任。怎么处理这个矛盾？",
+          "layer": "essential",
+          "emotion": "curious"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "尊重他不想出门的意愿，改在阳台晒太阳",
+          "description": "尊重意愿但放弃社交机会",
+          "isCorrect": false,
+          "effects": [
+            { "type": "mood", "delta": 2, "reason": "被尊重，暂时安心" },
+            { "type": "health", "delta": -2, "reason": "长期不出门机能可能退化" }
+          ],
+          "spiritPowerChange": 5,
+          "nextNode": "zhou_act2_d15_003",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "周爷爷在阳台上晒了太阳，心情还行。但他看着楼下花园里聊天的老人们，眼神里有一丝向往——他不是不想去，是不敢去。尊重意愿是对的，但如果每次都回避，他只会越来越封闭，最终连阳台都不想出了。",
+            "explanation": "尊重自主权是原则，但在社交退缩问题上不能简单'尊重'。周爷爷不是'不想出门'，是'害怕出门'——害怕被看到自己坐轮椅的样子。如果每次都顺着他的回避，社交退缩会加重。正确的做法是尊重他的感受，同时温和地帮他克服心理障碍。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "温和地说：社区也有很多坐轮椅的老人，没人会笑话。要不我们先去花园看看？不想待就回来",
+          "description": "尊重感受+温和鼓励+留退路",
+          "isCorrect": true,
+          "effects": [
+            { "type": "mood", "delta": 5, "reason": "被理解又被鼓励" },
+            { "type": "trust", "delta": 3, "reason": "没有强迫，给了安全感" },
+            { "type": "independence", "delta": 2, "reason": "走出家门拓展活动范围" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "zhou_act2_d15_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "周爷爷犹豫了一下：'真的没人笑话？'你说：'社区张大爷也坐轮椅，每天在花园下棋呢。要不去看看？不想待我马上推您回来，就在楼下。'他想了想，点了点头：'那……去看看。'他不是被说服了，是被你的'留退路'打动了——他知道自己随时可以回来。",
+            "explanation": "最优策略：尊重感受+温和鼓励+留退路。不否认他的顾虑（'没人会笑话'是事实不是空话），用真实例子消除恐惧（张大爷也坐轮椅），关键是'留退路'——'不想待就回来'让他有安全感。社交退缩的核心是恐惧，消除恐惧不能靠强迫，要靠'试一试的勇气+随时退出的安全网'。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "外面天气这么好，必须出去晒晒太阳，对恢复好",
+          "description": "不顾感受，强行推他出门",
+          "isCorrect": false,
+          "effects": [
+            { "type": "mood", "delta": -8, "reason": "被强迫出门的屈辱感" },
+            { "type": "trust", "delta": -5, "reason": "感受被忽视" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhou_act2_d15_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "周爷爷被推到了花园，但他一直低着头，帽檐压得很低。有邻居跟他打招呼，他只是嗯了一声。他在花园里坐了十分钟就要求回去——这次出门没有带来阳光，只带来了羞耻。下次他更不愿意出门了。",
+            "explanation": "强迫出门适得其反。社交促进的目的是让老人'愿意出门'，不是'被推出去'。强迫只会让轮椅和'丢人'的关联更强，下次更难出门。而且被强迫的社交不是社交——他低着头、不互动、急着回家，这种出门没有任何社交意义，反而强化了回避。"
+          }
+        }
+      ],
+      "tags": ["choice", "social", "psychology", "wheelchair"],
+      "devNote": "教学：社交退缩的处理——尊重感受+温和鼓励+留退路"
+    },
+    {
+      "id": "zhou_act2_d15_003",
+      "characterId": "zhou_yeye",
+      "act": 2,
+      "day": 15,
+      "type": "dayEnd",
+      "scene": "outdoors",
+      "illustrationId": "zhou_day15_end",
+      "dialogues": [
+        {
+          "id": "dlg_048",
+          "speaker": "elder",
+          "speakerName": "周爷爷",
+          "text": "外面……还行。风吹着挺舒服的。那个张大爷真在底下下棋？改天……改天去看看。",
+          "layer": "essential",
+          "emotion": "tentative"
+        },
+        {
+          "id": "dlg_049",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "他说'改天去看看'——虽然不是今天，但门打开了一条缝。社交促进不怕慢，怕的是永远关着门。明天，带他真正走进花园。",
+          "layer": "essential",
+          "emotion": "warm",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "zhou_act2_d16_001",
+      "characterId": "zhou_yeye",
+      "act": 2,
+      "day": 16,
+      "type": "narrative",
+      "scene": "outdoors",
+      "illustrationId": "zhou_community_garden",
+      "dialogues": [
+        {
+          "id": "dlg_050",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "下午，女儿推着周爷爷来到了社区花园。阳光穿过银杏树叶，在地上洒下斑驳的光影。花园的长椅上坐着几位老人，有的在下棋，有的在聊天。周爷爷坐在轮椅上，帽檐还是压得低低的，但眼睛在打量周围。",
+          "layer": "essential",
+          "duration": 5000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_051",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "突然，一个坐在轮椅上的老人凑了过来：'老周？周国栋？真是你啊！'周爷爷抬头一看，愣住了——是老李，以前机械厂的老同事，二十多年没见了。",
+          "layer": "essential",
+          "duration": 3500,
+          "typingSpeed": 35
+        },
+        {
+          "id": "dlg_052",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "偶遇老同事老李——他也坐轮椅。这个偶遇是社交突破的绝佳机会。两个老朋友，同样坐轮椅，境遇相似。周爷爷会不会因为这个发现'坐轮椅出门不是丢人'？关键看你怎么推动这次社交。",
+          "layer": "essential",
+          "emotion": "curious"
+        }
+      ],
+      "nextNode": "zhou_act2_d16_002",
+      "isCheckpoint": true,
+      "tags": ["social", "community"],
+      "devNote": "Day 16 社区花园社交，偶遇老同事"
+    },
+    {
+      "id": "zhou_act2_d16_002",
+      "characterId": "zhou_yeye",
+      "act": 2,
+      "day": 16,
+      "type": "choice",
+      "scene": "outdoors",
+      "illustrationId": "zhou_social_choice",
+      "dialogues": [
+        {
+          "id": "dlg_053",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "老李很热情，拉着周爷爷叙旧。但周爷爷有些拘谨，不知道说什么好。你怎么促进这次社交？",
+          "layer": "essential",
+          "emotion": "curious"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "鼓励他们聊过去在厂里的事，给他们空间叙旧",
+          "description": "促进自主社交，不插手",
+          "isCorrect": true,
+          "effects": [
+            { "type": "mood", "delta": 8, "reason": "老友重逢的喜悦和归属感" },
+            { "type": "trust", "delta": 3, "reason": "带他出来做了正确的事" },
+            { "type": "independence", "delta": 2, "reason": "自主社交提升自信" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "zhou_act2_d16_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "你退后一步，把空间留给了两个老人。老李说：'记得八八年那个项目不？你画的图纸，德国专家都竖大拇指！'周爷爷笑了：'那台机床……我参与设计的。'两个坐轮椅的老人聊得热火朝天，阳光照在他们身上。周爷爷忘了轮椅的事——他只是一个和老朋友叙旧的老人。",
+            "explanation": "最优策略：促进自主社交，不插手。社交是老人的事，照护者的任务是创造机会而非代替参与。退后一步，让他们自己聊——共同的过去是最好的话题。老李也坐轮椅，这个事实比任何安慰都有力：'坐轮椅不丢人，老李也坐着，他不也每天来下棋？'社交促进的核心是'让老人自己找到归属感'。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "怕周爷爷累，叙了几分钟就推他回家",
+          "description": "过早结束社交",
+          "isCorrect": false,
+          "effects": [
+            { "type": "mood", "delta": -3, "reason": "社交被打断，意犹未尽" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhou_act2_d16_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "周爷爷正和老李聊到兴头上，你过来说'该回去了'。他看了你一眼，欲言又止，最后点了点头。老李说'下次再来啊'，周爷爷嗯了一声。这次出门刚开始就结束了，社交的火苗刚点着就被浇灭了。",
+            "explanation": "过早结束社交错失良机。脑梗后老人社交退缩，好不容易打开的局面不能因为'怕累'就草草收场。当然要注意老人的体力，但可以观察他的状态——聊得正欢说明他有精力。社交促进需要给足时间，让连接真正建立起来。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "替周爷爷回答老李的问题，帮他说",
+          "description": "代替老人社交",
+          "isCorrect": false,
+          "effects": [
+            { "type": "independence", "delta": -3, "reason": "社交自主权被剥夺" },
+            { "type": "mood", "delta": -2, "reason": "觉得自己连话都不会说了" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhou_act2_d16_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "老李问'国栋你现在怎么样'，你抢着回答'我爸脑梗后恢复得还行'。周爷爷张了张嘴，没说成。他低头看着自己的手——连和老朋友聊天都要人代劳了。社交是老人的社交，替他说等于告诉他'你连聊天都不行了'。",
+            "explanation": "代替老人社交是过度照护在社交场景的表现。周爷爷能说话、能思考、有记忆——老李问的是他的事，他完全能自己回答。代替他说话不仅剥夺了他的社交自主权，还传递了'你不行'的信号。照护者要管住嘴，让老人自己说。"
+          }
+        }
+      ],
+      "tags": ["choice", "social", "community"],
+      "devNote": "教学：社交促进——创造机会不插手，让老人自主建立连接"
+    },
+    {
+      "id": "zhou_act2_d16_003",
+      "characterId": "zhou_yeye",
+      "act": 2,
+      "day": 16,
+      "type": "dayEnd",
+      "scene": "outdoors",
+      "illustrationId": "zhou_day16_end",
+      "dialogues": [
+        {
+          "id": "dlg_054",
+          "speaker": "elder",
+          "speakerName": "周爷爷",
+          "text": "老李也坐轮椅……他比我早半年，现在每天来花园下棋。他说……坐轮椅不丢人，不出门才丢人。哈，这老头，嘴还是那么损。",
+          "layer": "essential",
+          "emotion": "happy"
+        },
+        {
+          "id": "dlg_055",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "老李那句'坐轮椅不丢人，不出门才丢人'——比你说一百句都有用。同类人的话最有力。周爷爷的社交之门，今天真正打开了一条缝。接下来几天，我们会留意一个需要持续观察的细节。",
+          "layer": "essential",
+          "emotion": "warm",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "zhou_act2_d17_001",
+      "characterId": "zhou_yeye",
+      "act": 2,
+      "day": 17,
+      "type": "narrative",
+      "scene": "living_room",
+      "illustrationId": "zhou_diary_memory",
+      "dialogues": [
+        {
+          "id": "dlg_056",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "今天精灵在整理周爷爷的日记时，注意到了一段不太寻常的记录。这是他昨天自己写在平板电脑上的——女儿教过他用备忘录记事，他偶尔会写几句。",
+          "layer": "essential",
+          "duration": 4000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_057",
+          "speaker": "elder",
+          "speakerName": "周爷爷",
+          "text": "今天中午吃了什么来着……想不起来了。反正是小芳做的，吃了药。下午那个康复师来了，练了胳膊。对了，早上好像还出了门？还是昨天出的门？记不太清了。",
+          "layer": "emotional",
+          "emotion": "confused",
+          "typingSpeed": 40
+        },
+        {
+          "id": "dlg_058",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "周爷爷的日记里出现了记忆模糊——'吃了什么想不起来''昨天还是今天出的门记不清'。这可能是脑梗后的认知影响，也可能是正常老化的健忘。但这个细节值得标注和持续观察。精灵在这里标注了一个小小的问号。",
+          "layer": "essential",
+          "emotion": "thoughtful"
+        },
+        {
+          "id": "dlg_059",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "嗯……这个现象，我记下来了。脑梗后可能出现血管性认知障碍，需要和正常健忘区分。这个问号暂时不告诉周爷爷，但我们要持续留意——如果频繁出现，需要就医评估。",
+          "layer": "essential",
+          "emotion": "serious",
+          "typingSpeed": 35
+        }
+      ],
+      "nextNode": "zhou_act2_d17_002",
+      "isCheckpoint": true,
+      "tags": ["cognition", "foreshadowing", "diary"],
+      "devNote": "Day 17 认知伏笔——记忆模糊日记，为陈奶奶线铺垫，精灵标注问号"
+    },
+    {
+      "id": "zhou_act2_d17_002",
+      "characterId": "zhou_yeye",
+      "act": 2,
+      "day": 17,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "zhou_cognition_choice",
+      "dialogues": [
+        {
+          "id": "dlg_060",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "周爷爷出现了记忆模糊的现象。你选择怎么处理这个观察？",
+          "layer": "essential",
+          "emotion": "curious"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "记录下这个细节，后续持续观察频率，必要时就医评估",
+          "description": "科学记录+持续监测",
+          "isCorrect": true,
+          "effects": [
+            { "type": "health", "delta": 3, "reason": "持续监测有助于早期发现问题" },
+            { "type": "trust", "delta": 3, "reason": "细心观察让他安心" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "zhou_act2_d17_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "你在精灵笔记里记下了这次记忆模糊的日期、内容和频率。单次出现可能是正常健忘，但如果频率增加——比如每周好几次、影响日常生活——就需要去神经内科做认知评估了。脑梗后血管性认知障碍的早期发现很重要，及时干预可以延缓进展。",
+            "explanation": "最优策略：记录+持续观察。脑梗后可能出现血管性认知障碍（VCI），早期症状就是近事遗忘、时间混淆。单次出现不一定是问题，但需要监测频率和严重程度。认知评估有标准化量表（如MMSE、MoCA），必要时由医生判断。现在不告诉周爷爷是为了避免心理负担，但精灵会把这条线索留着。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "觉得正常，老人都健忘，不用在意",
+          "description": "忽视认知信号",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": -3, "reason": "认知变化未被监测，可能延误干预" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhou_act2_d17_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "'老人都健忘'——这句话可能漏掉重要的信号。脑梗后的认知障碍和正常老化健忘不一样：正常健忘是'想不起来但事后能回忆起'，血管性认知障碍是'完全不记得且无法回忆'。周爷爷'吃了什么想不起来'可能是正常的，但需要持续观察——忽视不是安全，是赌博。",
+            "explanation": "忽视认知信号是危险的。脑梗患者发生血管性认知障碍的风险是正常老人的3-5倍。早期干预（控制血压血脂、认知训练、药物）可以延缓进展，但前提是'早期发现'。把所有健忘都归结为'正常老化'，可能错过干预窗口。这个问号后面可能还有更多线索。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "直接告诉周爷爷他记性变差了，让他注意",
+          "description": "直接指出，可能造成恐慌",
+          "isCorrect": false,
+          "effects": [
+            { "type": "mood", "delta": -5, "reason": "被告知记性变差，恐慌和焦虑" },
+            { "type": "trust", "delta": -2, "reason": "觉得被监视" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhou_act2_d17_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "周爷爷听完愣了很久：'我是不是……要痴呆了？'他一个下午没说话，晚上翻来覆去睡不着。一次记忆模糊可能什么都不是，但'被告知记性变差'的恐慌是真实的。在还不确定严重程度时直接说，弊大于利。",
+            "explanation": "在不确定严重程度时直接告知会造成不必要的恐慌。单次记忆模糊可能是正常的，但'你是不是记性变差了'这句话会引发老人对痴呆的恐惧——这种恐惧本身就会影响认知功能和心理健康。正确做法是先记录观察，有足够依据时由医生评估和告知。"
+          }
+        }
+      ],
+      "tags": ["choice", "cognition", "foreshadowing"],
+      "devNote": "教学：认知变化观察——记录频率+持续监测+必要时专业评估，不直接告知避免恐慌"
+    },
+    {
+      "id": "zhou_act2_d17_003",
+      "characterId": "zhou_yeye",
+      "act": 2,
+      "day": 17,
+      "type": "dayEnd",
+      "scene": "living_room",
+      "illustrationId": "zhou_day17_end",
+      "dialogues": [
+        {
+          "id": "dlg_061",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "这条线索我记下了，暂时不会惊动周爷爷。脑梗后的认知变化需要专业评估才能定性，我们继续观察。明天开始，第二幕的情感高潮要来了——周爷爷心里那股不甘心，会以你意想不到的方式爆发出来。",
+          "layer": "essential",
+          "emotion": "thoughtful",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "zhou_act2_d18_001",
+      "characterId": "zhou_yeye",
+      "act": 2,
+      "day": 18,
+      "type": "narrative",
+      "scene": "living_room",
+      "illustrationId": "zhou_conflict_brew",
+      "dialogues": [
+        {
+          "id": "dlg_062",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "女儿提到下周社区有重阳节活动，想推周爷爷去参加——有文艺演出，还有老人们一起包饺子。周爷爷听完，沉默了很久。他看着阳台外面的天，然后说了一句话。",
+          "layer": "essential",
+          "duration": 4500,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_063",
+          "speaker": "elder",
+          "speakerName": "周爷爷",
+          "text": "我不想让人家看到我这个样子。以前厂里活动我都是站台上讲话的，现在……坐在底下让人推着。不去了。",
+          "layer": "essential",
+          "emotion": "bitter",
+          "typingSpeed": 40
+        },
+        {
+          "id": "dlg_064",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "情感冲突酝酿了。周爷爷拒绝参加重阳节活动——不是因为不想去，是因为'以前站台上讲话，现在坐底下被推着'的落差。他的不甘心在这一刻集中爆发：身份落差。从'总工程师'到'坐轮椅的被照顾者'，这个落差是他心里最深的伤口。",
+          "layer": "essential",
+          "emotion": "serious"
+        }
+      ],
+      "nextNode": "zhou_act2_d18_002",
+      "isCheckpoint": true,
+      "tags": ["psychology", "emotional-conflict"],
+      "devNote": "Day 18 情感冲突酝酿——身份落差"
+    },
+    {
+      "id": "zhou_act2_d18_002",
+      "characterId": "zhou_yeye",
+      "act": 2,
+      "day": 18,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "zhou_conflict_choice",
+      "dialogues": [
+        {
+          "id": "dlg_065",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "周爷爷说'不想让人家看到我这个样子'。这是情感冲突的入口——你怎么回应，决定了他是一步步打开心结，还是彻底封闭。心理支持知识点：引导表达比直接安慰更有效。",
+          "layer": "essential",
+          "emotion": "curious"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "爸，没人会笑话您的，大家都认识您",
+          "description": "表面安慰，未触及核心",
+          "isCorrect": false,
+          "effects": [
+            { "type": "mood", "delta": 2, "reason": "暂时被安慰" },
+            { "type": "trust", "delta": -1, "reason": "觉得你不懂他真正在意什么" }
+          ],
+          "spiritPowerChange": 5,
+          "nextNode": "zhou_act2_d18_003",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "周爷爷摇了摇头：'不是笑话不笑话的事。'他知道别人不会笑话他——他在意的不是别人的目光，是自己心里的那道坎。'没人笑话你'解决不了'我接受不了自己这样'的问题。表面安慰没触及核心。",
+            "explanation": "表面安慰未触及核心。周爷爷的冲突不是'怕别人笑话'，而是'自己接受不了身份落差'。'没人笑话你'是在否定他的顾虑，但没有回应他真正的痛——从'站台上讲话的人'变成'被推着走的人'。心理支持要听到话背后的意思。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "您是不是觉得，以前和现在落差太大，心里过不去？跟我说说",
+          "description": "引导表达，触及核心",
+          "isCorrect": true,
+          "effects": [
+            { "type": "mood", "delta": 5, "reason": "被理解核心感受" },
+            { "type": "trust", "delta": 5, "reason": "你听懂了他没说出口的话" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "zhou_act2_d18_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "周爷爷沉默了很久，然后慢慢开口：'你是不知道……以前厂里开会，几百人听我讲话。图纸出了问题，全厂等我拿主意。现在呢？吃个饭要人端，上个厕所要人扶……我活着还有什么用？'他终于说出来了——不是'不想去活动'，是'觉得自己没用了'。这是他压了半年的心里话。",
+            "explanation": "最优策略：引导表达，触及核心。用'您是不是觉得落差太大'帮他命名情绪——很多时候老人说不清自己在难受什么，照护者帮他'说出来'本身就是疗愈。周爷爷的核心冲突是身份认同危机：从'被需要的人'变成'需要照顾的人'。引导他把这层意思说出来，才有机会帮他重建认同。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "那就不去了，不勉强您",
+          "description": "回避冲突，强化退缩",
+          "isCorrect": false,
+          "effects": [
+            { "type": "mood", "delta": 1, "reason": "暂时不用面对" },
+            { "type": "independence", "delta": -3, "reason": "回避强化了社交退缩" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhou_act2_d18_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "周爷爷点了点头，但他的眼神更暗了。'不去了'看似是尊重，实际是关上了门。他的不甘心没有被听见，只是被绕过去了。下次再有什么活动，他会更不愿意去——回避是有惯性的，越回避越退缩。",
+            "explanation": "回避冲突强化退缩。'不去了'看似尊重意愿，但周爷爷的问题不是'去不去活动'，是'接受不了自己现在的样子'。不处理这个核心问题，他会越来越退缩——不只是不参加活动，可能连出门都不愿意了。回避不是温柔，是放弃。"
+          }
+        }
+      ],
+      "tags": ["choice", "psychology", "emotional-conflict"],
+      "devNote": "教学：情感冲突——引导表达比表面安慰有效，帮老人命名情绪"
+    },
+    {
+      "id": "zhou_act2_d18_003",
+      "characterId": "zhou_yeye",
+      "act": 2,
+      "day": 18,
+      "type": "dayEnd",
+      "scene": "living_room",
+      "illustrationId": "zhou_day18_end",
+      "dialogues": [
+        {
+          "id": "dlg_066",
+          "speaker": "elder",
+          "speakerName": "周爷爷",
+          "text": "说了这么多……其实我也知道，你们都是为我好。但我就是……过不去这道坎。给我点时间。",
+          "layer": "essential",
+          "emotion": "vulnerable"
+        },
+        {
+          "id": "dlg_067",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "他说'给我点时间'——说明他愿意面对，只是还没准备好。情感冲突没有一夜解决的，但至少门打开了一条缝。明天，这个冲突会到达顶点——然后，才是真正的突破。",
+          "layer": "essential",
+          "emotion": "thoughtful",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "zhou_act2_d19_001",
+      "characterId": "zhou_yeye",
+      "act": 2,
+      "day": 19,
+      "type": "narrative",
+      "scene": "living_room",
+      "illustrationId": "zhou_conflict_peak",
+      "dialogues": [
+        {
+          "id": "dlg_068",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "早上，女儿发现轮椅被推到了阳台角落，上面堆了一块布。周爷爷拄着助行器站在客厅，脸色发白——他刚试着不用轮椅自己走，从卧室到客厅，左腿拖了十几步，差点在门槛上摔倒。",
+          "layer": "essential",
+          "duration": 4500,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_069",
+          "speaker": "elder",
+          "speakerName": "周爷爷",
+          "text": "我拄拐也能走！不用那个轮椅！我是腿不好，不是瘫了！",
+          "layer": "essential",
+          "emotion": "angry",
+          "typingSpeed": 40
+        },
+        {
+          "id": "dlg_070",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "冲突到达顶点。周爷爷把轮椅藏了，硬要自己走——但他刚才差点摔倒。他的左侧下肢肌力只有3级，助行器在室内短距离还行，长距离或疲劳时根本撑不住。安全 vs 尊严，这是照护中最难的平衡。你怎么处理？",
+          "layer": "essential",
+          "emotion": "alarmed"
+        }
+      ],
+      "nextNode": "zhou_act2_d19_002",
+      "isCheckpoint": true,
+      "tags": ["psychology", "emotional-conflict", "fall-risk"],
+      "devNote": "Day 19 情感冲突高潮——藏轮椅硬走，安全vs尊严"
+    },
+    {
+      "id": "zhou_act2_d19_002",
+      "characterId": "zhou_yeye",
+      "act": 2,
+      "day": 19,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "zhou_conflict_peak_choice",
+      "dialogues": [
+        {
+          "id": "dlg_071",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "周爷爷把轮椅藏了，硬要自己走，刚差点摔倒。三个方向：由着他、强迫用轮椅、或者……找到安全与尊严的平衡点。你怎么选？",
+          "layer": "essential",
+          "emotion": "serious"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "由着他拄助行器走，摔了再说",
+          "description": "放弃安全底线",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": -8, "reason": "左侧肌力不足硬走，跌倒风险极高" },
+            { "type": "trust", "delta": -3, "reason": "放任他冒险让他觉得不被在乎" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhou_act2_d19_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "周爷爷硬撑着走了几步，左腿一软，整个人往左歪——幸好女儿眼疾手快扶住了。如果没扶住呢？脑梗后偏瘫老人跌倒，骨折、二次脑梗、颅内出血……任何一个都可能致命。'摔了再说'不是尊重自主权，是放任危险。",
+            "explanation": "放弃安全底线是最糟的选择。尊重自主权的边界是'不危及生命安全'。周爷爷左侧肌力3级、平衡差，不使用适当辅具硬走，跌倒是大概率事件。脑梗后老人跌倒的后果比普通老人严重得多——可能直接导致二次脑梗或骨折后长期卧床。安全是不可妥协的底线。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "必须用轮椅！您摔倒怎么办？听我的！",
+          "description": "强迫接受，无视尊严",
+          "isCorrect": false,
+          "effects": [
+            { "type": "mood", "delta": -8, "reason": "被强迫，尊严被践踏" },
+            { "type": "trust", "delta": -5, "reason": "觉得你只把他当病人不当人" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhou_act2_d19_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "周爷爷一把推开轮椅：'我就是死也不坐那个！'他气得浑身发抖，不是因为轮椅，是因为你用'听我的'三个字剥夺了他最后的决定权。安全保住了，但信任碎了——他觉得你把他当'需要管束的废人'，不是一个有尊严的人。",
+            "explanation": "强迫接受无视尊严。周爷爷的核心冲突是'身份认同'——'被推着走'让他觉得自己不是人了。用'听我的'强迫他坐轮椅，等于践踏他最后的自主权。即使出发点是安全，方法错了也会摧毁信任。照护不是命令，安全也不能以践踏尊严为代价。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "理解他的不甘心，一起想办法：室内短距离用助行器，出门长距离用轮椅——两条腿走路",
+          "description": "平衡安全与尊严，折中方案",
+          "isCorrect": true,
+          "effects": [
+            { "type": "health", "delta": 8, "reason": "合理的辅具配置降低跌倒风险" },
+            { "type": "mood", "delta": 5, "reason": "被理解，尊严得到维护" },
+            { "type": "independence", "delta": 5, "reason": "室内仍能自主行走" },
+            { "type": "trust", "delta": 5, "reason": "你尊重他同时保护他" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "zhou_act2_d19_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "你说：'爸，我理解您不想坐轮椅——您不是瘫了，您在家里能走。但您左腿力量还不够，走远了容易摔。咱们这样：在家用助行器走，这是您的地盘，您说了算。出门远路用轮椅，不是您不行，是省着力气做更重要的事。两条腿走路，行不行？'周爷爷沉默了很久，然后长叹一口气：'……行吧。你说的有道理。'",
+            "explanation": "最优策略：平衡安全与尊严的折中方案。核心是'分层使用辅具'——室内短距离用助行器（保住行走能力和尊严），出门长距离用轮椅（保证安全节省体力）。关键话术是'不是您不行，是省着力气做更重要的事'——把轮椅从'无能的象征'重新定义为'省力的工具'。照护中最难的不是选对答案，而是在安全与尊严之间找到那个微妙的平衡点。"
+          }
+        }
+      ],
+      "tags": ["choice", "psychology", "emotional-conflict", "fall-risk"],
+      "devNote": "教学：安全vs尊严的平衡——分层使用辅具，重新定义辅具意义"
+    },
+    {
+      "id": "zhou_act2_d19_003",
+      "characterId": "zhou_yeye",
+      "act": 2,
+      "day": 19,
+      "type": "dayEnd",
+      "scene": "living_room",
+      "illustrationId": "zhou_day19_end",
+      "dialogues": [
+        {
+          "id": "dlg_072",
+          "speaker": "elder",
+          "speakerName": "周爷爷",
+          "text": "两条腿走路……这话说的，像个工程师的方案。行，在家我走着，出门再坐那个。但说好了，重阳节活动……我再想想。",
+          "layer": "essential",
+          "emotion": "calm"
+        },
+        {
+          "id": "dlg_073",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "冲突过去了。周爷爷接受了折中方案，而且说'再想想'重阳节的事——没有一口拒绝，就是进步。安全与尊严的平衡点找到了，接下来的事，是巩固这个平衡，让他真正在心理上接受。",
+          "layer": "essential",
+          "emotion": "warm",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "zhou_act2_d20_001",
+      "characterId": "zhou_yeye",
+      "act": 2,
+      "day": 20,
+      "type": "narrative",
+      "scene": "living_room",
+      "illustrationId": "zhou_reconciliation",
+      "dialogues": [
+        {
+          "id": "dlg_074",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "经过昨天的冲突和和解，周爷爷今天的状态明显不一样了。他主动用助行器在屋里走了几圈，还把阳台角落的轮椅推回了门口——'放这儿，出门顺手。'下午，他破天荒地主动开口了。",
+          "layer": "essential",
+          "duration": 4500,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_075",
+          "speaker": "elder",
+          "speakerName": "周爷爷",
+          "text": "小芳，重阳节那个活动……你帮我报个名吧。我想去看看。坐轮椅去，不丢人。",
+          "layer": "essential",
+          "emotion": "calm",
+          "typingSpeed": 40
+        },
+        {
+          "id": "dlg_076",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "周爷爷主动说要去重阳节活动了！而且自己说了'坐轮椅去，不丢人'——他真正过了心里那道坎。这是第二幕最大的突破。现在要做的是巩固这个突破，让'两条腿走路'的方案落到实处。",
+          "layer": "essential",
+          "emotion": "proud"
+        }
+      ],
+      "nextNode": "zhou_act2_d20_002",
+      "isCheckpoint": true,
+      "tags": ["psychology", "reconciliation"],
+      "devNote": "Day 20 和解——周爷爷主动接受轮椅出门"
+    },
+    {
+      "id": "zhou_act2_d20_002",
+      "characterId": "zhou_yeye",
+      "act": 2,
+      "day": 20,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "zhou_reconciliation_choice",
+      "dialogues": [
+        {
+          "id": "dlg_077",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "周爷爷主动报名重阳节活动了。怎么巩固这个突破，让'两条腿走路'真正成为日常？",
+          "layer": "essential",
+          "emotion": "curious"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "和他一起制定日常活动计划：哪些用助行器、哪些用轮椅，尊重他的选择",
+          "description": "制度化巩固，尊重自主权",
+          "isCorrect": true,
+          "effects": [
+            { "type": "trust", "delta": 5, "reason": "尊重他的决定权" },
+            { "type": "mood", "delta": 5, "reason": "有了清晰的安排，安心" },
+            { "type": "independence", "delta": 3, "reason": "自主选择辅具使用场景" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "zhou_act2_d20_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "你和周爷爷一起列了一张表：卧室到客厅——助行器；客厅到卫生间——助行器；下楼去花园——轮椅；去社区活动——轮椅。每一项都问他的意见，他改了两处。最后他看着这张表说：'行，就这么定。我自己能走的自己走，走不了的……不逞强。'这不是你替他安排的，是他自己定的规则。",
+            "explanation": "最优策略：制度化巩固+尊重自主权。把'两条腿走路'变成具体的日常计划，让方案落地。关键是'一起制定'和'尊重他的选择'——周爷爷改了两处，说明他真的参与了决策，而不是被动接受。当老人自己参与制定的规则，执行率远高于被强加的规则。这就是'辅助而非替代'在决策层面的体现。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "趁机要求他以后所有出门都必须用轮椅，安全第一",
+          "description": "借机收紧，推翻折中方案",
+          "isCorrect": false,
+          "effects": [
+            { "type": "trust", "delta": -5, "reason": "觉得被套路了" },
+            { "type": "mood", "delta": -3, "reason": "刚建立的信任被推翻" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhou_act2_d20_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "周爷爷脸色变了：'你昨天说的两条腿走路呢？今天又变卦了？'他觉得被骗了——昨天刚接受的折中方案，今天就推翻了。好不容易建立的信任，一句话就碎了。安全不能靠欺骗来实现。",
+            "explanation": "借机收紧等于欺骗。昨天达成的折中方案是周爷爷信任你的基础，如果今天借他'同意出门'的机会推翻方案，他会觉得被骗——'你说两条腿走路是骗我先用轮椅的'。信任一旦碎了比原来更难建。照护方案的调整需要协商，不能单方面收紧。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "给他买个新礼物奖励他愿意出门",
+          "description": "物质奖励而非心理巩固",
+          "isCorrect": false,
+          "effects": [
+            { "type": "mood", "delta": 2, "reason": "收到礼物开心" }
+          ],
+          "spiritPowerChange": 5,
+          "nextNode": "zhou_act2_d20_003",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "礼物他收了，也说了谢谢。但他的突破不是因为你买了东西——是他自己过了心里那道坎。物质奖励可能让他觉得'愿意出门是为了被奖励'，反而模糊了真正的动力：他想重新参与生活。",
+            "explanation": "物质奖励不是巩固心理突破的正确方式。周爷爷愿意出门是心理上的成长——他接受了现实、重新定义了尊严。物质奖励可能适得其反：把内在动力（想参与生活）替换成外在动力（要奖励），一旦奖励消失，行为也消失了。巩固突破要用'让他参与决策'，不是买东西。"
+          }
+        }
+      ],
+      "tags": ["choice", "psychology", "reconciliation"],
+      "devNote": "教学：巩固心理突破——制度化方案+尊重自主权参与决策"
+    },
+    {
+      "id": "zhou_act2_d20_003",
+      "characterId": "zhou_yeye",
+      "act": 2,
+      "day": 20,
+      "type": "dayEnd",
+      "scene": "living_room",
+      "illustrationId": "zhou_day20_end",
+      "dialogues": [
+        {
+          "id": "dlg_078",
+          "speaker": "elder",
+          "speakerName": "周爷爷",
+          "text": "这张表贴墙上吧。以后按这个来。对了，重阳节那天……穿我那件深蓝夹克，精神点。",
+          "layer": "essential",
+          "emotion": "hopeful"
+        },
+        {
+          "id": "dlg_079",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "他要穿深蓝夹克去重阳节活动——他开始期待出门了。从'不想让人看到'到'穿精神点'，这一步走了十三天。第二幕接近尾声，该总结了。",
+          "layer": "essential",
+          "emotion": "warm",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "zhou_act2_d21_001",
+      "characterId": "zhou_yeye",
+      "act": 2,
+      "day": 21,
+      "type": "narrative",
+      "scene": "living_room",
+      "illustrationId": "zhou_week2_summary",
+      "dialogues": [
+        {
+          "id": "dlg_080",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "第二幕的最后一天。适老化改造施工完成了——卫生间扶手闪着银光，走廊坡道平整光滑，感应夜灯在黄昏时自动亮起。长护险评估结果也下来了：周爷爷被评为轻度失能，每月可享受12小时免费上门护理服务。他坐在改造后的客厅里，助行器在手边，轮椅在门口，深蓝夹克挂在衣架上等着明天。",
+          "layer": "essential",
+          "duration": 5000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_081",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "第二幕总结。这两周你完成了：适老化改造方案、家居平面图操作、长护险申请通过、心理支持从倾听到价值重建、社交从退缩到主动报名、情感冲突的突破与和解。来看看数据变化。",
+          "layer": "essential",
+          "emotion": "proud"
+        },
+        {
+          "id": "dlg_082",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "周爷爷的健康值提升有限——脑梗后遗症不可逆，这是现实。但他的心情值和信任值大幅提升——他不再封闭、不再回避、不再觉得自己是废人。这比任何身体指标都重要。第三幕的挑战会不一样——那是最危险也最关键的时刻。",
+          "layer": "essential",
+          "emotion": "serious",
+          "typingSpeed": 35
+        }
+      ],
+      "nextNode": "zhou_act2_d21_002",
+      "isCheckpoint": true,
+      "tags": ["week-summary"],
+      "devNote": "Day 21 第二幕总结"
+    },
+    {
+      "id": "zhou_act2_d21_002",
+      "characterId": "zhou_yeye",
+      "act": 2,
+      "day": 21,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "zhou_week2_reflection",
+      "dialogues": [
+        {
+          "id": "dlg_083",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "第二幕结束了。第三幕是夜间风险期——脑梗老人最危险的时刻在夜间和起夜时。TIA（一过性脑缺血）、跌倒、应急处理……这些都在第三幕。回顾这两周，你觉得周爷爷最大的变化是什么？",
+          "layer": "essential",
+          "emotion": "thoughtful"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "他最大的变化是心理上接受了现实，愿意配合照护",
+          "description": "看到心理层面的成长",
+          "isCorrect": true,
+          "effects": [
+            { "type": "mood", "delta": 5, "reason": "被理解的温暖" },
+            { "type": "trust", "delta": 3, "reason": "你看到了他真正的成长" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "zhou_act2_d21_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "你说到了核心。这两周周爷爷的身体变化不大——健康值提升有限。但他从一个'藏轮椅硬走'的倔老头，变成了'两条腿走路、主动报名活动'的坦然老人。心理上的接受和重建，是比身体恢复更珍贵的进步。第三幕的应急挑战，需要这份心理基础——只有接受现实的人，才能在危机来临时冷静配合。",
+            "explanation": "最优回答：看到心理层面的成长。周爷爷是轻度失能角色，身体恢复有天花板（脑梗后遗症不可逆）。他的核心成长在心理——从'不甘心到封闭'到'不甘心但接受'，从'拒绝辅具'到'两条腿走路'。这种心理韧性是第三幕应对危机的基础。照护失能老人，最终照护的不是身体，是心态。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "他最大的变化是身体恢复了，能站能走了",
+          "description": "高估身体恢复",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": -2, "reason": "对恢复的误判可能导致第三幕冒进" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhou_act2_d21_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "周爷爷的身体确实有进步——上肢肌力从3级到4级，能扶助行器站立。但'能站能走'是高估了——他下肢还是3级，平衡差，离开助行器随时可能摔。高估恢复是危险的，第三幕的跌倒风险正来自'觉得自己能行'的冒进。保持清醒的认识，比盲目乐观更安全。",
+            "explanation": "高估身体恢复是危险的。周爷爷的恢复是有限的——上肢有进步，但下肢仍然弱、平衡仍然差。如果照护者和老人都高估恢复，可能在第三幕放松警惕——不使用适当辅具、过度自信地行走，增加跌倒风险。对失能老人的恢复要有清醒认知：进步是真实的，但局限也是真实的。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "担心第三幕的应急挑战，周爷爷能扛过去吗",
+          "description": "焦虑未来",
+          "isCorrect": false,
+          "effects": [
+            { "type": "mood", "delta": -2, "reason": "焦虑情绪传递给老人" }
+          ],
+          "spiritPowerChange": 5,
+          "nextNode": "zhou_act2_d21_003",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "担心是正常的——第三幕确实有危机。但焦虑不会让危机不来，只会让你们在危机来临时更慌。这两周积累的不只是属性值，更是应对危机的能力：你知道怎么识别TIA、怎么处理跌倒、怎么拨打120。有准备的人不怕危机。",
+            "explanation": "焦虑未来不能解决问题。第三幕的应急事件是设计好的教学场景——TIA识别、跌倒处置、紧急决策。这些场景的目的不是'考倒你'，而是'教会你'。精灵回溯机制保证没有永久损失。带着这两周积累的知识和信任，去迎接第三幕，比焦虑更有用。"
+          }
+        }
+      ],
+      "tags": ["choice", "week-summary", "strategy"],
+      "devNote": "Day 21 第二幕总结选择——看到心理成长而非高估身体恢复"
+    },
+    {
+      "id": "zhou_act2_d21_003",
+      "characterId": "zhou_yeye",
+      "act": 2,
+      "day": 21,
+      "type": "actEnd",
+      "scene": "living_room",
+      "illustrationId": "zhou_act2_end",
+      "dialogues": [
+        {
+          "id": "dlg_084",
+          "speaker": "elder",
+          "speakerName": "周爷爷",
+          "text": "明天重阳节，穿精神点。日子……比以前好过了。有扶手、有坡道、有人来帮忙，还有你们爷俩陪着。行了，睡吧。",
+          "layer": "essential",
+          "emotion": "content"
+        },
+        {
+          "id": "dlg_085",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "夜灯感应到天黑，自动亮起淡黄色的光，从卧室一路铺到卫生间。周爷爷躺在床上，看着天花板上柔和的光晕，慢慢闭上了眼。明天是重阳节，也是第三幕的开始——他还不知道，最严峻的考验正在夜里等着他。",
+          "layer": "emotional",
+          "typingSpeed": 40
+        },
+        {
+          "id": "dlg_086",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "第二幕结束。家改造好了，长护险批了，心结打开了。但脑梗老人的夜间是最危险的——TIA、跌倒、应急决策……第三幕，守住这些夜，才能真正守住这个家。",
+          "layer": "essential",
+          "emotion": "serious",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["act-end"],
+      "devNote": "第二幕结束节点，为第三幕夜间风险铺垫"
+    }
+  ]
+}

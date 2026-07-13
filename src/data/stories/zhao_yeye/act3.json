@@ -1,0 +1,1150 @@
+{
+  "characterId": "zhao_yeye",
+  "act": 3,
+  "title": "第三幕：守护与接纳",
+  "theme": "应急处理与最终的接纳",
+  "startDay": 22,
+  "endDay": 30,
+  "nodes": [
+    {
+      "id": "zhao_act3_d22_001",
+      "characterId": "zhao_yeye",
+      "act": 3,
+      "day": 22,
+      "type": "narrative",
+      "scene": "bedroom",
+      "illustrationId": "zhao_prostate_emergency",
+      "dialogues": [
+        {
+          "id": "dlg_001",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "凌晨三点，赵爷爷醒了。他想去卫生间，但去了之后怎么也尿不出来。他站在那里，额头冒汗，小腹胀痛越来越厉害。他咬着牙，不想吵醒任何人，但疼痛让他的手开始发抖。",
+          "layer": "essential",
+          "duration": 4500,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_002",
+          "speaker": "elder",
+          "speakerName": "赵爷爷",
+          "text": "……怎么尿不出来了……这……这怎么回事……",
+          "layer": "essential",
+          "emotion": "panicked",
+          "typingSpeed": 35
+        },
+        {
+          "id": "dlg_003",
+          "speaker": "spirit",
+          "speakerName": "小守",
+          "text": "警报！赵爷爷可能发生了急性尿潴留——前列腺增生最危险的并发症之一。膀胱胀满却排不出尿，如果不及时处理，可能导致膀胱损伤甚至肾功能衰竭。这是限时决策，必须马上行动！",
+          "layer": "essential",
+          "emotion": "alarmed"
+        }
+      ],
+      "nextNode": "zhao_act3_d22_002",
+      "isCheckpoint": true,
+      "tags": ["emergency", "prostate", "timed"],
+      "devNote": "Day 22 前列腺急症：急性尿潴留。限时决策，超时默认选择choice_a（拖延）"
+    },
+    {
+      "id": "zhao_act3_d22_002",
+      "characterId": "zhao_yeye",
+      "act": 3,
+      "day": 22,
+      "type": "choice",
+      "scene": "bedroom",
+      "illustrationId": "zhao_emergency_choice",
+      "dialogues": [
+        {
+          "id": "dlg_004",
+          "speaker": "spirit",
+          "speakerName": "小守",
+          "text": "赵爷爷憋得满脸通红，还在硬扛。急性尿潴留不能拖——每拖延一分钟，膀胱损伤的风险就增加一分。限时30秒，你怎么处理？",
+          "layer": "essential",
+          "emotion": "urgent"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "爷爷忍忍，天亮再说，现在去医院太折腾了",
+          "description": "拖延就医（超时默认选项）",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": -10, "reason": "尿潴留拖延，膀胱和肾功能损伤风险" },
+            { "type": "trust", "delta": -3, "reason": "关键时刻没有帮助他" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhao_act3_d22_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "赵爷爷一直忍到天亮，但情况更严重了——小腹胀痛难忍，开始发烧。急性尿潴留不能拖，拖延可能导致膀胱过度膨胀、损伤逼尿肌，甚至引发上行性感染影响肾功能。",
+            "explanation": "急性尿潴留是泌尿外科急症，不能'忍到天亮'。前列腺增生患者如果突然无法排尿且伴有胀痛，需要立即就医——通常需要急诊导尿缓解膀胱压力。拖延越久，并发症风险越高。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "爷爷，多喝点热水，用热毛巾敷敷肚子，试试能不能尿出来",
+          "description": "尝试保守方法诱导排尿",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": -5, "reason": "保守方法无效时延误了就医时间" }
+          ],
+          "spiritPowerChange": 5,
+          "nextNode": "zhao_act3_d22_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "热敷和流水声诱导排尿对轻度尿潴留有时有效，但赵爷爷已经胀痛到冒汗——这是完全性尿潴留，保守方法大概率无效，反而浪费了宝贵的就医时间。可以尝试，但不能因此拖延就医。",
+            "explanation": "热敷、流水声诱导排尿适用于轻度术后尿潴留，但对于前列腺增生导致的急性完全性尿潴留通常无效。可以同时尝试保守方法和准备就医，但绝不能因为'试试看'而拖延去医院。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "爷爷，这可能尿潴留了，憋着会伤肾。我现在就叫车，陪您去急诊",
+          "description": "立即识别急症，果断就医",
+          "isCorrect": true,
+          "effects": [
+            { "type": "health", "delta": 3, "reason": "及时就医，避免并发症" },
+            { "type": "trust", "delta": 6, "reason": "关键时刻果断帮他，信任大增" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "zhao_act3_d22_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "赵爷爷还在犹豫'要不要这么严重'，但你已经叫了车。到了急诊，医生立刻做了导尿——放出了800毫升尿液。医生说：'幸亏来得及时，再拖几个小时可能就要损伤肾功能了。'",
+            "explanation": "最优策略：立即识别急症，果断就医。急性尿潴留的典型表现——突然无法排尿、小腹胀痛、辗转不安。前列腺增生患者突然出现这些症状，应立即去急诊。导尿是首选处理方式，拖延可能导致膀胱不可逆损伤。赵爷爷从'小毛病不值当'到亲眼经历急症，终于明白：有些事不能扛。"
+          }
+        }
+      ],
+      "tags": ["choice", "emergency", "timed", "prostate"],
+      "devNote": "限时决策节点。超时默认选择choice_a（拖延就医），health -10"
+    },
+    {
+      "id": "zhao_act3_d22_003",
+      "characterId": "zhao_yeye",
+      "act": 3,
+      "day": 22,
+      "type": "dayEnd",
+      "scene": "hospital",
+      "illustrationId": "zhao_day22_end",
+      "dialogues": [
+        {
+          "id": "dlg_005",
+          "speaker": "elder",
+          "speakerName": "赵爷爷",
+          "text": "我说了……就是小毛病……怎么就弄成这样了……",
+          "layer": "essential",
+          "emotion": "shaken"
+        },
+        {
+          "id": "dlg_006",
+          "speaker": "spirit",
+          "speakerName": "小守",
+          "text": "赵爷爷终于亲身体验了'小毛病拖延'的代价。这不是惩罚——这是现实在告诉他，有些倔强需要放下。明天，他需要你的安慰，不是说教。",
+          "layer": "essential",
+          "emotion": "serious",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end", "emergency"]
+    },
+    {
+      "id": "zhao_act3_d23_001",
+      "characterId": "zhao_yeye",
+      "act": 3,
+      "day": 23,
+      "type": "choice",
+      "scene": "hospital",
+      "illustrationId": "zhao_catheter",
+      "dialogues": [
+        {
+          "id": "dlg_007",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "从医院回来，赵爷爷插着导尿管。他坐在床边，一句话不说，看着窗外。插管对一个要强的老人来说是巨大的心理打击——他觉得自己'废了'。",
+          "layer": "essential",
+          "duration": 4000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_008",
+          "speaker": "spirit",
+          "speakerName": "小守",
+          "text": "赵爷爷在沉默里挣扎。导尿管让他觉得尊严受损——这对一个白天逞强不拄拐的人来说，比身体疼痛更难接受。你怎么安慰他？",
+          "layer": "essential",
+          "emotion": "worried"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "早听我们的不就没这事了？以后可得注意了",
+          "description": "马后炮式说教",
+          "isCorrect": false,
+          "effects": [
+            { "type": "trust", "delta": -6, "reason": "马后炮让他感到被嘲笑" },
+            { "type": "mood", "delta": -5, "reason": "羞辱感加剧" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhao_act3_d23_002",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "赵爷爷把头别过去，不说话了。他正在最低谷，你的'早知如此'像一把刀。他不会恨你，但他会记住——在你这里，他得不到安慰，只有教训。",
+            "explanation": "马后炮是照护中最伤人的话之一。赵爷爷正在经历尊严的最低谷——插着管子、无法自理、'小毛病'变成了急症。这时候说'早听我们的'，等于在他伤口上撒盐。他需要的是被接住，不是被教育。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "不提这事，当什么都没发生",
+          "description": "回避问题，忽视心理创伤",
+          "isCorrect": false,
+          "effects": [
+            { "type": "mood", "delta": -3, "reason": "心理创伤被忽视，独自消化" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhao_act3_d23_002",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "赵爷爷一个人坐在那里，越来越沉默。你回避了话题，但没有回避他的痛苦——他还在经历着。'当没发生'不等于'没发生'，心理创伤不会因为你不提就消失。",
+            "explanation": "回避不等于尊重。赵爷爷插着导尿管，尊严严重受损。你不说，他会自己想——而且往最坏的方向想。心理创伤需要被看到、被化解，而不是被假装不存在。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "爷爷，这管子过几天就能拆，到时候您又生龙活虎。您可是全厂最年轻的车间主任，这点事儿算什么",
+          "description": "正向引导+身份认同+给出明确预期",
+          "isCorrect": true,
+          "effects": [
+            { "type": "trust", "delta": 6, "reason": "在最脆弱时被理解和支持" },
+            { "type": "mood", "delta": 5, "reason": "尊严被维护，看到希望" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "zhao_act3_d23_002",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "赵爷爷回过头看了你一眼，眼眶有点红。他嘟囔着'什么车间主任，都多少年前的事了'，但嘴角微微翘了一下。'过几天就能拆'给了他希望，'全厂最年轻的车间主任'给了他尊严。他没有说谢谢，但他开始配合治疗了。",
+            "explanation": "最优策略：正向引导+身份认同+明确预期。赵爷爷的痛苦核心是'尊严受损'——他觉得自己废了。'过几天就能拆'给了他时间预期（不是永远这样），'车间主任'唤醒了他最骄傲的身份认同（你还是那个强大的人）。在最脆弱的时候维护尊严，比任何安慰都有效。"
+          }
+        }
+      ],
+      "tags": ["choice", "psychology", "dignity", "recovery"],
+      "devNote": "Day 23 急症后续教学：维护老人尊严 + 正向引导"
+    },
+    {
+      "id": "zhao_act3_d23_002",
+      "characterId": "zhao_yeye",
+      "act": 3,
+      "day": 23,
+      "type": "dayEnd",
+      "scene": "bedroom",
+      "illustrationId": "zhao_day23_end",
+      "dialogues": [
+        {
+          "id": "dlg_009",
+          "speaker": "elder",
+          "speakerName": "赵爷爷",
+          "text": "这管子……什么时候能拆？",
+          "layer": "essential",
+          "emotion": "vulnerable"
+        },
+        {
+          "id": "dlg_010",
+          "speaker": "spirit",
+          "speakerName": "小守",
+          "text": "他开始问'什么时候能拆'了——这说明他在面对现实，而不是逃避了。赵爷爷在改变。急症打碎了他的倔强，但你的支持让他在碎片里找到了重新站起来的勇气。",
+          "layer": "essential",
+          "emotion": "warm",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "zhao_act3_d24_001",
+      "characterId": "zhao_yeye",
+      "act": 3,
+      "day": 24,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "zhao_recovery_balance",
+      "dialogues": [
+        {
+          "id": "dlg_011",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "赵爷爷在家休养，开始接受一些照护——至少不再硬扛着不让人帮了。但新的问题来了：他开始变得什么都让你做。'反正我也没用了'——从逞强走到了另一个极端。",
+          "layer": "essential",
+          "duration": 4000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_012",
+          "speaker": "spirit",
+          "speakerName": "小守",
+          "text": "赵爷爷从'什么都不让帮'变成了'什么都让你做'。这不是进步，是放弃。过度依赖和过度逞强一样危险——你怎么帮他找到平衡？",
+          "layer": "essential",
+          "emotion": "thoughtful"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "既然他愿意，那就全帮他做了，省得他逞强",
+          "description": "全包代劳，过度照顾",
+          "isCorrect": false,
+          "effects": [
+            { "type": "independence", "delta": -8, "reason": "过度代劳，自理能力退化" },
+            { "type": "mood", "delta": -3, "reason": "感到无用，自我价值下降" },
+            { "type": "health", "delta": 2, "reason": "短期安全，但长期机能退化" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhao_act3_d24_002",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "赵爷爷越来越依赖你，连能自己倒的水都让你倒。'反正我也没用了'——他不是在享受照顾，是在确认自己的无用。全包代劳看起来是关心，实际是加速他的衰退。",
+            "explanation": "过度代劳是照护中最常见的错误。赵爷爷从逞强走向依赖，全包代劳会固化这种依赖——独立值下降，自我价值感下降，机能退化加速。辅助而非替代，才是正确的照护方式。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "他现在插着管子，还是让他自己来吧，别太惯着",
+          "description": "完全不管，忽视恢复期需求",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": -4, "reason": "恢复期缺乏必要辅助，风险增加" },
+            { "type": "trust", "delta": -3, "reason": "在最需要支持时被推开" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhao_act3_d24_002",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "赵爷爷试着自己倒水，导尿管绊了一下，水洒了一地。他愣在那里，脸上是一种说不出的表情——从'逞强'到'依赖'再到'被推回去自己来'，他不知道该怎么办了。",
+            "explanation": "恢复期不能走极端。赵爷爷刚经历急症、插着导尿管，确实需要辅助。完全不管等于把他从依赖的极端推回逞强的极端——两个极端都有风险。正确做法是分清'能做的让他做，做不到的帮他做'。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "帮他做导尿管护理等做不到的事，倒水吃饭等能做的让他自己来",
+          "description": "辅助而非替代，分清能力边界",
+          "isCorrect": true,
+          "effects": [
+            { "type": "health", "delta": 4, "reason": "必要辅助到位，恢复顺利" },
+            { "type": "independence", "delta": 3, "reason": "能力范围内鼓励自理" },
+            { "type": "trust", "delta": 4, "reason": "恰到好处的支持" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "zhao_act3_d24_002",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "赵爷爷一开始还赌气说'那你自己别帮了'，但当你只帮他处理导尿管护理、把倒水和递报纸留给他自己时，他慢慢找到了节奏。他嘟囔着'我又不是废人'——这句话从他说出来，就是对的。",
+            "explanation": "最优策略：辅助而非替代。恢复期照护的核心是分清能力边界——导尿管护理等专业操作由照护者完成，倒水、吃饭、看报纸等日常活动让老人自己做。既确保了安全和恢复，又维护了自理能力和自我价值感。'我又不是废人'——当赵爷爷自己说出这句话时，说明他找到了逞强和依赖之间的平衡点。"
+          }
+        }
+      ],
+      "tags": ["choice", "recovery", "independence-balance"],
+      "devNote": "Day 24 恢复期教学：辅助而非替代，分清能力边界"
+    },
+    {
+      "id": "zhao_act3_d24_002",
+      "characterId": "zhao_yeye",
+      "act": 3,
+      "day": 24,
+      "type": "dayEnd",
+      "scene": "living_room",
+      "illustrationId": "zhao_day24_end",
+      "dialogues": [
+        {
+          "id": "dlg_013",
+          "speaker": "elder",
+          "speakerName": "赵爷爷",
+          "text": "行了行了，水我自己倒。你别老跟着我，我又不是三岁小孩。",
+          "layer": "essential",
+          "emotion": "tsundere"
+        },
+        {
+          "id": "dlg_014",
+          "speaker": "spirit",
+          "speakerName": "小守",
+          "text": "赵爷爷又开始'嘴硬'了——但这次的嘴硬是好事。从'反正我也没用了'到'我又不是三岁小孩'，他在找回自己的边界。逞强和依赖之间，他终于站在了中间。",
+          "layer": "essential",
+          "emotion": "warm",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "zhao_act3_d25_001",
+      "characterId": "zhao_yeye",
+      "act": 3,
+      "day": 25,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "zhao_medicine_storage",
+      "dialogues": [
+        {
+          "id": "dlg_015",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "趁赵爷爷恢复期，你帮他整理药箱。发现里面乱七八糟：前列腺药和止痛药混在一起、有一盒药放在暖气片旁边、几瓶药没有盖紧盖子、过期止痛药虽然扔了但还有半盒快过期的。",
+          "layer": "essential",
+          "duration": 4000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_016",
+          "speaker": "spirit",
+          "speakerName": "小守",
+          "text": "赵爷爷的药箱一团糟。药品储存不当可能影响药效甚至产生毒性。这是一个用药管理的好教学点——怎么帮他整理？",
+          "layer": "essential",
+          "emotion": "serious"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "把所有药都放冰箱里，保鲜",
+          "description": "全部冷藏",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": -3, "reason": "部分药物冷藏后影响药效" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhao_act3_d25_002",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "坦索罗辛缓释胶囊放进冰箱后受潮了，药效降低。不是所有药都适合冷藏——大部分常温药放冰箱反而受潮变质。只有少数药品（如胰岛素、某些眼药水）需要冷藏。",
+            "explanation": "药品储存的常见误区：不是所有药都该放冰箱。大部分口服药应储存在避光、干燥、阴凉处（15-25度）。冰箱湿度大，可能导致药片受潮、胶囊变质。只有说明书明确标注'冷藏'的药品才放冰箱。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "随便放桌上就行了，反正他天天吃",
+          "description": "不重视储存条件",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": -2, "reason": "药品暴露在光照和高温下，药效降低" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhao_act3_d25_002",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "药放在桌上，阳光直射、暖气烘烤。坦索罗辛的说明书上写着'避光、密封、不超过25度保存'——桌上的条件完全不达标。药效降低了，赵爷爷还以为是自己病情加重了。",
+            "explanation": "药品不能随便放。光照、高温、潮湿都会影响药效。特别是暖气片旁边——温度可能超过40度，足以让某些药物成分分解。药品储存三原则：避光、防潮、避高温。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "按说明书分类储存：避光防潮处放常温药，标注有效期，分类摆放",
+          "description": "按规范分类储存，标注有效期",
+          "isCorrect": true,
+          "effects": [
+            { "type": "health", "delta": 4, "reason": "正确储存保证药效" },
+            { "type": "trust", "delta": 3, "reason": "专业细致的照护增加信任" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "zhao_act3_d25_002",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "你把药品按分类整理好：前列腺药一栏、止痛药一栏（新的、未过期的）、保健品分开。每盒药贴上有效期标签，放在避光的柜子里。赵爷爷看了看，嘟囔着'比我药房摆得还整齐'。",
+            "explanation": "最优策略：按说明书分类储存。药品储存六要点——1.避光：远离阳光直射；2.防潮：不放浴室厨房；3.避高温：不放暖气旁；4.密封：用完拧紧瓶盖；5.分类：处方药、非处方药、保健品分开；6.标注：贴上有效期，定期清理过期药。赵爷爷的药箱从一团糟变成了整整齐齐——这就是专业照护的样子。"
+          }
+        }
+      ],
+      "tags": ["choice", "medication", "storage"],
+      "devNote": "Day 25 药品储存教学：避光防潮避高温 + 分类管理"
+    },
+    {
+      "id": "zhao_act3_d25_002",
+      "characterId": "zhao_yeye",
+      "act": 3,
+      "day": 25,
+      "type": "dayEnd",
+      "scene": "living_room",
+      "illustrationId": "zhao_day25_end",
+      "dialogues": [
+        {
+          "id": "dlg_017",
+          "speaker": "elder",
+          "speakerName": "赵爷爷",
+          "text": "行吧，这么一弄倒是好找多了。以前那药盒子……确实乱。",
+          "layer": "essential",
+          "emotion": "satisfied"
+        },
+        {
+          "id": "dlg_018",
+          "speaker": "spirit",
+          "speakerName": "小守",
+          "text": "赵爷爷居然承认'确实乱'了——这在以前是不可能的。急症之后，他对自己的健康管理态度变了。不是屈服，是学会了和身体和解。",
+          "layer": "essential",
+          "emotion": "warm",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "zhao_act3_d26_001",
+      "characterId": "zhao_yeye",
+      "act": 3,
+      "day": 26,
+      "type": "choice",
+      "scene": "bedroom",
+      "illustrationId": "zhao_fall_prevention",
+      "dialogues": [
+        {
+          "id": "dlg_019",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "晚上，赵爷爷又想不拄拐去卫生间——插着导尿管让他觉得拄拐'太丢人'了。他从床上坐起来，摸黑往卫生间走，没开灯。精灵的警铃响了。",
+          "layer": "essential",
+          "duration": 4000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_020",
+          "speaker": "spirit",
+          "speakerName": "小守",
+          "text": "赵爷爷又逞强了！插着导尿管、摸黑、不拄拐——这是跌倒的最高风险组合。导尿管可能绊脚，黑暗中看不清障碍物，膝盖本就疼痛无力。你怎么预防？",
+          "layer": "essential",
+          "emotion": "alarmed"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "爷爷！您别去了！太危险了！",
+          "description": "命令式阻止",
+          "isCorrect": false,
+          "effects": [
+            { "type": "trust", "delta": -3, "reason": "被命令感到不被尊重" },
+            { "type": "mood", "delta": -2, "reason": "被当成小孩" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhao_act3_d26_002",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "赵爷爷被你一喊，脚下绊了一下，差点摔倒。他稳住后恼怒地说'你喊什么喊'。命令式阻止不仅没降低风险，反而吓了他一跳，增加了跌倒概率。",
+            "explanation": "黑暗中大声喊叫可能惊吓到正在行走的老人，反而导致跌倒。预防跌倒需要提前做好环境准备，而不是在老人起身时突然阻止。命令式语言对赵爷爷尤其无效。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "算了，他要去就去吧，反正也就几步路",
+          "description": "忽视风险",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": -5, "reason": "高风险环境未干预，跌倒概率极高" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhao_act3_d26_002",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "赵爷爷摸黑走到一半，导尿管绊住了脚，他一个趔趄——虽然没有摔倒，但撞到了门框，膝盖旧伤又疼了。'几步路'对恢复期的老人来说，可能就是跌倒的距离。",
+            "explanation": "恢复期老人的跌倒风险远高于平时——身体虚弱、行动受限、辅具（导尿管）增加绊脚风险。忽视这几步路的风险，可能导致明天就在急诊室。夜间起夜是跌倒高发时段，必须做好预防。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "提前开夜灯，把拐杖递过去：爷爷，夜里亮着灯，我陪您过去",
+          "description": "环境预防+陪伴辅助",
+          "isCorrect": true,
+          "effects": [
+            { "type": "health", "delta": 3, "reason": "环境安全+辅助到位，避免跌倒" },
+            { "type": "trust", "delta": 4, "reason": "不命令但默默保护" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "zhao_act3_d26_002",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "夜灯亮了，赵爷爷看到了地上的导尿管，自然地跨了过去。他接过拐杖，嘟囔着'不用你陪'，但脚步稳多了。你没有命令他，而是提前做好了环境准备——这就是最好的预防。",
+            "explanation": "最优策略：环境预防+陪伴辅助。夜间跌倒预防五要素——1.夜灯：保证起夜路线有照明；2.清理地面：移除绊脚物品（导尿管、电线、地毯边缘）；3.辅具到位：拐杖放床边伸手可及；4.防滑：卫生间铺防滑垫；5.陪伴：高危时段有人在旁。不命令、不忽视，而是默默把环境变安全——这是专业照护的体现。"
+          }
+        }
+      ],
+      "tags": ["choice", "fall-prevention", "night-care"],
+      "devNote": "Day 26 跌倒前兆预防教学：夜间环境安全"
+    },
+    {
+      "id": "zhao_act3_d26_002",
+      "characterId": "zhao_yeye",
+      "act": 3,
+      "day": 26,
+      "type": "dayEnd",
+      "scene": "bedroom",
+      "illustrationId": "zhao_day26_end",
+      "dialogues": [
+        {
+          "id": "dlg_021",
+          "speaker": "spirit",
+          "speakerName": "小守",
+          "text": "今夜平安过去了。但赵爷爷恢复期还有几天，夜间起夜的风险不会消失。保持夜灯、拐杖在侧、地面清洁——这些预防措施必须持续。明天是最关键的一天。",
+          "layer": "essential",
+          "emotion": "serious",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "zhao_act3_d27_001",
+      "characterId": "zhao_yeye",
+      "act": 3,
+      "day": 27,
+      "type": "narrative",
+      "scene": "bathroom",
+      "illustrationId": "zhao_fall_event",
+      "dialogues": [
+        {
+          "id": "dlg_022",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "凌晨四点，赵爷爷起夜。这次他没拿拐杖——昨晚你陪了他，他觉得'也没多远'。他摸黑走向卫生间，路过走廊时，脚下的拖鞋打滑——他整个人摔了下去，撞在了卫生间的门框上。",
+          "layer": "essential",
+          "duration": 4500,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_023",
+          "speaker": "elder",
+          "speakerName": "赵爷爷",
+          "text": "……唔……",
+          "layer": "essential",
+          "emotion": "painful",
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_024",
+          "speaker": "spirit",
+          "speakerName": "小守",
+          "text": "赵爷爷摔倒了！他躺在卫生间门口，表情痛苦。这是一个紧急处置场景——限时30秒，你的第一个反应决定了他是否会受到二次伤害。记住：跌倒后不要立即扶起！",
+          "layer": "essential",
+          "emotion": "alarmed"
+        }
+      ],
+      "nextNode": "zhao_act3_d27_002",
+      "isCheckpoint": true,
+      "tags": ["emergency", "fall", "timed"],
+      "devNote": "Day 27 跌倒事件。限时30秒决策，超时默认选择choice_a（立即扶起，错误）"
+    },
+    {
+      "id": "zhao_act3_d27_002",
+      "characterId": "zhao_yeye",
+      "act": 3,
+      "day": 27,
+      "type": "choice",
+      "scene": "bathroom",
+      "illustrationId": "zhao_fall_response",
+      "dialogues": [
+        {
+          "id": "dlg_025",
+          "speaker": "spirit",
+          "speakerName": "小守",
+          "text": "赵爷爷摔倒在地，你的本能是冲过去扶他起来——但等等！跌倒处置的第一步不是扶起，而是评估。限时30秒，你选择怎么做？",
+          "layer": "essential",
+          "emotion": "urgent"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "赶紧把他扶起来，看看能不能站稳",
+          "description": "立即扶起（超时默认选项）",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": -8, "reason": "未评估直接扶起可能导致二次损伤" },
+            { "type": "trust", "delta": -2, "reason": "处理不当增加了痛苦" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhao_act3_d27_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "你一把拉起赵爷爷，他'啊'地叫了一声——他的右髋和膝盖在摔倒时撞到了门框，强行拉起可能导致骨折移位或软组织二次损伤。跌倒后绝对不能立即扶起！",
+            "explanation": "跌倒处置的第一原则：先评估再行动。老人跌倒可能造成骨折（尤其是髋关节）、脑血管意外、内脏损伤。未评估就扶起可能导致——骨折移位加重、脊髓损伤加重、跌倒后体位性低血压导致再次摔倒。正确流程是：先询问意识→评估疼痛部位→检查肢体活动→再决定是否扶起。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "爷爷您能动吗？哪里疼？先别动，我检查一下",
+          "description": "先询问意识，评估疼痛和肢体活动",
+          "isCorrect": true,
+          "effects": [
+            { "type": "health", "delta": 3, "reason": "正确评估避免二次损伤" },
+            { "type": "trust", "delta": 5, "reason": "冷静专业的处理让他安心" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "zhao_act3_d27_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "赵爷爷清醒，说右髋和膝盖疼。你检查了他的肢体活动——手脚能动，没有麻木感。你判断没有骨折迹象，在他配合下慢慢扶他坐起，确认无头晕后，用拐杖辅助站起来。整个过程冷静有序。",
+            "explanation": "最优策略：先评估再行动。跌倒处置四步法——1.询问：'您能听见我说话吗？'确认意识清醒；2.评估：'哪里疼？能动吗？'检查疼痛部位和肢体活动；3.检查：观察有无出血、畸形、肿胀；4.行动：确认无骨折和脊柱损伤后，缓慢扶起。如果有剧烈疼痛、肢体畸形、意识模糊——不要移动，立即拨打120。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "直接打120，等急救人员来处理",
+          "description": "过度反应，直接叫救护车",
+          "isCorrect": false,
+          "effects": [
+            { "type": "mood", "delta": -4, "reason": "小题大做让老人感到恐慌和挫败" },
+            { "type": "trust", "delta": -1, "reason": "过度反应让他觉得你不信任他的判断" }
+          ],
+          "spiritPowerChange": 5,
+          "nextNode": "zhao_act3_d27_003",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "120来了，急救人员检查后说没有骨折，只是软组织挫伤，可以居家观察。赵爷爷觉得很丢人——'摔一跤就叫救护车，我这老脸往哪放'。虽然安全第一没错，但对于意识清醒、能活动的跌倒，可以先评估再决定是否需要叫120。",
+            "explanation": "直接叫120不一定是错的——安全第一确实重要。但对于意识清醒、能回答问题、肢体能活动的跌倒，可以先做初步评估。如果评估后发现剧烈疼痛、肢体畸形、意识模糊、持续出血等情况，再叫120。过度反应会让老人产生'我成了累赘'的感觉。"
+          }
+        }
+      ],
+      "tags": ["choice", "emergency", "timed", "fall"],
+      "devNote": "限时30秒决策。超时默认选择choice_a（立即扶起，错误）。教学：跌倒处置四步法"
+    },
+    {
+      "id": "zhao_act3_d27_003",
+      "characterId": "zhao_yeye",
+      "act": 3,
+      "day": 27,
+      "type": "dayEnd",
+      "scene": "bedroom",
+      "illustrationId": "zhao_day27_end",
+      "dialogues": [
+        {
+          "id": "dlg_026",
+          "speaker": "elder",
+          "speakerName": "赵爷爷",
+          "text": "这回……是真疼了。膝盖、胯骨……都疼。我逞什么强呢……",
+          "layer": "essential",
+          "emotion": "defeated"
+        },
+        {
+          "id": "dlg_027",
+          "speaker": "spirit",
+          "speakerName": "小守",
+          "text": "赵爷爷第一次说了'逞什么强'。从'我自己能行'到'逞什么强呢'——他用了二十七天。跌倒打碎了他最后的倔强。但打碎不是终点——明天，他会做出一个连他自己都没想到的决定。",
+          "layer": "essential",
+          "emotion": "moved",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end", "key-event"]
+    },
+    {
+      "id": "zhao_act3_d28_001",
+      "characterId": "zhao_yeye",
+      "act": 3,
+      "day": 28,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "zhao_hospital_willing",
+      "dialogues": [
+        {
+          "id": "dlg_028",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "早上，赵爷爷拄着拐杖走到你面前。他穿着整齐，帽子也戴上了。他看着你，嘴唇动了动，像是在组织一句很难说出口的话。",
+          "layer": "essential",
+          "duration": 4000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_029",
+          "speaker": "elder",
+          "speakerName": "赵爷爷",
+          "text": "那个……昨天摔了以后我想了一宿。这膝盖、这前列腺、这身子骨……该查的都查查吧。你陪我去，做个全面检查。",
+          "layer": "essential",
+          "emotion": "determined",
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_030",
+          "speaker": "spirit",
+          "speakerName": "小守",
+          "text": "赵爷爷主动提出做全面检查！从第一天的'关掉关掉'到今天的'该查的都查查'——这是三十天里最大的转变。你怎么接住这个决定？",
+          "layer": "essential",
+          "emotion": "moved"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "您终于想通了！早该这样了！",
+          "description": "说教式回应",
+          "isCorrect": false,
+          "effects": [
+            { "type": "trust", "delta": -4, "reason": "转变被说教否定" },
+            { "type": "mood", "delta": -3, "reason": "勇气被泼冷水" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhao_act3_d28_002",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "赵爷爷脸色一变：'谁想通了？我就是查查。'他差点反悔了。'终于想通了'等于说'你之前都错了'——赵爷爷花了二十八天才鼓起的勇气，被你一句话否定了。",
+            "explanation": "和Day 21一样，说教式回应会毁掉转变时刻。赵爷爷的转变是极其艰难的——从不承认问题到主动要求全面检查，这对一个照护抗拒型老人来说等于'投降'。这时候说'早该这样'等于在他的投降书上加盖'你错了'的章。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "好的，我马上安排",
+          "description": "行动导向但缺少情感回应",
+          "isCorrect": false,
+          "effects": [
+            { "type": "trust", "delta": 2, "reason": "至少回应了" }
+          ],
+          "spiritPowerChange": 5,
+          "nextNode": "zhao_act3_d28_002",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "赵爷爷'嗯'了一声，坐在沙发上等你安排。你的效率没错，但赵爷爷需要的不仅是'安排'，他想听到的是——他的决定被看到了、被肯定了。",
+            "explanation": "行动导向没错，但缺少情感温度。赵爷爷说'该查的都查查'时，内心是忐忑的——他怕查出问题，也怕被你当成'终于认输了'。一个简单的情感回应，能让他的转变更坚定。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "好，我陪您去。爷爷，这次咱们做个全面检查，前列腺、膝盖、都好好看看。有我在呢",
+          "description": "肯定决定+具体行动+情感陪伴",
+          "isCorrect": true,
+          "effects": [
+            { "type": "trust", "delta": 6, "reason": "转变被肯定和接住" },
+            { "type": "mood", "delta": 4, "reason": "被支持感到安心" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "zhao_act3_d28_002",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "赵爷爷点了点头，嘴角微微翘了一下：'走吧。'他拄着拐杖走出门，步伐比任何时候都稳。你走在旁边，没有扶他——他不需要。他需要的不是被扶，是有人陪着。",
+            "explanation": "最优策略：肯定决定+具体行动+情感陪伴。'好我陪您去'是肯定，'全面检查'是具体行动，'有我在呢'是情感陪伴。三句话层层递进——让赵爷爷知道：他的决定是对的，你会陪他走完这一步，他不是一个人。二十八天，从'关掉关掉'到'有我在呢'——这就是照护的意义。"
+          }
+        }
+      ],
+      "tags": ["choice", "key-event", "hospital"],
+      "devNote": "Day 28 赵爷爷终于愿意去医院——核心转变节点"
+    },
+    {
+      "id": "zhao_act3_d28_002",
+      "characterId": "zhao_yeye",
+      "act": 3,
+      "day": 28,
+      "type": "dayEnd",
+      "scene": "hospital",
+      "illustrationId": "zhao_day28_end",
+      "dialogues": [
+        {
+          "id": "dlg_031",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "医院走廊里，赵爷爷坐在候诊椅上，拐杖靠在腿边。他没有像以前那样焦躁地催促，也没有沉默地抵抗。他只是安静地坐着，偶尔看看走廊里来来往往的人。",
+          "layer": "emotional",
+          "typingSpeed": 40
+        },
+        {
+          "id": "dlg_032",
+          "speaker": "spirit",
+          "speakerName": "小守",
+          "text": "赵爷爷在医院候诊。他没有说'我来干什么'，也没有说'我不需要'。他只是坐着，等你一起。这就是接纳——不是放弃倔强，是学会了让你在他身边。",
+          "layer": "essential",
+          "emotion": "warm",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "zhao_act3_d29_001",
+      "characterId": "zhao_yeye",
+      "act": 3,
+      "day": 29,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "zhao_review_album",
+      "dialogues": [
+        {
+          "id": "dlg_033",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "检查结果出来了——前列腺需要继续药物治疗和定期复查，膝盖是退行性病变配合物理治疗，跌倒造成软组织挫伤但不严重。没有大问题，但需要长期管理。赵爷爷拿着报告，坐在沙发上，旁边放着那本旧相册。",
+          "layer": "essential",
+          "duration": 4500,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_034",
+          "speaker": "spirit",
+          "speakerName": "小守",
+          "text": "三十天快结束了。赵爷爷翻着旧相册——这一次，相册里不再有今天的超市小票了。他把它整理好了。这是一个回顾的时刻，你怎么引导他？",
+          "layer": "essential",
+          "emotion": "thoughtful"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "爷爷，这三十天真不容易，您总算想通了",
+          "description": "总结式说教",
+          "isCorrect": false,
+          "effects": [
+            { "type": "trust", "delta": -2, "reason": "被总结和说教感到不适" },
+            { "type": "mood", "delta": -2, "reason": "转变被轻描淡写" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhao_act3_d29_002",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "赵爷爷'嗯'了一声，没接话。'总算想通了'把三十天的挣扎简化成了一句'想通'——好像他只是转了个念头。赵爷爷的转变不是'想通'，是经历了疼痛、恐惧、信任之后，慢慢学会的和身体和解。",
+            "explanation": "总结式说教把复杂的情感历程简化成了'想通'。赵爷爷的转变不是一瞬间的顿悟，是三十天里一点一滴积累的。'总算'两个字带着居高临下的意味——好像你在等他'开窍'。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "不说话，就在旁边坐着陪他翻相册",
+          "description": "默默陪伴",
+          "isCorrect": false,
+          "effects": [
+            { "type": "trust", "delta": 3, "reason": "陪伴本身就是最好的回顾" },
+            { "type": "mood", "delta": 2, "reason": "安静的陪伴感" }
+          ],
+          "spiritPowerChange": 5,
+          "nextNode": "zhao_act3_d29_002",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "赵爷爷翻着相册，偶尔指一指某张照片，你点点头。沉默里有温暖，但缺了一个收尾的契机。三十天的故事，值得一个完整的句号。",
+            "explanation": "默默陪伴是好的，但三十天的历程值得一个回顾的时刻。赵爷爷不会主动提起这三十天的变化——他需要一个人轻轻推一下，让他自己说出那些他不会主动说的话。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "爷爷，您给我讲讲相册里的故事吧。这三十天，我还没听全呢",
+          "description": "引导回忆，让他在讲述中完成自我回顾",
+          "isCorrect": true,
+          "effects": [
+            { "type": "trust", "delta": 5, "reason": "回顾让信任关系得到确认" },
+            { "type": "mood", "delta": 5, "reason": "在回忆中找到自我价值" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "zhao_act3_d29_002",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "赵爷爷翻开相册，从第一页讲起：'这是七零年的工厂……这是你奶奶年轻的时候……这是小子上小学那天……'讲到某页时他停了一下，看着撕掉的那页，轻轻说：'有些东西丢了就丢了。现在有的，得珍惜。'他看了你一眼，没说谢谢。但你懂了。",
+            "explanation": "最优策略：引导回忆完成自我回顾。'给我讲讲相册里的故事'让赵爷爷在讲述中自然而然地回顾了这三十天——不是被总结，而是自己走过一遍。撕掉的相册页他说'丢了就丢了'，说的是过去的倔强和逃避。'现在有的得珍惜'——这是赵爷爷式的'谢谢你'。回忆疗法不只是回忆过去，是在过去里找到通向未来的力量。"
+          }
+        }
+      ],
+      "tags": ["choice", "review", "memory-therapy"],
+      "devNote": "Day 29 回顾教学：引导回忆完成自我回顾"
+    },
+    {
+      "id": "zhao_act3_d29_002",
+      "characterId": "zhao_yeye",
+      "act": 3,
+      "day": 29,
+      "type": "dayEnd",
+      "scene": "living_room",
+      "illustrationId": "zhao_day29_end",
+      "dialogues": [
+        {
+          "id": "dlg_035",
+          "speaker": "elder",
+          "speakerName": "赵爷爷",
+          "text": "明天……你还在吧？",
+          "layer": "essential",
+          "emotion": "vulnerable",
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_036",
+          "speaker": "spirit",
+          "speakerName": "小守",
+          "text": "赵爷爷问'明天你还在吧'——从'关掉关掉'到'你还在吧'。三十天，他终于不再把你当成手机里'乱七八糟的东西'了。你已经是他的守护精灵了。",
+          "layer": "essential",
+          "emotion": "moved",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "zhao_act3_d30_001",
+      "characterId": "zhao_yeye",
+      "act": 3,
+      "day": 30,
+      "type": "narrative",
+      "scene": "balcony",
+      "illustrationId": "zhao_day30_morning",
+      "dialogues": [
+        {
+          "id": "dlg_037",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "第三十天。清晨的阳光照进阳台，赵爷爷拄着拐杖，正在浇花。他穿着干净的衬衫，收音机里放着京剧，茶杯里泡着淡茶——不是浓茶了，医生说要少喝浓茶。他看起来和三十天前一样，又完全不一样。",
+          "layer": "essential",
+          "duration": 5000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_038",
+          "speaker": "elder",
+          "speakerName": "赵爷爷",
+          "text": "这花啊，之前摔了一盆，我又买了个新的。你看，比原来那个还精神。",
+          "layer": "essential",
+          "emotion": "content",
+          "typingSpeed": 35
+        },
+        {
+          "id": "dlg_039",
+          "speaker": "spirit",
+          "speakerName": "小守",
+          "text": "第三十天，最后一天。赵爷爷的变化写在每一个细节里——拐杖、淡茶、新花盆。他不再是那个逞强不拄拐、偷偷吃止痛药、拒绝去医院的老头了。但他还是那个嘴硬心软的赵爷爷。",
+          "layer": "essential",
+          "emotion": "warm",
+          "typingSpeed": 40
+        }
+      ],
+      "nextNode": "zhao_act3_d30_002",
+      "isCheckpoint": true,
+      "tags": ["ending", "final-day"],
+      "devNote": "Day 30 最终日开场"
+    },
+    {
+      "id": "zhao_act3_d30_002",
+      "characterId": "zhao_yeye",
+      "act": 3,
+      "day": 30,
+      "type": "choice",
+      "scene": "balcony",
+      "illustrationId": "zhao_final_choice",
+      "dialogues": [
+        {
+          "id": "dlg_040",
+          "speaker": "spirit",
+          "speakerName": "小守",
+          "text": "三十天到了。赵爷爷在阳台浇花，阳光很好。这是你作为守护精灵的最后一天正式任务。你想怎么度过这个最后的时刻？",
+          "layer": "essential",
+          "emotion": "warm"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "把这三十天的照护记录整理好，给赵爷爷看",
+          "description": "用记录总结三十天",
+          "isCorrect": true,
+          "effects": [
+            { "type": "trust", "delta": 3, "reason": "三十天的陪伴被看见" },
+            { "type": "mood", "delta": 3, "reason": "回顾温暖的历程" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "zhao_act3_d30_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "赵爷爷翻看着照护记录——每天的属性变化、每个关键决策、每张解锁的插画。他看到Day 1的'关掉关掉'，看到Day 21的'陪我去一趟'，看到Day 28的'该查的都查查'。他合上记录，嘟囔着'搞这些没用的'，但手轻轻放在了上面。",
+            "explanation": "照护记录是三十天陪伴的见证。赵爷爷不会说'谢谢'，但他翻看记录时知道——有人把这三十天的每一步都记住了。记录不只是数据，是一段关系的证据。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "什么都不做，就陪他在阳台坐一会儿",
+          "description": "安静的陪伴",
+          "isCorrect": true,
+          "effects": [
+            { "type": "trust", "delta": 4, "reason": "无言的陪伴最珍贵" },
+            { "type": "mood", "delta": 4, "reason": "阳光下的安静陪伴" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "zhao_act3_d30_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "阳光暖洋洋的，赵爷爷浇完花，在阳台的椅子上坐下。你也安静地'坐'在旁边。收音机里放着京剧，风把窗帘吹起来。谁也没说话，但谁也没觉得需要说什么。有些陪伴不需要语言。",
+            "explanation": "有时候最好的照护就是什么都不做。三十天里你做了无数个决策、处理了无数个危机，最后这一刻，你只需要'在'。赵爷爷不需要你做任何事——你在这里，这就够了。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "问赵爷爷：这三十天，您有什么想对我说的吗？",
+          "description": "引导他表达",
+          "isCorrect": true,
+          "effects": [
+            { "type": "trust", "delta": 5, "reason": "给他表达的空间" },
+            { "type": "mood", "delta": 3, "reason": "被重视的感觉" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "zhao_act3_d30_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "赵爷爷愣了一下，背对着你，好一会儿没说话。然后他清了清嗓子：'你那个……闹钟，还挺好使的。'他没回头，但你看到他耳朵红了。这就是赵爷爷的'谢谢你陪伴我'——他用他自己的方式说的。",
+            "explanation": "给赵爷爷表达的空间，他会用自己的方式回应。'闹钟还挺好使的'——回到Day 1你说的'我就是个提醒喝水的电子闹钟'。三十天了，他还记得。他没有叫你'精灵'或'小守'，他叫你'闹钟'——但这个'闹钟'里装着三十天的信任、陪伴和改变。"
+          }
+        }
+      ],
+      "tags": ["choice", "ending"],
+      "devNote": "最终选择——三个选项都是正确的，代表不同的告别方式"
+    },
+    {
+      "id": "zhao_act3_d30_003",
+      "characterId": "zhao_yeye",
+      "act": 3,
+      "day": 30,
+      "type": "ending",
+      "scene": "balcony",
+      "illustrationId": "zhao_ending",
+      "dialogues": [
+        {
+          "id": "dlg_041",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "夕阳把老楼的红砖墙染成了暖金色。赵爷爷拄着拐杖站在阳台上，花盆里新栽的花在风里轻轻摇着。收音机换了一首老歌，茶杯里的淡茶还冒着热气。手机放在茶几上，屏幕亮着——他没有把它扣过去。",
+          "layer": "emotional",
+          "duration": 5000,
+          "typingSpeed": 35
+        },
+        {
+          "id": "dlg_042",
+          "speaker": "elder",
+          "speakerName": "赵爷爷",
+          "text": "行了，别在那儿杵着了。明天我还要去医院复查呢，你定个闹钟提醒我。别晚了。",
+          "layer": "essential",
+          "emotion": "tsundere",
+          "typingSpeed": 35
+        },
+        {
+          "id": "dlg_043",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "他没有说谢谢。没有说再见。他只是让你定个闹钟——明天还要去医院复查。这就是赵爷爷的告别方式：不说'谢谢你的陪伴'，而是说'明天你还在'。",
+          "layer": "emotional",
+          "typingSpeed": 40
+        },
+        {
+          "id": "dlg_044",
+          "speaker": "spirit",
+          "speakerName": "小守",
+          "text": "三十天前，赵爷爷说'关掉关掉'。三十天后，他说'定个闹钟提醒我'。信任值从25开始——全角色最低。但你用了三十天，让他从'不需要你'变成了'明天你还在'。",
+          "layer": "essential",
+          "emotion": "proud",
+          "typingSpeed": 40
+        },
+        {
+          "id": "dlg_045",
+          "speaker": "spirit",
+          "speakerName": "小守",
+          "text": "照护抗拒型老人的信任是最难的——但也是最珍贵的。赵爷爷不会说'我需要你'，他会说'别晚了'。这就是我们这一代人——说'不用了'的意思是'我需要你'。而你，听懂了。",
+          "layer": "essential",
+          "emotion": "warm",
+          "typingSpeed": 40
+        },
+        {
+          "id": "dlg_046",
+          "speaker": "spirit",
+          "speakerName": "小守",
+          "text": "终点不是结局，而是新的开始。赵爷爷学会了和身体和解，你学会了和倔强相处。这不是一个'治好了'的故事，是一个'一起走过了'的故事。明天，闹钟会响的。",
+          "layer": "essential",
+          "emotion": "warm",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["ending"],
+      "devNote": "结局节点。根据三十天属性值生成不同结局评价。赵爷爷预期结局：成长之路"
+    }
+  ]
+}

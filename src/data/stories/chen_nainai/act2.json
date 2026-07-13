@@ -1,0 +1,1855 @@
+{
+  "characterId": "chen_nainai",
+  "act": 2,
+  "title": "第二幕：她的时间",
+  "theme": "认知症沟通与身份认同",
+  "startDay": 8,
+  "endDay": 21,
+  "nodes": [
+    {
+      "id": "chen_act2_d8_001",
+      "characterId": "chen_nainai",
+      "act": 2,
+      "day": 8,
+      "type": "narrative",
+      "scene": "living_room",
+      "illustrationId": "chen_pickup_daughter",
+      "dialogues": [
+        {
+          "id": "dlg_001",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "早上，陈奶奶急匆匆地穿上外套，拎起一个布袋子往门口走。'快快快，放学了，得去接晓梅。'晓梅是她的女儿——今年已经四十五岁了。",
+          "layer": "essential",
+          "duration": 4000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_002",
+          "speaker": "spirit",
+          "speakerName": "小忆",
+          "text": "她以为女儿还在上小学，要去学校接她。这是认知症的时间错位——她的大脑跳回了三十多年前。她现在很着急，怎么办？",
+          "layer": "essential",
+          "emotion": "worried",
+          "typingSpeed": 40
+        }
+      ],
+      "nextNode": "chen_act2_d8_002",
+      "isCheckpoint": true,
+      "tags": ["time-confusion", "communication"],
+      "devNote": "Day 8 认知症沟通技巧进阶——她要去接已经成年的女儿放学"
+    },
+    {
+      "id": "chen_act2_d8_002",
+      "characterId": "chen_nainai",
+      "act": 2,
+      "day": 8,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "chen_pickup_choice",
+      "dialogues": [
+        {
+          "id": "dlg_003",
+          "speaker": "spirit",
+          "speakerName": "小忆",
+          "text": "陈奶奶已经走到门口了，手在摸门锁。她很焦急，觉得女儿在学校等她。你怎么回应？",
+          "layer": "essential",
+          "emotion": "serious"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "陈奶奶，晓梅已经四十五了，她不用接了",
+          "description": "用事实纠正她",
+          "isCorrect": false,
+          "effects": [
+            { "type": "trust", "delta": -5, "reason": "现实被否定，感到恐慌和混乱" },
+            { "type": "mood", "delta": -5, "reason": "焦急被泼冷水，更加不安" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "chen_act2_d8_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "陈奶奶的手停在门锁上，转过身看着你，眼里满是困惑：'四十五？晓梅才……才上三年级啊。'她的声音在发抖。你用事实砸碎了她此刻最着急的事，她不知道该信你还是信自己。",
+            "explanation": "直接纠正时间错位会让认知症老人陷入恐慌。在她的现实里，女儿确实在等她接。你告诉她'你错了'，她不仅不会'清醒'，反而会感到自己的判断力被全盘否定。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "陈老师，晓梅今天跟同学去少年宫了，说不用接",
+          "description": "顺着她的现实，用合理的理由安抚",
+          "isCorrect": true,
+          "effects": [
+            { "type": "trust", "delta": 6, "reason": "没有否定她，进入她的世界，安抚了焦急" },
+            { "type": "mood", "delta": 4, "reason": "焦虑解除，感到安心" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "chen_act2_d8_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "陈奶奶松了口气：'去少年宫了？那好吧，别太晚回来就行。'她放下布袋子，脱了外套，坐回沙发。你用她能接受的理由，化解了她此刻的焦急。",
+            "explanation": "最优策略：用她能接受的合理理由安抚，而不是纠正事实。她说要去接女儿，你说'女儿去少年宫了不用接'——你进入了她的时间线（女儿在上学），但用一个合理的情节化解了她的行动。记住：目标是让她此刻安心，而不是让她认识'真实'。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "拦住她不让她出门，强行把她拉回来",
+          "description": "物理阻止",
+          "isCorrect": false,
+          "effects": [
+            { "type": "trust", "delta": -6, "reason": "被强行阻拦，感到被控制和恐惧" },
+            { "type": "mood", "delta": -4, "reason": "焦急没有得到回应，更加焦虑" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "chen_act2_d8_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "陈奶奶挣扎着要出门：'你干什么！我女儿在等我！'她越挣扎越激动，最后急得快哭了。物理阻止只能挡住她的身体，挡不住她的焦急。",
+            "explanation": "物理阻止会引发认知症老人的激越行为——挣扎、喊叫甚至攻击。她不是不听话，她真的相信女儿在等她。强行阻拦只会让她感到被囚禁和恐惧。永远先用沟通化解，最后才考虑物理方式。"
+          }
+        }
+      ],
+      "tags": ["choice", "time-confusion", "communication"],
+      "devNote": "教学：认知症沟通进阶——用合理理由进入她的时间线"
+    },
+    {
+      "id": "chen_act2_d8_003",
+      "characterId": "chen_nainai",
+      "act": 2,
+      "day": 8,
+      "type": "dayEnd",
+      "scene": "living_room",
+      "illustrationId": "chen_day8_end",
+      "dialogues": [
+        {
+          "id": "dlg_004",
+          "speaker": "elder",
+          "speakerName": "陈奶奶",
+          "text": "晓梅这孩子，从小就爱去少年宫。画画画得好，像我。",
+          "layer": "essential",
+          "emotion": "fond"
+        },
+        {
+          "id": "dlg_005",
+          "speaker": "spirit",
+          "speakerName": "小忆",
+          "text": "她脱了外套坐下来，嘴里还念叨着女儿小时候的事。你用一句话化解了一次出门风险。认知症沟通的关键：不是让她认识真实，而是让她在'她的真实'里安心。",
+          "layer": "essential",
+          "emotion": "warm",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "chen_act2_d9_001",
+      "characterId": "chen_nainai",
+      "act": 2,
+      "day": 9,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "chen_looking_for_laozhang",
+      "dialogues": [
+        {
+          "id": "dlg_006",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "今天陈奶奶一直在找一个叫'老张'的人。她翻遍了每个房间，打开每个柜子看，嘴里念叨着：'老张去哪了？他不是说去散步吗？怎么还不回来。'",
+          "layer": "essential",
+          "duration": 4000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_007",
+          "speaker": "spirit",
+          "speakerName": "小忆",
+          "text": "老张是陈奶奶的老伴，十年前就去世了。但在她的记忆里，他只是'出去散步了'。她找了一上午，越来越焦急。怎么回应？",
+          "layer": "essential",
+          "emotion": "sorrowful",
+          "typingSpeed": 40
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "陈奶奶，老张已经去世十年了",
+          "description": "告诉她老伴已经去世的事实",
+          "isCorrect": false,
+          "effects": [
+            { "type": "trust", "delta": -6, "reason": "被告知亲人去世，承受二次丧失的打击" },
+            { "type": "mood", "delta": -8, "reason": "重新经历丧偶的悲痛" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "chen_act2_d9_002",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "陈奶奶愣住了，手里的柜门没关上。'去世了？……什么时候？'她的眼眶红了，然后眼泪一下子涌出来。你让她重新经历了一次丧偶之痛——对她来说，这是刚刚发生的事。",
+            "explanation": "这是认知症照护中最残忍的错误之一。告诉认知症老人亲人已逝，等于让她重新经历一次丧失。她不会'记住'这个事实，但悲伤和痛苦会留下。这叫'二次丧失'。永远不要反复告诉她亲人去世的消息。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "老张去社区下棋了，说晚点回来，让您别担心",
+          "description": "用善意的谎言安抚，给她一个可接受的解释",
+          "isCorrect": true,
+          "effects": [
+            { "type": "trust", "delta": 5, "reason": "没有造成二次伤害，安抚了焦急" },
+            { "type": "mood", "delta": 4, "reason": "焦虑解除，感到安心" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "chen_act2_d9_002",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "陈奶奶'哦'了一声，慢慢关上柜门：'又去下棋，就知道下棋。让他去吧。'她坐回沙发，情绪平复了。你用一个她能接受的解释，避免了让她重新承受丧偶之痛。",
+            "explanation": "最优策略：善意的谎言在认知症照护中是必要的。这不叫'欺骗'，叫'治疗性谎言'——目的是保护老人的情感。她的大脑无法处理'老伴已逝'这个事实，每次告知都是一次新的创伤。用'去下棋了'这样的解释，让她安心，也保留了老伴'还在'的温暖。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "转移话题：陈老师，您帮我看看这篇课文怎么讲",
+          "description": "用转移注意力回避问题",
+          "isCorrect": false,
+          "effects": [
+            { "type": "trust", "delta": 1, "reason": "暂时转移了注意力" },
+            { "type": "mood", "delta": -1, "reason": "焦急没有被真正回应" }
+          ],
+          "spiritPowerChange": 5,
+          "nextNode": "chen_act2_d9_002",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "陈奶奶被课文吸引了注意力，暂时没再找老张。但过了一会儿，她又开始翻柜子了。转移注意力能缓解一时，但没有真正回应她的情感需求。",
+            "explanation": "转移注意力是认知症沟通的常用技巧，但在面对'寻找已故亲人'这种情况时不够。她的焦急没有被回应，只是被暂时盖住了。最好的方式是先用善意的解释安抚，再自然地转移注意力。"
+          }
+        }
+      ],
+      "tags": ["choice", "repeated-question", "grief", "therapeutic-lie"],
+      "devNote": "教学：治疗性谎言——避免认知症老人二次丧失"
+    },
+    {
+      "id": "chen_act2_d9_002",
+      "characterId": "chen_nainai",
+      "act": 2,
+      "day": 9,
+      "type": "dayEnd",
+      "scene": "living_room",
+      "illustrationId": "chen_day9_end",
+      "dialogues": [
+        {
+          "id": "dlg_008",
+          "speaker": "elder",
+          "speakerName": "陈奶奶",
+          "text": "老张这个人，下起棋来就忘了回家。年轻时候就这样。",
+          "layer": "essential",
+          "emotion": "fond"
+        },
+        {
+          "id": "dlg_009",
+          "speaker": "spirit",
+          "speakerName": "小忆",
+          "text": "她嘴角带着笑，好像老伴只是出门下棋了。在认知症的世界里，死去的人可以'活着'，这未必是坏事。她不需要真相，她需要安心。",
+          "layer": "essential",
+          "emotion": "moved",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "chen_act2_d10_001",
+      "characterId": "chen_nainai",
+      "act": 2,
+      "day": 10,
+      "type": "narrative",
+      "scene": "living_room",
+      "illustrationId": "chen_photo_album",
+      "dialogues": [
+        {
+          "id": "dlg_010",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "今天你带来一本相册——是陈晓梅寄来的，里面是陈奶奶从年轻到退休的照片。有她在教室讲课的，有和学生合影的，有一家三口的全家福。你把相册放在茶几上。",
+          "layer": "essential",
+          "duration": 4000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_011",
+          "speaker": "spirit",
+          "speakerName": "小忆",
+          "text": "相册疗法是认知症的记忆辅助方式之一。通过老照片唤起远期记忆——认知症老人的远期记忆往往比近期记忆保留得更久。但怎么引导她看相册，很关键。",
+          "layer": "essential",
+          "emotion": "hopeful",
+          "typingSpeed": 40
+        }
+      ],
+      "nextNode": "chen_act2_d10_002",
+      "isCheckpoint": true,
+      "tags": ["memory-aid", "photo-album", "reminiscence"],
+      "devNote": "Day 10 记忆辅助——相册疗法"
+    },
+    {
+      "id": "chen_act2_d10_002",
+      "characterId": "chen_nainai",
+      "act": 2,
+      "day": 10,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "chen_album_choice",
+      "dialogues": [
+        {
+          "id": "dlg_012",
+          "speaker": "spirit",
+          "speakerName": "小忆",
+          "text": "陈奶奶拿起相册翻了几页，停在了那张教室合影上。她的眼睛亮了一下。你怎么引导这次回忆？",
+          "layer": "essential",
+          "emotion": "curious"
+        }
+      ],
+      "props": [
+        {
+          "propId": "chen_photo_album",
+          "layer": "inspect",
+          "autoShow": true
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "陈奶奶，这是哪一年拍的？这些学生叫什么名字？",
+          "description": "用提问方式考验她的记忆",
+          "isCorrect": false,
+          "effects": [
+            { "type": "trust", "delta": -3, "reason": "被提问感到压力，记不起来时挫败" },
+            { "type": "mood", "delta": -3, "reason": "答不上来的羞愧感" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "chen_act2_d10_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "陈奶奶看着照片，眉头皱了起来：'哪一年……我想想……这些孩子叫……'她翻来覆去想不起来，表情越来越沮丧。你用提问把一次美好的回忆变成了记忆测试。",
+            "explanation": "相册疗法不是记忆测试。提问'这是哪一年''叫什么名字'会让认知症老人感到压力——记不起来时会产生强烈的挫败感。正确做法是引导她讲述，而不是考问她。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "陈老师，这张照片里您笑得真好，给我讲讲那时候的事吧",
+          "description": "引导她自由回忆，不设标准答案",
+          "isCorrect": true,
+          "effects": [
+            { "type": "trust", "delta": 5, "reason": "被邀请讲述，感到被尊重和需要" },
+            { "type": "mood", "delta": 6, "reason": "回忆美好时光，心情愉悦" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "chen_act2_d10_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "陈奶奶笑了，指着照片开始讲：'那年我带毕业班，这些孩子特别争气，语文全年级第一。你看这个，小明，作文写得好，现在听说当了记者……'她讲得眉飞色舞，远期记忆像泉水一样涌出来。",
+            "explanation": "最优策略：引导自由回忆而非考问。开放式邀请（'给我讲讲'）让老人自主选择能记住的部分来讲述，记不住的细节不重要。相册疗法的核心是激活正向情感，不是恢复事实记忆。陈奶奶讲着讲着，身份认同也被唤醒了——她还是那个好老师。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "自己翻看相册，不主动引导",
+          "description": "被动等待，不引导回忆",
+          "isCorrect": false,
+          "effects": [
+            { "type": "mood", "delta": 0, "reason": "翻了一会儿就放下了" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "chen_act2_d10_003",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "陈奶奶翻了翻相册，停了几秒，又合上了。没有引导，照片只是照片——它们需要一个人来问'然后呢'，记忆才能被点亮。",
+            "explanation": "相册疗法需要引导。认知症老人可能不知道从何讲起，或者翻几页就失去兴趣。陪伴者的问题和倾听是打开记忆之门的钥匙。被动等待错失了激活正向回忆的机会。"
+          }
+        }
+      ],
+      "tags": ["choice", "memory-aid", "reminiscence", "inspect-prop"],
+      "devNote": "教学：相册疗法——引导自由回忆而非记忆测试"
+    },
+    {
+      "id": "chen_act2_d10_003",
+      "characterId": "chen_nainai",
+      "act": 2,
+      "day": 10,
+      "type": "dayEnd",
+      "scene": "living_room",
+      "illustrationId": "chen_day10_end",
+      "dialogues": [
+        {
+          "id": "dlg_013",
+          "speaker": "elder",
+          "speakerName": "陈奶奶",
+          "text": "这些孩子，我都记得他们的脸。就是名字……有时候叫不出来了。",
+          "layer": "essential",
+          "emotion": "wistful"
+        },
+        {
+          "id": "dlg_014",
+          "speaker": "spirit",
+          "speakerName": "小忆",
+          "text": "脸记得，名字忘了——这是认知症远期记忆的特征。情感和画面比文字留得更久。今天她很开心，你要记住这个方法：相册加引导，是她最好的记忆通道。",
+          "layer": "essential",
+          "emotion": "warm",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "chen_act2_d11_001",
+      "characterId": "chen_nainai",
+      "act": 2,
+      "day": 11,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "chen_music_box",
+      "dialogues": [
+        {
+          "id": "dlg_015",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "今天陈晓梅寄来一个包裹，里面有一台老式收音机和几盒磁带。信里说：'妈以前最爱听邓丽君，每天做饭都放着听。'你把收音机放在茶几上，陈奶奶看到它时，手不自觉地伸了过去。",
+          "layer": "essential",
+          "duration": 4500,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_016",
+          "speaker": "spirit",
+          "speakerName": "小忆",
+          "text": "音乐疗法是认知症记忆辅助的另一种方式——音乐记忆往往保留到最后。但要注意，不是所有老歌都适合，有些可能触发负面情绪。你要不要放给她听？",
+          "layer": "essential",
+          "emotion": "thoughtful",
+          "typingSpeed": 40
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "直接按下播放键，让她自己听",
+          "description": "不引导，直接播放",
+          "isCorrect": false,
+          "effects": [
+            { "type": "mood", "delta": 2, "reason": "音乐本身有安抚作用" },
+            { "type": "trust", "delta": 0, "reason": "没有互动，信任无变化" }
+          ],
+          "spiritPowerChange": 5,
+          "nextNode": "chen_act2_d11_002",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "音乐响起来，陈奶奶安静地听着，嘴角微微翘起。但听了一会儿她就走神了。音乐打开了门，但没有人陪她走进去——效果打了折扣。",
+            "explanation": "音乐疗法不只是'放音乐'。有陪伴的聆听比独自听效果好得多。陪伴者可以观察她的反应、引导她跟着哼、和她聊音乐关联的记忆。音乐是引子，陪伴才是核心。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "陈老师，这是邓丽君的歌，您以前做饭时最爱放了，我们一起听",
+          "description": "引导关联记忆，一起聆听",
+          "isCorrect": true,
+          "effects": [
+            { "type": "trust", "delta": 5, "reason": "一起听音乐，建立情感连接" },
+            { "type": "mood", "delta": 6, "reason": "音乐唤起美好回忆，心情愉悦" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "chen_act2_d11_002",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "音乐响起的一刻，陈奶奶的眼睛亮了。她开始跟着哼，然后说：'这首歌……老张也爱听。我做饭他在旁边看报，收音机就这么放着。'音乐打开了一扇通往过去的门，你陪她走了进去。",
+            "explanation": "最优策略：引导关联记忆+一起聆听。音乐疗法的关键是'关联'——把音乐和她的人生经历连起来。一句'您以前做饭时最爱放'就是那根线。一起听、一起哼、一起回忆，音乐成了你们之间的桥梁。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "不放了，万一听了让她更想老伴更伤心",
+          "description": "回避，担心负面情绪",
+          "isCorrect": false,
+          "effects": [
+            { "type": "mood", "delta": -2, "reason": "期待被落空" },
+            { "type": "trust", "delta": -1, "reason": "她的东西被'没收'了" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "chen_act2_d11_002",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "陈奶奶看着收音机，手缩了回来。你把音乐关在了盒子外面。也许你怕她伤心，但适度的感伤也是一种情感流动——总比什么都感觉不到好。",
+            "explanation": "过度保护会切断认知症老人的情感体验。音乐引发的感伤不一定是坏事——它能激活情感和记忆，这是认知症老人最需要的东西。与其担心负面情绪，不如在她感伤时陪在旁边。"
+          }
+        }
+      ],
+      "tags": ["choice", "memory-aid", "music-therapy"],
+      "devNote": "教学：音乐疗法——引导关联记忆，陪伴聆听"
+    },
+    {
+      "id": "chen_act2_d11_002",
+      "characterId": "chen_nainai",
+      "act": 2,
+      "day": 11,
+      "type": "dayEnd",
+      "scene": "living_room",
+      "illustrationId": "chen_day11_end",
+      "dialogues": [
+        {
+          "id": "dlg_017",
+          "speaker": "elder",
+          "speakerName": "陈奶奶",
+          "text": "再来一首。这歌好听，我年轻时候……好像也会唱。",
+          "layer": "essential",
+          "emotion": "content"
+        },
+        {
+          "id": "dlg_018",
+          "speaker": "spirit",
+          "speakerName": "小忆",
+          "text": "她跟着哼了一下午。音乐是最后消失的记忆——即使有一天她忘了所有人，她可能还记得旋律。记住这个工具，它比语言更有力量。",
+          "layer": "essential",
+          "emotion": "warm",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "chen_act2_d12_001",
+      "characterId": "chen_nainai",
+      "act": 2,
+      "day": 12,
+      "type": "narrative",
+      "scene": "living_room",
+      "illustrationId": "chen_good_teacher",
+      "dialogues": [
+        {
+          "id": "dlg_019",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "今天早上，陈奶奶没有像往常一样坐在沙发上看课本。她站在窗边，看着窗外发了很久的呆。你走过去，听到她在自言自语。",
+          "layer": "essential",
+          "duration": 4000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_020",
+          "speaker": "elder",
+          "speakerName": "陈奶奶",
+          "text": "我以前是个好老师……是不是？我教了那么多学生……我现在怎么连字都写不好了。",
+          "layer": "essential",
+          "emotion": "sorrowful",
+          "typingSpeed": 40
+        },
+        {
+          "id": "dlg_021",
+          "speaker": "spirit",
+          "speakerName": "小忆",
+          "text": "她在怀疑自己的价值。这是认知症老人身份认同危机的时刻——她隐约感觉到自己在'变差'，这种自我觉察是最令人心碎的。你怎么回应，会决定她是重新挺直背，还是彻底塌下去。",
+          "layer": "essential",
+          "emotion": "heavy",
+          "typingSpeed": 40
+        }
+      ],
+      "nextNode": "chen_act2_d12_002",
+      "isCheckpoint": true,
+      "tags": ["identity", "self-worth", "emotional"],
+      "devNote": "Day 12 身份认同——'我曾经是个好老师'"
+    },
+    {
+      "id": "chen_act2_d12_002",
+      "characterId": "chen_nainai",
+      "act": 2,
+      "day": 12,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "chen_identity_choice",
+      "dialogues": [
+        {
+          "id": "dlg_022",
+          "speaker": "spirit",
+          "speakerName": "小忆",
+          "text": "陈奶奶转过身看着你，眼里有泪光。她在等你告诉她：她曾经是个好老师。你怎么说？",
+          "layer": "essential",
+          "emotion": "serious"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "陈奶奶，别想这些了，我们去看电视吧",
+          "description": "回避她的自我怀疑，转移话题",
+          "isCorrect": false,
+          "effects": [
+            { "type": "trust", "delta": -3, "reason": "她的感受被忽视" },
+            { "type": "mood", "delta": -3, "reason": "自我怀疑没有被回应，更加低落" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "chen_act2_d12_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "陈奶奶看了你一眼，默默转过身，坐回沙发。电视开着，她没在看。她需要的不是逃避，而是有人认真地告诉她：你是有价值的。",
+            "explanation": "回避身份认同危机是最糟糕的做法。她在主动表达自我怀疑——这是认知症老人难得的'清醒'时刻，也是她最需要被肯定的时机。忽视它，等于让她独自面对'我在变差'的恐惧。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "陈老师，您当然是个好老师。您教过的学生都记得您",
+          "description": "肯定她的身份和价值",
+          "isCorrect": true,
+          "effects": [
+            { "type": "trust", "delta": 6, "reason": "身份被确认，感到被理解和尊重" },
+            { "type": "mood", "delta": 6, "reason": "自我价值感被唤醒，心情好转" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "chen_act2_d12_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "陈奶奶的眼泪掉了下来，但她笑了：'真的吗？他们还记得我？'你把那本旧课本递给她，翻到第一页工整的批注：'您看，您的字多漂亮，您的学生多幸运。'她摸着那些字，背慢慢挺直了。",
+            "explanation": "最优策略：坚定地肯定她的身份认同。'您是个好老师'——这句话在认知症照护中比任何药都有效。身份认同是认知症老人最后的堡垒，当她在怀疑自己时，她需要一个人坚定地告诉她：你曾经是谁，你依然是。用她最骄傲的证据（课本上的批注）来强化这份认同。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "字写不好没关系，现在不需要写字了",
+          "description": "否定她的感受，轻描淡写",
+          "isCorrect": false,
+          "effects": [
+            { "type": "trust", "delta": -2, "reason": "痛苦被轻视" },
+            { "type": "mood", "delta": -4, "reason": "感到自己的失去被无视" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "chen_act2_d12_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "陈奶奶低下头：'不需要了……是啊，不需要了。'她的声音越来越小。你不是在安慰她，是在告诉她：你失去的东西不重要。但对一位语文老师来说，写不了字就是失去了一切。",
+            "explanation": "'没关系''不需要了'看似安慰，实则否定了她的丧失感。对陈奶奶来说，写不好字不是'没关系'的事——那是她四十年身份的崩塌。承认她的痛苦，比轻描淡写地否定它更有力量。"
+          }
+        }
+      ],
+      "tags": ["choice", "identity", "self-worth"],
+      "devNote": "教学：身份认同维护——肯定她的过去就是守护她的现在"
+    },
+    {
+      "id": "chen_act2_d12_003",
+      "characterId": "chen_nainai",
+      "act": 2,
+      "day": 12,
+      "type": "dayEnd",
+      "scene": "living_room",
+      "illustrationId": "chen_day12_end",
+      "dialogues": [
+        {
+          "id": "dlg_023",
+          "speaker": "elder",
+          "speakerName": "陈奶奶",
+          "text": "我是个好老师。四十年，没有一个差学生。这个我记得，忘不了。",
+          "layer": "essential",
+          "emotion": "proud"
+        },
+        {
+          "id": "dlg_024",
+          "speaker": "spirit",
+          "speakerName": "小忆",
+          "text": "她的背挺直了，像站在讲台上的样子。认知症可以带走记忆，但带不走'我是谁'。只要有人帮她记住，她就不会忘记。今天你帮她记住了最重要的事。",
+          "layer": "essential",
+          "emotion": "moved",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "chen_act2_d13_001",
+      "characterId": "chen_nainai",
+      "act": 2,
+      "day": 13,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "chen_mistakes_student",
+      "dialogues": [
+        {
+          "id": "dlg_025",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "下午，陈奶奶突然拉住你的手，表情严肃：'王小明！你怎么又逃课了？你妈妈给我打电话了，说你三天没去上学！'她的语气严厉又关切，像极了真的在训学生。你显然不是王小明。",
+          "layer": "essential",
+          "duration": 4000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_026",
+          "speaker": "spirit",
+          "speakerName": "小忆",
+          "text": "她把你认成了一个叫王小明的学生，而且很担心他逃课。这次不是模糊的'同学'，而是一个具体的名字——说明她记忆深处的某个学生被激活了。她现在很认真，怎么回应？",
+          "layer": "essential",
+          "emotion": "thoughtful",
+          "typingSpeed": 40
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "陈奶奶，我不是王小明，您看清楚",
+          "description": "纠正身份混淆",
+          "isCorrect": false,
+          "effects": [
+            { "type": "trust", "delta": -4, "reason": "被否定后困惑和挫败" },
+            { "type": "mood", "delta": -4, "reason": "关心被退回，感到不安" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "chen_act2_d13_002",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "陈奶奶仔细看了看你，皱起眉：'不是王小明？那你是……'她松开手，退了一步，脸上闪过一丝恐惧——她开始不信任自己的眼睛了。",
+            "explanation": "纠正具体身份混淆比纠正'同学'更伤人。她坚信你是王小明，你否定了她，她会开始怀疑自己的全部感知。这种自我怀疑会导致更深的不安和退缩。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "陈老师，对不起，我以后不逃课了，您别担心",
+          "description": "进入她的现实，回应她的关切",
+          "isCorrect": true,
+          "effects": [
+            { "type": "trust", "delta": 5, "reason": "接受她的身份设定，回应了她的关心" },
+            { "type": "mood", "delta": 4, "reason": "学生'改过自新'，老师感到欣慰" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "chen_act2_d13_002",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "陈奶奶松了口气，拍了拍你的手：'这孩子，以后好好上学，别让你妈操心。'她放心了。你没有纠正她，你做了她那个学生该做的事——让老师安心。",
+            "explanation": "最优策略：进入她的现实，回应她的情感需求。她认错了人，但她的关心是真的——她担心学生逃课。你以'学生'的身份回应她的关心，她得到了安心，你也维护了她的教师身份。认知症照护的核心：回应情感，而非纠正事实。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "嗯，我是王小明。老师您还记得我吗",
+          "description": "配合但要求她回忆，可能加重混乱",
+          "isCorrect": false,
+          "effects": [
+            { "type": "trust", "delta": 1, "reason": "至少没有纠正" },
+            { "type": "mood", "delta": -1, "reason": "被要求回忆，有些紧张" }
+          ],
+          "spiritPowerChange": 5,
+          "nextNode": "chen_act2_d13_002",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "陈奶奶犹豫了一下：'记得记得，你坐第三排……'她在编造细节来配合你。虽然没冲突，但'还记得我吗'这个问题给了她压力——她在努力想，又想不全。",
+            "explanation": "配合身份但要求她回忆，会给她增加记忆负担。更好的方式是主动给出信息（'我以后不逃课了'），让她不需要回忆就能安心。不要问'您还记得吗'，这会让认知症老人感到压力。"
+          }
+        }
+      ],
+      "tags": ["choice", "identity-confusion", "communication"],
+      "devNote": "教学：具体身份混淆——进入她的现实，回应情感"
+    },
+    {
+      "id": "chen_act2_d13_002",
+      "characterId": "chen_nainai",
+      "act": 2,
+      "day": 13,
+      "type": "dayEnd",
+      "scene": "living_room",
+      "illustrationId": "chen_day13_end",
+      "dialogues": [
+        {
+          "id": "dlg_027",
+          "speaker": "elder",
+          "speakerName": "陈奶奶",
+          "text": "好了好了，去写作业吧。不会的来问老师。",
+          "layer": "essential",
+          "emotion": "content"
+        },
+        {
+          "id": "dlg_028",
+          "speaker": "spirit",
+          "speakerName": "小忆",
+          "text": "她又变回了那个严厉又慈爱的陈老师。即使认错了人，她的本能还在——关心学生，不放弃任何一个。这就是她说的'没教过一个差学生'。",
+          "layer": "essential",
+          "emotion": "warm",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "chen_act2_d14_001",
+      "characterId": "chen_nainai",
+      "act": 2,
+      "day": 14,
+      "type": "narrative",
+      "scene": "living_room",
+      "illustrationId": "chen_trust_drop",
+      "dialogues": [
+        {
+          "id": "dlg_029",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "今天陈奶奶的状态不太对。她看到你时，没有像往常那样叫你'同学'或'老师'，而是往后退了一步，警惕地看着你。'你是谁？你怎么在我家里？'",
+          "layer": "essential",
+          "duration": 4000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_030",
+          "speaker": "spirit",
+          "speakerName": "小忆",
+          "text": "她不认识你了。不是认错人，是彻底不认识——这是认知症信任值波动的低谷。昨天她还叫你'同学'，今天你变成了陌生人。别难过，这不是你的错，是疾病在作怪。",
+          "layer": "essential",
+          "emotion": "sorrowful",
+          "typingSpeed": 40
+        }
+      ],
+      "nextNode": "chen_act2_d14_002",
+      "isCheckpoint": true,
+      "tags": ["trust-fluctuation", "communication"],
+      "devNote": "Day 14 信任值波动——她突然不记得你了"
+    },
+    {
+      "id": "chen_act2_d14_002",
+      "characterId": "chen_nainai",
+      "act": 2,
+      "day": 14,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "chen_stranger_choice",
+      "dialogues": [
+        {
+          "id": "dlg_031",
+          "speaker": "spirit",
+          "speakerName": "小忆",
+          "text": "陈奶奶退到墙角，手里攥着那本旧课本，像在保护自己。她不认识你，有些害怕。这时候你的每一个动作都决定了信任是继续崩塌还是慢慢回来。怎么办？",
+          "layer": "essential",
+          "emotion": "serious"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "陈奶奶，是我呀，我昨天还陪您看相册呢",
+          "description": "试图唤起记忆，强调过去",
+          "isCorrect": false,
+          "effects": [
+            { "type": "trust", "delta": -4, "reason": "被要求回忆不认识的人，更加紧张" },
+            { "type": "mood", "delta": -3, "reason": "感到压力和困惑" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "chen_act2_d14_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "陈奶奶摇着头，退得更远了：'我不认识你，你出去。'你越是说自己认识她，她越害怕——在她的世界里，一个陌生人声称认识你，是很可怕的。",
+            "explanation": "当认知症老人不认识你时，强调'我们认识'只会增加她的恐惧。她不是'忘了'你，她的大脑此刻真的不认识你。要求她回忆只会让她感到压力。这时候需要的是降低威胁感，而不是证明关系。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "退后一步，保持距离，温和地说：我是晓梅的朋友，她让我来看看您",
+          "description": "降低威胁感，用她信任的人建立连接",
+          "isCorrect": true,
+          "effects": [
+            { "type": "trust", "delta": 4, "reason": "没有逼近，用女儿的名字建立了安全感" },
+            { "type": "mood", "delta": 3, "reason": "威胁感降低，情绪平复" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "chen_act2_d14_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "听到'晓梅'两个字，陈奶奶的表情松了一些：'晓梅的朋友？……晓梅让你来的？'她慢慢放下课本，虽然还是有些警惕，但不再往后退了。你用她女儿的名字，架起了一座安全的桥。",
+            "explanation": "最优策略：降低威胁感+用她信任的人建立连接。退后一步给她空间（物理安全感），用'晓梅的朋友'建立信任（情感安全感）。认知症老人不认识你时，不要证明'我是谁'，而是让她觉得'你是安全的'。女儿是她最信任的人，借女儿的名字可以快速降低戒备。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "算了，她不认识就算了，明天再说",
+          "description": "放弃互动，等她自己恢复",
+          "isCorrect": false,
+          "effects": [
+            { "type": "trust", "delta": -3, "reason": "被独自留下，感到不安" },
+            { "type": "mood", "delta": -3, "reason": "恐惧感没有被安抚" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "chen_act2_d14_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "你走开了，陈奶奶一个人站在墙角，攥着课本，很久很久才慢慢坐下来。她不认识你，但她能感受到你走了。被独自留在恐惧里，比不认识人更可怕。",
+            "explanation": "放弃互动不是'等她恢复'，而是把她独自留在恐惧中。即使她不认识你，你的陪伴本身就有安抚作用。不需要她认识你，只需要你在旁边，让她感到安全。"
+          }
+        }
+      ],
+      "tags": ["choice", "trust-fluctuation", "communication"],
+      "devNote": "教学：信任值低谷应对——降低威胁感，用信任的人建立连接"
+    },
+    {
+      "id": "chen_act2_d14_003",
+      "characterId": "chen_nainai",
+      "act": 2,
+      "day": 14,
+      "type": "dayEnd",
+      "scene": "living_room",
+      "illustrationId": "chen_day14_end",
+      "dialogues": [
+        {
+          "id": "dlg_032",
+          "speaker": "elder",
+          "speakerName": "陈奶奶",
+          "text": "晓梅的朋友……那你坐吧。我给你倒杯水。",
+          "layer": "essential",
+          "emotion": "cautious"
+        },
+        {
+          "id": "dlg_033",
+          "speaker": "spirit",
+          "speakerName": "小忆",
+          "text": "她给你倒了水——即使不认识你，她的待客本能还在。信任值今天跌了，但你用对方式接住了它。明天又是新的一天，她可能又会叫你'同学'，也可能还是不认识你。认知症的信任就是这样，起起落落。",
+          "layer": "essential",
+          "emotion": "thoughtful",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "chen_act2_d15_001",
+      "characterId": "chen_nainai",
+      "act": 2,
+      "day": 15,
+      "type": "event",
+      "scene": "living_room",
+      "illustrationId": "chen_wandering_alert",
+      "dialogues": [
+        {
+          "id": "dlg_034",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "下午三点，你去厨房倒水的功夫，回来发现客厅空了。门开着，陈奶奶不见了。茶几上的课本还翻着，鞋架上少了一双布鞋。她出去了。",
+          "layer": "essential",
+          "duration": 4000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_035",
+          "speaker": "spirit",
+          "speakerName": "小忆",
+          "text": "走失风险触发！陈奶奶独自外出了——这是认知症最危险的事件之一。她可能不记得家在哪里，可能走到马路上。我的魔力可以帮你快速找到她，但需要消耗25点魔力。你的魔力够吗？",
+          "layer": "essential",
+          "emotion": "alarmed",
+          "typingSpeed": 35
+        },
+        {
+          "id": "dlg_036",
+          "speaker": "spirit",
+          "speakerName": "小忆",
+          "text": "如果我感应她的位置，能帮你缩小搜索范围，在最短时间内找到她。时间越久，风险越大。你决定怎么做？",
+          "layer": "essential",
+          "emotion": "serious",
+          "typingSpeed": 35
+        }
+      ],
+      "nextNode": "chen_act2_d15_002",
+      "isCheckpoint": true,
+      "spiritPowerChange": -25,
+      "tags": ["wandering", "risk-event", "emergency"],
+      "devNote": "Day 15 走失风险事件——魔力消耗25抵挡。spiritPowerChange:-25在此节点直接消耗"
+    },
+    {
+      "id": "chen_act2_d15_002",
+      "characterId": "chen_nainai",
+      "act": 2,
+      "day": 15,
+      "type": "choice",
+      "scene": "street",
+      "illustrationId": "chen_wandering_search",
+      "dialogues": [
+        {
+          "id": "dlg_037",
+          "speaker": "spirit",
+          "speakerName": "小忆",
+          "text": "我用魔力感应到了——她往东边的学校方向走了。那是她以前教书的学校，她可能以为要去上课。快，怎么找她最有效？",
+          "layer": "essential",
+          "emotion": "urgent",
+          "typingSpeed": 35
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "沿着她去学校的路快跑，边跑边喊她的名字",
+          "description": "直线追赶，大声呼喊",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": -4, "reason": "被大声呼喊惊吓，可能恐慌走得更远" },
+            { "type": "trust", "delta": -3, "reason": "被陌生人追赶，更加恐惧" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "chen_act2_d15_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "你边跑边喊'陈奶奶！'，她听到身后的脚步声和喊声，吓得加快了脚步。她不认识这个追她的人——在她眼里，一个陌生人在追她。走失寻找不是追捕，大声喊叫会适得其反。",
+            "explanation": "走失寻找时大声呼喊和追赶是最错误的做法。认知症老人走失时本身就处于困惑和恐惧中，身后有人追喊会让她们更加恐慌，可能跑向更危险的地方。寻找要从前方迎面接近，轻声安抚。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "抄近路绕到学校门口，从前方迎面走过去，温和地叫她陈老师",
+          "description": "前方拦截，用她熟悉的称呼接近",
+          "isCorrect": true,
+          "effects": [
+            { "type": "health", "delta": 3, "reason": "快速找到，降低在外风险" },
+            { "type": "trust", "delta": 5, "reason": "用熟悉的称呼接近，没有造成恐惧" },
+            { "type": "mood", "delta": 2, "reason": "被'学生'接回，感到安心" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "chen_act2_d15_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "你在学校门口迎面遇到了她。她正茫然地看着校门——门锁着，里面在施工。你走过去，温和地说：'陈老师，放学了，我送您回家吧。'她看了你一眼，虽然不认识你，但'陈老师'三个字让她放松了：'好，回家吧。'",
+            "explanation": "最优策略：从前方迎面接近+用她熟悉的身份称呼。走失寻找的关键：永远不要从身后追，要从前方迎。用'陈老师'这个她最熟悉的身份接近，而不是喊名字——她可能不认识自己的名字被陌生人喊，但'老师'是她的身份本能。魔力帮你预判了她的路线，你用正确的方式接住了她。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "打电话报警，自己在家等消息",
+          "description": "依赖警方，自己不行动",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": -6, "reason": "等待时间越长，走失风险越高" },
+            { "type": "trust", "delta": -2, "reason": "长时间独自身处陌生环境，恐惧加深" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "chen_act2_d15_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "你打了报警电话，但等待的每一分钟都是风险。认知症老人走失的黄金寻找时间是前两小时——越久越危险。报警是对的，但不能只靠等待，必须同时出去找。",
+            "explanation": "报警是正确的，但完全依赖警方、自己不行动是错误的。认知症走失寻找原则：立即报警+立即自行搜索+联系社区邻居。黄金寻找时间是前两小时，每一分钟都很关键。魔力已经帮你感应到方向，你应该立刻行动。"
+          }
+        }
+      ],
+      "tags": ["choice", "wandering", "emergency", "safety"],
+      "devNote": "教学：走失寻找——前方迎面接近，用熟悉身份称呼"
+    },
+    {
+      "id": "chen_act2_d15_003",
+      "characterId": "chen_nainai",
+      "act": 2,
+      "day": 15,
+      "type": "dayEnd",
+      "scene": "living_room",
+      "illustrationId": "chen_day15_end",
+      "dialogues": [
+        {
+          "id": "dlg_038",
+          "speaker": "elder",
+          "speakerName": "陈奶奶",
+          "text": "学校怎么关门了？是不是放假了？算了，回家吧。",
+          "layer": "essential",
+          "emotion": "confused"
+        },
+        {
+          "id": "dlg_039",
+          "speaker": "spirit",
+          "speakerName": "小忆",
+          "text": "她回来了，坐在沙发上喝着水，像什么都没发生。但你的心还在跳。25点魔力换来了一次安全回家——值。明天，我们要做走失预防。这种事不能再有第二次。",
+          "layer": "essential",
+          "emotion": "relieved",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end", "wandering-resolved"]
+    },
+    {
+      "id": "chen_act2_d16_001",
+      "characterId": "chen_nainai",
+      "act": 2,
+      "day": 16,
+      "type": "narrative",
+      "scene": "living_room",
+      "illustrationId": "chen_wandering_prevention",
+      "dialogues": [
+        {
+          "id": "dlg_040",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "昨天的事让你后怕。今天一早，你就开始研究走失预防方案。陈奶奶还在卧室睡觉，客厅的门锁、窗户、鞋柜都在你的视线里。",
+          "layer": "essential",
+          "duration": 4000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_041",
+          "speaker": "spirit",
+          "speakerName": "小忆",
+          "text": "走失预防需要多管齐下。我列了几个方案，你来选最合适的组合。记住：预防不是限制自由，而是让她安全地自由。",
+          "layer": "essential",
+          "emotion": "serious",
+          "typingSpeed": 40
+        }
+      ],
+      "nextNode": "chen_act2_d16_002",
+      "isCheckpoint": true,
+      "tags": ["wandering-prevention", "safety"],
+      "devNote": "Day 16 走失预防"
+    },
+    {
+      "id": "chen_act2_d16_002",
+      "characterId": "chen_nainai",
+      "act": 2,
+      "day": 16,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "chen_prevention_choice",
+      "dialogues": [
+        {
+          "id": "dlg_042",
+          "speaker": "spirit",
+          "speakerName": "小忆",
+          "text": "预防方案有几个选项。陈奶奶是退休教师，自尊心强——方案不仅要有效，还要她能接受。你选哪个？",
+          "layer": "essential",
+          "emotion": "curious"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "把门锁换成需要钥匙才能开的，她出不去就不会走失",
+          "description": "物理限制，锁门防止外出",
+          "isCorrect": false,
+          "effects": [
+            { "type": "independence", "delta": -6, "reason": "被锁在家里，自由完全被剥夺" },
+            { "type": "mood", "delta": -5, "reason": "感到被囚禁，焦虑和恐惧" },
+            { "type": "trust", "delta": -4, "reason": "发现自己出不去，对环境失去信任" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "chen_act2_d16_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "陈奶奶发现门打不开，使劲拽了几下，然后开始拍门：'开门！让我出去！我要去学校！'她越来越焦躁，甚至开始哭。锁门防走失看似有效，但对认知症老人来说等于被囚禁。",
+            "explanation": "锁门是最粗暴的走失预防方式。认知症老人有出行的本能需求，被锁住会引发严重的激越行为——拍门、哭喊、甚至伤害自己。而且一旦发生火灾等紧急情况，她无法自行逃生。物理限制是最后的手段，不是首选。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "给她戴定位手环+随身携带身份信息卡+门上装感应报警器",
+          "description": "科技+信息多重保障，不限制自由",
+          "isCorrect": true,
+          "effects": [
+            { "type": "health", "delta": 4, "reason": "多层防护降低走失风险" },
+            { "type": "trust", "delta": 4, "reason": "没有限制自由，维护了尊严" },
+            { "type": "independence", "delta": 2, "reason": "仍可自由活动，只是更安全" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "chen_act2_d16_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "你给陈奶奶戴上了定位手环——告诉她这是'晓梅送的手表，能让她随时找到您'。她高兴地戴着。身份卡放在她口袋里，上面写着姓名、地址、联系电话。门上装了感应器，她出门时你会收到提醒。三层保护，没有锁一道门。",
+            "explanation": "最优策略：多重保障不限制自由。定位手环（知道她在哪）+身份信息卡（别人能帮她回家）+门感应报警器（你知道她什么时候出门）。三管齐下，既防走失又保尊严。用'晓梅送的'来解释手环，让她心甘情愿地戴着——认知症照护，方案要有效，方式要温柔。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "告诉她别出门，出门要跟你说",
+          "description": "口头约定，靠她自己遵守",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": -3, "reason": "口头约定对认知症无效，风险依旧" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "chen_act2_d16_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "陈奶奶点点头说好，但下午你一转身，她又自己出门了——她根本记不住这个约定。口头约定对认知症老人几乎无效，因为问题就在于她记不住事。",
+            "explanation": "口头约定对认知症老人无效。她的走失不是因为'不听话'，而是因为她记不住'要跟你说'这件事。预防必须靠环境和工具，不能靠她的记忆。口头提醒可以作为辅助，但绝不能是唯一手段。"
+          }
+        }
+      ],
+      "tags": ["choice", "wandering-prevention", "safety"],
+      "devNote": "教学：走失预防——多重保障不限制自由"
+    },
+    {
+      "id": "chen_act2_d16_003",
+      "characterId": "chen_nainai",
+      "act": 2,
+      "day": 16,
+      "type": "dayEnd",
+      "scene": "living_room",
+      "illustrationId": "chen_day16_end",
+      "dialogues": [
+        {
+          "id": "dlg_043",
+          "speaker": "elder",
+          "speakerName": "陈奶奶",
+          "text": "晓梅送的手表真好看，她说戴着就能找到我。这孩子，想得周到。",
+          "layer": "essential",
+          "emotion": "happy"
+        },
+        {
+          "id": "dlg_044",
+          "speaker": "spirit",
+          "speakerName": "小忆",
+          "text": "她摸着手环笑了。走失预防做好了，不是用锁，而是用爱——'晓梅送的'让手环变成了女儿的牵挂，而不是冰冷的监控。这就是认知症照护：方案要科学，但传递方式要温柔。",
+          "layer": "essential",
+          "emotion": "warm",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "chen_act2_d17_001",
+      "characterId": "chen_nainai",
+      "act": 2,
+      "day": 17,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "chen_memory_anchor",
+      "dialogues": [
+        {
+          "id": "dlg_045",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "今天你想给陈奶奶做一个'记忆角落'——在客厅的一角，放上有特殊意义的老物件：全家福、旧课本、一支老钢笔、一条围巾。让这些物品成为她记忆的锚点，随时能触摸到。",
+          "layer": "essential",
+          "duration": 4000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_046",
+          "speaker": "spirit",
+          "speakerName": "小忆",
+          "text": "记忆角落是一种环境疗法——把有意义的老物件放在固定位置，让认知症老人随时能看到、摸到，帮助她锚定身份和时间。但放什么、怎么放，需要你来选。",
+          "layer": "essential",
+          "emotion": "thoughtful",
+          "typingSpeed": 40
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "放日历、时钟、当日报纸，帮她认知时间",
+          "description": "以纠正时间认知为目标",
+          "isCorrect": false,
+          "effects": [
+            { "type": "mood", "delta": -2, "reason": "看到错误的日期会困惑" },
+            { "type": "trust", "delta": 0, "reason": "无情感连接" }
+          ],
+          "spiritPowerChange": 5,
+          "nextNode": "chen_act2_d17_002",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "你放了日历和时钟。陈奶奶看了看日期，皱起眉：'七月？不对啊，应该是三月……'她又把日历翻回去了。时间认知工具对她不起作用，反而增加了困扰。",
+            "explanation": "对中度认知症老人来说，时间认知工具往往无效甚至有害。她的大脑无法处理'今天是七月'这个信息，日历和时钟只会让她反复困惑。记忆角落的重点不是'纠正认知'，而是'锚定情感'。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "放全家福、旧课本、钢笔、学生送的贺卡，锚定她的身份",
+          "description": "以身份认同和情感连接为核心",
+          "isCorrect": true,
+          "effects": [
+            { "type": "trust", "delta": 5, "reason": "看到有意义的物品，感到被理解和尊重" },
+            { "type": "mood", "delta": 5, "reason": "身份认同被强化，心情愉悦" },
+            { "type": "independence", "delta": 2, "reason": "能自主翻看，保持自理感" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "chen_act2_d17_002",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "陈奶奶看到那个角落时，走过去一样一样地摸。她拿起课本翻了翻，又看了看全家福，拿起那张学生贺卡念出声：'祝陈老师节日快乐。'她笑了，背挺得直直的。",
+            "explanation": "最优策略：用有情感意义的物品锚定身份。记忆角落的核心不是帮她认识'今天是几号'，而是帮她确认'我是谁'。全家福（她是母亲和妻子）、课本和钢笔（她是老师）、学生贺卡（她是好老师）——每件物品都在说'你有价值'。这些锚点比任何日历都有效。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "不放了，怕她看到老物件更伤心",
+          "description": "回避，担心负面情绪",
+          "isCorrect": false,
+          "effects": [
+            { "type": "mood", "delta": -1, "reason": "环境缺少刺激，更加茫然" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "chen_act2_d17_002",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "客厅还是老样子。陈奶奶坐在沙发上，看看空荡荡的墙角，又低下头发呆。没有锚点的环境，让她更迷失。",
+            "explanation": "担心负面情绪而回避老物件是过度保护。适度的感伤是健康的情感流动。认知症老人需要环境中有能触发正向回忆的物品——这些物品是她在混乱世界中的灯塔。"
+          }
+        }
+      ],
+      "tags": ["choice", "memory-aid", "environment-therapy", "identity"],
+      "devNote": "教学：记忆角落——用情感物品锚定身份而非纠正时间"
+    },
+    {
+      "id": "chen_act2_d17_002",
+      "characterId": "chen_nainai",
+      "act": 2,
+      "day": 17,
+      "type": "dayEnd",
+      "scene": "living_room",
+      "illustrationId": "chen_day17_end",
+      "dialogues": [
+        {
+          "id": "dlg_047",
+          "speaker": "elder",
+          "speakerName": "陈奶奶",
+          "text": "这些东西放在这儿真好。我每天都能看看。这是我教过的学生写的，字多好。",
+          "layer": "essential",
+          "emotion": "content"
+        },
+        {
+          "id": "dlg_048",
+          "speaker": "spirit",
+          "speakerName": "小忆",
+          "text": "她每天都会走到那个角落看一会儿。记忆角落成了她的锚——即使忘了今天是几号，她看到课本就知道自己是老师，看到全家福就知道自己是母亲。身份比日期重要。",
+          "layer": "essential",
+          "emotion": "warm",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "chen_act2_d18_001",
+      "characterId": "chen_nainai",
+      "act": 2,
+      "day": 18,
+      "type": "narrative",
+      "scene": "living_room",
+      "illustrationId": "chen_lucid_moment",
+      "dialogues": [
+        {
+          "id": "dlg_049",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "傍晚，夕阳把客厅染成金色。陈奶奶突然放下手里的课本，抬起头看着你。这一次，她的眼神不一样了——清明、聚焦，像是浓雾突然散开了一条缝。",
+          "layer": "essential",
+          "duration": 4500,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_050",
+          "speaker": "elder",
+          "speakerName": "陈奶奶",
+          "text": "今天我脑子清楚，跟你好好说说话。我知道我叫你同学，但你不是我的学生。你是来照顾我的，对不对？",
+          "layer": "essential",
+          "emotion": "lucid",
+          "typingSpeed": 35
+        },
+        {
+          "id": "dlg_051",
+          "speaker": "spirit",
+          "speakerName": "小忆",
+          "text": "这是认知症罕见的'清醒时刻'——在混沌中突然出现的短暂清明。她认出了真实。这种时刻不可预测，也不会持续太久。她要跟你'好好说说话'，你怎么回应？",
+          "layer": "essential",
+          "emotion": "moved",
+          "typingSpeed": 40
+        }
+      ],
+      "nextNode": "chen_act2_d18_002",
+      "isCheckpoint": true,
+      "tags": ["lucid-moment", "emotional", "heartbreak"],
+      "devNote": "Day 18 情感冲突——她突然清醒的一刻"
+    },
+    {
+      "id": "chen_act2_d18_002",
+      "characterId": "chen_nainai",
+      "act": 2,
+      "day": 18,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "chen_lucid_choice",
+      "dialogues": [
+        {
+          "id": "dlg_052",
+          "speaker": "spirit",
+          "speakerName": "小忆",
+          "text": "陈奶奶看着你，眼里有泪光，但很清醒。她知道自己在忘事，知道你在照顾她。这一刻她什么都明白。你要跟她说什么？",
+          "layer": "essential",
+          "emotion": "serious"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "是的陈奶奶，我是来照顾您的。您还记得我吗",
+          "description": "确认现实，问她是否记得你",
+          "isCorrect": false,
+          "effects": [
+            { "type": "trust", "delta": -2, "reason": "清醒时刻被用来考问记忆" },
+            { "type": "mood", "delta": -3, "reason": "被问'记不记得'，感到压力" }
+          ],
+          "spiritPowerChange": 5,
+          "nextNode": "chen_act2_d18_003",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "陈奶奶想了想，眼神开始涣散：'你……我……'清醒的窗户正在关闭，你的问题让她开始努力回忆，反而加速了混沌的回归。这一刻不该用来考问。",
+            "explanation": "清醒时刻极其珍贵，不应该用来验证记忆。问她'还记得我吗'会给这个短暂的清明施加压力，可能让清醒更快消退。清醒时刻应该用来倾听她，而不是考问她。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "是的，陈老师。您想说什么，我听着",
+          "description": "倾听她，让她主导这次对话",
+          "isCorrect": true,
+          "effects": [
+            { "type": "trust", "delta": 7, "reason": "被认真倾听，感到被尊重和珍惜" },
+            { "type": "mood", "delta": 5, "reason": "清醒时刻被珍视，情感得到释放" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "chen_act2_d18_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "陈奶奶深吸一口气：'我知道我越来越糊涂了。有时候我看着你，想叫你名字，但叫不出来。我知道我给你添麻烦了。但我不是故意的……我脑子不好使了。'她哭了，但哭得很安静。你握着她的手，没有说话。有些时刻，倾听就是最好的回应。",
+            "explanation": "最优策略：倾听。清醒时刻是认知症老人最脆弱也最真实的时刻——她终于能看到自己的处境，这种觉察既珍贵又痛苦。这时候不需要做什么，只需要听着，让她把心里话说出来。你的存在和倾听，就是对她最大的尊重。这个时刻会让你心碎，但也会让你真正理解她。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "您没糊涂，您好好的呢，别想这些",
+          "description": "否定她的自我觉察",
+          "isCorrect": false,
+          "effects": [
+            { "type": "trust", "delta": -4, "reason": "她的清醒被否定，感到不被理解" },
+            { "type": "mood", "delta": -4, "reason": "好不容易说出口的话被堵回去" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "chen_act2_d18_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "陈奶奶看了你一眼，慢慢闭上嘴。她的眼神重新变得浑浊——清醒的窗户关上了。她好不容易鼓起勇气面对真相，你却告诉她'没事'。她不需要安慰，她需要有人承认她正在经历的一切。",
+            "explanation": "否定清醒时刻的自我觉察是最令人心碎的回应。她好不容易看清了自己的处境，鼓起勇气说出来，你却说'你没糊涂'——这等于堵住了她的嘴。认知症老人在清醒时刻需要的不是'你没事'，而是'我知道，我在'。"
+          }
+        }
+      ],
+      "tags": ["choice", "lucid-moment", "emotional", "listening"],
+      "devNote": "教学：清醒时刻——倾听而非考问或否定"
+    },
+    {
+      "id": "chen_act2_d18_003",
+      "characterId": "chen_nainai",
+      "act": 2,
+      "day": 18,
+      "type": "dayEnd",
+      "scene": "living_room",
+      "illustrationId": "chen_day18_end",
+      "dialogues": [
+        {
+          "id": "dlg_053",
+          "speaker": "elder",
+          "speakerName": "陈奶奶",
+          "text": "谢谢你听我说。说完这些，我脑子又糊涂了。但刚才那一刻……我记得你。",
+          "layer": "essential",
+          "emotion": "peaceful"
+        },
+        {
+          "id": "dlg_054",
+          "speaker": "spirit",
+          "speakerName": "小忆",
+          "text": "清醒的窗户关上了，她又回到了混沌里。但那一句话——'我记得你'——是这三十天里最重的四个字。清醒时刻不可预测，也不会停留。但你接住了它。这一刻，你真正理解了什么叫'陪伴'。",
+          "layer": "essential",
+          "emotion": "moved",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "chen_act2_d19_001",
+      "characterId": "chen_nainai",
+      "act": 2,
+      "day": 19,
+      "type": "narrative",
+      "scene": "living_room",
+      "illustrationId": "chen_sees_herself",
+      "dialogues": [
+        {
+          "id": "dlg_055",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "今天发生了一件你没想到的事。陈奶奶看着你，突然说：'你跟我年轻时候真像。也是这样，梳着辫子，眼睛亮亮的。你是不是也要当老师？'",
+          "layer": "essential",
+          "duration": 4000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_056",
+          "speaker": "spirit",
+          "speakerName": "小忆",
+          "text": "她把你认成了年轻时的自己。这不是普通的身份混淆——她在你身上看到了过去的自己。那个梳着辫子、眼睛亮亮、刚当上老师的陈淑芬。这是认知症最深层的投射：她正在和过去的自己对话。",
+          "layer": "essential",
+          "emotion": "moved",
+          "typingSpeed": 40
+        }
+      ],
+      "nextNode": "chen_act2_d19_002",
+      "isCheckpoint": true,
+      "tags": ["identity", "projection", "emotional"],
+      "devNote": "Day 19 她把你认成年轻时的自己"
+    },
+    {
+      "id": "chen_act2_d19_002",
+      "characterId": "chen_nainai",
+      "act": 2,
+      "day": 19,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "chen_young_self_choice",
+      "dialogues": [
+        {
+          "id": "dlg_057",
+          "speaker": "spirit",
+          "speakerName": "小忆",
+          "text": "陈奶奶拉着你的手，眼睛里满是怀念和温柔。她在跟'年轻时的自己'说话。你怎么回应这一刻？",
+          "layer": "essential",
+          "emotion": "serious"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "陈奶奶，我不是您，我是照顾您的人",
+          "description": "纠正她的投射",
+          "isCorrect": false,
+          "effects": [
+            { "type": "trust", "delta": -4, "reason": "她的情感投射被否定" },
+            { "type": "mood", "delta": -4, "reason": "怀念被打断，感到失落" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "chen_act2_d19_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "陈奶奶松开手，眼神黯淡下来：'不是啊……也是。'她转过头看窗外，不再说话了。你打断了她和年轻时自己的一次对话——那可能是她此刻最需要的事。",
+            "explanation": "纠正她的投射会打断一次珍贵的自我连接。她把你看成年轻时的自己，不是'认错人'，而是在回忆她最好的时光。否定这个投射，就是否定她与自己过去的连接。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "是的，我也想当老师。陈老师，您当年是什么样的",
+          "description": "进入她的投射，引导她回忆最好的自己",
+          "isCorrect": true,
+          "effects": [
+            { "type": "trust", "delta": 6, "reason": "进入她的情感世界，建立深层连接" },
+            { "type": "mood", "delta": 6, "reason": "与最好的自己对话，心情愉悦" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "chen_act2_d19_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "陈奶奶笑了，眼睛亮亮的：'我当年啊，刚分配到学校，紧张得不行。第一堂课，手都在抖。但是一站上讲台，看到下面那些小脑袋，就不怕了。'她讲着年轻时的故事，语速很快，声音年轻了十岁。",
+            "explanation": "最优策略：进入她的投射，引导她与最好的自己对话。她把你认成年轻时的自己——这是认知症罕见而珍贵的时刻，她在主动回忆自己最闪亮的日子。你顺着她说'我也想当老师'，就打开了她记忆的闸门。这种投射不是错误，是礼物。让她在回忆里再做一次那个年轻、充满希望的老师。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "沉默不语，不知道怎么回应",
+          "description": "不知所措，不回应",
+          "isCorrect": false,
+          "effects": [
+            { "type": "trust", "delta": -1, "reason": "她的热情没有回应" },
+            { "type": "mood", "delta": -2, "reason": "期待落空" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "chen_act2_d19_003",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "陈奶奶等了一会儿，见你不说话，慢慢松开了手。她低下头，又翻起了那本旧课本。那个年轻时的自己，又消失在混沌里了。",
+            "explanation": "不知所措的沉默会错过这个珍贵时刻。这种投射不会持续太久，需要你及时回应。即使不知道说什么，一句'跟我讲讲'就够了。陪伴者不需要完美，只需要在场。"
+          }
+        }
+      ],
+      "tags": ["choice", "identity", "projection", "emotional"],
+      "devNote": "教学：身份投射——进入她的世界，让她与最好的自己对话"
+    },
+    {
+      "id": "chen_act2_d19_003",
+      "characterId": "chen_nainai",
+      "act": 2,
+      "day": 19,
+      "type": "dayEnd",
+      "scene": "living_room",
+      "illustrationId": "chen_day19_end",
+      "dialogues": [
+        {
+          "id": "dlg_058",
+          "speaker": "elder",
+          "speakerName": "陈奶奶",
+          "text": "当年真好啊。什么都记得，什么都做得来。你要是当老师，一定会是个好老师。",
+          "layer": "essential",
+          "emotion": "nostalgic"
+        },
+        {
+          "id": "dlg_059",
+          "speaker": "spirit",
+          "speakerName": "小忆",
+          "text": "她在跟'年轻的自己'说'你会是个好老师'。其实她是在跟自己说。认知症带走了她的现在，但带不走她曾经最好的样子。你今天帮她见到了那个自己。",
+          "layer": "essential",
+          "emotion": "moved",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "chen_act2_d20_001",
+      "characterId": "chen_nainai",
+      "act": 2,
+      "day": 20,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "chen_feels_useless",
+      "dialogues": [
+        {
+          "id": "dlg_060",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "今天陈奶奶又低落了。她坐在沙发上，看着自己的手发呆。'我这双手，以前写一手好板书。现在连筷子都拿不稳了。我活着还有什么用呢。'",
+          "layer": "essential",
+          "duration": 4000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_061",
+          "speaker": "spirit",
+          "speakerName": "小忆",
+          "text": "她又陷入了自我价值的低谷。这一次更深——她说出了'活着有什么用'。这是认知症老人最危险的情感时刻，需要你谨慎回应。她不是在寻求安慰，她是在怀疑自己存在的意义。",
+          "layer": "essential",
+          "emotion": "heavy",
+          "typingSpeed": 40
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "您别这么说，您好好的呢",
+          "description": "空洞安慰，否定她的感受",
+          "isCorrect": false,
+          "effects": [
+            { "type": "trust", "delta": -3, "reason": "感受被否定" },
+            { "type": "mood", "delta": -3, "reason": "痛苦被轻视" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "chen_act2_d20_002",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "陈奶奶摇摇头，不再说话了。'您好好的'——但她知道自己不好。空洞的安慰只会让她觉得你不理解她。她的痛苦是真实的，需要被看见。",
+            "explanation": "空洞的安慰对认知症老人的自我价值危机无效。'您好好的'否定了她的真实感受——她知道自己不好。她需要的不是'你没事'，而是'你有用'的具体证据。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "陈老师，您今天教我一个字吧。我写得不好，想跟您学",
+          "description": "让她以教师身份重新找到价值感",
+          "isCorrect": true,
+          "effects": [
+            { "type": "trust", "delta": 6, "reason": "被需要，身份价值被重新激活" },
+            { "type": "mood", "delta": 6, "reason": "重新成为老师，找回存在意义" },
+            { "type": "independence", "delta": 3, "reason": "主动参与教学，恢复自主感" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "chen_act2_d20_002",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "陈奶奶抬起头，眼睛亮了：'你要学字？好，我来教你。'她拿起那支钢笔，在课本空白处一笔一划写了一个'人'字。虽然歪了，但她写得很认真：'人字，一撇一捺，互相支撑。写好了人字，才能做好人。'她笑了，像又回到了讲台上。",
+            "explanation": "最优策略：用'需要她'来重建价值感。空洞的安慰不如一个具体的请求。'教我一个字'——让她重新成为老师，让她知道'我还有用'。认知症照护的深层智慧：不是告诉她'你有价值'，而是创造一个让她自己发现价值的场景。她教你的那个'人'字，歪歪斜斜，但那是她存在的证明。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "您还有女儿呢，女儿需要您",
+          "description": "用家庭责任定义她的价值",
+          "isCorrect": false,
+          "effects": [
+            { "type": "trust", "delta": 0, "reason": "提到了女儿但方式不够好" },
+            { "type": "mood", "delta": -1, "reason": "想到女儿不在身边，更加失落" }
+          ],
+          "spiritPowerChange": 5,
+          "nextNode": "chen_act2_d20_002",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "陈奶奶想了想：'晓梅……晓梅忙，不用我操心。'她的语气更失落了。女儿不在身边，'女儿需要你'这句话反而提醒了她的孤独。",
+            "explanation": "用'女儿需要你'来定义价值，方向对但时机不对。女儿不在身边，这句话反而凸显了她的孤独和无用感。更好的方式是让她在当下就感到被需要——用'教我写字'比'女儿需要你'更直接、更有效。"
+          }
+        }
+      ],
+      "tags": ["choice", "identity", "self-worth", "emotional"],
+      "devNote": "教学：身份认同维护——用'需要她'重建价值感"
+    },
+    {
+      "id": "chen_act2_d20_002",
+      "characterId": "chen_nainai",
+      "act": 2,
+      "day": 20,
+      "type": "dayEnd",
+      "scene": "living_room",
+      "illustrationId": "chen_day20_end",
+      "dialogues": [
+        {
+          "id": "dlg_062",
+          "speaker": "elder",
+          "speakerName": "陈奶奶",
+          "text": "人字，一撇一捺，互相支撑。你记住了，别忘。",
+          "layer": "essential",
+          "emotion": "proud"
+        },
+        {
+          "id": "dlg_063",
+          "speaker": "spirit",
+          "speakerName": "小忆",
+          "text": "她教了你一个'人'字。歪歪斜斜，但那个字里有她四十年的讲台、有她对'人'的理解、有她存在的全部意义。她说'别忘'——她最怕的不是自己忘记，而是被别人忘记。",
+          "layer": "essential",
+          "emotion": "moved",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "chen_act2_d21_001",
+      "characterId": "chen_nainai",
+      "act": 2,
+      "day": 21,
+      "type": "narrative",
+      "scene": "living_room",
+      "illustrationId": "chen_week3_summary",
+      "dialogues": [
+        {
+          "id": "dlg_064",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "第二幕的最后一天。客厅里多了定位手环、记忆角落、服药记录卡。灶台上有定时器，门上有感应器。陈奶奶坐在沙发上，手里握着那支钢笔，课本翻在那一页歪歪斜斜的'人'字上。",
+          "layer": "essential",
+          "duration": 4500,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_065",
+          "speaker": "spirit",
+          "speakerName": "小忆",
+          "text": "两周总结。这两周，陈奶奶经历了走失、清醒时刻、身份投射。信任值像潮水一样涨涨落落——她有时叫你'同学'，有时不认识你，有时把你当成年轻时的自己。但每一次，你都用对方式接住了她。",
+          "layer": "essential",
+          "emotion": "thoughtful",
+          "typingSpeed": 35
+        },
+        {
+          "id": "dlg_066",
+          "speaker": "spirit",
+          "speakerName": "小忆",
+          "text": "最后这一周，是最难的。病情可能会波动，也可能会有新的挑战。但你要记住：没有标准答案，只有陪伴。她不记得你是谁，但她记得你对她的好。",
+          "layer": "essential",
+          "emotion": "serious",
+          "typingSpeed": 35
+        }
+      ],
+      "nextNode": "chen_act2_d21_002",
+      "isCheckpoint": true,
+      "tags": ["week-summary"],
+      "devNote": "Day 21 第二幕总结"
+    },
+    {
+      "id": "chen_act2_d21_002",
+      "characterId": "chen_nainai",
+      "act": 2,
+      "day": 21,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "chen_week3_reflection",
+      "dialogues": [
+        {
+          "id": "dlg_067",
+          "speaker": "spirit",
+          "speakerName": "小忆",
+          "text": "最后一周了。回顾这二十天，你觉得接下来的重心应该是什么？陈奶奶的病情在发展，每一天都可能是新的挑战。",
+          "layer": "essential",
+          "emotion": "thoughtful"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "抓紧时间，想办法让她的记忆好转",
+          "description": "以改善记忆为目标",
+          "isCorrect": false,
+          "effects": [
+            { "type": "trust", "delta": -2, "reason": "方向偏了，给她和自己都增加压力" },
+            { "type": "mood", "delta": -2, "reason": "被反复训练记忆，感到挫败" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "chen_act2_d21_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "想让她的记忆好转——这个心愿很美好，但不现实。阿尔茨海默症是渐进性的，记忆只会继续流失，不会逆转。最后一周如果以'改善记忆'为目标，你会不断面对挫败，她也会因为被反复训练而焦虑。",
+            "explanation": "最后一周不应以'改善记忆'为目标。认知症不可逆，记忆训练效果有限且可能增加焦虑。最后一周的方向应该是：珍惜每一个当下，在陪伴中创造温暖的回忆——不是给她的，是给你自己的。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "珍惜每一个当下，让她每一天都过得温暖",
+          "description": "以陪伴和当下为核心",
+          "isCorrect": true,
+          "effects": [
+            { "type": "trust", "delta": 5, "reason": "方向正确，持续陪伴建立深层信任" },
+            { "type": "mood", "delta": 4, "reason": "被珍视的安心感" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "chen_act2_d21_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "这就是最好的方向。最后一周，不需要改变什么，只需要继续陪伴。她叫你同学，你就做她的同学；她不认识你，你就安安静静在旁边坐着。认知症照护的终点不是'治好'，而是'陪着'。最后的结局，没有标准答案，只有温柔的陪伴。",
+            "explanation": "最优方向：珍惜当下。最后一周的核心不是解决问题，而是创造回忆。她可能不记得这三十天，但你会记得。每一个温暖的当下，都是对'陪伴'最好的诠释。记住：认知症照护没有标准答案，只有更好的方式——而这个'更好的方式'，就是你在她身边。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "做好最坏的打算，准备应对可能的走失和危机",
+          "description": "以防危为核心",
+          "isCorrect": false,
+          "effects": [
+            { "type": "trust", "delta": 1, "reason": "防范意识没错，但不够" },
+            { "type": "mood", "delta": -1, "reason": "紧张的气氛影响她的情绪" }
+          ],
+          "spiritPowerChange": 5,
+          "nextNode": "chen_act2_d21_003",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "防范意识是对的，走失预防也做好了。但如果最后一周只盯着'可能出什么事'，你会错过最后的温暖时光。安全和陪伴不矛盾，但陪伴才是核心。",
+            "explanation": "安全防范是必要的，但不应是唯一重心。最后一周需要在安全的基础上，把更多精力放在陪伴上。过度焦虑于'可能出什么事'，会让你和她都错过最后的美好时光。安全是底线，陪伴是核心。"
+          }
+        }
+      ],
+      "tags": ["choice", "week-summary", "strategy"],
+      "devNote": "Day 21 第二幕总结选择：最后一周策略方向"
+    },
+    {
+      "id": "chen_act2_d21_003",
+      "characterId": "chen_nainai",
+      "act": 2,
+      "day": 21,
+      "type": "actEnd",
+      "scene": "living_room",
+      "illustrationId": "chen_act2_end",
+      "dialogues": [
+        {
+          "id": "dlg_068",
+          "speaker": "elder",
+          "speakerName": "陈奶奶",
+          "text": "你是谁来着？算了，不重要。你在这儿就好。",
+          "layer": "essential",
+          "emotion": "gentle"
+        },
+        {
+          "id": "dlg_069",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "夜色透过窗帘，记忆角落里的全家福在月光下泛着柔光。陈奶奶握着钢笔睡着了，课本翻在那一页——歪歪斜斜的'人'字，一撇一捺，互相支撑。",
+          "layer": "emotional",
+          "typingSpeed": 40
+        },
+        {
+          "id": "dlg_070",
+          "speaker": "spirit",
+          "speakerName": "小忆",
+          "text": "第二幕结束。她不记得你是谁，但她说'你在这儿就好'。这就是认知症照护的真相：她不需要记得你，只需要你在。第三幕，最后的九天。结局不是治愈，是陪伴。",
+          "layer": "essential",
+          "emotion": "warm",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["act-end"],
+      "devNote": "第二幕结束节点"
+    }
+  ]
+}

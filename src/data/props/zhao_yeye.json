@@ -1,0 +1,101 @@
+[
+  {
+    "id": "zhao_bedside_drawer",
+    "name": "床头柜抽屉",
+    "description": "赵爷爷卧室床头的旧木抽屉，里面装着各种零碎物品——旧照片、发黄的纸条、几枚纽扣和一支没水的钢笔。抽屉把手有些松动，但赵爷爷不准人修，说“用得顺手”。",
+    "icon": "/images/props/zhao_bedside_drawer.svg",
+    "image": "/images/props/zhao_bedside_drawer_large.svg",
+    "layer": "inspect",
+    "isCollectible": false,
+    "characterId": "zhao_yeye",
+    "category": "decor"
+  },
+  {
+    "id": "zhao_old_album",
+    "name": "老相册",
+    "description": "一本封皮已经泛黄的相册，里面夹着赵爷爷从年轻到现在的照片。每一页都用透明塑料膜保护着，照片边缘有些卷曲。其中一张黑白结婚照最为珍贵，赵爷爷的爱人穿着红色旗袍，笑靥如花。",
+    "icon": "/images/props/zhao_old_album.svg",
+    "image": "/images/props/zhao_old_album_large.svg",
+    "layer": "display",
+    "isCollectible": true,
+    "characterId": "zhao_yeye",
+    "category": "memory"
+  },
+  {
+    "id": "zhao_old_radio_newspaper",
+    "name": "老式收音机",
+    "description": "赵爷爷最珍爱的老式收音机，外壳是深棕色的木质，天线已经有些歪了，但音质依然很好。赵爷爷每天都要听新闻和京剧，收音机是他连接世界的窗口。旋钮上贴着一小块胶布，写着“新闻”频率。",
+    "icon": "/images/props/zhao_old_radio_newspaper.svg",
+    "image": "/images/props/zhao_old_radio_newspaper_large.svg",
+    "layer": "operate",
+    "isCollectible": true,
+    "characterId": "zhao_yeye",
+    "category": "decor"
+  },
+  {
+    "id": "zhao_old_photo_frame",
+    "name": "旧相框",
+    "description": "客厅五斗柜上放着一个老式木质相框，里面是赵爷爷和爱人的合影。照片已经有些褪色了，但相框被擦得很干净。赵爷爷每天早上都会用手帕轻轻擦一下相框上的灰尘。",
+    "icon": "/images/props/zhao_old_photo_frame.svg",
+    "image": "/images/props/zhao_old_photo_frame_large.svg",
+    "layer": "display",
+    "isCollectible": false,
+    "characterId": "zhao_yeye",
+    "category": "decor"
+  },
+  {
+    "id": "zhao_red_flower",
+    "name": "小红花贴纸",
+    "description": "一版红色的小花贴纸，是赵爷爷以前当老师时奖励学生用的。虽然已经过期很久了，但贴纸的胶性还在。赵爷爷偶尔会撕下一朵，贴在表现“好”的人手心里。",
+    "icon": "/images/props/zhao_red_flower.svg",
+    "image": "/images/props/zhao_red_flower_large.svg",
+    "layer": "display",
+    "isCollectible": true,
+    "characterId": "zhao_yeye",
+    "category": "memory"
+  },
+  {
+    "id": "zhao_reading_glasses",
+    "name": "老花镜",
+    "description": "一副金色边框的老花镜，镜腿有些变形了，用胶布缠着。赵爷爷看报纸和照片的时候必须戴上它，但经常随手一放就找不到了。镜片上有些细小的划痕，但还能用。",
+    "icon": "/images/props/zhao_reading_glasses.svg",
+    "image": "/images/props/zhao_reading_glasses_large.svg",
+    "layer": "display",
+    "isCollectible": true,
+    "characterId": "zhao_yeye",
+    "category": "tool"
+  },
+  {
+    "id": "zhao_old_clock",
+    "name": "老座钟",
+    "description": "客厅墙上的老式机械座钟，钟摆左右摇晃，发出沉稳的滴答声。每到整点会报时，声音清脆悠远。赵爷爷说这个钟是他结婚时买的，走了快五十年了，从来没坏过。",
+    "icon": "/images/props/zhao_old_clock.svg",
+    "image": "/images/props/zhao_old_clock_large.svg",
+    "layer": "display",
+    "isCollectible": false,
+    "characterId": "zhao_yeye",
+    "category": "decor"
+  },
+  {
+    "id": "zhao_tea_set",
+    "name": "旧茶具",
+    "description": "一套白瓷茶具，壶盖上有一个小小的缺口。赵爷爷每天下午都会泡一壶茶，坐在窗边慢慢喝。他说喝茶的时候脑子最清醒，以前备课的时候也是这样。",
+    "icon": "/images/props/zhao_tea_set.svg",
+    "image": "/images/props/zhao_tea_set_large.svg",
+    "layer": "display",
+    "isCollectible": false,
+    "characterId": "zhao_yeye",
+    "category": "decor"
+  },
+  {
+    "id": "zhao_old_textbook",
+    "name": "旧教材",
+    "description": "一本泛黄的语文教材，封面上写着“赵老师”三个字。书页里夹着很多小纸条，上面是赵爷爷手写的备课笔记，字迹工整端正。翻到《静夜思》那一页，页脚微微卷起，显然被反复翻阅过。",
+    "icon": "/images/props/zhao_old_textbook.svg",
+    "image": "/images/props/zhao_old_textbook_large.svg",
+    "layer": "inspect",
+    "isCollectible": true,
+    "characterId": "zhao_yeye",
+    "category": "memory"
+  }
+]

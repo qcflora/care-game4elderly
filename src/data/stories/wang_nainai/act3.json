@@ -1,0 +1,888 @@
+{
+  "characterId": "wang_nainai",
+  "act": 3,
+  "title": "第三幕：守护",
+  "theme": "急症应对与真心相待",
+  "startDay": 21,
+  "endDay": 30,
+  "nodes": [
+    {
+      "id": "wang_act3_d21_001",
+      "characterId": "wang_nainai",
+      "act": 3,
+      "day": 21,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "wang_cold_morning",
+      "dialogues": [
+        {
+          "id": "dlg_040",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "第二十一天，寒潮来了。气温骤降十度，王奶奶一早说有点头疼，但坚持要去菜市场'抢早市便宜菜'。她的血压计显示148/95——比平时高了一截。冬天是高血压老人的'危险季节'，血管遇冷收缩，血压容易飙升。",
+          "layer": "essential",
+          "duration": 4500,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_041",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "寒潮+头疼+血压偏高，这是高血压冬季预警信号！可她惦记着早市的便宜菜，拦还是不拦？",
+          "layer": "essential",
+          "emotion": "concerned"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "由她去，买菜也是锻炼，戴好帽子就行",
+          "description": "放行出门",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": -5, "reason": "寒冷刺激+运动+高血压=心脑血管事件风险" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "wang_act3_d21_002",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "寒潮天清晨出门，对血压148/95的高血压老人是高危组合：冷空气刺激血管收缩、清晨本就是血压晨峰、再叠加步行运动，三重因素叠加极易诱发脑卒中或心梗。",
+            "explanation": "高血压冬季管理要点：1.寒潮天避免清晨外出，最佳外出时段为上午10点后气温回升时；2.注意头颈保暖（戴帽围巾），减少冷刺激；3.清晨是血压晨峰和心脑血管事件高发时段（'晨峰危机'），尤其要避免此时剧烈活动。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "劝她等气温回升再去，今天帮她线上买菜，讲清冬季血压管理",
+          "description": "避寒+代购+健康教育",
+          "isCorrect": true,
+          "effects": [
+            { "type": "health", "delta": 8, "reason": "避免寒冷刺激，血压平稳" },
+            { "type": "trust", "delta": 6, "reason": "帮她解决了买菜难题" }
+          ],
+          "spiritPowerChange": 15,
+          "nextNode": "wang_act3_d21_002",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "太对了！避寒是第一位，但你没让她'干等'——帮她线上买菜，既解决了早市的菜，又保住了她'不麻烦别人'的自尊。还趁机讲了冬季血压管理，一举三得。",
+            "explanation": "高血压冬季防护核心：1.寒潮天减少外出，尤其清晨；2.室内保暖18-22℃为宜；3.坚持规律服药，冬季血压常比夏季高，必要时遵医嘱调整剂量（但不可自行加药）；4.用替代方案（线上采购）解决生活需求，减少寒冷暴露。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "严格禁止她出门，一切你来办",
+          "description": "全面接管",
+          "isCorrect": false,
+          "effects": [
+            { "type": "independence", "delta": -4, "reason": "自主权被剥夺" },
+            { "type": "mood", "delta": -3, "reason": "被当成不能自理的人" }
+          ],
+          "spiritPowerChange": 3,
+          "nextNode": "wang_act3_d21_002",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "避寒是对的，但'一切你来办'让她觉得自己成了废人。买菜这件小事，是她维持日常节奏和自主感的方式。一刀切禁足，伤的不只是出门，是她的尊严。",
+            "explanation": "照护分寸：保护不等于接管。冬季防护要'减少风险'而非'取消生活'。可以约定'寒潮天不出门、天好时自己去'，把自主权还给她，同时兜底安全。"
+          }
+        }
+      ],
+      "tags": ["choice", "winter-care", "hypertension", "bp-peak"],
+      "devNote": "第三幕开场，冬季高血压防护，为急症铺垫"
+    },
+    {
+      "id": "wang_act3_d21_002",
+      "characterId": "wang_nainai",
+      "act": 3,
+      "day": 21,
+      "type": "dayEnd",
+      "scene": "living_room",
+      "illustrationId": "wang_warm_home",
+      "dialogues": [
+        {
+          "id": "dlg_042",
+          "speaker": "elder",
+          "speakerName": "王奶奶",
+          "text": "（裹着毯子）你说的对，这天儿冷得邪乎。菜我缓两天再买。这头疼……是不是血压闹的？",
+          "layer": "essential",
+          "emotion": "thoughtful"
+        },
+        {
+          "id": "dlg_043",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "她开始主动把'头疼'和'血压'联系起来了。这正是冬季高血压防护的第一课。但明天，考验会来得猝不及防。",
+          "layer": "emotional",
+          "emotion": "anticipating",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "wang_act3_d23_001",
+      "characterId": "wang_nainai",
+      "act": 3,
+      "day": 23,
+      "type": "event",
+      "nextNode": "wang_act3_d23_002",
+      "scene": "living_room",
+      "illustrationId": "wang_bp_crisis",
+      "dialogues": [
+        {
+          "id": "dlg_044",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "第二十三天上午，王奶奶和邻居因为楼道堆杂物吵了一架，回来气得脸通红。十分钟后，她突然剧烈头痛、恶心想吐、视线发花，踉跄着扶住桌角。血压计显示190/115——高血压危象！",
+          "layer": "essential",
+          "duration": 3500,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_045",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "情绪激动诱发高血压危象！剧烈头痛、恶心、视物模糊，这是靶器官损害的前兆！30秒内做出正确决策，每一秒都在和脑卒中赛跑！",
+          "layer": "essential",
+          "emotion": "urgent"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "让她躺下歇会儿，吃点降压药观察观察",
+          "description": "自行处理，观察等待",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": -8, "reason": "高血压危象延误就医，可能进展为脑卒中" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "wang_act3_d23_002",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "危险！190/115已是高血压危象，伴头痛恶心视物模糊，提示靶器官损害正在发生。'观察观察'的每一分钟，脑组织都在缺血。这绝不是在家能自己处理的情况。",
+            "explanation": "高血压危象识别：收缩压≥180和/或舒张压≥120，伴靶器官损害症状（剧烈头痛、恶心呕吐、视物模糊、胸闷、意识改变）=高血压急症，必须立即就医！不可在家观察。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "立即让她半卧位休息、拨120，准确报告血压值和症状，不要自行加药",
+          "description": "正确急救+呼叫专业救援",
+          "isCorrect": true,
+          "effects": [
+            { "type": "health", "delta": 8, "reason": "正确急救+及时送医，避免脑卒中" },
+            { "type": "trust", "delta": 8, "reason": "危急时刻的专业守护" }
+          ],
+          "spiritPowerChange": 15,
+          "nextNode": "wang_act3_d23_002",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "完美处置！半卧位减轻脑压、立即拨120、准确报告血压值和症状、不自行加药——这是高血压危象的标准急救流程。你的冷静救了王奶奶。",
+            "explanation": "高血压危象急救要点：1.立即半卧位休息（勿完全平卧，减轻脑充血）；2.拨打120，报告：地址、症状（剧烈头痛恶心视物模糊）、当前血压190/115、用药史（氨氯地平）；3.切忌自行加服降压药——血压骤降会导致脑灌注不足，比高血压本身更危险；4.保持安静，安抚情绪。120到场前持续监测意识和血压。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "赶紧扶她下楼打车去医院",
+          "description": "自行送医",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": -5, "reason": "搬动+颠簸+无监护，途中风险高" }
+          ],
+          "spiritPowerChange": 2,
+          "nextNode": "wang_act3_d23_002",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "高血压危象伴靶器官症状者不宜自行搬动。下楼颠簸、途中无急救监护，一旦途中恶化（如脑出血、抽搐）无法处置。等专业急救人员到场更安全。",
+            "explanation": "急症搬运原则：高血压危象伴神经系统症状时，自行搬动可能加重病情（如促发脑出血或脑疝）。应原地保持稳定体位，等待120专业转运。提前打电话让120备好降压和监护设备，比自行送医更快更安全。"
+          }
+        }
+      ],
+      "props": [
+        {
+          "propId": "bp_crisis_alert",
+          "layer": "display",
+          "autoShow": true
+        }
+      ],
+      "tags": ["event", "emergency", "timed-decision", "hypertension-crisis", "call-120", "emotional-trigger"],
+      "devNote": "Day23限时决策节点（30秒），高血压危象急救教学，情绪诱发"
+    },
+    {
+      "id": "wang_act3_d23_002",
+      "characterId": "wang_nainai",
+      "act": 3,
+      "day": 23,
+      "type": "narrative",
+      "scene": "hospital",
+      "illustrationId": "wang_hospital_recover",
+      "dialogues": [
+        {
+          "id": "dlg_046",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "救护车赶到时，王奶奶血压已开始回落。医生说幸亏没自行加药、处置及时，否则很可能发展成脑出血。输液观察后，她转危为安，躺在病床上，第一次显得有些后怕。",
+          "layer": "essential",
+          "duration": 4000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_047",
+          "speaker": "elder",
+          "speakerName": "王奶奶",
+          "text": "（虚弱地）我这脾气……差点要了自己的命。原来'气大伤身'不是说着玩的。",
+          "layer": "essential",
+          "emotion": "humbled"
+        },
+        {
+          "id": "dlg_048",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "危机有时是转机。这次急症让她真正懂得了'控制情绪就是控制血压'。接下来，还有另一种危险在等着她。",
+          "layer": "essential",
+          "emotion": "gentle"
+        }
+      ],
+      "nextNode": "wang_act3_d25_001",
+      "isCheckpoint": true,
+      "tags": ["recovery", "turning-point", "emotional-trigger"]
+    },
+    {
+      "id": "wang_act3_d25_001",
+      "characterId": "wang_nainai",
+      "act": 3,
+      "day": 25,
+      "type": "event",
+      "nextNode": "wang_act3_d25_002",
+      "scene": "bathroom",
+      "illustrationId": "wang_fall_bathroom",
+      "dialogues": [
+        {
+          "id": "dlg_049",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "第二十五天清晨，王奶奶出院在家休养。她想自己洗个澡，浴室地板有点滑。洗到一半，她脚下一滑，重重摔坐在地，髋部一阵剧痛，半天没爬起来。智能手环跌倒检测警报响了你手机。",
+          "layer": "essential",
+          "duration": 3500,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_050",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "跌倒！老年人跌倒最怕髋部骨折和长时间倒地无人知。她疼得动不了，浴室门还反锁着！30秒决策，怎么救最稳妥？",
+          "layer": "essential",
+          "emotion": "urgent"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "让她忍痛自己慢慢站起来",
+          "description": "鼓励自行起身",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": -8, "reason": "可能有骨折，强行起身加重损伤" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "wang_act3_d25_002",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "危险！老人跌倒后髋部剧痛，极可能是骨折。让她'忍痛站起来'会让骨折移位、损伤血管神经，甚至造成脂肪栓塞。跌倒后'能不能站'不是靠自己判断的。",
+            "explanation": "老人跌倒处置铁律：跌倒后不要急于扶起！先评估：1.意识是否清醒；2.有无剧烈疼痛部位（尤其髋部、脊柱）；3.有无肢体畸形。怀疑骨折者绝对保持原位，呼叫120。强行起身是跌倒后二次伤害的头号原因。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "隔门安抚她别动，立即拨120并联系开锁，让她保持原姿势等救援",
+          "description": "正确处置+呼叫救援",
+          "isCorrect": true,
+          "effects": [
+            { "type": "health", "delta": 8, "reason": "正确处置避免二次损伤，及时获救" },
+            { "type": "trust", "delta": 8, "reason": "危急时刻的冷静守护" }
+          ],
+          "spiritPowerChange": 15,
+          "nextNode": "wang_act3_d25_002",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "完美！隔门安抚让她'别动'，避免她在恐慌中乱动加重伤情；立即拨120并联系开锁解决门反锁；让她保持原姿势等救援。这是独居老人跌倒的标准应急处置。",
+            "explanation": "独居老人跌倒急救流程：1.若门反锁，隔门安抚保持冷静，勿让老人强行爬动；2.立即拨打120并说明'老人跌倒、髋部剧痛、可能骨折、门反锁需开锁'；3.让老人保持跌倒时姿势勿移动，等待专业评估；4.同时联系家属或邻居到场。智能手环的跌倒检测在这类场景中是救命工具。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "踹门进去扶她起来",
+          "description": "强行破门搀扶",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": -5, "reason": "粗暴搬动可能加重骨折或损伤" }
+          ],
+          "spiritPowerChange": 2,
+          "nextNode": "wang_act3_d25_002",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "破门是快的，但'扶她起来'是错的。髋部剧痛很可能有骨折，没有评估就搬动，可能造成骨折移位、损伤血管。急中要稳，不能乱了章法。",
+            "explanation": "跌倒后搬动的禁忌：未排除骨折前不可随意搬动。正确做法是破门后先评估伤情（意识、疼痛部位、肢体畸形），怀疑骨折则原位固定等待专业转运。'先评估再行动'比'先动手'更重要。"
+          }
+        }
+      ],
+      "props": [
+        {
+          "propId": "fall_alert_bracelet",
+          "layer": "display",
+          "autoShow": true
+        }
+      ],
+      "tags": ["event", "emergency", "timed-decision", "fall-risk", "call-120"],
+      "devNote": "Day25限时决策节点（30秒），跌倒应急处置教学，独居风险"
+    },
+    {
+      "id": "wang_act3_d25_002",
+      "characterId": "wang_nainai",
+      "act": 3,
+      "day": 25,
+      "type": "narrative",
+      "scene": "hospital",
+      "illustrationId": "wang_fall_recover",
+      "dialogues": [
+        {
+          "id": "dlg_051",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "120到场评估，万幸没有骨折，只是软组织挫伤。医生叮嘱：独居老人浴室是跌倒高发地，必须做防滑改造。王奶奶坐在病床上，难得地没有嘴硬。",
+          "layer": "essential",
+          "duration": 4000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_052",
+          "speaker": "elder",
+          "speakerName": "王奶奶",
+          "text": "（摸着淤青的胯）这回我听你的。浴室……是该收拾收拾了。我老了，不能逞强。",
+          "layer": "essential",
+          "emotion": "humbled"
+        },
+        {
+          "id": "dlg_053",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "两次急症，让她从'我能行'变成了'该改的得改'。这是最宝贵的转变。回家后，我们把防跌倒落到实处。",
+          "layer": "essential",
+          "emotion": "gentle"
+        }
+      ],
+      "nextNode": "wang_act3_d26_001",
+      "isCheckpoint": true,
+      "tags": ["recovery", "fall-prevention", "turning-point"]
+    },
+    {
+      "id": "wang_act3_d26_001",
+      "characterId": "wang_nainai",
+      "act": 3,
+      "day": 26,
+      "type": "choice",
+      "scene": "bathroom",
+      "illustrationId": "wang_home_safety",
+      "dialogues": [
+        {
+          "id": "dlg_054",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "出院回家，王奶奶主动说'浴室你看着改'。可一提到要在浴室装扶手、铺防滑垫、装夜灯，她又犹豫了：'装这些得花不少钱吧？我这摔一跤就金贵了？'顺便，得把出院后的用药也理一理。",
+          "layer": "essential",
+          "duration": 4000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_055",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "防跌倒改造是独居老人的'保命工程'，可又触到她节俭和自尊的痛点。怎么既落实安全，又让她心里舒坦？出院后用药也需复核，别让她又凭感觉自己调。",
+          "layer": "essential",
+          "emotion": "thoughtful"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "全部装好，钱你出，不用她操心",
+          "description": "全包代办",
+          "isCorrect": false,
+          "effects": [
+            { "type": "trust", "delta": -4, "reason": "被施舍感" },
+            { "type": "independence", "delta": -3, "reason": "决定权被夺" }
+          ],
+          "spiritPowerChange": 2,
+          "nextNode": "wang_act3_d26_002",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "东西装上了，可'钱你出、不用她操心'让节俭自尊的奶奶心里不是滋味——她会觉得自己成了'被人养着的累赘'。安全要落实，但方式得让她有参与感。",
+            "explanation": "防跌倒改造要尊重老人的参与权。让老人自己决定装哪些、参与比价，既落实安全又保住掌控感。全包代办看似高效，却会侵蚀老人的自主和尊严。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "列出最关键的几项（防滑垫、扶手、夜灯），讲清每项防什么，让她参与决定装哪些；同时复核出院用药",
+          "description": "清单+参与+用药复核",
+          "isCorrect": true,
+          "effects": [
+            { "type": "health", "delta": 8, "reason": "防跌倒+用药规范，双管齐下" },
+            { "type": "trust", "delta": 6, "reason": "被尊重地参与" },
+            { "type": "independence", "delta": 4, "reason": "自己拍板装哪些" }
+          ],
+          "spiritPowerChange": 12,
+          "nextNode": "wang_act3_d26_002",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "漂亮！把改造拆成'防什么'的清单，她一听就明白每项的价值，参与决定也不伤自尊。还顺手把出院用药复核了——防跌倒和用药管理，独居老人安全的两条生命线都抓住了。",
+            "explanation": "独居老人居家防跌倒三件套：1.浴室防滑垫+扶手（防滑倒，跌倒高发地）；2.夜灯/感应灯（防起夜摸黑跌倒）；3.去除地面杂物和门槛绊脚物。出院用药复核：核对药名、剂量、服药时间，确认是否需调整（如出院后血压目标值可能不同），切忌老人凭感觉自行增减。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "只铺块防滑垫就行，其他的没必要",
+          "description": "最低限度",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": -5, "reason": "防护不足，再跌倒风险仍高" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "wang_act3_d26_002",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "防滑垫只解决'滑'，解决不了'起夜摸黑'和'起身没借力'。她已经摔过一次，只铺块垫子远远不够。独居老人跌倒防护要成体系，不能图省事。",
+            "explanation": "防跌倒需系统性改造：跌倒诱因是多重的（湿滑、光线不足、起身乏力、地面障碍）。仅防滑垫只覆盖一个诱因。研究显示，多因素干预（防滑+照明+扶手+肌力训练）可使老人跌倒率下降30-40%。"
+          }
+        }
+      ],
+      "props": [
+        {
+          "propId": "home_safety_checklist",
+          "layer": "inspect",
+          "autoShow": true
+        }
+      ],
+      "tags": ["choice", "fall-prevention", "home-modification", "medication-review"],
+      "devNote": "防跌倒居家改造+出院用药复核教学"
+    },
+    {
+      "id": "wang_act3_d26_002",
+      "characterId": "wang_nainai",
+      "act": 3,
+      "day": 26,
+      "type": "dayEnd",
+      "scene": "bathroom",
+      "illustrationId": "wang_safe_bathroom",
+      "dialogues": [
+        {
+          "id": "dlg_056",
+          "speaker": "elder",
+          "speakerName": "王奶奶",
+          "text": "（扶着新装的扶手试试）这扶手……还挺踏实。夜灯一踩就亮，省得摸黑。行，这钱花得值。药我也核过了，按出院单子吃，不自己改。",
+          "layer": "essential",
+          "emotion": "relieved"
+        },
+        {
+          "id": "dlg_057",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "她亲手试了扶手，从'嫌花钱'变成了'花得值'。让老人参与改造决定，安全才真正落地。",
+          "layer": "emotional",
+          "emotion": "proud",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "wang_act3_d28_001",
+      "characterId": "wang_nainai",
+      "act": 3,
+      "day": 28,
+      "type": "dialogue",
+      "scene": "living_room",
+      "illustrationId": "wang_letter_son",
+      "dialogues": [
+        {
+          "id": "dlg_058",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "第二十八天傍晚，王奶奶坐在桌前，给远在北京的儿子写信。她写了又划，划了又写，最后只留下一句：'妈一切都好，你忙你的，注意身体。'可她的眼圈红了。这两次急症，她一个字都没告诉儿子。",
+          "layer": "essential",
+          "duration": 5000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_059",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "她怕儿子担心，把惊险藏进了'一切都好'四个字。这是独居母亲最深的温柔，也是最重的孤独。这一刻，有些话值得说出口。",
+          "layer": "essential",
+          "emotion": "gentle"
+        },
+        {
+          "id": "dlg_060",
+          "speaker": "elder",
+          "speakerName": "王奶奶",
+          "text": "（对着信纸发呆）……要是有个万一，他连最后一面都见不上。可我要是说了，他得急成什么样。",
+          "layer": "essential",
+          "emotion": "torn"
+        }
+      ],
+      "nextNode": "wang_act3_d29_001",
+      "isCheckpoint": true,
+      "tags": ["dialogue", "emotional", "family", "loneliness"],
+      "devNote": "情感高潮，'一切都好'背后的孤独，引导家庭沟通"
+    },
+    {
+      "id": "wang_act3_d29_001",
+      "characterId": "wang_nainai",
+      "act": 3,
+      "day": 29,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "wang_emergency_plan",
+      "dialogues": [
+        {
+          "id": "dlg_061",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "想了一夜，王奶奶决定听你的——和儿子坦白这两次急症，一起做一份家庭应急预案。视频接通，儿子那头先红了眼。王奶奶反倒安慰起他来。",
+          "layer": "essential",
+          "duration": 4000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_062",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "这是家庭照护的关键时刻：让远方的家人真正参与进来，而不是用'一切都好'把人挡在门外。应急预案该包含什么？",
+          "layer": "essential",
+          "emotion": "encouraging"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "只告诉儿子血压高，让他多打电话就行",
+          "description": "轻描淡写",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": -4, "reason": "关键信息隐瞒，急症时家人无法配合" }
+          ],
+          "spiritPowerChange": 2,
+          "nextNode": "wang_act3_d30_001",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "'血压高'三个字太轻了。两次急症、高血压危象、跌倒——这些才是儿子该知道的。瞒着报平安，下次急症时儿子什么都不知道，连急救决策都做不了。",
+            "explanation": "家庭照护的信息共享原则：重大健康事件（急症、住院、跌倒）必须如实告知主要家属。隐瞒会削弱家庭应急能力，让远方的家人在关键时刻无法配合。'报喜不报忧'是独居老人家庭照护的最大隐患。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "坦白两次急症，一起做应急卡：疾病用药、急症处置步骤、邻居和社区医生电话、儿子紧急联系方式",
+          "description": "完整坦白+应急卡",
+          "isCorrect": true,
+          "effects": [
+            { "type": "health", "delta": 8, "reason": "急救信息完备，争取黄金时间" },
+            { "type": "trust", "delta": 8, "reason": "全家共同参与" },
+            { "type": "mood", "delta": 6, "reason": "不再独自扛着，有安全感" }
+          ],
+          "spiritPowerChange": 15,
+          "nextNode": "wang_act3_d30_001",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "完美！坦白是放下'一个人扛'的重担，应急卡是给全家人一份安心。尤其'急症处置步骤'，让邻居或儿子在120到达前就能正确施救。'一切都好'的墙，终于开了扇窗。",
+            "explanation": "高血压独居老人家庭应急卡核心内容：1.诊断（高血压，分级）和用药（氨氯地平 剂量 服药时间）；2.高血压危象处置步骤（半卧位→拨120→报告血压和症状→勿自行加药）；3.跌倒处置（勿急于扶起→评估伤情→拨120）；4.紧急联系人（儿子/邻居/社区医生/家庭医生）；5.医保信息；6.家庭住址精确到门牌。大字版贴冰箱+随身携带。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "让儿子请假回来照顾她",
+          "description": "要求子女返乡",
+          "isCorrect": false,
+          "effects": [
+            { "type": "independence", "delta": -4, "reason": "被暗示'不能自理'" },
+            { "type": "mood", "delta": -3, "reason": "成为儿子的负担，愧疚" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "wang_act3_d30_001",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "王奶奶最怕'拖累儿子'。让她要求儿子请假回来，她会觉得自己成了负担，反而更不愿说出真实情况。应急的解法是'远程支持+社区兜底'，不是让生活停摆。",
+            "explanation": "远程照护的现实策略：子女在外地是常态。正确的做法是建立'远程知情+本地应急'网络：子女远程掌握关键信息、参与重大决策；本地由邻居、社区医生、智能设备兜底日常和急症。要求子女放弃工作返乡，既不现实也伤老人自尊。"
+          }
+        }
+      ],
+      "tags": ["choice", "family-care", "emergency-plan", "real-world-tool"],
+      "devNote": "家庭应急预案+信息共享教学，解锁真实世界工具"
+    },
+    {
+      "id": "wang_act3_d30_001",
+      "characterId": "wang_nainai",
+      "act": 3,
+      "day": 30,
+      "type": "narrative",
+      "scene": "living_room",
+      "illustrationId": "wang_day30_morning",
+      "dialogues": [
+        {
+          "id": "dlg_063",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "第三十天。清晨，王奶奶量了血压——132/84，稳定。她按时吃了药，扶着新装的扶手洗漱，茶几上贴着应急卡，冰箱里是低盐的菜。她给阳台的花浇了水，哼起了老伴爱听的老歌。",
+          "layer": "essential",
+          "duration": 5000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_064",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "三十天了。今天是我们和王奶奶的最后一天。她学会的不只是量血压、控盐、防跌倒——她学会了对'变老'这件事，少一点逞强，多一点坦然。",
+          "layer": "essential",
+          "emotion": "proud"
+        },
+        {
+          "id": "dlg_065",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "最后，根据这三十天的守护，王奶奶会有一个属于她的结局。让我们看看，你成为了怎样的守护者。",
+          "layer": "essential",
+          "emotion": "anticipating"
+        }
+      ],
+      "nextNode": "wang_act3_d30_002",
+      "isCheckpoint": true,
+      "tags": ["ending", "final-day"]
+    },
+    {
+      "id": "wang_act3_d30_002",
+      "characterId": "wang_nainai",
+      "act": 3,
+      "day": 30,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "wang_ending_choice",
+      "dialogues": [
+        {
+          "id": "dlg_066",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "最后的选择，关于你这三十天的守护。你觉得，对王奶奶来说，最重要的守护是什么？",
+          "layer": "essential",
+          "emotion": "curious"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "守住她的健康：把血压管好、急症处理好、跌倒防好",
+          "description": "健康守护导向",
+          "isCorrect": true,
+          "effects": [
+            { "type": "health", "delta": 5, "reason": "健康意识内化" },
+            { "type": "trust", "delta": 4, "reason": "成长被确认" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "wang_act3_d30_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "这是基础。血压管理、危象急救、跌倒防护——这些知识会成为你一辈子的工具。王奶奶的健康意识真正建立起来了。",
+            "explanation": "基础照护+用药管理+应急处理技能的知识沉淀。高血压用药依从性、低盐饮食、血压监测、危象识别、跌倒预防——这些是可迁移的硬技能，无论面对哪位老人都用得上。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "守住她的心：先懂她的孤独和要强，再谈她的病",
+          "description": "关系与共情导向",
+          "isCorrect": true,
+          "effects": [
+            { "type": "mood", "delta": 6, "reason": "共情内化" },
+            { "type": "trust", "delta": 6, "reason": "深刻领悟" }
+          ],
+          "spiritPowerChange": 12,
+          "nextNode": "wang_act3_d30_004",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "这是王奶奶线最核心的一课。她的高血压问题背后，是独居的孤独和要强的自尊。看见血压背后那个人，才是真正的守护。",
+            "explanation": "心理支持技能的精髓：照护的对象是'人'不是'病'。王奶奶的高血压波动背后是情绪波动和孤独积累。'气大伤身'不是空话——情绪激动直接诱发高血压危象。先治心，再治身，这是王奶奶线的设计哲学。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "守住她的尊严和温情：在身边但不过度，让她既能自主又有人陪",
+          "description": "尊严与温情导向",
+          "isCorrect": true,
+          "effects": [
+            { "type": "independence", "delta": 5, "reason": "自主权被守护" },
+            { "type": "trust", "delta": 5, "reason": "分寸感内化" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "wang_act3_d30_005",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "对要强又节俭的王奶奶，这条尤其珍贵。你学会了在她需要时托一把，在她能做时退一步；花钱讲成'划算的账'，关心藏进'顺便'里。这是最难的分寸。",
+            "explanation": "资源协调与基础照护的核心原则：辅助而非替代，尊重而非接管。对自尊心强的独居老人，'退一步'比'进一步'更难也更必要。让她自己取药、自己决定装哪些扶手、自己规划广场舞时间——每一次'让她自己来'都是对她尊严的守护。"
+          }
+        }
+      ],
+      "tags": ["choice", "ending"],
+      "devNote": "最终选择，导向不同结局评价"
+    },
+    {
+      "id": "wang_act3_d30_003",
+      "characterId": "wang_nainai",
+      "act": 3,
+      "day": 30,
+      "type": "ending",
+      "scene": "living_room",
+      "illustrationId": "wang_ending_growth",
+      "dialogues": [
+        {
+          "id": "dlg_067",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "三十天结束。王奶奶坐在社区活动室，教一群老姐妹用血压计、念她编的'控盐顺口溜'。她还是那个要强的王老师，只是现在，她把'逞强'换成了'真强'——该吃药吃药，该量血压量血压，该求助就求助。",
+          "layer": "essential",
+          "duration": 5000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_068",
+          "speaker": "elder",
+          "speakerName": "王奶奶",
+          "text": "（拍着血压计）这玩意儿，我用得比你们都溜。气大伤身我信了，可我这嘴，还得练练。",
+          "layer": "essential",
+          "emotion": "content"
+        },
+        {
+          "id": "dlg_069",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "结局：成长之路。你还在学习，但你愿意学习，这本身就是守护。王奶奶的健康意识建立了，可她的孤独和自尊，还需要更多时间慢慢化解。",
+          "layer": "essential",
+          "emotion": "proud"
+        },
+        {
+          "id": "dlg_070",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "（精灵光芒稳定而柔和）记住这三十天。下一个需要守护的人，也许就在不远处。带上你学到的一切，继续走吧。",
+          "layer": "emotional",
+          "emotion": "warm",
+          "typingSpeed": 40
+        }
+      ],
+      "transition": {
+        "exit": "fade-out",
+        "illustrationTransition": "watercolor",
+        "duration": 1500
+      },
+      "tags": ["ending", "growth-path"],
+      "devNote": "成长之路结局——健康意识建立，但孤独与自尊仍需时间"
+    },
+    {
+      "id": "wang_act3_d30_004",
+      "characterId": "wang_nainai",
+      "act": 3,
+      "day": 30,
+      "type": "ending",
+      "scene": "living_room",
+      "illustrationId": "wang_ending_understanding",
+      "dialogues": [
+        {
+          "id": "dlg_071",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "三十天结束。王奶奶把那封没寄出的信折好，放进抽屉。然后她拿起手机，给儿子发了一条长长的语音，第一次说出了'妈有时候，也觉得挺孤单的'。儿子那头沉默了几秒，回了一句：'妈，我下个月请假回去看你。'",
+          "layer": "essential",
+          "duration": 5000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_072",
+          "speaker": "elder",
+          "speakerName": "王奶奶",
+          "text": "（放下手机，长舒一口气）跟你说实话，把'孤单'说出口，比吃降压药还管用。",
+          "layer": "essential",
+          "emotion": "moved"
+        },
+        {
+          "id": "dlg_073",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "结局：深层理解。有些事比血压数字更重要，比如让她觉得自己还被人惦记、还值得被认真对待。你看见的不只是她的高血压，是她这个人。",
+          "layer": "essential",
+          "emotion": "moved"
+        },
+        {
+          "id": "dlg_074",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "（精灵光芒温暖明亮）她终于把'一切都好'换成了真话。让她敢说真话的那个人，就是你。这就是守护的意义。",
+          "layer": "emotional",
+          "emotion": "warm",
+          "typingSpeed": 40
+        }
+      ],
+      "transition": {
+        "exit": "fade-out",
+        "illustrationTransition": "watercolor",
+        "duration": 1500
+      },
+      "tags": ["ending", "deep-understanding"],
+      "devNote": "深层理解结局——心情值高、信任值高时触发"
+    },
+    {
+      "id": "wang_act3_d30_005",
+      "characterId": "wang_nainai",
+      "act": 3,
+      "day": 30,
+      "type": "ending",
+      "scene": "living_room",
+      "illustrationId": "wang_ending_warm",
+      "dialogues": [
+        {
+          "id": "dlg_075",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "三十天结束。王奶奶的家里，一切各就各位：茶几上的血压计、冰箱上的应急卡、浴室的扶手和夜灯、低盐却鲜香的饭菜。儿子每周视频，邻居张老伴成了她的'血压搭子'，每天一起量血压、跳半小时广场舞。",
+          "layer": "essential",
+          "duration": 5000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_076",
+          "speaker": "elder",
+          "speakerName": "王奶奶",
+          "text": "（哼着老歌浇花）这日子啊，比以前忙活，也比以前暖和。有人管着，又不嫌我啰嗦，挺好。",
+          "layer": "essential",
+          "emotion": "happy"
+        },
+        {
+          "id": "dlg_077",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "结局：温暖守护。你找到了最好的照护方式——在身边，但不过度。王奶奶的健康、心情、独立、信任，四项俱佳。她既保住了要强的尊严，又学会了让人走近。",
+          "layer": "essential",
+          "emotion": "proud"
+        },
+        {
+          "id": "dlg_078",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "（精灵光芒温暖而明亮）你成为了合格的守护者。记住这份温度，带给下一个需要守护的人。",
+          "layer": "emotional",
+          "emotion": "warm",
+          "typingSpeed": 40
+        }
+      ],
+      "transition": {
+        "exit": "fade-out",
+        "illustrationTransition": "watercolor",
+        "duration": 1500
+      },
+      "tags": ["ending", "warm-guardian"],
+      "devNote": "温暖守护结局——四项属性全高时触发（需全程高质量照护）"
+    }
+  ]
+}

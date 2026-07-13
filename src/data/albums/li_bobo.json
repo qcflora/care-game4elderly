@@ -1,0 +1,194 @@
+[
+  {
+    "id": "album_li_retirement",
+    "characterId": "li_bobo",
+    "title": "退休生活",
+    "image": "/images/placeholder/album.svg",
+    "caption": "李伯伯退休后在书房里看书、上网，充实而忙碌",
+    "memory": "李伯伯退休前是中学教师，教了一辈子物理。退休后他也没闲着，每天在书房里看书、上网、研究新科技，比上班时还忙。他总说“人老了脑子不能老”，智能手机、平板电脑玩得比年轻人还溜。这张照片是他退休后第三个月拍的，书房里堆满了书，桌上摆着笔记本电脑和一台智能音箱。他戴着老花镜，正在研究一个健康管理APP，神情专注得像个做实验的学生。",
+    "unlockDay": 1,
+    "unlockCondition": "day >= 1",
+    "isUnlocked": false,
+    "scene": "家中书房",
+    "characters": [
+      "li_bobo"
+    ],
+    "relatedDiaryId": "diary_li_day1"
+  },
+  {
+    "id": "album_li_blood_test",
+    "characterId": "li_bobo",
+    "title": "血糖检测",
+    "image": "/images/placeholder/album.svg",
+    "caption": "第一次学习使用血糖仪，表情认真而专注",
+    "memory": "李伯伯被诊断为糖尿病早期后，第一件事不是沮丧，而是上网查了一整晚的资料。第二天他拿着小本子，上面密密麻麻记满了糖尿病的注意事项和饮食禁忌。照护者教他使用血糖仪时，他学得特别快，采血、试纸、读数，一遍就记住了。他还自己做了个Excel表格，准备记录每天的血糖数据。他老伴在一旁笑着说：“教了一辈子书，现在轮到别人教他了。”李伯伯推了推眼镜：“知己知彼，百战不殆。”",
+    "unlockDay": 2,
+    "unlockCondition": "day >= 2",
+    "isUnlocked": false,
+    "scene": "家中客厅",
+    "characters": [
+      "li_bobo"
+    ],
+    "relatedDiaryId": "diary_li_day2"
+  },
+  {
+    "id": "album_li_diet_plan",
+    "characterId": "li_bobo",
+    "title": "饮食计划",
+    "image": "/images/placeholder/album.svg",
+    "caption": "和老伴一起制定科学饮食计划，厨房里贴满便签",
+    "memory": "李伯伯发挥了他当老师的特长，把饮食管理变成了一门“科学课”。他买了电子秤，每次做饭前都要精确称量食材的重量，计算碳水化合物和糖分的含量。厨房的冰箱上贴满了便签，写着“早餐：全麦面包两片+无糖豆浆”“午餐：杂粮饭一小碗+清炒蔬菜”“晚餐：白肉二两+绿叶菜”。他还给老伴布置了“作业”——学习糖尿病食谱。老伴哭笑不得：“退休了还得上课。”",
+    "unlockDay": 4,
+    "unlockCondition": "day >= 4",
+    "isUnlocked": false,
+    "scene": "家中厨房",
+    "characters": [
+      "li_bobo"
+    ],
+    "relatedDiaryId": "diary_li_day4"
+  },
+  {
+    "id": "album_li_smart_watch",
+    "characterId": "li_bobo",
+    "title": "智能手表",
+    "image": "/images/placeholder/album.svg",
+    "caption": "戴上智能手表，实时监测心率、步数和血氧",
+    "memory": "李伯伯在确诊后立刻买了一款智能手表，用来监测心率、步数和血氧饱和度。他研究了一整天的说明书，把各项功能都摸透了，还自己设置了久坐提醒和心率异常报警。他得意地跟照护者展示：“你看，这个手表还能测睡眠质量，前天我深睡眠只有一小时，昨天我睡前喝了杯热牛奶，深睡眠就到了一小时四十分钟。”他用数据说话的方式，让照护者又佩服又好笑。",
+    "unlockDay": 6,
+    "unlockCondition": "day >= 6",
+    "isUnlocked": false,
+    "scene": "家中",
+    "characters": [
+      "li_bobo"
+    ],
+    "relatedDiaryId": "diary_li_day6"
+  },
+  {
+    "id": "album_li_act1_complete",
+    "characterId": "li_bobo",
+    "title": "第一章：科学控糖",
+    "image": "/images/placeholder/album.svg",
+    "caption": "完成第一章，李伯伯掌握了糖尿病管理的基础知识",
+    "memory": "第一章结束时，李伯伯已经从一个“糖尿病新手”变成了半个专家。他不仅能熟练使用血糖仪和智能设备，还制定了一套完整的饮食和运动计划。他用物理老师的思维方式，把血糖管理理解为一个“输入-输出”的系统工程——控制碳水化合物的摄入，增加运动消耗，保持规律作息。他甚至制作了一份PPT，准备在社区健康讲座上分享自己的经验。这个要强的老教师，用自己的方式迎战疾病。",
+    "unlockDay": 7,
+    "unlockCondition": "flag.li_act1_complete == true",
+    "isUnlocked": false,
+    "scene": "书房",
+    "characters": [
+      "li_bobo"
+    ],
+    "relatedDiaryId": "diary_li_act1"
+  },
+  {
+    "id": "album_li_cooking",
+    "characterId": "li_bobo",
+    "title": "健康烹饪",
+    "image": "/images/placeholder/album.svg",
+    "caption": "和老伴一起学习制作低糖健康餐，厨房里充满欢声笑语",
+    "memory": "李伯伯和老伴一起报名参加了社区医院的糖尿病健康烹饪课。课堂上，他认真记笔记，把每道菜的配料和步骤都写得清清楚楚。回到家，老两口在厨房里忙活了一下午，做了几道低糖健康菜：燕麦蒸排骨、苦瓜炒蛋、杂粮饭团。虽然卖相一般，但味道还不错。李伯伯把每道菜的碳水化合物含量都算了出来，贴上标签。老伴说：“认识你四十年，第一次见你下厨。”他笑着说：“活到老学到老嘛。”",
+    "unlockDay": 9,
+    "unlockCondition": "day >= 9",
+    "isUnlocked": false,
+    "scene": "家中厨房",
+    "characters": [
+      "li_bobo"
+    ],
+    "relatedDiaryId": "diary_li_day9"
+  },
+  {
+    "id": "album_li_walking",
+    "characterId": "li_bobo",
+    "title": "健步走",
+    "image": "/images/placeholder/album.svg",
+    "caption": "每天晚饭后健步走一小时，手表记录每一步",
+    "memory": "李伯伯给自己定了个规矩：每天晚饭后健步走一小时，步数目标八千步。他专门在手机上下载了一款健步走APP，每晚准时出门，沿着小区周边的步道走。他走路时手臂摆动的幅度很大，步伐稳健，看起来比实际年龄年轻十岁。他还会在微信运动里跟老朋友们比拼步数，每天都要争个前十名。有一次下雨天，他撑着伞在小区地下车库走了一个小时，就为了不中断“连续打卡”记录。",
+    "unlockDay": 12,
+    "unlockCondition": "day >= 12",
+    "isUnlocked": false,
+    "scene": "小区步道",
+    "characters": [
+      "li_bobo"
+    ],
+    "relatedDiaryId": "diary_li_day12"
+  },
+  {
+    "id": "album_li_son_call",
+    "characterId": "li_bobo",
+    "title": "儿子的关心",
+    "image": "/images/placeholder/album.svg",
+    "caption": "独子从外地打来视频电话，关心父亲的健康状况",
+    "memory": "李伯伯的独子在深圳工作，一年也回不了几次家。得知父亲确诊糖尿病后，儿子每天都会打视频电话来问情况。李伯伯每次都把手机举到血糖仪前，让儿子看读数：“你看，今天空腹血糖5.6，比昨天还低了0.2。”他还把自己的饮食记录和运动数据做成图表发给儿子，像是在交一份“健康作业”。挂了电话后，他跟老伴说：“这小子，比他妈还啰嗦。”但语气里满是得意和温暖。",
+    "unlockDay": 15,
+    "unlockCondition": "day >= 15",
+    "isUnlocked": false,
+    "scene": "家中客厅",
+    "characters": [
+      "li_bobo"
+    ],
+    "relatedDiaryId": "diary_li_day15"
+  },
+  {
+    "id": "album_li_community",
+    "characterId": "li_bobo",
+    "title": "社区讲座",
+    "image": "/images/placeholder/album.svg",
+    "caption": "在社区健康讲座上分享控糖经验，台下掌声雷动",
+    "memory": "李伯伯受社区邀请，在健康讲座上分享自己的控糖经验。他提前一周就开始准备讲稿，还做了PPT，内容从糖尿病的病理机制到日常饮食管理，条理清晰、深入浅出。讲座那天来了三十多位老人，李伯伯站在讲台上，仿佛又回到了当年的教室。他讲得生动有趣，台下不时爆发出笑声和掌声。结束后，好几位老人围着他问问题，他一一耐心解答。那天他回家后特别高兴，跟老伴说：“我这辈子就会教书。”",
+    "unlockDay": 18,
+    "unlockCondition": "day >= 18",
+    "isUnlocked": false,
+    "scene": "社区活动中心",
+    "characters": [
+      "li_bobo"
+    ],
+    "relatedDiaryId": "diary_li_day18"
+  },
+  {
+    "id": "album_li_act2_complete",
+    "characterId": "li_bobo",
+    "title": "第二章：血糖稳定",
+    "image": "/images/placeholder/album.svg",
+    "caption": "完成第二章，李伯伯的血糖指标趋于稳定",
+    "memory": "经过二十天的科学管理，李伯伯的空腹血糖和餐后血糖都控制在了理想范围内。他所有的努力——精确的饮食控制、每天的运动打卡、规律的生活方式——都得到了回报。医生说他目前的情况不需要药物干预，继续保持生活方式管理即可。李伯伯把近一个月的血糖数据做成了曲线图，清楚地看到趋势一天天好转。他打印了一份，贴在书房墙上，下面写了一行字：“有志者，事竟成。”",
+    "unlockDay": 20,
+    "unlockCondition": "flag.li_act2_complete == true",
+    "isUnlocked": false,
+    "scene": "书房",
+    "characters": [
+      "li_bobo"
+    ],
+    "relatedDiaryId": "diary_li_act2"
+  },
+  {
+    "id": "album_li_wechat",
+    "characterId": "li_bobo",
+    "title": "微信分享",
+    "image": "/images/placeholder/album.svg",
+    "caption": "在微信群里分享低糖食谱，成了群里的'健康顾问'",
+    "memory": "李伯伯建了一个“老友健康交流群”，每天在群里分享自己的控糖心得和低糖食谱。他拍摄烹饪过程的视频，配上详细的文字说明，发到群里供大家参考。群里的人越来越多，从最初的几个老同事扩展到几十个社区邻居。有人问他问题，他总是不厌其烦地解答，甚至会专门打电话过去详细说明。他老伴说他“退休了比上班还忙”，他笑着回答：“教书育人一辈子，现在换个方式继续发光发热。”",
+    "unlockDay": 25,
+    "unlockCondition": "day >= 25",
+    "isUnlocked": false,
+    "scene": "家中书房",
+    "characters": [
+      "li_bobo"
+    ],
+    "relatedDiaryId": "diary_li_day25"
+  },
+  {
+    "id": "album_li_ending",
+    "characterId": "li_bobo",
+    "title": "健康生活新篇章",
+    "image": "/images/placeholder/album.svg",
+    "caption": "照护旅程结束，李伯伯的健康管理已成为生活习惯",
+    "memory": "照护旅程结束时，李伯伯的健康管理已经完全融入了日常生活。他不再需要别人提醒，就能自然地完成饮食控制、运动锻炼和血糖监测。他的体重减轻了五公斤，血糖指标稳定在正常范围，整个人的精神状态比确诊前还要好。他送给照护者一本自己编写的《糖尿病健康管理手册》，里面是他这一个月来的经验总结，从饮食食谱到运动计划，从血糖记录表到常见问题解答，事无巨细。",
+    "unlockDay": 30,
+    "unlockCondition": "flag.li_ending == true",
+    "isUnlocked": false,
+    "scene": "家中",
+    "characters": [
+      "li_bobo"
+    ],
+    "relatedDiaryId": "diary_li_ending"
+  }
+]

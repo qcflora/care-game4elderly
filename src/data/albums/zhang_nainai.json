@@ -1,0 +1,210 @@
+[
+  {
+    "id": "album_zhang_notebook",
+    "characterId": "zhang_nainai",
+    "title": "记事本",
+    "image": "/images/placeholder/album.svg",
+    "caption": "张奶奶随身携带的记事本，记满了每天的注意事项",
+    "memory": "张奶奶有一个用了很多年的小记事本，封皮已经磨得发白，但里面的字迹工工整整。上面记着每天该吃几种药、什么时间吃、量是多少，偶尔还会记一些心里话。她跟照护者说：“年纪大了，记性不好，不记下来不放心。”这个小小的记事本，是她对抗疾病最忠实的伙伴。翻开每一页，都能看到她认真生活的痕迹——偶尔有涂改的痕迹，但那是因为医生调整了药量，她第一时间就做了更新。",
+    "unlockDay": 1,
+    "unlockCondition": "day >= 1",
+    "isUnlocked": false,
+    "scene": "家中",
+    "characters": [
+      "zhang_nainai"
+    ],
+    "relatedDiaryId": "diary_zhang_day1"
+  },
+  {
+    "id": "album_zhang_bp_table",
+    "characterId": "zhang_nainai",
+    "title": "血压记录表",
+    "image": "/images/placeholder/album.svg",
+    "caption": "张奶奶的血压记录表，密密麻麻的数字记录着每一天的坚持",
+    "memory": "张奶奶虽然有心脏病，但对血压管理一直不太上心。照护者耐心教她如何正确测量血压，并帮她制作了一张血压记录表，贴在冰箱门上。每天早晚各量一次，记录下收缩压、舒张压和心率。刚开始她总是忘记，后来她在手机上设了闹钟，还让儿媳妇帮忙提醒。一周后，记录表上已经填满了数字。她看着那些数据，像是在看自己的孩子一样认真：“这个高了点是昨天没睡好，这个低了点是早上空腹量的。",
+    "unlockDay": 2,
+    "unlockCondition": "day >= 2",
+    "isUnlocked": false,
+    "scene": "家中厨房",
+    "characters": [
+      "zhang_nainai"
+    ],
+    "relatedDiaryId": "diary_zhang_day2"
+  },
+  {
+    "id": "album_zhang_first_walk",
+    "characterId": "zhang_nainai",
+    "title": "第一次散步",
+    "image": "/images/placeholder/album.svg",
+    "caption": "在照护者陪伴下第一次出门散步，阳光洒在脸上",
+    "memory": "张奶奶因为骨质疏松和心脏病，已经很久没有好好出门走走了。她总怕自己走几步就喘不上气，也怕不小心摔着。在照护者的鼓励下，她终于鼓起勇气出门散步。照护者陪着她从家门口走到小区花园，不过两百米的路，她停下歇了三次。但她没有放弃，每一次喘匀了气，就继续往前走。到了花园里，她坐在长椅上，看着周围的花草树木，深深吸了一口气：“还是外面的空气好啊。”那一刻，她脸上的笑容，比阳光还要温暖。",
+    "unlockDay": 3,
+    "unlockCondition": "day >= 3",
+    "isUnlocked": false,
+    "scene": "小区花园",
+    "characters": [
+      "zhang_nainai"
+    ],
+    "relatedDiaryId": "diary_zhang_day3"
+  },
+  {
+    "id": "album_zhang_angina_handled",
+    "characterId": "zhang_nainai",
+    "title": "心绞痛应对",
+    "image": "/images/placeholder/album.svg",
+    "caption": "突发心绞痛时正确应对，及时服药并休息",
+    "memory": "那天下午，张奶奶在厨房择菜时突然感到胸口一阵闷痛，像有块石头压着。她第一时间就意识到是心绞痛犯了，赶紧放下手中的菜，慢慢走到沙发边坐下，从口袋里掏出随身携带的硝酸甘油，含了一片在舌下。然后她靠在沙发上，闭着眼睛慢慢呼吸。五分钟后，疼痛渐渐缓解了。她按铃叫来照护者，平静地讲述了刚才发生的事情。照护者检查了她的心率和血压，确认已经稳定。",
+    "unlockDay": 5,
+    "unlockCondition": "day >= 5",
+    "isUnlocked": false,
+    "scene": "家中客厅",
+    "characters": [
+      "zhang_nainai"
+    ],
+    "relatedDiaryId": "diary_zhang_day5"
+  },
+  {
+    "id": "album_zhang_act1_complete",
+    "characterId": "zhang_nainai",
+    "title": "第一章：认识与预防",
+    "image": "/images/placeholder/album.svg",
+    "caption": "完成第一章，张奶奶学会了心脏病的日常管理",
+    "memory": "第一章结束时，张奶奶已经掌握了心脏病和骨质疏松的基础知识。她学会了识别心绞痛的前兆信号，知道在发作时该如何正确应对，也明白了骨质疏松患者应该注意哪些安全事项。她的记事本上多了几页新的内容——急救药物的使用方法、每天需要补充的钙和维生素D的剂量、适合骨质疏松患者的运动方式。她认真地跟照护者说：“我这辈子最怕给人添麻烦，学会了这些，就不怕给儿女添负担了。”",
+    "unlockDay": 7,
+    "unlockCondition": "flag.zhang_act1_complete == true",
+    "isUnlocked": false,
+    "scene": "家中",
+    "characters": [
+      "zhang_nainai"
+    ],
+    "relatedDiaryId": "diary_zhang_act1"
+  },
+  {
+    "id": "album_zhang_safe_home",
+    "characterId": "zhang_nainai",
+    "title": "安全居家",
+    "image": "/images/placeholder/album.svg",
+    "caption": "家里进行了适老化改造，安装了扶手和防滑垫",
+    "memory": "张奶奶有骨质疏松，最怕的就是摔倒。照护者帮她检查了家里的安全隐患，在卫生间和走廊安装了扶手，浴室门口铺了防滑垫，床头的台灯换成了更亮的，地上容易绊脚的电线都用线槽固定好了。张奶奶看着这些改造，眼眶有些湿润：“我一个老太婆，让你们费这么多心。”她儿子知道后，特意买了拐杖和防滑拖鞋送回来。张奶奶虽然嘴上说“花这些钱干啥”，但每次扶着新装的扶手走路时，嘴角都带着安心的笑。",
+    "unlockDay": 8,
+    "unlockCondition": "day >= 8",
+    "isUnlocked": false,
+    "scene": "家中",
+    "characters": [
+      "zhang_nainai"
+    ],
+    "relatedDiaryId": "diary_zhang_day8"
+  },
+  {
+    "id": "album_zhang_pain_managed",
+    "characterId": "zhang_nainai",
+    "title": "疼痛管理",
+    "image": "/images/placeholder/album.svg",
+    "caption": "学会用热敷和轻柔按摩缓解骨质疏松引起的疼痛",
+    "memory": "骨质疏松引起的腰背疼痛一直困扰着张奶奶，她以前总是忍着，实在受不了了才吃止痛药。照护者教她使用热敷和轻柔按摩来缓解疼痛，还教她一些温和的拉伸动作。每天晚上睡前，她会让儿媳妇帮忙用热毛巾敷一敷后背，然后涂上活络油轻轻按摩。她发现这些方法虽然不能完全消除疼痛，但确实能让身体舒服很多。她跟照护者说：“以前只知道忍，现在才知道还有这么多办法。",
+    "unlockDay": 10,
+    "unlockCondition": "day >= 10",
+    "isUnlocked": false,
+    "scene": "家中卧室",
+    "characters": [
+      "zhang_nainai"
+    ],
+    "relatedDiaryId": "diary_zhang_day10"
+  },
+  {
+    "id": "album_zhang_cane_accept",
+    "characterId": "zhang_nainai",
+    "title": "接受拐杖",
+    "image": "/images/placeholder/album.svg",
+    "caption": "终于接受了使用拐杖，不再害怕被人笑话",
+    "memory": "张奶奶骨质疏松比较严重，医生建议她出门时使用拐杖以防摔倒。但她一直很抗拒，觉得“拄着拐杖太难看了，跟个废人似的”。照护者没有强迫她，而是给她看了一款漂亮的手杖——木质手柄，暗红色的杖身，上面还刻着花纹。张奶奶看到后眼睛亮了一下，拿在手里试了试。在照护者的鼓励下，她终于同意出门时带着它。第一次拄着拐杖去小区花园时，她有些紧张，但走了一段路后发现确实稳当了很多。",
+    "unlockDay": 12,
+    "unlockCondition": "day >= 12",
+    "isUnlocked": false,
+    "scene": "小区花园",
+    "characters": [
+      "zhang_nainai"
+    ],
+    "relatedDiaryId": "diary_zhang_day12"
+  },
+  {
+    "id": "album_zhang_fall_handled",
+    "characterId": "zhang_nainai",
+    "title": "跌倒处理",
+    "image": "/images/placeholder/album.svg",
+    "caption": "不慎跌倒后正确处理，没有造成严重后果",
+    "memory": "那天张奶奶在卫生间门口不小心滑了一下，摔坐在地上。她立刻想起照护者教她的跌倒急救方法——不要急着站起来，先检查四肢能不能动，确认没有骨折后再慢慢爬起来。她冷静地坐在地上活动了一下手脚，感觉没有剧烈疼痛，才扶着墙慢慢站起来，然后坐到沙发上休息。她打电话叫来照护者，量了血压和心率，确认没有大碍。这次经历虽然让人后怕，但张奶奶的冷静处理避免了二次伤害。",
+    "unlockDay": 14,
+    "unlockCondition": "day >= 14",
+    "isUnlocked": false,
+    "scene": "家中卫生间",
+    "characters": [
+      "zhang_nainai"
+    ],
+    "relatedDiaryId": "diary_zhang_day14"
+  },
+  {
+    "id": "album_zhang_pain_shared",
+    "characterId": "zhang_nainai",
+    "title": "倾诉与分享",
+    "image": "/images/placeholder/album.svg",
+    "caption": "第一次主动向家人倾诉自己的疼痛和担忧",
+    "memory": "张奶奶性格温和隐忍，一辈子习惯了什么事都自己扛着，从不跟家人说自己的不舒服。那天晚上，她终于鼓起勇气，跟儿子儿媳说出了自己的担忧——怕心脏病越来越严重，怕骨质疏松导致骨折，怕自己成为家里的负担。说着说着，她忍不住流下了眼泪。儿子握着她的手说：“妈，您养我们小，我们养您老，这不是应该的吗？”儿媳也在一旁安慰她。那天晚上，一家人聊了很久，张奶奶第一次感受到，说出自己的痛苦，并不会成为别人的负担，……",
+    "unlockDay": 16,
+    "unlockCondition": "day >= 16",
+    "isUnlocked": false,
+    "scene": "家中客厅",
+    "characters": [
+      "zhang_nainai"
+    ],
+    "relatedDiaryId": "diary_zhang_day16"
+  },
+  {
+    "id": "album_zhang_reminisce",
+    "characterId": "zhang_nainai",
+    "title": "旧时光",
+    "image": "/images/placeholder/album.svg",
+    "caption": "翻看老照片，回忆起年轻时的美好时光",
+    "memory": "一个阳光温暖的午后，张奶奶拿出了一本泛黄的老相册，一页页翻看。照片里有她年轻时扎着两条辫子的模样，有她和丈夫的结婚照，有儿子小时候的光屁股照。她指着每一张照片，都能讲出一个故事。翻到一张全家福时，她沉默了很久，手指轻轻抚摸着照片上丈夫的脸庞。“老头子走得太早了，”她轻声说，“要是他还在，看到我现在有儿子儿媳这么孝顺，不知道得多高兴。”阳光透过窗户洒在她花白的头发上，回忆里有甜蜜，也有淡淡的忧伤。",
+    "unlockDay": 18,
+    "unlockCondition": "day >= 18",
+    "isUnlocked": false,
+    "scene": "家中客厅",
+    "characters": [
+      "zhang_nainai"
+    ],
+    "relatedDiaryId": "diary_zhang_day18"
+  },
+  {
+    "id": "album_zhang_act2_complete",
+    "characterId": "zhang_nainai",
+    "title": "第二章：从容面对",
+    "image": "/images/placeholder/album.svg",
+    "caption": "完成第二章，张奶奶学会了与疾病共处",
+    "memory": "经过二十天的照护，张奶奶的变化是显而易见的。她不再整天把自己关在家里，而是每天都会出门走一走，跟邻居们聊聊天。她学会了使用拐杖，家里的安全改造也让她不再那么害怕摔倒。更重要的是，她开始愿意跟家人分享自己的感受，不再把所有痛苦都藏在心里。她的记事本里多了一行字：“日子要一天天过，病要一天天养，有家人陪着，什么都不怕。”这句话，是她用一辈子的隐忍和这二十天的成长换来的领悟。",
+    "unlockDay": 20,
+    "unlockCondition": "flag.zhang_act2_complete == true",
+    "isUnlocked": false,
+    "scene": "家中",
+    "characters": [
+      "zhang_nainai"
+    ],
+    "relatedDiaryId": "diary_zhang_act2"
+  },
+  {
+    "id": "album_zhang_ending",
+    "characterId": "zhang_nainai",
+    "title": "温暖的家",
+    "image": "/images/placeholder/album.svg",
+    "caption": "照护旅程结束，张奶奶和家人围坐在一起，笑容满面",
+    "memory": "最后一天，张奶奶特意让儿媳妇做了一桌子菜，请照护者在家吃饭。她穿上了最喜欢的碎花衬衫，头发梳得整整齐齐，精神很好。饭桌上，她端起一杯茶，以茶代酒，敬了照护者一杯：“谢谢你，让我学会了怎么好好活着。”她的儿子和儿媳也在一旁不住地道谢。张奶奶拿出那个记事本，翻到最后一页，上面写着：“这一个月，我学会了很多——学会了吃药、学会了走路、学会了说不怕、学会了说疼、学会了说谢谢。",
+    "unlockDay": 30,
+    "unlockCondition": "flag.zhang_ending == true",
+    "isUnlocked": false,
+    "scene": "家中餐厅",
+    "characters": [
+      "zhang_nainai"
+    ],
+    "relatedDiaryId": "diary_zhang_ending"
+  }
+]

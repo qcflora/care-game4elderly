@@ -1,0 +1,1374 @@
+{
+  "characterId": "zhou_yeye",
+  "act": 3,
+  "title": "第三幕：守护与回望",
+  "theme": "应急处理、康复评估与最终的接纳",
+  "startDay": 22,
+  "endDay": 30,
+  "nodes": [
+    {
+      "id": "zhou_act3_d22_001",
+      "characterId": "zhou_yeye",
+      "act": 3,
+      "day": 22,
+      "type": "narrative",
+      "scene": "living_room",
+      "illustrationId": "zhou_tia_sign",
+      "dialogues": [
+        {
+          "id": "dlg_001",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "下午三点，周爷爷坐在沙发上看电视。突然，他右手一阵发麻，茶杯没拿稳掉在了地上。他张嘴想叫人，但舌头好像打了结，发出的声音含糊不清。这一刻持续了大约二十秒——然后，一切恢复了正常。他活动活动右手，又能动了。",
+          "layer": "essential",
+          "duration": 5000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_002",
+          "speaker": "elder",
+          "speakerName": "周爷爷",
+          "text": "怪了……刚才手突然没劲儿，说话也说不利索。现在又好了。可能是坐久了吧。",
+          "layer": "essential",
+          "emotion": "confused",
+          "typingSpeed": 40
+        },
+        {
+          "id": "dlg_003",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "警报！精灵感应到异常信号——周爷爷刚才经历的是TIA，一过性脑缺血发作。这是二次脑梗最强的预警信号！症状：突发肢体麻木、言语含糊，短时间内自行恢复。TIA不是'坐久了'，是脑血管在报警——48小时内脑梗风险极高！",
+          "layer": "essential",
+          "emotion": "alarmed"
+        },
+        {
+          "id": "dlg_004",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "TIA的典型症状有五个'突然'：突然一侧肢体麻木无力、突然言语含糊或听不懂话、突然一侧视力模糊、突然头晕行走不稳、突然剧烈头痛。周爷爷占了前两个。TIA虽短，但它是身体给的最后警告——绝不能'等等看'。你怎么处理？",
+          "layer": "essential",
+          "emotion": "serious",
+          "typingSpeed": 35
+        }
+      ],
+      "nextNode": "zhou_act3_d22_002",
+      "isCheckpoint": true,
+      "tags": ["tia", "emergency", "stroke-warning"],
+      "devNote": "Day 22 TIA风险征兆，教学TIA五个突然症状识别"
+    },
+    {
+      "id": "zhou_act3_d22_002",
+      "characterId": "zhou_yeye",
+      "act": 3,
+      "day": 22,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "zhou_tia_choice",
+      "dialogues": [
+        {
+          "id": "dlg_005",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "周爷爷觉得'现在又好了'，想等一等看看。但TIA的黄金处理窗口很短——你必须在症状识别后立即行动。你怎么选？",
+          "layer": "essential",
+          "emotion": "serious"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "可能是坐久了，让他活动活动就好",
+          "description": "忽视TIA预警信号",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": -8, "reason": "忽视TIA，二次脑梗风险大增" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhou_act3_d22_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "你让周爷爷活动活动。他确实恢复了，但脑血管的问题没有解决。TIA是脑梗的前奏曲——忽视它，就是在等真正的脑梗到来。统计显示，TIA后48小时内发生脑梗的概率高达10%。'现在好了'不等于'安全了'，TIA的恢复是暂时的，风险是持续的。",
+            "explanation": "忽视TIA是最危险的错误。TIA（一过性脑缺血发作）被称为'小中风'，症状虽短但警告意义重大。TIA后48小时是脑梗高风险窗口，必须立即就医评估。把TIA当成'坐久了'忽视，可能错过最后的预防窗口——下一次可能就不是'二十秒后恢复'，而是永久性损伤。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "立即记录症状发生时间和表现，准备送医",
+          "description": "正确识别TIA，记录关键信息并就医",
+          "isCorrect": true,
+          "effects": [
+            { "type": "health", "delta": 8, "reason": "及时就医，预防二次脑梗" },
+            { "type": "trust", "delta": 5, "reason": "认真对待他的症状，被重视" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "zhou_act3_d22_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "你立刻在手机上记下了：下午3:05，右手麻木+言语含糊，持续约20秒后自行恢复。然后你告诉周爷爷：'这不是坐久了，是一过性脑缺血——脑血管在报警。必须去医院查，不能等。'周爷爷看到你严肃的表情，点了点头。他明白你是认真的。",
+            "explanation": "最优策略：立即记录症状+就医。TIA处理的第一步是'记录症状和发生时间'——这对医生诊断至关重要。发病时间、症状表现、持续时间、自行恢复——这些信息决定后续治疗方案。TIA不是'等等看'的情况，48小时内必须就医评估，做头颅CT/MRI、颈动脉超声、凝血检查，必要时调整抗血小板和降脂方案。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "等等看，如果再发作就去医院",
+          "description": "延误就医，等二次发作",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": -5, "reason": "延误TIA处理，脑梗风险持续升高" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhou_act3_d22_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "你决定再等等。周爷爷也觉得'现在好了就行'。但TIA的可怕之处在于：第一次是警告，第二次可能就是真正的脑梗。'等再发作'等于等灾难降临——下一次发作可能不会自行恢复，而是留下永久性瘫痪。TIA不能等，必须第一时间就医。",
+            "explanation": "'等再发作'是致命的延误策略。TIA的发作是不可预测的——下一次可能几小时后，也可能几天后，而且下一次可能不是TIA而是完成性脑梗。等'再发作'等于把警告当耳边风，用永久性损伤的风险去赌'也许不会再来'。TIA后48小时内就医评估是医学共识，没有'等等看'的选项。"
+          }
+        }
+      ],
+      "tags": ["choice", "tia", "emergency", "stroke-warning"],
+      "devNote": "教学：TIA识别——五个突然症状 + 立即记录就医不可等待"
+    },
+    {
+      "id": "zhou_act3_d22_003",
+      "characterId": "zhou_yeye",
+      "act": 3,
+      "day": 22,
+      "type": "dayEnd",
+      "scene": "living_room",
+      "illustrationId": "zhou_day22_end",
+      "dialogues": [
+        {
+          "id": "dlg_006",
+          "speaker": "elder",
+          "speakerName": "周爷爷",
+          "text": "脑缺血……那就是说还可能再梗？行，听你的，去医院查。我这个身子骨……经不起再 来一次了。",
+          "layer": "essential",
+          "emotion": "worried"
+        },
+        {
+          "id": "dlg_007",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "周爷爷同意就医了。但精灵感应到——TIA可能还会再来。如果再次发作，你需要做出更快的判断。明天可能是关键时刻。保持警惕。",
+          "layer": "essential",
+          "emotion": "serious",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "zhou_act3_d23_001",
+      "characterId": "zhou_yeye",
+      "act": 3,
+      "day": 23,
+      "type": "event",
+      "scene": "living_room",
+      "illustrationId": "zhou_tia_second",
+      "dialogues": [
+        {
+          "id": "dlg_008",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "第二天上午，周爷爷正准备去医院。突然，他左眼的视野模糊了一瞬——像一块灰布从眼前掠过，大约五秒钟后恢复。他下意识地扶住了桌沿，脸色发白。这是TIA的第二次发作——这一次是视网膜缺血。",
+          "layer": "essential",
+          "duration": 4500,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_009",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "紧急警报！TIA第二次发作——左眼一过性黑蒙（视网膜缺血）。24小时内两次TIA，脑梗风险已飙升至极高！这不是'再观察'的时候了——必须立即行动！这是限时决策，你只有很少的时间！",
+          "layer": "essential",
+          "emotion": "alarmed"
+        },
+        {
+          "id": "dlg_010",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "脑梗救治有黄金时间窗——溶栓治疗在4.5小时内效果最好。每延误一分钟，脑细胞死亡190万个。现在必须用最快的方式送医。怎么送？怎么联系？你必须在限时内做出正确决策！",
+          "layer": "essential",
+          "emotion": "serious",
+          "typingSpeed": 30
+        }
+      ],
+      "nextNode": "zhou_act3_d23_002",
+      "isCheckpoint": true,
+      "tags": ["tia", "emergency", "timed-decision", "stroke-warning"],
+      "devNote": "Day 23 TIA第二次发作，限时决策关卡。设计意图：模拟紧急时间压力"
+    },
+    {
+      "id": "zhou_act3_d23_002",
+      "characterId": "zhou_yeye",
+      "act": 3,
+      "day": 23,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "zhou_tia_timed_choice",
+      "dialogues": [
+        {
+          "id": "dlg_011",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "限时决策！周爷爷左眼一过性黑蒙，TIA第二次发作。脑梗黄金溶栓窗4.5小时。你怎么送医？",
+          "layer": "essential",
+          "emotion": "alarmed"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "立即拨打120，说清地址、症状、用药史，等专业急救",
+          "description": "最安全的送医方式——专业急救+途中监护",
+          "isCorrect": true,
+          "effects": [
+            { "type": "health", "delta": 8, "reason": "专业急救转运，途中可监护处理" },
+            { "type": "trust", "delta": 5, "reason": "果断正确的决策让他安心" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "zhou_act3_d23_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "你立刻拨打120：'家有75岁男性，脑梗后遗症患者，突发左眼一过性黑蒙，24小时内第二次TIA发作。地址是XX小区X号楼X室。目前在服阿司匹林、阿托伐他汀、缬沙坦。请尽快来！'急救车15分钟到达，途中急救人员进行了生命体征监护。到了医院，绿色通道直接进了卒中中心。",
+            "explanation": "最优选择：拨打120。脑梗急救的核心原则是'专业转运'——120救护车有急救设备和专业人员，途中可监护生命体征、必要时急救。拨打120的要点：说清地址、患者症状、发病时间、用药史（特别是抗血小板药，影响溶栓决策）。脑梗溶栓黄金窗4.5小时，每分钟脑细胞死亡190万个——时间就是大脑。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "自己开车送医院，快一点",
+          "description": "自行送医，无途中监护",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": 4, "reason": "送医了但途中无专业监护，风险增加" }
+          ],
+          "spiritPowerChange": 5,
+          "nextNode": "zhou_act3_d23_003",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "你开车送周爷爷去医院——确实比等救护车快了一些。但路上周爷爷如果再次发作、呕吐甚至抽搐，你在开车无法处理。而且到医院后还要自己找急诊、挂号、解释病情，耽误宝贵时间。120可以直接走卒中绿色通道，你开车要先去分诊台。",
+            "explanation": "自行送医不如120安全。虽然可能'快一点'，但脑梗急救不只是'到 hospital'，更是'途中监护+到院绿色通道'。120救护车：①途中有急救人员监护，突发情况可处理；②到院后直接走卒中绿色通道，跳过分诊挂号；③急救人员可提前通知医院准备CT和溶栓。自己开车这三点都没有。除非偏远地区120无法到达，否则始终首选120。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "先打电话问家庭医生该怎么处理",
+          "description": "延误时间，先咨询再行动",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": -5, "reason": "TIA急性发作时咨询家庭医生延误送医" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhou_act3_d23_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "你拨通了家庭医生的电话，等了三分钟才接通。医生说'建议尽快去急诊'——但你又花了时间叫车。前后耽误了十五分钟。TIA急性发作时，每一分钟都在赌脑细胞。家庭医生不是不能问，但不是在紧急时刻问——紧急时刻只有一个动作：送医。",
+            "explanation": "紧急时刻咨询家庭医生是致命延误。TIA/脑梗急救的时间窗极短，每一分钟都关系脑细胞存活。'先问医生'的逻辑在非紧急情况下成立，但在急性发作时，唯一正确的行动是立即送医。家庭医生无法通过电话判断是否需要溶栓——那需要CT和专科评估。咨询可以等到医院后再做。时间就是大脑，没有'先问问'的余裕。"
+          }
+        }
+      ],
+      "tags": ["choice", "tia", "emergency", "timed-decision", "stroke-warning"],
+      "devNote": "限时决策关卡：TIA第二次发作，教学拨打120要点和脑梗黄金溶栓窗"
+    },
+    {
+      "id": "zhou_act3_d23_003",
+      "characterId": "zhou_yeye",
+      "act": 3,
+      "day": 23,
+      "type": "dayEnd",
+      "scene": "hospital",
+      "illustrationId": "zhou_day23_end",
+      "dialogues": [
+        {
+          "id": "dlg_012",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "到了医院，卒中绿色通道快速运转。头颅CT排除了脑出血，MRI显示左侧半卵圆区有新的小缺血灶——幸好来得及时，没有造成大面积梗死。医生调整了用药方案：阿司匹林改为阿司匹林+氯吡格雷双抗治疗，他汀剂量加倍。周爷爷住进了神经内科观察。",
+          "layer": "essential",
+          "duration": 4500,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_013",
+          "speaker": "elder",
+          "speakerName": "周爷爷",
+          "text": "幸亏来得及时……医生说再晚几个小时可能就真梗了。谢谢你，那时候我脑子都蒙了。",
+          "layer": "essential",
+          "emotion": "grateful",
+          "typingSpeed": 40
+        },
+        {
+          "id": "dlg_014",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "周爷爷安全了。双抗治疗+强化降脂是TIA后的标准方案，能有效预防完成性脑梗。但精灵要提醒你：TIA后的老人跌倒风险也会增加——药物调整期间，平衡可能受影响。夜间起夜要格外小心。",
+          "layer": "essential",
+          "emotion": "thoughtful",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end", "hospital"],
+      "devNote": "TIA送医成功，药物调整为双抗治疗。为后续跌倒事件埋伏笔"
+    },
+    {
+      "id": "zhou_act3_d24_001",
+      "characterId": "zhou_yeye",
+      "act": 3,
+      "day": 24,
+      "type": "event",
+      "scene": "bathroom",
+      "illustrationId": "zhou_fall_night",
+      "dialogues": [
+        {
+          "id": "dlg_015",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "出院后第三天凌晨两点，周爷爷起夜上厕所。双抗治疗让他有些头晕——体位性低血压加上药物影响，他从床上坐起来时晃了一下。走到卫生间门口，左脚在防滑垫边缘一滑，整个人跌坐在地上。他本能地想用左手撑住，但左臂没撑住，右侧身体重重着地。",
+          "layer": "essential",
+          "duration": 5000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_016",
+          "speaker": "elder",
+          "speakerName": "周爷爷",
+          "text": "别……别动我！让我……先缓缓……",
+          "layer": "essential",
+          "emotion": "pained",
+          "typingSpeed": 40
+        },
+        {
+          "id": "dlg_017",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "紧急事件！周爷爷跌倒了！他喊'别动我'——这是正确的本能反应。应急处理知识点：跌倒处置的第一步不是立即扶起，而是先询问和评估！脑梗后老人跌倒，可能有骨折、颅内出血、内出血等严重情况，贸然搬动可能造成二次损伤。这是限时决策——你怎么处理？",
+          "layer": "essential",
+          "emotion": "alarmed"
+        },
+        {
+          "id": "dlg_018",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "跌倒处置流程：第一步，不要急于扶起，询问老人意识是否清醒、哪里疼；第二步，评估有无骨折（肢体畸形、剧痛、不能活动）、有无头部撞击；第三步，如无严重损伤，协助缓慢起身；第四步，如怀疑骨折或头部撞击，保持不动，拨打120。现在，限时决策！",
+          "layer": "essential",
+          "emotion": "serious",
+          "typingSpeed": 30
+        }
+      ],
+      "nextNode": "zhou_act3_d24_002",
+      "isCheckpoint": true,
+      "tags": ["fall", "emergency", "timed-decision"],
+      "devNote": "Day 24 跌倒事件，限时决策关卡。教学跌倒处置流程"
+    },
+    {
+      "id": "zhou_act3_d24_002",
+      "characterId": "zhou_yeye",
+      "act": 3,
+      "day": 24,
+      "type": "choice",
+      "scene": "bathroom",
+      "illustrationId": "zhou_fall_choice",
+      "dialogues": [
+        {
+          "id": "dlg_019",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "限时决策！周爷爷跌倒在卫生间，喊'别动我'。你怎么处理？",
+          "layer": "essential",
+          "emotion": "alarmed"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "立即把他扶起来，看看能不能站",
+          "description": "急于扶起——最常见也最危险的错误",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": -5, "reason": "贸然搬动可能造成骨折移位或加重损伤" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhou_act3_d24_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "你一把拉起周爷爷——他'啊'地叫了一声，右侧髋部剧痛。你不知道他有没有骨折，贸然拉拽可能让骨折移位更严重。而且他是脑梗后双抗治疗中——出血风险比常人高，如果有内出血或颅内损伤，搬动会加重病情。'赶紧扶起来'是本能，但不是正确做法。",
+            "explanation": "立即扶起是跌倒处置最常见的错误。老人跌倒后可能有：骨折（髋骨、脊柱）、颅内出血、内出血。脑梗后服用双抗药物（阿司匹林+氯吡格雷）的出血风险更高。贸然搬动可能导致：骨折移位损伤血管神经、颈椎损伤致截瘫、颅内出血加重。跌倒处置的第一步永远是'先评估，不急于扶起'。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "先问他哪里疼、有没有撞到头，评估能否活动后再决定",
+          "description": "正确的跌倒处置流程：先询问评估",
+          "isCorrect": true,
+          "effects": [
+            { "type": "health", "delta": 8, "reason": "正确评估避免二次损伤" },
+            { "type": "trust", "delta": 5, "reason": "冷静专业地处理让他安心" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "zhou_act3_d24_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "你蹲下来，保持冷静：'爸，别动。先告诉我——哪里疼？有没有撞到头？手脚能动吗？'周爷爷缓了口气：'右边胯骨疼……头没撞到。手脚……能动。'你检查了：意识清醒、对答切题、四肢能活动、无头部撞击、髋部有压痛但无畸形。初步判断：无骨折征象，可能是软组织挫伤。你让他先侧身，慢慢扶他坐起，确认无头晕后协助站起。",
+            "explanation": "最优策略：先询问评估再行动。跌倒处置的正确流程：①不急于扶起，先询问意识是否清醒；②问哪里疼、有无撞头；③评估四肢能否活动、有无畸形（骨折征象）；④无严重损伤→协助缓慢起身；⑤怀疑骨折/头部撞击/剧烈头痛→保持不动，拨打120。脑梗双抗治疗中出血风险高，评估更需仔细。周爷爷意识清、无头部撞击、四肢能动、髋部无畸形——可以协助起身，但后续仍需观察48小时。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "直接拨打120，让专业人来处理",
+          "description": "过度反应——评估后未必需要120",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": 3, "reason": "送医检查是安全的，但可能过度紧张" },
+            { "type": "mood", "delta": -3, "reason": "大半夜叫救护车，老人心理紧张" }
+          ],
+          "spiritPowerChange": 5,
+          "nextNode": "zhou_act3_d24_003",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "你拨了120，救护车来了。急救人员检查后说：'没有骨折征象，软组织挫伤，可以在家观察。'周爷爷被折腾了大半夜，心情不太好。直接叫120比贸然扶起安全，但如果先评估一下，可能发现他意识清醒、能活动，不需要叫救护车——先评估再决定是否需要120。",
+            "explanation": "直接叫120比贸然扶起好，但不是最优。跌倒后是否需要120取决于评估结果：如果意识丧失、剧烈头痛、呕吐、肢体不能活动、怀疑骨折——立即120。但如果意识清醒、无头部撞击、四肢能动——可以先评估再决定。'直接叫120'跳过了评估步骤，可能造成过度医疗和老人不必要的紧张。正确做法是先评估，再根据评估结果决定。"
+          }
+        }
+      ],
+      "tags": ["choice", "fall", "emergency", "timed-decision"],
+      "devNote": "限时决策关卡：跌倒处置——先询问评估不急于扶起"
+    },
+    {
+      "id": "zhou_act3_d24_003",
+      "characterId": "zhou_yeye",
+      "act": 3,
+      "day": 24,
+      "type": "dayEnd",
+      "scene": "bedroom",
+      "illustrationId": "zhou_day24_end",
+      "dialogues": [
+        {
+          "id": "dlg_020",
+          "speaker": "elder",
+          "speakerName": "周爷爷",
+          "text": "右边胯骨疼……但骨头应该没事。谢谢你没硬拉我。那一下子要是硬拽，我这老骨头可能真得散架。",
+          "layer": "essential",
+          "emotion": "relieved"
+        },
+        {
+          "id": "dlg_021",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "跌倒处置正确了——但故事还没完。跌倒后48小时是观察期，有些损伤（ especially颅内迟发性出血）可能延迟出现。明天需要密切观察周爷爷的状态。另外，跌倒的原因也要分析——是体位性低血压、药物影响，还是辅具/环境问题？",
+          "layer": "essential",
+          "emotion": "thoughtful",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end"],
+      "devNote": "跌倒后48小时观察期铺垫"
+    },
+    {
+      "id": "zhou_act3_d25_001",
+      "characterId": "zhou_yeye",
+      "act": 3,
+      "day": 25,
+      "type": "narrative",
+      "scene": "bedroom",
+      "illustrationId": "zhou_post_fall",
+      "dialogues": [
+        {
+          "id": "dlg_022",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "跌倒后的第二天。周爷爷右侧髋部有一大块淤青，走路比平时更小心了。精神还好，对答正常，没有头痛呕吐。但他明显比以前更怕走了——从床到卫生间短短几步路，他走了五分钟，每一步都紧紧抓着助行器。",
+          "layer": "essential",
+          "duration": 4500,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_023",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "跌倒后48小时观察期。周爷爷目前意识清醒、无头痛呕吐、无肢体加重——暂无颅内迟发出血征象。但他出现了'跌倒恐惧'——因为摔了一次，现在不敢走了。跌倒恐惧本身也会增加跌倒风险：因为怕走而不走→肌力下降→更容易摔。你怎么处理？",
+          "layer": "essential",
+          "emotion": "thoughtful"
+        },
+        {
+          "id": "dlg_024",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "同时要分析跌倒原因：周爷爷在双抗治疗中，体位性低血压+药物头晕+夜间起夜——这三个因素叠加导致了跌倒。预防下次跌倒需要从源头解决：起夜先坐30秒、调整药物时间、确保夜灯+辅具到位。你选择怎么处理跌倒后的观察和恐惧？",
+          "layer": "essential",
+          "emotion": "curious"
+        }
+      ],
+      "nextNode": "zhou_act3_d25_002",
+      "isCheckpoint": true,
+      "tags": ["fall", "post-fall", "psychology"],
+      "devNote": "Day 25 跌倒后观察+跌倒恐惧处理+跌倒原因分析"
+    },
+    {
+      "id": "zhou_act3_d25_002",
+      "characterId": "zhou_yeye",
+      "act": 3,
+      "day": 25,
+      "type": "choice",
+      "scene": "bedroom",
+      "illustrationId": "zhou_post_fall_choice",
+      "dialogues": [
+        {
+          "id": "dlg_025",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "周爷爷跌倒后出现跌倒恐惧，不敢走路。同时需要继续48小时观察和预防再次跌倒。你怎么处理？",
+          "layer": "essential",
+          "emotion": "curious"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "继续观察48小时注意迟发症状，同时分析跌倒原因并制定预防措施，鼓励他在安全范围内逐步恢复行走",
+          "description": "观察+预防+逐步恢复行走",
+          "isCorrect": true,
+          "effects": [
+            { "type": "health", "delta": 8, "reason": "系统观察+预防+逐步恢复" },
+            { "type": "mood", "delta": 3, "reason": "有计划地恢复让他安心" },
+            { "type": "trust", "delta": 3, "reason": "专业处理增强信任" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "zhou_act3_d25_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "你做了三件事：①继续观察48小时，注意有无头痛加重、呕吐、嗜睡——迟发性颅内出血的信号；②分析跌倒原因——双抗+体位性低血压+夜间起夜，和医生商量将一次降压药调到白天服用，起夜严格执行'先坐30秒'；③鼓励周爷爷在有人陪伴下短距离行走——'怕摔就不走只会更弱，咱们慢慢来，我陪着'。他走了两步，又走了两步。",
+            "explanation": "最优策略：观察+预防+逐步恢复三管齐下。①48小时观察：脑梗双抗治疗中跌倒，迟发性颅内出血风险高，需观察意识、头痛、呕吐；②原因分析+预防：降压药调整到白天减少夜间低血压、起夜先坐30秒预防体位性低血压、确保夜灯和辅具到位；③克服跌倒恐惧：跌倒恐惧导致'怕摔不走→肌力下降→更易摔'的恶性循环，需要在安全陪伴下逐步恢复行走。三步缺一不可。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "觉得没事了，让他正常活动",
+          "description": "忽视48小时观察期",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": -5, "reason": "迟发性出血未被发现，风险持续" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhou_act3_d25_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "周爷爷正常活动了。但48小时观察期不是为了'没事就好'，是为了抓住可能延迟出现的颅内出血。脑梗双抗治疗中，跌倒后迟发性硬膜下血肿可能在48小时内逐渐加重——如果没观察，等出现严重症状就晚了。'觉得没事'不等于'真的没事'。",
+            "explanation": "忽视48小时观察期是危险的。跌倒后迟发性损伤——特别是颅内迟发性出血——可能在跌倒后24-48小时才出现症状。脑梗后服用双抗药物（阿司匹林+氯吡格雷）的老人出血风险显著高于常人。48小时观察期内需注意：意识状态变化、头痛加重、呕吐、瞳孔不等大、肢体力量变化。一旦出现，立即就医。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "让他卧床休息，完全不要走动，直到完全恢复",
+          "description": "过度保护，加剧跌倒恐惧",
+          "isCorrect": false,
+          "effects": [
+            { "type": "independence", "delta": -5, "reason": "长期卧床导致肌力快速退化" },
+            { "type": "mood", "delta": -3, "reason": "卧床不动加剧恐惧和无力感" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhou_act3_d25_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "周爷爷躺在床上不动。两天后，他发现自己的腿比跌倒前还没劲了——卧床会导致肌力每天下降1-3%。而且越躺越怕走，跌倒恐惧加重了。脑梗后老人最怕的就是'卧床'——一旦卧床超过一周，可能再也站不起来。'完全休息'不是保护，是另一种伤害。",
+            "explanation": "过度保护导致废用综合征。跌倒后短期休息是对的，但'完全不走动直到完全恢复'是错误的。①脑梗后偏瘫老人卧床1周肌力下降可达10-20%，可能再也恢复不到之前水平；②卧床导致压疮、肺部感染、深静脉血栓等并发症；③跌倒恐惧在卧床中加重——'不走就不会摔'变成'不敢走'。正确做法是在安全陪伴下尽早逐步恢复活动。"
+          }
+        }
+      ],
+      "tags": ["choice", "fall", "post-fall", "psychology"],
+      "devNote": "教学：跌倒后处理——48小时观察+原因分析预防+克服跌倒恐惧逐步恢复"
+    },
+    {
+      "id": "zhou_act3_d25_003",
+      "characterId": "zhou_yeye",
+      "act": 3,
+      "day": 25,
+      "type": "dayEnd",
+      "scene": "bedroom",
+      "illustrationId": "zhou_day25_end",
+      "dialogues": [
+        {
+          "id": "dlg_026",
+          "speaker": "elder",
+          "speakerName": "周爷爷",
+          "text": "走两步……行，我试试。有你在旁边，我不怕。那个先坐30秒的法子，以后起夜我记住了。",
+          "layer": "essential",
+          "emotion": "determined"
+        },
+        {
+          "id": "dlg_027",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "他在逐步恢复。48小时观察期平安度过，没有迟发出血。跌倒原因找到了——体位性低血压+药物影响，已经和医生调整了方案。接下来是康复评估——TIA和跌倒后，他的康复计划需要重新制定。",
+          "layer": "essential",
+          "emotion": "warm",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "zhou_act3_d26_001",
+      "characterId": "zhou_yeye",
+      "act": 3,
+      "day": 26,
+      "type": "narrative",
+      "scene": "hospital",
+      "illustrationId": "zhou_rehab_reassessment",
+      "dialogues": [
+        {
+          "id": "dlg_028",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "TIA和跌倒后一周，康复师小李来做全面评估。结果不太乐观：TIA虽然没有造成大面积梗死，但左侧肢体肌力从4级退回了3级——跌倒和卧床让前期训练的成果退步了。周爷爷坐在评估室里，看着结果，沉默了。",
+          "layer": "essential",
+          "duration": 4500,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_029",
+          "speaker": "elder",
+          "speakerName": "周爷爷",
+          "text": "退回去了……练了两个月的成果，一下子就没了。是不是……再怎么练也就这样了？",
+          "layer": "essential",
+          "emotion": "defeated",
+          "typingSpeed": 40
+        },
+        {
+          "id": "dlg_030",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "周爷爷的信心受挫了。TIA+跌倒让肌力退步，他开始怀疑康复的意义——'再怎么练也就这样了'。这是心理支持的另一个关键时刻：不是盲目乐观（'会好的'），也不是放弃（'那就这样吧'），而是在现实基础上重建信心。康复评估后的心理调适，和康复训练本身一样重要。",
+          "layer": "essential",
+          "emotion": "thoughtful"
+        }
+      ],
+      "nextNode": "zhou_act3_d26_002",
+      "isCheckpoint": true,
+      "tags": ["rehabilitation", "psychology"],
+      "devNote": "Day 26 康复评估——TIA后肌力退步，心理调适"
+    },
+    {
+      "id": "zhou_act3_d26_002",
+      "characterId": "zhou_yeye",
+      "act": 3,
+      "day": 26,
+      "type": "choice",
+      "scene": "hospital",
+      "illustrationId": "zhou_rehab_choice",
+      "dialogues": [
+        {
+          "id": "dlg_031",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "周爷爷说'再怎么练也就这样了'——他在动摇。康复评估显示肌力退步是事实，但不是终点。你怎么帮他调适？",
+          "layer": "essential",
+          "emotion": "curious"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "理解他的挫败感，从最基础的训练重新开始，用小目标重建信心",
+          "description": "接受现实+从小处重建",
+          "isCorrect": true,
+          "effects": [
+            { "type": "health", "delta": 8, "reason": "重新开始系统训练，逐步恢复" },
+            { "type": "mood", "delta": 5, "reason": "被理解，有了新的方向" },
+            { "type": "trust", "delta": 3, "reason": "没有虚假安慰，被真诚对待" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "zhou_act3_d26_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "你说：'爸，退了一步是事实，我骗您说没退也没用。但您想想——您三个月前左臂都抬不起来，现在退回3级，那也是从0级练上来的。3级不是终点，是新的起点。咱们不追之前的目标，就定一个最小的：这周先恢复到能扶助行器站稳30秒——跟两周前一样。重新来过，我陪着。'周爷爷想了很久，点了点头。",
+            "explanation": "最优策略：接受现实+小目标重建。不否认退步（'没退'是假话），也不放弃（'就这样了'是绝望）。用事实重建信心——'3级是从0级练上来的，说明您能练回去'。把目标重置到最小（回到两周前的站立30秒），让他重新体验'达成目标'的成就感。康复不是直线上升的，有退步有反复——接受这个现实，然后重新出发。这就是脑梗康复的真相：不是一次到达终点，是跌倒了再站起来。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "别灰心，加把劲练，一定能恢复到之前最好水平",
+          "description": "盲目鼓励，可能不切实际",
+          "isCorrect": false,
+          "effects": [
+            { "type": "mood", "delta": 2, "reason": "暂时被鼓励" },
+            { "type": "trust", "delta": -2, "reason": "工程师理性，知道这话不靠谱" }
+          ],
+          "spiritPowerChange": 5,
+          "nextNode": "zhou_act3_d26_003",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "周爷爷摇了摇头：'别哄我了。TIA刚过，脑细胞死了一波，你再让我加把劲也回不到从前。'他是工程师——数据退了就是退了，'加把劲'不能让死掉的脑细胞复活。盲目鼓励反而让他觉得你不了解情况。真诚比乐观更重要。",
+            "explanation": "盲目鼓励对理性型老人无效。TIA造成的缺血灶导致部分脑细胞损伤是客观事实——'一定能恢复到最好水平'是不切实际的承诺。周爷爷是工程师，他要的是基于事实的分析和方案，不是口号。当承诺落空时，信任会受损。心理支持要建立在真实之上：承认退步，然后在现实基础上寻找可能。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "既然退了就多休息，康复训练暂停一段时间",
+          "description": "暂停康复——会导致进一步退化",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": -5, "reason": "暂停康复导致肌力持续退化" },
+            { "type": "independence", "delta": -3, "reason": "机能进一步退化" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhou_act3_d26_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "康复暂停了。一周后周爷爷的肌力又退了——从3级退到2级。脑梗后的肌力是'用进废退'：不用就退，退了再练更难。'暂停休息'看似体贴，实际是在加速退化。TIA后的康复不仅不能停，反而要更科学地调整——降低强度但保持频率，重新打基础。",
+            "explanation": "暂停康复是错误的。脑梗后偏瘫的肌力遵循'用进废退'原则——不训练就退化。TIA后退步是暂时的，但暂停训练会让退步变成永久性的。正确的做法是调整康复方案：降低强度、回到基础训练、重新打地基。康复可以慢，但不能停——停了就真的'也就这样了'。"
+          }
+        }
+      ],
+      "tags": ["choice", "rehabilitation", "psychology"],
+      "devNote": "教学：康复评估后心理调适——接受现实+小目标重建，不盲目乐观不放弃"
+    },
+    {
+      "id": "zhou_act3_d26_003",
+      "characterId": "zhou_yeye",
+      "act": 3,
+      "day": 26,
+      "type": "dayEnd",
+      "scene": "hospital",
+      "illustrationId": "zhou_day26_end",
+      "dialogues": [
+        {
+          "id": "dlg_032",
+          "speaker": "elder",
+          "speakerName": "周爷爷",
+          "text": "重新来过……行。我以前在厂里遇到技术难题也是这样——退回原点，重新算。这次就当重新算一遍。",
+          "layer": "essential",
+          "emotion": "determined"
+        },
+        {
+          "id": "dlg_033",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "他用工程师的比喻理解了康复——'退回原点，重新算'。这就是周爷爷：接受现实，但不接受放弃。明天我们做最后的应急知识巩固——把这些天学到的TIA识别、跌倒处置、120要点系统梳理一遍。",
+          "layer": "essential",
+          "emotion": "warm",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "zhou_act3_d27_001",
+      "characterId": "zhou_yeye",
+      "act": 3,
+      "day": 27,
+      "type": "tutorial",
+      "scene": "living_room",
+      "illustrationId": "zhou_emergency_review",
+      "dialogues": [
+        {
+          "id": "dlg_034",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "今天是应急知识巩固日。精灵把这几天经历的TIA发作、120送医、跌倒处置串联起来，做了一次完整的回顾。客厅的茶几上摊着一张'家庭应急联系卡'——这是你这些天学到的所有应急知识的浓缩。",
+          "layer": "essential",
+          "duration": 4500,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_035",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "应急处理技能树完成！来做一个综合检验。脑梗老人的三大应急场景：TIA/脑梗发作、跌倒、用药异常。每个场景的正确处置你都经历过了。现在，最后一个知识点——拨打120的要点。这也是应急处理的收尾。",
+          "layer": "essential",
+          "emotion": "serious"
+        },
+        {
+          "id": "dlg_036",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "拨打120的四个要点：①地址——精确到小区、楼号、门牌号；②症状——什么症状、何时开始、持续多久；③用药史——特别是抗血小板药、抗凝药（影响溶栓决策）；④当前状态——意识、呼吸、有无外伤。缺任何一个都可能耽误救治。来，选一个最完整的表述。",
+          "layer": "essential",
+          "emotion": "curious",
+          "typingSpeed": 35
+        }
+      ],
+      "props": [
+        {
+          "propId": "zhou_emergency_card",
+          "layer": "display",
+          "autoShow": true
+        }
+      ],
+      "nextNode": "zhou_act3_d27_002",
+      "isCheckpoint": true,
+      "tags": ["emergency", "tutorial", "120-call"],
+      "devNote": "Day 27 应急处理技能总结，教学拨打120四要点"
+    },
+    {
+      "id": "zhou_act3_d27_002",
+      "characterId": "zhou_yeye",
+      "act": 3,
+      "day": 27,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "zhou_120_choice",
+      "dialogues": [
+        {
+          "id": "dlg_037",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "如果周爷爷再次突发TIA，你需要拨打120。以下哪个是拨打120时最完整的表述？",
+          "layer": "essential",
+          "emotion": "curious"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "XX小区3号楼2单元501室。75岁男性，10分钟前突发右侧肢体麻木、言语含糊，持续约1分钟。脑梗后遗症患者，在服阿司匹林、氯吡格雷、阿托伐他汀。意识清醒，无外伤。请尽快来。",
+          "description": "地址+症状+用药史+当前状态——四要素齐全",
+          "isCorrect": true,
+          "effects": [
+            { "type": "trust", "delta": 5, "reason": "专业能力让周爷爷安心" },
+            { "type": "health", "delta": 3, "reason": "应急能力强，风险降低" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "zhou_act3_d27_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "完美！地址精确到门牌号，症状说清了'什么症状+何时开始+持续多久'，用药史特别提到了双抗（阿司匹林+氯吡格雷）——这直接影响医院是否选择溶栓。当前状态'意识清醒无外伤'让急救人员有初步判断。有了这些信息，120可以在到达前就通知医院卒中中心做准备。这就是信息的力量——在急救中，信息就是时间，时间就是大脑。",
+            "explanation": "最优表述：四要素齐全。①地址精确到门牌号（急救人员不熟悉小区，越详细越好）；②症状包括具体表现+发病时间+持续时间（发病时间是溶栓时间窗的起点）；③用药史特别重要——双抗治疗中（阿司匹林+氯吡格雷）出血风险高，影响溶栓决策；④当前状态让急救人员判断紧急程度。拨打120不是'快来救人'，是传递精准信息让急救系统高效运转。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "快来救人！我爸不行了！XX小区！快点！",
+          "description": "只有情绪和模糊地址",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": -3, "reason": "信息不足延误急救准备" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhou_act3_d27_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "120调度员问：'什么症状？什么时候开始的？在吃什么药？具体门牌号多少？'你慌得答不上来，来回问了三遍才说清楚。耽误了五分钟——在脑梗急救中，五分钟就是950万个脑细胞。恐慌可以理解，但120电话需要的是信息不是情绪。深呼吸，说清四要素。",
+            "explanation": "情绪化呼救延误救治。120调度员需要关键信息来调度资源和通知医院。'快来救人'只表达了情绪，没有可用信息——调度员还要反复询问，浪费宝贵时间。拨打120时要强迫自己冷静，按四要素表述：地址、症状、用药史、当前状态。可以在手机里存一张'应急信息卡'，紧急时照着读。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "XX小区3号楼501。老人突发言语不清。请来一下。",
+          "description": "有地址和症状，但缺用药史和当前状态",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": 1, "reason": "部分信息，但不完整" }
+          ],
+          "spiritPowerChange": 5,
+          "nextNode": "zhou_act3_d27_003",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "地址和症状有了，比上一个好。但缺了两个关键信息：用药史和当前状态。调度员不知道患者在服双抗——医院无法提前准备溶栓评估；不知道当前意识状态——无法判断紧急程度。信息不全，急救效率打折。记住四要素，缺一不可。",
+            "explanation": "信息不完整影响救治效率。用药史（特别是抗血小板/抗凝药）直接决定治疗方案——双抗治疗中的脑梗患者，溶栓出血风险高，需要特殊评估。当前状态（意识、呼吸）决定急救优先级。缺了这两项，医院无法提前准备，到达后还要重新询问，浪费时间。四要素是底线，不是可选项。"
+          }
+        }
+      ],
+      "tags": ["choice", "emergency", "120-call", "tutorial"],
+      "devNote": "教学：拨打120四要点——地址、症状(含时间)、用药史、当前状态"
+    },
+    {
+      "id": "zhou_act3_d27_003",
+      "characterId": "zhou_yeye",
+      "act": 3,
+      "day": 27,
+      "type": "dayEnd",
+      "scene": "living_room",
+      "illustrationId": "zhou_day27_end",
+      "dialogues": [
+        {
+          "id": "dlg_038",
+          "speaker": "elder",
+          "speakerName": "周爷爷",
+          "text": "这张应急卡……贴冰箱上吧。上面写得清楚，万一以后我不行了，谁来了都能照着做。",
+          "layer": "essential",
+          "emotion": "practical"
+        },
+        {
+          "id": "dlg_039",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "应急处理技能树Lv.3精通完成！解锁真实世界工具：'家庭应急联系卡（大字版）'——可以打印出来贴在冰箱上。三十天快到了，最后三天，是回顾和沉淀的时间。",
+          "layer": "essential",
+          "emotion": "proud",
+          "typingSpeed": 40
+        }
+      ],
+      "unlocks": [
+        {
+          "flag": "zhou_emergency_skill_mastered"
+        }
+      ],
+      "tags": ["day-end"],
+      "devNote": "应急处理技能精通，解锁家庭应急联系卡"
+    },
+    {
+      "id": "zhou_act3_d28_001",
+      "characterId": "zhou_yeye",
+      "act": 3,
+      "day": 28,
+      "type": "narrative",
+      "scene": "living_room",
+      "illustrationId": "zhou_album_review",
+      "dialogues": [
+        {
+          "id": "dlg_040",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "第二十八天。精灵打开了记忆相册——这三十天里，每一个正确照护的瞬间都被画成了水彩插画。第一张是'语音灯控挪到健侧'，最后一张是'跌倒后慢慢站起来'。相册按时间排列，像一本照护成长史。",
+          "layer": "essential",
+          "duration": 5000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_041",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "三十天的照护历程，都在这本相册里了。从第一天的'够不到灯控'到今天的'跌倒后重新站起'——每一个瞬间都是你和他的成长。来，翻一翻。",
+          "layer": "essential",
+          "emotion": "warm"
+        },
+        {
+          "id": "dlg_042",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "第一幕：精灵苏醒、偏瘫穿衣、辅具选择、康复训练、用药管理、安全排查。第二幕：适老化改造、长护险、心理倾听、自我价值重建、社交突破、情感冲突与和解。第三幕：TIA识别、跌倒处置、康复重评估、应急精通。每一张画都是一次成长。",
+          "layer": "essential",
+          "emotion": "proud",
+          "typingSpeed": 35
+        }
+      ],
+      "nextNode": "zhou_act3_d28_002",
+      "isCheckpoint": true,
+      "tags": ["review", "album"],
+      "devNote": "Day 28 回顾——记忆相册，回顾30天历程"
+    },
+    {
+      "id": "zhou_act3_d28_002",
+      "characterId": "zhou_yeye",
+      "act": 3,
+      "day": 28,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "zhou_album_choice",
+      "dialogues": [
+        {
+          "id": "dlg_043",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "翻看相册时，有一张插画让周爷爷停下了目光——那是他用助行器第一次站稳30秒的瞬间。你觉得这三十天里，对周爷爷影响最大的改变是什么？",
+          "layer": "essential",
+          "emotion": "thoughtful"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "是适老化改造和辅具——让环境匹配他的能力，他才能安全地自理",
+          "description": "看到环境改造的价值",
+          "isCorrect": true,
+          "effects": [
+            { "type": "mood", "delta": 5, "reason": "被理解的温暖" },
+            { "type": "trust", "delta": 3, "reason": "你看到了真正改变他的东西" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "zhou_act3_d28_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "你说到了周爷爷故事的核心。脑梗后遗症不可逆——他的左手不会完全恢复，左腿也不会像从前一样。但适老化改造让家适应了他的能力，辅具让他在能力范围内最大化自理。他不能改变的，环境替他改变了。这就是轻度失能照护的精髓：不是让他'恢复如初'，而是让他在'现在'活出最大的自主和尊严。",
+            "explanation": "最优回答：环境改造是核心。周爷爷是轻度失能角色，身体恢复有天花板。真正改变他生活质量的不是康复训练（有局限），而是适老化改造+辅具配置+长护险——让环境适应能力，让资源支持生活。'辅助而非替代'的第一层含义是穿衣时不全包代劳，更深层的含义是：改造环境让老人能自己做，而不是替他做。这是资源协调技能树的精髓。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "是心理支持——让他从'不甘心'到'接受但努力'",
+          "description": "看到心理层面的价值",
+          "isCorrect": true,
+          "effects": [
+            { "type": "mood", "delta": 5, "reason": "被理解的温暖" },
+            { "type": "trust", "delta": 3, "reason": "你看到了他内心的成长" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "zhou_act3_d28_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "这也是对的。周爷爷最大的敌人不是脑梗，是'不甘心变成废人'的恐惧。三十天里，从藏轮椅硬走到'两条腿走路'，从'不想让人看到'到'穿深蓝夹克出门'——他的身体变化有限，但心理变化是翻天覆地的。接受现实但不放弃努力，这是比任何肌力恢复都珍贵的成长。",
+            "explanation": "正确的另一个视角：心理支持是核心。周爷爷是'接受现实但不甘心'的性格，他的核心挑战不是身体而是心理——身份认同危机、跌倒恐惧、社交退缩。三十天的心理支持让他从'不甘心到封闭'变成'不甘心但接受且努力'。身体有天花板，但心态没有。这也是周爷爷线目标结局是'深层理解'而非'温暖守护'的原因——健康值和独立值提升有限，但心情和信任可以大幅提升。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "是应急处理能力——TIA和跌倒都安全度过了",
+          "description": "看到应急能力的价值",
+          "isCorrect": false,
+          "effects": [
+            { "type": "mood", "delta": 2, "reason": "认可了应急能力" }
+          ],
+          "spiritPowerChange": 5,
+          "nextNode": "zhou_act3_d28_003",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "应急处理确实重要——TIA识别和跌倒处置可能救了周爷爷的命。但应急是'防守'，不是'改变'。它防止了最坏的结果，但没有让周爷爷的日常生活变得更好。真正改变他生活质量的，是那些日常的、持续的——适老化改造让他能安全自理，心理支持让他愿意面对生活。应急是底线，不是全部。",
+            "explanation": "应急能力重要但不是最大的改变。TIA识别和跌倒处置是关键技能，但它们是'防御性'的——防止灾难发生。真正改变周爷爷日常生活质量的是'建设性'的：适老化改造、辅具配置、心理支持、社交恢复。应急处理是照护的底线——保命；日常照护是照护的核心——生活。两者缺一不可，但'最大的改变'来自后者。"
+          }
+        }
+      ],
+      "tags": ["choice", "review", "album"],
+      "devNote": "回顾选择——看到环境改造或心理支持的核心价值"
+    },
+    {
+      "id": "zhou_act3_d28_003",
+      "characterId": "zhou_yeye",
+      "act": 3,
+      "day": 28,
+      "type": "dayEnd",
+      "scene": "living_room",
+      "illustrationId": "zhou_day28_end",
+      "dialogues": [
+        {
+          "id": "dlg_044",
+          "speaker": "elder",
+          "speakerName": "周爷爷",
+          "text": "这张……我站稳的那张。画得真好。那天我站了32秒，比目标多2秒。你还记得？",
+          "layer": "essential",
+          "emotion": "nostalgic"
+        },
+        {
+          "id": "dlg_045",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "32秒。每一秒都记得。明天，周爷爷会写一段话——写给这三十天，也写给你。",
+          "layer": "essential",
+          "emotion": "warm",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "zhou_act3_d29_001",
+      "characterId": "zhou_yeye",
+      "act": 3,
+      "day": 29,
+      "type": "narrative",
+      "scene": "bedroom",
+      "illustrationId": "zhou_letter",
+      "dialogues": [
+        {
+          "id": "dlg_046",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "第二十九天晚上。周爷爷在平板电脑上慢慢地打字，用右手一根手指。他不太会用键盘，但他想写点什么。写了删，删了写，折腾了一个多小时。最后他把平板递给了你。",
+          "layer": "essential",
+          "duration": 4500,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_047",
+          "speaker": "elder",
+          "speakerName": "周爷爷",
+          "text": "这三十天……我有时候嘴上犟，心里知道你是为我好。我不甘心，但我还愿意努力。那个轮椅，我现在不觉得丢人了——它就是个工具，跟拐杖一样。你让我明白了，用工具不丢人，不用工具摔了才丢人。谢谢你，孩子。",
+          "layer": "emotional",
+          "emotion": "sincere",
+          "typingSpeed": 35
+        },
+        {
+          "id": "dlg_048",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "这是周爷爷写给你的话——也是'心理支持'技能树完成后的代际信件。他说'用工具不丢人，不用工具摔了才丢人'——这是他自己悟出来的道理，比任何人教的都深刻。你怎么回应他的这封信？",
+          "layer": "essential",
+          "emotion": "moved"
+        }
+      ],
+      "nextNode": "zhou_act3_d29_002",
+      "isCheckpoint": true,
+      "tags": ["letter", "emotional", "psychology"],
+      "devNote": "Day 29 情感沉淀——代际信件，心理支持技能树完成"
+    },
+    {
+      "id": "zhou_act3_d29_002",
+      "characterId": "zhou_yeye",
+      "act": 3,
+      "day": 29,
+      "type": "choice",
+      "scene": "bedroom",
+      "illustrationId": "zhou_letter_response",
+      "dialogues": [
+        {
+          "id": "dlg_049",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "周爷爷把心里话写给你了。这是三十天情感积累的最终时刻。你怎么回应？",
+          "layer": "essential",
+          "emotion": "curious"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "回一段话：您教会我的比我能教您的多。以后不管怎样，我都在。这是我对您的承诺。",
+          "description": "真诚回应，表达陪伴承诺",
+          "isCorrect": true,
+          "effects": [
+            { "type": "mood", "delta": 8, "reason": "被真诚回应，情感连接达到顶点" },
+            { "type": "trust", "delta": 8, "reason": "陪伴承诺是最深的信任" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "zhou_act3_d29_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "你在平板上回了一段话。周爷爷看了很久，然后轻轻说：'行了，别煽情了。明天最后一天，咱好好过。'但他的眼角是湿的——他不会承认，但精灵看到了。三十天的照护，最终不是改变了他的身体，而是建立了一份不会断的连接。这就是照护的本质：不是完成任务，是陪伴一个人。",
+            "explanation": "最优策略：真诚回应+陪伴承诺。周爷爷的信是他放下所有防备后的真心话。回应不需要华丽的辞藻，需要的是真诚——'我都在'三个字比任何承诺都重。代际信件系统的核心不是'教'而是'连接'：老人写给照护者的信，照护者回的信，是双向的情感流动。这份连接会持续到三十天之后——照护不是三十天的游戏，是一辈子的承诺。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "口头说声'谢谢爸'就好，不用回信那么正式",
+          "description": "简短回应，不深入",
+          "isCorrect": false,
+          "effects": [
+            { "type": "mood", "delta": 3, "reason": "被回应了，但不够深入" },
+            { "type": "trust", "delta": 2, "reason": "有回应但缺乏深度连接" }
+          ],
+          "spiritPowerChange": 5,
+          "nextNode": "zhou_act3_d29_003",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "周爷爷嗯了一声，收起平板。他没有失望——但也没有被真正触动。他花了一个多小时写的信，一句'谢谢爸'就回应了。情感连接需要双向流动，他流过来了，你没有流回去。口头回应不是错，但在这个特殊的时刻，一封回信能让连接更深。",
+            "explanation": "简短回应错失了情感连接的黄金时刻。周爷爷写这封信花了很大力气——用一根手指打字一个多小时，写了删删了写。这是他罕见的情感表达时刻。'谢谢爸'是日常的回应，但此刻需要的是'我也把心里话给你'。情感连接的高潮需要双向的深度交流，不是单向的接受。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "觉得不好意思，转移话题聊别的",
+          "description": "回避情感交流",
+          "isCorrect": false,
+          "effects": [
+            { "type": "mood", "delta": -3, "reason": "情感表达被回避，失落" },
+            { "type": "trust", "delta": -3, "reason": "觉得你不接受他的真心" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhou_act3_d29_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "你岔开了话题，说'明天天气不错'。周爷爷看了你一眼，没再说什么，慢慢收起了平板。他花了一个多小时鼓起勇气写的真心话，被轻轻绕过去了。中国式的情感回避——'不好意思'。但他不是在煽情，他是在说'谢谢你'。回避不是含蓄，是让他后悔打开了心门。",
+            "explanation": "回避情感交流是最遗憾的选择。中国文化里确实不习惯直接表达情感，但周爷爷已经迈出了最难的一步——用他笨拙的方式写了这封信。回避他的真心话，等于告诉他'你的感受让我不舒服'。照护不只是身体的照料，更是情感的回应。在他最需要被看见的时刻，回避就是关上了他好不容易打开的门。"
+          }
+        }
+      ],
+      "tags": ["choice", "letter", "emotional", "psychology"],
+      "devNote": "教学：代际信件回应——真诚回应+陪伴承诺，情感双向流动"
+    },
+    {
+      "id": "zhou_act3_d29_003",
+      "characterId": "zhou_yeye",
+      "act": 3,
+      "day": 29,
+      "type": "dayEnd",
+      "scene": "bedroom",
+      "illustrationId": "zhou_day29_end",
+      "dialogues": [
+        {
+          "id": "dlg_050",
+          "speaker": "elder",
+          "speakerName": "周爷爷",
+          "text": "明天是最后一天了。这三十天……说实话，比脑梗后的那半年都过得明白。日子还得过，有你陪着，我心里踏实。",
+          "layer": "essential",
+          "emotion": "content"
+        },
+        {
+          "id": "dlg_051",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "心理支持技能树Lv.3精通完成！解锁代际信件。他说'有你陪着，我心里踏实'——三十天前他说的是'行了行了，我听着呢'。从被动接受到心里踏实，这就是照护的力量。明天，第三十天，最后的结局。",
+          "layer": "essential",
+          "emotion": "warm",
+          "typingSpeed": 40
+        }
+      ],
+      "unlocks": [
+        {
+          "flag": "zhou_psychology_skill_mastered"
+        }
+      ],
+      "tags": ["day-end"],
+      "devNote": "心理支持技能精通，解锁代际信件"
+    },
+    {
+      "id": "zhou_act3_d30_001",
+      "characterId": "zhou_yeye",
+      "act": 3,
+      "day": 30,
+      "type": "narrative",
+      "scene": "living_room",
+      "illustrationId": "zhou_ending",
+      "dialogues": [
+        {
+          "id": "dlg_052",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "第三十天。午后阳光透过窗帘照进改造后的客厅——卫生间银色的扶手反射着光，走廊坡道平整光滑，感应夜灯静静守在墙角。周爷爷坐在沙发上，助行器靠在手边，轮椅折好放在门口。茶几上摆着那张应急联系卡，冰箱上贴着适老化改造后的家居平面图。",
+          "layer": "essential",
+          "duration": 5000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_053",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "他左手握着一个握力球，慢慢地捏着——一下，一下。右手边放着平板电脑，上面是昨天你们互写的信。窗外传来社区花园的声音，老李在下棋，喊着'该你了老周'。周爷爷笑了笑，看了看门口的轮椅。",
+          "layer": "essential",
+          "duration": 4500,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_054",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "第三十天。三十天前，周爷爷的健康值35、心情值55、独立值35、信任值60。今天——根据你这三天的每一个选择，他的状态走到了这里。无论结局如何，这三十天都是真实的：你学会了辅具选择、适老化改造、康复辅助、长护险协调、TIA识别、跌倒处置……更重要的是，你学会了理解一个不甘心但还在努力的人。",
+          "layer": "essential",
+          "emotion": "proud",
+          "typingSpeed": 35
+        }
+      ],
+      "nextNode": "zhou_act3_d30_002",
+      "isCheckpoint": true,
+      "tags": ["ending", "summary"],
+      "devNote": "Day 30 最终日，叙事铺垫结局"
+    },
+    {
+      "id": "zhou_act3_d30_002",
+      "characterId": "zhou_yeye",
+      "act": 3,
+      "day": 30,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "zhou_ending_choice",
+      "dialogues": [
+        {
+          "id": "dlg_055",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "三十天的旅程即将结束。周爷爷看着窗外的阳光，等着你说最后一句话。你想对这三十天、对周爷爷、对自己说些什么？",
+          "layer": "essential",
+          "emotion": "warm"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "这三十天让我明白：照护不是让他恢复如初，是让他在'现在'活得有尊严。谢谢周爷爷教会我的。",
+          "description": "深层理解——看到照护的本质",
+          "isCorrect": true,
+          "effects": [
+            { "type": "mood", "delta": 8, "reason": "被深层理解的满足" },
+            { "type": "trust", "delta": 5, "reason": "你真正懂了照护的意义" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "zhou_act3_d30_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "精灵的光芒温暖而明亮。周爷爷听完，轻轻点了点头。他不需要更多的评价——他需要的就是'被理解'。这三十天，他的身体没有恢复如初——左手还是不太听使唤，走路还是要助行器。但他的家变安全了，他的心打开了，他愿意出门了，他知道自己不是废人了。照护的终点不是'治愈'，是'陪伴一个人在现在的状态里活得最好'。",
+            "explanation": "深层理解结局的核心感悟。周爷爷是轻度失能角色，健康值和独立值提升有限——脑梗后遗症不可逆。但照护的意义不在于'恢复如初'，在于'让他在现在的状态里活得有尊严、有安全、有连接'。适老化改造让他安全自理，心理支持让他接受现实，社交促进让他重新参与生活，应急处理保住他的底线。这就是'深层理解'结局的本质——有些事比健康更重要，比如让他觉得自己还被人需要。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "有些地方我做得还不够好，如果重来一次，我想做得更好",
+          "description": "反思空间——愿意继续学习",
+          "isCorrect": false,
+          "effects": [
+            { "type": "mood", "delta": 3, "reason": "你的真诚让他感动" }
+          ],
+          "spiritPowerChange": 5,
+          "nextNode": "zhou_act3_d30_003",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "精灵的光芒稳定而柔和。'想做得更好'——这本身就是最好的态度。照护没有标准答案，只有不断学习和调整。三十天里你犯过错、回溯过、重新来过——这不是失败，是学习。周爷爷不会要求你完美，他只需要你愿意。如果愿意重来，精灵随时等你。",
+            "explanation": "反思空间结局的感悟。照护是一个永无止境的学习过程。三十天里你可能犯过错——过度代劳、忽视心理信号、处理冲突不当。但'精灵回溯'机制保证了每次错误都是学习机会。'想做得更好'不是自我否定，是对成长的渴望。这个结局允许重玩，在重新经历中发现之前错过的细节。照护是终身的功课，三十天只是起点。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "希望周爷爷以后身体能越来越好，不用再这么辛苦",
+          "description": "美好祝愿——但停留在身体层面",
+          "isCorrect": false,
+          "effects": [
+            { "type": "mood", "delta": 3, "reason": "被关心的温暖" }
+          ],
+          "spiritPowerChange": 5,
+          "nextNode": "zhou_act3_d30_003",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "精灵的光芒微弱但仍在。'身体越来越好'是美好的祝愿，但对脑梗后遗症来说，恢复有天花板。周爷爷需要的不是'身体变好'的祝愿，而是'不管身体怎样，我都陪你'的承诺。停留在身体层面的祝愿，错过了照护更深的含义——有些事比健康更重要。",
+            "explanation": "停留在身体层面的祝愿不够深入。周爷爷是轻度失能角色，他的健康值提升有限是客观现实。'希望身体越来越好'虽然温暖，但没有触及照护的核心——在身体不可逆的情况下，如何让老人活得好。深层理解是：接受身体的局限，在心理、社交、环境、资源上做文章。'身体好'是愿望，'陪你'才是承诺。"
+          }
+        }
+      ],
+      "tags": ["choice", "ending"],
+      "devNote": "最终选择——深层理解结局的核心感悟"
+    },
+    {
+      "id": "zhou_act3_d30_003",
+      "characterId": "zhou_yeye",
+      "act": 3,
+      "day": 30,
+      "type": "ending",
+      "scene": "living_room",
+      "illustrationId": "zhou_ending_final",
+      "dialogues": [
+        {
+          "id": "dlg_056",
+          "speaker": "elder",
+          "speakerName": "周爷爷",
+          "text": "下棋去了。老李那老头棋臭得很，我得去指导指导。轮椅……推着走，省点力气赢他。",
+          "layer": "essential",
+          "emotion": "cheerful",
+          "typingSpeed": 40
+        },
+        {
+          "id": "dlg_057",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "周爷爷推着轮椅走向门口，助行器留在客厅。阳光照在他背上，影子拉得很长。他打开门，回过头：'你在家等着，我赢了回来告诉你。'门关上了。精灵的光在手机屏幕上轻轻闪烁，像在目送。",
+          "layer": "emotional",
+          "duration": 5000,
+          "typingSpeed": 35
+        },
+        {
+          "id": "dlg_058",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "三十天结束。周爷爷推着轮椅出门下棋去了——他不再觉得轮椅丢人，不再觉得出门可怕，不再觉得自己是废人。他的身体没有恢复如初，但他的生活回来了。照护的本质不是治愈，是守护一个人在'现在'活得最好。谢谢你这三天的守护，合格的守护者。",
+          "layer": "essential",
+          "emotion": "warm",
+          "typingSpeed": 40
+        },
+        {
+          "id": "dlg_059",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "完成周爷爷线后，你解锁了真实世界工具：'家居安全自查清单'——可以打印出来，用在任何老人的家中。照护知识不会随游戏结束而消失，它们已经在你心里了。下一次，还有新的守护在等着你。",
+          "layer": "essential",
+          "emotion": "encouraging",
+          "typingSpeed": 40
+        }
+      ],
+      "unlocks": [
+        {
+          "flag": "zhou_yeye_completed"
+        },
+        {
+          "flag": "unlock_home_safety_checklist"
+        }
+      ],
+      "tags": ["ending"],
+      "devNote": "结局节点——深层理解结局。周爷爷推轮椅出门下棋，接受现实但活得有尊严"
+    }
+  ]
+}

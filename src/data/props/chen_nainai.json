@@ -1,0 +1,101 @@
+[
+  {
+    "id": "chen_kitchen_timer",
+    "name": "厨房定时器",
+    "description": "一个白色的机械式厨房定时器，旋钮式的，最大可设定60分钟。挂在灶台边的墙上，位置显眼。陈奶奶炖汤或煮东西的时候会拧到需要的分钟数，时间到了就会“滴滴滴“地响。",
+    "icon": "/images/props/chen_kitchen_timer.svg",
+    "image": "/images/props/chen_kitchen_timer_large.svg",
+    "layer": "operate",
+    "isCollectible": true,
+    "characterId": "chen_nainai",
+    "category": "tool"
+  },
+  {
+    "id": "chen_medicine_box",
+    "name": "多层药盒",
+    "description": "一个七格多层药盒，每格分早晚，透明盖子，贴有“早饭后““午饭后““晚饭后““睡前“等标签。陈奶奶的六种药按时间分装在不同格子里，整整齐齐，像课表一样清晰。",
+    "icon": "/images/props/chen_medicine_box.svg",
+    "image": "/images/props/chen_medicine_box_large.svg",
+    "layer": "display",
+    "isCollectible": true,
+    "characterId": "chen_nainai",
+    "category": "medicine"
+  },
+  {
+    "id": "chen_textbook_pen",
+    "name": "教材和红笔",
+    "description": "几本泛黄的数学教材和一支英雄牌钢笔。教材每页都有红笔批注，字迹工整。钢笔用了二十多年，笔杆上的漆已经磨掉，但笔尖依然顺滑。这是陈奶奶教学生涯的见证。",
+    "icon": "/images/props/chen_textbook_pen.svg",
+    "image": "/images/props/chen_textbook_pen_large.svg",
+    "layer": "inspect",
+    "isCollectible": true,
+    "characterId": "chen_nainai",
+    "category": "memory"
+  },
+  {
+    "id": "chen_wall_calendar",
+    "name": "墙挂日历",
+    "description": "一本大格子的挂历，挂在客厅墙上。每个格子里都写着备忘事项：“吃药““复查““女儿电话““小刘来“。做完的事后面画了一个圈，没做的画了问号。陈奶奶每天都会在上面写写画画。",
+    "icon": "/images/props/chen_wall_calendar.svg",
+    "image": "/images/props/chen_wall_calendar_large.svg",
+    "layer": "inspect",
+    "isCollectible": true,
+    "characterId": "chen_nainai",
+    "category": "tool"
+  },
+  {
+    "id": "chen_photo_album",
+    "name": "老照片相册",
+    "description": "一本黑色封面的老相册，里面夹着陈奶奶从教以来的珍贵照片。有毕业照、学生合影、和老伴的结婚照。每张照片旁边都有一行小字注释，记录着拍摄时间和地点。",
+    "icon": "/images/props/chen_photo_album.svg",
+    "image": "/images/props/chen_photo_album_large.svg",
+    "layer": "display",
+    "isCollectible": true,
+    "characterId": "chen_nainai",
+    "category": "memory"
+  },
+  {
+    "id": "chen_blood_pressure_log",
+    "name": "血压血糖记录表",
+    "description": "一张A4纸打印的表格，上面有日期、血压、血糖、备注等栏目。陈奶奶每天早晚各记录一次，表格已经填了满满一张。最近一行的备注栏写着“今天感觉很好”。",
+    "icon": "/images/props/chen_blood_pressure_log.svg",
+    "image": "/images/props/chen_blood_pressure_log_large.svg",
+    "layer": "inspect",
+    "isCollectible": true,
+    "characterId": "chen_nainai",
+    "category": "document"
+  },
+  {
+    "id": "chen_calligraphy_brush",
+    "name": "毛笔字帖",
+    "description": "一套简易的毛笔字练习工具，包括一支中号毛笔、一小瓶墨汁和几沓旧报纸。报纸上写满了“春眠不觉晓“等诗句，笔迹虽然有些颤抖，但结构端正。旁边放着一本《新华字典》作为镇纸。",
+    "icon": "/images/props/chen_calligraphy_brush.svg",
+    "image": "/images/props/chen_calligraphy_brush_large.svg",
+    "layer": "display",
+    "isCollectible": true,
+    "characterId": "chen_nainai",
+    "category": "tool"
+  },
+  {
+    "id": "chen_medication_list",
+    "name": "用药清单",
+    "description": "一张手写的用药清单，列着六种药品的名称、用法用量和服用时间。清单用大号字体书写，压在书桌的玻璃板下面。陈奶奶每天早晚都会对照清单核对用药情况。",
+    "icon": "/images/props/chen_medication_list.svg",
+    "image": "/images/props/chen_medication_list_large.svg",
+    "layer": "display",
+    "isCollectible": true,
+    "characterId": "chen_nainai",
+    "category": "document"
+  },
+  {
+    "id": "chen_old_textbook",
+    "name": "备课笔记本",
+    "description": "一本厚厚的备课笔记本，封面上写着“陈老师“三个字。里面是密密麻麻的教案，每一页都有红笔批注和修改。中间夹着一片干枯的枫叶，是当年学生送的教师节礼物。",
+    "icon": "/images/props/chen_old_textbook.svg",
+    "image": "/images/props/chen_old_textbook_large.svg",
+    "layer": "inspect",
+    "isCollectible": true,
+    "characterId": "chen_nainai",
+    "category": "memory"
+  }
+]

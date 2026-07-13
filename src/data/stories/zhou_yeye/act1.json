@@ -1,0 +1,1092 @@
+{
+  "characterId": "zhou_yeye",
+  "act": 1,
+  "title": "第一幕：苏醒与重建",
+  "theme": "建立照护节奏，学习辅具与康复基础",
+  "startDay": 1,
+  "endDay": 7,
+  "nodes": [
+    {
+      "id": "zhou_act1_d1_001",
+      "characterId": "zhou_yeye",
+      "act": 1,
+      "day": 1,
+      "type": "narrative",
+      "scene": "bedroom",
+      "illustrationId": "zhou_spirit_awaken",
+      "dialogues": [
+        {
+          "id": "dlg_001",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "清晨的光线从窗帘缝隙里挤进来，照在一张铺着格子床单的旧木床上。周国栋半靠着床头，右手正费力地把一个枕头垫到左臂下面。他的左臂搭在身侧，手指微微蜷缩，不太听使唤。床头柜上摆着四五个药瓶，旁边是一个崭新的智能药盒，上面贴着女儿写的标签：'早7点 / 晚7点'。",
+          "layer": "essential",
+          "duration": 5000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_002",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "你好，我是家庭守护精灵——小筑。从今天起，我会住在这部手机里，陪你一起照顾周爷爷。",
+          "layer": "essential",
+          "emotion": "cheerful",
+          "lottieAnimation": "spirit_appear_warm",
+          "typingSpeed": 35
+        },
+        {
+          "id": "dlg_003",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "周爷爷今年75岁，半年前突发脑梗，虽然抢救及时，但左侧肢体留下了后遗症。他现在和女儿住在一起——女儿给他装了语音灯控、紧急呼叫按钮，还有你看到的那台智能药盒。他不排斥这些东西，但也不主动学，用得来的都是女儿手把手教了好几遍的。",
+          "layer": "essential",
+          "emotion": "thoughtful",
+          "typingSpeed": 35
+        },
+        {
+          "id": "dlg_004",
+          "speaker": "elder",
+          "speakerName": "周爷爷",
+          "text": "谁在那儿说话？是手机吗？小芳装的那个……行了行了，我听着呢。",
+          "layer": "essential",
+          "emotion": "neutral",
+          "typingSpeed": 40
+        },
+        {
+          "id": "dlg_005",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "周爷爷的语气平静，没有排斥，但也没有太多期待。他看了一眼床头的语音灯控——灯还亮着，他想关掉它，但左手够不太到那个按钮。你怎么帮他？",
+          "layer": "essential",
+          "emotion": "curious",
+          "typingSpeed": 40
+        }
+      ],
+      "nextNode": "zhou_act1_d1_002",
+      "transition": {
+        "enter": "fade-in",
+        "illustrationTransition": "watercolor",
+        "duration": 800
+      },
+      "isCheckpoint": true,
+      "tags": ["intro", "tutorial"],
+      "devNote": "开场节点，精灵首次登场，周爷爷被动接受型性格，引入语音灯控"
+    },
+    {
+      "id": "zhou_act1_d1_002",
+      "characterId": "zhou_yeye",
+      "act": 1,
+      "day": 1,
+      "type": "choice",
+      "scene": "bedroom",
+      "illustrationId": "zhou_voice_light_choice",
+      "dialogues": [
+        {
+          "id": "dlg_006",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "周爷爷想关灯，但语音灯控的按钮装在床头左侧——正好是他够不太到的患侧。这是他每天的日常。你的第一个选择：怎么帮他关灯？",
+          "layer": "essential",
+          "emotion": "curious"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "直接伸手帮他按掉开关",
+          "description": "快速解决问题，替他完成",
+          "isCorrect": false,
+          "effects": [
+            { "type": "independence", "delta": -8, "reason": "过度代劳，剥夺自理机会" },
+            { "type": "mood", "delta": -3, "reason": "觉得自己连关灯都做不了" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhou_act1_d1_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "灯是关了，但周爷爷看了你一眼，没说话。他心里在想：关个灯都要人帮忙，我还剩什么能做的。脑梗后最怕的不是动不了，是觉得自己什么都不行了。",
+            "explanation": "过度代劳是失能老人照护最常见的误区。周爷爷左侧肢体受限，但右侧（健侧）是有功能的。直接替他完成，会让他觉得自己彻底成了废人，独立值和心情值都会下降。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "把语音灯控挪到右侧（健侧）他够得到的位置",
+          "description": "辅助而非替代，调整环境让他能自己做",
+          "isCorrect": true,
+          "effects": [
+            { "type": "independence", "delta": 8, "reason": "调整环境后他能自己完成" },
+            { "type": "mood", "delta": 3, "reason": "保住了自理的尊严" },
+            { "type": "trust", "delta": 3, "reason": "感受到被理解而非被代劳" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "zhou_act1_d1_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "你把语音灯控挪到了周爷爷右手边。他伸手一按，灯灭了。他轻轻'嗯'了一声，像是松了口气。这就是适老化改造的核心理念——不是替他做，而是让他能自己做。",
+            "explanation": "最优策略：辅助而非替代。偏瘫老人的照护原则是'调整环境适应能力'，而非'替代能力不足'。把开关移到健侧，让他用自己的力量完成，既保住了自理能力，也维护了尊严。这正是后面适老化改造的伏笔。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "教他用语音指令关灯：说一声就行",
+          "description": "利用已安装的智能家居功能",
+          "isCorrect": false,
+          "effects": [
+            { "type": "trust", "delta": 2, "reason": "提供了新方法" },
+            { "type": "mood", "delta": -1, "reason": "又要学新东西，有点烦" }
+          ],
+          "spiritPowerChange": 5,
+          "nextNode": "zhou_act1_d1_003",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "周爷爷试了两次，'关灯'说成了'光等'，灯没反应。他摆摆手：'算了算了，你帮我按吧。'语音功能是好东西，但周爷爷是被动接受型——他不会主动学，需要反复教。今天不是教新功能的时机。",
+            "explanation": "语音灯控是女儿装的好东西，但周爷爷数字生活度只有40%，被动接受型。教新功能需要时机和耐心，在他还不够信任你的时候教，反而增加挫败感。先把物理环境调整好，再慢慢引入智能功能。"
+          }
+        }
+      ],
+      "props": [
+        {
+          "propId": "zhou_voice_light_control",
+          "layer": "display",
+          "autoShow": true
+        }
+      ],
+      "tags": ["choice", "tutorial", "basic-care", "digital-life"],
+      "devNote": "第一个选择节点，教学辅助而非替代 + 被动接受型数字生活"
+    },
+    {
+      "id": "zhou_act1_d1_003",
+      "characterId": "zhou_yeye",
+      "act": 1,
+      "day": 1,
+      "type": "dayEnd",
+      "scene": "bedroom",
+      "illustrationId": "zhou_day1_end",
+      "dialogues": [
+        {
+          "id": "dlg_007",
+          "speaker": "elder",
+          "speakerName": "周爷爷",
+          "text": "这个开关放这边……顺手。谢谢啊。",
+          "layer": "essential",
+          "emotion": "calm"
+        },
+        {
+          "id": "dlg_008",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "周爷爷靠回枕头上，目光落在窗外的天光里。床头柜上，那排药瓶安静地站着，智能药盒的屏幕亮着淡蓝色的光。他伸了伸右手指，像是在活动，又像是在确认自己还能做什么。",
+          "layer": "emotional",
+          "typingSpeed": 40
+        },
+        {
+          "id": "dlg_009",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "第一天开始了。周爷爷的健康值很低——脑梗后遗症让他的身体机能受限。但他配合、不抗拒，这比什么都重要。接下来六天，我们要帮他建立每天的照护节奏。",
+          "layer": "essential",
+          "emotion": "encouraging",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end"],
+      "devNote": "Day 1 结束节点"
+    },
+    {
+      "id": "zhou_act1_d2_001",
+      "characterId": "zhou_yeye",
+      "act": 1,
+      "day": 2,
+      "type": "narrative",
+      "scene": "bedroom",
+      "illustrationId": "zhou_morning_dressing",
+      "dialogues": [
+        {
+          "id": "dlg_010",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "早上七点，女儿小芳端着温水进来了。周爷爷已经醒了，正试着自己穿衬衫。右手把袖子抖开，往左胳膊上套——试了三次，左臂怎么也伸不进袖子里。他额头冒了汗，但没叫人帮忙。",
+          "layer": "essential",
+          "duration": 4500,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_011",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "周爷爷在穿衣服。脑梗后左侧肢体活动受限，穿衣服需要特殊的方法。偏瘫侧穿衣有一个重要原则——你想到了吗？",
+          "layer": "essential",
+          "emotion": "curious"
+        },
+        {
+          "id": "dlg_012",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "基础照护知识点：偏瘫老人穿衣原则是'先穿患侧，后穿健侧；先脱健侧，后脱患侧'。原因是先穿好患侧，健侧就能灵活活动来整理衣物。如果先穿健侧，患侧就很难再套进去了。现在周爷爷正在纠结左袖子——你要怎么帮他？",
+          "layer": "essential",
+          "emotion": "thoughtful",
+          "typingSpeed": 35
+        }
+      ],
+      "nextNode": "zhou_act1_d2_002",
+      "isCheckpoint": true,
+      "tags": ["morning", "dressing", "basic-care"],
+      "devNote": "Day 2 起床穿衣，教学偏瘫侧穿衣法：先患侧后健侧"
+    },
+    {
+      "id": "zhou_act1_d2_002",
+      "characterId": "zhou_yeye",
+      "act": 1,
+      "day": 2,
+      "type": "choice",
+      "scene": "bedroom",
+      "illustrationId": "zhou_dressing_choice",
+      "dialogues": [
+        {
+          "id": "dlg_013",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "周爷爷试了好几次都穿不上左袖，他有些急了。记住原则：先穿患侧（左侧），后穿健侧（右侧）。你选择怎么做？",
+          "layer": "essential",
+          "emotion": "curious"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "先帮他把右臂（健侧）穿好，再处理左臂",
+          "description": "先穿健侧——顺序错了",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": -3, "reason": "穿衣顺序错误，增加患侧关节拉伤风险" },
+            { "type": "mood", "delta": -2, "reason": "穿得更费劲，挫败感增加" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhou_act1_d2_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "右臂穿好了，但左臂更难套了——右臂已经穿进袖子里，活动不开，没法帮左侧。周爷爷越急越穿不上，最后额头全是汗。顺序反了，反而更难。",
+            "explanation": "偏瘫穿衣的错误顺序：先穿健侧会导致健侧被束缚，无法辅助患侧穿衣。正确顺序是先穿患侧，让患侧先入袖，再用灵活的健侧完成整理。这个原则适用于上衣、裤子、鞋袜。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "帮他把左臂（患侧）先穿进袖子，再让他自己穿右臂",
+          "description": "先穿患侧后穿健侧——正确顺序，辅助而非替代",
+          "isCorrect": true,
+          "effects": [
+            { "type": "health", "delta": 5, "reason": "正确穿衣法避免关节损伤" },
+            { "type": "independence", "delta": 5, "reason": "让他自己完成健侧穿衣" },
+            { "type": "mood", "delta": 3, "reason": "顺利穿好衣服的成就感" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "zhou_act1_d2_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "你帮周爷爷把左臂轻轻引导进袖子里，然后退后一步。他自己用右手把衬衫拉上肩膀，扣好扣子。他看了看自己，轻轻吐了口气：'行了，穿上了。'你帮了一半，他做了一半——这就是最好的辅助。",
+            "explanation": "最优策略：先穿患侧后穿健侧。你帮的是他做不到的部分（患侧入袖），留给他的是他能做到的部分（健侧穿衣、扣扣子）。辅助而非替代，既保证了穿衣顺利，又维护了他的自理能力。这是偏瘫照护的核心原则。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "看他太辛苦了，全部帮他穿好",
+          "description": "过度代劳，替他完成全部",
+          "isCorrect": false,
+          "effects": [
+            { "type": "independence", "delta": -8, "reason": "过度代劳，剥夺自理能力" },
+            { "type": "mood", "delta": -5, "reason": "连穿衣都要全靠别人，挫败感强" },
+            { "type": "trust", "delta": -2, "reason": "感受到被当成完全的废人" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhou_act1_d2_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "衣服是穿好了，很快。但周爷爷坐在床边，低头看着自己被穿好的衬衫，半天没动。他最怕的不是穿不上衣服，是'连穿衣都要人全包'。你帮得越多，他越觉得自己没用。",
+            "explanation": "过度代劳对照护失能老人危害极大。周爷爷的左侧受限，但右侧完全正常。全包代劳会让他失去仅存的自理能力，独立值大幅下降，心情值也随之降低——'变成废人'是他最深的恐惧。"
+          }
+        }
+      ],
+      "tags": ["choice", "basic-care", "dressing", "hemiplegia"],
+      "devNote": "教学：偏瘫侧穿衣法——先患侧后健侧 + 辅助而非替代"
+    },
+    {
+      "id": "zhou_act1_d2_003",
+      "characterId": "zhou_yeye",
+      "act": 1,
+      "day": 2,
+      "type": "dayEnd",
+      "scene": "bedroom",
+      "illustrationId": "zhou_day2_end",
+      "dialogues": [
+        {
+          "id": "dlg_014",
+          "speaker": "elder",
+          "speakerName": "周爷爷",
+          "text": "这个穿衣的法子……以前康复师教过，我给忘了。你提醒得对。",
+          "layer": "essential",
+          "emotion": "grateful"
+        },
+        {
+          "id": "dlg_015",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "周爷爷自己也是懂道理的人——他是工程师出身，讲原理他一听就明白。记住这个原则：先穿患侧，后穿健侧；先脱健侧，后脱患侧。每天穿衣脱衣都用得上。",
+          "layer": "essential",
+          "emotion": "encouraging",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "zhou_act1_d3_001",
+      "characterId": "zhou_yeye",
+      "act": 1,
+      "day": 3,
+      "type": "narrative",
+      "scene": "living_room",
+      "illustrationId": "zhou_mobility_aid_compare",
+      "dialogues": [
+        {
+          "id": "dlg_016",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "客厅里，女儿把三样东西摆在了沙发上：一把拐杖、一个四脚助行器、一辆折叠轮椅。这是康复师建议的辅具方案——周爷爷目前用单拐，但左侧力量不足，走路经常打晃，上周在卫生间门口差点摔了。",
+          "layer": "essential",
+          "duration": 4500,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_017",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "今天是辅具选择日。周爷爷的左侧肢体力量不足，单拐已经不够稳了。康复师给了三个方案：拐杖（升级为四脚拐）、助行器、轮椅。每个方案都有利弊——该怎么选？",
+          "layer": "essential",
+          "emotion": "curious"
+        },
+        {
+          "id": "dlg_018",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "辅具选择有三个原则：第一，匹配当前肌力等级——不是越高级越好；第二，保留最大的自理空间——能用助行器就别用轮椅；第三，留有康复进步的余地——辅具要跟着恢复情况调整。来看看周爷爷现在的情况：左下肢肌力3级（能抗重力但不能抗阻力），平衡能力较差。",
+          "layer": "essential",
+          "emotion": "thoughtful",
+          "typingSpeed": 35
+        }
+      ],
+      "props": [
+        {
+          "propId": "zhou_mobility_aid_comparison",
+          "layer": "display",
+          "autoShow": true
+        }
+      ],
+      "nextNode": "zhou_act1_d3_002",
+      "isCheckpoint": true,
+      "tags": ["mobility-aid", "rehabilitation"],
+      "devNote": "Day 3 辅具选择，展示型道具：辅具对比图"
+    },
+    {
+      "id": "zhou_act1_d3_002",
+      "characterId": "zhou_yeye",
+      "act": 1,
+      "day": 3,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "zhou_aid_choice",
+      "dialogues": [
+        {
+          "id": "dlg_019",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "三样辅具摆在面前。周爷爷看着轮椅，眉头皱了一下——他不想坐轮椅。但选辅具不能只看心情，要匹配他的实际能力。你怎么选？",
+          "layer": "essential",
+          "emotion": "curious"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "继续用拐杖，升级成四脚拐就行",
+          "description": "最小改变，维持行走能力",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": -5, "reason": "拐杖支撑面小，平衡差时跌倒风险高" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhou_act1_d3_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "四脚拐比单拐稳一些，但周爷爷左下肢肌力3级、平衡差，拐杖的支撑面太小了。上周他在卫生间门口差点摔就是用拐杖的时候。继续用拐杖，跌倒只是时间问题。",
+            "explanation": "拐杖适合肌力4级以上、平衡能力尚可的老人。周爷爷肌力3级、平衡差，拐杖支撑面不足，无法提供足够稳定性。辅具选择的核心是匹配能力，'够用'不等于'安全'。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "选用四脚助行器，室内行走用这个",
+          "description": "支撑面大、稳定性好，保留行走能力",
+          "isCorrect": true,
+          "effects": [
+            { "type": "health", "delta": 8, "reason": "助行器提供稳定支撑，降低跌倒风险" },
+            { "type": "independence", "delta": 5, "reason": "保留自主行走能力" },
+            { "type": "mood", "delta": 3, "reason": "能自己走，不用坐轮椅" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "zhou_act1_d3_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "周爷爷双手扶住助行器，试着走了两步——稳了。他点了点头：'这个行，比拐杖踏实。'助行器支撑面大，适合他现在的肌力和平衡水平，而且他在用它走路——这是康复，不是放弃。",
+            "explanation": "最优选择：四脚助行器。它匹配周爷爷3级肌力和较差的平衡能力，支撑面大、稳定性好。关键在于——用助行器他还是在'走'，保留了行走能力和康复空间。轮椅可以作为长距离外出时的备用，但不能作为主要辅具，否则肌力会进一步退化。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "直接用轮椅，安全第一",
+          "description": "最安全，但放弃行走能力",
+          "isCorrect": false,
+          "effects": [
+            { "type": "independence", "delta": -8, "reason": "长期坐轮椅导致肌力退化" },
+            { "type": "mood", "delta": -5, "reason": "坐轮椅等于承认彻底走不了了" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhou_act1_d3_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "轮椅确实最安全，但周爷爷坐上去后，半天没说话。他看着助行器被推到一边，眼神暗了下来。安全是安全了，但他觉得自己被'判了刑'——以后就只能坐这个了。",
+            "explanation": "轮椅适合肌力2级以下或完全无法站立的老人。周爷爷肌力3级、能站立行走，过早使用轮椅会导致'废用综合征'——能走的肌肉因为不用而萎缩，本来能恢复的功能也退化了。辅具要'就低不就高'，保留最大自理空间。"
+          }
+        }
+      ],
+      "tags": ["choice", "mobility-aid", "rehabilitation"],
+      "devNote": "教学：辅具选择三原则——匹配肌力、保留自理空间、留康复余地"
+    },
+    {
+      "id": "zhou_act1_d3_003",
+      "characterId": "zhou_yeye",
+      "act": 1,
+      "day": 3,
+      "type": "dayEnd",
+      "scene": "living_room",
+      "illustrationId": "zhou_day3_end",
+      "dialogues": [
+        {
+          "id": "dlg_020",
+          "speaker": "elder",
+          "speakerName": "周爷爷",
+          "text": "助行器……我先用着。等腿脚好些了，说不定能换回拐杖。",
+          "layer": "essential",
+          "emotion": "determined"
+        },
+        {
+          "id": "dlg_021",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "他说'先用着'——说明他接受了助行器，但心里还惦记着有一天能走回拐杖。这份不甘心，是他康复最大的动力。辅具不是终点，是康复路上的过渡。轮椅先收着，以后出门远路再用。",
+          "layer": "essential",
+          "emotion": "warm",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "zhou_act1_d4_001",
+      "characterId": "zhou_yeye",
+      "act": 1,
+      "day": 4,
+      "type": "narrative",
+      "scene": "living_room",
+      "illustrationId": "zhou_rehab_training",
+      "dialogues": [
+        {
+          "id": "dlg_022",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "上午九点，社区康复师小李上门了。今天的训练内容是左侧上肢主动运动——抬臂、握球、手指操。周爷爷坐在椅子上，右手握着左手，努力往上抬。抬到一半，左臂开始发抖，球从手里滑落了。",
+          "layer": "essential",
+          "duration": 4500,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_023",
+          "speaker": "elder",
+          "speakerName": "周爷爷",
+          "text": "不行了……今天没力气。要不……明天再练吧。",
+          "layer": "essential",
+          "emotion": "tired",
+          "typingSpeed": 40
+        },
+        {
+          "id": "dlg_024",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "周爷爷想放弃今天的训练。康复训练最怕的就是'三天打鱼两天晒网'——脑梗后前6个月是黄金恢复期，错过就难补回来。但他确实累了，强迫也不是办法。你怎么回应？",
+          "layer": "essential",
+          "emotion": "worried"
+        }
+      ],
+      "nextNode": "zhou_act1_d4_002",
+      "isCheckpoint": true,
+      "tags": ["rehabilitation", "psychology"],
+      "devNote": "Day 4 康复训练，教学康复坚持与强度控制"
+    },
+    {
+      "id": "zhou_act1_d4_002",
+      "characterId": "zhou_yeye",
+      "act": 1,
+      "day": 4,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "zhou_rehab_choice",
+      "dialogues": [
+        {
+          "id": "dlg_025",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "周爷爷说'明天再练'。康复原则是循序渐进、持之以恒，但也不能过度疲劳。你觉得怎么做最合适？",
+          "layer": "essential",
+          "emotion": "curious"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "既然累了就休息吧，明天再练",
+          "description": "顺从他，今天跳过训练",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": -5, "reason": "康复训练中断，机能可能退化" },
+            { "type": "independence", "delta": -2, "reason": "训练不规律影响恢复" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhou_act1_d4_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "周爷爷靠回椅背，松了口气。但康复师小李皱了皱眉：'周叔，今天练了才一半，明天还得从头来。'康复训练最怕中断——今天偷的懒，明天要花双倍力气补回来。",
+            "explanation": "脑梗康复的黄金期是发病后6个月内，周爷爷现在正好在这个窗口期。训练中断会导致已恢复的机能退步，'明天再练'往往会变成'后天再练'，最终放弃。尊重老人感受不等于放弃训练，而是调整强度。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "鼓励他调整强度再坚持一会儿：换个轻松的动作做完今天的量",
+          "description": "循序渐进，调整强度但不断训练",
+          "isCorrect": true,
+          "effects": [
+            { "type": "health", "delta": 8, "reason": "坚持完成训练，维持恢复节奏" },
+            { "type": "mood", "delta": 3, "reason": "完成训练的成就感" },
+            { "type": "independence", "delta": 3, "reason": "上肢功能逐步恢复" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "zhou_act1_d4_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "你跟康复师商量了一下，把后半段换成坐位手指操——轻松些，但也在练。周爷爷犹豫了一下，还是做了。做完后他活动活动左手：'还行，没那么累了。'今天该练的，没落下。",
+            "explanation": "最优策略：调整强度而非中断训练。康复原则是'循序渐进、持之以恒'——累了可以降强度，但不能停。把高强度的抬臂换成低强度的手指操，既尊重了他的疲劳感，又保证了训练连续性。脑梗恢复期每一天都很宝贵。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "必须完成今天的全部训练量，不能半途而废",
+          "description": "强迫完成，不顾疲劳",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": -3, "reason": "过度训练可能导致肌肉拉伤" },
+            { "type": "mood", "delta": -5, "reason": "被强迫的挫败和痛苦" },
+            { "type": "trust", "delta": -3, "reason": "觉得你不顾及他的感受" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhou_act1_d4_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "周爷爷咬着牙把训练做完了，但左手在发抖，脸上全是汗。做完后他一句话没说，靠在椅子上闭了半天眼。明天他可能会更抗拒训练——强迫只会让他把康复和痛苦绑在一起。",
+            "explanation": "过度训练有害无益。脑梗后肌肉容易痉挛和拉伤，疲劳状态下强行训练可能造成损伤。更严重的是心理影响——如果每次训练都是痛苦的，老人会越来越抗拒，最终彻底放弃。康复需要坚持，但不能以痛苦为代价。"
+          }
+        }
+      ],
+      "tags": ["choice", "rehabilitation", "psychology"],
+      "devNote": "教学：康复训练——循序渐进、持之以恒、调整强度而非中断"
+    },
+    {
+      "id": "zhou_act1_d4_003",
+      "characterId": "zhou_yeye",
+      "act": 1,
+      "day": 4,
+      "type": "dayEnd",
+      "scene": "living_room",
+      "illustrationId": "zhou_day4_end",
+      "dialogues": [
+        {
+          "id": "dlg_026",
+          "speaker": "elder",
+          "speakerName": "周爷爷",
+          "text": "以前在厂里画图纸，一站就是一天。现在抬个胳膊都费劲……但你说得对，练一点是一点。",
+          "layer": "essential",
+          "emotion": "nostalgic"
+        },
+        {
+          "id": "dlg_027",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "他拿自己的过去和现在比，心里有落差。但他选择'练一点是一点'——这就是不甘心变成动力。脑梗康复是场马拉松，每天的坚持都在往回走一点点。",
+          "layer": "essential",
+          "emotion": "warm",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "zhou_act1_d5_001",
+      "characterId": "zhou_yeye",
+      "act": 1,
+      "day": 5,
+      "type": "narrative",
+      "scene": "living_room",
+      "illustrationId": "zhou_medication_management",
+      "dialogues": [
+        {
+          "id": "dlg_028",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "午饭后，该吃药了。周爷爷盯着智能药盒和旁边的一排药瓶，眉头越皱越紧。阿司匹林、阿托伐他汀、缬沙坦、丁苯酞——四种药，早晚各一轮。他拿起一个药瓶看了看，又放下。",
+          "layer": "essential",
+          "duration": 4500,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_029",
+          "speaker": "elder",
+          "speakerName": "周爷爷",
+          "text": "小芳啊，这药也太多了。我血压也还行，那个降压的能不能少吃一颗？还有那个什么他汀，我血脂又不高……",
+          "layer": "essential",
+          "emotion": "reluctant",
+          "typingSpeed": 40
+        },
+        {
+          "id": "dlg_030",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "周爷爷嫌药多，想自行减药。这些药是脑梗二级预防的'铁三角'——抗血小板（阿司匹林）、降脂稳定斑块（他汀）、降压（缬沙坦），加上改善脑循环的丁苯酞。擅自停药是脑梗复发最危险的因素之一。你怎么回应他的减药要求？",
+          "layer": "essential",
+          "emotion": "serious"
+        }
+      ],
+      "nextNode": "zhou_act1_d5_002",
+      "isCheckpoint": true,
+      "tags": ["medication", "stroke-prevention"],
+      "devNote": "Day 5 用药管理，教学脑梗二级预防药物不可擅自停减"
+    },
+    {
+      "id": "zhou_act1_d5_002",
+      "characterId": "zhou_yeye",
+      "act": 1,
+      "day": 5,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "zhou_medication_choice",
+      "dialogues": [
+        {
+          "id": "dlg_031",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "周爷爷想少吃几种药。他是工程师出身，讲道理他听得进去——但怎么说很重要。你选择怎么回应？",
+          "layer": "essential",
+          "emotion": "curious"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "同意他少吃一两种，血压确实还行",
+          "description": "顺从他，自行减药",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": -8, "reason": "擅自停用二级预防药物，脑梗复发风险大增" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhou_act1_d5_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "周爷爷少吃了降压药和他汀。短期内他感觉没什么变化——但脑梗二级预防的药物是'无声的守护'，停了不会立刻出事，但血管里的斑块在悄悄长大，血压在悄悄波动。等出事的时候，就是下一次脑梗。",
+            "explanation": "脑梗二级预防药物不可擅自停减。阿司匹林防止血栓形成、他汀稳定血管斑块、降压药控制血压——这三者是预防复发的'铁三角'。'血压还行'是吃药的结果，不是停药的理由。擅自停药是脑梗复发最重要的危险因素。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "解释每种药的作用，用工程师能听懂的方式说明为什么不能停",
+          "description": "健康教育，讲道理让他理解",
+          "isCorrect": true,
+          "effects": [
+            { "type": "health", "delta": 8, "reason": "规律服药，二级预防到位" },
+            { "type": "trust", "delta": 5, "reason": "尊重他的理解力，讲道理而非命令" },
+            { "type": "independence", "delta": 2, "reason": "理解后主动配合用药" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "zhou_act1_d5_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "你说：'周爷爷，阿司匹林就像给血管内壁上了防锈漆，防止血小板凝集长血栓；他汀是给血管壁做加固，把不稳定的斑块封住，不让它破裂；降压药是控制管道压力，压力大了血管容易爆。您是工程师，这套道理您比我懂。'周爷爷听完，点了点头：'这么说我就明白了。行，吃。'",
+            "explanation": "最优策略：用他听得懂的方式讲道理。周爷爷是工程师出身，用工程类比解释药理，他一听就懂。二级预防药物不是'多吃药'，而是'维护管道安全'。理解了原理，他才会主动配合——被动吃药和主动配合，效果天差地别。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "把四种药混在一起让他一次吞了",
+          "description": "图省事，不分类不讲解",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": -5, "reason": "药物同服可能影响吸收，存在相互作用风险" },
+            { "type": "trust", "delta": -2, "reason": "觉得不负责任" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhou_act1_d5_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "四种药一把吞了。阿司匹林和丁苯酞倒是没事，但阿托伐他汀和某些药同服会增加肌肉副作用的风险。而且周爷爷不知道自己吃的是什么，下次他更想减药——反正都是一把吞，少吃几颗谁知道？",
+            "explanation": "药物混服有相互作用风险。阿托伐他汀与某些药物同服可能增加横纹肌溶解风险。更重要的是，让老人理解自己吃什么药、为什么吃，是用药管理的基础——不理解就不会配合，不配合就会擅自停减。"
+          }
+        }
+      ],
+      "props": [
+        {
+          "propId": "zhou_smart_pill_box",
+          "layer": "display",
+          "autoShow": true
+        }
+      ],
+      "tags": ["choice", "medication", "stroke-prevention"],
+      "devNote": "教学：脑梗二级预防药物不可擅自停减 + 用老人能听懂的方式做健康教育"
+    },
+    {
+      "id": "zhou_act1_d5_003",
+      "characterId": "zhou_yeye",
+      "act": 1,
+      "day": 5,
+      "type": "dayEnd",
+      "scene": "living_room",
+      "illustrationId": "zhou_day5_end",
+      "dialogues": [
+        {
+          "id": "dlg_032",
+          "speaker": "elder",
+          "speakerName": "周爷爷",
+          "text": "防锈漆、加固、控制管道压力……你这么一比喻，我倒是记住了。这些药我好好吃。",
+          "layer": "essential",
+          "emotion": "understanding"
+        },
+        {
+          "id": "dlg_033",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "周爷爷主动说'好好吃'，这比被逼着吃药强一百倍。记住这个方法：讲道理、用类比、尊重理解力。工程师的逻辑思维是他最大的财富，照护他要用'说理'而非'命令'。",
+          "layer": "essential",
+          "emotion": "encouraging",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "zhou_act1_d6_001",
+      "characterId": "zhou_yeye",
+      "act": 1,
+      "day": 6,
+      "type": "narrative",
+      "scene": "bathroom",
+      "illustrationId": "zhou_home_safety_check",
+      "dialogues": [
+        {
+          "id": "dlg_034",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "今天精灵要做一次家居安全排查。周爷爷的家是二十年前的老装修：卫生间地砖滑、马桶旁没有扶手、走廊有3厘米高的门槛、床边没有护栏。上周他在卫生间门口差点摔那一跤，就是因为门槛绊了左脚。",
+          "layer": "essential",
+          "duration": 4500,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_035",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "家居安全排查时间。脑梗后偏瘫老人最大的风险是跌倒——而跌倒最常发生在卫生间和起夜路上。来看看这个家的隐患：卫生间地面湿滑、马桶旁无扶手、走廊有门槛、床边无夜灯。女儿装的紧急呼叫按钮在客厅——但跌倒最可能在卫生间。",
+          "layer": "essential",
+          "emotion": "serious"
+        },
+        {
+          "id": "dlg_036",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "紧急呼叫按钮目前装在客厅墙上。你觉得它应该装在哪里最合适？这是安全排查的第一个问题。",
+          "layer": "essential",
+          "emotion": "curious"
+        }
+      ],
+      "props": [
+        {
+          "propId": "zhou_emergency_button",
+          "layer": "display",
+          "autoShow": true
+        }
+      ],
+      "nextNode": "zhou_act1_d6_002",
+      "isCheckpoint": true,
+      "tags": ["home-safety", "fall-prevention"],
+      "devNote": "Day 6 家居安全排查，引入紧急呼叫按钮和安全隐患"
+    },
+    {
+      "id": "zhou_act1_d6_002",
+      "characterId": "zhou_yeye",
+      "act": 1,
+      "day": 6,
+      "type": "choice",
+      "scene": "bathroom",
+      "illustrationId": "zhou_safety_choice",
+      "dialogues": [
+        {
+          "id": "dlg_037",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "安全排查发现多处隐患，但预算和时间有限，需要排优先级。你觉得先处理哪个？",
+          "layer": "essential",
+          "emotion": "curious"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "先给卫生间铺防滑垫、马桶旁装扶手",
+          "description": "优先处理跌倒最高风险区域",
+          "isCorrect": true,
+          "effects": [
+            { "type": "health", "delta": 8, "reason": "卫生间跌倒风险大幅降低" },
+            { "type": "independence", "delta": 3, "reason": "有扶手支撑，如厕更自主" },
+            { "type": "trust", "delta": 3, "reason": "感受到被认真保护" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "zhou_act1_d6_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "防滑垫铺上了，马桶旁的扶手也装好了。周爷爷扶着扶手坐下、站起来，试了试：'这个好，踏实多了。'卫生间是老人跌倒的'头号战场'——湿滑地面加起坐动作，风险最高。先解决这里，性价比最高。",
+            "explanation": "最优策略：优先处理跌倒最高风险区域。统计显示，老人跌倒有60%发生在卫生间，其中如厕和洗澡时最多。防滑垫+扶手是性价比最高的改造——花费不多，但能消除最大风险。安全排查要分轻重缓急，先解决最高频、最高危的隐患。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "先在走廊装坡道消除门槛",
+          "description": "处理门槛绊脚隐患",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": 4, "reason": "门槛隐患解决，但卫生间风险仍在" }
+          ],
+          "spiritPowerChange": 5,
+          "nextNode": "zhou_act1_d6_003",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "门槛做了坡道处理，确实消除了一个隐患——上周周爷爷就是被门槛绊的。但卫生间还是湿滑的，马桶旁还是没扶手。安全排查不能只看'已经出过事的地方'，要系统地排查所有高风险区域。",
+            "explanation": "门槛确实是隐患，但不是最高优先级。安全排查的原则是'频率×后果'——卫生间跌倒频率最高（每天多次如厕洗澡）、后果最重（湿硬地砖+硬质洁具）。门槛虽然绊过一次，但频率低。先卫生间后走廊，才是正确的优先级。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "先在床到卫生间的路上装感应夜灯",
+          "description": "解决起夜照明问题",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": 3, "reason": "起夜照明改善，但卫生间和门槛风险仍在" }
+          ],
+          "spiritPowerChange": 5,
+          "nextNode": "zhou_act1_d6_003",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "夜灯装好了，起夜不用摸黑了。这是对的——脑梗老人起夜频繁，摸黑走路很危险。但这只是解决了'看路'的问题，地面还是滑的、马桶旁还是没扶手、门槛还是会绊。夜灯重要，但不是第一优先。",
+            "explanation": "夜灯是重要的安全措施，但优先级低于卫生间防滑。安全排查要分层：第一层是消除跌倒源头（防滑、扶手），第二层是改善行走环境（夜灯、坡道），第三层是应急响应（呼叫按钮）。先从源头解决。"
+          }
+        }
+      ],
+      "tags": ["choice", "home-safety", "fall-prevention"],
+      "devNote": "教学：安全排查优先级——频率×后果，卫生间优先"
+    },
+    {
+      "id": "zhou_act1_d6_003",
+      "characterId": "zhou_yeye",
+      "act": 1,
+      "day": 6,
+      "type": "dayEnd",
+      "scene": "bathroom",
+      "illustrationId": "zhou_day6_end",
+      "dialogues": [
+        {
+          "id": "dlg_038",
+          "speaker": "elder",
+          "speakerName": "周爷爷",
+          "text": "这个扶手装得好。以前上厕所蹲下去就怕站不起来，现在扶着就行了。还有那个防滑垫……早该铺了。",
+          "layer": "essential",
+          "emotion": "relieved"
+        },
+        {
+          "id": "dlg_039",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "今天的排查只是开始。卫生间解决了，但走廊门槛、床边护栏、紧急呼叫按钮位置……这些后面都要逐步处理。这就是'适老化改造'——不是一天完成的，是让家一点点变成安全的样子。第二幕我们会系统地做这件事。",
+          "layer": "essential",
+          "emotion": "thoughtful",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "zhou_act1_d7_001",
+      "characterId": "zhou_yeye",
+      "act": 1,
+      "day": 7,
+      "type": "narrative",
+      "scene": "living_room",
+      "illustrationId": "zhou_week1_summary",
+      "dialogues": [
+        {
+          "id": "dlg_040",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "第一周的最后一天。午后阳光斜斜地照进客厅，周爷爷坐在沙发上，助行器靠在手边。茶几上摆着女儿的平板电脑，上面显示着本周的康复训练记录——左手握力从2公斤提升到了3.5公斤。他看着那个数字，嘴角动了动。",
+          "layer": "essential",
+          "duration": 4500,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_041",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "一周总结时间。来看看你这周的照护成果。周爷爷从第一天的'够不到灯控'到今天'握力提升了1.5公斤'——每一个小数字背后都是你和他的坚持。",
+          "layer": "essential",
+          "emotion": "proud"
+        },
+        {
+          "id": "dlg_042",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "本周你学到的核心知识点：辅助而非替代、偏瘫穿衣先患侧后健侧、辅具选择匹配肌力、康复训练循序渐进、脑梗二级预防不可擅自停药、安全排查优先卫生间。这些是后面适老化改造和应急处理的基础。第二幕，我们要把这些零散的改造变成系统工程。",
+          "layer": "essential",
+          "emotion": "encouraging",
+          "typingSpeed": 35
+        }
+      ],
+      "nextNode": "zhou_act1_d7_002",
+      "isCheckpoint": true,
+      "tags": ["week-summary"],
+      "devNote": "Day 7 第一幕周总结，回顾本周知识点"
+    },
+    {
+      "id": "zhou_act1_d7_002",
+      "characterId": "zhou_yeye",
+      "act": 1,
+      "day": 7,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "zhou_week1_reflection",
+      "dialogues": [
+        {
+          "id": "dlg_043",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "第一周结束了。周爷爷的健康值从35开始——全角色最低，但他在配合、在努力。第二幕的核心挑战是适老化改造和长护险申请。回顾这七天，你觉得第二幕的重点应该放在哪？",
+          "layer": "essential",
+          "emotion": "thoughtful"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "重点是让周爷爷恢复得更快，加大康复强度",
+          "description": "过度关注身体恢复",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": -3, "reason": "过度康复可能适得其反" },
+            { "type": "mood", "delta": -2, "reason": "压力过大影响心态" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhou_act1_d7_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "康复固然重要，但脑梗后遗症的恢复是有天花板的——半年黄金期过了之后会进入平台期。周爷爷的健康值提升空间有限，这是现实。第二幕真正的重点不是'恢复更快'，而是'活得更安全、更有尊严'。",
+            "explanation": "脑梗后遗症的恢复有客观规律。周爷爷已经发病半年，正处于黄金期尾声，恢复速度会逐渐放缓。第二幕的重点应从'身体恢复'转向'环境适应'和'心理支持'——适老化改造让他安全地自理，长护险提供持续照护资源，心理支持帮他面对不甘心。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "重点是适老化改造和长护险，让环境匹配他的能力",
+          "description": "系统改造环境 + 对接照护资源",
+          "isCorrect": true,
+          "effects": [
+            { "type": "trust", "delta": 5, "reason": "系统化照护让周爷爷更有安全感" },
+            { "type": "mood", "delta": 3, "reason": "看到家在为他改变" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "zhou_act1_d7_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "你说到了核心。脑梗后遗症不可逆，但环境可以改、资源可以找。第二幕的两大任务：第一，系统地进行适老化改造——用家居平面图规划扶手、坡道、防滑垫的位置；第二，申请长护险，让专业照护资源进来。身体恢复有极限，但安全和生活质量没有上限。",
+            "explanation": "最优策略：第二幕重点放在环境改造和资源协调。周爷爷的健康值提升有限（脑梗后遗症不可逆），但通过适老化改造可以大幅降低跌倒风险、提升自理能力，通过长护险可以引入专业照护资源减轻家庭负担。这就是'资源协调'技能树的核心——不是什么都自己扛，而是善用社会支持系统。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "重点是多陪他聊天，心情好比什么都重要",
+          "description": "只关注心理，忽视实际需求",
+          "isCorrect": false,
+          "effects": [
+            { "type": "mood", "delta": 2, "reason": "陪伴确实让他开心" },
+            { "type": "health", "delta": -2, "reason": "安全隐患和用药风险被忽视" }
+          ],
+          "spiritPowerChange": 5,
+          "nextNode": "zhou_act1_d7_003",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "陪伴确实重要，周爷爷的心情值也在涨。但如果卫生间还会滑、门槛还会绊、长护险没申请、跌倒风险没解决……光聊天是不够的。心理支持和实际照护要两手抓。",
+            "explanation": "心理支持是照护的重要部分，但不能替代实际的环境改造和资源协调。周爷爷面临的是真实的安全风险和生活障碍，光'陪聊'解决不了卫生间滑、门槛绊、照护负担重这些问题。第二幕需要系统性的行动。"
+          }
+        }
+      ],
+      "tags": ["choice", "week-summary", "strategy"],
+      "devNote": "Day 7 周总结选择：第二幕策略方向——适老化改造+长护险"
+    },
+    {
+      "id": "zhou_act1_d7_003",
+      "characterId": "zhou_yeye",
+      "act": 1,
+      "day": 7,
+      "type": "actEnd",
+      "scene": "living_room",
+      "illustrationId": "zhou_act1_end",
+      "dialogues": [
+        {
+          "id": "dlg_044",
+          "speaker": "elder",
+          "speakerName": "周爷爷",
+          "text": "这一周……比前几个月过得明白。以前总觉得半边身子不听使唤，日子就没法过了。现在知道了，够不到的东西可以挪过来，穿不上的袖子换个顺序就行了。日子……还能过。",
+          "layer": "essential",
+          "emotion": "hopeful"
+        },
+        {
+          "id": "dlg_045",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "周爷爷的手搭在助行器上，指尖无意识地摩挲着扶手。窗外传来楼下广场舞的音乐，他侧耳听了一会儿，目光里有一丝说不清的东西。也许是怀念，也许是不甘，也许只是阳光太暖了。",
+          "layer": "emotional",
+          "typingSpeed": 40
+        },
+        {
+          "id": "dlg_046",
+          "speaker": "spirit",
+          "speakerName": "小筑",
+          "text": "第一幕结束。周爷爷说'日子还能过'——对一个脑梗后遗症的老人来说，这句话重千钧。第二幕，我们要让这个'能过'变成'过得好'。适老化改造、长护险、心理突破、社交恢复……真正的挑战才刚开始。",
+          "layer": "essential",
+          "emotion": "warm",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["act-end"],
+      "devNote": "第一幕结束节点"
+    }
+  ]
+}

@@ -1,0 +1,1533 @@
+{
+  "characterId": "zhang_nainai",
+  "act": 3,
+  "title": "第三幕：守护与告别",
+  "theme": "应急处理、疼痛管理与三十天回顾",
+  "startDay": 22,
+  "endDay": 30,
+  "nodes": [
+    {
+      "id": "zhang_act3_d22_001",
+      "characterId": "zhang_nainai",
+      "act": 3,
+      "day": 22,
+      "type": "narrative",
+      "scene": "bedroom",
+      "illustrationId": "zhang_night_waking",
+      "dialogues": [
+        {
+          "id": "dlg_d22_1",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "凌晨两点，你被一阵轻微的动静惊醒。张奶奶又起夜了——这已经是今晚的第三次。她摸黑拄着拐杖往卫生间走，过道的夜灯亮了起来。",
+          "layer": "essential",
+          "duration": 4500,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_d22_2",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "一晚起夜三次，这周已经连续好几天了。频繁起夜可能是正常的老年变化，但也可能是心脏问题的信号。得过心脏病的张奶奶，这事不能掉以轻心。",
+          "layer": "essential",
+          "emotion": "concerned"
+        }
+      ],
+      "nextNode": "zhang_act3_d22_002",
+      "tags": ["night-care", "heart-disease"]
+    },
+    {
+      "id": "zhang_act3_d22_002",
+      "characterId": "zhang_nainai",
+      "act": 3,
+      "day": 22,
+      "type": "choice",
+      "scene": "bedroom",
+      "illustrationId": "zhang_night_choice",
+      "dialogues": [
+        {
+          "id": "dlg_d22_3",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "频繁起夜该怎么处理？",
+          "layer": "essential",
+          "emotion": "curious"
+        }
+      ],
+      "choices": [
+        {
+          "id": "zhang_act3_d22_002_a",
+          "text": "了解起夜原因，评估是心脏问题还是正常老化，调整睡前饮水和用药时间，确保夜灯和路径安全",
+          "description": "系统评估+环境保障",
+          "isCorrect": true,
+          "effects": [
+            { "type": "health", "delta": 8, "reason": "及时评估原因" },
+            { "type": "independence", "delta": 3, "reason": "保障安全行走" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "zhang_act3_d22_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "很好！起夜频繁要先找原因——心脏病人夜间平卧回心血量增加，可能引起夜间多尿；也可能是利尿剂吃的时间太晚。调整睡前饮水时间和用药时间，同时确保夜灯亮着、路径无障碍，这些都能降低夜间跌倒风险。",
+            "explanation": "起夜照护：评估原因（心脏病/药物/前列腺/正常老化）+调整饮水和用药时间+确保夜灯和路径安全。心脏病患者夜间频繁起夜需警惕心功能变化。"
+          }
+        },
+        {
+          "id": "zhang_act3_d22_002_b",
+          "text": "限制她睡前喝水，减少起夜次数",
+          "description": "减少饮水",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": -5, "reason": "限水可能加重心脏负担" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhang_act3_d22_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "限制饮水看似能减少起夜，但老年人本来就容易缺水，血液变稠反而增加心脏负担和血栓风险。问题不在喝不喝水，而在为什么起夜这么频繁。",
+            "explanation": "盲目限制老人饮水有健康风险。应先查明起夜原因，而非简单减少饮水。心脏病患者适当饮水很重要。"
+          }
+        },
+        {
+          "id": "zhang_act3_d22_002_c",
+          "text": "每次她起夜都陪着她去卫生间",
+          "description": "全程陪同",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": 4, "reason": "有人保护" },
+            { "type": "independence", "delta": -3, "reason": "形成依赖" }
+          ],
+          "spiritPowerChange": 5,
+          "nextNode": "zhang_act3_d22_003",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "陪着安全一些，但每次都陪，她会依赖你，自己反而不敢走。而且你也不能保证每次都醒。关键是把环境弄安全——夜灯、防滑、路径畅通——让她自己也能安全地走。",
+            "explanation": "全程陪同虽安全但降低独立性且不可持续。应以环境安全保障为主，适度陪同为辅。"
+          }
+        }
+      ],
+      "tags": ["choice", "night-care", "heart-disease"]
+    },
+    {
+      "id": "zhang_act3_d22_003",
+      "characterId": "zhang_nainai",
+      "act": 3,
+      "day": 22,
+      "type": "dialogue",
+      "scene": "bedroom",
+      "illustrationId": "zhang_night_safe",
+      "dialogues": [
+        {
+          "id": "dlg_d22_4",
+          "speaker": "elder",
+          "speakerName": "张奶奶",
+          "text": "这灯装得好，起夜不用摸黑了。今晚我少喝点水，看看能不能少起两次。",
+          "layer": "essential",
+          "emotion": "calm"
+        },
+        {
+          "id": "dlg_d22_5",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "别让她完全断水哦。明天继续观察起夜情况，如果还这么频繁，得带她去查查心脏了。",
+          "layer": "emotional",
+          "emotion": "gentle",
+          "typingSpeed": 35
+        }
+      ],
+      "nextNode": "zhang_act3_d22_004",
+      "isCheckpoint": true
+    },
+    {
+      "id": "zhang_act3_d22_004",
+      "characterId": "zhang_nainai",
+      "act": 3,
+      "day": 22,
+      "type": "dayEnd",
+      "scene": "bedroom",
+      "illustrationId": "zhang_night_rest",
+      "dialogues": [
+        {
+          "id": "dlg_d22_6",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "起夜照护的关键：找原因、保安全、别盲目限水。明天要密切观察——起夜频繁可能是心脏在报警。",
+          "layer": "essential",
+          "emotion": "thoughtful"
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "zhang_act3_d23_001",
+      "characterId": "zhang_nainai",
+      "act": 3,
+      "day": 23,
+      "type": "narrative",
+      "scene": "bedroom",
+      "illustrationId": "zhang_orthopnea",
+      "dialogues": [
+        {
+          "id": "dlg_d23_1",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "今早你发现张奶奶的枕头垫高了两层，她说昨晚平躺着喘不上气，半坐半靠才好一些。今天起夜的次数更多了，还觉得腿有点肿。",
+          "layer": "essential",
+          "duration": 4500,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_d23_2",
+          "speaker": "elder",
+          "speakerName": "张奶奶",
+          "text": "没什么大事，就是躺下有点闷。枕头垫高就好了，你别担心。",
+          "layer": "essential",
+          "emotion": "dismissive"
+        },
+        {
+          "id": "dlg_d23_3",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "注意！夜间不能平卧、要垫高枕头才能呼吸、下肢水肿——这是心功能不全的典型表现！她又在「忍着不说」了，但这次不一样，这是心脏在求救。",
+          "layer": "essential",
+          "emotion": "urgent"
+        }
+      ],
+      "nextNode": "zhang_act3_d23_002",
+      "tags": ["heart-disease", "warning-sign"]
+    },
+    {
+      "id": "zhang_act3_d23_002",
+      "characterId": "zhang_nainai",
+      "act": 3,
+      "day": 23,
+      "type": "choice",
+      "scene": "bedroom",
+      "illustrationId": "zhang_heart_warning",
+      "dialogues": [
+        {
+          "id": "dlg_d23_4",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "她有夜间端坐呼吸和下肢水肿——心功能不全的信号。你怎么处理？",
+          "layer": "essential",
+          "emotion": "curious"
+        }
+      ],
+      "choices": [
+        {
+          "id": "zhang_act3_d23_002_a",
+          "text": "记录症状，尽快预约心内科复查，向医生描述夜间呼吸困难、水肿和起夜增多",
+          "description": "重视信号+及时就医",
+          "isCorrect": true,
+          "effects": [
+            { "type": "health", "delta": 8, "reason": "及时就医评估" },
+            { "type": "trust", "delta": 3, "reason": "认真对待她的不适" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "zhang_act3_d23_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "非常对！夜间端坐呼吸、下肢水肿、起夜频繁——这三个症状加在一起，高度提示心功能不全。这不是「忍忍就好」的事，必须尽快让心内科医生评估，可能需要调整用药。你记录的症状对医生判断非常重要。",
+            "explanation": "心脏病恶化信号：夜间端坐呼吸（平卧呼吸困难）、下肢水肿、起夜增多。这些是心功能不全的表现，需尽快就医调整治疗方案，不可拖延。"
+          }
+        },
+        {
+          "id": "zhang_act3_d23_002_b",
+          "text": "觉得是正常的老化现象，老年人起夜多很常见",
+          "description": "当作正常老化",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": -8, "reason": "心功能恶化被忽视" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhang_act3_d23_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "起夜多可能是正常，但加上「躺下喘不上气」和「腿肿」就不正常了！这是心脏功能在恶化，拖下去可能发展成心衰急性发作。她忍着不说，你再不当回事，就危险了。",
+            "explanation": "心功能不全症状不可归为「正常老化」。端坐呼吸+水肿是病理信号，延误诊治可能导致急性心衰。"
+          }
+        },
+        {
+          "id": "zhang_act3_d23_002_c",
+          "text": "让她多垫几个枕头，先缓解症状观察几天",
+          "description": "对症缓解",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": -5, "reason": "只缓解症状未治本" },
+            { "type": "mood", "delta": 1, "reason": "暂时舒服些" }
+          ],
+          "spiritPowerChange": 5,
+          "nextNode": "zhang_act3_d23_003",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "垫枕头能暂时缓解呼吸困难，但这只是治标。心脏的问题还在恶化，不就医调整用药，症状只会越来越重。别等出了大事才行动。",
+            "explanation": "对症缓解不能替代病因治疗。心功能恶化需医疗干预，仅靠体位调整会延误病情。"
+          }
+        }
+      ],
+      "tags": ["choice", "heart-disease", "warning-sign"]
+    },
+    {
+      "id": "zhang_act3_d23_003",
+      "characterId": "zhang_nainai",
+      "act": 3,
+      "day": 23,
+      "type": "dialogue",
+      "scene": "bedroom",
+      "illustrationId": "zhang_doc_appointment",
+      "dialogues": [
+        {
+          "id": "dlg_d23_5",
+          "speaker": "elder",
+          "speakerName": "张奶奶",
+          "text": "（叹气）你是真操心……行吧，去看看也好。我就是怕你们请假扣工资。",
+          "layer": "essential",
+          "emotion": "resigned"
+        },
+        {
+          "id": "dlg_d23_6",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "你约了后天心内科的号。但她嘴上说着「去看看」，眼神里还是藏着不安。",
+          "layer": "emotional",
+          "typingSpeed": 35
+        }
+      ],
+      "nextNode": "zhang_act3_d23_004",
+      "isCheckpoint": true
+    },
+    {
+      "id": "zhang_act3_d23_004",
+      "characterId": "zhang_nainai",
+      "act": 3,
+      "day": 23,
+      "type": "dayEnd",
+      "scene": "bedroom",
+      "illustrationId": "zhang_night_rest",
+      "dialogues": [
+        {
+          "id": "dlg_d23_7",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "明天就医前一天。留意她的状态——心脏不好的老人，随时可能有变化。备好硝酸甘油，放在她伸手就能够到的地方。",
+          "layer": "essential",
+          "emotion": "serious"
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "zhang_act3_d24_001",
+      "characterId": "zhang_nainai",
+      "act": 3,
+      "day": 24,
+      "type": "narrative",
+      "scene": "living_room",
+      "illustrationId": "zhang_chest_discomfort",
+      "dialogues": [
+        {
+          "id": "dlg_d24_1",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "就医前一天下午，张奶奶坐在沙发上看电视，忽然用手按了按胸口，皱了皱眉。她很快放下手，若无其事地继续看。",
+          "layer": "essential",
+          "duration": 4500,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_d24_2",
+          "speaker": "elder",
+          "speakerName": "张奶奶",
+          "text": "没事，就是胸口有点闷，一会儿就好了。",
+          "layer": "essential",
+          "emotion": "dismissive"
+        },
+        {
+          "id": "dlg_d24_3",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "她有心脏病史，现在又有心功能不全的迹象，胸闷绝不是「一会儿就好」的事。这可能是心绞痛的前兆。你注意到她今天的日记了吗？",
+          "layer": "essential",
+          "emotion": "concerned"
+        }
+      ],
+      "nextNode": "zhang_act3_d24_002",
+      "props": [
+        {
+          "propId": "zhang_diary_d24",
+          "layer": "inspect",
+          "autoShow": true
+        }
+      ],
+      "tags": ["heart-disease", "cognition-foreshadow", "warning-sign"]
+    },
+    {
+      "id": "zhang_act3_d24_002",
+      "characterId": "zhang_nainai",
+      "act": 3,
+      "day": 24,
+      "type": "narrative",
+      "scene": "living_room",
+      "illustrationId": "zhang_diary_page",
+      "dialogues": [
+        {
+          "id": "dlg_d24_4",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "你翻开她的硬抄本，今天的页面上除了血压数字，还写着一段话。",
+          "layer": "essential",
+          "emotion": "gentle"
+        },
+        {
+          "id": "dlg_d24_5",
+          "speaker": "elder",
+          "speakerName": "张奶奶",
+          "text": "（日记）孙女上次来，问我记不记得她小学的事。我说记得，其实有点模糊了。胸口闷闷的，不知道是不是该跟孩子说。算了，明天就去看医生了。",
+          "layer": "emotional",
+          "emotion": "worried",
+          "typingSpeed": 35
+        },
+        {
+          "id": "dlg_d24_6",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "嗯……这个现象，我记下来了。她说记性模糊了，这是要注意的信号。但眼下更要紧的是她的胸闷——这可能是心绞痛前兆。",
+          "layer": "essential",
+          "emotion": "thoughtful"
+        }
+      ],
+      "nextNode": "zhang_act3_d24_003",
+      "tags": ["cognition-foreshadow", "foreshadow-diary"]
+    },
+    {
+      "id": "zhang_act3_d24_003",
+      "characterId": "zhang_nainai",
+      "act": 3,
+      "day": 24,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "zhang_chest_choice",
+      "dialogues": [
+        {
+          "id": "dlg_d24_7",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "她有心脏病史，现在胸闷。这可能是心绞痛前兆，你怎么处理？",
+          "layer": "essential",
+          "emotion": "curious"
+        }
+      ],
+      "choices": [
+        {
+          "id": "zhang_act3_d24_003_a",
+          "text": "重视，详细询问胸闷的性质、持续时间和诱因，备好硝酸甘油，密切观察",
+          "description": "重视+评估+备药+观察",
+          "isCorrect": true,
+          "effects": [
+            { "type": "health", "delta": 8, "reason": "及时识别心绞痛前兆" },
+            { "type": "trust", "delta": 3, "reason": "认真对待" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "zhang_act3_d24_004",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "非常对！心脏病人的胸闷不能掉以轻心。问清楚——是闷痛还是刺痛？持续多久？活动后加重吗？同时把硝酸甘油放在她手边。如果胸闷加重或出现胸痛、出汗，立刻含服硝酸甘油。明天本来就要去看医生，现在更要提高警惕。",
+            "explanation": "心绞痛前兆识别：胸闷/胸痛的性质、持续时间、诱因评估+硝酸甘油备药+密切观察。心脏病患者新发胸闷需作为心绞痛前兆对待，不可轻视。"
+          }
+        },
+        {
+          "id": "zhang_act3_d24_003_b",
+          "text": "「明天就去看医生了，今晚休息一下就好」",
+          "description": "等明天再说",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": -8, "reason": "心绞痛前兆被忽视" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhang_act3_d24_004",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "明天看医生没错，但心绞痛可能今晚就发作！她有心脏病史，胸闷是警报。如果不备好硝酸甘油、不密切观察，万一半夜发作就来不及了。",
+            "explanation": "心绞痛前兆不可拖延等待。应立即评估、备药、观察，做好应急准备，而非被动等待既定就诊。"
+          }
+        },
+        {
+          "id": "zhang_act3_d24_003_c",
+          "text": "让她躺下休息，喝点热水",
+          "description": "休息缓解",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": -5, "reason": "未识别危险信号" }
+          ],
+          "spiritPowerChange": 5,
+          "nextNode": "zhang_act3_d24_004",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "休息是对的，但光休息不够。她昨天还有端坐呼吸——躺平可能反而让她更闷。应该半坐位休息，备好硝酸甘油，密切观察。如果加重，马上含药。",
+            "explanation": "心功能不全患者不宜完全平卧。应半坐位休息+备药观察，单纯休息不解决潜在的心绞痛风险。"
+          }
+        }
+      ],
+      "tags": ["choice", "heart-disease", "warning-sign"]
+    },
+    {
+      "id": "zhang_act3_d24_004",
+      "characterId": "zhang_nainai",
+      "act": 3,
+      "day": 24,
+      "type": "dayEnd",
+      "scene": "living_room",
+      "illustrationId": "zhang_night_rest",
+      "dialogues": [
+        {
+          "id": "dlg_d24_8",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "硝酸甘油放在床头了。今夜要警醒——她有心脏病史，胸闷是前兆。明天一早就去医院。但有些事，可能等不到明天……",
+          "layer": "essential",
+          "emotion": "serious"
+        }
+      ],
+      "tags": ["day-end"],
+      "devNote": "Day 24伏笔日记：记性模糊，精灵标注。同时为Day 25心绞痛发作做铺垫"
+    },
+    {
+      "id": "zhang_act3_d25_001",
+      "characterId": "zhang_nainai",
+      "act": 3,
+      "day": 25,
+      "type": "event",
+      "scene": "bedroom",
+      "illustrationId": "zhang_angina_attack",
+      "dialogues": [
+        {
+          "id": "dlg_d25_1",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "凌晨四点，一声急促的呼吸声把你惊醒。张奶奶半坐在床上，一只手紧紧按着胸口，额头全是冷汗，嘴唇有些发紫。",
+          "layer": "essential",
+          "duration": 3000,
+          "typingSpeed": 40
+        },
+        {
+          "id": "dlg_d25_2",
+          "speaker": "elder",
+          "speakerName": "张奶奶",
+          "text": "（艰难地）胸口……疼得厉害……喘不上气……",
+          "layer": "essential",
+          "emotion": "pain"
+        },
+        {
+          "id": "dlg_d25_3",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "心绞痛发作了！这是紧急情况！你只有15秒做出判断——每一秒都在和心脏抢时间！",
+          "layer": "essential",
+          "emotion": "urgent",
+          "duration": 2000
+        }
+      ],
+      "nextNode": "zhang_act3_d25_002",
+      "transition": {
+        "enter": "flash",
+        "illustrationTransition": "zoom",
+        "duration": 300
+      },
+      "tags": ["emergency", "angina", "timed-15s"],
+      "devNote": "心绞痛发作事件节点，限时15秒决策。超时默认选择「拨打120」(部分正确)"
+    },
+    {
+      "id": "zhang_act3_d25_002",
+      "characterId": "zhang_nainai",
+      "act": 3,
+      "day": 25,
+      "type": "choice",
+      "scene": "bedroom",
+      "illustrationId": "zhang_angina_choice",
+      "dialogues": [
+        {
+          "id": "dlg_d25_4",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "快！她胸口剧痛、出冷汗——典型的心绞痛发作！15秒内做出选择！",
+          "layer": "essential",
+          "emotion": "urgent"
+        }
+      ],
+      "choices": [
+        {
+          "id": "zhang_act3_d25_002_a",
+          "text": "让她半坐位保持安静，立刻舌下含服硝酸甘油，安抚她，准备拨打120",
+          "description": "含药+静卧+准备呼救",
+          "isCorrect": true,
+          "effects": [
+            { "type": "health", "delta": 8, "reason": "正确处置心绞痛" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "zhang_act3_d25_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "做得对！心绞痛发作的急救三步：第一，让她保持半坐位安静休息，减少心脏负担；第二，立刻舌下含服硝酸甘油——舌下含服起效最快，一到三分钟就能缓解；第三，安抚她别紧张，同时准备拨打120。如果五分钟不缓解，再含一片并立即呼救。你准备得很充分，硝酸甘油就在手边。",
+            "explanation": "心绞痛急救：半坐位静卧+舌下含服硝酸甘油（1-3分钟起效）+安抚+准备呼救。5分钟不缓解可再含1片并拨打120。硝酸甘油必须舌下含服，不能吞服。"
+          }
+        },
+        {
+          "id": "zhang_act3_d25_002_b",
+          "text": "立刻拨打120，等急救人员来处理",
+          "description": "先打急救电话",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": 4, "reason": "呼叫了急救但延误含药" }
+          ],
+          "spiritPowerChange": 5,
+          "nextNode": "zhang_act3_d25_003",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "打120是对的，但等救护车来的这几分钟，心绞痛可能加重甚至发展成心梗！应该先含硝酸甘油再打120，双管齐下。每一秒都在消耗心肌，含药越快越好。",
+            "explanation": "心绞痛急救应同步进行：先含硝酸甘油（争取时间）再拨打120。仅等待急救而未含药会延误心肌缺血的缓解，增加心梗风险。"
+          }
+        },
+        {
+          "id": "zhang_act3_d25_002_c",
+          "text": "让她躺平休息，给她喝水顺顺气",
+          "description": "平躺休息",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": -8, "reason": "错误体位加重心脏负担" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhang_act3_d25_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "千万别让她躺平！平卧会让回心血量增加，心脏负担更重，心绞痛会更严重。应该半坐位。也不能喝水——万一呛了更危险。快，含硝酸甘油！",
+            "explanation": "心绞痛发作忌平卧（增加心脏回血负担）和进食饮水（误吸风险）。正确体位为半坐位，立即舌下含服硝酸甘油。"
+          }
+        }
+      ],
+      "tags": ["choice", "emergency", "angina", "timed-15s"]
+    },
+    {
+      "id": "zhang_act3_d25_003",
+      "characterId": "zhang_nainai",
+      "act": 3,
+      "day": 25,
+      "type": "narrative",
+      "scene": "bedroom",
+      "illustrationId": "zhang_after_angina",
+      "dialogues": [
+        {
+          "id": "dlg_d25_5",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "硝酸甘油含下去三分钟，张奶奶的眉头渐渐松开，呼吸平稳了些。救护车的声音由远及近。",
+          "layer": "essential",
+          "duration": 4000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_d25_6",
+          "speaker": "elder",
+          "speakerName": "张奶奶",
+          "text": "（虚弱地）还好……你在。药也在。",
+          "layer": "essential",
+          "emotion": "relieved"
+        },
+        {
+          "id": "dlg_d25_7",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "她缓过来了。硝酸甘油和你的冷静救了她。但今天还不能松懈——心脏病发作后，接下来几天仍然有风险。",
+          "layer": "essential",
+          "emotion": "relieved"
+        }
+      ],
+      "nextNode": "zhang_act3_d25_004",
+      "isCheckpoint": true,
+      "unlocks": [
+        {
+          "albumEntryId": "album_zhang_angina_handled"
+        }
+      ]
+    },
+    {
+      "id": "zhang_act3_d25_004",
+      "characterId": "zhang_nainai",
+      "act": 3,
+      "day": 25,
+      "type": "dayEnd",
+      "scene": "bedroom",
+      "illustrationId": "zhang_night_rest",
+      "dialogues": [
+        {
+          "id": "dlg_d25_8",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "心绞痛急救记住了：半坐位+舌下含硝酸甘油+准备呼救。明天她从医院回来，但风险还没完全过去——要格外留心跌倒。",
+          "layer": "essential",
+          "emotion": "thoughtful"
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "zhang_act3_d26_001",
+      "characterId": "zhang_nainai",
+      "act": 3,
+      "day": 26,
+      "type": "event",
+      "scene": "bathroom",
+      "illustrationId": "zhang_fall_event",
+      "dialogues": [
+        {
+          "id": "dlg_d26_1",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "从医院回来的第二天傍晚。张奶奶去卫生间，你听到「咚」的一声闷响，接着是拐杖倒地的声音。",
+          "layer": "essential",
+          "duration": 3000,
+          "typingSpeed": 40
+        },
+        {
+          "id": "dlg_d26_2",
+          "speaker": "elder",
+          "speakerName": "张奶奶",
+          "text": "（从卫生间传来）哎……我摔了……",
+          "layer": "essential",
+          "emotion": "pain"
+        },
+        {
+          "id": "dlg_d26_3",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "她跌倒了！别慌，但也别急——你只有30秒做出正确判断。跌倒后第一时间的处置，决定了后果的严重程度！",
+          "layer": "essential",
+          "emotion": "urgent",
+          "duration": 2000
+        }
+      ],
+      "nextNode": "zhang_act3_d26_002",
+      "transition": {
+        "enter": "flash",
+        "illustrationTransition": "zoom",
+        "duration": 300
+      },
+      "tags": ["emergency", "fall", "timed-30s"],
+      "devNote": "跌倒事件节点，限时30秒决策。超时默认选择「立即扶起」(错误)"
+    },
+    {
+      "id": "zhang_act3_d26_002",
+      "characterId": "zhang_nainai",
+      "act": 3,
+      "day": 26,
+      "type": "choice",
+      "scene": "bathroom",
+      "illustrationId": "zhang_fall_choice",
+      "dialogues": [
+        {
+          "id": "dlg_d26_4",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "她跌倒了！30秒内——你的第一反应是什么？",
+          "layer": "essential",
+          "emotion": "urgent"
+        }
+      ],
+      "choices": [
+        {
+          "id": "zhang_act3_d26_002_a",
+          "text": "先不扶，隔着门询问意识和疼痛情况，评估有无骨折，准备拨打120",
+          "description": "先评估再行动",
+          "isCorrect": true,
+          "effects": [
+            { "type": "health", "delta": 8, "reason": "正确跌倒处置" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "zhang_act3_d26_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "完全正确！跌倒后最重要的原则：不要立即扶起！先问清楚——意识清醒吗？哪里疼？能不能动？她有骨质疏松，贸然扶起可能造成骨折移位或二次损伤。如果她说腰疼、腿疼不能动，很可能是骨折，绝对不能动她，立刻打120等专业人员处理。",
+            "explanation": "跌倒处置原则：先询问（意识/疼痛/活动能力）再评估（有无骨折/出血/脊柱损伤），不立即扶起。骨质疏松患者跌倒后骨折风险高，盲目搬动可致二次损伤。疑似骨折应制动并呼叫120。"
+          }
+        },
+        {
+          "id": "zhang_act3_d26_002_b",
+          "text": "立刻冲进去把她扶起来",
+          "description": "马上扶起",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": -8, "reason": "盲目搬动可能造成二次损伤" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhang_act3_d26_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "停下！千万别急着扶！她有骨质疏松，万一摔骨折了，你一扶可能让骨折移位，伤得更重。先问清楚情况，再决定怎么处理。心急反而帮倒忙。",
+            "explanation": "跌倒后立即扶起是严重错误。可能有骨折、脊柱损伤或内脏损伤，盲目搬动会造成二次伤害。必须先评估再行动。"
+          }
+        },
+        {
+          "id": "zhang_act3_d26_002_c",
+          "text": "冲进去把她扶成坐姿靠在墙上",
+          "description": "扶成坐姿",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": -5, "reason": "改变体位仍有风险" }
+          ],
+          "spiritPowerChange": 5,
+          "nextNode": "zhang_act3_d26_003",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "比直接扶起好一点，但还是有风险。如果她骨折了，任何体位改变都可能加重损伤。正确做法是先问、再评估，确认没有骨折才能慢慢扶。不确定就别动，打120。",
+            "explanation": "跌倒后改变体位仍有二次损伤风险。应先评估有无骨折再决定是否搬动，不确定时保持原位等待专业救援。"
+          }
+        }
+      ],
+      "tags": ["choice", "emergency", "fall", "timed-30s"]
+    },
+    {
+      "id": "zhang_act3_d26_003",
+      "characterId": "zhang_nainai",
+      "act": 3,
+      "day": 26,
+      "type": "narrative",
+      "scene": "bathroom",
+      "illustrationId": "zhang_after_fall",
+      "dialogues": [
+        {
+          "id": "dlg_d26_5",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "你隔着门问：「奶奶，您意识清醒吗？哪里疼？能动吗？」",
+          "layer": "essential",
+          "duration": 3000,
+          "typingSpeed": 35
+        },
+        {
+          "id": "dlg_d26_6",
+          "speaker": "elder",
+          "speakerName": "张奶奶",
+          "text": "清醒……就是右胯疼，腿不太敢动……",
+          "layer": "essential",
+          "emotion": "pain"
+        },
+        {
+          "id": "dlg_d26_7",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "右胯疼、腿不敢动——可能是髋部骨折！骨质疏松老人跌倒后最常见的就是髋骨骨折。绝对不能搬动她，立刻打120！",
+          "layer": "essential",
+          "emotion": "urgent"
+        }
+      ],
+      "nextNode": "zhang_act3_d26_004",
+      "isCheckpoint": true
+    },
+    {
+      "id": "zhang_act3_d26_004",
+      "characterId": "zhang_nainai",
+      "act": 3,
+      "day": 26,
+      "type": "dayEnd",
+      "scene": "bathroom",
+      "illustrationId": "zhang_ambulance",
+      "dialogues": [
+        {
+          "id": "dlg_d26_8",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "120来了。急救人员小心地把张奶奶固定在担架上，她握着你的手，没有松开。",
+          "layer": "essential",
+          "duration": 4000,
+          "typingSpeed": 35
+        },
+        {
+          "id": "dlg_d26_9",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "你没有急着扶她，这份冷静避免了二次伤害。明天在医院，要跟医生说清楚情况。",
+          "layer": "essential",
+          "emotion": "relieved"
+        }
+      ],
+      "tags": ["day-end"],
+      "unlocks": [
+        {
+          "albumEntryId": "album_zhang_fall_handled"
+        }
+      ]
+    },
+    {
+      "id": "zhang_act3_d27_001",
+      "characterId": "zhang_nainai",
+      "act": 3,
+      "day": 27,
+      "type": "narrative",
+      "scene": "hospital",
+      "illustrationId": "zhang_hospital",
+      "dialogues": [
+        {
+          "id": "dlg_d27_1",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "医院急诊。医生需要了解张奶奶的情况——跌倒经过、既往病史、用药情况。这些信息你掌握得越全，医生判断越准。",
+          "layer": "essential",
+          "duration": 4000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_d27_2",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "拨打120和跟医生沟通时，信息越完整越能争取时间。你知道该怎么描述吗？",
+          "layer": "essential",
+          "emotion": "curious"
+        }
+      ],
+      "nextNode": "zhang_act3_d27_002",
+      "tags": ["emergency", "hospital"]
+    },
+    {
+      "id": "zhang_act3_d27_002",
+      "characterId": "zhang_nainai",
+      "act": 3,
+      "day": 27,
+      "type": "choice",
+      "scene": "hospital",
+      "illustrationId": "zhang_doctor_comm",
+      "dialogues": [
+        {
+          "id": "dlg_d27_3",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "你需要向医生描述张奶奶的情况。你会怎么说？",
+          "layer": "essential",
+          "emotion": "curious"
+        }
+      ],
+      "choices": [
+        {
+          "id": "zhang_act3_d27_002_a",
+          "text": "清晰说明：地址/年龄/跌倒经过/意识清醒/右胯疼痛不能动/心脏病和骨质疏松史/当前用药/两天前心绞痛发作",
+          "description": "完整传递关键信息",
+          "isCorrect": true,
+          "effects": [
+            { "type": "health", "delta": 8, "reason": "信息完整帮助医生判断" },
+            { "type": "trust", "delta": 3, "reason": "认真负责" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "zhang_act3_d27_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "非常好！跟医生沟通要抓住四个关键：发生了什么（跌倒经过）、现在什么状况（意识/疼痛/活动）、既往病史（心脏病/骨质疏松）、用药情况（阿司匹林/美托洛尔/硝酸甘油等）。特别是两天前的心绞痛发作——这对医生判断病情至关重要。你带上了她的硬抄本，血压记录和用药清单一目了然。",
+            "explanation": "拨打120/就医沟通要点：地址+症状+意识状态+病史+用药史+近期发作情况。信息越完整，医生判断越快越准。平时备好用药清单和健康记录本，紧急时刻能救命。"
+          }
+        },
+        {
+          "id": "zhang_act3_d27_002_b",
+          "text": "「老人摔了，快来/快来处理」",
+          "description": "简单描述",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": -3, "reason": "信息不足影响判断" }
+          ],
+          "spiritPowerChange": 5,
+          "nextNode": "zhang_act3_d27_003",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "说了情况但太简略。医生不知道她有心脏病、不知道她刚发作过心绞痛、不知道用药情况——这些都会影响治疗方案。比如她吃阿司匹林，手术时出血风险就不同。信息越全越好。",
+            "explanation": "就医沟通信息不足会影响诊疗决策。用药史（特别是抗凝药）和近期发作史对治疗方案有重大影响，必须告知。"
+          }
+        },
+        {
+          "id": "zhang_act3_d27_002_c",
+          "text": "自己开车送她去，比等120快",
+          "description": "自行送医",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": -5, "reason": "搬动不当可能加重损伤" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhang_act3_d27_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "自己开车送看起来快，但她可能有髋骨骨折，你自己搬动上车的过程中可能造成骨折移位。而且车上没有急救设备，万一途中出状况处理不了。120有专业担架和急救人员，更安全。",
+            "explanation": "疑似骨折/心脏病患者应由专业急救人员转运。自行搬动和运输缺乏固定设备和急救能力，有二次损伤和途中风险。"
+          }
+        }
+      ],
+      "tags": ["choice", "emergency", "hospital"]
+    },
+    {
+      "id": "zhang_act3_d27_003",
+      "characterId": "zhang_nainai",
+      "act": 3,
+      "day": 27,
+      "type": "dialogue",
+      "scene": "hospital",
+      "illustrationId": "zhang_hospital_bed",
+      "dialogues": [
+        {
+          "id": "dlg_d27_4",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "医生检查后确认：右侧髋骨骨裂，没有完全断裂，加上心绞痛的评估，建议保守治疗，住院观察。你带来的硬抄本和用药清单帮了大忙。",
+          "layer": "essential",
+          "duration": 4000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_d27_5",
+          "speaker": "elder",
+          "speakerName": "张奶奶",
+          "text": "（躺在病床上，虚弱地笑）还好没断……还好你在。要是没人管，我这把老骨头……",
+          "layer": "essential",
+          "emotion": "grateful"
+        },
+        {
+          "id": "dlg_d27_6",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "她骨裂保守治疗，需要卧床休养和后续康复。你的冷静和准备，把伤害降到了最低。接下来是漫长的疼痛管理。",
+          "layer": "essential",
+          "emotion": "relieved"
+        }
+      ],
+      "nextNode": "zhang_act3_d27_004",
+      "isCheckpoint": true
+    },
+    {
+      "id": "zhang_act3_d27_004",
+      "characterId": "zhang_nainai",
+      "act": 3,
+      "day": 27,
+      "type": "dayEnd",
+      "scene": "hospital",
+      "illustrationId": "zhang_hospital_night",
+      "dialogues": [
+        {
+          "id": "dlg_d27_7",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "应急处理的四课都学完了：跌倒先评估不急扶、心绞痛含药半坐位、就医沟通说全信息、120专业转运。接下来是疼痛管理——骨折恢复期会疼，怎么帮她扛过去。",
+          "layer": "essential",
+          "emotion": "encouraging"
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "zhang_act3_d28_001",
+      "characterId": "zhang_nainai",
+      "act": 3,
+      "day": 28,
+      "type": "narrative",
+      "scene": "hospital",
+      "illustrationId": "zhang_pain_management",
+      "dialogues": [
+        {
+          "id": "dlg_d28_1",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "出院回家休养。张奶奶卧床，右胯还是会疼，尤其翻身的时候。她咬着牙不吭声，你看到她攥紧了被角。",
+          "layer": "essential",
+          "duration": 4500,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_d28_2",
+          "speaker": "elder",
+          "speakerName": "张奶奶",
+          "text": "不疼不疼，翻身而已。你别老守着我，去忙你的。",
+          "layer": "essential",
+          "emotion": "dismissive"
+        },
+        {
+          "id": "dlg_d28_3",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "又来了——「不疼」「你别守着」。她攥着被角的手在发抖。骨折恢复期的疼痛管理很重要，疼得睡不好会影响恢复，还会引发抑郁。怎么帮她？",
+          "layer": "essential",
+          "emotion": "concerned"
+        }
+      ],
+      "nextNode": "zhang_act3_d28_002",
+      "tags": ["pain-management", "psychology"]
+    },
+    {
+      "id": "zhang_act3_d28_002",
+      "characterId": "zhang_nainai",
+      "act": 3,
+      "day": 28,
+      "type": "choice",
+      "scene": "hospital",
+      "illustrationId": "zhang_pain_choice",
+      "dialogues": [
+        {
+          "id": "dlg_d28_4",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "她在忍痛，攥着被角发抖却说「不疼」。你怎么管理她的疼痛？",
+          "layer": "essential",
+          "emotion": "curious"
+        }
+      ],
+      "choices": [
+        {
+          "id": "zhang_act3_d28_002_a",
+          "text": "按医嘱规律用药，记录疼痛变化，配合非药物缓解（热敷/体位调整），定期复查",
+          "description": "规律用药+记录+非药物+复查",
+          "isCorrect": true,
+          "effects": [
+            { "type": "health", "delta": 8, "reason": "科学疼痛管理" },
+            { "type": "mood", "delta": 3, "reason": "疼痛被关注" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "zhang_act3_d28_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "很好！疼痛管理的关键是「规律」而不是「疼了才吃」——按时用药能维持稳定的血药浓度，比疼得受不了再吃效果更好。同时记录疼痛的变化（什么时候疼、疼多久、什么程度），复诊时给医生看。热敷和调整体位能辅助缓解，但不能替代药物。别忘了她还在吃心脏病药，止痛药的选择要问过医生，避免药物冲突。",
+            "explanation": "疼痛管理四原则：按医嘱规律用药（非按需）+记录疼痛变化+非药物辅助（热敷/体位）+定期复查。注意心脏病患者的止痛药选择，避免药物相互作用。关注疼痛对心理的影响。"
+          }
+        },
+        {
+          "id": "zhang_act3_d28_002_b",
+          "text": "疼了就给她吃止痛药，不疼就不吃",
+          "description": "按需服药",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": -5, "reason": "按需服药效果不稳定" },
+            { "type": "mood", "delta": -2, "reason": "反复疼痛影响情绪" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhang_act3_d28_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "「疼了才吃」是很多人的误区。等疼得受不了再吃药，药效起效的那段时间她在硬扛。规律服药维持稳定浓度，反而用得更少、效果更好。而且她有心脏病，乱吃止痛药可能有风险。",
+            "explanation": "慢性疼痛应规律用药维持稳定血药浓度，按需服药会导致疼痛波动，反而增加用药总量和副作用。心脏病患者需注意止痛药与心血管药物的相互作用。"
+          }
+        },
+        {
+          "id": "zhang_act3_d28_002_c",
+          "text": "她说不疼就不勉强，老人忍忍就过去了",
+          "description": "尊重她的说法",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": -5, "reason": "疼痛被忽视影响恢复" },
+            { "type": "mood", "delta": -3, "reason": "忍痛的痛苦" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhang_act3_d28_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "她说不疼，但手在发抖。你还记得吗——她最擅长的就是「忍着不说」。疼得睡不好，恢复慢，还会抑郁。不能信她的「不疼」，要主动评估和管理。",
+            "explanation": "老人的「不疼」常不可信（忍痛习惯）。未管理的疼痛影响睡眠、食欲、情绪和康复进程。应主动评估疼痛程度并规律管理。"
+          }
+        }
+      ],
+      "tags": ["choice", "pain-management", "psychology"]
+    },
+    {
+      "id": "zhang_act3_d28_003",
+      "characterId": "zhang_nainai",
+      "act": 3,
+      "day": 28,
+      "type": "dialogue",
+      "scene": "hospital",
+      "illustrationId": "zhang_pain_relieved",
+      "dialogues": [
+        {
+          "id": "dlg_d28_5",
+          "speaker": "elder",
+          "speakerName": "张奶奶",
+          "text": "（服药后，语气缓和）你这么上心……我是不是该改改这毛病了。疼就说疼，不逞强了。",
+          "layer": "essential",
+          "emotion": "reflective"
+        },
+        {
+          "id": "dlg_d28_6",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "她终于不再说「不疼」了。这一刻，比任何药物都管用。",
+          "layer": "emotional",
+          "typingSpeed": 40
+        }
+      ],
+      "nextNode": "zhang_act3_d28_004",
+      "isCheckpoint": true,
+      "unlocks": [
+        {
+          "albumEntryId": "album_zhang_pain_managed"
+        }
+      ]
+    },
+    {
+      "id": "zhang_act3_d28_004",
+      "characterId": "zhang_nainai",
+      "act": 3,
+      "day": 28,
+      "type": "dayEnd",
+      "scene": "hospital",
+      "illustrationId": "zhang_night_rest",
+      "dialogues": [
+        {
+          "id": "dlg_d28_7",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "她愿意说疼了——三十天里最大的转变之一。明天我们回顾这三十天。",
+          "layer": "essential",
+          "emotion": "proud"
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "zhang_act3_d29_001",
+      "characterId": "zhang_nainai",
+      "act": 3,
+      "day": 29,
+      "type": "narrative",
+      "scene": "living_room",
+      "illustrationId": "zhang_review_album",
+      "dialogues": [
+        {
+          "id": "dlg_d29_1",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "第三十天前夕。张奶奶半靠在床上，你把这段时间的记忆相册翻开给她看——第一次扶她走路、她接受拐杖的那天、书法班上她写的第一个字……",
+          "layer": "essential",
+          "duration": 4500,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_d29_2",
+          "speaker": "elder",
+          "speakerName": "张奶奶",
+          "text": "（翻看着，眼眶湿润）这些……你都记着呢。我自己都快忘了。",
+          "layer": "essential",
+          "emotion": "moved"
+        },
+        {
+          "id": "dlg_d29_3",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "三十天了。从她「忍着不说」到愿意开口说疼，从害怕走路到拄着拐杖出门，从觉得自己是负担到知道被需要……这一路，你们一起走过来的。来，回顾一下这段旅程。",
+          "layer": "essential",
+          "emotion": "gentle"
+        }
+      ],
+      "nextNode": "zhang_act3_d29_002",
+      "tags": ["review", "emotional"]
+    },
+    {
+      "id": "zhang_act3_d29_002",
+      "characterId": "zhang_nainai",
+      "act": 3,
+      "day": 29,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "zhang_review_choice",
+      "dialogues": [
+        {
+          "id": "dlg_d29_4",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "回顾这三十天，你觉得张奶奶最大的变化是什么？",
+          "layer": "essential",
+          "emotion": "curious"
+        }
+      ],
+      "choices": [
+        {
+          "id": "zhang_act3_d29_002_a",
+          "text": "她愿意说出不适了，独立性和信任都提升了——从「忍着不说」到「疼就说疼」",
+          "description": "看到最核心的转变",
+          "isCorrect": true,
+          "effects": [
+            { "type": "mood", "delta": 8, "reason": "被真正理解" },
+            { "type": "trust", "delta": 3, "reason": "被看见" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "zhang_act3_d29_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "你看到了最本质的变化。三十天前，她揉着膝盖说「没事」；三十天后，她说「疼就说疼，不逞强了」。这个转变比任何身体指标的改善都珍贵。你学会了辅助而非替代，她学会了不再忍着不说——这是你们共同完成的成长。",
+            "explanation": "照护的核心成果不只是身体健康，更是心理和关系的转变。张奶奶从「忍着不说」到愿意表达，从怕成为负担到知道被需要——这是信任和心情提升的根本。"
+          }
+        },
+        {
+          "id": "zhang_act3_d29_002_b",
+          "text": "身体状况改善了，血压稳了，没再摔大跤",
+          "description": "关注身体指标",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": 4, "reason": "关注身体" },
+            { "type": "mood", "delta": 1, "reason": "有进步" }
+          ],
+          "spiritPowerChange": 5,
+          "nextNode": "zhang_act3_d29_003",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "身体确实有改善，但慢性病不会痊愈，她还是摔了骨裂。比身体更重要的是——她不再把话憋在心里了。这个变化，才是三十天最值得珍惜的。",
+            "explanation": "慢性病照护的目标不是治愈，而是生活质量和心理状态。仅关注身体指标会忽视照护更深层的人际和情感价值。"
+          }
+        },
+        {
+          "id": "zhang_act3_d29_002_c",
+          "text": "说实话，变化不大，她还是那个忍着不说的老太太",
+          "description": "觉得没太大改变",
+          "isCorrect": false,
+          "effects": [
+            { "type": "mood", "delta": -3, "reason": "被低估" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhang_act3_d29_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "真的吗？再想想——她主动说了腿疼、她接受了拐杖、她去上了书法班、她说出了怕成为负担的心事、她在疼痛时不再逞强……这些不是变化吗？有时候，最珍贵的改变发生在心里，需要你仔细去看。",
+            "explanation": "照护中的心理转变常被忽视。应关注老人的情感和关系变化，而非仅看身体和行为结果。"
+          }
+        }
+      ],
+      "tags": ["choice", "review", "emotional"]
+    },
+    {
+      "id": "zhang_act3_d29_003",
+      "characterId": "zhang_nainai",
+      "act": 3,
+      "day": 29,
+      "type": "dialogue",
+      "scene": "living_room",
+      "illustrationId": "zhang_notebook_revealed",
+      "dialogues": [
+        {
+          "id": "dlg_d29_5",
+          "speaker": "elder",
+          "speakerName": "张奶奶",
+          "text": "（把硬抄本递给你）这本子你留着。前面是血压，后面那些……是我这些天不敢跟你说的话。现在不用藏着了。",
+          "layer": "essential",
+          "emotion": "peaceful"
+        },
+        {
+          "id": "dlg_d29_6",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "你翻开那些页——有她对老伴的思念、有她怕跌倒的恐惧、有她心疼你们加班的自责、也有她偷偷写下的「今天孩子问我腿疼不疼，我说好多了，其实还是疼，但很高兴他记得问」。",
+          "layer": "emotional",
+          "typingSpeed": 35
+        },
+        {
+          "id": "dlg_d29_7",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "这本硬抄本，记的不只是血压——是三十天里，她从「忍着不说」到「愿意被看见」的全部路程。",
+          "layer": "emotional",
+          "emotion": "moved",
+          "typingSpeed": 35
+        }
+      ],
+      "nextNode": "zhang_act3_d29_004",
+      "isCheckpoint": true,
+      "unlocks": [
+        {
+          "albumEntryId": "album_zhang_notebook"
+        }
+      ]
+    },
+    {
+      "id": "zhang_act3_d29_004",
+      "characterId": "zhang_nainai",
+      "act": 3,
+      "day": 29,
+      "type": "dayEnd",
+      "scene": "living_room",
+      "illustrationId": "zhang_night_rest",
+      "dialogues": [
+        {
+          "id": "dlg_d29_8",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "明天是最后一天。三十天的守护，会画上一个句号——但不是结束，是一种新的开始。",
+          "layer": "essential",
+          "emotion": "gentle"
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "zhang_act3_d30_001",
+      "characterId": "zhang_nainai",
+      "act": 3,
+      "day": 30,
+      "type": "narrative",
+      "scene": "living_room",
+      "illustrationId": "zhang_day30",
+      "dialogues": [
+        {
+          "id": "dlg_d30_1",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "第三十天。阳光透过窗帘，和第一天一样。张奶奶坐在床边，拄着她挑的那根花梨木拐杖，硬抄本摊在膝上。她看起来和三十天前不一样了——不是身体，是眼神。",
+          "layer": "essential",
+          "duration": 5000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_d30_2",
+          "speaker": "elder",
+          "speakerName": "张奶奶",
+          "text": "三十天了。你教会了我不少事——怎么起床、怎么吃药、怎么不摔跤。但最让我记住的，是你愿意听我说。",
+          "layer": "essential",
+          "emotion": "grateful"
+        },
+        {
+          "id": "dlg_d30_3",
+          "speaker": "elder",
+          "speakerName": "张奶奶",
+          "text": "我这辈子教了一辈子书，最怕的就是没用了。这三十天，你让我觉得——我还有用，我还能被听见。",
+          "layer": "essential",
+          "emotion": "moved"
+        }
+      ],
+      "nextNode": "zhang_act3_d30_002",
+      "tags": ["ending", "emotional"]
+    },
+    {
+      "id": "zhang_act3_d30_002",
+      "characterId": "zhang_nainai",
+      "act": 3,
+      "day": 30,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "zhang_ending_choice",
+      "dialogues": [
+        {
+          "id": "dlg_d30_4",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "最后一步了。三十天的守护，你想对张奶奶说什么？",
+          "layer": "essential",
+          "emotion": "curious"
+        }
+      ],
+      "choices": [
+        {
+          "id": "zhang_act3_d30_002_a",
+          "text": "「您一直都有用。以后有什么不舒服，一定跟我说，别忍着」",
+          "description": "肯定价值+延续信任",
+          "isCorrect": true,
+          "effects": [
+            { "type": "mood", "delta": 8, "reason": "被肯定和接纳" },
+            { "type": "trust", "delta": 5, "reason": "信任的承诺" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "zhang_act3_d30_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "这是最好的收尾。「您一直都有用」——这是她最需要听到的话。「别忍着」——这是三十天里你们一起学会的最重要的功课。有些事比健康更重要，比如让她觉得自己还被人需要。",
+            "explanation": "照护的本质不只是管理身体，更是维护尊严和价值感。张奶奶的核心需求是「被需要」和「被听见」，这才是三十天守护最珍贵的成果。"
+          }
+        },
+        {
+          "id": "zhang_act3_d30_002_b",
+          "text": "「您好好养病，下次我带您去复查」",
+          "description": "关注后续治疗",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": 4, "reason": "关注健康" },
+            { "type": "mood", "delta": 2, "reason": "被关心" }
+          ],
+          "spiritPowerChange": 5,
+          "nextNode": "zhang_act3_d30_003",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "关心治疗没错，但这一刻她需要的不是医疗安排，而是情感上的回应。她说了「你让我觉得还有用」，你的回应应该接住这份感情。",
+            "explanation": "情感时刻应优先回应情感需求，而非转向事务性安排。照护中的情感连接比流程管理更能建立信任。"
+          }
+        },
+        {
+          "id": "zhang_act3_d30_002_c",
+          "text": "「这三十天辛苦您了，以后会更好的」",
+          "description": "客套收尾",
+          "isCorrect": false,
+          "effects": [
+            { "type": "mood", "delta": 2, "reason": "有回应" }
+          ],
+          "spiritPowerChange": 5,
+          "nextNode": "zhang_act3_d30_003",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "「以后会更好」是祝福，但太空了。她把自己最深的感受交给你，值得一个更真诚、更具体的回应。告诉她，她有用，她会被听见。",
+            "explanation": "情感回应应具体真诚，而非泛泛的祝福。空洞的客套无法建立深层的情感连接。"
+          }
+        }
+      ],
+      "tags": ["choice", "ending", "emotional"]
+    },
+    {
+      "id": "zhang_act3_d30_003",
+      "characterId": "zhang_nainai",
+      "act": 3,
+      "day": 30,
+      "type": "ending",
+      "scene": "living_room",
+      "illustrationId": "zhang_ending",
+      "dialogues": [
+        {
+          "id": "dlg_d30_5",
+          "speaker": "elder",
+          "speakerName": "张奶奶",
+          "text": "（笑了，眼角的皱纹里是温暖）好。我答应你，以后不忍着了。你也答应我——别光顾着忙，偶尔坐下来，陪我说说话。",
+          "layer": "essential",
+          "emotion": "warm"
+        },
+        {
+          "id": "dlg_d30_6",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "窗外的阳光落在她花白的头发上，落在那本写满字的硬抄本上，落在那根花梨木拐杖上。三十天，像翻完了一本旧相册。",
+          "layer": "emotional",
+          "typingSpeed": 35
+        },
+        {
+          "id": "dlg_d30_7",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "三十天的守护结束了。张奶奶的健康或许不会完全恢复——慢性病不会消失，骨裂也需要时间愈合。但有些东西改变了：她不再忍着不说，你知道怎么辅助而非替代，你们之间有了真正的信任。",
+          "layer": "essential",
+          "emotion": "gentle",
+          "typingSpeed": 35
+        },
+        {
+          "id": "dlg_d30_8",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "有些事情比健康更重要——比如让她觉得自己还被人需要，还被人听见。这，就是守护的意义。",
+          "layer": "emotional",
+          "emotion": "warm",
+          "typingSpeed": 35
+        },
+        {
+          "id": "dlg_d30_9",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "（精灵的光芒温暖而柔和，落在那本硬抄本上，像是在守护那些终于被说出口的话）谢谢你，守护者。这三十天，你做到了最好的照护——在身边，但不过度。",
+          "layer": "essential",
+          "emotion": "proud",
+          "typingSpeed": 35
+        }
+      ],
+      "isCheckpoint": true,
+      "unlocks": [
+        {
+          "albumEntryId": "album_zhang_ending"
+        },
+        {
+          "flag": "zhang_nainai_complete"
+        }
+      ],
+      "tags": ["ending", "act-end"],
+      "devNote": "Day 30结局节点。根据属性值判定结局类型：温暖守护/成长之路/深层理解/反思空间。张奶奶线预期结局为「深层理解」——健康值提升有限但心情和信任提升大"
+    }
+  ]
+}

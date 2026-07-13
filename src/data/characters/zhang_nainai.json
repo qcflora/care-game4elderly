@@ -1,0 +1,110 @@
+{
+  "id": "zhang_nainai",
+  "name": "张秀兰",
+  "nickname": "张奶奶",
+  "age": 78,
+  "gender": "female",
+  "avatar": "/images/characters/zhang_nainai.jpg",
+  "portrait": "/images/characters/zhang_nainai.jpg",
+  "watercolorBase": "/images/characters/zhang_nainai.jpg",
+  "background": "退休中学语文教师，78岁，和儿子一家同住。患有心脏病和骨质疏松，两年前在家里跌倒过一次，所幸只是擦伤，但从此对走路产生了恐惧。她心疼子女工作忙，身体不适时常常忍着不说，只在一个旧硬抄本上悄悄记下每天的血压数字。子女买的电子血压计她只量不记，习惯用纸和笔。数字生活度约30%，会接微信视频但不会主动发消息，痛点不是科技，而是忍着不说。",
+  "personality": [
+    "温和",
+    "隐忍",
+    "心疼子女",
+    "要强",
+    "害怕跌倒",
+    "习惯纸笔记录"
+  ],
+  "familyRelation": "与儿子儿媳同住，孙女偶尔周末来探望；老伴五年前去世",
+  "healthCondition": {
+    "disease": "心脏病、骨质疏松",
+    "severity": "moderate",
+    "medications": [
+      "阿司匹林肠溶片（抗血小板，晨起空腹）",
+      "酒石酸美托洛尔片（β受体阻滞剂，餐后）",
+      "阿托伐他汀钙片（降脂，睡前）",
+      "硝酸甘油片（急救备用，舌下含服）",
+      "碳酸钙D3片（补钙，餐后）",
+      "阿仑膦酸钠片（双膦酸盐，晨起空腹满杯水送服，服后保持直立30分钟）"
+    ],
+    "precautions": [
+      "防跌倒：地面防滑、夜灯常亮、卫生间扶手",
+      "起床先坐30秒，预防体位性低血压",
+      "心脏病发作时舌下含服硝酸甘油并静卧",
+      "骨质疏松避免弯腰提重物、避免突然扭转",
+      "规律监测血压并记录，关注夜间起夜情况"
+    ],
+    "dailyDecay": 3
+  },
+  "baseAttributes": {
+    "health": 45,
+    "mood": 60,
+    "independence": 50,
+    "trust": 65
+  },
+  "tensionRules": [
+    {
+      "source": "health",
+      "threshold": 40,
+      "operator": "<",
+      "target": "independence",
+      "perTurnDelta": -3,
+      "description": "健康值偏低时，子女容易过度保护，导致独立值加速下降"
+    },
+    {
+      "source": "independence",
+      "threshold": 30,
+      "operator": "<",
+      "target": "mood",
+      "perTurnDelta": -3,
+      "description": "独立值过低时，张奶奶感到自己成为负担，心情值下降"
+    },
+    {
+      "source": "trust",
+      "threshold": 30,
+      "operator": "<",
+      "target": "mood",
+      "perTurnDelta": -2,
+      "description": "信任值过低时，她更倾向于忍着不说，心情值下降"
+    }
+  ],
+  "storyActs": [
+    {
+      "act": 1,
+      "startDay": 1,
+      "endDay": 7,
+      "storyFile": "/data/stories/zhang_nainai/act1.json",
+      "title": "第一幕：晨间日常",
+      "theme": "建立照护节奏，学习基础观察与防跌倒"
+    },
+    {
+      "act": 2,
+      "startDay": 8,
+      "endDay": 21,
+      "storyFile": "/data/stories/zhang_nainai/act2.json",
+      "title": "第二幕：心声与平衡",
+      "theme": "破解忍着不说，跌倒预防与情感冲突"
+    },
+    {
+      "act": 3,
+      "startDay": 22,
+      "endDay": 30,
+      "storyFile": "/data/stories/zhang_nainai/act3.json",
+      "title": "第三幕：守护与告别",
+      "theme": "应急处理、疼痛管理与三十天回顾"
+    }
+  ],
+  "isLocked": false,
+  "spiritAppearance": {
+    "color": "#F5C842",
+    "lottieAnimation": "spirit_appear",
+    "name": "小精灵"
+  },
+  "endingWeights": {
+    "health": 0.2,
+    "mood": 0.3,
+    "independence": 0.2,
+    "trust": 0.3
+  }
+}

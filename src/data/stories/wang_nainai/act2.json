@@ -1,0 +1,674 @@
+{
+  "characterId": "wang_nainai",
+  "act": 2,
+  "title": "第二幕：陪伴",
+  "theme": "深入了解与高血压日常管理",
+  "startDay": 11,
+  "endDay": 20,
+  "nodes": [
+    {
+      "id": "wang_act2_d11_001",
+      "characterId": "wang_nainai",
+      "act": 2,
+      "day": 11,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "wang_photo_talk",
+      "dialogues": [
+        {
+          "id": "dlg_010",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "第十一天清晨，你来到王奶奶家。推开门，看见她坐在老相册前，对着一张和老伴的合影轻轻说话。客厅茶几上，降压药盒原封不动——她又一次忘了吃药。手机屏幕亮着，是儿子三天前发来的消息，她还没回。",
+          "layer": "essential",
+          "duration": 4500,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_011",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "她在和老伴'说话'……独居老人的孤独，往往藏在这些不经意的瞬间。药没吃、儿子的消息没回——这不是粗心，是心里装着事。怎么打开这个话题，又不伤她要强的自尊？",
+          "layer": "essential",
+          "emotion": "concerned"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "直接问她'奶奶你是不是很孤单，要不要给儿子打个电话'",
+          "description": "直言点破孤独",
+          "isCorrect": false,
+          "effects": [
+            { "type": "trust", "delta": -5, "reason": "被戳中痛处，自尊受损" },
+            { "type": "mood", "delta": -3, "reason": "孤单被当面点破，更难堪" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "wang_act2_d11_002",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "王奶奶自尊心强，最怕被人说'可怜''孤单'。你这么一问，她会立刻竖起防备，嘴上说'我才不孤单'，心里却关上了门。",
+            "explanation": "心理支持第一课：对要强的独居老人，'孤独'是不能直接戳破的痛点。直接点破会触发防御，她反而更不愿流露真实感受。要先绕开'孤独'这个词，用具体的关心让她自己打开。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "把药盒递给她，聊起儿子小时候的趣事，自然地提议一起给儿子发条视频",
+          "description": "尊重尊严，温和建立连接",
+          "isCorrect": true,
+          "effects": [
+            { "type": "trust", "delta": 8, "reason": "被理解、被尊重地陪伴" },
+            { "type": "mood", "delta": 6, "reason": "想起儿子，心里暖了" },
+            { "type": "health", "delta": 4, "reason": "顺手提醒了吃药" }
+          ],
+          "spiritPowerChange": 15,
+          "nextNode": "wang_act2_d11_002",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "太棒了！用'儿子小时候的趣事'勾起她的回忆，孤单就在故事里被化解了；递药盒是顺手的事，不是'监督'。她既吃了药，又愿意主动联系儿子。",
+            "explanation": "陪伴的核心技巧：把'关心'藏进日常的闲聊和动作里，而不是当成任务去完成。对自尊心强的老人，'顺便'比'特意'更让人舒服。回忆家人是打开心门的安全入口。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "不提这些，只提醒她该吃药了",
+          "description": "只管吃药，回避情绪",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": 4, "reason": "药吃了" },
+            { "type": "trust", "delta": 2, "reason": "关心有限" }
+          ],
+          "spiritPowerChange": 5,
+          "nextNode": "wang_act2_d11_002",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "药是吃了，可她心里那扇门你没敲。孤单还在那儿，儿子的消息还是没回。陪伴不只是管吃药，更是管心里的事。",
+            "explanation": "照护的两个层面：'身体的事'和'心里的事'。只管吃药是基础照护，但独居老人最缺的是情感连接。错过这次打开心门的机会，孤独会继续积累。"
+          }
+        }
+      ],
+      "props": [
+        {
+          "propId": "medicine_box",
+          "layer": "operate",
+          "autoShow": true
+        }
+      ],
+      "tags": ["choice", "loneliness", "medication", "companionship"],
+      "devNote": "第二幕开场，发现隐藏的孤独，建立陪伴基调"
+    },
+    {
+      "id": "wang_act2_d11_002",
+      "characterId": "wang_nainai",
+      "act": 2,
+      "day": 11,
+      "type": "dayEnd",
+      "scene": "living_room",
+      "illustrationId": "wang_recall_son",
+      "dialogues": [
+        {
+          "id": "dlg_012",
+          "speaker": "elder",
+          "speakerName": "王奶奶",
+          "text": "（接过药盒，自己取药）谢谢你啊。我儿子小时候啊，最怕打雷……一打雷就往我怀里钻。一转眼，他都当爸爸了。",
+          "layer": "essential",
+          "emotion": "nostalgic"
+        },
+        {
+          "id": "dlg_013",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "她说起儿子，眼睛亮了一下。陪伴，有时就是陪她回忆那些亮着的时刻。明天，我们聊聊她最倔强的一件事——吃药。",
+          "layer": "emotional",
+          "emotion": "gentle",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "wang_act2_d13_001",
+      "characterId": "wang_nainai",
+      "act": 2,
+      "day": 13,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "wang_meds_skip",
+      "dialogues": [
+        {
+          "id": "dlg_014",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "第十三天，王奶奶量了血压，128/82，比上周降了些。她一高兴，把早上的降压药收了起来：'头不晕了，血压也正常了，少吃一顿没事，是药三分毒嘛。'",
+          "layer": "essential",
+          "duration": 4000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_015",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "高血压用药最忌'见好就收'！血压正常正是药物在起作用，自行停药会导致血压反弹，甚至引发高血压危象。怎么说服这位当了一辈子老师、最讲'道理'的倔奶奶？",
+          "layer": "essential",
+          "emotion": "concerned"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "顺着她，少吃一顿确实没事",
+          "description": "附和停药",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": -8, "reason": "停药导致血压反弹，危象风险升高" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "wang_act2_d13_002",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "危险！高血压是慢性病，药物维持的是'稳态'，不是'治愈'。一旦停药，血压会报复性反弹，比吃药前更高，极易诱发脑卒中或心梗。'是药三分毒'不能用在降压药上。",
+            "explanation": "高血压用药铁律：降压药需长期规律服用，不可凭感觉自行停减。血压正常=药物在'站岗'，停药=撤哨。擅自停药是高血压患者发生危象的头号原因。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "用她听得进去的方式讲道理：血压正常是药在'站岗'，停药等于撤哨",
+          "description": "用比喻讲清用药道理",
+          "isCorrect": true,
+          "effects": [
+            { "type": "health", "delta": 8, "reason": "规律服药，血压稳定" },
+            { "type": "trust", "delta": 6, "reason": "被讲道理说服，而非被命令" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "wang_act2_d13_002",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "太高明了！'站岗'这个比方，王奶奶一听就懂——她当老师最讲究'道理'。把医学知识翻译成她能接受的生活逻辑，比说一百遍'必须吃药'都管用。",
+            "explanation": "对自尊心强、讲道理的老人，用药教育要'讲逻辑'而非'下命令'。降压药长期服用的原理：药物维持血管舒张和血容量稳定，停药后稳态被打破，血压反弹。用比喻（站岗/撤哨）让老人理解'正常=药在工作'，是从根本上解决'见好就收'的误区。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "直接把药拿出来监督她吃下",
+          "description": "强制监督",
+          "isCorrect": false,
+          "effects": [
+            { "type": "independence", "delta": -5, "reason": "被当小孩监督" },
+            { "type": "trust", "delta": -3, "reason": "自尊受损" }
+          ],
+          "spiritPowerChange": 2,
+          "nextNode": "wang_act2_d13_002",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "药是吃了，可她心里不舒服——'我又不是三岁小孩，还要人盯着'。被监督的次数多了，她会表面应付、背后偷偷停药，比你管更危险。",
+            "explanation": "照护的分寸：监督≠控制。对独立值中等的老人，强制监督会激发逆反，催生'假服药'行为（当面吃、背后吐）。正确的做法是讲清道理，让她自己愿意吃。自主的依从才是真依从。"
+          }
+        }
+      ],
+      "props": [
+        {
+          "propId": "bp_record_card",
+          "layer": "inspect",
+          "autoShow": true
+        }
+      ],
+      "tags": ["choice", "medication", "adherence", "hypertension"],
+      "devNote": "用药依从性教学，'见好就收'误区"
+    },
+    {
+      "id": "wang_act2_d13_002",
+      "characterId": "wang_nainai",
+      "act": 2,
+      "day": 13,
+      "type": "dayEnd",
+      "scene": "living_room",
+      "illustrationId": "wang_meds_agree",
+      "dialogues": [
+        {
+          "id": "dlg_016",
+          "speaker": "elder",
+          "speakerName": "王奶奶",
+          "text": "（想了想）'站岗'……这个比方好。我当老师那会儿，也跟学生说'好成绩是天天练出来的'。行，这药我天天吃，不撤哨。",
+          "layer": "essential",
+          "emotion": "convinced"
+        },
+        {
+          "id": "dlg_017",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "她用教师的逻辑理解了用药道理。对自尊心强的老人，'讲道理'比'下命令'管用一百倍。",
+          "layer": "emotional",
+          "emotion": "happy",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "wang_act2_d15_001",
+      "characterId": "wang_nainai",
+      "act": 2,
+      "day": 15,
+      "type": "choice",
+      "scene": "kitchen",
+      "illustrationId": "wang_salty_food",
+      "dialogues": [
+        {
+          "id": "dlg_018",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "第十五天中午，王奶奶做了一桌菜：腌萝卜、咸鱼干、酱豆腐，还往炒菜里多搁了一勺盐。'吃不咸没滋味，我吃了一辈子了。'她夹起一筷子咸鱼，理直气壮。",
+          "layer": "essential",
+          "duration": 4000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_019",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "高血压的'隐形杀手'就在这桌菜里。腌制品、咸鱼、酱料，钠含量远超标。可对节俭又念旧的奶奶，直接没收她会觉得'这也不让吃那也不让吃'。怎么帮她减盐，又不伤她的口味和面子？",
+          "layer": "essential",
+          "emotion": "thoughtful"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "把咸菜咸鱼全收走，告诉她高血压绝对不能吃",
+          "description": "一刀切禁食",
+          "isCorrect": false,
+          "effects": [
+            { "type": "mood", "delta": -5, "reason": "喜欢的菜被没收，委屈" },
+            { "type": "trust", "delta": -4, "reason": "被管束、被否定" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "wang_act2_d15_002",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "一刀切没收，她会觉得'活着还有什么意思'。何况咸菜是她节省了一辈子的习惯，硬夺等于否定她的生活方式。下次你不在，她照样偷偷吃。",
+            "explanation": "饮食管理忌'绝对禁止'。对念旧节俭的老人，强行改变饮食习惯会引发抵触和'偷偷吃'。减盐要循序渐进，用替代品保留滋味，而不是剥夺。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "教她用醋、葱、香菇提鲜代替盐，腌菜改成偶尔少量",
+          "description": "替代提鲜+渐进减盐",
+          "isCorrect": true,
+          "effects": [
+            { "type": "health", "delta": 8, "reason": "钠摄入降低，血压更稳" },
+            { "type": "mood", "delta": 5, "reason": "口味没受委屈" },
+            { "type": "trust", "delta": 4, "reason": "被尊重地引导" }
+          ],
+          "spiritPowerChange": 12,
+          "nextNode": "wang_act2_d15_002",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "漂亮！'减盐不减味'才是高血压饮食的长久之计。用醋和香菇提鲜，腌菜改成'偶尔解馋'——她既保住了口味，又降了钠。还想'教别人'呢，老师本色又回来了。",
+            "explanation": "高血压低盐饮食的实操要点：1.每日盐摄入<5克（约一啤酒瓶盖）；2.用醋、葱、姜、蒜、香菇、番茄等天然提鲜替代部分盐；3.腌制品、酱料、加工肉含'隐形盐'，需限量而非绝对禁；4.循序渐进，先减1/3，适应后再减。可持续比一刀切更重要。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "由着她吃，偶尔一顿没事",
+          "description": "放任不管",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": -5, "reason": "高钠饮食持续，血压难控" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "wang_act2_d15_002",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "高血压饮食管理最怕'偶尔'变'经常'。今天一顿咸鱼，明天一碟咸菜，钠摄入天天超标，降压药的效果都被抵消了。",
+            "explanation": "高血压是终身管理性疾病，饮食需长期低盐。'偶尔一顿'的累积效应不可忽视——老人节俭习惯下，腌菜往往是餐桌常客而非偶尔。需建立稳定的低盐饮食模式。"
+          }
+        }
+      ],
+      "props": [
+        {
+          "propId": "salt_spoon",
+          "layer": "display",
+          "autoShow": true
+        }
+      ],
+      "tags": ["choice", "diet", "salt-control", "hypertension"],
+      "devNote": "低盐饮食教学，减盐不减味"
+    },
+    {
+      "id": "wang_act2_d15_002",
+      "characterId": "wang_nainai",
+      "act": 2,
+      "day": 15,
+      "type": "dayEnd",
+      "scene": "kitchen",
+      "illustrationId": "wang_low_salt_cook",
+      "dialogues": [
+        {
+          "id": "dlg_020",
+          "speaker": "elder",
+          "speakerName": "王奶奶",
+          "text": "（尝了尝少盐加醋的菜）嗯……还挺鲜。这香菇提鲜的法子，我改天教教隔壁张老伴。她家那口子血压也高。",
+          "layer": "essential",
+          "emotion": "surprised"
+        },
+        {
+          "id": "dlg_021",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "她不仅接受了，还想'教别人'——老师的本色又回来了。减盐不剥夺滋味，而是换一种滋味。",
+          "layer": "emotional",
+          "emotion": "proud",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "wang_act2_d17_001",
+      "characterId": "wang_nainai",
+      "act": 2,
+      "day": 17,
+      "type": "dialogue",
+      "scene": "bedroom",
+      "illustrationId": "wang_lonely_night",
+      "dialogues": [
+        {
+          "id": "dlg_022",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "第十七天夜里，下了场小雨。王奶奶没开灯，坐在老伴的遗像旁，手里攥着一块旧手表——那是老伴留下的。她以为没人看见，轻声说：'老头子，今天又下雨了，你走的那天也下雨……儿子忙，我不怪他。就是这屋子，太静了。'",
+          "layer": "essential",
+          "duration": 5000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_023",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "（轻轻落在她肩头）这是她第一次在人前说出'太静了'。孤独不是没人管，是心里的话没人听。这一刻，陪伴比任何健康知识都重要。",
+          "layer": "essential",
+          "emotion": "gentle"
+        },
+        {
+          "id": "dlg_024",
+          "speaker": "elder",
+          "speakerName": "王奶奶",
+          "text": "（察觉到精灵，擦了擦眼角）哎呀，让你见笑了。我没事，就是……想起些旧事。人老了，夜里容易犯迷糊。",
+          "layer": "essential",
+          "emotion": "vulnerable"
+        }
+      ],
+      "nextNode": "wang_act2_d17_002",
+      "isCheckpoint": true,
+      "tags": ["dialogue", "vulnerability", "loneliness", "turning-point"],
+      "devNote": "第二幕情感转折点，她卸下防备吐露孤独"
+    },
+    {
+      "id": "wang_act2_d17_002",
+      "characterId": "wang_nainai",
+      "act": 2,
+      "day": 17,
+      "type": "choice",
+      "scene": "bedroom",
+      "illustrationId": "wang_night_talk",
+      "dialogues": [
+        {
+          "id": "dlg_025",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "她说出'太静了'，是卸下防备的信号。怎么接住这份脆弱？还有，她今晚情绪波动大，得留意别让她又忘了明早的药——情绪激动是高血压的诱因。",
+          "layer": "essential",
+          "emotion": "concerned"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "安慰她'别想太多，您儿子会经常回来看您的'",
+          "description": "安慰但否定情绪",
+          "isCorrect": false,
+          "effects": [
+            { "type": "trust", "delta": -4, "reason": "真心话被敷衍" },
+            { "type": "mood", "delta": -3, "reason": "没被真正听见" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "wang_act2_d17_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "'别想太多'和'儿子会回来的'，听着是安慰，其实是堵住了她的话。她鼓起多大勇气才说出'太静了'，被一句'别想太多'轻轻带过，下次就不会再说了。",
+            "explanation": "倾听的核心：不评判、不否认、不急着给方案。老人吐露脆弱时，她要的是'你听见我了'，不是'你别想了'。'别想太多'式安慰会切断倾诉，让孤独更深。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "安静地陪她坐一会儿，听她说老伴的事，临走提醒情绪激动对血压不好，明早药我来提醒",
+          "description": "倾听陪伴+情绪血压关联提醒",
+          "isCorrect": true,
+          "effects": [
+            { "type": "trust", "delta": 8, "reason": "被无声地托住" },
+            { "type": "mood", "delta": 6, "reason": "脆弱被接住" },
+            { "type": "health", "delta": 4, "reason": "情绪平复+用药提醒到位" }
+          ],
+          "spiritPowerChange": 15,
+          "nextNode": "wang_act2_d17_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "太懂她了。要强的老人最怕被'追问'，安静地陪着反而让她安全。等她说够了，再轻声把'情绪激动伤血压'带出来——不是教训，是关心。陪伴+健康提醒，两不误。",
+            "explanation": "心理支持三步法：1.沉默式陪伴（肢体在场，不逼问）让她安全表达；2.倾听确认（'那块手表是老伴的？'）让她感到被听见；3.温和关联（情绪波动是高血压诱因）把心理和生理连接起来。情绪激动会激活交感神经，血压骤升，是高血压危象的常见诱因。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "建议她搬去和儿子一起住，省得孤单",
+          "description": "提议搬去同住",
+          "isCorrect": false,
+          "effects": [
+            { "type": "trust", "delta": -5, "reason": "被暗示'该让人管了'" },
+            { "type": "independence", "delta": -4, "reason": "自主生活被否定" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "wang_act2_d17_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "她最怕'成为负担'。建议搬去同住，她会理解成'你觉得我一个人不行了'。何况她在这个家住了几十年，老伴的痕迹都在，搬走等于连根拔起。",
+            "explanation": "独居老人的居住意愿需尊重。孤独≠需要搬离，而是需要更多情感连接和社区支持。贸然建议同住会伤及自主权和归属感。正确的方向是加强'在原地养老'的支持网络。"
+          }
+        }
+      ],
+      "tags": ["choice", "psychology", "listening", "emotional-trigger"],
+      "devNote": "倾听教学+情绪与血压关联"
+    },
+    {
+      "id": "wang_act2_d17_003",
+      "characterId": "wang_nainai",
+      "act": 2,
+      "day": 17,
+      "type": "dayEnd",
+      "scene": "bedroom",
+      "illustrationId": "wang_night_peace",
+      "dialogues": [
+        {
+          "id": "dlg_026",
+          "speaker": "elder",
+          "speakerName": "王奶奶",
+          "text": "（叹了口气，又笑了笑）跟你说说话，心里敞亮多了。老头子要是知道有人陪着我，也放心。明早的药，我记着呢——不撤哨。",
+          "layer": "essential",
+          "emotion": "relieved"
+        },
+        {
+          "id": "dlg_027",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "陪伴有时不需要说什么，'在'本身就是力量。她的信任值，今晚悄悄涨了一截。",
+          "layer": "emotional",
+          "emotion": "warm",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "wang_act2_d19_001",
+      "characterId": "wang_nainai",
+      "act": 2,
+      "day": 19,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "wang_bp_monitor",
+      "dialogues": [
+        {
+          "id": "dlg_028",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "第十九天，王奶奶的血压最近波动有点大。你建议她买台家用血压计，每天定时量。她一听价钱，连连摆手：'好几百块？太贵了！社区医院免费量，我隔几天走去量一趟，还顺带锻炼了，一举两得。'可社区医院要走二十分钟，她常因为天气或犯懒就不去了。最近她还迷上广场舞，一跳就是一个多小时。",
+          "layer": "essential",
+          "duration": 4500,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_029",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "节俭是她的本色，但'隔几天量一次'根本抓不住血压波动。而且她最近迷上广场舞，一跳就是一个多小时，这对高血压老人是隐患。两件事得一起解决——怎么让她既愿意监测血压，又把运动量调到合适？",
+          "layer": "essential",
+          "emotion": "concerned"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "直接买一台寄到她家，不和她商量",
+          "description": "先斩后奏",
+          "isCorrect": false,
+          "effects": [
+            { "type": "trust", "delta": -5, "reason": "自作主张伤自尊" },
+            { "type": "independence", "delta": -4, "reason": "被剥夺决定权" }
+          ],
+          "spiritPowerChange": 2,
+          "nextNode": "wang_act2_d19_002",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "东西是好东西，可'不商量就寄来'会让她觉得被施舍、被安排。节俭又自尊的奶奶，最怕别人替她花钱——她会嘴上道谢，心里别扭，血压计反倒放着不用。",
+            "explanation": "照护的边界：关心不能越过自主权。替老人做消费决定，即使出于好意，也会伤害自尊和掌控感。尤其节俭的老人，'被花别人的钱'会引发愧疚和抵触。应让她参与决定。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "算笔账：每天量一次的成本 vs 一次住院的钱；再和她约好广场舞跳半小时就歇",
+          "description": "算账说服+运动定量",
+          "isCorrect": true,
+          "effects": [
+            { "type": "health", "delta": 8, "reason": "规律监测+运动适量，血压更稳" },
+            { "type": "trust", "delta": 6, "reason": "用她接受的方式讲理" },
+            { "type": "mood", "delta": 4, "reason": "广场舞还能跳，没被剥夺" }
+          ],
+          "spiritPowerChange": 12,
+          "nextNode": "wang_act2_d19_002",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "太会了！把'花几百块'算成'省下一次住院的钱'，节俭的奶奶一听就划算。广场舞不是不让她跳，是约定'半小时就歇'——既保住了她的爱好，又防了运动过量。",
+            "explanation": "高血压监测与运动双管理：1.家用血压计每日早晚各量一次，记录波动，比隔几天去医院更能反映真实血压；2.高血压患者运动应中等强度、每次30分钟、每周5次，过量剧烈运动（如连续跳一小时广场舞）会致血压骤升，诱发心脑血管事件。对节俭老人，'算账'比'讲道理'更有效。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "觉得社区医院确实免费，由着她隔几天去量",
+          "description": "迁就节俭",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": -5, "reason": "监测不规律，血压波动抓不住" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "wang_act2_d19_002",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "'隔几天量一次'等于盲飞。高血压的波动往往在清晨和情绪波动时，社区医院白天量的'点状数据'反映不出全貌。等发现异常，可能已是急症。",
+            "explanation": "血压监测的'时段覆盖'原则：高血压危象和脑卒中多发于清晨血压高峰（晨峰）。仅靠偶测会漏掉晨峰和夜间波动。家用血压计可实现'每日定时双测'，是高血压管理的核心工具，不可省。"
+          }
+        }
+      ],
+      "props": [
+        {
+          "propId": "home_bp_monitor",
+          "layer": "display",
+          "autoShow": true
+        }
+      ],
+      "tags": ["choice", "bp-monitoring", "exercise", "frugality", "hypertension"],
+      "devNote": "血压监测+运动适量教学，节俭心理应对"
+    },
+    {
+      "id": "wang_act2_d19_002",
+      "characterId": "wang_nainai",
+      "act": 2,
+      "day": 19,
+      "type": "dayEnd",
+      "scene": "living_room",
+      "illustrationId": "wang_bp_habit",
+      "dialogues": [
+        {
+          "id": "dlg_030",
+          "speaker": "elder",
+          "speakerName": "王奶奶",
+          "text": "（拨弄着新血压计）你这账算得……比我当年算学生成绩还细。行，听你的，每天量、跳舞半小时。花钱我心疼，可你说得在理。",
+          "layer": "essential",
+          "emotion": "convinced"
+        },
+        {
+          "id": "dlg_031",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "她用'算账'接受了花销。对节俭的老人，把健康投资讲成'划算的账'，比讲道理更有效。",
+          "layer": "emotional",
+          "emotion": "proud",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "wang_act2_d20_001",
+      "characterId": "wang_nainai",
+      "act": 2,
+      "day": 20,
+      "type": "actEnd",
+      "scene": "living_room",
+      "illustrationId": "wang_act2_end",
+      "dialogues": [
+        {
+          "id": "dlg_032",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "第二十天，第二幕的最后一天。这十天的陪伴，王奶奶的变化藏在细节里：药盒再没空过，菜里的盐少了醋多了，血压计成了茶几上的新摆设，广场舞从一小时变成半小时。更重要的是，她开始愿意说心里话了。",
+          "layer": "essential",
+          "duration": 5000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_033",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "从'我自己能行'到'跟你说说心里话'，这十天最大的收获不是血压降了多少，是她愿意让你走进她的世界。陪伴，是守护的底色。",
+          "layer": "essential",
+          "emotion": "proud"
+        },
+        {
+          "id": "dlg_034",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "（精灵光芒柔和）但真正的考验还在后面。下一幕，她的身体会给我们一个措手不及。带上这十天攒下的信任，我们一起面对。",
+          "layer": "emotional",
+          "emotion": "anticipating",
+          "typingSpeed": 40
+        }
+      ],
+      "transition": {
+        "exit": "fade-out",
+        "illustrationTransition": "watercolor",
+        "duration": 1000
+      },
+      "tags": ["act-end"],
+      "devNote": "第二幕结束，过渡到第三幕急症守护主题"
+    }
+  ]
+}

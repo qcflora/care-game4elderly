@@ -1,0 +1,2153 @@
+{
+  "characterId": "zhang_nainai",
+  "act": 2,
+  "title": "第二幕：心声与平衡",
+  "theme": "破解忍着不说，跌倒预防与情感冲突",
+  "startDay": 8,
+  "endDay": 21,
+  "nodes": [
+    {
+      "id": "zhang_act2_d8_001",
+      "characterId": "zhang_nainai",
+      "act": 2,
+      "day": 8,
+      "type": "narrative",
+      "scene": "living_room",
+      "illustrationId": "zhang_rubbing_knee",
+      "dialogues": [
+        {
+          "id": "dlg_d8_1",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "午饭后，张奶奶坐在沙发上织毛衣，织了几针就停下来，伸手揉了揉右膝盖，眉头皱了一下，又松开，继续织。",
+          "layer": "essential",
+          "duration": 4500,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_d8_2",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "看到了吗？她在揉膝盖，但马上就装作没事。这就是张奶奶最典型的「忍着不说」。她不想让你担心，可这样下去，小问题会拖成大问题。",
+          "layer": "essential",
+          "emotion": "concerned"
+        }
+      ],
+      "nextNode": "zhang_act2_d8_002",
+      "tags": ["pain-communication", "psychology"]
+    },
+    {
+      "id": "zhang_act2_d8_002",
+      "characterId": "zhang_nainai",
+      "act": 2,
+      "day": 8,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "zhang_pain_choice",
+      "dialogues": [
+        {
+          "id": "dlg_d8_3",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "你注意到她在揉膝盖。这时候怎么说，才能让她愿意开口？",
+          "layer": "essential",
+          "emotion": "curious"
+        }
+      ],
+      "choices": [
+        {
+          "id": "zhang_act2_d8_002_a",
+          "text": "蹲下来平视她，温和地说「奶奶，我看您揉膝盖，是不是疼？可以告诉我」",
+          "description": "平等的姿态，温和地邀请",
+          "isCorrect": true,
+          "effects": [
+            { "type": "trust", "delta": 8, "reason": "被认真关注" },
+            { "type": "mood", "delta": 3, "reason": "被在乎的温暖" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "zhang_act2_d8_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "非常好！蹲下来和她平视，这个姿态本身就在说「我在认真听你」。没有追问，没有催促，只是温和地邀请她说。她需要的就是这样的耐心。",
+            "explanation": "疼痛沟通技巧：平等姿态（平视）+ 温和询问 + 不追问不催促。破解「忍着不说」的第一步是让她感到说出来是安全的。"
+          }
+        },
+        {
+          "id": "zhang_act2_d8_002_b",
+          "text": "「奶奶您膝盖疼吧？赶紧说啊，不说我怎么帮您」",
+          "description": "直接追问",
+          "isCorrect": false,
+          "effects": [
+            { "type": "trust", "delta": -3, "reason": "感到被逼问" },
+            { "type": "mood", "delta": -2, "reason": "有压力" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhang_act2_d8_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "你是关心她，但追问得太急，她反而会紧张，本能地说「没事没事」。她忍了这么多年，不是一句话就能打开的。得慢慢来。",
+            "explanation": "追问会让老人产生压力，强化「说了会添麻烦」的心理。应使用开放式、非评判性的询问方式。"
+          }
+        },
+        {
+          "id": "zhang_act2_d8_002_c",
+          "text": "她没主动说，应该不严重，先观察几天再说",
+          "description": "等她主动开口",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": -5, "reason": "疼痛被忽视" },
+            { "type": "trust", "delta": -3, "reason": "没被注意到" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhang_act2_d8_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "她忍着不说，你也不问，那疼痛就永远不会被发现。等她主动开口，可能已经拖了很久。骨质疏松的疼痛不能拖，得及时处理。",
+            "explanation": "「忍着不说」的老人不会主动报告疼痛。照护者必须主动观察和询问，而非被动等待。"
+          }
+        }
+      ],
+      "tags": ["choice", "pain-communication", "psychology"]
+    },
+    {
+      "id": "zhang_act2_d8_003",
+      "characterId": "zhang_nainai",
+      "act": 2,
+      "day": 8,
+      "type": "dialogue",
+      "scene": "living_room",
+      "illustrationId": "zhang_opening_up",
+      "dialogues": [
+        {
+          "id": "dlg_d8_4",
+          "speaker": "elder",
+          "speakerName": "张奶奶",
+          "text": "（沉默了一会儿）……是有点疼，阴天就厉害些。老毛病了，不碍事。",
+          "layer": "essential",
+          "emotion": "hesitant"
+        },
+        {
+          "id": "dlg_d8_5",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "她开口了！虽然还是轻描淡写，但这已经是很大的进步。明天我们继续——她终于愿意说了，得好好接住。",
+          "layer": "emotional",
+          "emotion": "hopeful",
+          "typingSpeed": 35
+        }
+      ],
+      "nextNode": "zhang_act2_d8_004",
+      "isCheckpoint": true
+    },
+    {
+      "id": "zhang_act2_d8_004",
+      "characterId": "zhang_nainai",
+      "act": 2,
+      "day": 8,
+      "type": "dayEnd",
+      "scene": "living_room",
+      "illustrationId": "zhang_night_rest",
+      "dialogues": [
+        {
+          "id": "dlg_d8_6",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "今天的收获：主动询问+平等姿态，让她第一次说出了「有点疼」。明天要学会怎么接住这句话。",
+          "layer": "essential",
+          "emotion": "encouraging"
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "zhang_act2_d9_001",
+      "characterId": "zhang_nainai",
+      "act": 2,
+      "day": 9,
+      "type": "narrative",
+      "scene": "living_room",
+      "illustrationId": "zhang_talking_pain",
+      "dialogues": [
+        {
+          "id": "dlg_d9_1",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "今天张奶奶主动提起了昨天的事。她放下毛衣，看着窗外，像是在斟酌怎么说。",
+          "layer": "essential",
+          "duration": 4000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_d9_2",
+          "speaker": "elder",
+          "speakerName": "张奶奶",
+          "text": "其实这腿疼，有阵子了……得有两个多月吧。我就是怕你们工作忙，不想为这点事添乱。",
+          "layer": "essential",
+          "emotion": "honest"
+        },
+        {
+          "id": "dlg_d9_3",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "两个多月！她忍了两个多月才说出来。现在她开口了，你怎么回应，决定了她以后还会不会再跟你说。",
+          "layer": "essential",
+          "emotion": "concerned"
+        }
+      ],
+      "nextNode": "zhang_act2_d9_002",
+      "tags": ["pain-communication", "psychology"]
+    },
+    {
+      "id": "zhang_act2_d9_002",
+      "characterId": "zhang_nainai",
+      "act": 2,
+      "day": 9,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "zhang_listen_choice",
+      "dialogues": [
+        {
+          "id": "dlg_d9_4",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "她终于说出实情了。这时候你的回应至关重要。",
+          "layer": "essential",
+          "emotion": "curious"
+        }
+      ],
+      "choices": [
+        {
+          "id": "zhang_act2_d9_002_a",
+          "text": "认真倾听，复述确认「疼了两个多月了，阴天更厉害」，记录下来，评估是否需就医",
+          "description": "倾听+确认+记录+评估",
+          "isCorrect": true,
+          "effects": [
+            { "type": "trust", "delta": 8, "reason": "被认真倾听" },
+            { "type": "health", "delta": 3, "reason": "疼痛被记录关注" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "zhang_act2_d9_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "完美！你复述了她的话，让她知道你听进去了。又记下来、评估就医——这就是专业的倾听。她以后会更愿意跟你说，因为她知道你会当回事。",
+            "explanation": "倾听技巧三步：不打断、复述确认、记录评估。复述是让老人确认「你真的在听」，比任何安慰都管用。"
+          }
+        },
+        {
+          "id": "zhang_act2_d9_002_b",
+          "text": "「两个多月了您怎么不早说！以后有事一定要讲啊」",
+          "description": "责怪中带着关心",
+          "isCorrect": false,
+          "effects": [
+            { "type": "trust", "delta": -5, "reason": "被责怪" },
+            { "type": "mood", "delta": -3, "reason": "内疚和委屈" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhang_act2_d9_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "你是心疼她，但「怎么不早说」听起来像在怪她。她本来就觉得添麻烦，被这么一说，下次更不敢说了。",
+            "explanation": "责怪会让老人更加退缩。即使心疼，也要先接住她的情绪，而非追究「为什么不早说」。"
+          }
+        },
+        {
+          "id": "zhang_act2_d9_002_c",
+          "text": "「那赶紧去医院吧，我现在就挂号」",
+          "description": "马上行动",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": 4, "reason": "及时就医意识" },
+            { "type": "trust", "delta": 1, "reason": "有在关心" }
+          ],
+          "spiritPowerChange": 5,
+          "nextNode": "zhang_act2_d9_003",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "去医院是对的，但别急着替她做决定。先听她说完，了解疼痛的具体情况，再一起商量。她刚鼓起勇气开口，你一下子就跳到「挂号」，她会觉得自己说了半天你没在听。",
+            "explanation": "行动前先完成倾听。急于解决问题会跳过情感连接，让老人觉得你只想「处理」问题而非「理解」她。"
+          }
+        }
+      ],
+      "tags": ["choice", "pain-communication", "psychology"]
+    },
+    {
+      "id": "zhang_act2_d9_003",
+      "characterId": "zhang_nainai",
+      "act": 2,
+      "day": 9,
+      "type": "dialogue",
+      "scene": "living_room",
+      "illustrationId": "zhang_heard",
+      "dialogues": [
+        {
+          "id": "dlg_d9_5",
+          "speaker": "elder",
+          "speakerName": "张奶奶",
+          "text": "你愿意听我说这些……我心里好受多了。以前总觉得说出来是给你们添乱。",
+          "layer": "essential",
+          "emotion": "relieved"
+        },
+        {
+          "id": "dlg_d9_6",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "她把毛衣放到膝上，长长地舒了一口气，像是放下了背了很久的东西。",
+          "layer": "emotional",
+          "typingSpeed": 40
+        }
+      ],
+      "nextNode": "zhang_act2_d9_004",
+      "isCheckpoint": true,
+      "unlocks": [
+        {
+          "albumEntryId": "album_zhang_pain_shared"
+        }
+      ]
+    },
+    {
+      "id": "zhang_act2_d9_004",
+      "characterId": "zhang_nainai",
+      "act": 2,
+      "day": 9,
+      "type": "dayEnd",
+      "scene": "living_room",
+      "illustrationId": "zhang_night_rest",
+      "dialogues": [
+        {
+          "id": "dlg_d9_7",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "「忍着不说」的口子撕开了一道。接下来要做跌倒预防评估——她怕摔，我们就把家里可能让她摔的地方都查一遍。",
+          "layer": "essential",
+          "emotion": "encouraging"
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "zhang_act2_d10_001",
+      "characterId": "zhang_nainai",
+      "act": 2,
+      "day": 10,
+      "type": "narrative",
+      "scene": "living_room",
+      "illustrationId": "zhang_home_assessment",
+      "dialogues": [
+        {
+          "id": "dlg_d10_1",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "今天的目标是给家里做一次跌倒风险评估。张奶奶两年前就是在客厅茶几边滑了一跤——地毯卷了边，她没看见。",
+          "layer": "essential",
+          "duration": 4000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_d10_2",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "老人跌倒，六成以上发生在家中，尤其是卫生间、卧室和过道。来，我们系统地检查一遍。",
+          "layer": "essential",
+          "emotion": "focused"
+        }
+      ],
+      "nextNode": "zhang_act2_d10_002",
+      "props": [
+        {
+          "propId": "home_safety_checklist",
+          "layer": "inspect",
+          "autoShow": true
+        }
+      ],
+      "tags": ["fall-prevention", "home-safety"]
+    },
+    {
+      "id": "zhang_act2_d10_002",
+      "characterId": "zhang_nainai",
+      "act": 2,
+      "day": 10,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "zhang_inspect_home",
+      "dialogues": [
+        {
+          "id": "dlg_d10_3",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "你觉得应该重点检查哪些地方？",
+          "layer": "essential",
+          "emotion": "curious"
+        }
+      ],
+      "choices": [
+        {
+          "id": "zhang_act2_d10_002_a",
+          "text": "卫生间防滑+夜灯+地面障碍物+扶手，全面排查四大风险区",
+          "description": "系统评估全部高风险区域",
+          "isCorrect": true,
+          "effects": [
+            { "type": "health", "delta": 8, "reason": "消除跌倒隐患" },
+            { "type": "independence", "delta": 3, "reason": "安全环境让她敢活动" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "zhang_act2_d10_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "全面排查！卫生间是头号风险区——湿滑、有台阶、起夜频繁；卧室到卫生间的过道要装夜灯；卷边的地毯得固定或撤掉；马桶和浴缸边要有扶手。这些一处都不能漏。",
+            "explanation": "跌倒预防四大风险区：卫生间（防滑垫+扶手）、过道（夜灯+无障碍物）、卧室（床边可达照明）、地面（地毯固定/移除）。系统排查胜过局部修补。"
+          }
+        },
+        {
+          "id": "zhang_act2_d10_002_b",
+          "text": "只检查卫生间，那里最滑",
+          "description": "重点排查卫生间",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": 4, "reason": "部分改善" },
+            { "type": "trust", "delta": 1, "reason": "有在检查" }
+          ],
+          "spiritPowerChange": 5,
+          "nextNode": "zhang_act2_d10_003",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "卫生间确实最危险，但不够。张奶奶上次跌倒是在客厅地毯边，夜间起夜走的那段过道没有灯也很危险。只查一处会漏掉隐患。",
+            "explanation": "跌倒风险点遍布全屋，需系统排查。仅关注单一区域会遗漏过道、卧室等其他高频跌倒地点。"
+          }
+        },
+        {
+          "id": "zhang_act2_d10_002_c",
+          "text": "家里住惯了，应该挺安全的，不用大检查",
+          "description": "信任现有的环境",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": -5, "reason": "隐患未排除" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhang_act2_d10_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "「住惯了」恰恰最危险——卷边的地毯、没灯的过道，天天经过却没人注意，出事就在一瞬间。张奶奶已经摔过一次了，不能再有第二次。",
+            "explanation": "熟悉的环境会让人忽视隐患。系统性的安全评估是跌倒预防的基础，不能凭感觉判断。"
+          }
+        }
+      ],
+      "tags": ["choice", "fall-prevention", "home-safety"]
+    },
+    {
+      "id": "zhang_act2_d10_003",
+      "characterId": "zhang_nainai",
+      "act": 2,
+      "day": 10,
+      "type": "dialogue",
+      "scene": "living_room",
+      "illustrationId": "zhang_safe_home",
+      "dialogues": [
+        {
+          "id": "dlg_d10_4",
+          "speaker": "elder",
+          "speakerName": "张奶奶",
+          "text": "这过道装了小夜灯，起夜看得见路，心里踏实多了。以前摸黑走，总怕撞着什么。",
+          "layer": "essential",
+          "emotion": "relieved"
+        },
+        {
+          "id": "dlg_d10_5",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "客厅那块卷边的旧地毯被收了起来，过道安上一盏感应小夜灯，卫生间多了防滑垫和扶手。屋子还是那个屋子，却安全了许多。",
+          "layer": "emotional",
+          "typingSpeed": 35
+        }
+      ],
+      "nextNode": "zhang_act2_d10_004",
+      "isCheckpoint": true,
+      "unlocks": [
+        {
+          "albumEntryId": "album_zhang_safe_home"
+        }
+      ]
+    },
+    {
+      "id": "zhang_act2_d10_004",
+      "characterId": "zhang_nainai",
+      "act": 2,
+      "day": 10,
+      "type": "dayEnd",
+      "scene": "living_room",
+      "illustrationId": "zhang_night_rest",
+      "dialogues": [
+        {
+          "id": "dlg_d10_6",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "家里安全了，但她心里的坎还在——她不愿意用拐杖，觉得丢人。明天我们来解决这个问题。",
+          "layer": "essential",
+          "emotion": "encouraging"
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "zhang_act2_d11_001",
+      "characterId": "zhang_nainai",
+      "act": 2,
+      "day": 11,
+      "type": "narrative",
+      "scene": "living_room",
+      "illustrationId": "zhang_cane_refuse",
+      "dialogues": [
+        {
+          "id": "dlg_d11_1",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "你把一根拐杖递给张奶奶，她看了一眼，摆摆手：「我还不至于用这个吧？拿出去人家还以为我多老了呢。」",
+          "layer": "essential",
+          "duration": 4000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_d11_2",
+          "speaker": "elder",
+          "speakerName": "张奶奶",
+          "text": "我教了一辈子书，站讲台上腰板笔直的。现在拄个棍子出门，老同事看见多不好意思。",
+          "layer": "essential",
+          "emotion": "embarrassed"
+        },
+        {
+          "id": "dlg_d11_3",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "对她来说，拐杖不只是工具，是「老了」的标签。这个心结，不能硬来。",
+          "layer": "essential",
+          "emotion": "understanding"
+        }
+      ],
+      "nextNode": "zhang_act2_d11_002",
+      "tags": ["assist-balance", "psychology"]
+    },
+    {
+      "id": "zhang_act2_d11_002",
+      "characterId": "zhang_nainai",
+      "act": 2,
+      "day": 11,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "zhang_cane_choice",
+      "dialogues": [
+        {
+          "id": "dlg_d11_4",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "她拒绝用拐杖，怕被人觉得「老」。你怎么帮她接受？",
+          "layer": "essential",
+          "emotion": "curious"
+        }
+      ],
+      "choices": [
+        {
+          "id": "zhang_act2_d11_002_a",
+          "text": "理解她的感受，解释拐杖是辅助工具不是衰老标志，让她选喜欢的款式先在家试试",
+          "description": "尊重+引导+自主选择",
+          "isCorrect": true,
+          "effects": [
+            { "type": "independence", "delta": 8, "reason": "用辅具恢复行动力" },
+            { "type": "mood", "delta": 3, "reason": "被理解和尊重" },
+            { "type": "trust", "delta": 3, "reason": "不强人所难" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "zhang_act2_d11_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "太好了！你没有强迫她，而是理解她的自尊心。让她自己挑款式、先在家用——把选择权交给她。拐杖不是认老的标志，是让她走得更稳、走得更远的依靠。",
+            "explanation": "辅具接受心理：尊重自主权+重新定义辅具（辅助而非衰老）+渐进试用。强迫使用会引发抵触，自主选择促进接受。"
+          }
+        },
+        {
+          "id": "zhang_act2_d11_002_b",
+          "text": "「您都78了还怕什么老，拄着吧，摔了更麻烦」",
+          "description": "直说道理",
+          "isCorrect": false,
+          "effects": [
+            { "type": "independence", "delta": -3, "reason": "被迫使用" },
+            { "type": "mood", "delta": -3, "reason": "自尊受伤" },
+            { "type": "trust", "delta": -5, "reason": "不被理解" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhang_act2_d11_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "道理是对的，但「您都78了」这句话太扎心了。她不是不知道自己老，是不想被提醒。强迫加刺激，她只会更抗拒。",
+            "explanation": "照护沟通要照顾老人的自尊心。直接戳痛处即使出于好意，也会破坏信任、加重抗拒。"
+          }
+        },
+        {
+          "id": "zhang_act2_d11_002_c",
+          "text": "既然她不愿意，就不勉强，继续扶着她走",
+          "description": "尊重她的选择",
+          "isCorrect": false,
+          "effects": [
+            { "type": "independence", "delta": 2, "reason": "有在走" },
+            { "type": "mood", "delta": 1, "reason": "不被强迫" }
+          ],
+          "spiritPowerChange": 5,
+          "nextNode": "zhang_act2_d11_003",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "不强迫是对的，但问题没解决。一直扶着她走，她永远学不会自己稳稳地走。拐杖能给她独立，你得想办法让她愿意试。",
+            "explanation": "尊重意愿不等于放弃引导。应在尊重前提下积极引导，找到老人能接受的过渡方式。"
+          }
+        }
+      ],
+      "tags": ["choice", "assist-balance", "psychology"]
+    },
+    {
+      "id": "zhang_act2_d11_003",
+      "characterId": "zhang_nainai",
+      "act": 2,
+      "day": 11,
+      "type": "dialogue",
+      "scene": "living_room",
+      "illustrationId": "zhang_cane_try",
+      "dialogues": [
+        {
+          "id": "dlg_d11_5",
+          "speaker": "elder",
+          "speakerName": "张奶奶",
+          "text": "（拄着拐杖在客厅走了两圈）嘿，这根花梨木的还挺好看……在家先试试吧。",
+          "layer": "essential",
+          "emotion": "surprised"
+        },
+        {
+          "id": "dlg_d11_6",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "她挑了一根木质花纹的拐杖，在客厅里慢慢走着，步伐比昨天稳了许多。",
+          "layer": "emotional",
+          "typingSpeed": 40
+        }
+      ],
+      "nextNode": "zhang_act2_d11_004",
+      "isCheckpoint": true,
+      "unlocks": [
+        {
+          "albumEntryId": "album_zhang_cane_accept"
+        }
+      ]
+    },
+    {
+      "id": "zhang_act2_d11_004",
+      "characterId": "zhang_nainai",
+      "act": 2,
+      "day": 11,
+      "type": "dayEnd",
+      "scene": "living_room",
+      "illustrationId": "zhang_night_rest",
+      "dialogues": [
+        {
+          "id": "dlg_d11_7",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "她接受拐杖了！辅具不是认老，是让她更有底气。接下来几天，我们要关注她心里更深的那个结——她觉得自己是个负担。",
+          "layer": "essential",
+          "emotion": "proud"
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "zhang_act2_d12_001",
+      "characterId": "zhang_nainai",
+      "act": 2,
+      "day": 12,
+      "type": "narrative",
+      "scene": "living_room",
+      "illustrationId": "zhang_burden_worry",
+      "dialogues": [
+        {
+          "id": "dlg_d12_1",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "傍晚，张奶奶看着儿子加班回来疲惫的样子，忽然放下筷子，低声说了一句。",
+          "layer": "essential",
+          "duration": 4000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_d12_2",
+          "speaker": "elder",
+          "speakerName": "张奶奶",
+          "text": "我老了没用了，净给你们添麻烦。你们工作那么忙，还得伺候我……",
+          "layer": "essential",
+          "emotion": "sad"
+        },
+        {
+          "id": "dlg_d12_3",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "这是抑郁的预警信号之一——觉得自己是负担、没价值。这种念头一旦扎下根，她会越来越沉默。你怎么回应？",
+          "layer": "essential",
+          "emotion": "concerned"
+        }
+      ],
+      "nextNode": "zhang_act2_d12_002",
+      "tags": ["psychology", "depression-sign"]
+    },
+    {
+      "id": "zhang_act2_d12_002",
+      "characterId": "zhang_nainai",
+      "act": 2,
+      "day": 12,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "zhang_burden_choice",
+      "dialogues": [
+        {
+          "id": "dlg_d12_4",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "她说自己「没用」「添麻烦」。这句话背后是她深深的自我怀疑。你的回应很重要。",
+          "layer": "essential",
+          "emotion": "curious"
+        }
+      ],
+      "choices": [
+        {
+          "id": "zhang_act2_d12_002_a",
+          "text": "认真看着她说「您不是负担，我们想照顾您」，并具体说出她对家的价值",
+          "description": "真诚回应+具体肯定",
+          "isCorrect": true,
+          "effects": [
+            { "type": "mood", "delta": 8, "reason": "被肯定和价值感" },
+            { "type": "trust", "delta": 3, "reason": "被认真对待" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "zhang_act2_d12_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "非常好！「您不是负担」是态度，再加上具体的肯定——比如她做的饭、她教孙女写字、她织的毛衣——让她知道自己真的被需要。空洞的安慰不如具体的认可。",
+            "explanation": "心理支持：真诚回应+具体肯定价值。抑郁预警信号之一是「无价值感」，具体的事例比笼统的安慰更能重建自我价值。"
+          }
+        },
+        {
+          "id": "zhang_act2_d12_002_b",
+          "text": "「别瞎想，哪有什么麻烦，快吃饭吧」",
+          "description": "轻描淡写带过",
+          "isCorrect": false,
+          "effects": [
+            { "type": "mood", "delta": -5, "reason": "感受被忽视" },
+            { "type": "trust", "delta": -3, "reason": "不被理解" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhang_act2_d12_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "「别瞎想」三个字，把她好不容易说出口的心里话堵了回去。她会觉得「说了也没人当回事」，下次更不说了。",
+            "explanation": "敷衍的回应会强化老人的孤独感。心理信号出现时，必须认真对待，而非轻描淡写地带过。"
+          }
+        },
+        {
+          "id": "zhang_act2_d12_002_c",
+          "text": "「照顾您是应该的，您别多想」",
+          "description": "宽慰她",
+          "isCorrect": false,
+          "effects": [
+            { "type": "mood", "delta": 2, "reason": "被安慰" },
+            { "type": "trust", "delta": 1, "reason": "有回应" }
+          ],
+          "spiritPowerChange": 5,
+          "nextNode": "zhang_act2_d12_003",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "「应该的」听起来是孝顺，但没正面回应她的核心焦虑——她觉得自己没用。得让她知道自己有价值，而不只是被照顾的对象。",
+            "explanation": "「应该的」虽出于孝心，但回避了老人的核心焦虑（无价值感）。应具体肯定其价值，而非仅表达义务感。"
+          }
+        }
+      ],
+      "tags": ["choice", "psychology", "depression-sign"]
+    },
+    {
+      "id": "zhang_act2_d12_003",
+      "characterId": "zhang_nainai",
+      "act": 2,
+      "day": 12,
+      "type": "dialogue",
+      "scene": "living_room",
+      "illustrationId": "zhang_valued",
+      "dialogues": [
+        {
+          "id": "dlg_d12_5",
+          "speaker": "elder",
+          "speakerName": "张奶奶",
+          "text": "（眼眶有些红）……你还能记得这些。我还以为自己就是个吃闲饭的了。",
+          "layer": "essential",
+          "emotion": "moved"
+        },
+        {
+          "id": "dlg_d12_6",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "她重新拿起筷子，这次吃了比平时多几口。",
+          "layer": "emotional",
+          "typingSpeed": 40
+        }
+      ],
+      "nextNode": "zhang_act2_d12_004",
+      "isCheckpoint": true
+    },
+    {
+      "id": "zhang_act2_d12_004",
+      "characterId": "zhang_nainai",
+      "act": 2,
+      "day": 12,
+      "type": "dayEnd",
+      "scene": "living_room",
+      "illustrationId": "zhang_night_rest",
+      "dialogues": [
+        {
+          "id": "dlg_d12_7",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "记住这个信号：老人说「没用」「添麻烦」，是在呼救。明天继续心理支持——她总爱反复讲年轻时教书的事，那里面藏着她的骄傲。",
+          "layer": "essential",
+          "emotion": "gentle"
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "zhang_act2_d13_001",
+      "characterId": "zhang_nainai",
+      "act": 2,
+      "day": 13,
+      "type": "narrative",
+      "scene": "living_room",
+      "illustrationId": "zhang_reminisce",
+      "dialogues": [
+        {
+          "id": "dlg_d13_1",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "下午，张奶奶又翻出了那本旧相册，里面有她年轻时站在讲台上的照片。她讲起第一届学生的事，这已经是这周第三次讲同样的故事了。",
+          "layer": "essential",
+          "duration": 4500,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_d13_2",
+          "speaker": "elder",
+          "speakerName": "张奶奶",
+          "text": "那个叫小军的孩子，作文写得好，我就是多夸了他两句，后来他考上了大学……（说到这里眼睛发亮）",
+          "layer": "essential",
+          "emotion": "proud"
+        },
+        {
+          "id": "dlg_d13_3",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "她反复讲过去的事，不只是因为记性——那是因为现在让她有成就感的事太少了。回忆里藏着她的价值感。你怎么回应？",
+          "layer": "essential",
+          "emotion": "understanding"
+        }
+      ],
+      "nextNode": "zhang_act2_d13_002",
+      "tags": ["psychology", "reminiscence"]
+    },
+    {
+      "id": "zhang_act2_d13_002",
+      "characterId": "zhang_nainai",
+      "act": 2,
+      "day": 13,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "zhang_listen_memory",
+      "dialogues": [
+        {
+          "id": "dlg_d13_4",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "她讲了好多遍了。你会怎么回应？",
+          "layer": "essential",
+          "emotion": "curious"
+        }
+      ],
+      "choices": [
+        {
+          "id": "zhang_act2_d13_002_a",
+          "text": "耐心倾听，适时提问引导她讲更多细节，比如「小军后来还联系您吗」",
+          "description": "回忆疗法，引导正向回忆",
+          "isCorrect": true,
+          "effects": [
+            { "type": "mood", "delta": 8, "reason": "价值感被唤醒" },
+            { "type": "trust", "delta": 3, "reason": "被耐心倾听" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "zhang_act2_d13_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "很好！你没有嫌她啰嗦，而是顺着她的话问更多。这叫回忆疗法——引导老人讲正向的过去，重新连接她的价值感。她讲的不是往事，是「我曾经被需要」。",
+            "explanation": "回忆疗法：耐心倾听+适时提问引导正向回忆。老人反复讲述过去，是在寻找自我价值。倾听和引导比打断更能满足心理需求。"
+          }
+        },
+        {
+          "id": "zhang_act2_d13_002_b",
+          "text": "「奶奶这个故事您讲过了，讲点别的吧」",
+          "description": "提醒她重复了",
+          "isCorrect": false,
+          "effects": [
+            { "type": "mood", "delta": -5, "reason": "被打断和否定" },
+            { "type": "trust", "delta": -5, "reason": "不被尊重" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhang_act2_d13_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "「讲过了」三个字像一盆冷水。她不是不知道讲过了，是这件事对她太重要。打断她，等于否定了她最珍视的记忆。",
+            "explanation": "打断老人重复讲述会严重伤害心情和信任。即使听过，也应耐心倾听或温和引导，而非直接指出重复。"
+          }
+        },
+        {
+          "id": "zhang_act2_d13_002_c",
+          "text": "默默听着不回应，让她自己讲完",
+          "description": "安静陪伴",
+          "isCorrect": false,
+          "effects": [
+            { "type": "mood", "delta": 2, "reason": "有人在听" },
+            { "type": "trust", "delta": 1, "reason": "陪伴" }
+          ],
+          "spiritPowerChange": 5,
+          "nextNode": "zhang_act2_d13_003",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "听着不回应比打断好，但她需要互动。你问一句「后来呢」，她讲起来眼睛会发光——互动让回忆更有温度。",
+            "explanation": "被动倾听有一定效果，但主动互动（提问、回应）能显著增强回忆疗法的心理收益，加深情感连接。"
+          }
+        }
+      ],
+      "tags": ["choice", "psychology", "reminiscence"]
+    },
+    {
+      "id": "zhang_act2_d13_003",
+      "characterId": "zhang_nainai",
+      "act": 2,
+      "day": 13,
+      "type": "dialogue",
+      "scene": "living_room",
+      "illustrationId": "zhang_proud_teacher",
+      "dialogues": [
+        {
+          "id": "dlg_d13_5",
+          "speaker": "elder",
+          "speakerName": "张奶奶",
+          "text": "小军前年还来看过我呢，带着他自己的孩子。他说「张老师，没有您就没有我」……你说，我这一辈子，也算没白活吧？",
+          "layer": "essential",
+          "emotion": "proud"
+        },
+        {
+          "id": "dlg_d13_6",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "夕阳照在旧照片上，她的眼睛亮亮的，像是回到了那个站满学生的教室。",
+          "layer": "emotional",
+          "typingSpeed": 40
+        }
+      ],
+      "nextNode": "zhang_act2_d13_004",
+      "isCheckpoint": true,
+      "unlocks": [
+        {
+          "albumEntryId": "album_zhang_reminisce"
+        }
+      ]
+    },
+    {
+      "id": "zhang_act2_d13_004",
+      "characterId": "zhang_nainai",
+      "act": 2,
+      "day": 13,
+      "type": "dayEnd",
+      "scene": "living_room",
+      "illustrationId": "zhang_night_rest",
+      "dialogues": [
+        {
+          "id": "dlg_d13_7",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "回忆疗法让她的心情好了不少。接下来鼓励她走出家门——社交是最好的「抗抑郁药」。",
+          "layer": "essential",
+          "emotion": "encouraging"
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "zhang_act2_d14_001",
+      "characterId": "zhang_nainai",
+      "act": 2,
+      "day": 14,
+      "type": "narrative",
+      "scene": "community",
+      "illustrationId": "zhang_community_center",
+      "dialogues": [
+        {
+          "id": "dlg_d14_1",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "社区活动中心下周有个老年书法班。张奶奶以前写一手好板书，但自从跌倒后，她很少出门了。",
+          "layer": "essential",
+          "duration": 4000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_d14_2",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "社交活动能改善心情、延缓认知衰退。但张奶奶怕出门、怕摔、怕给人添麻烦。怎么鼓励她？",
+          "layer": "essential",
+          "emotion": "concerned"
+        }
+      ],
+      "nextNode": "zhang_act2_d14_002",
+      "tags": ["social", "psychology"]
+    },
+    {
+      "id": "zhang_act2_d14_002",
+      "characterId": "zhang_nainai",
+      "act": 2,
+      "day": 14,
+      "type": "choice",
+      "scene": "community",
+      "illustrationId": "zhang_social_choice",
+      "dialogues": [
+        {
+          "id": "dlg_d14_3",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "你打算怎么鼓励她参加书法班？",
+          "layer": "essential",
+          "emotion": "curious"
+        }
+      ],
+      "choices": [
+        {
+          "id": "zhang_act2_d14_002_a",
+          "text": "询问她的意愿，介绍活动内容，提出第一次陪她去",
+          "description": "尊重意愿+降低门槛",
+          "isCorrect": true,
+          "effects": [
+            { "type": "mood", "delta": 8, "reason": "期待社交" },
+            { "type": "independence", "delta": 3, "reason": "尊重她的选择" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "zhang_act2_d14_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "很好！先问她愿不愿意，而不是替她做主。介绍内容让她有心理准备，第一次陪她去降低她的焦虑。她以前是老师，书法正合她意——找对活动很重要。",
+            "explanation": "社交促进三步：尊重意愿+匹配兴趣+降低参与门槛（陪同首次）。强迫参加会适得其反，兴趣匹配和渐进参与是关键。"
+          }
+        },
+        {
+          "id": "zhang_act2_d14_002_b",
+          "text": "直接帮她报名，告诉她时间地点",
+          "description": "替她安排好",
+          "isCorrect": false,
+          "effects": [
+            { "type": "independence", "delta": -5, "reason": "被替做决定" },
+            { "type": "mood", "delta": -3, "reason": "被安排的不适" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhang_act2_d14_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "你替她报了名，她可能反而抗拒——「我都不知道就给我报了」。她怕出门，你得先问问她愿不愿意，让她自己参与决定。",
+            "explanation": "替老人做决定会降低独立值和参与意愿。即使是好意，也应尊重其自主选择权。"
+          }
+        },
+        {
+          "id": "zhang_act2_d14_002_c",
+          "text": "建议她去，但说「您自己看着办」",
+          "description": "让她自己决定",
+          "isCorrect": false,
+          "effects": [
+            { "type": "mood", "delta": 2, "reason": "有建议" },
+            { "type": "trust", "delta": 1, "reason": "不强迫" }
+          ],
+          "spiritPowerChange": 5,
+          "nextNode": "zhang_act2_d14_003",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "让她自己决定是尊重，但她怕出门，光说「自己看着办」她会犹豫不前。得主动降低门槛——比如陪她第一次去，她才敢迈出这一步。",
+            "explanation": "尊重意愿不等于被动等待。对于有社交焦虑的老人，需要主动提供支持降低参与门槛。"
+          }
+        }
+      ],
+      "tags": ["choice", "social", "psychology"]
+    },
+    {
+      "id": "zhang_act2_d14_003",
+      "characterId": "zhang_nainai",
+      "act": 2,
+      "day": 14,
+      "type": "dialogue",
+      "scene": "community",
+      "illustrationId": "zhang_agrees_social",
+      "dialogues": [
+        {
+          "id": "dlg_d14_4",
+          "speaker": "elder",
+          "speakerName": "张奶奶",
+          "text": "书法……我倒是有阵子没写了。你要是陪我去第一次，我就试试。",
+          "layer": "essential",
+          "emotion": "hopeful"
+        },
+        {
+          "id": "dlg_d14_5",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "她摩挲着拐杖的把手，像是在给自己鼓劲。",
+          "layer": "emotional",
+          "typingSpeed": 40
+        }
+      ],
+      "nextNode": "zhang_act2_d14_004",
+      "isCheckpoint": true
+    },
+    {
+      "id": "zhang_act2_d14_004",
+      "characterId": "zhang_nainai",
+      "act": 2,
+      "day": 14,
+      "type": "dayEnd",
+      "scene": "community",
+      "illustrationId": "zhang_night_rest",
+      "dialogues": [
+        {
+          "id": "dlg_d14_6",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "她答应试试了！明天她第一次去书法班，看看情况怎么样。",
+          "layer": "essential",
+          "emotion": "hopeful"
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "zhang_act2_d15_001",
+      "characterId": "zhang_nainai",
+      "act": 2,
+      "day": 15,
+      "type": "narrative",
+      "scene": "community",
+      "illustrationId": "zhang_calligraphy_class",
+      "dialogues": [
+        {
+          "id": "dlg_d15_1",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "张奶奶第一次去了书法班。你陪她走到活动中心门口，她自己拄着拐杖进去了。一个半小时后，她出来了，表情却不太对。",
+          "layer": "essential",
+          "duration": 4500,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_d15_2",
+          "speaker": "elder",
+          "speakerName": "张奶奶",
+          "text": "（勉强笑笑）还行吧……就是手有点抖，写的字不如以前了。",
+          "layer": "essential",
+          "emotion": "disappointed"
+        },
+        {
+          "id": "dlg_d15_3",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "她说「还行」，但表情是失落。这是心理信号——她在比较现在的自己和过去，产生了挫败感。你怎么接？",
+          "layer": "essential",
+          "emotion": "concerned"
+        }
+      ],
+      "nextNode": "zhang_act2_d15_002",
+      "tags": ["social", "psychology"]
+    },
+    {
+      "id": "zhang_act2_d15_002",
+      "characterId": "zhang_nainai",
+      "act": 2,
+      "day": 15,
+      "type": "choice",
+      "scene": "community",
+      "illustrationId": "zhang_disappointed",
+      "dialogues": [
+        {
+          "id": "dlg_d15_4",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "她回来情绪不高。你觉得该怎么处理？",
+          "layer": "essential",
+          "emotion": "curious"
+        }
+      ],
+      "choices": [
+        {
+          "id": "zhang_act2_d15_002_a",
+          "text": "询问她的感受，耐心倾听，发现她觉得自己跟不上、手抖",
+          "description": "倾听真实感受",
+          "isCorrect": true,
+          "effects": [
+            { "type": "mood", "delta": 8, "reason": "被理解" },
+            { "type": "trust", "delta": 3, "reason": "被关注" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "zhang_act2_d15_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "很好！你没有急着说「没事」，而是问她感受。她终于说出「手抖跟不上」的真实想法。知道原因才能对症——手抖可以换大笔、慢写，跟不上去可以跟老师说说从基础开始。重要的是她去了，这本身就是胜利。",
+            "explanation": "心理信号识别：老人说「还行」但表情失落时，要主动询问真实感受。识别情绪背后的原因，才能提供有效支持。"
+          }
+        },
+        {
+          "id": "zhang_act2_d15_002_b",
+          "text": "「多去几次就好了，别灰心」",
+          "description": "鼓励她坚持",
+          "isCorrect": false,
+          "effects": [
+            { "type": "mood", "delta": -3, "reason": "感受被忽视" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhang_act2_d15_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "「多去几次就好」听起来像在说她的失落不重要。她手抖、跟不上，这些是实际问题，不解决光靠「多去」只会让她更挫败。",
+            "explanation": "泛泛的鼓励无法解决具体问题。应先识别真实困难，再提供针对性支持。"
+          }
+        },
+        {
+          "id": "zhang_act2_d15_002_c",
+          "text": "「那要不换个活动？不写字也行」",
+          "description": "换一个试试",
+          "isCorrect": false,
+          "effects": [
+            { "type": "mood", "delta": 2, "reason": "有退路" },
+            { "type": "trust", "delta": 1, "reason": "不强求" }
+          ],
+          "spiritPowerChange": 5,
+          "nextNode": "zhang_act2_d15_003",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "换活动是个选项，但别太快放弃。她失落是因为「不如以前」，不是不喜欢书法。先帮她解决手抖的问题，也许她就愿意继续了。",
+            "explanation": "遇到困难即放弃会强化老人的挫败感。应先尝试解决具体障碍，实在不行再考虑调整。"
+          }
+        }
+      ],
+      "tags": ["choice", "social", "psychology"]
+    },
+    {
+      "id": "zhang_act2_d15_003",
+      "characterId": "zhang_nainai",
+      "act": 2,
+      "day": 15,
+      "type": "dialogue",
+      "scene": "community",
+      "illustrationId": "zhang_understood",
+      "dialogues": [
+        {
+          "id": "dlg_d15_5",
+          "speaker": "elder",
+          "speakerName": "张奶奶",
+          "text": "其实我是怕人家笑话……以前我的板书是全校最好的。现在手抖成这样，心里过不去。",
+          "layer": "essential",
+          "emotion": "vulnerable"
+        },
+        {
+          "id": "dlg_d15_6",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "你和她约好下次去时跟老师说说，从简单的练起。她的眉头松了一些。",
+          "layer": "emotional",
+          "typingSpeed": 40
+        }
+      ],
+      "nextNode": "zhang_act2_d15_004",
+      "isCheckpoint": true
+    },
+    {
+      "id": "zhang_act2_d15_004",
+      "characterId": "zhang_nainai",
+      "act": 2,
+      "day": 15,
+      "type": "dayEnd",
+      "scene": "community",
+      "illustrationId": "zhang_night_rest",
+      "dialogues": [
+        {
+          "id": "dlg_d15_7",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "社交的第一步迈出去了，虽然有点磕绊。接下来几天，我注意到张奶奶有些小细节……值得留心。",
+          "layer": "essential",
+          "emotion": "thoughtful"
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "zhang_act2_d16_001",
+      "characterId": "zhang_nainai",
+      "act": 2,
+      "day": 16,
+      "type": "narrative",
+      "scene": "living_room",
+      "illustrationId": "zhang_glasses_misplace",
+      "dialogues": [
+        {
+          "id": "dlg_d16_1",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "早上，张奶奶到处找老花镜，翻了半天沙发和抽屉。你帮她找——就架在她自己的头顶上。",
+          "layer": "essential",
+          "duration": 4000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_d16_2",
+          "speaker": "elder",
+          "speakerName": "张奶奶",
+          "text": "哎哟，我这记性……放头顶上都忘了。真是老了。",
+          "layer": "essential",
+          "emotion": "self-deprecating"
+        },
+        {
+          "id": "dlg_d16_3",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "偶尔忘事是正常的。但这类小细节如果越来越频繁，就要留心了。你怎么回应这个场景？",
+          "layer": "essential",
+          "emotion": "thoughtful"
+        }
+      ],
+      "nextNode": "zhang_act2_d16_002",
+      "tags": ["cognition-foreshadow", "psychology"]
+    },
+    {
+      "id": "zhang_act2_d16_002",
+      "characterId": "zhang_nainai",
+      "act": 2,
+      "day": 16,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "zhang_memory_sign",
+      "dialogues": [
+        {
+          "id": "dlg_d16_4",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "她忘了眼镜在头顶。这个细节你怎么处理？",
+          "layer": "essential",
+          "emotion": "curious"
+        }
+      ],
+      "choices": [
+        {
+          "id": "zhang_act2_d16_002_a",
+          "text": "自然地提醒她，不刻意强调，在心里默默记下这个现象",
+          "description": "温和处理+持续观察",
+          "isCorrect": true,
+          "effects": [
+            { "type": "trust", "delta": 8, "reason": "不让她难堪" },
+            { "type": "mood", "delta": 2, "reason": "被温和对待" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "zhang_act2_d16_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "很好！你没有笑话她，也没有大惊小怪。偶尔忘事人人都有，但如果这种事越来越多，就要留意了。先记在心里，持续观察，必要时再评估。",
+            "explanation": "认知变化的早期观察：自然处理不强化尴尬+持续记录频率。偶尔遗忘是正常老化，频率增加需关注。不过度焦虑也不忽视。"
+          }
+        },
+        {
+          "id": "zhang_act2_d16_002_b",
+          "text": "「哈哈奶奶您眼镜在头顶上呢，老了记性差了」",
+          "description": "开玩笑活跃气氛",
+          "isCorrect": false,
+          "effects": [
+            { "type": "mood", "delta": -5, "reason": "自尊受损" },
+            { "type": "trust", "delta": -3, "reason": "被取笑" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhang_act2_d16_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "笑话她「老了记性差」，她会更在意自己的衰退。她是退休教师，自尊心很强。这种玩笑对她是刺。",
+            "explanation": "嘲笑老人的记忆失误会伤害自尊和信任。应自然温和地提醒，不强调「老了」。"
+          }
+        },
+        {
+          "id": "zhang_act2_d16_002_c",
+          "text": "不以为意，谁还没忘过东西",
+          "description": "完全不在意",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": -2, "reason": "忽视潜在信号" }
+          ],
+          "spiritPowerChange": 5,
+          "nextNode": "zhang_act2_d16_003",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "一次忘事确实正常，但完全不在意也不好。如果这种事变多了，可能是认知变化的早期信号。留个心，记下来，有备无患。",
+            "explanation": "单次遗忘无需焦虑，但应建立观察意识。认知变化是渐进的，早期记录有助于后续评估。"
+          }
+        }
+      ],
+      "tags": ["choice", "cognition-foreshadow", "psychology"]
+    },
+    {
+      "id": "zhang_act2_d16_003",
+      "characterId": "zhang_nainai",
+      "act": 2,
+      "day": 16,
+      "type": "dayEnd",
+      "scene": "living_room",
+      "illustrationId": "zhang_night_rest",
+      "dialogues": [
+        {
+          "id": "dlg_d16_5",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "记一笔：偶尔遗忘，频率待观察。明天继续留意。",
+          "layer": "essential",
+          "emotion": "thoughtful"
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "zhang_act2_d17_001",
+      "characterId": "zhang_nainai",
+      "act": 2,
+      "day": 17,
+      "type": "narrative",
+      "scene": "living_room",
+      "illustrationId": "zhang_repeat_question",
+      "dialogues": [
+        {
+          "id": "dlg_d17_1",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "上午你跟张奶奶说了今天社区要量血压的事。过了十分钟，她又问了一遍：「今天社区量血压是几点来着？」",
+          "layer": "essential",
+          "duration": 4000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_d17_2",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "这是这周第二次了——她重复问刚问过的问题。可能是没注意听，也可能是记不住。怎么回应很关键。",
+          "layer": "essential",
+          "emotion": "thoughtful"
+        }
+      ],
+      "nextNode": "zhang_act2_d17_002",
+      "tags": ["cognition-foreshadow", "psychology"]
+    },
+    {
+      "id": "zhang_act2_d17_002",
+      "characterId": "zhang_nainai",
+      "act": 2,
+      "day": 17,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "zhang_repeat_choice",
+      "dialogues": [
+        {
+          "id": "dlg_d17_3",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "她又问了一遍刚才问过的问题。你怎么回应？",
+          "layer": "essential",
+          "emotion": "curious"
+        }
+      ],
+      "choices": [
+        {
+          "id": "zhang_act2_d17_002_a",
+          "text": "温和地再回答一遍，不指出她重复了，记下这次现象",
+          "description": "耐心重复+继续观察",
+          "isCorrect": true,
+          "effects": [
+            { "type": "mood", "delta": 8, "reason": "不被纠正的安心" },
+            { "type": "trust", "delta": 3, "reason": "被耐心对待" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "zhang_act2_d17_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "很好！她可能自己都没意识到重复了。温和地再答一遍，不让她难堪，同时记下来。如果这种事继续增多，就该考虑做个认知评估了。",
+            "explanation": "认知症早期沟通：不纠正、不指责，温和重复。纠正会让老人焦虑和羞耻，反而加重回避。持续记录频率，必要时就医评估。"
+          }
+        },
+        {
+          "id": "zhang_act2_d17_002_b",
+          "text": "「我刚说过了呀，您忘啦？」",
+          "description": "提醒她重复了",
+          "isCorrect": false,
+          "effects": [
+            { "type": "mood", "delta": -5, "reason": "被指出遗忘" },
+            { "type": "trust", "delta": -5, "reason": "感到被嫌弃" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhang_act2_d17_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "「您忘啦」会让她突然意识到自己记性出了问题，那种恐慌和羞耻很难受。她可能会开始掩饰，更不敢暴露。",
+            "explanation": "直接指出遗忘会引发老人的焦虑和羞耻感，导致掩饰和退缩。应自然重复，保护其尊严。"
+          }
+        },
+        {
+          "id": "zhang_act2_d17_002_c",
+          "text": "岔开话题，聊点别的",
+          "description": "转移注意力",
+          "isCorrect": false,
+          "effects": [
+            { "type": "mood", "delta": 2, "reason": "没被追问" }
+          ],
+          "spiritPowerChange": 5,
+          "nextNode": "zhang_act2_d17_003",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "岔开话题能避免尴尬，但她的问题没得到回答，可能会更焦虑。不如自然地再答一遍。",
+            "explanation": "转移话题虽避免了尴尬，但未满足老人的信息需求。温和重复比回避更妥当。"
+          }
+        }
+      ],
+      "tags": ["choice", "cognition-foreshadow", "psychology"]
+    },
+    {
+      "id": "zhang_act2_d17_003",
+      "characterId": "zhang_nainai",
+      "act": 2,
+      "day": 17,
+      "type": "dayEnd",
+      "scene": "living_room",
+      "illustrationId": "zhang_night_rest",
+      "dialogues": [
+        {
+          "id": "dlg_d17_4",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "又记一笔：重复提问，本周第二次。持续观察中。",
+          "layer": "essential",
+          "emotion": "thoughtful"
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "zhang_act2_d18_001",
+      "characterId": "zhang_nainai",
+      "act": 2,
+      "day": 18,
+      "type": "narrative",
+      "scene": "living_room",
+      "illustrationId": "zhang_diary_cognition",
+      "dialogues": [
+        {
+          "id": "dlg_d18_1",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "今天张奶奶在硬抄本上写了一段话，不像是血压记录。你凑近看了一眼。",
+          "layer": "essential",
+          "duration": 4000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_d18_2",
+          "speaker": "elder",
+          "speakerName": "张奶奶",
+          "text": "（日记，自言自语）最近总找不着东西，眼镜、钥匙、遥控器。上周炖汤忘了关小火，还是闻到糊味才想起来。我是不是……不太行了？",
+          "layer": "emotional",
+          "emotion": "worried",
+          "typingSpeed": 35
+        },
+        {
+          "id": "dlg_d18_3",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "她自己也开始察觉了。这些迹象——遗忘物品、忘关火、重复提问——加在一起，不能只当「老了」来解释。但她很害怕，你的态度决定她会不会面对。",
+          "layer": "essential",
+          "emotion": "serious"
+        }
+      ],
+      "nextNode": "zhang_act2_d18_002",
+      "tags": ["cognition-foreshadow", "psychology"]
+    },
+    {
+      "id": "zhang_act2_d18_002",
+      "characterId": "zhang_nainai",
+      "act": 2,
+      "day": 18,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "zhang_cognition_choice",
+      "dialogues": [
+        {
+          "id": "dlg_d18_4",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "她自己也察觉到记性变化了，而且很害怕。你怎么处理？",
+          "layer": "essential",
+          "emotion": "curious"
+        }
+      ],
+      "choices": [
+        {
+          "id": "zhang_act2_d18_002_a",
+          "text": "持续观察记录，温和建议有空做个认知评估，不焦虑也不过度轻视",
+          "description": "理性面对+适时就医",
+          "isCorrect": true,
+          "effects": [
+            { "type": "health", "delta": 8, "reason": "关注认知健康" },
+            { "type": "trust", "delta": 3, "reason": "认真对待" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "zhang_act2_d18_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "很好！你没有吓她，也没敷衍。记下来、持续观察，等积累够了再建议评估——这是最稳妥的方式。很多认知问题早发现早干预，效果差别很大。",
+            "explanation": "认知症早期识别：持续观察记录6个信号（遗忘、重复提问、迷路、判断力下降、语言困难、性格变化），适时就医评估，不过度焦虑也不忽视。"
+          }
+        },
+        {
+          "id": "zhang_act2_d18_002_b",
+          "text": "「完了完了，这是老年痴呆的前兆啊」",
+          "description": "直接下结论",
+          "isCorrect": false,
+          "effects": [
+            { "type": "mood", "delta": -8, "reason": "极度恐慌" },
+            { "type": "trust", "delta": -3, "reason": "被吓到" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhang_act2_d18_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "千万别这么说！「老年痴呆」四个字会把她吓坏了。偶尔遗忘不一定是认知症，可能是正常老化、睡眠不好、甚至药物影响。过度焦虑反而加重症状。",
+            "explanation": "不可轻率下结论。认知症诊断需专业评估。过度焦虑和标签化会加重老人心理负担，甚至加速功能衰退。"
+          }
+        },
+        {
+          "id": "zhang_act2_d18_002_c",
+          "text": "「想多了，谁还没忘过事」",
+          "description": "安慰她别多想",
+          "isCorrect": false,
+          "effects": [
+            { "type": "mood", "delta": 2, "reason": "被安慰" },
+            { "type": "health", "delta": -3, "reason": "忽视信号" }
+          ],
+          "spiritPowerChange": 5,
+          "nextNode": "zhang_act2_d18_003",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "安慰是好的，但别完全不当回事。忘关火是安全隐患，反复遗忘值得留意。留个心，记下来，比「想多了」更负责任。",
+            "explanation": "完全忽视认知信号会延误早期干预。应在安抚情绪的同时保持观察意识。"
+          }
+        }
+      ],
+      "tags": ["choice", "cognition-foreshadow", "psychology"]
+    },
+    {
+      "id": "zhang_act2_d18_003",
+      "characterId": "zhang_nainai",
+      "act": 2,
+      "day": 18,
+      "type": "dayEnd",
+      "scene": "living_room",
+      "illustrationId": "zhang_night_rest",
+      "dialogues": [
+        {
+          "id": "dlg_d18_5",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "嗯……这个现象，我记下来了。接下来的日子，张奶奶心里有一个更大的结要打开——她想搬回老房子。",
+          "layer": "essential",
+          "emotion": "thoughtful"
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "zhang_act2_d19_001",
+      "characterId": "zhang_nainai",
+      "act": 2,
+      "day": 19,
+      "type": "narrative",
+      "scene": "living_room",
+      "illustrationId": "zhang_wants_to_move",
+      "dialogues": [
+        {
+          "id": "dlg_d19_1",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "晚饭后，张奶奶忽然说了一句让全家人都愣住的话。",
+          "layer": "essential",
+          "duration": 4000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_d19_2",
+          "speaker": "elder",
+          "speakerName": "张奶奶",
+          "text": "我想搬回老房子住。你们工作忙，我在这儿净添乱，还不如一个人清静。",
+          "layer": "essential",
+          "emotion": "resigned"
+        },
+        {
+          "id": "dlg_d19_3",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "她不是真的想一个人住——她有心脏病、骨质疏松，一个人住很危险。她是在说：「我觉得自己是你们的负担」。这是情感冲突的开始，怎么接非常重要。",
+          "layer": "essential",
+          "emotion": "serious"
+        }
+      ],
+      "nextNode": "zhang_act2_d19_002",
+      "tags": ["emotional-conflict", "psychology"]
+    },
+    {
+      "id": "zhang_act2_d19_002",
+      "characterId": "zhang_nainai",
+      "act": 2,
+      "day": 19,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "zhang_move_choice",
+      "dialogues": [
+        {
+          "id": "dlg_d19_4",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "她说要搬回老房子。你怎么回应？",
+          "layer": "essential",
+          "emotion": "curious"
+        }
+      ],
+      "choices": [
+        {
+          "id": "zhang_act2_d19_002_a",
+          "text": "认真倾听她的真实想法，理解她是不想成为负担，表达希望她留下但尊重她的选择",
+          "description": "倾听+理解+真诚表达",
+          "isCorrect": true,
+          "effects": [
+            { "type": "trust", "delta": 8, "reason": "被认真对待" },
+            { "type": "mood", "delta": 3, "reason": "被理解" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "zhang_act2_d19_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "很好！你没有急着否定，而是先听她说。她不是真想搬走，是觉得自己拖累了你们。你表达「希望您留下」，同时尊重她的选择——这样她才听得进去。接下来可以一起想办法，让她觉得自己「有用」而不是「被照顾」。",
+            "explanation": "情感冲突处理：先倾听真实需求（不想成为负担）+ 理解而非否定 + 真诚表达意愿 + 尊重选择权。背后核心是价值感和自主权。"
+          }
+        },
+        {
+          "id": "zhang_act2_d19_002_b",
+          "text": "「您一个人住更危险！万一摔了都没人知道」",
+          "description": "指出风险",
+          "isCorrect": false,
+          "effects": [
+            { "type": "trust", "delta": -5, "reason": "被否定" },
+            { "type": "mood", "delta": -3, "reason": "觉得自己是麻烦" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhang_act2_d19_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "你说的是事实，但这样说等于在说「你一个人不行，你是我们的责任」。她听了会更觉得自己是负担，搬走的念头更坚定。",
+            "explanation": "用风险否定老人的意愿会强化其「负担感」。应先理解其情感需求，再共同探讨方案。"
+          }
+        },
+        {
+          "id": "zhang_act2_d19_002_c",
+          "text": "「再说吧，先别想这些」",
+          "description": "回避话题",
+          "isCorrect": false,
+          "effects": [
+            { "type": "trust", "delta": 1, "reason": "没争执" },
+            { "type": "mood", "delta": -2, "reason": "被敷衍" }
+          ],
+          "spiritPowerChange": 5,
+          "nextNode": "zhang_act2_d19_003",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "回避能暂时不争吵，但她心里的话没说出来，憋着会更难受。这个结不解开，她会越来越消沉。",
+            "explanation": "回避情感话题会让老人感到被忽视。应正面回应，即使一时无法解决，也要让老人感到被听见。"
+          }
+        }
+      ],
+      "tags": ["choice", "emotional-conflict", "psychology"]
+    },
+    {
+      "id": "zhang_act2_d19_003",
+      "characterId": "zhang_nainai",
+      "act": 2,
+      "day": 19,
+      "type": "dialogue",
+      "scene": "living_room",
+      "illustrationId": "zhang_heard_move",
+      "dialogues": [
+        {
+          "id": "dlg_d19_5",
+          "speaker": "elder",
+          "speakerName": "张奶奶",
+          "text": "（沉默良久）……我不是真想走。我就是怕拖累你们。你们要是真不嫌弃我……",
+          "layer": "essential",
+          "emotion": "vulnerable"
+        },
+        {
+          "id": "dlg_d19_6",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "她没有把话说完，但你听懂了。",
+          "layer": "emotional",
+          "typingSpeed": 40
+        }
+      ],
+      "nextNode": "zhang_act2_d19_004",
+      "isCheckpoint": true
+    },
+    {
+      "id": "zhang_act2_d19_004",
+      "characterId": "zhang_nainai",
+      "act": 2,
+      "day": 19,
+      "type": "dayEnd",
+      "scene": "living_room",
+      "illustrationId": "zhang_night_rest",
+      "dialogues": [
+        {
+          "id": "dlg_d19_7",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "她说出了心里话。明天她情绪可能还会波动，要留心抑郁的信号。这场情感冲突，得好好收尾。",
+          "layer": "essential",
+          "emotion": "gentle"
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "zhang_act2_d20_001",
+      "characterId": "zhang_nainai",
+      "act": 2,
+      "day": 20,
+      "type": "narrative",
+      "scene": "bedroom",
+      "illustrationId": "zhang_low_mood",
+      "dialogues": [
+        {
+          "id": "dlg_d20_1",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "昨天的话好像耗尽了她力气。今天张奶奶一直没出房间，午饭也没怎么吃。孙女打来视频，她勉强应付了几句就挂了。",
+          "layer": "essential",
+          "duration": 4500,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_d20_2",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "连续两天不愿出门、食欲下降、回避社交——这是抑郁的预警信号。她打开了一道伤口，现在需要时间愈合，但你的陪伴很重要。",
+          "layer": "essential",
+          "emotion": "concerned"
+        }
+      ],
+      "nextNode": "zhang_act2_d20_002",
+      "tags": ["emotional-conflict", "depression-sign"]
+    },
+    {
+      "id": "zhang_act2_d20_002",
+      "characterId": "zhang_nainai",
+      "act": 2,
+      "day": 20,
+      "type": "choice",
+      "scene": "bedroom",
+      "illustrationId": "zhang_depression_choice",
+      "dialogues": [
+        {
+          "id": "dlg_d20_3",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "她情绪很低落。你怎么帮她？",
+          "layer": "essential",
+          "emotion": "curious"
+        }
+      ],
+      "choices": [
+        {
+          "id": "zhang_act2_d20_002_a",
+          "text": "陪伴倾听，发现核心焦虑是「怕成为负担」，针对性地表达她被需要",
+          "description": "陪伴+找到根源+针对性支持",
+          "isCorrect": true,
+          "effects": [
+            { "type": "mood", "delta": 8, "reason": "被陪伴和理解" },
+            { "type": "trust", "delta": 3, "reason": "不孤独了" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "zhang_act2_d20_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "很好！你没有急着让她「振作」，而是陪着她，听她说。她的核心焦虑是「成为负担」——你针对性地告诉她，她织的毛衣、她记得孙女爱吃的菜、她教的那些学生……这些都是她存在的意义。抑郁的5个信号你要记住：情绪低落、兴趣丧失、食欲睡眠改变、自责无价值、回避社交。",
+            "explanation": "抑郁识别5个信号：情绪低落、兴趣丧失、食欲/睡眠改变、自责无价值感、回避社交。应对：陪伴倾听+识别核心焦虑+针对性价值肯定，必要时寻求专业帮助。"
+          }
+        },
+        {
+          "id": "zhang_act2_d20_002_b",
+          "text": "强行拉她出门散散心，说「别闷着了」",
+          "description": "带她出去走走",
+          "isCorrect": false,
+          "effects": [
+            { "type": "mood", "delta": -5, "reason": "被强迫" },
+            { "type": "trust", "delta": -3, "reason": "不被理解" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhang_act2_d20_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "她现在最需要的是被理解，不是被拽出门。强行带她出去，她会更封闭。低落的时候，陪伴比活动更重要。",
+            "explanation": "抑郁状态下强迫活动会加重抵触。应先建立情感连接，待情绪稳定后再逐步增加活动。"
+          }
+        },
+        {
+          "id": "zhang_act2_d20_002_c",
+          "text": "让她休息，不打扰她",
+          "description": "给她空间",
+          "isCorrect": false,
+          "effects": [
+            { "type": "mood", "delta": 1, "reason": "不被打扰" },
+            { "type": "trust", "delta": -2, "reason": "觉得被冷落" }
+          ],
+          "spiritPowerChange": 5,
+          "nextNode": "zhang_act2_d20_003",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "给她空间是对的，但完全不打扰会让她觉得没人关心。低落时最怕的就是孤独——哪怕只是坐在旁边不说话，也比让她一个人待着好。",
+            "explanation": "抑郁状态下完全隔离会加重孤独感。应在尊重空间的同时保持适度陪伴，让老人知道有人在。"
+          }
+        }
+      ],
+      "tags": ["choice", "emotional-conflict", "depression-sign"]
+    },
+    {
+      "id": "zhang_act2_d20_003",
+      "characterId": "zhang_nainai",
+      "act": 2,
+      "day": 20,
+      "type": "dialogue",
+      "scene": "bedroom",
+      "illustrationId": "zhang_comforted",
+      "dialogues": [
+        {
+          "id": "dlg_d20_4",
+          "speaker": "elder",
+          "speakerName": "张奶奶",
+          "text": "（靠在枕头上，轻声）你坐这儿就好。不用说什么，坐一会儿。",
+          "layer": "essential",
+          "emotion": "calm"
+        },
+        {
+          "id": "dlg_d20_5",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "窗外的光慢慢暗下来，你坐在床边，她渐渐平静了些。",
+          "layer": "emotional",
+          "typingSpeed": 40
+        }
+      ],
+      "nextNode": "zhang_act2_d20_004",
+      "isCheckpoint": true
+    },
+    {
+      "id": "zhang_act2_d20_004",
+      "characterId": "zhang_nainai",
+      "act": 2,
+      "day": 20,
+      "type": "dayEnd",
+      "scene": "bedroom",
+      "illustrationId": "zhang_night_rest",
+      "dialogues": [
+        {
+          "id": "dlg_d20_6",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "她在好转。明天是第二幕的最后一天，这场情感冲突要好好收尾——她需要一次真正的打开心扉。",
+          "layer": "essential",
+          "emotion": "hopeful"
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "zhang_act2_d21_001",
+      "characterId": "zhang_nainai",
+      "act": 2,
+      "day": 21,
+      "type": "narrative",
+      "scene": "living_room",
+      "illustrationId": "zhang_heart_to_heart",
+      "dialogues": [
+        {
+          "id": "dlg_d21_1",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "第二幕的最后一天。午后，张奶奶主动从房间出来了，坐在你对面。她攒了好多话，今天想说出来。",
+          "layer": "essential",
+          "duration": 4500,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_d21_2",
+          "speaker": "elder",
+          "speakerName": "张奶奶",
+          "text": "孩子，我跟你说实话。我不是不想跟你们住，我是怕你们嫌我。我身体不好，做事慢，吃药还得分半天……我不想让你觉得，你妈是个累赘。",
+          "layer": "essential",
+          "emotion": "honest"
+        },
+        {
+          "id": "dlg_d21_3",
+          "speaker": "elder",
+          "speakerName": "张奶奶",
+          "text": "我这辈子最骄傲的事就是教书、养家。现在什么都做不了了，还要人伺候……我心里过不去这道坎。",
+          "layer": "essential",
+          "emotion": "sad"
+        },
+        {
+          "id": "dlg_d21_4",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "她终于完全打开了。这是第二幕的高潮——你怎么回应，决定了接下来你们的关系走向。这是最重要的一个选择。",
+          "layer": "essential",
+          "emotion": "serious"
+        }
+      ],
+      "nextNode": "zhang_act2_d21_002",
+      "tags": ["emotional-conflict", "climax"]
+    },
+    {
+      "id": "zhang_act2_d21_002",
+      "characterId": "zhang_nainai",
+      "act": 2,
+      "day": 21,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "zhang_climax_choice",
+      "dialogues": [
+        {
+          "id": "dlg_d21_5",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "她把心底最深的恐惧说出来了——「怕成为累赘」。你的回应，是这三十天里最重要的时刻之一。",
+          "layer": "essential",
+          "emotion": "curious"
+        }
+      ],
+      "choices": [
+        {
+          "id": "zhang_act2_d21_002_a",
+          "text": "真诚回应，承认之前没注意到她的感受，承诺调整照护方式，让她参与而非被照顾",
+          "description": "真诚+反思+改变承诺",
+          "isCorrect": true,
+          "effects": [
+            { "type": "trust", "delta": 8, "reason": "被真诚对待" },
+            { "type": "mood", "delta": 8, "reason": "被理解和接纳" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "zhang_act2_d21_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "这是最好的回应。你承认了自己的不足，没有辩解，还承诺改变——让她参与而非被照顾。她要的不是「您不是负担」的空话，而是「我听到了，我会改」的真诚。从今天起，让她做一些她能做的事，让她觉得自己还是这个家的一部分。",
+            "explanation": "情感冲突的收尾：真诚回应+承认不足+承诺具体改变。核心是让老人从「被照顾的对象」转变为「家庭的参与者」，重建价值感和自主权。"
+          }
+        },
+        {
+          "id": "zhang_act2_d21_002_b",
+          "text": "「我们做得还不够吗？还要怎样」",
+          "description": "觉得委屈",
+          "isCorrect": false,
+          "effects": [
+            { "type": "trust", "delta": -5, "reason": "被反驳" },
+            { "type": "mood", "delta": -3, "reason": "内疚和失望" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhang_act2_d21_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "这句话会把刚打开的心门关上。她鼓起多大勇气才说出口，你一句「不够吗」让她觉得自己不知好歹。她会把话咽回去，比以前藏得更深。",
+            "explanation": "防御性回应会彻底关闭沟通通道。老人袒露心声时，最忌辩解和委屈，应先接纳其感受。"
+          }
+        },
+        {
+          "id": "zhang_act2_d21_002_c",
+          "text": "「以后会注意的，您别多想了」",
+          "description": "简单承诺",
+          "isCorrect": false,
+          "effects": [
+            { "type": "trust", "delta": 4, "reason": "有回应" },
+            { "type": "mood", "delta": 4, "reason": "被安抚" }
+          ],
+          "spiritPowerChange": 5,
+          "nextNode": "zhang_act2_d21_003",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "「以后注意」比沉默好，但太空泛了。她要的不是承诺，是具体的改变。告诉她你会怎么做——比如让她负责分药、让她教孙女写字——让她觉得自己有用。",
+            "explanation": "空泛承诺缺乏力量。应提供具体的改变方案，让老人看到实际的转变，而非仅仅口头安抚。"
+          }
+        }
+      ],
+      "tags": ["choice", "emotional-conflict", "climax"]
+    },
+    {
+      "id": "zhang_act2_d21_003",
+      "characterId": "zhang_nainai",
+      "act": 2,
+      "day": 21,
+      "type": "actEnd",
+      "scene": "living_room",
+      "illustrationId": "zhang_act2_end",
+      "dialogues": [
+        {
+          "id": "dlg_d21_6",
+          "speaker": "elder",
+          "speakerName": "张奶奶",
+          "text": "（擦了擦眼角）好……我信你。那我以后有不舒服，就跟你说。你也别嫌我啰嗦。",
+          "layer": "essential",
+          "emotion": "moved"
+        },
+        {
+          "id": "dlg_d21_7",
+          "speaker": "elder",
+          "speakerName": "张奶奶",
+          "text": "这硬抄本你要看就看看吧。我每天记的，不只是血压……还有我那些不敢跟你们说的话。",
+          "layer": "essential",
+          "emotion": "vulnerable"
+        },
+        {
+          "id": "dlg_d21_8",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "第二幕结束了。「忍着不说」的壳，终于裂开了。她愿意说了，你愿意听了。但真正的考验还在后面——第三幕，有些事来不及「忍」，需要你在最短的时间内做出最对的选择。",
+          "layer": "emotional",
+          "emotion": "gentle",
+          "typingSpeed": 35
+        }
+      ],
+      "isCheckpoint": true,
+      "unlocks": [
+        {
+          "albumEntryId": "album_zhang_act2_complete"
+        }
+      ],
+      "tags": ["act-end"],
+      "devNote": "第二幕结束，硬抄本伏笔揭示——它不只记血压，还记着她不敢说的话"
+    }
+  ]
+}

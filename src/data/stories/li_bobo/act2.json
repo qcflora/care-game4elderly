@@ -1,0 +1,1652 @@
+{
+  "characterId": "li_bobo",
+  "act": 2,
+  "title": "第二幕：心声与社交",
+  "theme": "退休适应与心理支持",
+  "startDay": 8,
+  "endDay": 21,
+  "nodes": [
+    {
+      "id": "li_act2_d8_001",
+      "characterId": "li_bobo",
+      "act": 2,
+      "day": 8,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "li_wechat_sport",
+      "dialogues": [
+        {
+          "id": "dlg_040",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "微信运动里，李伯伯的步数从上周日均8000步，今早突然变成1200步。智能手表显示他昨晚失眠到凌晨三点，今天一直窝在沙发上刷短视频。",
+          "layer": "essential",
+          "duration": 4000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_041",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "步数骤降、失眠、刷短视频——这是社交退缩的信号。李伯伯上周报名的志愿者课堂本该今天去，可他没出门。怎么关心他才不踩雷？",
+          "layer": "essential",
+          "emotion": "concerned"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "打电话质问他今天怎么没去上课",
+          "description": "直接追问原因",
+          "isCorrect": false,
+          "effects": [
+            { "type": "trust", "delta": -7, "reason": "被监视、被质问" },
+            { "type": "mood", "delta": -5, "reason": "压力更大" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "li_act2_d8_002",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "质问会让他觉得'连步数都被监控'，本就低落的心情会更糟，下次可能干脆关掉微信运动。",
+            "explanation": "数字生活度高的老人，数据是双刃剑——你能看到异常，他也能感到'被监视'。关心不等于查岗，要先处理情绪再了解原因。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "发条微信问'今天身体不舒服吗'，给他台阶下",
+          "description": "温和关心，留退路",
+          "isCorrect": true,
+          "effects": [
+            { "type": "trust", "delta": 6, "reason": "被关心又不丢面子" },
+            { "type": "mood", "delta": 4, "reason": "有台阶可下" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "li_act2_d8_002",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "好办法！用'身体不舒服吗'给他台阶，他可以说'是啊有点累'，而不是承认'我不敢去'。保住面子，沟通才顺畅。",
+            "explanation": "心理支持技巧：为要强的老人提供'体面的退路'。用开放、不评判的问题代替质问，让他自愿说出真实情况。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "什么也不问，等他自己主动说",
+          "description": "给他空间",
+          "isCorrect": false,
+          "effects": [
+            { "type": "mood", "delta": -3, "reason": "没人关注更失落" },
+            { "type": "trust", "delta": -2, "reason": "感觉被忽视" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "li_act2_d8_002",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "他正退缩，'不闻不问'会被他解读成'果然没人在乎'。沉默会加深孤独。",
+            "explanation": "心理信号识别：社交退缩+失眠+回避活动是抑郁早期信号，需要主动温和地介入，而非被动等待。"
+          }
+        }
+      ],
+      "props": [
+        {
+          "propId": "wechat_sport_record",
+          "layer": "inspect",
+          "autoShow": true
+        }
+      ],
+      "tags": ["choice", "psychology", "social-withdrawal"],
+      "devNote": "社交退缩识别，微信运动数据异常"
+    },
+    {
+      "id": "li_act2_d8_002",
+      "characterId": "li_bobo",
+      "act": 2,
+      "day": 8,
+      "type": "dayEnd",
+      "scene": "living_room",
+      "illustrationId": "li_phone_reply",
+      "dialogues": [
+        {
+          "id": "dlg_042",
+          "speaker": "elder",
+          "speakerName": "李伯伯",
+          "text": "（回了条语音）嗯，昨晚没睡好，今天歇一天。那个课堂……下周再去吧。",
+          "layer": "essential",
+          "emotion": "evasive"
+        },
+        {
+          "id": "dlg_043",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "他没说真话，但至少回应了。明天继续温和地陪着他。",
+          "layer": "emotional",
+          "emotion": "gentle",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "li_act2_d9_001",
+      "characterId": "li_bobo",
+      "act": 2,
+      "day": 9,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "li_couch_scroll",
+      "dialogues": [
+        {
+          "id": "dlg_044",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "李伯伯第二天还是没出门，窝在沙发上刷了六小时短视频，午饭叫了外卖。老伴念叨两句，他烦躁地摆手'别管我'。血糖仪数据又跳红了。",
+          "layer": "essential",
+          "duration": 4000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_045",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "连续两天退缩、饮食失控、情绪烦躁。这是退休适应的'低谷期'。要拉他一把，但不能硬拉。怎么做？",
+          "layer": "essential",
+          "emotion": "concerned"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "严肃地告诉他血糖又高了，必须出门",
+          "description": "用健康数据施压",
+          "isCorrect": false,
+          "effects": [
+            { "type": "trust", "delta": -8, "reason": "被施压、被说教" },
+            { "type": "mood", "delta": -5, "reason": "压力更大" },
+            { "type": "health", "delta": -2, "reason": "应激升血糖" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "li_act2_d9_002",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "应激本身就会升血糖！用数据施压只会让他更焦虑、更退缩，形成恶性循环。",
+            "explanation": "情绪应激会激活交感神经，促使血糖升高。对糖尿病早期患者，情绪管理本身就是控糖的一部分。先把情绪稳住，再谈数据。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "约他一起去公园散步，说想请教他桥梁知识",
+          "description": "用陪伴和请教把他带出家门",
+          "isCorrect": true,
+          "effects": [
+            { "type": "mood", "delta": 8, "reason": "被需要、被陪伴" },
+            { "type": "health", "delta": 5, "reason": "出门散步+情绪改善" },
+            { "type": "trust", "delta": 6, "reason": "没被说教" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "li_act2_d9_002",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "太棒了！用'请教桥梁知识'这个他最骄傲的话题，把他从沙发上'钓'起来。出门本身就能改善情绪和血糖。",
+            "explanation": "心理支持中的'行为激活'：抑郁退缩时，先安排低压力、有正向反馈的活动。回忆擅长的事=重建价值感，出门散步=自然改善情绪和血糖。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "让老伴别念叨，给他几天空间自己调整",
+          "description": "减少家庭压力",
+          "isCorrect": false,
+          "effects": [
+            { "type": "mood", "delta": -2, "reason": "虽减压力但仍孤独" },
+            { "type": "health", "delta": -4, "reason": "持续不运动饮食失控" }
+          ],
+          "spiritPowerChange": 2,
+          "nextNode": "li_act2_d9_002",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "减少唠叨有道理，但'完全放任'会让低谷期拖长。他需要的是被带出门，不是被独自留下。",
+            "explanation": "退休适应低谷期一般持续数天到两周。被动等待会延长低谷，温和的主动陪伴才能帮他走出来。"
+          }
+        }
+      ],
+      "tags": ["choice", "psychology", "behavioral-activation"],
+      "devNote": "行为激活教学"
+    },
+    {
+      "id": "li_act2_d9_002",
+      "characterId": "li_bobo",
+      "act": 2,
+      "day": 9,
+      "type": "dayEnd",
+      "scene": "park",
+      "illustrationId": "li_park_walk_talk",
+      "dialogues": [
+        {
+          "id": "dlg_046",
+          "speaker": "elder",
+          "speakerName": "李伯伯",
+          "text": "（在公园里边走边讲）……那个桥的应力分析，我画了三十七版图纸。现在的年轻人，耐不住这个性子。",
+          "layer": "essential",
+          "emotion": "animated"
+        },
+        {
+          "id": "dlg_047",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "你看，出了门、说起老本行，眼神都亮了。明天带他去社区课堂看看。",
+          "layer": "emotional",
+          "emotion": "happy",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "li_act2_d10_001",
+      "characterId": "li_bobo",
+      "act": 2,
+      "day": 10,
+      "type": "choice",
+      "scene": "community_center",
+      "illustrationId": "li_phone_class",
+      "dialogues": [
+        {
+          "id": "dlg_048",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "社区智能手机课堂上，李伯伯站在讲台边试讲。台下坐着七八位老人，有人连微信都打不开。李伯伯讲得投入，可一位老太太反复问同一个问题，他眉头皱了起来。",
+          "layer": "essential",
+          "duration": 4000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_049",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "李伯伯讲技术没问题，可面对'反复问同一问题'的老人，耐心快见底了。这其实是很好的同理心教学时机。怎么引导他？",
+          "layer": "essential",
+          "emotion": "thoughtful"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "让他别急，告诉他对老人要有耐心",
+          "description": "直接说教",
+          "isCorrect": false,
+          "effects": [
+            { "type": "trust", "delta": -3, "reason": "被说教" },
+            { "type": "mood", "delta": -2, "reason": "被否定" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "li_act2_d10_002",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "说教对李伯伯没用，他最烦'被人教做人'。而且他自己都不愿承认变老，又怎么会自然地理解其他老人的难处？",
+            "explanation": "李伯伯的'不耐烦'其实是他不愿面对'自己也会这样'的投射。直接说教会触发防御，要用体验让他自己感受。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "课后私下和他聊：那个老太太可能记性在退化，多问是没办法",
+          "description": "温和解释背后原因，唤起同理心",
+          "isCorrect": true,
+          "effects": [
+            { "type": "mood", "delta": 5, "reason": "理解他人也理解自己" },
+            { "type": "trust", "delta": 6, "reason": "被平等对待" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "li_act2_d10_002",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "好！不说教，只提供信息。李伯伯是工程师，听到'记性退化是生理现象'他会用理性去理解，而不是觉得被指责。",
+            "explanation": "心理支持的共情教学：理解行为背后的原因，才能生出耐心。老人反复问同一问题，可能是听力下降、短期记忆衰退或焦虑。多问几次≠故意捣乱。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "建议他给那位老太太单独开小灶",
+          "description": "用行动解决，绕过情绪",
+          "isCorrect": false,
+          "effects": [
+            { "type": "mood", "delta": 2, "reason": "问题暂时缓解" },
+            { "type": "trust", "delta": 1, "reason": "效果有限" }
+          ],
+          "spiritPowerChange": 4,
+          "nextNode": "li_act2_d10_002",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "治标不治本。下次遇到别的老人他还会不耐烦。根本是建立对衰老的同理心，不是绕过它。",
+            "explanation": "技能型志愿活动里，'耐心'不是天生的，需要理解衰老的机制。一次性解决个案，不如建立长期的同理认知。"
+          }
+        }
+      ],
+      "tags": ["choice", "psychology", "empathy"],
+      "devNote": "同理心教学，为认知伏笔铺垫"
+    },
+    {
+      "id": "li_act2_d10_002",
+      "characterId": "li_bobo",
+      "act": 2,
+      "day": 10,
+      "type": "dayEnd",
+      "scene": "community_center",
+      "illustrationId": "li_teaching_elderly",
+      "dialogues": [
+        {
+          "id": "dlg_050",
+          "speaker": "elder",
+          "speakerName": "李伯伯",
+          "text": "（若有所思）记性退化……是哈。我有时候找钥匙也得找半天。下次我慢点讲。",
+          "layer": "essential",
+          "emotion": "reflective"
+        },
+        {
+          "id": "dlg_051",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "他开始把'别人'和'自己'联系起来了。这是同理心的萌芽。",
+          "layer": "emotional",
+          "emotion": "warm",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "li_act2_d11_001",
+      "characterId": "li_bobo",
+      "act": 2,
+      "day": 11,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "li_video_call",
+      "dialogues": [
+        {
+          "id": "dlg_052",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "视频通话时间，在外地的儿子照例打来。李伯伯接起来，儿子开口就问'血糖多少、药吃了没、今天走多少步'。李伯伯脸一沉，敷衍两句就想挂。",
+          "layer": "essential",
+          "duration": 4000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_053",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "典型的远程照护沟通困局：儿子关心健康，李伯伯却只感到被查岗。作为'守护精灵'，你该怎么帮这对父子？",
+          "layer": "essential",
+          "emotion": "concerned"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "让儿子继续问，健康最重要",
+          "description": "维持健康监控",
+          "isCorrect": false,
+          "effects": [
+            { "type": "trust", "delta": -6, "reason": "被查岗感持续" },
+            { "type": "mood", "delta": -4, "reason": "通话变成负担" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "li_act2_d11_002",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "李伯伯已经开始躲儿子电话了。再这么问下去，他会编数据糊弄，远程照护彻底失效。",
+            "explanation": "远程照护的悖论：监控越紧，隐瞒越多。信任值低的老人会把'关心'当'控制'，用假数据应付。先修复关系，数据才有意义。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "建议儿子先聊五分钟家常，再自然带出健康话题",
+          "description": "调整沟通顺序，先情感后健康",
+          "isCorrect": true,
+          "effects": [
+            { "type": "trust", "delta": 7, "reason": "被当成父亲而非病人" },
+            { "type": "mood", "delta": 6, "reason": "通话变愉快" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "li_act2_d11_002",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "太对了！先聊家常让李伯伯感到'儿子想我这个人'，而不是'儿子来检查作业'。心情好了，健康话题也聊得进去。",
+            "explanation": "远程照护沟通技巧：'情感先行'原则。先建立情感连接（5-10分钟家常），再谈健康。让老人感到被关心而非被管理，信息才真实。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "让李伯伯主动汇报，培养他的自我管理",
+          "description": "把主动权交给他",
+          "isCorrect": false,
+          "effects": [
+            { "type": "independence", "delta": 3, "reason": "主动权在他" },
+            { "type": "health", "delta": -2, "reason": "他还没养成习惯" }
+          ],
+          "spiritPowerChange": 4,
+          "nextNode": "li_act2_d11_002",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "方向对，但时机未到。李伯伯自我管理习惯刚起步，完全靠他主动汇报，可能漏报或忘报。需要'辅助+鼓励'过渡。",
+            "explanation": "自我管理能力是逐步建立的。从'子女提醒'到'主动汇报'需要过渡期。可以先约定固定时间、用他擅长的智能工具辅助。"
+          }
+        }
+      ],
+      "tags": ["choice", "psychology", "remote-care"],
+      "devNote": "远程照护沟通教学"
+    },
+    {
+      "id": "li_act2_d11_002",
+      "characterId": "li_bobo",
+      "act": 2,
+      "day": 11,
+      "type": "dayEnd",
+      "scene": "living_room",
+      "illustrationId": "li_happy_call",
+      "dialogues": [
+        {
+          "id": "dlg_054",
+          "speaker": "elder",
+          "speakerName": "李伯伯",
+          "text": "（挂电话后）这小子今天话多了。说起他小时候我把桥梁模型带回家……嘿，他还记得。",
+          "layer": "essential",
+          "emotion": "happy"
+        },
+        {
+          "id": "dlg_055",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "通话时长从三分钟变成二十分钟啦。这就是信任的温度。",
+          "layer": "emotional",
+          "emotion": "warm",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "li_act2_d12_001",
+      "characterId": "li_bobo",
+      "act": 2,
+      "day": 12,
+      "type": "choice",
+      "scene": "community_center",
+      "illustrationId": "li_class_success",
+      "dialogues": [
+        {
+          "id": "dlg_056",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "智能手机课堂第三次，李伯伯已经能游刃有余地教老人用微信、设健康码。今天还自发做了个图文教程发到群里。社区主任夸他'李工真是宝'，他嘴上说'小意思'，回家却把这句话跟老伴重复了三遍。",
+          "layer": "essential",
+          "duration": 4000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_057",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "价值感回来了！这是巩固退休适应成果的好时机。怎么接住这份喜悦？",
+          "layer": "essential",
+          "emotion": "happy"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "趁机建议他每周多排几节课，发挥余热",
+          "description": "扩大贡献",
+          "isCorrect": false,
+          "effects": [
+            { "type": "mood", "delta": -3, "reason": "好事变任务" },
+            { "type": "trust", "delta": -2, "reason": "又被安排" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "li_act2_d12_002",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "他刚尝到'自发'的甜头，你一'建议排课'，'我想做'又变回'被安排'了。热情会被浇灭。",
+            "explanation": "内在动机（我自己想做）比外在安排（被要求做）更持久。老人刚找到自主感时，切忌过度规划，让他自己决定节奏。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "真诚肯定他的教程做得专业，问他下一步想教什么",
+          "description": "肯定+激发自主规划",
+          "isCorrect": true,
+          "effects": [
+            { "type": "mood", "delta": 7, "reason": "被专业地认可" },
+            { "type": "trust", "delta": 6, "reason": "被尊重专长" },
+            { "type": "independence", "delta": 4, "reason": "自己规划" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "li_act2_d12_002",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "完美！'专业'这个词对工程师出身的李伯伯是最高赞美。把'下一步'交给他，他会有主人翁感。",
+            "explanation": "心理支持中的'优势视角'：肯定老人已有的优势和能力，而非关注缺失。'李工'这个称呼本身就激活了他的职业认同，是很好的资源。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "把他的教程转发到家庭群，让亲戚们都夸夸",
+          "description": "扩大正向反馈",
+          "isCorrect": true,
+          "effects": [
+            { "type": "mood", "delta": 5, "reason": "被全家认可" },
+            { "type": "trust", "delta": 3, "reason": "被骄傲地展示" }
+          ],
+          "spiritPowerChange": 7,
+          "nextNode": "li_act2_d12_002",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "也不错！家人的骄傲是对老人价值感的强力确认。不过要先征求他同意，要强的老人可能不爱'显摆'。",
+            "explanation": "正向反馈能强化行为。但需注意：尊重老人是否愿意被'公开表扬'，先问一句'爸我转家里群行不'，既分享喜悦又保住他的掌控感。"
+          }
+        }
+      ],
+      "tags": ["choice", "psychology", "strength-perspective"],
+      "devNote": "优势视角教学，巩固退休适应"
+    },
+    {
+      "id": "li_act2_d12_002",
+      "characterId": "li_bobo",
+      "act": 2,
+      "day": 12,
+      "type": "dayEnd",
+      "scene": "living_room",
+      "illustrationId": "li_proud_tutorial",
+      "dialogues": [
+        {
+          "id": "dlg_058",
+          "speaker": "elder",
+          "speakerName": "李伯伯",
+          "text": "（在备忘录里列清单）下节课……教他们用导航。对，再做个图文版的。",
+          "layer": "essential",
+          "emotion": "motivated"
+        },
+        {
+          "id": "dlg_059",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "他自己规划起来了。这就是'被需要'的力量。",
+          "layer": "emotional",
+          "emotion": "proud",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "li_act2_d13_001",
+      "characterId": "li_bobo",
+      "act": 2,
+      "day": 13,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "li_listening",
+      "dialogues": [
+        {
+          "id": "dlg_060",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "晚上，李伯伯主动找老伴聊天，说起今天课堂上有位老人把'截图'听成'借图'，闹了笑话。说着说着，话锋一转：'其实我有时候也听不清了……算不算老了？'",
+          "layer": "essential",
+          "duration": 4500,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_061",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "他第一次主动承认'可能老了'，这是巨大的进步，也很脆弱。老伴该怎么接这句话？你来引导。",
+          "layer": "essential",
+          "emotion": "gentle"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "老伴说'哪有，你看着比同龄人年轻多了'",
+          "description": "安慰否认",
+          "isCorrect": false,
+          "effects": [
+            { "type": "trust", "delta": -4, "reason": "真心话被敷衍" },
+            { "type": "mood", "delta": -2, "reason": "没被真正听见" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "li_act2_d13_002",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "他鼓起勇气承认脆弱，却被一句'你年轻'堵回去。下次他不会再说了。",
+            "explanation": "倾听技巧第一课：不评判、不否认、不复述陈词滥调。'你年轻'看似安慰，实是否定了他的真实感受。承认脆弱需要勇气，被敷衍一次就关上门。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "老伴说'听不清就查查，我陪你去医院看看耳朵'",
+          "description": "接纳+行动",
+          "isCorrect": true,
+          "effects": [
+            { "type": "trust", "delta": 8, "reason": "被接纳、被陪伴" },
+            { "type": "mood", "delta": 6, "reason": "脆弱被托住" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "li_act2_d13_002",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "太好了！先接纳'确实有变化'，再提供'我陪你去'的陪伴。没有否定，没有说教，只有'我和你一起面对'。",
+            "explanation": "倾听技巧：复述确认（'你是说听不清了？'）+接纳情绪（'这确实让人担心'）+陪伴行动（'我陪你去查查'）。三步让老人感到被真正听见。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "老伴说'老了正常，谁不老啊'",
+          "description": "淡化处理",
+          "isCorrect": false,
+          "effects": [
+            { "type": "mood", "delta": -1, "reason": "虽平常心但缺温度" },
+            { "type": "trust", "delta": -2, "reason": "没被特殊对待" }
+          ],
+          "spiritPowerChange": 2,
+          "nextNode": "li_act2_d13_002",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "道理没错，可对刚鼓起勇气承认的老人，'谁不老啊'太轻飘了。他需要的是被认真对待，不是被一笔带过。",
+            "explanation": "共情不等于说大道理。老人分享脆弱时，他要的是'你重视我说的话'，而非'这很正常别在意'。认真对待每一次坦露，信任才能累积。"
+          }
+        }
+      ],
+      "tags": ["choice", "psychology", "listening"],
+      "devNote": "倾听技巧教学，承认衰老的脆弱时刻"
+    },
+    {
+      "id": "li_act2_d13_002",
+      "characterId": "li_bobo",
+      "act": 2,
+      "day": 13,
+      "type": "dayEnd",
+      "scene": "living_room",
+      "illustrationId": "li_couple_talk",
+      "dialogues": [
+        {
+          "id": "dlg_062",
+          "speaker": "elder",
+          "speakerName": "李伯伯",
+          "text": "（沉默片刻）……行，下周去看看。有你陪着就好。",
+          "layer": "essential",
+          "emotion": "moved"
+        },
+        {
+          "id": "dlg_063",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "他第一次主动同意去医院了。信任，就是一次次'被听见'积累出来的。",
+          "layer": "emotional",
+          "emotion": "warm",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "li_act2_d14_001",
+      "characterId": "li_bobo",
+      "act": 2,
+      "day": 14,
+      "type": "choice",
+      "scene": "hospital",
+      "illustrationId": "li_hospital_visit",
+      "dialogues": [
+        {
+          "id": "dlg_064",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "医院里，李伯伯做完听力检查，结果是轻度听力下降，医生建议配助听器。他拿着报告，脸有点僵——'助听器'三个字像盖章一样把他钉在'老人'的位置上。",
+          "layer": "essential",
+          "duration": 4000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_065",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "助听器对他不是工具，是'老了'的标签。怎么帮他跨过这道心理坎？",
+          "layer": "essential",
+          "emotion": "concerned"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "说'助听器就像老花镜，谁都需要'",
+          "description": "用类比淡化",
+          "isCorrect": false,
+          "effects": [
+            { "type": "mood", "delta": -2, "reason": "还是被当成老人" }
+          ],
+          "spiritPowerChange": 3,
+          "nextNode": "li_act2_d14_002",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "类比方向对，但'老花镜'还是'老'字当头。对死不认老的他，得换个更'科技'的框架。",
+            "explanation": "对数字生活度高的老人，把辅具'去老化'、'科技化'更易接受。比如把助听器说成'智能听力增强设备'，淡化'残疾'色彩。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "给他看现在的智能助听器，能连蓝牙、像耳机一样",
+          "description": "用科技属性重新定义辅具",
+          "isCorrect": true,
+          "effects": [
+            { "type": "mood", "delta": 7, "reason": "被理解死不认老的心思" },
+            { "type": "trust", "delta": 7, "reason": "没被当成'老人'" },
+            { "type": "health", "delta": 5, "reason": "听力改善利于社交和情绪" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "li_act2_d14_002",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "漂亮！对李伯伯这种'用科技否认衰老'的人，把助听器说成'智能设备'，他反而会觉得酷。心理坎过了，工具才用得上。",
+            "explanation": "辅具接受心理：标签效应大于功能本身。智能助听器可连蓝牙听电话、听音乐，淡化'残疾'色彩。对数字生活度高的老人，'科技感'比'医疗感'更易接受。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "先不配，反正轻度不影响生活",
+          "description": "回避问题",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": -4, "reason": "听力下降会加重社交退缩" },
+            { "type": "mood", "delta": -3, "reason": "课堂上听不清更挫败" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "li_act2_d14_002",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "听力下降不干预，他会越来越听不清课堂上的老人说话，挫败感累积，社交退缩会卷土重来。",
+            "explanation": "听力下降是社交退缩和认知衰退的隐性推手。早期干预（助听器）能显著改善社交质量和情绪。回避=埋下更大隐患。"
+          }
+        }
+      ],
+      "tags": ["choice", "psychology", "assistive-device"],
+      "devNote": "辅具接受心理教学"
+    },
+    {
+      "id": "li_act2_d14_002",
+      "characterId": "li_bobo",
+      "act": 2,
+      "day": 14,
+      "type": "dayEnd",
+      "scene": "hospital",
+      "illustrationId": "li_hearing_aid",
+      "dialogues": [
+        {
+          "id": "dlg_066",
+          "speaker": "elder",
+          "speakerName": "李伯伯",
+          "text": "（研究着样品）连蓝牙？能接电话？这玩意儿……还有点意思。",
+          "layer": "essential",
+          "emotion": "curious"
+        },
+        {
+          "id": "dlg_067",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "看，'科技感'把'衰老感'盖过去了。他愿意试，就是赢了一半。",
+          "layer": "emotional",
+          "emotion": "happy",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "li_act2_d15_001",
+      "characterId": "li_bobo",
+      "act": 2,
+      "day": 15,
+      "type": "choice",
+      "scene": "community_center",
+      "illustrationId": "li_class_hearing",
+      "dialogues": [
+        {
+          "id": "dlg_068",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "戴上助听器第一次去上课，李伯伯明显听得更清楚了，教得更顺。课后，那位总反复问问题的老太太拉住他，小声说'李工，上次谢谢你没嫌我烦'。李伯伯愣住了。",
+          "layer": "essential",
+          "duration": 4500,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_069",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "这是同理心的闭环——他被理解过（老伴），所以能理解别人。怎么帮他接住老太太这句感谢？",
+          "layer": "essential",
+          "emotion": "gentle"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "让他谦虚地说'哪里，应该的'",
+          "description": "中国式谦虚",
+          "isCorrect": false,
+          "effects": [
+            { "type": "mood", "delta": -1, "reason": "感谢被推开" }
+          ],
+          "spiritPowerChange": 3,
+          "nextNode": "li_act2_d15_002",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "谦虚是礼貌，但对刚建立价值感的老人，'应该的'会把这份肯定轻轻推开。接纳感谢，价值感才扎实。",
+            "explanation": "心理支持：学会'接住'正向反馈。老人常因'谦虚'否定自己的贡献，长期会削弱价值感。引导他真诚接纳'被感谢'，是巩固自我价值的关键。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "鼓励他真诚回应'您愿意学我当然愿意教'",
+          "description": "接纳感谢+肯定对方",
+          "isCorrect": true,
+          "effects": [
+            { "type": "mood", "delta": 8, "reason": "双向的价值确认" },
+            { "type": "trust", "delta": 5, "reason": "社交连接加深" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "li_act2_d15_002",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "好！既接住了感谢，又肯定了对方的学习意愿。这是平等的双向尊重，正是李伯伯最需要的社交关系。",
+            "explanation": "社交促进的核心：建立'双向价值'关系。不是单方面施助，而是互相肯定。这种关系最持久，也最能对抗退休后的无用感。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "建议他以后专门给这位老太太开小灶",
+          "description": "重点关照",
+          "isCorrect": false,
+          "effects": [
+            { "type": "mood", "delta": 1, "reason": "善意但形成依赖" }
+          ],
+          "spiritPowerChange": 2,
+          "nextNode": "li_act2_d15_002",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "心意好，但'开小灶'会让老太太形成依赖，也偏离了课堂的群体互助氛围。平等的关系比特殊照顾更健康。",
+            "explanation": "社区志愿服务忌'一对一包办'，应引导群体互助。老人帮老人，比年轻人帮老人更能建立平等感和归属感。"
+          }
+        }
+      ],
+      "tags": ["choice", "psychology", "social"],
+      "devNote": "社交促进教学，同理心闭环"
+    },
+    {
+      "id": "li_act2_d15_002",
+      "characterId": "li_bobo",
+      "act": 2,
+      "day": 15,
+      "type": "dayEnd",
+      "scene": "community_center",
+      "illustrationId": "li_mutual_respect",
+      "dialogues": [
+        {
+          "id": "dlg_070",
+          "speaker": "elder",
+          "speakerName": "李伯伯",
+          "text": "（回家路上跟老伴说）今天有个学生……嗯，学员，专门谢我。这把年纪了还能帮上人，挺好。",
+          "layer": "essential",
+          "emotion": "content"
+        },
+        {
+          "id": "dlg_071",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "'学生'这个词溜出来又收回去了——他把课堂当成了新讲台。第二幕过半，接下来要面对更深的波澜。",
+          "layer": "emotional",
+          "emotion": "warm",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "li_act2_d16_001",
+      "characterId": "li_bobo",
+      "act": 2,
+      "day": 16,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "li_quiet_evening",
+      "dialogues": [
+        {
+          "id": "dlg_072",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "这几天李伯伯状态不错，可今晚老伴发现他一个人坐在阳台发呆，手里攥着退休前的工牌。问他，他说'没什么'，但眼神是空的。心情感知值微微下探。",
+          "layer": "essential",
+          "duration": 4000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_073",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "情绪好转后突然低落，是抑郁信号的常见模式——'回光返照'式的波动。怎么识别和处理？",
+          "layer": "essential",
+          "emotion": "concerned"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "问他怎么了，让他别想太多",
+          "description": "关心但否定情绪",
+          "isCorrect": false,
+          "effects": [
+            { "type": "trust", "delta": -3, "reason": "情绪又被否定" },
+            { "type": "mood", "delta": -2, "reason": "没被理解" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "li_act2_d16_002",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "'别想太多'和'享清福'一样，是否定他的真实感受。他会关上刚打开的心门。",
+            "explanation": "抑郁早期信号识别：情绪波动加大、突然发呆、回避话题、抓握旧物。'别想太多'式安慰会切断倾诉。应表达'我注意到你不太一样'，邀请他说。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "坐在他旁边，安静陪着，等他开口",
+          "description": "非语言陪伴，留空间",
+          "isCorrect": true,
+          "effects": [
+            { "type": "mood", "delta": 6, "reason": "被无声地托住" },
+            { "type": "trust", "delta": 7, "reason": "不逼问的尊重" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "li_act2_d16_002",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "太懂他了。要强的老人最怕被'追问'，安静的陪伴反而让他安全。等他自己开口，说出来的才是真话。",
+            "explanation": "心理支持技巧：'沉默式陪伴'。对不善表达情绪的老人，肢体陪伴（并肩坐着、递杯水）比追问更有效。沉默不是忽视，是留出空间。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "把工牌收起来，眼不见心不烦",
+          "description": "移除触发物",
+          "isCorrect": false,
+          "effects": [
+            { "type": "mood", "delta": -4, "reason": "旧物被夺，更失落" },
+            { "type": "trust", "delta": -3, "reason": "没被尊重" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "li_act2_d16_002",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "工牌是他身份的锚，收走等于否定他过去的一生。情绪不会消失，只会转移。",
+            "explanation": "移除'触发物'治标不治本，还可能触发丧失感。旧物是老人身份认同的载体，应尊重它存在，引导老人与过去和解，而非强行切割。"
+          }
+        }
+      ],
+      "tags": ["choice", "psychology", "depression-signs"],
+      "devNote": "抑郁信号识别教学"
+    },
+    {
+      "id": "li_act2_d16_002",
+      "characterId": "li_bobo",
+      "act": 2,
+      "day": 16,
+      "type": "dayEnd",
+      "scene": "balcony",
+      "illustrationId": "li_balcony_silence",
+      "dialogues": [
+        {
+          "id": "dlg_074",
+          "speaker": "elder",
+          "speakerName": "李伯伯",
+          "text": "（良久）……有时候闲下来，会觉得自己像台停了的机器。也不知道……还转不转得起来。",
+          "layer": "essential",
+          "emotion": "vulnerable"
+        },
+        {
+          "id": "dlg_075",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "他终于说出来了。这不是危机，是出口。接住它。",
+          "layer": "emotional",
+          "emotion": "gentle",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "li_act2_d17_001",
+      "characterId": "li_bobo",
+      "act": 2,
+      "day": 17,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "li_morning_low",
+      "dialogues": [
+        {
+          "id": "dlg_076",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "连续两天情绪低落，李伯伯今早没去晨练，也没去课堂。智能手表显示他凌晨四点就醒了，辗转到天亮。老伴偷偷给你发消息：'他这两天话很少，饭也吃得少。'",
+          "layer": "essential",
+          "duration": 4000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_077",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "失眠、食欲下降、回避活动、话少——这是抑郁预警信号叠加了。需要专业判断，但也要照顾李伯伯的面子。怎么办？",
+          "layer": "essential",
+          "emotion": "concerned"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "直接告诉他可能抑郁了，要去看心理科",
+          "description": "明确诊断建议",
+          "isCorrect": false,
+          "effects": [
+            { "type": "trust", "delta": -8, "reason": "被贴'精神病'标签" },
+            { "type": "mood", "delta": -6, "reason": "羞耻感" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "li_act2_d17_002",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "'抑郁''心理科'对这代老人是巨大 stigma（污名）。直接说会让他羞耻且抗拒，连身体不适都不愿提了。",
+            "explanation": "老年抑郁识别后的沟通禁忌：避免直接使用'抑郁''心理病'等标签。这代老人对精神疾病污名化严重。应转化为躯体化表述，如'睡眠不好去调理调理'。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "以'调理睡眠'为由，建议去社区医院看看",
+          "description": "去污名化包装，先迈出第一步",
+          "isCorrect": true,
+          "effects": [
+            { "type": "mood", "delta": 5, "reason": "被关心睡眠，不丢面子" },
+            { "type": "trust", "delta": 7, "reason": "尊重他的自尊" },
+            { "type": "health", "delta": 4, "reason": "有望获得专业帮助" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "li_act2_d17_002",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "太聪明了！用'调理睡眠'这个谁都能接受的由头，把他带到医生面前。医生会做专业评估，比子女下判断靠谱。",
+            "explanation": "老年抑郁的就医策略：'躯体化包装'。用睡眠、食欲、头痛等躯体症状作为就诊理由，避开'心理'污名。社区医院全科医生可做初步筛查（如PHQ-9量表）。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "多陪他聊天、带他散步，自己疏导",
+          "description": "亲情陪伴，自行疏导",
+          "isCorrect": false,
+          "effects": [
+            { "type": "mood", "delta": 2, "reason": "陪伴有帮助但不够" }
+          ],
+          "spiritPowerChange": 4,
+          "nextNode": "li_act2_d17_002",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "陪伴重要，但已出现多个预警信号叠加，光靠家属疏导可能不够。专业评估能排除器质性因素，别错过干预窗口。",
+            "explanation": "老年抑郁需鉴别：可能是退休适应障碍（短期、可自愈），也可能是抑郁症（需专业治疗），或躯体疾病（如甲减、维生素缺乏）的继发表现。专业评估不可省。"
+          }
+        }
+      ],
+      "tags": ["choice", "psychology", "depression"],
+      "devNote": "抑郁识别与就医策略"
+    },
+    {
+      "id": "li_act2_d17_002",
+      "characterId": "li_bobo",
+      "act": 2,
+      "day": 17,
+      "type": "dayEnd",
+      "scene": "living_room",
+      "illustrationId": "li_sleep_tea",
+      "dialogues": [
+        {
+          "id": "dlg_078",
+          "speaker": "elder",
+          "speakerName": "李伯伯",
+          "text": "（喝了口老伴泡的酸枣仁茶）睡眠……是得调理调理。明天去社区医院问问。",
+          "layer": "essential",
+          "emotion": "resigned"
+        },
+        {
+          "id": "dlg_079",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "他同意去了。明天会有专业的人帮忙判断，我们做对了一步。",
+          "layer": "emotional",
+          "emotion": "relieved",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "li_act2_d18_001",
+      "characterId": "li_bobo",
+      "act": 2,
+      "day": 18,
+      "type": "narrative",
+      "scene": "hospital",
+      "illustrationId": "li_checkup_result",
+      "dialogues": [
+        {
+          "id": "dlg_080",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "社区医院评估结果出来了：退休适应伴轻度抑郁倾向，医生建议规律作息、社交活动、必要时短期咨询。李伯伯拿着报告，松了口气又有点别扭——'原来还真有点问题'。",
+          "layer": "essential",
+          "duration": 4500,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_081",
+          "speaker": "elder",
+          "speakerName": "李伯伯",
+          "text": "（嘟囔）我这不是……那个什么抑郁。我就是闲的。再说了，我看老陈头最近连我都不认识了，他那才叫有问题。",
+          "layer": "essential",
+          "emotion": "defensive"
+        },
+        {
+          "id": "dlg_082",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "注意到了吗？他提到邻居'老陈头认不出人了'——这是认知症的信号，也是一个伏笔。先把眼前这关过好。",
+          "layer": "essential",
+          "emotion": "thoughtful"
+        }
+      ],
+      "nextNode": "li_act2_d18_002",
+      "isCheckpoint": true,
+      "tags": ["psychology", "cognitive-foreshadow", "setup"]
+    },
+    {
+      "id": "li_act2_d18_002",
+      "characterId": "li_bobo",
+      "act": 2,
+      "day": 18,
+      "type": "choice",
+      "scene": "hospital",
+      "illustrationId": "li_emotional_conflict",
+      "dialogues": [
+        {
+          "id": "dlg_083",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "李伯伯正经历第二幕的高潮——情感冲突。他一边抗拒'我有问题'，一边又不自觉把问题投射到别人身上。怎么帮他面对？",
+          "layer": "essential",
+          "emotion": "concerned"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "纠正他'您这就是抑郁倾向，要正视'",
+          "description": "正面戳破",
+          "isCorrect": false,
+          "effects": [
+            { "type": "trust", "delta": -7, "reason": "被贴标签、被否定" },
+            { "type": "mood", "delta": -5, "reason": "羞耻抗拒" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "li_act2_d18_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "他又不是不知道，他是不愿承认。你越戳，他越要'我不是老人'地拧着来。",
+            "explanation": "照护抗拒应对核心：不正面戳穿，留面子。老人不是不知道问题，是不愿面对'我老了/我有病'的身份转变。强行戳穿只会加固防御。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "顺着他说'老陈头那情况确实让人唏嘘'，再温和说'咱们这算轻的，调理调理就好'",
+          "description": "共情+去污名化+正常化",
+          "isCorrect": true,
+          "effects": [
+            { "type": "trust", "delta": 8, "reason": "被理解、被尊重" },
+            { "type": "mood", "delta": 6, "reason": "心理负担减轻" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "li_act2_d18_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "高情商！先共情他对他人的唏嘘（其实是对自己的担忧），再把'咱们这情况'正常化、轻量化。他没被当成病人，却接受了帮助。",
+            "explanation": "心理支持三步法：1.共情（顺着他的话承认老陈头的情况值得唏嘘）；2.去污名化（'调理调理'代替'治疗'）；3.正常化（'咱们这算轻的'）。让老人在保住自尊的前提下接受干预。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "岔开话题，带他去做别的检查",
+          "description": "回避冲突",
+          "isCorrect": false,
+          "effects": [
+            { "type": "mood", "delta": -2, "reason": "情绪没被接住" }
+          ],
+          "spiritPowerChange": 2,
+          "nextNode": "li_act2_d18_003",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "回避能暂时平静，但他心里的结没解开，回去还会反复琢磨。情感冲突是契机，不是麻烦。",
+            "explanation": "情感冲突时刻是建立深度信任的窗口。回避=浪费契机。应稳稳接住情绪，帮老人完成'承认脆弱'的心理跨越。这是第二幕的核心成长点。"
+          }
+        }
+      ],
+      "tags": ["choice", "psychology", "emotional-conflict", "cognitive-foreshadow"],
+      "devNote": "情感冲突高潮+认知伏笔"
+    },
+    {
+      "id": "li_act2_d18_003",
+      "characterId": "li_bobo",
+      "act": 2,
+      "day": 18,
+      "type": "dayEnd",
+      "scene": "hospital",
+      "illustrationId": "li_relief",
+      "dialogues": [
+        {
+          "id": "dlg_084",
+          "speaker": "elder",
+          "speakerName": "李伯伯",
+          "text": "（叹气又笑了笑）行吧……调理调理。下周那个社区咨询，我去听听。",
+          "layer": "essential",
+          "emotion": "relieved"
+        },
+        {
+          "id": "dlg_085",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "（精灵轻声）老陈头的事……我记下来了。也许有一天，会有另一位老人需要我们守护。",
+          "layer": "emotional",
+          "emotion": "mysterious",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end", "cognitive-foreshadow"],
+      "devNote": "认知症伏笔，为陈奶奶线铺垫"
+    },
+    {
+      "id": "li_act2_d19_001",
+      "characterId": "li_bobo",
+      "act": 2,
+      "day": 19,
+      "type": "choice",
+      "scene": "community_center",
+      "illustrationId": "li_support_group",
+      "dialogues": [
+        {
+          "id": "dlg_086",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "社区退休人员互助小组里，李伯伯第一次坐下来听别人讲。一位退休教师说起自己'半年走不出来'的经历，李伯伯听着听着，眼眶红了。会后他主动留了下来帮忙收拾椅子。",
+          "layer": "essential",
+          "duration": 4000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_087",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "他开始从'被帮助'转向'帮助别人'，这是心理恢复的标志。怎么巩固这个转变？",
+          "layer": "essential",
+          "emotion": "happy"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "建议他每周固定来互助小组，当志愿者",
+          "description": "固定角色",
+          "isCorrect": false,
+          "effects": [
+            { "type": "mood", "delta": -2, "reason": "又变任务" },
+            { "type": "trust", "delta": -2, "reason": "被安排" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "li_act2_d19_002",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "刚萌生的自发意愿，一'固定排班'又变任务。让他自己决定参与频率，热情才持久。",
+            "explanation": "内在动机需呵护。老人主动帮忙时，肯定行为即可，别急着制度化。让他保持'我想去'而非'我必须去'的状态。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "肯定他留下来帮忙的举动，问他今天有什么感受",
+          "description": "肯定行为+引导觉察",
+          "isCorrect": true,
+          "effects": [
+            { "type": "mood", "delta": 8, "reason": "被看见、被引导表达" },
+            { "type": "trust", "delta": 6, "reason": "被真诚关心" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "li_act2_d19_002",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "完美！肯定他的具体行为（留下来帮忙），再用开放式问题引导他表达感受。情绪被命名、被言说，就开始被消化。",
+            "explanation": "心理支持的'情绪命名'：帮老人把模糊的感受变成可表达的语言。'今天有什么感受'让他练习觉察和表达，是情绪消化的关键步骤。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "把他眼眶红了的事告诉老伴，让老伴多关心",
+          "description": "动员家庭支持",
+          "isCorrect": true,
+          "effects": [
+            { "type": "mood", "delta": 4, "reason": "家庭关注增加" },
+            { "type": "trust", "delta": 3, "reason": "被默默关心" }
+          ],
+          "spiritPowerChange": 7,
+          "nextNode": "li_act2_d19_002",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "不错，家庭照护分工里老伴是第一线。但要注意别让老伴'追问'，而是用更细腻的日常关心接住他。",
+            "explanation": "家庭照护分工：识别每位家庭成员的角色。老伴=日常情绪第一观察者，子女=远程支持+重大决策，社区=社交和专业资源。信息共享要尊重老人隐私。"
+          }
+        }
+      ],
+      "tags": ["choice", "psychology", "recovery", "family-care"],
+      "devNote": "心理恢复巩固+家庭分工"
+    },
+    {
+      "id": "li_act2_d19_002",
+      "characterId": "li_bobo",
+      "act": 2,
+      "day": 19,
+      "type": "dayEnd",
+      "scene": "community_center",
+      "illustrationId": "li_helping_others",
+      "dialogues": [
+        {
+          "id": "dlg_088",
+          "speaker": "elder",
+          "speakerName": "李伯伯",
+          "text": "（叠着椅子）那个退休老师说得对……走出来不是一哆嗦的事，是慢慢的事。我好像……也在慢慢走。",
+          "layer": "essential",
+          "emotion": "hopeful"
+        },
+        {
+          "id": "dlg_089",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "他开始用'走出来'形容自己了。承认脆弱，是真正的坚强。",
+          "layer": "emotional",
+          "emotion": "moved",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "li_act2_d20_001",
+      "characterId": "li_bobo",
+      "act": 2,
+      "day": 20,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "li_family_plan",
+      "dialogues": [
+        {
+          "id": "dlg_090",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "周末，儿子一家视频来电，这次聊了四十分钟。结束时儿子说想'帮爸管管健康'，提议装个远程血糖同步APP。李伯伯脸一沉——又来了。",
+          "layer": "essential",
+          "duration": 4000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_091",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "远程健康管理vs老人自主权，这是家庭照护分工的经典两难。怎么找到平衡点？",
+          "layer": "essential",
+          "emotion": "thoughtful"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "支持儿子，远程同步能及时发现问题",
+          "description": "优先健康监测",
+          "isCorrect": false,
+          "effects": [
+            { "type": "trust", "delta": -6, "reason": "自主权被技术蚕食" },
+            { "type": "independence", "delta": -5, "reason": "被远程监控" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "li_act2_d20_002",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "李伯伯独立值85，最恨被监控。强制同步会让他要么不戴手表、要么造假数据，远程管理彻底失效。",
+            "explanation": "远程照护的边界：健康数据同步必须基于老人同意和自主。强制同步破坏信任，数据失真。应让老人掌控'分享什么、分享给谁'。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "提议让李伯伯自己决定分享哪些数据、何时分享",
+          "description": "把数据主权交给老人",
+          "isCorrect": true,
+          "effects": [
+            { "type": "trust", "delta": 8, "reason": "自主权被尊重" },
+            { "type": "independence", "delta": 5, "reason": "自己掌控" },
+            { "type": "mood", "delta": 5, "reason": "被当成大人" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "li_act2_d20_002",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "完美平衡！把'数据主权'交给李伯伯，他反而更愿意主动分享——因为这是'我选择给你们看'，不是'被监视'。",
+            "explanation": "家庭照护分工原则：辅助而非替代，知情而非监控。让老人掌握健康数据的分享权，既满足子女的关切，又维护老人的自主和尊严。这是资源协调技能的核心。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "折中：只同步异常数据，正常的不传",
+          "description": "技术折中方案",
+          "isCorrect": true,
+          "effects": [
+            { "type": "trust", "delta": 5, "reason": "部分尊重自主" },
+            { "type": "health", "delta": 3, "reason": "异常能被及时发现" }
+          ],
+          "spiritPowerChange": 7,
+          "nextNode": "li_act2_d20_002",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "技术方案不错，只传异常=减少日常被监视感，又能兜底安全。但仍要李伯伯知情同意，不能偷偷设。",
+            "explanation": "远程照护的'最小必要原则'：只收集和分享必要数据（如异常值），减少对老人日常的侵入感。但前提是透明、知情、可随时关闭。"
+          }
+        }
+      ],
+      "tags": ["choice", "family-care", "resource-coordination"],
+      "devNote": "家庭照护分工+资源协调"
+    },
+    {
+      "id": "li_act2_d20_002",
+      "characterId": "li_bobo",
+      "act": 2,
+      "day": 20,
+      "type": "dayEnd",
+      "scene": "living_room",
+      "illustrationId": "li_data_control",
+      "dialogues": [
+        {
+          "id": "dlg_092",
+          "speaker": "elder",
+          "speakerName": "李伯伯",
+          "text": "（设着手机）异常才传是吧……行。平时我量着，有问题我主动给你们看。这样公平。",
+          "layer": "essential",
+          "emotion": "satisfied"
+        },
+        {
+          "id": "dlg_093",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "他用了'公平'两个字。被尊重的照护，老人才会主动配合。",
+          "layer": "emotional",
+          "emotion": "warm",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "li_act2_d21_001",
+      "characterId": "li_bobo",
+      "act": 2,
+      "day": 21,
+      "type": "narrative",
+      "scene": "living_room",
+      "illustrationId": "li_act2_review",
+      "dialogues": [
+        {
+          "id": "dlg_094",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "第二幕的最后一天。李伯伯的智能手表上，这周步数稳定在日均6000步，睡眠时长回到7小时。今天他去互助小组带了自制的水果，还把那本图文教程打印了二十份发给社区。",
+          "layer": "essential",
+          "duration": 4500,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_095",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "从退缩到走出，从抗拒到接纳。这十四天，李伯伯最大的变化不是血糖，是心里那扇门开了条缝。来做个总结吧。",
+          "layer": "essential",
+          "emotion": "proud"
+        }
+      ],
+      "nextNode": "li_act2_d21_002",
+      "isCheckpoint": true,
+      "tags": ["act-review", "act-end"]
+    },
+    {
+      "id": "li_act2_d21_002",
+      "characterId": "li_bobo",
+      "act": 2,
+      "day": 21,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "li_act2_summary",
+      "dialogues": [
+        {
+          "id": "dlg_096",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "第二幕结束。回顾这十四天，你觉得对李伯伯的照护，最关键的一条经验是什么？",
+          "layer": "essential",
+          "emotion": "curious"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "健康数据要持续监控，不能松懈",
+          "description": "强调监测",
+          "isCorrect": false,
+          "effects": [
+            { "type": "trust", "delta": -4, "reason": "方向性错误" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "li_act2_d21_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "回顾这十四天你会发现，李伯伯真正好转，靠的不是数据监控，而是被理解、被尊重、被需要。数据只是结果，关系才是原因。",
+            "explanation": "李伯伯线的核心教训：健康问题背后是心理和社交问题。'用科技否认衰老'的本质是身份危机。只盯数据会错过真正的病因——孤独和价值感丧失。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "先建立信任和情感连接，健康问题才听得进去",
+          "description": "关系优先",
+          "isCorrect": true,
+          "effects": [
+            { "type": "trust", "delta": 8, "reason": "抓到了核心" },
+            { "type": "mood", "delta": 6, "reason": "被深刻理解" }
+          ],
+          "spiritPowerChange": 15,
+          "nextNode": "li_act2_d21_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "说到点子上了！信任值从40起步，每一步进步都靠'先懂他这个人，再谈他的病'。这就是李伯伯线的设计精髓。",
+            "explanation": "对独立值高、信任值低、不愿认老的老人，照护顺序永远是：关系先于管理，情感先于数据，尊严先于效率。这是整个游戏最核心的照护哲学之一。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "找到新角色和社交圈，比任何治疗都管用",
+          "description": "强调社交康复",
+          "isCorrect": true,
+          "effects": [
+            { "type": "mood", "delta": 7, "reason": "理解了康复动力" },
+            { "type": "trust", "delta": 5, "reason": "方向正确" }
+          ],
+          "spiritPowerChange": 12,
+          "nextNode": "li_act2_d21_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "没错！退休适应的本质是身份重建。'李工'这个新角色比任何药都治他的'病'。社交不是消遣，是康复。",
+            "explanation": "退休适应的康复动力：新身份（志愿者导师）+新社交圈（互助小组）+被需要感（教别人）。这三者形成的正向循环，是抵抗抑郁和退缩的最强防线。"
+          }
+        }
+      ],
+      "tags": ["choice", "act-review", "act-end"],
+      "devNote": "第二幕总结，照护哲学凝练"
+    },
+    {
+      "id": "li_act2_d21_003",
+      "characterId": "li_bobo",
+      "act": 2,
+      "day": 21,
+      "type": "actEnd",
+      "scene": "living_room",
+      "illustrationId": "li_act2_end",
+      "dialogues": [
+        {
+          "id": "dlg_097",
+          "speaker": "elder",
+          "speakerName": "李伯伯",
+          "text": "（把二十份教程装进包）明天课堂见。这日子……好像又有奔头了。",
+          "layer": "essential",
+          "emotion": "content"
+        },
+        {
+          "id": "dlg_098",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "第二幕结束。但守护还没完——最后一幕，李伯伯的身体会给我们一个真正的考验。带上这十四天积攒的信任，我们一起面对。",
+          "layer": "essential",
+          "emotion": "anticipating"
+        },
+        {
+          "id": "dlg_099",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "（精灵光芒沉稳地亮着）记住这一刻的温度。危急时刻，它会是李伯伯愿意相信你的理由。",
+          "layer": "emotional",
+          "emotion": "warm",
+          "typingSpeed": 40
+        }
+      ],
+      "transition": {
+        "exit": "fade-out",
+        "illustrationTransition": "watercolor",
+        "duration": 1000
+      },
+      "tags": ["act-end"],
+      "devNote": "第二幕结束，过渡到第三幕应急主题"
+    }
+  ]
+}

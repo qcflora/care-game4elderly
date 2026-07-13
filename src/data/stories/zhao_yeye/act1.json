@@ -1,0 +1,1037 @@
+{
+  "characterId": "zhao_yeye",
+  "act": 1,
+  "title": "第一幕：精灵苏醒",
+  "theme": "在排斥中建立初步信任",
+  "startDay": 1,
+  "endDay": 7,
+  "nodes": [
+    {
+      "id": "zhao_act1_d1_001",
+      "characterId": "zhao_yeye",
+      "act": 1,
+      "day": 1,
+      "type": "narrative",
+      "scene": "living_room",
+      "illustrationId": "zhao_morning_kitchen",
+      "dialogues": [
+        {
+          "id": "dlg_001",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "清晨六点，老式筒子楼里飘着茶香。赵德明穿着洗得发白的蓝色工装背心，站在厨房灶台前，收音机里播着早间新闻。他泡了一杯浓茶，茶叶占了半个杯子。",
+          "layer": "essential",
+          "duration": 4500,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_002",
+          "speaker": "spirit",
+          "speakerName": "小守",
+          "text": "你好呀，我是家庭守护精灵——小守。从今天起，我会住在这部手机里，陪你一起照顾赵爷爷。",
+          "layer": "essential",
+          "emotion": "cheerful",
+          "lottieAnimation": "spirit_appear_warm",
+          "typingSpeed": 35
+        },
+        {
+          "id": "dlg_003",
+          "speaker": "elder",
+          "speakerName": "赵爷爷",
+          "text": "什么精灵？又是手机里那些乱七八糟的东西？关掉关掉！我不用这玩意儿！",
+          "layer": "essential",
+          "emotion": "angry",
+          "typingSpeed": 40
+        },
+        {
+          "id": "dlg_004",
+          "speaker": "spirit",
+          "speakerName": "小守",
+          "text": "（赵爷爷把手机往茶几上一扣，茶水晃了晃。他嘴硬，但你的第一印象很重要——怎么介绍自己，决定了他以后愿不愿意理你。）",
+          "layer": "essential",
+          "emotion": "thoughtful",
+          "typingSpeed": 40
+        }
+      ],
+      "nextNode": "zhao_act1_d1_002",
+      "transition": {
+        "enter": "fade-in",
+        "illustrationTransition": "watercolor",
+        "duration": 800
+      },
+      "isCheckpoint": true,
+      "tags": ["intro", "tutorial"],
+      "devNote": "开场节点，精灵首次登场，赵爷爷排斥科技"
+    },
+    {
+      "id": "zhao_act1_d1_002",
+      "characterId": "zhao_yeye",
+      "act": 1,
+      "day": 1,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "zhao_meeting_spirit",
+      "dialogues": [
+        {
+          "id": "dlg_005",
+          "speaker": "spirit",
+          "speakerName": "小守",
+          "text": "赵爷爷对手机很排斥。你觉得应该怎么介绍自己，才能让他不那么抵触？",
+          "layer": "essential",
+          "emotion": "curious"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "爷爷，我是来照顾您的，以后您的健康我来负责",
+          "description": "直接表明照护者身份",
+          "isCorrect": false,
+          "effects": [
+            { "type": "trust", "delta": -5, "reason": "被当成需要照顾的老人，自尊受挫" },
+            { "type": "mood", "delta": -3, "reason": "感到被干涉" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhao_act1_d1_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "赵爷爷最反感的就是'被照顾'这三个字。他觉得自己还没老到需要人管。直接说'我来负责你的健康'，等于戳他的痛处。",
+            "explanation": "照护抗拒型老人把'被照顾'等同于'被当成废物'。硬碰硬地表明照护意图，只会激发更强的对抗心理。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "爷爷，这就是个手机功能，您不用管它",
+          "description": "回避照护话题，顺着他",
+          "isCorrect": false,
+          "effects": [
+            { "type": "trust", "delta": 1, "reason": "至少没激怒他" },
+            { "type": "mood", "delta": 0, "reason": "无变化" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhao_act1_d1_003",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "赵爷爷确实没那么生气了，但你什么也没建立——他还是不会搭理你。顺着他不等于建立信任，只是暂时回避了冲突。",
+            "explanation": "完全顺着老人的抗拒，虽然避免了冲突，但也放弃了建立连接的机会。照护不是'不管'，而是找到他能接受的方式。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "爷爷，我就是个提醒喝水的电子闹钟，您忙您的，我就待在手机里",
+          "description": "降低姿态，不提照护，给他自主空间",
+          "isCorrect": true,
+          "effects": [
+            { "type": "trust", "delta": 5, "reason": "尊重了他的自主权，没有强迫接受" },
+            { "type": "mood", "delta": 3, "reason": "没有被当成老人，心情好转" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "zhao_act1_d1_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "赵爷爷哼了一声，没再说什么，但也没再扣手机。这就是一个好的开始——他没有拒绝你的存在。",
+            "explanation": "照护抗拒型老人的最优策略：先尊重他的自主权，降低照护姿态，用他能接受的方式进入他的生活。不说'照顾你'，而是说'待在旁边'，让他觉得一切还在自己的掌控中。"
+          }
+        }
+      ],
+      "tags": ["choice", "tutorial", "communication"],
+      "devNote": "第一个选择节点，教学照护抗拒型老人的沟通策略"
+    },
+    {
+      "id": "zhao_act1_d1_003",
+      "characterId": "zhao_yeye",
+      "act": 1,
+      "day": 1,
+      "type": "dayEnd",
+      "scene": "living_room",
+      "illustrationId": "zhao_day1_end",
+      "dialogues": [
+        {
+          "id": "dlg_006",
+          "speaker": "elder",
+          "speakerName": "赵爷爷",
+          "text": "哼，闹钟就闹钟，别整天叮叮当当的就行。",
+          "layer": "essential",
+          "emotion": "grumpy"
+        },
+        {
+          "id": "dlg_007",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "赵爷爷端着茶杯回了卧室，收音机的声音跟着他远去了。手机安静地躺在茶几上，屏幕还亮着。",
+          "layer": "emotional",
+          "typingSpeed": 40
+        },
+        {
+          "id": "dlg_008",
+          "speaker": "spirit",
+          "speakerName": "小守",
+          "text": "第一天结束了。赵爷爷的信任值很低，别急，慢慢来。照护抗拒型老人需要的不是说服，而是耐心。",
+          "layer": "essential",
+          "emotion": "encouraging",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end"],
+      "devNote": "Day 1 结束节点"
+    },
+    {
+      "id": "zhao_act1_d2_001",
+      "characterId": "zhao_yeye",
+      "act": 1,
+      "day": 2,
+      "type": "narrative",
+      "scene": "bedroom",
+      "illustrationId": "zhao_morning_getup",
+      "dialogues": [
+        {
+          "id": "dlg_009",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "清晨五点四十，天还没亮透。赵爷爷醒了，他侧身想坐起来，膝盖发出一声闷响，他咬了咬牙，撑着床沿慢慢起身。床头柜上放着拐杖，但他看都没看一眼。",
+          "layer": "essential",
+          "duration": 4500,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_010",
+          "speaker": "spirit",
+          "speakerName": "小守",
+          "text": "赵爷爷起床时膝盖在疼，但他硬撑着不扶拐杖。这个动作有跌倒风险——你怎么帮他？",
+          "layer": "essential",
+          "emotion": "worried"
+        }
+      ],
+      "nextNode": "zhao_act1_d2_002",
+      "isCheckpoint": true,
+      "tags": ["morning", "getup"],
+      "devNote": "Day 2 起床场景，引入体位性低血压和跌倒风险"
+    },
+    {
+      "id": "zhao_act1_d2_002",
+      "characterId": "zhao_yeye",
+      "act": 1,
+      "day": 2,
+      "type": "choice",
+      "scene": "bedroom",
+      "illustrationId": "zhao_getup_choice",
+      "dialogues": [
+        {
+          "id": "dlg_011",
+          "speaker": "spirit",
+          "speakerName": "小守",
+          "text": "赵爷爷正准备站起来，动作摇摇晃晃。注意：老人起床时先坐30秒可以预防体位性低血压。你选择怎么做？",
+          "layer": "essential",
+          "emotion": "curious"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "直接伸手扶他起来，快点站稳",
+          "description": "过度代劳，直接搀扶",
+          "isCorrect": false,
+          "effects": [
+            { "type": "independence", "delta": -8, "reason": "过度代劳，剥夺自理能力" },
+            { "type": "trust", "delta": -4, "reason": "觉得被当成废人" },
+            { "type": "mood", "delta": -3, "reason": "自尊心受挫" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhao_act1_d2_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "赵爷爷一把甩开你的手：'我自己能行！'他确实站起来了，但脸涨得通红。被强行搀扶让他觉得自己像个废人。",
+            "explanation": "照护抗拒型老人把搀扶视为'被当成废人'的信号。过度代劳不仅降低独立值，还会大幅降低信任值。此外，起床时直接站立可能导致体位性低血压，正确做法是先坐30秒。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "他不用拐就随他吧，说了也不听",
+          "description": "完全不管，顺着他逞强",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": -5, "reason": "逞强不拄拐，跌倒风险增加" },
+            { "type": "trust", "delta": -1, "reason": "觉得你不关心他" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhao_act1_d2_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "赵爷爷踉跄了一下，扶住了衣柜才没摔倒。你看着他硬撑，心里不是滋味。'随他'不是尊重，是放弃。",
+            "explanation": "完全不管不是'尊重自主权'，而是忽视风险。赵爷爷逞强的后果是健康值下降，跌倒概率增加。尊重自主权的前提是确保安全。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "把拐杖轻轻放床边，站旁边说：先坐会儿，我在这儿，您慢慢来",
+          "description": "辅助而非替代，先坐30秒预防体位性低血压",
+          "isCorrect": true,
+          "effects": [
+            { "type": "health", "delta": 5, "reason": "先坐30秒预防体位性低血压" },
+            { "type": "independence", "delta": 3, "reason": "让他自己完成起立，维护自理能力" },
+            { "type": "trust", "delta": 4, "reason": "没有强迫，但默默守护" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "zhao_act1_d2_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "赵爷爷嘴上嘟囔着'用不着你操心'，但他确实先坐了会儿，然后扶着拐杖慢慢站了起来。他没说谢谢，但也没甩开你的好意。",
+            "explanation": "最优策略：辅助而非替代。把拐杖放在他够得着的地方（不强迫他拿），提醒先坐30秒（预防体位性低血压），站在旁边保护（确保安全但不代劳）。既维护了他的自主权，又降低了跌倒风险。"
+          }
+        }
+      ],
+      "tags": ["choice", "basic-care", "getup"],
+      "devNote": "教学：辅助而非替代 + 体位性低血压预防"
+    },
+    {
+      "id": "zhao_act1_d2_003",
+      "characterId": "zhao_yeye",
+      "act": 1,
+      "day": 2,
+      "type": "dayEnd",
+      "scene": "bedroom",
+      "illustrationId": "zhao_day2_end",
+      "dialogues": [
+        {
+          "id": "dlg_012",
+          "speaker": "elder",
+          "speakerName": "赵爷爷",
+          "text": "这拐杖碍事，放那么近干嘛。",
+          "layer": "essential",
+          "emotion": "grumpy"
+        },
+        {
+          "id": "dlg_013",
+          "speaker": "spirit",
+          "speakerName": "小守",
+          "text": "他嘴上说碍事，但今天他用了拐杖。这就是进步。记住：照护抗拒型老人嘴上说的和心里想的常常是反的。",
+          "layer": "essential",
+          "emotion": "encouraging",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "zhao_act1_d3_001",
+      "characterId": "zhao_yeye",
+      "act": 1,
+      "day": 3,
+      "type": "narrative",
+      "scene": "bedroom",
+      "illustrationId": "zhao_hiding_meds",
+      "dialogues": [
+        {
+          "id": "dlg_014",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "下午，赵爷爷以为没人注意，从口袋里摸出一个小药瓶，塞进了床头柜抽屉的最里面。动作很快，但精灵看得一清二楚。",
+          "layer": "essential",
+          "duration": 4000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_015",
+          "speaker": "spirit",
+          "speakerName": "小守",
+          "text": "赵爷爷在藏药。他白天嘴上说'没什么毛病'，夜里却在偷偷吃止痛药。床头柜抽屉里有线索——要不要看看？",
+          "layer": "essential",
+          "emotion": "worried"
+        }
+      ],
+      "nextNode": "zhao_act1_d3_002",
+      "isCheckpoint": true,
+      "tags": ["hidden-pain", "medication"],
+      "devNote": "Day 3 发现藏药，引入检视型道具：床头柜抽屉"
+    },
+    {
+      "id": "zhao_act1_d3_002",
+      "characterId": "zhao_yeye",
+      "act": 1,
+      "day": 3,
+      "type": "choice",
+      "scene": "bedroom",
+      "illustrationId": "zhao_bedside_drawer",
+      "dialogues": [
+        {
+          "id": "dlg_016",
+          "speaker": "spirit",
+          "speakerName": "小守",
+          "text": "你打开了床头柜抽屉。里面有一瓶布洛芬缓释胶囊，生产日期是两年前——已经过期了。瓶身上的字迹被磨得模糊，说明他经常拿出来吃。你打算怎么处理？",
+          "layer": "essential",
+          "emotion": "serious"
+        }
+      ],
+      "props": [
+        {
+          "propId": "zhao_bedside_drawer",
+          "layer": "inspect",
+          "autoShow": true
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "爷爷，这药过期了，必须扔掉！",
+          "description": "直接命令，强硬处理",
+          "isCorrect": false,
+          "effects": [
+            { "type": "trust", "delta": -6, "reason": "被命令和干涉，自尊受损" },
+            { "type": "mood", "delta": -5, "reason": "感到被监控和指责" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhao_act1_d3_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "赵爷爷一把夺过药瓶：'我的东西不用你管！'然后把抽屉锁上了。你不仅没解决问题，还让他以后藏得更深。",
+            "explanation": "照护抗拒型老人把'被命令'视为'被控制'。直接没收药物会激发更强烈的对抗，他以后只会藏得更隐蔽，隐性疼痛问题更难发现。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "假装没看见，不提这事",
+          "description": "回避问题，忽视隐性疼痛",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": -5, "reason": "继续服用过期药物，健康风险" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhao_act1_d3_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "过期止痛药还在抽屉里。赵爷爷今晚还会吃。你看见了却不说，等于默许他在伤害自己。",
+            "explanation": "忽视隐性疼痛不是'尊重隐私'。过期药物可能产生毒性，长期自行服用止痛药掩盖症状、损伤胃黏膜。发现问题需要用正确的方式干预。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "爷爷，我家也有瓶布洛芬，您帮我看看还能不能吃？我分不清日期",
+          "description": "用自己引出话题，给他台阶下",
+          "isCorrect": true,
+          "effects": [
+            { "type": "trust", "delta": 5, "reason": "没有指责，用请教的方式让他自己面对问题" },
+            { "type": "health", "delta": 3, "reason": "引导他关注药物有效期" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "zhao_act1_d3_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "赵爷爷来了精神，掏出自己的药瓶给你'参考'。他看到生产日期时愣了一下，嘟囔着'这药不能吃了'，自己把药瓶放到了一边。",
+            "explanation": "最优策略：用'请教'代替'指责'。让赵爷爷以'帮你看看'的身份审视药物，他自己发现过期比被你指出更容易接受。既维护了他的面子，又解决了过期药问题，还打开了疼痛话题的缺口。"
+          }
+        }
+      ],
+      "tags": ["choice", "medication", "hidden-pain", "inspect-prop"],
+      "devNote": "教学：隐性疼痛识别 + 过期药物处理 + 检视型道具"
+    },
+    {
+      "id": "zhao_act1_d3_003",
+      "characterId": "zhao_yeye",
+      "act": 1,
+      "day": 3,
+      "type": "dayEnd",
+      "scene": "bedroom",
+      "illustrationId": "zhao_day3_end",
+      "dialogues": [
+        {
+          "id": "dlg_017",
+          "speaker": "elder",
+          "speakerName": "赵爷爷",
+          "text": "过期的药不能吃，这个我知道。就这一回，下回注意。",
+          "layer": "essential",
+          "emotion": "embarrassed"
+        },
+        {
+          "id": "dlg_018",
+          "speaker": "spirit",
+          "speakerName": "小守",
+          "text": "他承认了药过期，这在以前是不可能的。赵爷爷的信任值在慢慢涨，但还很脆弱。记住：他偷偷吃止痛药，说明膝盖疼痛比他嘴上说的严重得多。",
+          "layer": "essential",
+          "emotion": "thoughtful",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "zhao_act1_d4_001",
+      "characterId": "zhao_yeye",
+      "act": 1,
+      "day": 4,
+      "type": "narrative",
+      "scene": "bedroom",
+      "illustrationId": "zhao_night_bathroom",
+      "dialogues": [
+        {
+          "id": "dlg_019",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "夜里，赵爷爷起了四次夜。每次都小心翼翼地不开灯，摸着墙去卫生间，回来时在床沿坐好一会儿才躺下。他没跟任何人提起，白天照样精神抖擞的样子。",
+          "layer": "essential",
+          "duration": 4500,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_020",
+          "speaker": "spirit",
+          "speakerName": "小守",
+          "text": "一晚起夜四次，这很可能和前列腺增生有关。但赵爷爷绝不会主动说——他觉得这是'男人的毛病'，丢人。你怎么提起这个话题？",
+          "layer": "essential",
+          "emotion": "worried"
+        }
+      ],
+      "nextNode": "zhao_act1_d4_002",
+      "isCheckpoint": true,
+      "tags": ["prostate", "hidden-pain"],
+      "devNote": "Day 4 前列腺问题，引入隐性健康问题的沟通技巧"
+    },
+    {
+      "id": "zhao_act1_d4_002",
+      "characterId": "zhao_yeye",
+      "act": 1,
+      "day": 4,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "zhao_prostate_talk",
+      "dialogues": [
+        {
+          "id": "dlg_021",
+          "speaker": "spirit",
+          "speakerName": "小守",
+          "text": "赵爷爷正在看报纸。这是一个提起前列腺问题的机会，但话题敏感，怎么说很重要。你选择怎么开口？",
+          "layer": "essential",
+          "emotion": "curious"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "爷爷，您昨晚起夜四次，前列腺有问题得去医院查查",
+          "description": "直接指出问题，硬碰硬",
+          "isCorrect": false,
+          "effects": [
+            { "type": "trust", "delta": -6, "reason": "隐私被监控，感到被冒犯" },
+            { "type": "mood", "delta": -4, "reason": "觉得丢面子" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhao_act1_d4_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "赵爷爷把报纸一摔：'你跟踪我？我起几次夜还要向你汇报？'然后再也不肯说话了。前列腺是敏感话题，直接戳等于羞辱他。",
+            "explanation": "照护抗拒型老人把隐私被关注视为'被监视'。前列腺问题涉及男性尊严，直接指出不仅伤害信任，还会让他彻底封闭。敏感健康问题需要用间接方式引入。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "不提这事，他不说就算了",
+          "description": "回避敏感话题",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": -4, "reason": "前列腺问题被忽视，持续恶化" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhao_act1_d4_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "赵爷爷今晚还是会起夜四次，明天也是。前列腺增生拖着不治，可能发展成尿潴留甚至肾功能损伤。不说不代表不存在。",
+            "explanation": "回避敏感话题不等于尊重隐私。慢性病拖延干预是赵爷爷核心风险之一。前列腺增生不及时治疗，可能发展为急性尿潴留——这在第三幕会成为真正的危机。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "爷爷，我最近老起夜，是不是肾虚啊？您有经验吗？",
+          "description": "用自己引出话题，让他以长者身份开口",
+          "isCorrect": true,
+          "effects": [
+            { "type": "trust", "delta": 5, "reason": "以请教姿态尊重了他的长者身份" },
+            { "type": "mood", "delta": 3, "reason": "被需要、被尊重的感觉" },
+            { "type": "health", "delta": 2, "reason": "打开了健康话题的缺口" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "zhao_act1_d4_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "赵爷爷放下报纸，来了兴致：'你小子也起夜？多大岁数了？'他开始给你'科普'前列腺的事，说着说着自己叹了口气：'其实我这几年也……算了，小毛病。'至少他松口了。",
+            "explanation": "最优策略：用'自己的问题'引出'他的问题'。照护抗拒型老人最吃'被请教'这一套——以长者身份给你建议时，他自己的问题也自然而然地说了出来。既维护了面子，又打开了健康沟通的通道。"
+          }
+        }
+      ],
+      "tags": ["choice", "prostate", "communication"],
+      "devNote": "教学：敏感健康问题的间接沟通技巧"
+    },
+    {
+      "id": "zhao_act1_d4_003",
+      "characterId": "zhao_yeye",
+      "act": 1,
+      "day": 4,
+      "type": "dayEnd",
+      "scene": "living_room",
+      "illustrationId": "zhao_day4_end",
+      "dialogues": [
+        {
+          "id": "dlg_022",
+          "speaker": "elder",
+          "speakerName": "赵爷爷",
+          "text": "前列腺这事儿吧……等天暖和了再说。现在不碍事。",
+          "layer": "essential",
+          "emotion": "evasive"
+        },
+        {
+          "id": "dlg_023",
+          "speaker": "spirit",
+          "speakerName": "小守",
+          "text": "'等天暖和了再说'——这是赵爷爷式的拖延。他承认了问题存在，但还没有行动的意愿。别急，信任在积累，突破口在后面。",
+          "layer": "essential",
+          "emotion": "patient",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "zhao_act1_d5_001",
+      "characterId": "zhao_yeye",
+      "act": 1,
+      "day": 5,
+      "type": "narrative",
+      "scene": "living_room",
+      "illustrationId": "zhao_old_album",
+      "dialogues": [
+        {
+          "id": "dlg_024",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "午饭后，赵爷爷从柜子深处翻出一本旧相册，坐在沙发上慢慢地翻。他翻得很仔细，每页都停留很久。你注意到他翻到某一页时，手停了一下。",
+          "layer": "essential",
+          "duration": 4000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_025",
+          "speaker": "spirit",
+          "speakerName": "小守",
+          "text": "赵爷爷今天一直在翻这本旧相册。我去看看他在看什么——也许能发现些什么。",
+          "layer": "essential",
+          "emotion": "curious"
+        }
+      ],
+      "nextNode": "zhao_act1_d5_002",
+      "isCheckpoint": true,
+      "tags": ["memory", "inspect-prop"],
+      "devNote": "Day 5 旧相册事件，检视型道具3页"
+    },
+    {
+      "id": "zhao_act1_d5_002",
+      "characterId": "zhao_yeye",
+      "act": 1,
+      "day": 5,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "zhao_album_pages",
+      "dialogues": [
+        {
+          "id": "dlg_026",
+          "speaker": "spirit",
+          "speakerName": "小守",
+          "text": "相册打开了。你可以左右滑动查看每一页。仔细看看，有什么发现？",
+          "layer": "essential",
+          "emotion": "curious"
+        },
+        {
+          "id": "dlg_027",
+          "speaker": "spirit",
+          "speakerName": "小守",
+          "text": "第1页：年轻时的赵爷爷站在机床前，胸前别着'车间主任'的牌子，意气风发。第2页：一页空白，边缘有撕裂痕迹——有照片被撕掉了。第3页：夹着一张超市小票，日期是今天。",
+          "layer": "essential",
+          "emotion": "surprised"
+        },
+        {
+          "id": "dlg_028",
+          "speaker": "spirit",
+          "speakerName": "小守",
+          "text": "今天的超市小票夹在旧相册里，赵爷爷可能以为这是旧票据。这说明他的时间感知有些混乱。你怎么处理？",
+          "layer": "essential",
+          "emotion": "thoughtful"
+        }
+      ],
+      "props": [
+        {
+          "propId": "zhao_old_album",
+          "layer": "inspect",
+          "autoShow": true
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "爷爷，这小票是今天的吧？您怎么夹相册里了？",
+          "description": "直接指出他的认知混乱",
+          "isCorrect": false,
+          "effects": [
+            { "type": "trust", "delta": -4, "reason": "被指出认知问题，感到羞耻和恐慌" },
+            { "type": "mood", "delta": -5, "reason": "害怕自己'老糊涂了'" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhao_act1_d5_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "赵爷爷愣了一下，脸色变了变：'我看错了，怎么了？不行吗？'他'啪'地合上相册，回卧室了。你触碰了他最害怕的事——变成一个'老糊涂'。",
+            "explanation": "直接指出老人的认知混乱会引发强烈的恐惧和防御。照护抗拒型老人最怕的就是'老糊涂'三个字。即使发现了异常，也不能直接点破，那只会让他封闭自己。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "这本相册真旧了，该换新的了",
+          "description": "没发现关键信息，错过教学点",
+          "isCorrect": false,
+          "effects": [
+            { "type": "mood", "delta": -1, "reason": "觉得你不关心他的过去" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhao_act1_d5_003",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "赵爷爷看了你一眼，没接话。你错过了相册里的重要信息——今天的超市小票夹在旧相册里，这个细节值得记住。",
+            "explanation": "没有仔细检视道具就会错过关键线索。旧相册第3页的超市小票暗示赵爷爷的时间感知出现了轻微混乱，这是一个需要持续观察的信号。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "爷爷，您给我讲讲这张工厂的照片吧，您当年是车间主任？",
+          "description": "引导正向回忆，不点破异常，转移注意力",
+          "isCorrect": true,
+          "effects": [
+            { "type": "trust", "delta": 6, "reason": "对他过去经历的兴趣和尊重" },
+            { "type": "mood", "delta": 5, "reason": "回忆辉煌岁月，心情愉悦" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "zhao_act1_d5_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "赵爷爷眼睛一亮，翻开第1页：'那当然！那年我三十二岁，全厂最年轻的车间主任……'他滔滔不绝讲了半小时，脸上带着光。超市小票的事，你默默记下了，没有提。",
+            "explanation": "最优策略：引导正向回忆代替指出问题。用回忆疗法让赵爷爷回到他最骄傲的时光，既建立了情感连接，又维护了他的尊严。超市小票的异常你已经记下，这是需要持续观察的信号——后面可能还有更多线索。"
+          }
+        }
+      ],
+      "tags": ["choice", "memory", "inspect-prop", "foreshadowing"],
+      "devNote": "教学：回忆疗法 + 认知症早期信号伏笔（为陈奶奶线铺垫）"
+    },
+    {
+      "id": "zhao_act1_d5_003",
+      "characterId": "zhao_yeye",
+      "act": 1,
+      "day": 5,
+      "type": "dayEnd",
+      "scene": "living_room",
+      "illustrationId": "zhao_day5_end",
+      "dialogues": [
+        {
+          "id": "dlg_029",
+          "speaker": "elder",
+          "speakerName": "赵爷爷",
+          "text": "那年厂里评先进，我带了整个车间拿了个第一。现在那些人……唉，都不联系了。",
+          "layer": "essential",
+          "emotion": "nostalgic"
+        },
+        {
+          "id": "dlg_030",
+          "speaker": "spirit",
+          "speakerName": "小守",
+          "text": "赵爷爷今天话多了不少。旧相册是个好入口——他最骄傲的过去，也是他最柔软的地方。至于那张超市小票……我会继续留意的。",
+          "layer": "essential",
+          "emotion": "thoughtful",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "zhao_act1_d6_001",
+      "characterId": "zhao_yeye",
+      "act": 1,
+      "day": 6,
+      "type": "narrative",
+      "scene": "balcony",
+      "illustrationId": "zhao_almost_fall",
+      "dialogues": [
+        {
+          "id": "dlg_031",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "上午，赵爷爷又没拄拐，端着一盆花去阳台浇花。门槛绊了他一下，整个人往前趔趄了两步，花盆摔在地上碎了。他扶着阳台栏杆站稳了，但脸色发白，膝盖在发抖。",
+          "layer": "essential",
+          "duration": 4500,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_032",
+          "speaker": "spirit",
+          "speakerName": "小守",
+          "text": "差一点就摔了！赵爷爷逞强不拄拐的后果正在显现。他现在站在阳台上，手抓着栏杆，膝盖还在抖。你怎么回应？",
+          "layer": "essential",
+          "emotion": "alarmed"
+        }
+      ],
+      "nextNode": "zhao_act1_d6_002",
+      "isCheckpoint": true,
+      "tags": ["fall-risk", "stubbornness"],
+      "devNote": "Day 6 倔强代价，逞强差点跌倒"
+    },
+    {
+      "id": "zhao_act1_d6_002",
+      "characterId": "zhao_yeye",
+      "act": 1,
+      "day": 6,
+      "type": "choice",
+      "scene": "balcony",
+      "illustrationId": "zhao_after_stumble",
+      "dialogues": [
+        {
+          "id": "dlg_033",
+          "speaker": "spirit",
+          "speakerName": "小守",
+          "text": "赵爷爷差点摔倒，现在正强撑着装没事。这个时机很关键——怎么处理决定了以后他愿不愿意听你的安全建议。",
+          "layer": "essential",
+          "emotion": "serious"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "看吧！让您拄拐您不听！摔了怎么办！",
+          "description": "指责和说教",
+          "isCorrect": false,
+          "effects": [
+            { "type": "trust", "delta": -6, "reason": "被指责感到羞辱" },
+            { "type": "mood", "delta": -5, "reason": "被教训的挫败感" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhao_act1_d6_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "赵爷爷脸涨得通红：'我摔没摔着我不知道？要你管！'他把碎花盆踢到一边，从那以后更不肯拄拐了——他要用行动证明你管不着。",
+            "explanation": "指责和说教只会激发更强的逆反心理。照护抗拒型老人被指责时会本能地加倍逞强，以证明'我不需要你管'。结果就是跌倒风险不减反增。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "默默把拐杖递过去，什么都不说",
+          "description": "顺着他，不引导",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": -3, "reason": "没有引导改变行为，风险持续" },
+            { "type": "trust", "delta": 1, "reason": "至少没指责他" }
+          ],
+          "spiritPowerChange": 5,
+          "nextNode": "zhao_act1_d6_003",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "赵爷爷接过拐杖，靠在了门边。他今天用了，但明天呢？你没有给他一个'愿意拄拐'的理由，他只是暂时被吓住了。",
+            "explanation": "沉默递拐杖比指责好，但没有解决根本问题——赵爷爷不拄拐不是因为忘了，而是因为'拄拐=老了'。他需要一个不伤自尊的理由来接受拐杖。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "爷爷，您这腿脚比好多年轻人都强。不过拄着拐杖像老厂长巡视车间，多有派头",
+          "description": "尊重自主权 + 用面子引导接受辅具",
+          "isCorrect": true,
+          "effects": [
+            { "type": "trust", "delta": 5, "reason": "没有指责，给了台阶下" },
+            { "type": "mood", "delta": 4, "reason": "被夸奖，面子得到满足" },
+            { "type": "independence", "delta": 2, "reason": "主动接受辅具而非被强迫" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "zhao_act1_d6_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "赵爷爷愣了一下，然后哼了一声：'什么派头不派头的。'但他拄起了拐杖，还对着窗户玻璃照了照。他没有承认你说的对，但他做了对的事。",
+            "explanation": "最优策略：先肯定（'腿脚比年轻人都强'），再用他能接受的理由引导（'像老厂长巡视车间'）。照护抗拒型老人吃软不吃硬，把拄拐和'派头''身份'挂钩，比说'为了安全'有效一百倍。尊重面子，才能改变行为。"
+          }
+        }
+      ],
+      "tags": ["choice", "fall-prevention", "communication"],
+      "devNote": "教学：用面子引导接受辅具 + 跌倒预防"
+    },
+    {
+      "id": "zhao_act1_d6_003",
+      "characterId": "zhao_yeye",
+      "act": 1,
+      "day": 6,
+      "type": "dayEnd",
+      "scene": "balcony",
+      "illustrationId": "zhao_day6_end",
+      "dialogues": [
+        {
+          "id": "dlg_034",
+          "speaker": "elder",
+          "speakerName": "赵爷爷",
+          "text": "这拐杖……也就门槛高的时候用用。平时谁用这玩意儿。",
+          "layer": "essential",
+          "emotion": "tsundere"
+        },
+        {
+          "id": "dlg_035",
+          "speaker": "spirit",
+          "speakerName": "小守",
+          "text": "他给自己找了个台阶：'门槛高的时候用用'。但实际上，从今天开始他出入都会带着拐杖了。第一周快结束了，赵爷爷在慢慢变化——虽然他绝不会承认。",
+          "layer": "essential",
+          "emotion": "warm",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "zhao_act1_d7_001",
+      "characterId": "zhao_yeye",
+      "act": 1,
+      "day": 7,
+      "type": "narrative",
+      "scene": "living_room",
+      "illustrationId": "zhao_week1_summary",
+      "dialogues": [
+        {
+          "id": "dlg_036",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "第一周的最后一天。赵爷爷坐在沙发上看报纸，拐杖靠在手边。收音机里放着京剧，茶杯里的茶还冒着热气。一切看起来平静，但精灵知道，这份平静下藏着多少倔强和隐痛。",
+          "layer": "essential",
+          "duration": 4000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_037",
+          "speaker": "spirit",
+          "speakerName": "小守",
+          "text": "一周总结时间！来看看你这周的照护数据。赵爷爷的信任值从25开始——这是所有角色里最低的。但你让他在不情愿中接受了拐杖、扔掉了过期药、松口提了前列腺的事。这就是进步。",
+          "layer": "essential",
+          "emotion": "proud"
+        },
+        {
+          "id": "dlg_038",
+          "speaker": "spirit",
+          "speakerName": "小守",
+          "text": "接下来的两周是关键期——你需要从'他不排斥你'变成'他愿意听你的'。照护抗拒的突破口，往往藏在他最柔软的地方。",
+          "layer": "essential",
+          "emotion": "encouraging",
+          "typingSpeed": 40
+        }
+      ],
+      "nextNode": "zhao_act1_d7_002",
+      "isCheckpoint": true,
+      "tags": ["week-summary"],
+      "devNote": "Day 7 第一幕周总结"
+    },
+    {
+      "id": "zhao_act1_d7_002",
+      "characterId": "zhao_yeye",
+      "act": 1,
+      "day": 7,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "zhao_week1_reflection",
+      "dialogues": [
+        {
+          "id": "dlg_038b",
+          "speaker": "spirit",
+          "speakerName": "小守",
+          "text": "第一周结束了。回顾这七天，你觉得第二周应该怎么调整策略？赵爷爷的信任值还是全角色最低的——急不得。",
+          "layer": "essential",
+          "emotion": "thoughtful"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "下周要更严格地管他，药必须按时吃，拐杖必须拄",
+          "description": "加强控制，硬碰硬",
+          "isCorrect": false,
+          "effects": [
+            { "type": "trust", "delta": -4, "reason": "控制策略只会让照护抗拒更严重" },
+            { "type": "mood", "delta": -3, "reason": "被管束的不适感" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhao_act1_d7_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "这一周你辛辛苦苦建立的微弱信任，如果下周开始'严格管理'，会一夜回到解放前。赵爷爷不是不服管——他是不服'被当成需要管的人'。控制策略对照护抗拒型老人是毒药。",
+            "explanation": "加强控制是照护抗拒型老人最大的雷区。赵爷爷的信任值本来就极低（25），好不容易涨了一点，一旦感到'被管束'，信任值会断崖式下跌。第二周需要的不是更严格，而是更巧妙。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "赵爷爷挺好的，该吃吃该喝喝，不用特别改变什么",
+          "description": "顺其自然，忽视潜在风险",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": -3, "reason": "前列腺和膝盖问题被放任，持续恶化" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "zhao_act1_d7_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "赵爷爷的前列腺问题在恶化、膝盖疼痛在加重、隐性疼痛还在继续——'不用改变'等于放任这些风险发展。第一周你发现了问题，第二周不能假装没看见。",
+            "explanation": "顺其自然不等于尊重自主权。赵爷爷有明确的健康隐患——前列腺增生可能导致急性尿潴留、膝关节疼痛影响行动能力。忽视这些问题，就是在等待危机爆发。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "这周最难的是信任。下周继续用他能接受的方式，耐心等他开口",
+          "description": "尊重自主权+持续耐心+用对方式",
+          "isCorrect": true,
+          "effects": [
+            { "type": "trust", "delta": 5, "reason": "策略正确，信任持续积累" },
+            { "type": "mood", "delta": 2, "reason": "被尊重的安心感" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "zhao_act1_d7_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "你说到了点子上。赵爷爷的问题不是'管不了'，是'不信你'。第二周的核心不是管得更严或更松，而是继续用他能接受的方式——不命令、不忽视、不强迫——耐心等他愿意听你说话的那一天。",
+            "explanation": "最优策略：持续耐心+用对方式。照护抗拒型老人的信任是最难建立的——初始值25，全角色最低。但一旦突破，成就感也最大。第二周的目标不是'解决健康问题'，而是'让赵爷爷愿意听你说健康问题'。信任是所有照护的前提。"
+          }
+        }
+      ],
+      "tags": ["choice", "week-summary", "strategy"],
+      "devNote": "Day 7 周总结选择：第二周策略方向"
+    },
+    {
+      "id": "zhao_act1_d7_003",
+      "characterId": "zhao_yeye",
+      "act": 1,
+      "day": 7,
+      "type": "actEnd",
+      "scene": "living_room",
+      "illustrationId": "zhao_act1_end",
+      "dialogues": [
+        {
+          "id": "dlg_039",
+          "speaker": "elder",
+          "speakerName": "赵爷爷",
+          "text": "这闹钟……还行吧。至少不吵。",
+          "layer": "essential",
+          "emotion": "tsundere"
+        },
+        {
+          "id": "dlg_040",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "赵爷爷翻了一页报纸，嘴角似乎微微翘了一下，又迅速压了回去。窗外，夕阳把老楼的红砖墙染成了暖金色。",
+          "layer": "emotional",
+          "typingSpeed": 40
+        },
+        {
+          "id": "dlg_041",
+          "speaker": "spirit",
+          "speakerName": "小守",
+          "text": "第一幕结束。赵爷爷从'关掉关掉'变成了'还行吧'——对他来说，这已经是最大的肯定了。第二幕，我们要走近他倔强之下的那颗心。",
+          "layer": "essential",
+          "emotion": "warm",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["act-end"],
+      "devNote": "第一幕结束节点"
+    }
+  ]
+}

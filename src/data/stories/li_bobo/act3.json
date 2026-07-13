@@ -1,0 +1,1261 @@
+{
+  "characterId": "li_bobo",
+  "act": 3,
+  "title": "第三幕：守护与成长",
+  "theme": "糖尿病急症应对与结局",
+  "startDay": 22,
+  "endDay": 30,
+  "nodes": [
+    {
+      "id": "li_act3_d22_001",
+      "characterId": "li_bobo",
+      "act": 3,
+      "day": 22,
+      "type": "choice",
+      "scene": "park",
+      "illustrationId": "li_morning_dizzy",
+      "dialogues": [
+        {
+          "id": "dlg_100",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "清晨公园，李伯伯照常快走，今天却比平时走得急——昨晚聚会多吃了点，想'走回来'。走到一半，他突然冒冷汗、手抖、腿发软，扶住了栏杆。智能手表心率警报响了。",
+          "layer": "essential",
+          "duration": 4500,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_101",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "冷汗、手抖、腿软、运动中突发——这是低血糖的典型前兆！李伯伯今早没吃东西就空腹快走，昨晚又吃得杂。怎么判断和处理？",
+          "layer": "essential",
+          "emotion": "urgent"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "让他坚持走完，出出汗就好了",
+          "description": "误以为是劳累",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": -8, "reason": "低血糖持续恶化，可能昏迷" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "li_act3_d22_002",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "危险！运动会加速血糖消耗，低血糖时继续运动可能直接昏迷。这是严重错误。",
+            "explanation": "低血糖急救第一原则：立即停止运动！运动消耗葡萄糖，会让低血糖雪上加霜。糖尿病早期患者运动前必须测血糖，低于5.6mmol/L应先补充碳水。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "立即让他停下休息，吃随身带的糖果",
+          "description": "识别低血糖，正确处置",
+          "isCorrect": true,
+          "effects": [
+            { "type": "health", "delta": 8, "reason": "低血糖及时纠正" },
+            { "type": "trust", "delta": 6, "reason": "危急时刻被正确守护" }
+          ],
+          "spiritPowerChange": 15,
+          "nextNode": "li_act3_d22_002",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "做得好！停运动+补糖是低血糖急救的标准操作。李伯伯随身带糖的习惯（我们前期建立过的）这次救了他。",
+            "explanation": "低血糖识别三联征：冷汗+手抖+心慌/腿软。处置：1.立即停止活动坐下；2.补充15g快糖（3-4块硬糖/半杯果汁/葡萄糖片）；3.15分钟后复测，未缓解再补一次。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "赶紧送他去医院",
+          "description": "过度反应",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": -3, "reason": "送医途中延误补糖" },
+            { "type": "mood", "delta": -3, "reason": "小题大做让他丢面子" }
+          ],
+          "spiritPowerChange": 2,
+          "nextNode": "li_act3_d22_002",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "轻度低血糖现场补糖即可，不必送医。送医途中反而耽误补糖，还让要强的李伯伯觉得'小题大做'。",
+            "explanation": "低血糖分级处理：轻度（清醒能进食）→现场补糖；中度（意识模糊）→葡萄糖凝胶涂口腔黏膜；重度（昏迷）→立即120+ glucagon注射。判断等级再决定。"
+          }
+        }
+      ],
+      "props": [
+        {
+          "propId": "smartwatch_alert",
+          "layer": "display",
+          "autoShow": true
+        }
+      ],
+      "tags": ["choice", "emergency", "hypoglycemia", "timed-prep"],
+      "devNote": "低血糖前兆识别，为Day23限时决策做铺垫"
+    },
+    {
+      "id": "li_act3_d22_002",
+      "characterId": "li_bobo",
+      "act": 3,
+      "day": 22,
+      "type": "dayEnd",
+      "scene": "park",
+      "illustrationId": "li_recovering",
+      "dialogues": [
+        {
+          "id": "dlg_102",
+          "speaker": "elder",
+          "speakerName": "李伯伯",
+          "text": "（缓过来后，有些后怕）……刚才差点栽那儿。幸亏兜里有糖。这低血糖，比高血糖还吓人。",
+          "layer": "essential",
+          "emotion": "shaken"
+        },
+        {
+          "id": "dlg_103",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "他第一次真切感到'身体会出状况'。这是危机，也是教育契机。明天还有更大的考验。",
+          "layer": "emotional",
+          "emotion": "concerned",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "li_act3_d23_001",
+      "characterId": "li_bobo",
+      "act": 3,
+      "day": 23,
+      "type": "event",
+      "nextNode": "li_act3_d23_002",
+      "scene": "living_room",
+      "illustrationId": "li_hypoglycemia_emergency",
+      "dialogues": [
+        {
+          "id": "dlg_104",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "上午十点，李伯伯在家测血糖——3.2mmol/L。他本想自己处理，可突然视线模糊、说话含糊，手里的血糖仪掉在地上。老伴吓坏了，给你打电话喊救命。",
+          "layer": "essential",
+          "duration": 3500,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_105",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "中重度低血糖！意识开始模糊，必须30秒内做出正确决策！这是限时关卡，请快速选择！",
+          "layer": "essential",
+          "emotion": "urgent"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "让他喝杯糖水，观察观察再说",
+          "description": "现场补糖，自行处理",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": -8, "reason": "意识模糊有误吸风险，自行喂食危险" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "li_act3_d23_002",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "危险！意识模糊的人喂食/喂水极易误吸入肺，引发窒息或吸入性肺炎，比低血糖本身更致命。",
+            "explanation": "低血糖处置铁律：意识模糊/昏迷者绝对禁止经口喂食喂水！误吸是致死性并发症。应侧卧位防误吸+立即拨打120+有条件则注射glucagon（胰高血糖素）。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "让他侧卧，立即拨打120，准确报告情况和用药史",
+          "description": "正确急救+呼叫专业救援",
+          "isCorrect": true,
+          "effects": [
+            { "type": "health", "delta": 8, "reason": "正确急救避免误吸，及时获救" },
+            { "type": "trust", "delta": 8, "reason": "危急时刻的专业守护" }
+          ],
+          "spiritPowerChange": 15,
+          "nextNode": "li_act3_d23_002",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "完美处置！侧卧防误吸+立即120+准确报告，这是中重度低血糖的标准急救流程。你的冷静救了李伯伯。",
+            "explanation": "拨打120要点：1.准确地址；2.症状（意识模糊、血糖3.2）；3.用药史（二甲双胍）；4.现场已采取的措施（侧卧位）。120调度员可远程指导。侧卧位=复苏体位，防舌后坠和误吸。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "直接背他往社区医院跑",
+          "description": "自行送医",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": -5, "reason": "搬运途中颠簸+无专业监护，风险高" }
+          ],
+          "spiritPowerChange": 2,
+          "nextNode": "li_act3_d23_002",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "意识模糊者搬动风险大，途中无急救设备。不如原地侧卧等120，专业的事交给专业的人。",
+            "explanation": "急救原则：除非现场有即时危险（如火灾），意识障碍者不宜自行搬动。等待专业急救人员到场更安全。提前打电话让120带glucagon，比自行送医快。"
+          }
+        }
+      ],
+      "tags": ["choice", "emergency", "timed-decision", "hypoglycemia", "call-120"],
+      "devNote": "Day23限时决策节点（30秒），低血糖急症急救教学"
+    },
+    {
+      "id": "li_act3_d23_002",
+      "characterId": "li_bobo",
+      "act": 3,
+      "day": 23,
+      "type": "narrative",
+      "scene": "hospital",
+      "illustrationId": "li_hospital_recover",
+      "dialogues": [
+        {
+          "id": "dlg_106",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "救护车及时赶到，静脉推注葡萄糖后李伯伯意识恢复。医生说幸亏处置得当、没有误吸，否则后果严重。李伯伯躺在病床上，第一次显得有些服软。",
+          "layer": "essential",
+          "duration": 4000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_107",
+          "speaker": "elder",
+          "speakerName": "李伯伯",
+          "text": "（虚弱地）我这回……算是真栽了。原来'不服老'也得有个度。",
+          "layer": "essential",
+          "emotion": "humbled"
+        },
+        {
+          "id": "dlg_108",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "危机有时是转机。这次急症，反而让他真正开始正视身体。接下来要补上糖尿病并发症预防这一课。",
+          "layer": "essential",
+          "emotion": "gentle"
+        }
+      ],
+      "nextNode": "li_act3_d24_001",
+      "isCheckpoint": true,
+      "tags": ["recovery", "turning-point"]
+    },
+    {
+      "id": "li_act3_d24_001",
+      "characterId": "li_bobo",
+      "act": 3,
+      "day": 24,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "li_foot_check_intro",
+      "dialogues": [
+        {
+          "id": "dlg_109",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "出院回家第三天，李伯伯说脚底有点麻、走路像踩棉花。医生叮嘱过糖尿病要定期查足部，他一直没当回事。这次急症后，他愿意听了。",
+          "layer": "essential",
+          "duration": 4000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_110",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "脚麻、踩棉花感是糖尿病周围神经病变的早期信号。糖尿病足是严重并发症，但可以预防。怎么帮李伯伯建立足部自查习惯？",
+          "layer": "essential",
+          "emotion": "concerned"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "让他每天去医院做专业足检",
+          "description": "专业检查最稳妥",
+          "isCorrect": false,
+          "effects": [
+            { "type": "independence", "delta": -5, "reason": "过度依赖医疗" },
+            { "type": "mood", "delta": -3, "reason": "每天跑医院太折腾" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "li_act3_d24_002",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "每天去医院不现实，也会让李伯伯觉得'我成病人了'。糖尿病足预防的关键是日常自查，不是医院检查。",
+            "explanation": "糖尿病足预防分两层：1.定期医院专科检查（每年1次，高危者每半年）；2.每日居家自查（老人自己能做）。日常自查才是核心，培养老人自主能力。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "教他每天洗脚后用镜子照看脚底，检查有无破损",
+          "description": "建立每日自查习惯",
+          "isCorrect": true,
+          "effects": [
+            { "type": "health", "delta": 8, "reason": "早期发现足部问题" },
+            { "type": "independence", "delta": 5, "reason": "自己能管理" },
+            { "type": "trust", "delta": 5, "reason": "学到实用知识" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "li_act3_d24_002",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "完美！用镜子照脚底=老人能独立完成的自查方法。既预防了并发症，又保住了他的自主权，正合独立值85的他。",
+            "explanation": "糖尿病足每日自查要点：1.温水（≤37℃）洗脚后擦干尤其趾缝；2.用镜子检查脚底有无破损水泡；3.检查鞋内有无异物；4.修剪趾甲平剪勿过短；5.不用刀剪处理鸡眼。神经病变使老人感觉迟钝，视觉检查是关键。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "告诉他脚麻正常，年纪大了都这样",
+          "description": "忽视症状",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": -6, "reason": "神经病变进展，糖尿病足风险升高" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "li_act3_d24_002",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "脚麻不是'正常衰老'，是糖尿病神经病变！忽视它可能发展成糖尿病足溃疡，严重者截肢。",
+            "explanation": "糖尿病足发展链：高血糖→周围神经病变（脚麻/踩棉花感）→感觉减退+血供差→小破损不自知→感染→溃疡→坏疽→截肢。早期干预可完全预防，忽视则不可逆。"
+          }
+        }
+      ],
+      "props": [
+        {
+          "propId": "foot_check_mirror",
+          "layer": "display",
+          "autoShow": true
+        }
+      ],
+      "tags": ["choice", "diabetic-foot", "self-care"],
+      "devNote": "糖尿病足预防教学"
+    },
+    {
+      "id": "li_act3_d24_002",
+      "characterId": "li_bobo",
+      "act": 3,
+      "day": 24,
+      "type": "dayEnd",
+      "scene": "bathroom",
+      "illustrationId": "li_foot_check_habit",
+      "dialogues": [
+        {
+          "id": "dlg_111",
+          "speaker": "elder",
+          "speakerName": "李伯伯",
+          "text": "（举着镜子看脚底）这玩意儿……还真照出个小水泡。要不是你说，我都没感觉。",
+          "layer": "essential",
+          "emotion": "surprised"
+        },
+        {
+          "id": "dlg_112",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "看，他已经发现了一个早期问题。这就是自查的价值——在它变成大问题之前，先看见它。",
+          "layer": "emotional",
+          "emotion": "proud",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "li_act3_d25_001",
+      "characterId": "li_bobo",
+      "act": 3,
+      "day": 25,
+      "type": "choice",
+      "scene": "shoe_store",
+      "illustrationId": "li_shoe_choice",
+      "dialogues": [
+        {
+          "id": "dlg_113",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "为了配合足部护理，李伯伯需要换双合适的鞋。他看上一双皮面硬底的老头鞋，说'穿了一辈子这种鞋，踏实'。可这双鞋鞋腔偏窄、内里有接缝。",
+          "layer": "essential",
+          "duration": 4000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_114",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "糖尿病患者的鞋有讲究——选错鞋是糖尿病足的头号诱因。怎么帮要强又念旧的李伯伯选对鞋，还不伤他面子？",
+          "layer": "essential",
+          "emotion": "thoughtful"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "直接说这鞋不适合糖尿病人，让他换运动鞋",
+          "description": "明确否定",
+          "isCorrect": false,
+          "effects": [
+            { "type": "trust", "delta": -4, "reason": "又被否定" },
+            { "type": "mood", "delta": -3, "reason": "面子受损" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "li_act3_d25_002",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "他又不是不懂道理，是不愿被'指挥'。直接否定他选的鞋，他会觉得'连穿什么鞋都管'。",
+            "explanation": "对要强的老人，'否定+命令'最无效。应提供信息和选择权，让他自己得出结论。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "夸他有眼光，再请教式地聊起'糖尿病人选鞋有门道'，让他自己判断",
+          "description": "肯定+信息+自主判断",
+          "isCorrect": true,
+          "effects": [
+            { "type": "health", "delta": 7, "reason": "选对鞋预防足部损伤" },
+            { "type": "trust", "delta": 6, "reason": "被尊重又被科普" },
+            { "type": "mood", "delta": 4, "reason": "面子保住了" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "li_act3_d25_002",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "漂亮！先肯定他的眼光，再用'请教'姿态引入知识，最后让他自己判断。李伯伯是工程师，给他数据和道理，他自己会做对选择。",
+            "explanation": "糖尿病患者选鞋四原则：1.圆头宽腔不挤脚；2.软面透气无硬接缝；3.鞋垫可拆卸便于检查；4.系带或魔术贴可调节松紧。新鞋第一天穿不超过2小时，逐步适应。老人自主选择+科学信息=最佳配合。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "由着他买，穿了不舒服自然会换",
+          "description": "尊重选择，试错",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": -4, "reason": "糖尿病神经病变感觉迟钝，穿了不舒服也未必察觉" }
+          ],
+          "spiritPowerChange": 2,
+          "nextNode": "li_act3_d25_002",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "对常人'试错'可以，但糖尿病神经病变让他感觉迟钝，磨破了可能都没感觉。这双鞋的风险，他试不出来。",
+            "explanation": "糖尿病周围神经病变使足部保护性感觉减退，鞋子磨脚可能不自知，等发现已破溃。选鞋必须预防性'选对'，不能靠'试错'。这是糖尿病足预防的特殊性。"
+          }
+        }
+      ],
+      "tags": ["choice", "diabetic-foot", "footwear"],
+      "devNote": "糖尿病足选鞋教学"
+    },
+    {
+      "id": "li_act3_d25_002",
+      "characterId": "li_bobo",
+      "act": 3,
+      "day": 25,
+      "type": "dayEnd",
+      "scene": "shoe_store",
+      "illustrationId": "li_right_shoes",
+      "dialogues": [
+        {
+          "id": "dlg_115",
+          "speaker": "elder",
+          "speakerName": "李伯伯",
+          "text": "（掂量着一双圆头软面运动鞋）圆头宽腔、没接缝……行，按你说的门道来。工程师选材料，我在行。",
+          "layer": "essential",
+          "emotion": "convinced"
+        },
+        {
+          "id": "dlg_116",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "他又把'选鞋'变成'选材料'了——用工程师思维面对衰老，这回是对的方式。",
+          "layer": "emotional",
+          "emotion": "happy",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "li_act3_d26_001",
+      "characterId": "li_bobo",
+      "act": 3,
+      "day": 26,
+      "type": "choice",
+      "scene": "park",
+      "illustrationId": "li_overexercise",
+      "dialogues": [
+        {
+          "id": "dlg_117",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "急症康复后，李伯伯'要把落下的补回来'，今天晨练快走一小时又加了爬楼梯。智能手表跳出'运动过量'警告，他却觉得'出出汗血糖就降了'。可午测血糖不降反升，他还纳闷。",
+          "layer": "essential",
+          "duration": 4000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_118",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "运动过量的反弹效应：剧烈运动触发应激激素，血糖反而升高。这是糖尿病运动的反直觉知识点。怎么纠正他的'多运动=多降糖'误区？",
+          "layer": "essential",
+          "emotion": "concerned"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "告诉他运动越多越好是错的，要按医生说的量来",
+          "description": "纠正+定标准",
+          "isCorrect": false,
+          "effects": [
+            { "type": "trust", "delta": -3, "reason": "又被纠正" },
+            { "type": "mood", "delta": -2, "reason": "挫败感" }
+          ],
+          "spiritPowerChange": 2,
+          "nextNode": "li_act3_d26_002",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "道理对，但'你又来纠正我'的感觉会让李伯伯逆反。何况他刚从急症恢复，正想证明'我还行'，直接泼冷水伤他自尊。",
+            "explanation": "纠正误区要讲究时机和方式。老人刚康复想'补回来'是积极心态，应先肯定再引导，而非直接否定。否则好心办坏事，打击他运动积极性。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "用他的数据说话：'您看，运动多了血糖反而升了，这是身体在抗议'",
+          "description": "用数据引导他自己发现规律",
+          "isCorrect": true,
+          "effects": [
+            { "type": "health", "delta": 7, "reason": "运动量回归合理" },
+            { "type": "trust", "delta": 6, "reason": "用他的数据而非说教" },
+            { "type": "independence", "delta": 4, "reason": "自己得出结论" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "li_act3_d26_002",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "太高明了！让数据自己说话，李伯伯自己看见'多运动反而升糖'，比你说一百遍都管用。工程师最信数据。",
+            "explanation": "糖尿病运动的反直觉知识：适度运动降糖，过量运动升糖。机制：剧烈运动→应激激素（肾上腺素、皮质醇）升高→促进肝糖原分解→血糖反升。理想运动量：中等强度、每次30分钟、每周5次、每周150分钟。让老人用自己数据发现规律，是最有效的教育。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "既然他想动就让他动，血糖自己会调节",
+          "description": "放任自流",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": -5, "reason": "运动过量反复，血糖波动大伤血管" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "li_act3_d26_002",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "血糖大幅波动比持续高血糖更伤血管。运动过量→升糖→他可能加药→又低血糖，恶性循环。不能放任。",
+            "explanation": "糖尿病管理最忌血糖大幅波动（波动性高血糖）。运动过量引起的反跳性高血糖+应激，比稳定的高血糖对血管内皮损伤更大。规律、适量、恒定是关键。"
+          }
+        }
+      ],
+      "props": [
+        {
+          "propId": "glucose_meter_app",
+          "layer": "display",
+          "autoShow": true
+        }
+      ],
+      "tags": ["choice", "exercise", "glucose-management"],
+      "devNote": "运动过量教学，反直觉知识"
+    },
+    {
+      "id": "li_act3_d26_002",
+      "characterId": "li_bobo",
+      "act": 3,
+      "day": 26,
+      "type": "dayEnd",
+      "scene": "living_room",
+      "illustrationId": "li_data_insight",
+      "dialogues": [
+        {
+          "id": "dlg_119",
+          "speaker": "elder",
+          "speakerName": "李伯伯",
+          "text": "（盯着血糖曲线）还真是……走多了反而高。行，30分钟就30分钟。这数据不撒谎。",
+          "layer": "essential",
+          "emotion": "convinced"
+        },
+        {
+          "id": "dlg_120",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "他开始信数据，也信自己的判断力了。这就是自主管理的雏形。",
+          "layer": "emotional",
+          "emotion": "proud",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "li_act3_d27_001",
+      "characterId": "li_bobo",
+      "act": 3,
+      "day": 27,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "li_emergency_plan",
+      "dialogues": [
+        {
+          "id": "dlg_121",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "经历了低血糖急症，李伯伯主动提出'得有个章法'。今天全家坐下来，做一份家庭应急方案。老伴、儿子视频连线，李伯伯破天荒地拿出了笔记本。",
+          "layer": "essential",
+          "duration": 4000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_122",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "应急处理技能的最后一课：制定家庭应急预案。这次让李伯伯主导，我们补充。应急卡上最该写什么？",
+          "layer": "essential",
+          "emotion": "encouraging"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "写上子女电话和120就行",
+          "description": "基础信息",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": -3, "reason": "信息不全，急救时关键信息缺失" }
+          ],
+          "spiritPowerChange": 2,
+          "nextNode": "li_act3_d27_002",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "电话是最基本的，但急救时120调度员和医生还需要更多信息。信息不全可能耽误救治。",
+            "explanation": "家庭应急卡要素：1.紧急联系人电话（子女+邻居+社区医生）；2.疾病诊断和用药清单；3.过敏史；4.医保信息；5.家庭住址精确到门牌。贴冰箱+随身携带一份。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "详细写明疾病、用药、过敏、低血糖处置步骤、联系人",
+          "description": "完整应急信息+处置流程",
+          "isCorrect": true,
+          "effects": [
+            { "type": "health", "delta": 8, "reason": "急救信息完备，争取黄金时间" },
+            { "type": "trust", "delta": 6, "reason": "全家共同参与" },
+            { "type": "mood", "delta": 5, "reason": "有安全感" }
+          ],
+          "spiritPowerChange": 15,
+          "nextNode": "li_act3_d27_002",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "完美！完整的应急卡=给急救医生一份现成的病历。尤其'低血糖处置步骤'，让老伴或邻居在120到达前就能正确施救。",
+            "explanation": "糖尿病家庭应急卡核心内容：1.诊断（糖尿病早期+退休适应）；2.用药（二甲双胍 剂量 服药时间）；3.低血糖急救步骤（识别症状→轻者补15g糖→重者侧卧拨120）；4.联系人（子女/老伴/社区医生/邻居）；5.过敏史；6.医保号。大字版贴冰箱+随身携带。这是应急处理技能Lv.3的真实世界工具。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "让李伯伯自己写，他最清楚自己的情况",
+          "description": "完全自主",
+          "isCorrect": true,
+          "effects": [
+            { "type": "independence", "delta": 5, "reason": "自己主导" },
+            { "type": "trust", "delta": 4, "reason": "被信任" }
+          ],
+          "spiritPowerChange": 8,
+          "nextNode": "li_act3_d27_002",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "好主意！让他主导，我们补充关键项。他写的过程本身就是一次自我梳理。独立值85的他，主导这件事正合适。",
+            "explanation": "应急预案制定原则：老人主导+家属补充+专业把关。老人最了解自己的感受和习惯，让他主导能确保方案贴合实际、可执行。家属补充医学关键信息，医生把关专业性。"
+          }
+        }
+      ],
+      "tags": ["choice", "emergency", "family-plan", "real-world-tool"],
+      "devNote": "应急处理技能总结，解锁真实世界工具"
+    },
+    {
+      "id": "li_act3_d27_002",
+      "characterId": "li_bobo",
+      "act": 3,
+      "day": 27,
+      "type": "dayEnd",
+      "scene": "living_room",
+      "illustrationId": "li_emergency_card",
+      "dialogues": [
+        {
+          "id": "dlg_123",
+          "speaker": "elder",
+          "speakerName": "李伯伯",
+          "text": "（把应急卡贴上冰箱）'糖尿病早期、二甲双胍、低血糖处置……'嘿，这下心里踏实了。这卡比那智能手表实在。",
+          "layer": "essential",
+          "emotion": "relieved"
+        },
+        {
+          "id": "dlg_124",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "科技是工具，不是答案。他知道什么时候该信数据、什么时候该信人和常识了。最后三天，留给回顾和告别。",
+          "layer": "emotional",
+          "emotion": "warm",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "li_act3_d28_001",
+      "characterId": "li_bobo",
+      "act": 3,
+      "day": 28,
+      "type": "narrative",
+      "scene": "living_room",
+      "illustrationId": "li_album_review",
+      "dialogues": [
+        {
+          "id": "dlg_125",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "第二十八天。精灵翻开了这三十天的相册——第一天的体检报告、偷吃的绿豆糕、公园里的太极、社区课堂的图文教程、互助小组的眼眶红、低血糖那天的碎血糖仪、冰箱上的应急卡……",
+          "layer": "essential",
+          "duration": 5000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_126",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "三十天的守护，每一张画都在。我们一起回顾这段旅程吧。",
+          "layer": "essential",
+          "emotion": "nostalgic"
+        }
+      ],
+      "nextNode": "li_act3_d28_002",
+      "isCheckpoint": true,
+      "tags": ["review", "album"]
+    },
+    {
+      "id": "li_act3_d28_002",
+      "characterId": "li_bobo",
+      "act": 3,
+      "day": 28,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "li_review_choice",
+      "dialogues": [
+        {
+          "id": "dlg_127",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "回顾这三十天，李伯伯的变化里，最让你触动的是哪个瞬间？",
+          "layer": "essential",
+          "emotion": "curious"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "他从偷吃甜食到主动控糖的转变",
+          "description": "健康管理成长",
+          "isCorrect": true,
+          "effects": [
+            { "type": "health", "delta": 5, "reason": "巩固健康意识" },
+            { "type": "mood", "delta": 4, "reason": "被肯定进步" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "li_act3_d28_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "是啊，从'偷偷吃'到'自己管'，这个转变背后是信任的建立。他不是被管住了，是真的想对自己好了。",
+            "explanation": "健康行为改变的内化：从外部监督（被管）到内部动机（自己想好）是质变。触发点不是数据警告，而是被理解、被尊重后产生的自我价值感——'我值得被好好对待，包括被自己'。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "他第一次承认'我有时候也听不清了'的时刻",
+          "description": "心理成长",
+          "isCorrect": true,
+          "effects": [
+            { "type": "trust", "delta": 6, "reason": "回顾加深理解" },
+            { "type": "mood", "delta": 5, "reason": "成长被看见" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "li_act3_d28_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "那个瞬间，是整个三十天最珍贵的。承认脆弱不是认输，是打开了一扇门——让帮助能走进去的门。",
+            "explanation": "李伯伯线的核心成长：从'用科技否认衰老'到'用科技面对衰老'。转折点就是那次对老伴的坦白。承认脆弱≠认老，而是带着尊严地接纳变化，这是最成熟的'不服老'。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "低血糖那天他说的'不服老也得有个度'",
+          "description": "危机后的顿悟",
+          "isCorrect": true,
+          "effects": [
+            { "type": "health", "delta": 4, "reason": "深刻领悟" },
+            { "type": "trust", "delta": 5, "reason": "危机中被守护" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "li_act3_d28_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "那句话是他三十天的总结。'不服老'让他保持活力，'有个度'让他学会敬畏身体。两者平衡，才是真正的智慧。",
+            "explanation": "李伯伯线的哲学：不服老（独立、要强）和知限度（科学管理、接受帮助）不矛盾。最好的照护不是消灭'不服老'，而是把它引导到正确方向——用工程师的严谨管理自己的健康，用不服输的劲头重新出发。"
+          }
+        }
+      ],
+      "tags": ["choice", "review"],
+      "devNote": "三十天回顾"
+    },
+    {
+      "id": "li_act3_d28_003",
+      "characterId": "li_bobo",
+      "act": 3,
+      "day": 28,
+      "type": "dayEnd",
+      "scene": "living_room",
+      "illustrationId": "li_album_together",
+      "dialogues": [
+        {
+          "id": "dlg_128",
+          "speaker": "elder",
+          "speakerName": "李伯伯",
+          "text": "（翻着相册）这三十天……比上班那三十年还长。也值。",
+          "layer": "essential",
+          "emotion": "reflective"
+        },
+        {
+          "id": "dlg_129",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "最后两天，留给他自己，也留给你。",
+          "layer": "emotional",
+          "emotion": "gentle",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "li_act3_d29_001",
+      "characterId": "li_bobo",
+      "act": 3,
+      "day": 29,
+      "type": "narrative",
+      "scene": "study",
+      "illustrationId": "li_letter_writing",
+      "dialogues": [
+        {
+          "id": "dlg_130",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "第二十九天傍晚，李伯伯坐在书房，用钢笔在信纸上写字。这是精灵代际信件的时刻——他写给年轻时的自己。",
+          "layer": "essential",
+          "duration": 4000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_131",
+          "speaker": "elder",
+          "speakerName": "李伯伯",
+          "text": "（写信）建国：六十六岁的我，给你写封信。这半年我才明白……",
+          "layer": "essential",
+          "emotion": "reflective"
+        },
+        {
+          "id": "dlg_132",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "这是心理支持技能精通后解锁的代际信件。让我们静静听他说完。",
+          "layer": "essential",
+          "emotion": "gentle"
+        }
+      ],
+      "nextNode": "li_act3_d29_002",
+      "isCheckpoint": true,
+      "tags": ["letter", "emotional"],
+      "unlocks": [
+        {
+          "diaryEntryId": "li_letter_to_young_self"
+        }
+      ]
+    },
+    {
+      "id": "li_act3_d29_002",
+      "characterId": "li_bobo",
+      "act": 3,
+      "day": 29,
+      "type": "choice",
+      "scene": "study",
+      "illustrationId": "li_letter_response",
+      "dialogues": [
+        {
+          "id": "dlg_132b",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "李伯伯写完了信，犹豫着要不要折起来收进抽屉。他这是在试探——有没有人愿意听他说这些。你怎么接住这份迟来的坦诚？",
+          "layer": "essential",
+          "emotion": "gentle"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "悄悄把信收好，不声张，给他留空间",
+          "description": "尊重隐私",
+          "isCorrect": false,
+          "effects": [
+            { "type": "mood", "delta": -2, "reason": "坦诚没被接住，有点失落" }
+          ],
+          "spiritPowerChange": 3,
+          "nextNode": "li_act3_d29_003",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "尊重隐私没错，但他刚鼓起勇气写出来，正等着被看见。'不声张'会被他理解成'没人在意'。",
+            "explanation": "心理支持的关键时刻：老人主动表达脆弱时，'回应'比'留空间'更重要。沉默式陪伴适用于他不愿说时，一旦他主动表达了，就需要被接住、被确认。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "真诚告诉他这封信很打动你，谢谢他愿意写",
+          "description": "确认并感谢他的坦诚",
+          "isCorrect": true,
+          "effects": [
+            { "type": "trust", "delta": 8, "reason": "脆弱被珍视" },
+            { "type": "mood", "delta": 7, "reason": "被深深理解" }
+          ],
+          "spiritPowerChange": 12,
+          "nextNode": "li_act3_d29_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "完美！你接住了他最柔软的部分。'谢谢您愿意写'——这句话会让李伯伯觉得，承认脆弱是值得的。",
+            "explanation": "心理支持的'确认技术'：当老人表达深层情感时，明确表达'我收到了，我很珍惜'。这强化了'表达脆弱是安全的'这一信念，为未来的沟通打开更多门。代际信件的意义正在于此——它是情感流动的仪式。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "建议他把信拍照发给儿子，让儿子也看看",
+          "description": "扩大情感连接",
+          "isCorrect": false,
+          "effects": [
+            { "type": "trust", "delta": -4, "reason": "私密被要求公开，安全感受损" },
+            { "type": "mood", "delta": -2, "reason": "被push了" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "li_act3_d29_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "这封信是写给'年轻时的自己'的，很私密。建议公开会让他觉得被冒犯，下次就不愿再写了。",
+            "explanation": "心理边界尊重：老人分享的私密情感不等于授权公开。是否分享给他人，决定权永远在老人自己手里。可以问'您愿意让儿子也看到吗'，但不能建议'您应该发给他'。"
+          }
+        }
+      ],
+      "tags": ["choice", "letter", "psychology"],
+      "devNote": "Day29选择节点，接住代际信件的坦诚时刻"
+    },
+    {
+      "id": "li_act3_d29_003",
+      "characterId": "li_bobo",
+      "act": 3,
+      "day": 29,
+      "type": "dayEnd",
+      "scene": "study",
+      "illustrationId": "li_letter_content",
+      "dialogues": [
+        {
+          "id": "dlg_133",
+          "speaker": "elder",
+          "speakerName": "李伯伯",
+          "text": "（念信）'……你总觉得退休了就是老了。其实不是。老了是当你觉得自己没用了。这半年我重新有用了一次——不是造桥，是教一帮老头老太太用手机。也是造桥，造人和人之间的桥。别怕退休，建国。好日子还在后头。'",
+          "layer": "essential",
+          "emotion": "peaceful"
+        },
+        {
+          "id": "dlg_134",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "（精灵的光芒柔和而明亮）他把'造桥'重新定义了。从工程师的桥，到人与人之间的桥。这是三十天最珍贵的收获。",
+          "layer": "emotional",
+          "emotion": "moved",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end", "letter"],
+      "devNote": "代际信件，心理支持技能精通解锁"
+    },
+    {
+      "id": "li_act3_d30_001",
+      "characterId": "li_bobo",
+      "act": 3,
+      "day": 30,
+      "type": "narrative",
+      "scene": "living_room",
+      "illustrationId": "li_day30_morning",
+      "dialogues": [
+        {
+          "id": "dlg_135",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "第三十天。清晨，李伯伯照常六点半起床，测了空腹血糖——6.8，稳定。戴上助听器、穿上圆头软面鞋、揣上应急糖，出门晨练。智能手表显示步数3000步时，他主动往回走了。",
+          "layer": "essential",
+          "duration": 5000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_136",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "三十天了。今天是我们和李伯伯的最后一天。他学会的，远不止控糖——他学会了和'变老'这件事和解，用他自己的方式。",
+          "layer": "essential",
+          "emotion": "proud"
+        },
+        {
+          "id": "dlg_137",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "最后，根据这三十天的守护，李伯伯会有一个属于他的结局。让我们看看，你成为了怎样的守护者。",
+          "layer": "essential",
+          "emotion": "anticipating"
+        }
+      ],
+      "nextNode": "li_act3_d30_002",
+      "isCheckpoint": true,
+      "tags": ["ending", "final-day"]
+    },
+    {
+      "id": "li_act3_d30_002",
+      "characterId": "li_bobo",
+      "act": 3,
+      "day": 30,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "li_ending_choice",
+      "dialogues": [
+        {
+          "id": "dlg_138",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "最后的选择，不是关于李伯伯，是关于你。这三十天，你觉得自己学到了什么？",
+          "layer": "essential",
+          "emotion": "curious"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "学会了用科学知识和数据守护健康",
+          "description": "知识与数据导向",
+          "isCorrect": true,
+          "effects": [
+            { "type": "health", "delta": 5, "reason": "知识内化" },
+            { "type": "trust", "delta": 4, "reason": "成长被确认" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "li_act3_d30_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "这是基础。血糖管理、低血糖急救、糖尿病足预防——这些知识会成为你一辈子的工具。",
+            "explanation": "基础照护+用药管理+应急处理技能的知识沉淀。这些是可迁移的硬技能，无论面对哪位老人都用得上。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "学会了先理解这个人，再谈他的病",
+          "description": "关系与共情导向",
+          "isCorrect": true,
+          "effects": [
+            { "type": "mood", "delta": 6, "reason": "共情内化" },
+            { "type": "trust", "delta": 6, "reason": "深刻领悟" }
+          ],
+          "spiritPowerChange": 12,
+          "nextNode": "li_act3_d30_004",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "这是李伯伯线最核心的一课。他的问题从来不是'不会用科技'，而是'用科技否认衰老'。看见科技背后的人，才是真正的守护。",
+            "explanation": "心理支持技能的精髓：照护的对象是'人'不是'病'。李伯伯的血糖问题背后是退休适应的身份危机。先治心，再治身，这是李伯伯线的设计哲学。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "学会了'辅助而非替代'的分寸感",
+          "description": "自主与边界导向",
+          "isCorrect": true,
+          "effects": [
+            { "type": "independence", "delta": 5, "reason": "边界感内化" },
+            { "type": "trust", "delta": 5, "reason": "尊重被确认" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "li_act3_d30_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "对独立值85的李伯伯，这条尤其珍贵。你学会了在他需要时托一把，在他能做时退一步。这是最难的分寸。",
+            "explanation": "资源协调与基础照护的核心原则：辅助而非替代。对独立值高的老人，'退一步'比'进一步'更难，也更必要。让他自己选鞋、自己查脚、自己写应急卡——每一次'让他自己来'都是对他尊严的守护。"
+          }
+        }
+      ],
+      "tags": ["choice", "ending"],
+      "devNote": "最终选择，导向不同结局评价"
+    },
+    {
+      "id": "li_act3_d30_003",
+      "characterId": "li_bobo",
+      "act": 3,
+      "day": 30,
+      "type": "ending",
+      "scene": "living_room",
+      "illustrationId": "li_ending_growth",
+      "dialogues": [
+        {
+          "id": "dlg_139",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "三十天结束。李伯伯站在社区课堂门口，背着他的教程包，揣着他的应急糖。他还是那个不服老的李建国，只是现在，他学会了和身体讲和，也学会了让人走近。",
+          "layer": "essential",
+          "duration": 5000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_140",
+          "speaker": "elder",
+          "speakerName": "李伯伯",
+          "text": "（回头笑了笑）这三十天，谢了。下节课我还来。这日子，有奔头。",
+          "layer": "essential",
+          "emotion": "content"
+        },
+        {
+          "id": "dlg_141",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "结局：成长之路。你还在学习，但你愿意学习，这本身就是守护。李伯伯的独立值始终高，信任值提升有限——可这正是他要的方式。你尊重了他，也守护了他。",
+          "layer": "essential",
+          "emotion": "proud"
+        },
+        {
+          "id": "dlg_142",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "（精灵的光芒稳定而柔和）记住这三十天。下一个需要守护的人，也许就在不远处。带上你学到的一切，继续走吧。",
+          "layer": "emotional",
+          "emotion": "warm",
+          "typingSpeed": 40
+        }
+      ],
+      "transition": {
+        "exit": "fade-out",
+        "illustrationTransition": "watercolor",
+        "duration": 1500
+      },
+      "tags": ["ending", "growth-path"],
+      "devNote": "成长之路结局——李伯伯预期结局：独立值高、信任值中、健康值中"
+    },
+    {
+      "id": "li_act3_d30_004",
+      "characterId": "li_bobo",
+      "act": 3,
+      "day": 30,
+      "type": "ending",
+      "scene": "living_room",
+      "illustrationId": "li_ending_understanding",
+      "dialogues": [
+        {
+          "id": "dlg_143",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "三十天结束。李伯伯坐在书房，把那封写给年轻自己的信折好，放进抽屉。窗外阳光正好，他戴上助听器，给社区课堂的学员们发了条语音：'今天补一节课，谁来都行。'",
+          "layer": "essential",
+          "duration": 5000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_144",
+          "speaker": "elder",
+          "speakerName": "李伯伯",
+          "text": "（对着空气说）你这小精灵……比我家那小子还懂我。行了，我也该长大了。",
+          "layer": "essential",
+          "emotion": "moved"
+        },
+        {
+          "id": "dlg_145",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "结局：深层理解。有些事情比健康更重要，比如让他觉得自己还被人需要，还值得被认真对待。你看见的不只是他的血糖，是他这个人。",
+          "layer": "essential",
+          "emotion": "moved"
+        },
+        {
+          "id": "dlg_146",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "（精灵光芒温暖明亮）他说的'长大'，是终于敢承认自己也会老、也需要人。而你，是让他敢承认的那个人。这就是守护的意义。",
+          "layer": "emotional",
+          "emotion": "warm",
+          "typingSpeed": 40
+        }
+      ],
+      "transition": {
+        "exit": "fade-out",
+        "illustrationTransition": "watercolor",
+        "duration": 1500
+      },
+      "tags": ["ending", "deep-understanding"],
+      "devNote": "深层理解结局——心情值高、信任值高时触发"
+    },
+    {
+      "id": "li_act3_d30_005",
+      "characterId": "li_bobo",
+      "act": 3,
+      "day": 30,
+      "type": "ending",
+      "scene": "living_room",
+      "illustrationId": "li_ending_warm",
+      "dialogues": [
+        {
+          "id": "dlg_147",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "三十天结束。李伯伯的家庭群里，他主动发了今天的血糖数据、步数、还有一张社区课堂的合影。儿子回了个'爸真棒'，他破天荒回了个笑脸。冰箱上的应急卡、鞋柜里的圆头鞋、口袋里的应急糖——一切各就各位。",
+          "layer": "essential",
+          "duration": 5000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_148",
+          "speaker": "elder",
+          "speakerName": "李伯伯",
+          "text": "（哼着小曲）这日子，比上班那会儿还忙活。不过这回，是给自己忙活。",
+          "layer": "essential",
+          "emotion": "happy"
+        },
+        {
+          "id": "dlg_149",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "结局：温暖守护。你找到了最好的照护方式——在身边，但不过度。李伯伯健康、心情、独立、信任，四项俱佳。他既保住了要强的尊严，又学会了让人走近。",
+          "layer": "essential",
+          "emotion": "proud"
+        },
+        {
+          "id": "dlg_150",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "（精灵光芒温暖而明亮）你成为了合格的守护者。记住这份温度，带给下一个需要守护的人。",
+          "layer": "emotional",
+          "emotion": "warm",
+          "typingSpeed": 40
+        }
+      ],
+      "transition": {
+        "exit": "fade-out",
+        "illustrationTransition": "watercolor",
+        "duration": 1500
+      },
+      "tags": ["ending", "warm-guardian"],
+      "devNote": "温暖守护结局——四项属性全高时触发（李伯伯线较难达成，需全程高质量照护）"
+    }
+  ]
+}

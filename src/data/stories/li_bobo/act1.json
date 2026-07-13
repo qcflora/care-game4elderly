@@ -1,0 +1,1020 @@
+{
+  "characterId": "li_bobo",
+  "act": 1,
+  "title": "第一幕：新生活的开始",
+  "theme": "退休适应与慢性病管理",
+  "startDay": 1,
+  "endDay": 7,
+  "nodes": [
+    {
+      "id": "li_act1_d1_001",
+      "characterId": "li_bobo",
+      "act": 1,
+      "day": 1,
+      "type": "narrative",
+      "scene": "living_room",
+      "illustrationId": "li_meeting_spirit",
+      "dialogues": [
+        {
+          "id": "dlg_001",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "清晨六点半，李伯伯已经穿戴整齐，智能手表显示昨晚睡眠7小时、心率68。客厅茶几上摊着昨天的体检报告，'糖尿病早期'几个字被他用笔圈了又圈。",
+          "layer": "essential",
+          "duration": 4500,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_002",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "你好呀！我是家庭守护精灵。从今天起，我会陪着你一起守护李伯伯。",
+          "layer": "essential",
+          "emotion": "cheerful",
+          "lottieAnimation": "spirit_appear",
+          "typingSpeed": 35
+        },
+        {
+          "id": "dlg_003",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "李伯伯刚退休半年，身体硬朗、会用智能设备，可血糖有点偏高。他嘴上不认老，心里其实还没适应闲下来的日子。",
+          "layer": "essential",
+          "emotion": "gentle",
+          "typingSpeed": 35
+        }
+      ],
+      "nextNode": "li_act1_d1_002",
+      "transition": {
+        "enter": "fade-in",
+        "illustrationTransition": "watercolor",
+        "duration": 800
+      },
+      "isCheckpoint": true,
+      "tags": ["intro", "tutorial"],
+      "devNote": "开场节点，精灵登场介绍李伯伯"
+    },
+    {
+      "id": "li_act1_d1_002",
+      "characterId": "li_bobo",
+      "act": 1,
+      "day": 1,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "li_morning_checkup",
+      "dialogues": [
+        {
+          "id": "dlg_004",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "李伯伯正准备量空腹血糖。你觉得作为子女，第一件事应该怎么开口？",
+          "layer": "essential",
+          "emotion": "curious"
+        },
+        {
+          "id": "dlg_005",
+          "speaker": "elder",
+          "speakerName": "李伯伯",
+          "text": "（摆弄着血糖仪）这玩意儿我自己会弄，你别老盯着我，我又不是七老八十。",
+          "layer": "essential",
+          "emotion": "defensive"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "直接要求他每天把血糖数据发给你",
+          "description": "远程监控，确保按时测血糖",
+          "isCorrect": false,
+          "effects": [
+            { "type": "trust", "delta": -8, "reason": "被监视感，抗拒被管" },
+            { "type": "mood", "delta": -3, "reason": "不被信任的不快" },
+            { "type": "independence", "delta": -2, "reason": "自主权被剥夺" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "li_act1_d1_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "李伯伯独立值很高，最反感被当成'病人'管着。这样开口，他只会更抗拒。",
+            "explanation": "对不愿承认变老的老人，命令式监控会触发防御心理，反而让他隐瞒真实数据。先建立信任，再谈管理。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "和他聊聊退休后的感受，再顺势问血糖",
+          "description": "先建立情感连接，再关心健康",
+          "isCorrect": true,
+          "effects": [
+            { "type": "trust", "delta": 8, "reason": "被理解、被尊重" },
+            { "type": "mood", "delta": 5, "reason": "情绪被关注" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "li_act1_d1_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "做得好！先关心他这个人，再关心他的血糖。信任值很低时，任何'管理'都行不通。",
+            "explanation": "信任值是'时间货币'。对独立值高、信任值低的老人，倾听比说教更有效。先建立信任，健康建议才听得进去。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "夸他智能手表用得好，请教他怎么设置健康提醒",
+          "description": "以请教姿态拉近距离，顺带引导健康监测",
+          "isCorrect": true,
+          "effects": [
+            { "type": "trust", "delta": 6, "reason": "被尊重、被需要" },
+            { "type": "mood", "delta": 6, "reason": "成就感" },
+            { "type": "independence", "delta": 3, "reason": "主动权在他手里" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "li_act1_d1_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "太聪明了！李伯伯数字生活度85%，他享受'被请教'的感觉。这样既保住了他的面子，又把健康监测变成了他自己想做的事。",
+            "explanation": "对数字生活度高的老人，利用他擅长的科技作为切入点，比直接管教有效得多。让他做'老师'，他会更愿意配合。"
+          }
+        }
+      ],
+      "tags": ["choice", "tutorial", "trust"],
+      "devNote": "第一个选择，教学信任值的重要性"
+    },
+    {
+      "id": "li_act1_d1_003",
+      "characterId": "li_bobo",
+      "act": 1,
+      "day": 1,
+      "type": "dayEnd",
+      "scene": "bedroom",
+      "illustrationId": "li_night_rest",
+      "dialogues": [
+        {
+          "id": "dlg_006",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "第一天结束啦。记住，李伯伯的难题不是'不会用科技'，而是'用科技否认衰老'。我们慢慢来。",
+          "layer": "essential",
+          "emotion": "proud"
+        },
+        {
+          "id": "dlg_007",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "（精灵落在茶几上，望着那台还在记录数据的智能手表）明天的晨练，会有新的发现哦。",
+          "layer": "emotional",
+          "emotion": "encouraging",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end"],
+      "devNote": "Day 1 结束节点"
+    },
+    {
+      "id": "li_act1_d2_001",
+      "characterId": "li_bobo",
+      "act": 1,
+      "day": 2,
+      "type": "narrative",
+      "scene": "park",
+      "illustrationId": "li_morning_walk",
+      "dialogues": [
+        {
+          "id": "dlg_008",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "清晨的公园，李伯伯快步走着，智能手表显示心率128——偏高了一些。回到家，他悄悄从口袋摸出一块绿豆糕，三两口吃完。",
+          "layer": "essential",
+          "duration": 4000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_009",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "嘘——我看到了。李伯伯晨练后偷吃了甜食，还以为没人发现呢。",
+          "layer": "essential",
+          "emotion": "playful"
+        }
+      ],
+      "nextNode": "li_act1_d2_002",
+      "isCheckpoint": true,
+      "tags": ["blood-sugar", "setup"]
+    },
+    {
+      "id": "li_act1_d2_002",
+      "characterId": "li_bobo",
+      "act": 1,
+      "day": 2,
+      "type": "choice",
+      "scene": "kitchen",
+      "illustrationId": "li_glucose_check",
+      "dialogues": [
+        {
+          "id": "dlg_010",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "现在该测餐后两小时血糖了。李伯伯的血糖仪APP记录显示，最近一周数据忽高忽低。你怎么处理这个偷吃甜食的情况？",
+          "layer": "essential",
+          "emotion": "curious"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "当面揭穿他偷吃，没收所有甜食",
+          "description": "严格管控饮食",
+          "isCorrect": false,
+          "effects": [
+            { "type": "trust", "delta": -10, "reason": "被戳穿、被管束，丢面子" },
+            { "type": "mood", "delta": -5, "reason": "羞恼" },
+            { "type": "independence", "delta": -5, "reason": "自主权被夺" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "li_act1_d2_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "当众揭穿会让李伯伯更叛逆，下次他会藏得更深。信任值本来就低，这样做只会雪上加霜。",
+            "explanation": "对不愿承认变老的老人，羞辱式管控会彻底关闭沟通。他会表面答应、背后照吃，数据反而更不可靠。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "装作没看见，等他自己血糖仪报警",
+          "description": "不干预，让数据说话",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": -5, "reason": "血糖波动持续伤身" },
+            { "type": "trust", "delta": -2, "reason": "没被真正关心" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "li_act1_d2_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "血糖仪报警了他大概率会嫌烦关掉。放任不管，健康值会悄悄往下掉。",
+            "explanation": "糖尿病早期是可控的，但'假装没事'正是李伯伯的问题所在。不干预=默认他可以继续否认，错过早期干预黄金期。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "聊起'控糖也能吃甜的'，推荐低GI零食替代",
+          "description": "给台阶下，用知识替代指责",
+          "isCorrect": true,
+          "effects": [
+            { "type": "health", "delta": 5, "reason": "饮食逐步改善" },
+            { "type": "trust", "delta": 6, "reason": "保住面子又被关心" },
+            { "type": "mood", "delta": 4, "reason": "不用憋着嘴馋" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "li_act1_d2_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "漂亮！既没戳穿他的面子，又把'控糖'变成了'换种吃法'。李伯伯会觉得你是来帮忙的，不是来管他的。",
+            "explanation": "糖尿病早期控糖≠完全戒糖。低GI食物（如坚果、无糖酸奶、少量黑巧）可解馋。给老人留台阶，比正面对抗有效。"
+          }
+        }
+      ],
+      "props": [
+        {
+          "propId": "glucose_meter_app",
+          "layer": "display",
+          "autoShow": true
+        }
+      ],
+      "tags": ["choice", "blood-sugar", "diet"],
+      "devNote": "血糖管理教学，糖尿病饮食"
+    },
+    {
+      "id": "li_act1_d2_003",
+      "characterId": "li_bobo",
+      "act": 1,
+      "day": 2,
+      "type": "dayEnd",
+      "scene": "living_room",
+      "illustrationId": "li_evening_talk",
+      "dialogues": [
+        {
+          "id": "dlg_011",
+          "speaker": "elder",
+          "speakerName": "李伯伯",
+          "text": "（嘟囔）低GI……这词儿研究所那帮人说过。行吧，改天买点坚果尝尝。",
+          "layer": "essential",
+          "emotion": "reluctant"
+        },
+        {
+          "id": "dlg_012",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "看，他嘴硬，但听进去了。明天该聊聊运动啦。",
+          "layer": "emotional",
+          "emotion": "happy",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "li_act1_d3_001",
+      "characterId": "li_bobo",
+      "act": 1,
+      "day": 3,
+      "type": "narrative",
+      "scene": "park",
+      "illustrationId": "li_exercise_choice",
+      "dialogues": [
+        {
+          "id": "dlg_013",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "李伯伯今天晨练格外卖力——快走四十分钟后又加了两组台阶跑，智能手表跳出'运动过量'提示，他随手划掉，'年轻人这强度算热身'。",
+          "layer": "essential",
+          "duration": 4000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_014",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "糖尿病早期需要规律运动，但'过量'反而会让血糖先升后降，还伤关节。怎么劝他把握好度？",
+          "layer": "essential",
+          "emotion": "concerned"
+        }
+      ],
+      "nextNode": "li_act1_d3_002",
+      "isCheckpoint": true,
+      "tags": ["exercise", "setup"]
+    },
+    {
+      "id": "li_act1_d3_002",
+      "characterId": "li_bobo",
+      "act": 1,
+      "day": 3,
+      "type": "choice",
+      "scene": "park",
+      "illustrationId": "li_heart_rate",
+      "dialogues": [
+        {
+          "id": "dlg_015",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "李伯伯的手表显示心率峰值148，对66岁偏高。你打算怎么帮他调整运动强度？",
+          "layer": "essential",
+          "emotion": "curious"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "让他别运动了，在家歇着最安全",
+          "description": "保守起见，减少运动",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": -5, "reason": "缺乏运动血糖控制变差" },
+            { "type": "independence", "delta": -5, "reason": "被限制自由" },
+            { "type": "mood", "delta": -4, "reason": "闷得慌" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "li_act1_d3_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "糖尿病早期恰恰需要运动！完全不运动，血糖会更难控制。这是'因噎废食'。",
+            "explanation": "糖尿病管理三驾马车：饮食、运动、药物。运动能提高胰岛素敏感性。关键是'适量'，不是'不动'。每周150分钟中等强度有氧最理想。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "教他用'说话测试法'判断强度，能说话不能唱歌正好",
+          "description": "科学方法，把判断权交给他",
+          "isCorrect": true,
+          "effects": [
+            { "type": "health", "delta": 8, "reason": "运动强度合理，血糖改善" },
+            { "type": "trust", "delta": 5, "reason": "学到有用知识" },
+            { "type": "independence", "delta": 4, "reason": "自己能判断" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "li_act1_d3_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "太棒了！'说话测试法'不用看手表也能判断，正好满足李伯伯'我不靠仪器'的倔强。中等强度=能说话但不能唱歌。",
+            "explanation": "中等强度运动判断法：运动时能完整说一句话但不能唱歌，约相当于最大心率的60-70%。对66岁，目标心率约90-105次/分。比死盯数字更易坚持。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "建议他改打太极拳或快走，别再跑台阶",
+          "description": "换低冲击运动，保护关节",
+          "isCorrect": true,
+          "effects": [
+            { "type": "health", "delta": 6, "reason": "运动方式更安全" },
+            { "type": "trust", "delta": 4, "reason": "建议合理" }
+          ],
+          "spiritPowerChange": 8,
+          "nextNode": "li_act1_d3_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "好选择！太极拳、快走、游泳这些低冲击有氧，对糖尿病早期老人更友好，还不伤膝盖。",
+            "explanation": "老年人关节退变，跑台阶、跳绳等高冲击运动易伤膝。推荐快走、太极、八段锦、游泳，每次30分钟、每周5次。"
+          }
+        }
+      ],
+      "props": [
+        {
+          "propId": "smartwatch_heart_rate",
+          "layer": "display",
+          "autoShow": true
+        }
+      ],
+      "tags": ["choice", "exercise"],
+      "devNote": "运动指导教学"
+    },
+    {
+      "id": "li_act1_d3_003",
+      "characterId": "li_bobo",
+      "act": 1,
+      "day": 3,
+      "type": "dayEnd",
+      "scene": "park",
+      "illustrationId": "li_tai_chi",
+      "dialogues": [
+        {
+          "id": "dlg_016",
+          "speaker": "elder",
+          "speakerName": "李伯伯",
+          "text": "（活动着膝盖）'说话测试'……行，明儿试试太极。公园那帮老头打得还挺像样。",
+          "layer": "essential",
+          "emotion": "thoughtful"
+        },
+        {
+          "id": "dlg_017",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "他开始愿意试试新东西了，信任在一点点建立。",
+          "layer": "emotional",
+          "emotion": "happy",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "li_act1_d4_001",
+      "characterId": "li_bobo",
+      "act": 1,
+      "day": 4,
+      "type": "narrative",
+      "scene": "kitchen",
+      "illustrationId": "li_breakfast_table",
+      "dialogues": [
+        {
+          "id": "dlg_018",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "早餐桌上，老伴给李伯伯盛了满满一碗白米粥、两个肉包子，还有一碟腌菜。李伯伯吃得香，血糖仪却悄悄亮起红灯。",
+          "layer": "essential",
+          "duration": 4000,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_019",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "白米粥升糖特别快，对糖尿病早期不太友好。可这是老伴的心意，直接否定会伤感情。怎么办？",
+          "layer": "essential",
+          "emotion": "concerned"
+        }
+      ],
+      "nextNode": "li_act1_d4_002",
+      "isCheckpoint": true,
+      "tags": ["diet", "setup"]
+    },
+    {
+      "id": "li_act1_d4_002",
+      "characterId": "li_bobo",
+      "act": 1,
+      "day": 4,
+      "type": "choice",
+      "scene": "kitchen",
+      "illustrationId": "li_breakfast_choice",
+      "dialogues": [
+        {
+          "id": "dlg_020",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "这顿早餐该怎么调整，既控糖又不让老伴难堪？",
+          "layer": "essential",
+          "emotion": "curious"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "直接说白粥升糖快，让老伴以后别熬了",
+          "description": "明确指出问题",
+          "isCorrect": false,
+          "effects": [
+            { "type": "mood", "delta": -6, "reason": "老伴心意被否定" },
+            { "type": "trust", "delta": -3, "reason": "家庭气氛僵" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "li_act1_d4_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "老伴好心熬粥被当头一棒，下次可能干脆不管了。家庭照护最忌讳'正确但伤人'。",
+            "explanation": "照护不是一个人的事。否定老伴的付出，会破坏家庭照护氛围。更好的做法是'加'而非'减'——在原有基础上优化。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "建议粥里加杂粮、配个鸡蛋和青菜，先吃菜后喝粥",
+          "description": "优化搭配和进餐顺序",
+          "isCorrect": true,
+          "effects": [
+            { "type": "health", "delta": 8, "reason": "升糖负荷降低" },
+            { "type": "mood", "delta": 4, "reason": "老伴心意被保留" },
+            { "type": "trust", "delta": 5, "reason": "建议贴心" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "li_act1_d4_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "完美！杂粮粥升糖慢，蛋白质和纤维先垫底能延缓糖分吸收。老伴的粥没白熬，李伯伯的血糖也稳了。",
+            "explanation": "糖尿病饮食三技巧：1.粗细搭配（白米+燕麦/糙米/豆类）；2.先吃蔬菜蛋白质、后吃主食；3.食物多样化。这样既控糖又不剥夺饮食乐趣。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "让李伯伯自己决定吃多少，相信他能控量",
+          "description": "尊重他的自主权",
+          "isCorrect": false,
+          "effects": [
+            { "type": "health", "delta": -4, "reason": "他还缺乏控糖意识" },
+            { "type": "independence", "delta": 3, "reason": "自主权被尊重" }
+          ],
+          "spiritPowerChange": 3,
+          "nextNode": "li_act1_d4_003",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "尊重自主权是对的，可李伯伯现在还没建立起控糖意识，完全放手有点早。独立≠放任。",
+            "explanation": "对刚确诊的糖尿病早期患者，需要先'辅助建立习惯'再'逐步放手'。就像学骑车，先扶后放。"
+          }
+        }
+      ],
+      "tags": ["choice", "diet"],
+      "devNote": "饮食控制教学"
+    },
+    {
+      "id": "li_act1_d4_003",
+      "characterId": "li_bobo",
+      "act": 1,
+      "day": 4,
+      "type": "dayEnd",
+      "scene": "kitchen",
+      "illustrationId": "li_family_meal",
+      "dialogues": [
+        {
+          "id": "dlg_021",
+          "speaker": "elder",
+          "speakerName": "李伯伯",
+          "text": "（老伴端上杂粮粥）嘿，这粥有嚼头，比白粥香。明天还这么熬。",
+          "layer": "essential",
+          "emotion": "satisfied"
+        },
+        {
+          "id": "dlg_022",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "一家人一起调整，比一个人扛着轻松多了。",
+          "layer": "emotional",
+          "emotion": "warm",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "li_act1_d5_001",
+      "characterId": "li_bobo",
+      "act": 1,
+      "day": 5,
+      "type": "narrative",
+      "scene": "study",
+      "illustrationId": "li_empty_desk",
+      "dialogues": [
+        {
+          "id": "dlg_023",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "书房里，李伯伯盯着空荡荡的书桌发呆。这里曾堆满图纸和方案，如今只剩退休证和一盒没拆封的毛笔。手机里研究所的群没人说话了，他也没主动发。",
+          "layer": "essential",
+          "duration": 4500,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_024",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "退休半年，最难的其实不是血糖，是这种'突然没用了'的落差。李伯伯嘴上不说，可心情感知值在往下掉。",
+          "layer": "essential",
+          "emotion": "gentle"
+        }
+      ],
+      "nextNode": "li_act1_d5_002",
+      "isCheckpoint": true,
+      "tags": ["psychology", "retirement", "setup"]
+    },
+    {
+      "id": "li_act1_d5_002",
+      "characterId": "li_bobo",
+      "act": 1,
+      "day": 5,
+      "type": "choice",
+      "scene": "study",
+      "illustrationId": "li_retirement_gap",
+      "dialogues": [
+        {
+          "id": "dlg_025",
+          "speaker": "elder",
+          "speakerName": "李伯伯",
+          "text": "（叹气）闲着也是闲着……研究所那帮人忙得脚不沾地，我倒好，成天遛弯量血糖。",
+          "layer": "essential",
+          "emotion": "lost"
+        },
+        {
+          "id": "dlg_026",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "这是退休适应期的典型失落感。你怎么回应他这句叹气？",
+          "layer": "essential",
+          "emotion": "curious"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "说'爸您该享清福了，别想那么多'",
+          "description": "安慰他放下",
+          "isCorrect": false,
+          "effects": [
+            { "type": "mood", "delta": -5, "reason": "情绪被否定，更觉没人懂" },
+            { "type": "trust", "delta": -3, "reason": "没被真正倾听" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "li_act1_d5_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "'享清福'三个字，恰恰戳中他的痛点——他不想被当成'该歇着的老头'。这种安慰是否定了他的感受。",
+            "explanation": "退休失落的核心是'价值感丧失'。说'享清福'等于告诉他'你确实没用了，歇着吧'。应先承认他的感受，再帮他找到新的价值感。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "认真听他说，问他当年最骄傲的项目是哪个",
+          "description": "倾听+引导正向回忆",
+          "isCorrect": true,
+          "effects": [
+            { "type": "mood", "delta": 8, "reason": "被倾听、被重视" },
+            { "type": "trust", "delta": 7, "reason": "真正关心他这个人" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "li_act1_d5_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "太好了！不打断、不评判，还用'最骄傲的项目'引导他回忆高光时刻。这正是心理支持里的'回忆疗法'。",
+            "explanation": "回忆疗法：引导老人讲述人生高光，重建自我价值感。对退休适应期尤其有效。倾听技巧：不打断、复述确认、追问细节。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "建议他去社区当技术顾问，发挥专长",
+          "description": "直接给方案，找新事做",
+          "isCorrect": false,
+          "effects": [
+            { "type": "mood", "delta": 2, "reason": "有被需要的可能" },
+            { "type": "trust", "delta": -2, "reason": "感觉被安排" }
+          ],
+          "spiritPowerChange": 3,
+          "nextNode": "li_act1_d5_003",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "方向不错，但现在还不是时候。他还在'失去'的情绪里，直接塞方案会觉得'你又来安排我'。先听他说完。",
+            "explanation": "心理支持要分阶段：先共情接纳情绪，再探索需求，最后才给建议。跳过前两步直接给方案，老人会觉得被'管理'而非被'理解'。"
+          }
+        }
+      ],
+      "tags": ["choice", "psychology", "retirement"],
+      "devNote": "心理落差教学，回忆疗法伏笔"
+    },
+    {
+      "id": "li_act1_d5_003",
+      "characterId": "li_bobo",
+      "act": 1,
+      "day": 5,
+      "type": "dayEnd",
+      "scene": "study",
+      "illustrationId": "li_old_photos",
+      "dialogues": [
+        {
+          "id": "dlg_027",
+          "speaker": "elder",
+          "speakerName": "李伯伯",
+          "text": "（眼睛亮起来）最骄傲的？那得数98年那个桥梁检测项目，我设计的探头到现在还在用……",
+          "layer": "essential",
+          "emotion": "proud"
+        },
+        {
+          "id": "dlg_028",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "看，他说起专业就来了精神。价值感没丢，只是换了地方。明天帮他找找新位置。",
+          "layer": "emotional",
+          "emotion": "warm",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "li_act1_d6_001",
+      "characterId": "li_bobo",
+      "act": 1,
+      "day": 6,
+      "type": "narrative",
+      "scene": "community_center",
+      "illustrationId": "li_community_board",
+      "dialogues": [
+        {
+          "id": "dlg_029",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "社区公告栏前，李伯伯驻足。上面贴着'社区创客空间招募技术导师''老年智能手机课堂志愿者'的招募海报。他看了几眼，摇摇头走开，却走出三步又回头看了一眼。",
+          "layer": "essential",
+          "duration": 4500,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_030",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "他心动了，又拉不下脸。退休适应的关键，是帮他找到一个'被需要'又不'被施舍'的位置。",
+          "layer": "essential",
+          "emotion": "thoughtful"
+        }
+      ],
+      "nextNode": "li_act1_d6_002",
+      "isCheckpoint": true,
+      "tags": ["retirement", "social", "setup"]
+    },
+    {
+      "id": "li_act1_d6_002",
+      "characterId": "li_bobo",
+      "act": 1,
+      "day": 6,
+      "type": "choice",
+      "scene": "community_center",
+      "illustrationId": "li_volunteer_choice",
+      "dialogues": [
+        {
+          "id": "dlg_031",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "怎么帮李伯伯迈出这一步？",
+          "layer": "essential",
+          "emotion": "curious"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "直接帮他报了名，通知他去上课",
+          "description": "替他做决定，推动行动",
+          "isCorrect": false,
+          "effects": [
+            { "type": "trust", "delta": -8, "reason": "又被安排了" },
+            { "type": "independence", "delta": -5, "reason": "自主权被夺" },
+            { "type": "mood", "delta": -3, "reason": "不情愿" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "li_act1_d6_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "独立值85的李伯伯最恨'被安排'。你越替他做主，他越要拧着来。",
+            "explanation": "对独立值高的老人，任何'代劳决定'都会触发逆反。即使结果对他好，过程也得让他觉得'是我自己选的'。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "请教他帮忙看看你的手机怎么设健康提醒，自然提起他可以教别人",
+          "description": "让他先感受被需要，自己产生兴趣",
+          "isCorrect": true,
+          "effects": [
+            { "type": "mood", "delta": 7, "reason": "被需要的成就感" },
+            { "type": "trust", "delta": 6, "reason": "被尊重专长" },
+            { "type": "independence", "delta": 4, "reason": "主动权在他" }
+          ],
+          "spiritPowerChange": 10,
+          "nextNode": "li_act1_d6_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "妙极了！先让他当你的'老师'，体会到'我的技术还有用'，他自己就会想去当别人的老师。",
+            "explanation": "退休适应的突破口：把老人的'专长'变成'新角色'。李伯伯懂科技又爱钻研，'老年智能手机课堂志愿者'正好对口。让他自己发现这个匹配，比推荐更有效。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "把海报拍给他看，说'您看这个挺适合您'",
+          "description": "温和推荐，让他自己决定",
+          "isCorrect": true,
+          "effects": [
+            { "type": "mood", "delta": 4, "reason": "被认可能力" },
+            { "type": "trust", "delta": 4, "reason": "尊重他的选择" }
+          ],
+          "spiritPowerChange": 7,
+          "nextNode": "li_act1_d6_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "不错，把选择权留给他，又给了正向暗示。温和地'点到为止'，正合李伯伯这种要强老人的胃口。",
+            "explanation": "对要强的老人，'点到为止'比'苦口婆心'管用。给信息和认可，决定权交还给他，维护自尊的同时播下种子。"
+          }
+        }
+      ],
+      "tags": ["choice", "retirement", "social"],
+      "devNote": "退休适应教学"
+    },
+    {
+      "id": "li_act1_d6_003",
+      "characterId": "li_bobo",
+      "act": 1,
+      "day": 6,
+      "type": "dayEnd",
+      "scene": "community_center",
+      "illustrationId": "li_volunteer_signup",
+      "dialogues": [
+        {
+          "id": "dlg_032",
+          "speaker": "elder",
+          "speakerName": "李伯伯",
+          "text": "（拿起手机拍下海报）智能手机课堂……教老头老太太用手机？嘿，这我还真在行。问问去。",
+          "layer": "essential",
+          "emotion": "interested"
+        },
+        {
+          "id": "dlg_033",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "他主动迈出去了。第一幕快收尾啦，明天做个小总结。",
+          "layer": "emotional",
+          "emotion": "proud",
+          "typingSpeed": 40
+        }
+      ],
+      "tags": ["day-end"]
+    },
+    {
+      "id": "li_act1_d7_001",
+      "characterId": "li_bobo",
+      "act": 1,
+      "day": 7,
+      "type": "narrative",
+      "scene": "living_room",
+      "illustrationId": "li_week_review",
+      "dialogues": [
+        {
+          "id": "dlg_034",
+          "speaker": "narrator",
+          "speakerName": "",
+          "text": "一周过去了。茶几上，李伯伯的血糖仪APP、智能手表、社区志愿者报名表摆成一排。他破天荒地主动测了餐后血糖，还发到了家庭群里——虽然只发了一个数字，没说话。",
+          "layer": "essential",
+          "duration": 4500,
+          "typingSpeed": 30
+        },
+        {
+          "id": "dlg_035",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "第一周结束！来回顾一下这一周的照护，看看李伯伯的状态变化吧。",
+          "layer": "essential",
+          "emotion": "proud"
+        }
+      ],
+      "nextNode": "li_act1_d7_002",
+      "isCheckpoint": true,
+      "tags": ["week-review", "act-end"]
+    },
+    {
+      "id": "li_act1_d7_002",
+      "characterId": "li_bobo",
+      "act": 1,
+      "day": 7,
+      "type": "choice",
+      "scene": "living_room",
+      "illustrationId": "li_week_summary",
+      "dialogues": [
+        {
+          "id": "dlg_036",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "这一周李伯伯学会了测血糖、调整运动、改善饮食，还报名了志愿者。周末该做点什么，巩固这一周的进步？",
+          "layer": "essential",
+          "emotion": "curious"
+        }
+      ],
+      "choices": [
+        {
+          "id": "choice_a",
+          "text": "趁热打铁，给他制定详细的下周控糖计划表",
+          "description": "强化管理，巩固成果",
+          "isCorrect": false,
+          "effects": [
+            { "type": "trust", "delta": -5, "reason": "又被管起来了" },
+            { "type": "independence", "delta": -4, "reason": "自主权被规划掉" }
+          ],
+          "spiritPowerChange": 0,
+          "nextNode": "li_act1_d7_003",
+          "feedback": {
+            "type": "incorrect",
+            "spiritDialogue": "刚有点信任，又用'计划表'把他框住，前功尽弃。李伯伯要的是'自己安排'，不是'被安排'。",
+            "explanation": "信任值低、独立值高的老人，最忌'管理感'过强。计划表应由他自己主导，子女只提供信息和工具，不替他规划。"
+          }
+        },
+        {
+          "id": "choice_b",
+          "text": "和他一起回顾这一周的数据，让他自己说说感受",
+          "description": "引导自我觉察，巩固正向改变",
+          "isCorrect": true,
+          "effects": [
+            { "type": "health", "delta": 5, "reason": "自我管理意识增强" },
+            { "type": "mood", "delta": 6, "reason": "看到自己的进步" },
+            { "type": "trust", "delta": 6, "reason": "被尊重、被倾听" }
+          ],
+          "spiritPowerChange": 15,
+          "nextNode": "li_act1_d7_003",
+          "feedback": {
+            "type": "correct",
+            "spiritDialogue": "完美收尾！让他自己看到进步、自己总结，比你说一百句都管用。自我觉察是长期坚持的动力。",
+            "explanation": "行为改变理论：'自我监控'是维持健康行为的关键。让老人自己回顾数据、说出感受，比外部监督更持久。这也尊重了他的独立值。"
+          }
+        },
+        {
+          "id": "choice_c",
+          "text": "夸他这周表现好，奖励他一顿想吃的大餐",
+          "description": "正向激励",
+          "isCorrect": false,
+          "effects": [
+            { "type": "mood", "delta": 3, "reason": "被肯定" },
+            { "type": "health", "delta": -3, "reason": "大餐破坏控糖" }
+          ],
+          "spiritPowerChange": 3,
+          "nextNode": "li_act1_d7_003",
+          "feedback": {
+            "type": "neutral",
+            "spiritDialogue": "心意是好的，可'奖励大餐'恰恰是控糖大忌。糖尿病管理是长期工程，不能用'放纵'当奖励。",
+            "explanation": "健康行为的奖励应是非食物性的：比如一起看场电影、买本他喜欢的书。用'放纵餐'奖励控糖，会建立错误的关联。"
+          }
+        }
+      ],
+      "tags": ["choice", "week-review", "act-end"],
+      "devNote": "第一幕总结，自我监控教学"
+    },
+    {
+      "id": "li_act1_d7_003",
+      "characterId": "li_bobo",
+      "act": 1,
+      "day": 7,
+      "type": "actEnd",
+      "scene": "living_room",
+      "illustrationId": "li_act1_end",
+      "dialogues": [
+        {
+          "id": "dlg_037",
+          "speaker": "elder",
+          "speakerName": "李伯伯",
+          "text": "（看着一周的血糖曲线）嗯……比上周稳点儿。下周我还想去那个智能手机课堂看看。",
+          "layer": "essential",
+          "emotion": "calm"
+        },
+        {
+          "id": "dlg_038",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "第一幕圆满结束。李伯伯开始正视血糖、也找到了退休后的新角色。下一幕，我们要面对更深的东西——他的孤独，和他不愿承认的'变老'。",
+          "layer": "essential",
+          "emotion": "anticipating"
+        },
+        {
+          "id": "dlg_039",
+          "speaker": "spirit",
+          "speakerName": "小精灵",
+          "text": "（精灵光芒柔和地亮着）连续七天守护，魔力已积累不少。带上它，我们一起走进第二幕。",
+          "layer": "emotional",
+          "emotion": "warm",
+          "typingSpeed": 40
+        }
+      ],
+      "transition": {
+        "exit": "fade-out",
+        "illustrationTransition": "watercolor",
+        "duration": 1000
+      },
+      "tags": ["act-end"],
+      "devNote": "第一幕结束，过渡到第二幕"
+    }
+  ]
+}

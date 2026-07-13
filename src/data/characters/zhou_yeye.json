@@ -1,0 +1,111 @@
+{
+  "id": "zhou_yeye",
+  "name": "周国栋",
+  "nickname": "周爷爷",
+  "age": 75,
+  "gender": "male",
+  "avatar": "/images/characters/zhou_yeye.jpg",
+  "portrait": "/images/characters/zhou_yeye.jpg",
+  "watercolorBase": "/images/characters/zhou_yeye.jpg",
+  "background": "退休机械工程师，在国营机械厂干了四十年，从技术员一路做到总工，一辈子和图纸、零件打交道。半年前突发脑梗，抢救及时保住了命，但左侧肢体留下了后遗症——左臂抬不高、左腿拖步，走路需要辅具支持。老伴走得早，现在和女儿同住。女儿给他装了语音灯控、紧急呼叫按钮和智能药盒，他没拒绝，但也不主动学——'你们觉得有用就装吧'。数字生活度40%，被动接受型：不排斥科技，但从不主动探索，用得来的功能都是子女手把手教过三遍以上的。他接受现实，但不甘心——每天坚持做康复训练，嘴上不说难，手上却磨出了茧。他最怕的不是走不动，是'变成废人'。",
+  "personality": [
+    "接受现实但不甘心",
+    "技术骨干出身",
+    "理性配合",
+    "要强不认输",
+    "被动接受科技",
+    "怕成拖累"
+  ],
+  "familyRelation": "老伴去世多年，与女儿同住。女儿是主要照护者，儿子在外地工作。女儿为他安装了智能家居设备并安排康复计划，他配合但不主动提要求。",
+  "healthCondition": {
+    "disease": "脑梗死后遗症（左侧偏瘫，左侧肢体活动受限）",
+    "severity": "mild",
+    "medications": [
+      "阿司匹林肠溶片（抗血小板，脑梗二级预防）",
+      "阿托伐他汀钙片（降脂稳定斑块）",
+      "缬沙坦胶囊（降压）",
+      "丁苯酞软胶囊（改善脑缺血区循环）"
+    ],
+    "precautions": [
+      "规律服药，不可自行停用抗血小板及降脂药物",
+      "控制血压血糖血脂三项达标",
+      "康复训练循序渐进，避免过度疲劳",
+      "预防跌倒，左侧肢体需辅具支持",
+      "监测出血倾向（牙龈出血、皮下瘀斑、黑便）",
+      "低盐低脂饮食，戒烟限酒",
+      "警惕TIA一过性脑缺血发作（二次脑梗预警）",
+      "定期复查凝血功能及颈动脉超声"
+    ],
+    "dailyDecay": 3
+  },
+  "baseAttributes": {
+    "health": 35,
+    "mood": 55,
+    "independence": 35,
+    "trust": 60
+  },
+  "tensionRules": [
+    {
+      "source": "independence",
+      "threshold": 25,
+      "operator": "<",
+      "target": "mood",
+      "perTurnDelta": -3,
+      "description": "独立值过低时，周爷爷感到自己成了废人，心情值加速下降"
+    },
+    {
+      "source": "health",
+      "threshold": 30,
+      "operator": "<",
+      "target": "independence",
+      "perTurnDelta": -3,
+      "description": "健康值过低时，容易过度保护导致独立值进一步下降"
+    },
+    {
+      "source": "mood",
+      "threshold": 30,
+      "operator": "<",
+      "target": "trust",
+      "perTurnDelta": -2,
+      "description": "心情持续低落时，周爷爷封闭自己，不愿配合康复，信任值下降"
+    }
+  ],
+  "storyActs": [
+    {
+      "act": 1,
+      "startDay": 1,
+      "endDay": 7,
+      "storyFile": "/data/stories/zhou_yeye/act1.json",
+      "title": "第一幕：苏醒与重建",
+      "theme": "建立照护节奏，学习辅具与康复基础"
+    },
+    {
+      "act": 2,
+      "startDay": 8,
+      "endDay": 21,
+      "storyFile": "/data/stories/zhou_yeye/act2.json",
+      "title": "第二幕：改造与突围",
+      "theme": "适老化改造、长护险与心理突破"
+    },
+    {
+      "act": 3,
+      "startDay": 22,
+      "endDay": 30,
+      "storyFile": "/data/stories/zhou_yeye/act3.json",
+      "title": "第三幕：守护与回望",
+      "theme": "应急处理、康复评估与最终的接纳"
+    }
+  ],
+  "isLocked": false,
+  "spiritAppearance": {
+    "color": "#E8A87C",
+    "lottieAnimation": "spirit_appear_warm",
+    "name": "小筑"
+  },
+  "endingWeights": {
+    "health": 0.2,
+    "mood": 0.3,
+    "independence": 0.2,
+    "trust": 0.3
+  }
+}

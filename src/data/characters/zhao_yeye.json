@@ -1,0 +1,108 @@
+{
+  "id": "zhao_yeye",
+  "name": "赵德明",
+  "nickname": "赵爷爷",
+  "age": 71,
+  "gender": "male",
+  "avatar": "/images/characters/zhao_yeye.jpg",
+  "portrait": "/images/characters/zhao_yeye.jpg",
+  "watercolorBase": "/images/characters/zhao_yeye.jpg",
+  "background": "退休工人，在机床厂干了一辈子，从学徒干到车间主任，退休后闲不住。嘴硬心软，白天逞强不拄拐杖，夜里偷偷吃止痛药压着关节疼。有智能手机但主动拒绝使用，坚持看报纸听收音机——在他看来，用手机等于承认自己老了、跟不上时代了。和子女说话总是冲，但转头偷偷问老伴孩子最近累不累。前列腺问题好几年了，夜里起夜越来越多，但从不提，觉得'小毛病不值当去医院'。数字生活度仅15%，抗拒科技本质是抗拒被当成老人。",
+  "personality": [
+    "嘴硬心软",
+    "倔强不服老",
+    "逞强要面子",
+    "重感情不表达",
+    "抗拒科技",
+    "心疼子女但嘴上不说"
+  ],
+  "familyRelation": "和老伴同住，一子一女均在外地工作。嘴上和子女说话冲，但偷偷关心他们累不累。",
+  "healthCondition": {
+    "disease": "前列腺增生 + 膝关节退行性病变（慢性疼痛）",
+    "severity": "moderate",
+    "medications": [
+      "非那雄胺片（前列腺）",
+      "坦索罗辛缓释胶囊（前列腺）",
+      "布洛芬缓释胶囊（自行购买止痛，已过期仍在服用）"
+    ],
+    "precautions": [
+      "避免久坐憋尿",
+      "限制晚间饮水量",
+      "定期复查PSA指标",
+      "不宜长期自行服用止痛药",
+      "膝关节疼痛需规范治疗而非硬扛",
+      "注意跌倒风险（逞强不拄拐）"
+    ],
+    "dailyDecay": 3
+  },
+  "baseAttributes": {
+    "health": 55,
+    "mood": 50,
+    "independence": 80,
+    "trust": 25
+  },
+  "tensionRules": [
+    {
+      "source": "independence",
+      "threshold": 75,
+      "operator": ">",
+      "target": "health",
+      "perTurnDelta": -2,
+      "description": "独立值过高时（逞强不求助），健康值加速恶化"
+    },
+    {
+      "source": "trust",
+      "threshold": 30,
+      "operator": "<",
+      "target": "mood",
+      "perTurnDelta": -2,
+      "description": "信任值过低时，赵爷爷心情低落、更加抗拒沟通"
+    },
+    {
+      "source": "health",
+      "threshold": 35,
+      "operator": "<",
+      "target": "independence",
+      "perTurnDelta": -3,
+      "description": "健康值过低时，逞强导致跌倒风险增加，独立值被迫下降"
+    }
+  ],
+  "storyActs": [
+    {
+      "act": 1,
+      "startDay": 1,
+      "endDay": 7,
+      "storyFile": "/data/stories/zhao_yeye/act1.json",
+      "title": "第一幕：精灵苏醒",
+      "theme": "在排斥中建立初步信任"
+    },
+    {
+      "act": 2,
+      "startDay": 8,
+      "endDay": 21,
+      "storyFile": "/data/stories/zhao_yeye/act2.json",
+      "title": "第二幕：倔强之下",
+      "theme": "深层沟通与信任突破"
+    },
+    {
+      "act": 3,
+      "startDay": 22,
+      "endDay": 30,
+      "storyFile": "/data/stories/zhao_yeye/act3.json",
+      "title": "第三幕：守护与接纳",
+      "theme": "应急处理与最终的接纳"
+    }
+  ],
+  "isLocked": false,
+  "spiritAppearance": {
+    "color": "#FF8A65",
+    "lottieAnimation": "spirit_appear_warm",
+    "name": "小守"
+  },
+  "endingWeights": {
+    "health": 0.2,
+    "mood": 0.2,
+    "independence": 0.3,
+    "trust": 0.3
+  }
+}

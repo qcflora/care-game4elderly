@@ -1,0 +1,120 @@
+/**
+ * 全局CSS变量定义
+ * 色彩系统、字体、间距、动画等设计规范
+ */
+
+:root {
+  /* === 色彩系统 === */
+
+  /* 主色调 */
+  --color-bg-primary: #FAF6F0;           /* 主背景 - 暖白 */
+  --color-bg-secondary: #F3EDE4;         /* 次背景 */
+  --color-bg-card: #FFFFFF;               /* 卡片背景 */
+  --color-bg-overlay: rgba(62, 39, 35, 0.5); /* 遮罩背景 */
+
+  /* 精灵魔力色 */
+  --color-spirit-power: #F5C842;          /* 精灵魔力 - 金色 */
+  --color-spirit-power-light: #FFF3CD;    /* 魔力浅色 */
+  --color-spirit-power-dark: #D4A017;     /* 魔力深色 */
+  --color-spirit-glow: rgba(245, 200, 66, 0.4); /* 魔力光晕 */
+
+  /* 四维属性色 */
+  --color-health: #81C784;                /* 健康值 - 绿色 */
+  --color-health-light: #C8E6C9;          /* 健康浅色 */
+  --color-health-dark: #4CAF50;           /* 健康深色 */
+  --color-mood: #FFB74D;                  /* 心情值 - 橙色 */
+  --color-mood-light: #FFE0B2;            /* 心情浅色 */
+  --color-mood-dark: #FF9800;             /* 心情深色 */
+  --color-independence: #4FC3F7;          /* 独立值 - 蓝色 */
+  --color-independence-light: #B3E5FC;    /* 独立浅色 */
+  --color-independence-dark: #039BE5;     /* 独立深色 */
+  --color-trust: #CE93D8;                 /* 信任值 - 紫色 */
+  --color-trust-light: #E1BEE7;           /* 信任浅色 */
+  --color-trust-dark: #AB47BC;            /* 信任深色 */
+
+  /* 状态色 */
+  --color-warning: #EF5350;               /* 警告/紧急 - 红色 */
+  --color-warning-light: #FFCDD2;         /* 警告浅色 */
+  --color-success: #66BB6A;               /* 成功 */
+  --color-info: #42A5F5;                  /* 提示 */
+
+  /* 文字色 */
+  --color-text-primary: #3E2723;          /* 文字主色 - 深棕 */
+  --color-text-secondary: #8D6E63;        /* 文字辅色 - 棕色 */
+  --color-text-tertiary: #BCAAA4;         /* 文字三色 - 浅棕 */
+  --color-text-inverse: #FFFFFF;          /* 反色文字 */
+  --color-text-spirit: #F5C842;          /* 精灵台词色 */
+
+  /* 边框与分隔 */
+  --color-border: rgba(62, 39, 35, 0.12);   /* 边框色 */
+  --color-border-light: rgba(62, 39, 35, 0.06); /* 浅边框 */
+  --color-divider: rgba(62, 39, 35, 0.08);    /* 分隔线 */
+
+  /* === 字体系统 === */
+  --font-family-primary: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-family-title: 'Ma Shan Zheng', cursive, 'Noto Sans SC', sans-serif;
+  --font-family-spirit: 'Ma Shan Zheng', cursive, sans-serif;
+
+  --font-size-xs: 0.625rem;   /* 10px */
+  --font-size-sm: 0.75rem;    /* 12px */
+  --font-size-base: 0.875rem; /* 14px */
+  --font-size-md: 1rem;       /* 16px */
+  --font-size-lg: 1.125rem;   /* 18px */
+  --font-size-xl: 1.25rem;    /* 20px */
+  --font-size-2xl: 1.5rem;    /* 24px */
+  --font-size-3xl: 2rem;      /* 32px */
+
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+  --line-height-tight: 1.25;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+
+  /* === 间距系统 === */
+  --spacing-xs: 0.25rem;   /* 4px */
+  --spacing-sm: 0.5rem;    /* 8px */
+  --spacing-md: 0.75rem;   /* 12px */
+  --spacing-base: 1rem;    /* 16px */
+  --spacing-lg: 1.5rem;    /* 24px */
+  --spacing-xl: 2rem;      /* 32px */
+  --spacing-2xl: 3rem;     /* 48px */
+  --spacing-3xl: 4rem;     /* 64px */
+
+  /* === 圆角 === */
+  --radius-sm: 0.375rem;   /* 6px */
+  --radius-md: 0.5rem;     /* 8px */
+  --radius-lg: 0.75rem;    /* 12px */
+  --radius-xl: 1rem;       /* 16px */
+  --radius-2xl: 1.5rem;    /* 24px */
+  --radius-full: 9999px;
+
+  /* === 阴影 === */
+  --shadow-sm: 0 1px 2px rgba(62, 39, 35, 0.05);
+  --shadow-md: 0 4px 6px rgba(62, 39, 35, 0.07);
+  --shadow-lg: 0 10px 15px rgba(62, 39, 35, 0.1);
+  --shadow-xl: 0 20px 25px rgba(62, 39, 35, 0.15);
+  --shadow-spirit: 0 0 20px rgba(245, 200, 66, 0.3); /* 精灵光效 */
+
+  /* === 动画 === */
+  --transition-fast: 150ms ease;
+  --transition-normal: 300ms ease;
+  --transition-slow: 500ms ease;
+
+  /* === 布局 === */
+  --game-max-width: 430px;           /* 游戏最大宽度（H5竖屏） */
+  --status-bar-height: 56px;        /* 状态栏高度 */
+  --dialogue-area-height: 200px;    /* 对话区高度 */
+  --choice-panel-height: 180px;     /* 选项区高度 */
+  --safe-area-top: env(safe-area-inset-top, 0px);
+  --safe-area-bottom: env(safe-area-inset-bottom, 0px);
+
+  /* === 层级 === */
+  --z-base: 1;
+  --z-status-bar: 10;
+  --z-dialogue: 20;
+  --z-choice: 30;
+  --z-modal: 40;
+  --z-toast: 50;
+  --z-overlay: 60;
+}

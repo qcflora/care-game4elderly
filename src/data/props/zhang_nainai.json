@@ -1,0 +1,101 @@
+[
+  {
+    "id": "bedroom_nightlight",
+    "name": "卧室小夜灯",
+    "description": "一个造型简约的白色小夜灯，插在卧室走廊的插座上。光线柔和暖黄，感光自动亮起。张奶奶晚上起夜时，小夜灯会照亮从卧室到卫生间的路，防止她在黑暗中绊倒。",
+    "icon": "/images/props/bedroom_nightlight.svg",
+    "image": "/images/props/bedroom_nightlight_large.svg",
+    "layer": "display",
+    "isCollectible": true,
+    "characterId": "zhang_nainai",
+    "category": "tool"
+  },
+  {
+    "id": "blood_pressure_monitor",
+    "name": "电子血压计",
+    "description": "一台家用上臂式电子血压计，白色机身，大屏幕数字显示。张奶奶每天早上起床后和晚饭前各测一次血压。袖带上有使用说明标签，方便她独立操作。",
+    "icon": "/images/props/blood_pressure_monitor.svg",
+    "image": "/images/props/blood_pressure_monitor_large.svg",
+    "layer": "operate",
+    "isCollectible": true,
+    "characterId": "zhang_nainai",
+    "category": "medicine"
+  },
+  {
+    "id": "weekly_pill_box",
+    "name": "一周药盒",
+    "description": "一个透明塑料的七天药盒，每个格子标有“周一“到“周日“和“早““晚“标签。每个格子还贴了太阳和月亮的小图标，帮助张奶奶区分早晚用药。盖子需要按压才能打开，防止误开。",
+    "icon": "/images/props/weekly_pill_box.svg",
+    "image": "/images/props/weekly_pill_box_large.svg",
+    "layer": "display",
+    "isCollectible": true,
+    "characterId": "zhang_nainai",
+    "category": "medicine"
+  },
+  {
+    "id": "medicine_labels",
+    "name": "药品标签贴纸",
+    "description": "一套大号字体的药品标签贴纸，上面写着药品名称、用法用量和有效期。标签颜色分类：红色是急救药，蓝色是降压药，绿色是护心药。贴在药瓶上，一目了然。",
+    "icon": "/images/props/medicine_labels.svg",
+    "image": "/images/props/medicine_labels_large.svg",
+    "layer": "display",
+    "isCollectible": true,
+    "characterId": "zhang_nainai",
+    "category": "tool"
+  },
+  {
+    "id": "anti_slip_mat",
+    "name": "卫生间防滑垫",
+    "description": "一张浅蓝色的防滑垫，铺在卫生间淋浴区和马桶前的地面上。表面有密集的防滑纹理，背面是吸盘设计，牢牢吸附在地砖上。垫子边缘有斜角处理，不会绊脚。",
+    "icon": "/images/props/anti_slip_mat.svg",
+    "image": "/images/props/anti_slip_mat_large.svg",
+    "layer": "display",
+    "isCollectible": false,
+    "characterId": "zhang_nainai",
+    "category": "tool"
+  },
+  {
+    "id": "zhang_first_aid_kit",
+    "name": "家庭急救箱",
+    "description": "一个红色的塑料急救箱，里面装着碘伏、无菌纱布、创可贴、弹性绷带和一次性手套。箱盖上贴着急救电话和社区医生联系方式。张奶奶以前是护士，急救箱里的物品摆放得井井有条。",
+    "icon": "/images/props/zhang_first_aid_kit.svg",
+    "image": "/images/props/zhang_first_aid_kit_large.svg",
+    "layer": "inspect",
+    "isCollectible": true,
+    "characterId": "zhang_nainai",
+    "category": "medicine"
+  },
+  {
+    "id": "zhang_cognitive_cards",
+    "name": "认知训练卡片",
+    "description": "一套动物认知卡片，每张正面是彩色动物图片，背面是动物名称和简单介绍。卡片边缘已经有些卷曲了，因为每天都要拿出来用。张奶奶最喜欢猫和狗的卡片，每次看到都会笑。",
+    "icon": "/images/props/zhang_cognitive_cards.svg",
+    "image": "/images/props/zhang_cognitive_cards_large.svg",
+    "layer": "display",
+    "isCollectible": true,
+    "characterId": "zhang_nainai",
+    "category": "tool"
+  },
+  {
+    "id": "zhang_old_uniform",
+    "name": "旧护士服",
+    "description": "一件叠得整整齐齐的白色护士服，挂在衣柜里，用透明塑料袋罩着。领口绣着“张素芬“三个字，衣襟上别着一枚已经褪色的护士徽章。张奶奶偶尔会把它拿出来看一看，然后重新叠好放回去。",
+    "icon": "/images/props/zhang_old_uniform.svg",
+    "image": "/images/props/zhang_old_uniform_large.svg",
+    "layer": "display",
+    "isCollectible": true,
+    "characterId": "zhang_nainai",
+    "category": "memory"
+  },
+  {
+    "id": "zhang_shower_stool",
+    "name": "洗澡浴凳",
+    "description": "一张白色的塑料浴凳，高度可调，凳面有防滑纹路，四角有防滑脚垫。放在淋浴区，张奶奶可以坐着洗澡，避免站立过久滑倒的风险。凳腿上用记号笔写着“张奶奶“三个字。",
+    "icon": "/images/props/zhang_shower_stool.svg",
+    "image": "/images/props/zhang_shower_stool_large.svg",
+    "layer": "display",
+    "isCollectible": false,
+    "characterId": "zhang_nainai",
+    "category": "tool"
+  }
+]

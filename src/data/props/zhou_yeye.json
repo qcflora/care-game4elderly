@@ -1,0 +1,101 @@
+[
+  {
+    "id": "zhou_voice_light_control",
+    "name": "语音控制智能灯",
+    "description": "一套智能语音灯泡系统，通过语音指令控制开关和亮度调节。周爷爷只需要说“开灯”或“关灯”，灯就会自动响应。灯泡色温可调，从暖黄到冷白，适应不同场景。",
+    "icon": "/images/props/zhou_voice_light_control.svg",
+    "image": "/images/props/zhou_voice_light_control_large.svg",
+    "layer": "operate",
+    "isCollectible": true,
+    "characterId": "zhou_yeye",
+    "category": "tool"
+  },
+  {
+    "id": "zhou_mobility_aid_comparison",
+    "name": "助行器对比表",
+    "description": "一张手写的助行器对比分析表，上面画着四脚拐杖、助行架、轮式助行器的简图，旁边标注了各自的优缺点、适用场景和价格。表格右下角有一个红笔打的勾，选定了四脚拐杖。",
+    "icon": "/images/props/zhou_mobility_aid_comparison.svg",
+    "image": "/images/props/zhou_mobility_aid_comparison_large.svg",
+    "layer": "inspect",
+    "isCollectible": true,
+    "characterId": "zhou_yeye",
+    "category": "document"
+  },
+  {
+    "id": "zhou_smart_pill_box",
+    "name": "智能药盒",
+    "description": "一个七格智能药盒，每个格子对应一周的某一天。到设定时间会发出“滴滴”提示音并闪烁蓝色指示灯。通过手机app可以远程查看药盒状态，确认用药情况。",
+    "icon": "/images/props/zhou_smart_pill_box.svg",
+    "image": "/images/props/zhou_smart_pill_box_large.svg",
+    "layer": "operate",
+    "isCollectible": true,
+    "characterId": "zhou_yeye",
+    "category": "medicine"
+  },
+  {
+    "id": "zhou_emergency_button",
+    "name": "紧急呼叫按钮",
+    "description": "两个无线紧急呼叫按钮，分别安装在卧室床头和卫生间马桶旁。圆形白色按钮，中间有一个红色“SOS”标识。按下后会自动拨打紧急联系人电话并发送定位信息，防水设计。",
+    "icon": "/images/props/zhou_emergency_button.svg",
+    "image": "/images/props/zhou_emergency_button_large.svg",
+    "layer": "operate",
+    "isCollectible": false,
+    "characterId": "zhou_yeye",
+    "category": "tool"
+  },
+  {
+    "id": "zhou_emergency_card",
+    "name": "紧急联系卡",
+    "description": "一张塑封的白色卡片，名片大小，正面写着周爷爷的姓名、住址、主要疾病（帕金森病）、药物过敏史、血型和紧急联系人电话。背面写着“如遇紧急情况，请帮助联系以上号码，谢谢”。",
+    "icon": "/images/props/zhou_emergency_card.svg",
+    "image": "/images/props/zhou_emergency_card_large.svg",
+    "layer": "inspect",
+    "isCollectible": true,
+    "characterId": "zhou_yeye",
+    "category": "document"
+  },
+  {
+    "id": "zhou_home_floor_plan",
+    "name": "居家安全动线图",
+    "description": "一张由周爷爷亲手绘制的居家平面图，比例精准，标注了每个房间的尺寸。图上用不同颜色的笔标记了：红色是紧急按钮位置，蓝色是防滑垫位置，绿色是推荐行走动线。",
+    "icon": "/images/props/zhou_home_floor_plan.svg",
+    "image": "/images/props/zhou_home_floor_plan_large.svg",
+    "layer": "inspect",
+    "isCollectible": true,
+    "characterId": "zhou_yeye",
+    "category": "document"
+  },
+  {
+    "id": "zhou_ltc_brochure",
+    "name": "长护险政策手册",
+    "description": "一本关于长期护理保险的政策宣传手册，封面印着“长护险 守护您的生活”。周爷爷在关键条款上画了横线，折页处夹着一张便签，上面写着申请材料清单。",
+    "icon": "/images/props/zhou_ltc_brochure.svg",
+    "image": "/images/props/zhou_ltc_brochure_large.svg",
+    "layer": "inspect",
+    "isCollectible": true,
+    "characterId": "zhou_yeye",
+    "category": "document"
+  },
+  {
+    "id": "zhou_walking_cane",
+    "name": "四脚拐杖",
+    "description": "一根银色铝合金四脚拐杖，高度可调，底部有四个防滑脚垫。手柄是符合人体工学的弯曲设计，握持舒适。拐杖上贴着一个标签，写着“高度调至第3档，适合1.75m”。",
+    "icon": "/images/props/zhou_walking_cane.svg",
+    "image": "/images/props/zhou_walking_cane_large.svg",
+    "layer": "display",
+    "isCollectible": true,
+    "characterId": "zhou_yeye",
+    "category": "tool"
+  },
+  {
+    "id": "zhou_measuring_tools",
+    "name": "测量工具盒",
+    "description": "一个旧铁盒，里面装着卷尺、游标卡尺、直角尺和一支工程铅笔。这些是周爷爷退休前常用的工具，虽然现在手抖得用不了，但他仍然把它们擦得干干净净，放在书桌抽屉里。",
+    "icon": "/images/props/zhou_measuring_tools.svg",
+    "image": "/images/props/zhou_measuring_tools_large.svg",
+    "layer": "display",
+    "isCollectible": true,
+    "characterId": "zhou_yeye",
+    "category": "memory"
+  }
+]

@@ -1,0 +1,210 @@
+[
+  {
+    "id": "album_chen_teacher",
+    "characterId": "chen_nainai",
+    "title": "讲台上的岁月",
+    "image": "/images/placeholder/album.svg",
+    "caption": "陈奶奶年轻时在讲台上授课，端庄优雅，气质非凡",
+    "memory": "陈奶奶退休前是一名小学语文教师，教了三十五年书。这张照片是她四十岁那年被评为省级优秀教师时拍的，她穿着整洁的衬衫，站在讲台上，手里拿着一本语文书，目光温柔而坚定。她教过的学生成千上万，很多人都还记得她——那个总是笑眯眯的、声音很好听的陈老师。退休后，她家里还保留着当年的教案和学生的作文本，时不时翻出来看看。她说：“当老师是我这辈子最骄傲的事情。”",
+    "unlockDay": 1,
+    "unlockCondition": "day >= 1",
+    "isUnlocked": false,
+    "scene": "教室",
+    "characters": [
+      "chen_nainai"
+    ],
+    "relatedDiaryId": "diary_chen_day1"
+  },
+  {
+    "id": "album_chen_forget",
+    "characterId": "chen_nainai",
+    "title": "第一次遗忘",
+    "image": "/images/placeholder/album.svg",
+    "caption": "陈奶奶忘记了自己刚做过的事，站在厨房里发愣",
+    "memory": "那天陈奶奶准备做午饭，打开冰箱却愣在那里——她忘记了自己要拿什么。她站在冰箱前想了很久，最后还是关上冰箱门，走到客厅坐下。这样的事情已经不是第一次发生了——上周她忘记了自己的生日，上个月她出门买菜却找不到回家的路。她把这些事藏在心里，没有告诉在外地工作的女儿。她怕女儿担心，更怕自己真的得了什么“不好的病”。但那天在厨房里发愣的那一幕，被照护者看到了，也成为她正视疾病的开始。",
+    "unlockDay": 2,
+    "unlockCondition": "day >= 2",
+    "isUnlocked": false,
+    "scene": "家中厨房",
+    "characters": [
+      "chen_nainai"
+    ],
+    "relatedDiaryId": "diary_chen_day2"
+  },
+  {
+    "id": "album_chen_diagnosis",
+    "characterId": "chen_nainai",
+    "title": "诊断结果",
+    "image": "/images/placeholder/album.svg",
+    "caption": "医生耐心解释阿尔茨海默症的诊断结果",
+    "memory": "经过一系列检查，医生给出了诊断——阿尔茨海默症早期。陈奶奶坐在诊室里，沉默了很久，然后轻轻问了一句：“会越来越严重吗？”医生点了点头，但又补充道：“早期发现是好事，通过药物和非药物治疗，可以延缓病情进展，保持很长时间的生活质量。”陈奶奶深吸一口气，握紧了手中的检查报告。她是一个教师，一辈子教学生勇敢面对困难，现在轮到她自己了。她抬起头，对医生说：“好，那就治吧。我配合你们。”",
+    "unlockDay": 4,
+    "unlockCondition": "day >= 4",
+    "isUnlocked": false,
+    "scene": "医院诊室",
+    "characters": [
+      "chen_nainai"
+    ],
+    "relatedDiaryId": "diary_chen_day4"
+  },
+  {
+    "id": "album_chen_old_photo",
+    "characterId": "chen_nainai",
+    "title": "老相册",
+    "image": "/images/placeholder/album.svg",
+    "caption": "和照护者一起翻看老相册，回忆那些美好的往事",
+    "memory": "陈奶奶有一本厚厚的相册，里面装着她从年轻到现在的照片。她坐在沙发上，一页页翻看，每张照片都能讲出一个故事。她指着大学毕业照说：“那时候我才二十二岁，分配到了小学教书，紧张得第一堂课话都说不利索。”翻到和丈夫的结婚照时，她停顿了一下：“他走了十年了，我现在有时候会忘记他的样子，还好有照片。”翻到女儿小时候的照片，她笑了：“这孩子从小就调皮，跟她爸一个样。",
+    "unlockDay": 6,
+    "unlockCondition": "day >= 6",
+    "isUnlocked": false,
+    "scene": "家中客厅",
+    "characters": [
+      "chen_nainai"
+    ],
+    "relatedDiaryId": "diary_chen_day6"
+  },
+  {
+    "id": "album_chen_act1_complete",
+    "characterId": "chen_nainai",
+    "title": "第一章：面对遗忘",
+    "image": "/images/placeholder/album.svg",
+    "caption": "完成第一章，陈奶奶开始正视疾病并积极应对",
+    "memory": "经过一周的适应和调整，陈奶奶从最初的震惊和抗拒，开始慢慢接受现实。她是一个理性的教师，明白逃避解决不了问题。她开始配合治疗，按时服药，还主动学习阿尔茨海默症的日常管理方法。她把家里的重要物品都贴上了标签，把每天要做的事情写在便签上贴在显眼的地方。她跟照护者说：“我教了一辈子书，最知道怎么跟'困难'打交道。这个病是个新困难，但也不过是又一个需要解决的问题罢了。",
+    "unlockDay": 6,
+    "unlockCondition": "flag.chen_act1_complete == true",
+    "isUnlocked": false,
+    "scene": "家中",
+    "characters": [
+      "chen_nainai"
+    ],
+    "relatedDiaryId": "diary_chen_act1"
+  },
+  {
+    "id": "album_chen_calendar",
+    "characterId": "chen_nainai",
+    "title": "日历标记",
+    "image": "/images/placeholder/album.svg",
+    "caption": "学会用日历记录每天的重要事项，把每一天都安排得明明白白",
+    "memory": "陈奶奶买了一个大号日历，挂在客厅最显眼的位置。每天早上的第一件事，就是在日历上标记当天的日期和要做的事情。她用了不同颜色的笔——红色代表吃药，蓝色代表有客人来，绿色代表出门活动。她还在日历上写了一些提醒的话，比如“今天星期三，记得吃鱼”、“下午三点女儿打电话”。她把这个方法叫做“我的生活管理表”，跟以前在教室里贴课程表如出一辙。这个方法很有效，她忘记事情的频率明显减少了。",
+    "unlockDay": 8,
+    "unlockCondition": "day >= 8",
+    "isUnlocked": false,
+    "scene": "家中客厅",
+    "characters": [
+      "chen_nainai"
+    ],
+    "relatedDiaryId": "diary_chen_day8"
+  },
+  {
+    "id": "album_chen_daughter_call",
+    "characterId": "chen_nainai",
+    "title": "女儿的电话",
+    "image": "/images/placeholder/album.svg",
+    "caption": "每天和在外地工作的女儿视频通话，是陈奶奶最期待的事",
+    "memory": "陈奶奶的女儿在外地工作，知道母亲确诊后，每天都会定时打视频电话回来。母女俩的聊天内容很简单——今天吃了什么、天气怎么样、有没有按时吃药。但就是这些日常的对话，成了陈奶奶一天中最安心的时刻。她会在电话里跟女儿分享自己新学的“记忆训练方法”，或者朗诵一首刚背下来的诗。有时候她会突然忘记跟女儿说了什么，但她会笑着说：“人老了，记性不好了，你别嫌妈啰嗦。",
+    "unlockDay": 12,
+    "unlockCondition": "day >= 12",
+    "isUnlocked": false,
+    "scene": "家中客厅",
+    "characters": [
+      "chen_nainai"
+    ],
+    "relatedDiaryId": "diary_chen_day12"
+  },
+  {
+    "id": "album_chen_walk",
+    "characterId": "chen_nainai",
+    "title": "熟悉的路",
+    "image": "/images/placeholder/album.svg",
+    "caption": "在家门口熟悉的小路上散步，每一步都走得踏实而安心",
+    "memory": "陈奶奶每天下午都会在家门口的小路上散步，从家门口走到巷口的小卖部再走回来，大约五百米的路程。这条路她走了三十年，闭着眼睛都能走。她熟悉每一棵树的形状、每一户人家的门牌号、每一个拐角处有没有台阶。走在这条路上，她从来不会迷路，这是她在这个快速变化的世界里为数不多的“确定感”之一。有时候她会遇到老邻居，停下来聊几句，说说家长里短。这些看似平常的日常，对一个阿尔茨海默症患者来说，是最好的“记忆锚点”。",
+    "unlockDay": 16,
+    "unlockCondition": "day >= 16",
+    "isUnlocked": false,
+    "scene": "家门前的小路",
+    "characters": [
+      "chen_nainai"
+    ],
+    "relatedDiaryId": "diary_chen_day16"
+  },
+  {
+    "id": "album_chen_memory_game",
+    "characterId": "chen_nainai",
+    "title": "记忆训练",
+    "image": "/images/placeholder/album.svg",
+    "caption": "和照护者一起做记忆训练游戏，表情专注而认真",
+    "memory": "照护者每天都会和陈奶奶做一些记忆训练游戏，比如图片配对、词语接龙、数字记忆等。陈奶奶最喜欢的是“故事接龙”——一个人说一句话，另一个人接着往下编故事。她编的故事总是很温暖，主人公常常是一个叫“小华”的学生，故事里充满了她在课堂上的点点滴滴。有一次她编了一个关于“小华帮助同学”的故事，讲完后突然说：“这个故事是真的，那个小华是真实存在的，他是我三十年前教过的学生，后来当了医生。",
+    "unlockDay": 20,
+    "unlockCondition": "day >= 20",
+    "isUnlocked": false,
+    "scene": "家中客厅",
+    "characters": [
+      "chen_nainai"
+    ],
+    "relatedDiaryId": "diary_chen_day20"
+  },
+  {
+    "id": "album_chen_act2_complete",
+    "characterId": "chen_nainai",
+    "title": "第二章：记忆之光",
+    "image": "/images/placeholder/album.svg",
+    "caption": "完成第二章，陈奶奶在记忆训练中找到了新的生活节奏",
+    "memory": "经过二十天的努力，陈奶奶找到了一套适合自己的生活节奏。她每天按部就班地生活——早上看日历标记日期，上午做记忆训练，下午散步，晚上和女儿视频。她依然会忘记一些事情，但她不再为此焦虑，而是学会了用各种“辅助工具”来帮助自己。她甚至开始写“记忆日记”，把自己每天记得的事情记下来，哪怕只是“今天早餐吃了豆浆油条”这样的小事，她也认真地写下来。",
+    "unlockDay": 20,
+    "unlockCondition": "flag.chen_act2_complete == true",
+    "isUnlocked": false,
+    "scene": "家中",
+    "characters": [
+      "chen_nainai"
+    ],
+    "relatedDiaryId": "diary_chen_act2"
+  },
+  {
+    "id": "album_chen_recite",
+    "characterId": "chen_nainai",
+    "title": "诗词背诵",
+    "image": "/images/placeholder/album.svg",
+    "caption": "背诵年轻时教过的诗词，字字清晰，仿佛回到了课堂",
+    "memory": "陈奶奶最自豪的事情是，她教过的那些古诗词，她到现在大部分都还记得。她坐在沙发上，闭上眼睛，开始背诵李白的《静夜思》：“床前明月光，疑是地上霜。举头望明月，低头思故乡。”一字一句，清晰流畅，完全不像一个阿尔茨海默症患者。她又背了杜甫的《春夜喜雨》和王维的《相思》，每背完一首，她就睁开眼睛，笑着说：“这些东西，刻在脑子里了，忘不掉。",
+    "unlockDay": 24,
+    "unlockCondition": "day >= 24",
+    "isUnlocked": false,
+    "scene": "家中客厅",
+    "characters": [
+      "chen_nainai"
+    ],
+    "relatedDiaryId": "diary_chen_day24"
+  },
+  {
+    "id": "album_chen_routine",
+    "characterId": "chen_nainai",
+    "title": "规律生活",
+    "image": "/images/placeholder/album.svg",
+    "caption": "建立了规律的生活作息，每天的生活井井有条",
+    "memory": "陈奶奶在照护者的帮助下，建立了一套非常规律的生活作息表。每天早上六点半起床，做简单的晨间操；七点吃早餐，同时看日历标记当天日期；八点到九点做记忆训练；十点出门散步；中午十二点吃午饭，然后午睡一小时；下午三点做手工或看书；晚六点吃晚饭；七点和女儿视频；九点洗漱，九点半上床睡觉。她把这张作息表贴在了床头、客厅和厨房里，每做一件事就打个勾。她说：“当老师的时候，最会安排时间了。",
+    "unlockDay": 28,
+    "unlockCondition": "day >= 28",
+    "isUnlocked": false,
+    "scene": "家中",
+    "characters": [
+      "chen_nainai"
+    ],
+    "relatedDiaryId": "diary_chen_day28"
+  },
+  {
+    "id": "album_chen_ending",
+    "characterId": "chen_nainai",
+    "title": "记忆的角落",
+    "image": "/images/placeholder/album.svg",
+    "caption": "照护旅程结束，陈奶奶坐在阳光里，安静地读着一本诗集",
+    "memory": "最后一天，陈奶奶坐在阳台的藤椅上，阳光暖暖地洒在她身上。她手里拿着一本《唐诗三百首》，翻开的是她最喜欢的那一页——李白的《将进酒》。她轻声读着：“君不见黄河之水天上来，奔流到海不复回。”读完，她合上书，望向远方。她转头跟照护者说：“这首诗我教了三十年，每一届学生都要背。现在我自己也天天背，怕忘了。”她顿了顿，笑了：“就算有一天我忘了李白是谁，忘了这首诗，没关系。我教过的那些学生，他们会记得。",
+    "unlockDay": 30,
+    "unlockCondition": "flag.chen_ending == true",
+    "isUnlocked": false,
+    "scene": "家中阳台",
+    "characters": [
+      "chen_nainai"
+    ],
+    "relatedDiaryId": "diary_chen_ending"
+  }
+]

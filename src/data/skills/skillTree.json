@@ -1,0 +1,721 @@
+{
+  "version": "1.0",
+  "categories": [
+    {
+      "id": "basic_care",
+      "name": "基础照护",
+      "icon": "/images/skills/basic_care.svg",
+      "color": "#4FC3F7",
+      "skills": [
+        {
+          "id": "basic_care_1",
+          "name": "日常起居照护",
+          "description": "掌握老年人日常起居照护的基本技能，包括穿衣、洗漱、如厕、翻身等基础护理操作，能够根据老人身体状况提供适当的辅助。",
+          "icon": "/images/skills/basic_care_1.svg",
+          "level": 0,
+          "maxLevel": 3,
+          "costPerLevel": 1,
+          "prerequisites": [],
+          "effects": [
+            {
+              "level": 1,
+              "type": "attribute_buff",
+              "target": "care_quality",
+              "value": 5,
+              "description": "日常照护质量提升5%"
+            },
+            {
+              "level": 2,
+              "type": "attribute_buff",
+              "target": "care_quality",
+              "value": 10,
+              "description": "日常照护质量提升10%，解锁基础起居辅助选项"
+            },
+            {
+              "level": 3,
+              "type": "attribute_buff",
+              "target": "care_quality",
+              "value": 20,
+              "description": "日常照护质量提升20%，老人舒适度显著提升"
+            }
+          ],
+          "unlocksChoices": []
+        },
+        {
+          "id": "basic_care_2",
+          "name": "饮食营养搭配",
+          "description": "学会根据老年人常见疾病（高血压、糖尿病等）进行饮食搭配，掌握低盐、低糖、低脂食谱设计原则，确保营养均衡又美味。",
+          "icon": "/images/skills/basic_care_2.svg",
+          "level": 0,
+          "maxLevel": 3,
+          "costPerLevel": 1,
+          "prerequisites": ["basic_care_1"],
+          "effects": [
+            {
+              "level": 1,
+              "type": "attribute_buff",
+              "target": "nutrition",
+              "value": 5,
+              "description": "饮食营养评分提升5%"
+            },
+            {
+              "level": 2,
+              "type": "attribute_buff",
+              "target": "nutrition",
+              "value": 10,
+              "description": "饮食营养评分提升10%，解锁健康食谱推荐"
+            },
+            {
+              "level": 3,
+              "type": "reduce_decay",
+              "target": "health_decay",
+              "value": 15,
+              "description": "因饮食不当导致的健康衰减降低15%"
+            }
+          ],
+          "unlocksChoices": []
+        },
+        {
+          "id": "basic_care_3",
+          "name": "居家安全防护",
+          "description": "掌握居家环境安全评估方法，学习防跌倒、防烫伤、防走失等安全防护措施，能够对老人居住环境进行适老化改造。",
+          "icon": "/images/skills/basic_care_3.svg",
+          "level": 0,
+          "maxLevel": 3,
+          "costPerLevel": 1,
+          "prerequisites": ["basic_care_1"],
+          "effects": [
+            {
+              "level": 1,
+              "type": "attribute_buff",
+              "target": "safety",
+              "value": 5,
+              "description": "居家安全评分提升5%"
+            },
+            {
+              "level": 2,
+              "type": "attribute_buff",
+              "target": "safety",
+              "value": 10,
+              "description": "居家安全评分提升10%，解锁安全评估工具"
+            },
+            {
+              "level": 3,
+              "type": "reduce_decay",
+              "target": "accident_risk",
+              "value": 25,
+              "description": "意外事故风险降低25%"
+            }
+          ],
+          "unlocksChoices": []
+        },
+        {
+          "id": "basic_care_4",
+          "name": "运动康复指导",
+          "description": "掌握适合老年人的运动康复方法，包括关节活动操、平衡训练、肌力训练等，能够根据老人身体状况制定个性化运动计划。",
+          "icon": "/images/skills/basic_care_4.svg",
+          "level": 0,
+          "maxLevel": 3,
+          "costPerLevel": 1,
+          "prerequisites": ["basic_care_2", "basic_care_3"],
+          "effects": [
+            {
+              "level": 1,
+              "type": "attribute_buff",
+              "target": "mobility",
+              "value": 5,
+              "description": "老人活动能力恢复提升5%"
+            },
+            {
+              "level": 2,
+              "type": "attribute_buff",
+              "target": "mobility",
+              "value": 10,
+              "description": "老人活动能力恢复提升10%，解锁运动康复计划"
+            },
+            {
+              "level": 3,
+              "type": "spirit_power_buff",
+              "value": 15,
+              "description": "每日精神力量产出增加15%"
+            }
+          ],
+          "unlocksChoices": []
+        }
+      ]
+    },
+    {
+      "id": "medication",
+      "name": "用药管理",
+      "icon": "/images/skills/medication.svg",
+      "color": "#F06292",
+      "skills": [
+        {
+          "id": "medication_1",
+          "name": "药物基础知识",
+          "description": "学习老年人常用药物的分类、作用机制和注意事项，掌握药品说明书阅读方法，了解常见药物间的相互作用。",
+          "icon": "/images/skills/medication_1.svg",
+          "level": 0,
+          "maxLevel": 3,
+          "costPerLevel": 1,
+          "prerequisites": [],
+          "effects": [
+            {
+              "level": 1,
+              "type": "attribute_buff",
+              "target": "medication_knowledge",
+              "value": 5,
+              "description": "用药知识评分提升5%"
+            },
+            {
+              "level": 2,
+              "type": "attribute_buff",
+              "target": "medication_knowledge",
+              "value": 10,
+              "description": "用药知识评分提升10%，能识别常见药物冲突"
+            },
+            {
+              "level": 3,
+              "type": "reduce_decay",
+              "target": "medication_error",
+              "value": 20,
+              "description": "用药错误风险降低20%"
+            }
+          ],
+          "unlocksChoices": []
+        },
+        {
+          "id": "medication_2",
+          "name": "用药提醒技巧",
+          "description": "掌握多种用药提醒方法，包括手机闹钟、药盒分装、智能提醒设备等，帮助老人建立规律用药习惯，减少漏服和错服。",
+          "icon": "/images/skills/medication_2.svg",
+          "level": 0,
+          "maxLevel": 3,
+          "costPerLevel": 1,
+          "prerequisites": ["medication_1"],
+          "effects": [
+            {
+              "level": 1,
+              "type": "attribute_buff",
+              "target": "medication_adherence",
+              "value": 5,
+              "description": "用药依从性提升5%"
+            },
+            {
+              "level": 2,
+              "type": "attribute_buff",
+              "target": "medication_adherence",
+              "value": 10,
+              "description": "用药依从性提升10%，解锁智能提醒工具"
+            },
+            {
+              "level": 3,
+              "type": "attribute_buff",
+              "target": "medication_adherence",
+              "value": 20,
+              "description": "用药依从性提升20%，老人能独立完成用药"
+            }
+          ],
+          "unlocksChoices": []
+        },
+        {
+          "id": "medication_3",
+          "name": "副作用识别",
+          "description": "学习老年人常见药物的副作用表现和识别方法，掌握出现副作用时的应急处理措施，能够及时判断是否需要就医。",
+          "icon": "/images/skills/medication_3.svg",
+          "level": 0,
+          "maxLevel": 3,
+          "costPerLevel": 1,
+          "prerequisites": ["medication_1"],
+          "effects": [
+            {
+              "level": 1,
+              "type": "attribute_buff",
+              "target": "side_effect_awareness",
+              "value": 5,
+              "description": "副作用识别能力提升5%"
+            },
+            {
+              "level": 2,
+              "type": "attribute_buff",
+              "target": "side_effect_awareness",
+              "value": 10,
+              "description": "副作用识别能力提升10%，能判断常见不良反应"
+            },
+            {
+              "level": 3,
+              "type": "reduce_decay",
+              "target": "side_effect_risk",
+              "value": 25,
+              "description": "严重副作用风险降低25%"
+            }
+          ],
+          "unlocksChoices": []
+        },
+        {
+          "id": "medication_4",
+          "name": "用药记录管理",
+          "description": "掌握用药记录的方法和工具，建立完整的用药档案，包括药品清单、用药时间表、疗效观察记录，便于医生评估和调整方案。",
+          "icon": "/images/skills/medication_4.svg",
+          "level": 0,
+          "maxLevel": 3,
+          "costPerLevel": 1,
+          "prerequisites": ["medication_2", "medication_3"],
+          "effects": [
+            {
+              "level": 1,
+              "type": "attribute_buff",
+              "target": "medication_record",
+              "value": 5,
+              "description": "用药记录完整度提升5%"
+            },
+            {
+              "level": 2,
+              "type": "attribute_buff",
+              "target": "medication_record",
+              "value": 10,
+              "description": "用药记录完整度提升10%，解锁用药档案模板"
+            },
+            {
+              "level": 3,
+              "type": "spirit_power_buff",
+              "value": 10,
+              "description": "每日精神力量产出增加10%"
+            }
+          ],
+          "unlocksChoices": []
+        }
+      ]
+    },
+    {
+      "id": "emergency",
+      "name": "应急处理",
+      "icon": "/images/skills/emergency.svg",
+      "color": "#FF7043",
+      "skills": [
+        {
+          "id": "emergency_1",
+          "name": "急救常识",
+          "description": "掌握基本急救知识和技能，包括心肺复苏（CPR）、止血包扎、海姆立克急救法等，能在120到达前实施有效急救。",
+          "icon": "/images/skills/emergency_1.svg",
+          "level": 0,
+          "maxLevel": 3,
+          "costPerLevel": 1,
+          "prerequisites": [],
+          "effects": [
+            {
+              "level": 1,
+              "type": "attribute_buff",
+              "target": "first_aid_skill",
+              "value": 5,
+              "description": "急救技能评分提升5%"
+            },
+            {
+              "level": 2,
+              "type": "attribute_buff",
+              "target": "first_aid_skill",
+              "value": 10,
+              "description": "急救技能评分提升10%，解锁基础急救操作"
+            },
+            {
+              "level": 3,
+              "type": "attribute_buff",
+              "target": "first_aid_skill",
+              "value": 20,
+              "description": "急救技能评分提升20%，能应对常见突发状况"
+            }
+          ],
+          "unlocksChoices": []
+        },
+        {
+          "id": "emergency_2",
+          "name": "跌倒处理",
+          "description": "掌握老年人跌倒后的正确处理方法，包括伤情判断、正确扶起方式、冰敷技巧，以及跌倒风险评估和预防措施。",
+          "icon": "/images/skills/emergency_2.svg",
+          "level": 0,
+          "maxLevel": 3,
+          "costPerLevel": 1,
+          "prerequisites": ["emergency_1"],
+          "effects": [
+            {
+              "level": 1,
+              "type": "attribute_buff",
+              "target": "fall_response",
+              "value": 5,
+              "description": "跌倒应对能力提升5%"
+            },
+            {
+              "level": 2,
+              "type": "attribute_buff",
+              "target": "fall_response",
+              "value": 10,
+              "description": "跌倒应对能力提升10%，能判断骨折风险"
+            },
+            {
+              "level": 3,
+              "type": "reduce_decay",
+              "target": "fall_risk",
+              "value": 30,
+              "description": "跌倒风险降低30%"
+            }
+          ],
+          "unlocksChoices": []
+        },
+        {
+          "id": "emergency_3",
+          "name": "病情识别",
+          "description": "学习识别老年人常见急症的前兆信号，包括中风、心梗、低血糖等，掌握测量生命体征的方法，能够及时判断病情严重程度。",
+          "icon": "/images/skills/emergency_3.svg",
+          "level": 0,
+          "maxLevel": 3,
+          "costPerLevel": 1,
+          "prerequisites": ["emergency_1"],
+          "effects": [
+            {
+              "level": 1,
+              "type": "attribute_buff",
+              "target": "condition_awareness",
+              "value": 5,
+              "description": "病情识别能力提升5%"
+            },
+            {
+              "level": 2,
+              "type": "attribute_buff",
+              "target": "condition_awareness",
+              "value": 10,
+              "description": "病情识别能力提升10%，能识别常见急症前兆"
+            },
+            {
+              "level": 3,
+              "type": "reduce_decay",
+              "target": "emergency_delay",
+              "value": 25,
+              "description": "急诊延误风险降低25%"
+            }
+          ],
+          "unlocksChoices": []
+        },
+        {
+          "id": "emergency_4",
+          "name": "应急联络",
+          "description": "建立完善的应急联络体系，包括紧急联系人网络、急救信息卡、一键呼叫设备，以及应急物资准备和应急预案制定。",
+          "icon": "/images/skills/emergency_4.svg",
+          "level": 0,
+          "maxLevel": 3,
+          "costPerLevel": 1,
+          "prerequisites": ["emergency_2", "emergency_3"],
+          "effects": [
+            {
+              "level": 1,
+              "type": "attribute_buff",
+              "target": "emergency_response",
+              "value": 5,
+              "description": "应急响应速度提升5%"
+            },
+            {
+              "level": 2,
+              "type": "attribute_buff",
+              "target": "emergency_response",
+              "value": 10,
+              "description": "应急响应速度提升10%，解锁应急联络模板"
+            },
+            {
+              "level": 3,
+              "type": "spirit_power_buff",
+              "value": 15,
+              "description": "每日精神力量产出增加15%"
+            }
+          ],
+          "unlocksChoices": []
+        }
+      ]
+    },
+    {
+      "id": "psychological",
+      "name": "心理支持",
+      "icon": "/images/skills/psychological.svg",
+      "color": "#AB47BC",
+      "skills": [
+        {
+          "id": "psychological_1",
+          "name": "情绪觉察",
+          "description": "学会观察和识别老年人常见的情绪变化，包括焦虑、抑郁、孤独、愤怒等，掌握情绪评估工具，能够及时察觉老人的心理需求。",
+          "icon": "/images/skills/psychological_1.svg",
+          "level": 0,
+          "maxLevel": 3,
+          "costPerLevel": 1,
+          "prerequisites": [],
+          "effects": [
+            {
+              "level": 1,
+              "type": "attribute_buff",
+              "target": "emotional_awareness",
+              "value": 5,
+              "description": "情绪觉察能力提升5%"
+            },
+            {
+              "level": 2,
+              "type": "attribute_buff",
+              "target": "emotional_awareness",
+              "value": 10,
+              "description": "情绪觉察能力提升10%，能识别潜在心理问题"
+            },
+            {
+              "level": 3,
+              "type": "attribute_buff",
+              "target": "emotional_awareness",
+              "value": 20,
+              "description": "情绪觉察能力提升20%，老人情绪稳定性提升"
+            }
+          ],
+          "unlocksChoices": []
+        },
+        {
+          "id": "psychological_2",
+          "name": "沟通技巧",
+          "description": "掌握与老年人有效沟通的技巧，包括倾听、共情、引导式提问、非语言沟通等，特别针对认知障碍老人的沟通策略。",
+          "icon": "/images/skills/psychological_2.svg",
+          "level": 0,
+          "maxLevel": 3,
+          "costPerLevel": 1,
+          "prerequisites": ["psychological_1"],
+          "effects": [
+            {
+              "level": 1,
+              "type": "attribute_buff",
+              "target": "communication",
+              "value": 5,
+              "description": "沟通效率提升5%"
+            },
+            {
+              "level": 2,
+              "type": "attribute_buff",
+              "target": "communication",
+              "value": 10,
+              "description": "沟通效率提升10%，解锁认知障碍沟通技巧"
+            },
+            {
+              "level": 3,
+              "type": "reduce_decay",
+              "target": "misunderstanding_risk",
+              "value": 20,
+              "description": "沟通误解风险降低20%"
+            }
+          ],
+          "unlocksChoices": []
+        },
+        {
+          "id": "psychological_3",
+          "name": "心理疏导",
+          "description": "学习基本的心理疏导方法，包括回忆疗法、音乐疗法、宠物疗法等，能够帮助老人缓解负面情绪，提升心理健康水平。",
+          "icon": "/images/skills/psychological_3.svg",
+          "level": 0,
+          "maxLevel": 3,
+          "costPerLevel": 1,
+          "prerequisites": ["psychological_1", "psychological_2"],
+          "effects": [
+            {
+              "level": 1,
+              "type": "attribute_buff",
+              "target": "psychological_support",
+              "value": 5,
+              "description": "心理疏导效果提升5%"
+            },
+            {
+              "level": 2,
+              "type": "attribute_buff",
+              "target": "psychological_support",
+              "value": 10,
+              "description": "心理疏导效果提升10%，解锁回忆疗法技巧"
+            },
+            {
+              "level": 3,
+              "type": "spirit_power_buff",
+              "value": 20,
+              "description": "每日精神力量产出增加20%"
+            }
+          ],
+          "unlocksChoices": []
+        },
+        {
+          "id": "psychological_4",
+          "name": "认知训练",
+          "description": "掌握针对老年人的认知训练方法，包括记忆训练、注意力训练、执行功能训练等，能够延缓认知功能衰退，提升生活质量。",
+          "icon": "/images/skills/psychological_4.svg",
+          "level": 0,
+          "maxLevel": 3,
+          "costPerLevel": 1,
+          "prerequisites": ["psychological_2"],
+          "effects": [
+            {
+              "level": 1,
+              "type": "attribute_buff",
+              "target": "cognitive_support",
+              "value": 5,
+              "description": "认知训练效果提升5%"
+            },
+            {
+              "level": 2,
+              "type": "attribute_buff",
+              "target": "cognitive_support",
+              "value": 10,
+              "description": "认知训练效果提升10%，解锁认知训练游戏"
+            },
+            {
+              "level": 3,
+              "type": "reduce_decay",
+              "target": "cognitive_decline",
+              "value": 20,
+              "description": "认知功能衰退速度降低20%"
+            }
+          ],
+          "unlocksChoices": []
+        }
+      ]
+    },
+    {
+      "id": "resource",
+      "name": "资源协调",
+      "icon": "/images/skills/resource.svg",
+      "color": "#66BB6A",
+      "skills": [
+        {
+          "id": "resource_1",
+          "name": "社区资源",
+          "description": "了解社区内的养老资源和服务，包括社区养老服务站、日间照料中心、老年食堂、社区医院等，能够为老人对接合适的社区服务。",
+          "icon": "/images/skills/resource_1.svg",
+          "level": 0,
+          "maxLevel": 3,
+          "costPerLevel": 1,
+          "prerequisites": [],
+          "effects": [
+            {
+              "level": 1,
+              "type": "attribute_buff",
+              "target": "community_resource",
+              "value": 5,
+              "description": "社区资源利用率提升5%"
+            },
+            {
+              "level": 2,
+              "type": "attribute_buff",
+              "target": "community_resource",
+              "value": 10,
+              "description": "社区资源利用率提升10%，解锁社区服务清单"
+            },
+            {
+              "level": 3,
+              "type": "spirit_power_buff",
+              "value": 10,
+              "description": "每日精神力量产出增加10%"
+            }
+          ],
+          "unlocksChoices": []
+        },
+        {
+          "id": "resource_2",
+          "name": "政策了解",
+          "description": "了解国家和地方养老相关政策，包括长护险、养老服务补贴、医疗救助、残疾人补贴等，能够帮助老人申请适用的政策福利。",
+          "icon": "/images/skills/resource_2.svg",
+          "level": 0,
+          "maxLevel": 3,
+          "costPerLevel": 1,
+          "prerequisites": [],
+          "effects": [
+            {
+              "level": 1,
+              "type": "attribute_buff",
+              "target": "policy_knowledge",
+              "value": 5,
+              "description": "政策了解程度提升5%"
+            },
+            {
+              "level": 2,
+              "type": "attribute_buff",
+              "target": "policy_knowledge",
+              "value": 10,
+              "description": "政策了解程度提升10%，解锁政策申请指南"
+            },
+            {
+              "level": 3,
+              "type": "reduce_decay",
+              "target": "financial_burden",
+              "value": 15,
+              "description": "照护经济负担降低15%"
+            }
+          ],
+          "unlocksChoices": []
+        },
+        {
+          "id": "resource_3",
+          "name": "照护规划",
+          "description": "掌握制定个性化照护计划的方法，包括需求评估、目标设定、资源调配、进度跟踪等，能够为老人提供持续性的照护方案。",
+          "icon": "/images/skills/resource_3.svg",
+          "level": 0,
+          "maxLevel": 3,
+          "costPerLevel": 1,
+          "prerequisites": ["resource_1", "resource_2"],
+          "effects": [
+            {
+              "level": 1,
+              "type": "attribute_buff",
+              "target": "care_planning",
+              "value": 5,
+              "description": "照护计划完整度提升5%"
+            },
+            {
+              "level": 2,
+              "type": "attribute_buff",
+              "target": "care_planning",
+              "value": 10,
+              "description": "照护计划完整度提升10%，解锁照护计划模板"
+            },
+            {
+              "level": 3,
+              "type": "attribute_buff",
+              "target": "care_quality",
+              "value": 15,
+              "description": "整体照护质量提升15%"
+            }
+          ],
+          "unlocksChoices": []
+        },
+        {
+          "id": "resource_4",
+          "name": "家庭协调",
+          "description": "掌握家庭关系协调技巧，能够帮助照护者与家属之间建立有效沟通，合理分配照护任务，缓解家庭照护压力，构建支持网络。",
+          "icon": "/images/skills/resource_4.svg",
+          "level": 0,
+          "maxLevel": 3,
+          "costPerLevel": 1,
+          "prerequisites": ["resource_3"],
+          "effects": [
+            {
+              "level": 1,
+              "type": "attribute_buff",
+              "target": "family_coordination",
+              "value": 5,
+              "description": "家庭协调能力提升5%"
+            },
+            {
+              "level": 2,
+              "type": "attribute_buff",
+              "target": "family_coordination",
+              "value": 10,
+              "description": "家庭协调能力提升10%，解锁家庭会议模板"
+            },
+            {
+              "level": 3,
+              "type": "spirit_power_buff",
+              "value": 20,
+              "description": "每日精神力量产出增加20%"
+            }
+          ],
+          "unlocksChoices": []
+        }
+      ]
+    }
+  ],
+  "initialPoints": 3,
+  "pointsPerDay": 1
+}

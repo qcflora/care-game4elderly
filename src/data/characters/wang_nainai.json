@@ -1,0 +1,95 @@
+{
+  "id": "wang_nainai",
+  "name": "王秀英",
+  "nickname": "王奶奶",
+  "age": 72,
+  "gender": "female",
+  "avatar": "/images/characters/wang_nainai.jpg",
+  "portrait": "/images/characters/wang_nainai.jpg",
+  "watercolorBase": "/images/characters/wang_nainai.jpg",
+  "background": "退休小学教师，独居在城市老小区的三楼。丈夫三年前去世，唯一的儿子在北京工作，每月汇来生活费。王奶奶性格善良但有些倔强，自尊心强，不喜欢麻烦别人。她患有高血压，需要每天服药。",
+  "personality": [
+    "善良",
+    "倔强",
+    "节俭",
+    "自尊心强",
+    "有点孤独"
+  ],
+  "familyRelation": "独居老人，儿子在外地工作，每月汇生活费",
+  "healthCondition": {
+    "disease": "高血压",
+    "severity": "moderate",
+    "medications": [
+      "降压药（苯磺酸氨氯地平片）"
+    ],
+    "precautions": [
+      "低盐饮食",
+      "规律作息",
+      "避免情绪激动",
+      "定期测量血压"
+    ],
+    "dailyDecay": 2
+  },
+  "baseAttributes": {
+    "health": 70,
+    "mood": 60,
+    "independence": 50,
+    "trust": 40
+  },
+  "tensionRules": [
+    {
+      "source": "health",
+      "threshold": 85,
+      "operator": ">",
+      "target": "independence",
+      "perTurnDelta": -2,
+      "description": "健康值过高时，过度照顾导致独立性下降"
+    },
+    {
+      "source": "independence",
+      "threshold": 30,
+      "operator": "<",
+      "target": "mood",
+      "perTurnDelta": -3,
+      "description": "独立值过低时，老人感到失去自主权导致心情下降"
+    }
+  ],
+  "storyActs": [
+    {
+      "act": 1,
+      "startDay": 1,
+      "endDay": 10,
+      "storyFile": "/data/stories/wang_nainai/act1.json",
+      "title": "第一幕：初识",
+      "theme": "建立信任"
+    },
+    {
+      "act": 2,
+      "startDay": 11,
+      "endDay": 20,
+      "storyFile": "/data/stories/wang_nainai/act2.json",
+      "title": "第二幕：陪伴",
+      "theme": "深入了解"
+    },
+    {
+      "act": 3,
+      "startDay": 21,
+      "endDay": 30,
+      "storyFile": "/data/stories/wang_nainai/act3.json",
+      "title": "第三幕：守护",
+      "theme": "真心相待"
+    }
+  ],
+  "isLocked": false,
+  "spiritAppearance": {
+    "color": "#F5C842",
+    "lottieAnimation": "spirit_appear",
+    "name": "小精灵"
+  },
+  "endingWeights": {
+    "health": 0.25,
+    "mood": 0.25,
+    "independence": 0.3,
+    "trust": 0.2
+  }
+}

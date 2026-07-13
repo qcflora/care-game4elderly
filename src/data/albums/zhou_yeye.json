@@ -1,0 +1,194 @@
+[
+  {
+    "id": "album_zhou_old_photo",
+    "characterId": "zhou_yeye",
+    "title": "技术骨干",
+    "image": "/images/placeholder/album.svg",
+    "caption": "周爷爷年轻时在工厂的技术攻关合影，意气风发",
+    "memory": "这张照片拍摄于1985年，周爷爷（那时还是周工）带领技术小组攻克了一项重大技术难题后的合影。他站在C位，穿着一件洗得发白的工作服，手里拿着一个零部件，脸上带着自信的笑容。那时候他是厂里最年轻的高级工程师，手底下管着二十多人的技术团队。他总说“搞技术的人，脑子要活、手要稳、心要细”。这句他信奉了一辈子的信条，在脑梗后的康复过程中，又成了支撑他坚持下去的动力。",
+    "unlockDay": 1,
+    "unlockCondition": "day >= 1",
+    "isUnlocked": false,
+    "scene": "工厂",
+    "characters": [
+      "zhou_yeye"
+    ],
+    "relatedDiaryId": "diary_zhou_day1"
+  },
+  {
+    "id": "album_zhou_rehab_start",
+    "characterId": "zhou_yeye",
+    "title": "康复训练开始",
+    "image": "/images/placeholder/album.svg",
+    "caption": "第一次康复训练，周爷爷眼神坚定",
+    "memory": "脑梗后周爷爷左侧肢体偏瘫，右手还能活动，但左手完全使不上力，走路也需要人搀扶。面对这样的打击，他没有消沉太久，而是以工程师的理性开始规划康复方案。他找了很多康复资料，甚至自己画了一张“康复训练进度表”，贴在床头。第一次康复训练时，他尝试活动左手手指，但手指完全不听使唤，他盯着自己的手看了很久，然后说：“没关系，慢慢来，当年搞技术攻关也是这样，一次不行就十次，十次不行就一百次。”",
+    "unlockDay": 2,
+    "unlockCondition": "day >= 2",
+    "isUnlocked": false,
+    "scene": "康复训练室",
+    "characters": [
+      "zhou_yeye"
+    ],
+    "relatedDiaryId": "diary_zhou_day2"
+  },
+  {
+    "id": "album_zhou_left_hand",
+    "characterId": "zhou_yeye",
+    "title": "左手练习",
+    "image": "/images/placeholder/album.svg",
+    "caption": "用康复球练习左手抓握，满头大汗也不放弃",
+    "memory": "周爷爷每天最重要的事情就是练习左手的抓握能力。照护者给他准备了一个康复球，让他每天握拳、松开、再握拳，反复练习。这个看似简单的动作，对他来说却极其困难。刚开始他连握紧都做不到，康复球几次从手里滑落。但他没有气馁，捡起来继续练。他给自己定了目标——每天做五百次握拳练习，分上午和下午各两百五十次。每次练完，他的左手都酸得发抖，额头上全是汗。",
+    "unlockDay": 4,
+    "unlockCondition": "day >= 4",
+    "isUnlocked": false,
+    "scene": "家中",
+    "characters": [
+      "zhou_yeye"
+    ],
+    "relatedDiaryId": "diary_zhou_day4"
+  },
+  {
+    "id": "album_zhou_walking_assis",
+    "characterId": "zhou_yeye",
+    "title": "辅助行走",
+    "image": "/images/placeholder/album.svg",
+    "caption": "在助行器的辅助下练习行走，每一步都艰难而坚定",
+    "memory": "周爷爷的左侧偏瘫导致他走路时左腿拖行，重心不稳。在康复师的指导下，他开始使用助行器练习行走。从卧室到客厅不过十来米的距离，他走完需要五分钟，中间还要停下来休息两次。他每迈出一步都要花费巨大的力气，左腿只能靠腰部带动往前甩，姿势很不自然。但他从不抱怨，每次走完都会在训练日志上记录：“今天走了三趟，比昨天多一趟。”他把自己当成一个“工程项目”来管理，用数据记录每一天的进步，哪怕只有一点点。",
+    "unlockDay": 6,
+    "unlockCondition": "day >= 6",
+    "isUnlocked": false,
+    "scene": "家中",
+    "characters": [
+      "zhou_yeye"
+    ],
+    "relatedDiaryId": "diary_zhou_day6"
+  },
+  {
+    "id": "album_zhou_act1_complete",
+    "characterId": "zhou_yeye",
+    "title": "第一章：重新站起来",
+    "image": "/images/placeholder/album.svg",
+    "caption": "完成第一章，周爷爷的康复训练初见成效",
+    "memory": "经过一周的康复训练，周爷爷的左手已经能做一些简单的抓握动作了，虽然力量还很弱，但这是一个重要的突破。他能在助行器的辅助下从卧室走到客厅再走回来，虽然速度很慢，但已经不需要人搀扶了。他在训练日志上写道：“第一周目标完成度：左手恢复15%，行走能力恢复20%。下周目标：左手抓握力提升到30%，实现独立行走5米。”看着这份“工程进度报告”，照护者既感动又敬佩——这个老人用自己的方式，正在一点一点地……",
+    "unlockDay": 7,
+    "unlockCondition": "flag.zhou_act1_complete == true",
+    "isUnlocked": false,
+    "scene": "家中",
+    "characters": [
+      "zhou_yeye"
+    ],
+    "relatedDiaryId": "diary_zhou_act1"
+  },
+  {
+    "id": "album_zhou_daughter_care",
+    "characterId": "zhou_yeye",
+    "title": "女儿的陪伴",
+    "image": "/images/placeholder/album.svg",
+    "caption": "女儿每天下班后陪父亲做康复训练，耐心而温柔",
+    "memory": "周爷爷的女儿在本地工作，每天下班后第一件事就是赶回家陪父亲做康复训练。她以前是个急性子，但自从父亲生病后，变得格外有耐心。她扶着父亲练习走路，帮父亲按摩僵硬的左手，一遍遍鼓励他“爸，今天比昨天好多了”。周爷爷看着女儿忙碌的身影，有一次忍不住红了眼眶：“以前是我教你走路，现在换你教我了。”女儿笑着说：“那您可得好好学，我这个老师要求很严格的。”父女俩在康复训练中，重新找到了彼此之间的羁绊。",
+    "unlockDay": 8,
+    "unlockCondition": "day >= 8",
+    "isUnlocked": false,
+    "scene": "家中客厅",
+    "characters": [
+      "zhou_yeye"
+    ],
+    "relatedDiaryId": "diary_zhou_day8"
+  },
+  {
+    "id": "album_zhou_speech",
+    "characterId": "zhou_yeye",
+    "title": "语言康复",
+    "image": "/images/placeholder/album.svg",
+    "caption": "练习发声和朗读，努力恢复语言能力",
+    "memory": "脑梗后周爷爷的语言功能也受到了一定影响，说话时有些含糊不清，偶尔还会找不到合适的词。对于一个以前在厂里做技术报告从不打草稿的人来说，这是非常打击自尊心的事。但他没有回避，而是每天坚持做语言康复训练——读报纸、念绕口令、跟着收音机练习发音。他让女儿把家里的唐诗宋词找出来，每天背一首。虽然发音不如以前清晰，但他一字一句都读得非常认真。",
+    "unlockDay": 10,
+    "unlockCondition": "day >= 10",
+    "isUnlocked": false,
+    "scene": "家中书房",
+    "characters": [
+      "zhou_yeye"
+    ],
+    "relatedDiaryId": "diary_zhou_day10"
+  },
+  {
+    "id": "album_zhou_medication",
+    "characterId": "zhou_yeye",
+    "title": "规律用药",
+    "image": "/images/placeholder/album.svg",
+    "caption": "坚持按时服用脑梗后药物，预防二次复发",
+    "memory": "脑梗后需要长期服用抗血小板药物和降压药，预防二次复发。周爷爷对用药非常上心，他把每种药的作用、剂量、服用时间都研究得一清二楚，还自己做了一张用药时间表，精确到分钟。他每天早晚准时服药，从不间断。有一次他因为去做康复训练，回来晚了十分钟吃药，他懊恼地在日志上记了一笔：“今日服药延迟10分钟，需注意。”照护者说不用这么严格，他认真地说：“搞技术的，精度就是生命。吃药也一样，差一分钟都不行。”",
+    "unlockDay": 14,
+    "unlockCondition": "day >= 14",
+    "isUnlocked": false,
+    "scene": "家中",
+    "characters": [
+      "zhou_yeye"
+    ],
+    "relatedDiaryId": "diary_zhou_day14"
+  },
+  {
+    "id": "album_zhou_balance",
+    "characterId": "zhou_yeye",
+    "title": "平衡训练",
+    "image": "/images/placeholder/album.svg",
+    "caption": "扶着栏杆练习单腿站立，努力恢复平衡能力",
+    "memory": "偏瘫后平衡能力下降是周爷爷遇到的最大挑战之一。他站在平地上都会感觉身体往左侧倾斜，更别说单腿站立了。康复师为他设计了平衡训练方案：扶着栏杆，双脚分开与肩同宽，闭上眼睛感受身体的重心，然后慢慢尝试将重心转移到右腿，再转移到左腿。刚开始他站不了几秒就开始摇晃，但他咬着牙坚持，每次都要练到精疲力竭才肯停下来。他给自己打气：“平衡能力就像盖楼，地基打不好，楼就盖不高。",
+    "unlockDay": 18,
+    "unlockCondition": "day >= 18",
+    "isUnlocked": false,
+    "scene": "康复训练室",
+    "characters": [
+      "zhou_yeye"
+    ],
+    "relatedDiaryId": "diary_zhou_day18"
+  },
+  {
+    "id": "album_zhou_act2_complete",
+    "characterId": "zhou_yeye",
+    "title": "第二章：康复之路",
+    "image": "/images/placeholder/album.svg",
+    "caption": "完成第二章，周爷爷的康复取得显著进展",
+    "memory": "接近一个月的时间，周爷爷的康复进展可以用“奇迹”来形容。他的左手已经能够完成简单的抓握动作，比如拿杯子、翻书页；他可以在手杖的辅助下独立行走约五十米，不再需要助行器；语言功能也恢复了大半，日常交流基本没有问题。他在训练日志上做了阶段总结：“左手功能恢复约40%，行走能力恢复约50%，语言功能恢复约80%。下阶段目标：实现无辅助行走，左手恢复精细动作。",
+    "unlockDay": 20,
+    "unlockCondition": "flag.zhou_act2_complete == true",
+    "isUnlocked": false,
+    "scene": "家中",
+    "characters": [
+      "zhou_yeye"
+    ],
+    "relatedDiaryId": "diary_zhou_act2"
+  },
+  {
+    "id": "album_zhou_progress",
+    "characterId": "zhou_yeye",
+    "title": "康复进展",
+    "image": "/images/placeholder/album.svg",
+    "caption": "康复训练初见成效，周爷爷脸上露出久违的笑容",
+    "memory": "这天，周爷爷在照护者和女儿的陪伴下，第一次尝试不用手杖独自走路。他深吸一口气，松开手杖，迈出了第一步。左腿还是有点拖，但比之前好多了，他努力控制着身体的平衡，一步一步往前走。五米、十米、十五米——他在心里默默数着。当他走到十五米的时候，他停了下来，转过身，脸上露出了这一个月来最灿烂的笑容。“我做到了。”他说，声音有些颤抖。女儿冲上去抱住他，眼泪止不住地流。",
+    "unlockDay": 25,
+    "unlockCondition": "day >= 25",
+    "isUnlocked": false,
+    "scene": "小区步道",
+    "characters": [
+      "zhou_yeye"
+    ],
+    "relatedDiaryId": "diary_zhou_day25"
+  },
+  {
+    "id": "album_zhou_ending",
+    "characterId": "zhou_yeye",
+    "title": "新的起点",
+    "image": "/images/placeholder/album.svg",
+    "caption": "照护旅程结束，周爷爷在公园里用手杖支撑着，眺望远方",
+    "memory": "照护旅程的最后一天，周爷爷穿着整洁的衬衫，手拄一根手杖，站在公园的小山坡上。他眺望着远方的城市天际线，目光坚定而平静。他说：“我这一辈子，解决过很多技术难题，没想到老了还要解决一个'自己的身体'这个难题。不过没关系，搞技术的人最不怕的就是难题。”他把那根手杖举起来看了看：“这个家伙，暂时还得用一段时间，但我相信总有一天能甩掉它。",
+    "unlockDay": 30,
+    "unlockCondition": "flag.zhou_ending == true",
+    "isUnlocked": false,
+    "scene": "公园",
+    "characters": [
+      "zhou_yeye"
+    ],
+    "relatedDiaryId": "diary_zhou_ending"
+  }
+]

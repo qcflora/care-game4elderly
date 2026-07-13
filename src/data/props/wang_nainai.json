@@ -1,0 +1,101 @@
+[
+  {
+    "id": "wang_blood_pressure_monitor",
+    "name": "电子血压计",
+    "description": "一台白色的上臂式电子血压计，屏幕清晰，显示血压值和心率。旁边放着一个记录本，上面工整地记录着每天的血压数据。最近几天的数值后面都画了一个笑脸。",
+    "icon": "/images/props/wang_blood_pressure_monitor.svg",
+    "image": "/images/props/wang_blood_pressure_monitor_large.svg",
+    "layer": "operate",
+    "isCollectible": true,
+    "characterId": "wang_nainai",
+    "category": "medicine"
+  },
+  {
+    "id": "wang_pill_box",
+    "name": "分格药盒",
+    "description": "一个透明塑料的七天分格药盒，每个格子上面标有“早““中““晚“字样。王奶奶的降压药放在早上的格子里，每天饭后服用。药盒放在床头柜上最显眼的位置。",
+    "icon": "/images/props/wang_pill_box.svg",
+    "image": "/images/props/wang_pill_box_large.svg",
+    "layer": "display",
+    "isCollectible": true,
+    "characterId": "wang_nainai",
+    "category": "medicine"
+  },
+  {
+    "id": "wang_reading_glasses",
+    "name": "老花镜套装",
+    "description": "三副相同度数的老花镜，分别放在客厅茶几、书桌和床头柜上，每副都配有一个深蓝色的眼镜盒。自从用了这个办法，王奶奶再也不用满屋子找眼镜了。",
+    "icon": "/images/props/wang_reading_glasses.svg",
+    "image": "/images/props/wang_reading_glasses_large.svg",
+    "layer": "display",
+    "isCollectible": true,
+    "characterId": "wang_nainai",
+    "category": "tool"
+  },
+  {
+    "id": "wang_recipe_book",
+    "name": "手写菜谱本",
+    "description": "一本厚厚的硬皮笔记本，封面已经磨损，里面密密麻麻写满了菜谱。字迹工整清秀，有的页面还夹着干枯的菜叶标本。每一道菜都标注了“正常版“和“低盐版“两种做法。",
+    "icon": "/images/props/wang_recipe_book.svg",
+    "image": "/images/props/wang_recipe_book_large.svg",
+    "layer": "inspect",
+    "isCollectible": true,
+    "characterId": "wang_nainai",
+    "category": "memory"
+  },
+  {
+    "id": "wang_radio",
+    "name": "便携收音机",
+    "description": "一台银色的便携式收音机，天线可以拉伸，音质清晰。王奶奶最喜欢听戏曲频道，尤其是京剧《霸王别姬》。收音机上贴着一张小便签，写着“调频103.7 戏曲频道”。",
+    "icon": "/images/props/wang_radio.svg",
+    "image": "/images/props/wang_radio_large.svg",
+    "layer": "operate",
+    "isCollectible": true,
+    "characterId": "wang_nainai",
+    "category": "decor"
+  },
+  {
+    "id": "wang_medication_record",
+    "name": "用药记录本",
+    "description": "一个小黑皮笔记本，扉页写着“健康管理“四个字。里面记录着每天的用药时间、血压数据和身体感受。王奶奶的字迹工整得像在写公文，生病记录也写得一丝不苟。",
+    "icon": "/images/props/wang_medication_record.svg",
+    "image": "/images/props/wang_medication_record_large.svg",
+    "layer": "inspect",
+    "isCollectible": true,
+    "characterId": "wang_nainai",
+    "category": "document"
+  },
+  {
+    "id": "wang_tea_cup",
+    "name": "景德镇茶杯",
+    "description": "一只白底蓝花的景德镇瓷杯，是王奶奶退休时单位送的纪念品。杯身绘有兰花图案，杯盖上有一行小字“光荣退休 1988年“。她每天用这个杯子喝茶，说“用着舒心”。",
+    "icon": "/images/props/wang_tea_cup.svg",
+    "image": "/images/props/wang_tea_cup_large.svg",
+    "layer": "display",
+    "isCollectible": false,
+    "characterId": "wang_nainai",
+    "category": "decor"
+  },
+  {
+    "id": "wang_old_photo",
+    "name": "先进工作者奖状",
+    "description": "一张装在镜框里的老奖状，写着“王秀兰同志被评为先进工作者“，落款是1985年。奖状纸张已经泛黄，但被保管得很好。王奶奶把它挂在客厅最显眼的位置，是她最骄傲的回忆。",
+    "icon": "/images/props/wang_old_photo.svg",
+    "image": "/images/props/wang_old_photo_large.svg",
+    "layer": "display",
+    "isCollectible": false,
+    "characterId": "wang_nainai",
+    "category": "decor"
+  },
+  {
+    "id": "wang_low_salt_spoon",
+    "name": "限盐勺",
+    "description": "一套小巧的限盐勺，每勺容量为1克。王奶奶现在做菜时用它来控制盐的用量，每道菜不超过半勺。勺柄上刻着“健康从减盐开始“几个小字。",
+    "icon": "/images/props/wang_low_salt_spoon.svg",
+    "image": "/images/props/wang_low_salt_spoon_large.svg",
+    "layer": "display",
+    "isCollectible": true,
+    "characterId": "wang_nainai",
+    "category": "tool"
+  }
+]

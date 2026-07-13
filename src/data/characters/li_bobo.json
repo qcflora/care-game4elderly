@@ -1,0 +1,105 @@
+{
+  "id": "li_bobo",
+  "name": "李建国",
+  "nickname": "李伯伯",
+  "age": 66,
+  "gender": "male",
+  "avatar": "/images/characters/li_bobo.jpg",
+  "portrait": "/images/characters/li_bobo.jpg",
+  "watercolorBase": "/images/characters/li_bobo.jpg",
+  "background": "退休机械工程师，半年前从工作了一辈子的研究所退休。身体硬朗，每天戴着智能手表晨练、刷短视频、在微信群里和老同事交流。半年前体检发现糖尿病早期，医生叮嘱控糖控碳水，但他总觉得'我才六十六，算什么老人'，偷偷吃甜食、用智能手表的数据说服自己'指标还行'。退休后社交圈骤缩，嘴上说'清闲自在'，实则渐渐沉默。",
+  "personality": [
+    "要强",
+    "不服老",
+    "懂科技",
+    "倔强",
+    "外冷内热"
+  ],
+  "familyRelation": "与老伴同住，独子在外地工作，每周视频通话一次。儿子想远程管理他的健康，他不太情愿",
+  "healthCondition": {
+    "disease": "糖尿病早期",
+    "severity": "mild",
+    "medications": [
+      "二甲双胍片（随餐服用）"
+    ],
+    "precautions": [
+      "低糖低碳水饮食",
+      "规律有氧运动（每周150分钟中等强度）",
+      "定期监测空腹及餐后血糖",
+      "控制体重",
+      "随身携带糖果预防低血糖",
+      "每日足部检查"
+    ],
+    "dailyDecay": 1
+  },
+  "baseAttributes": {
+    "health": 75,
+    "mood": 55,
+    "independence": 85,
+    "trust": 40
+  },
+  "tensionRules": [
+    {
+      "source": "independence",
+      "threshold": 80,
+      "operator": ">",
+      "target": "health",
+      "perTurnDelta": -2,
+      "description": "独立值过高时，李伯伯逞强忽视身体信号，过度运动或偷偷吃甜食，健康值缓慢下降"
+    },
+    {
+      "source": "trust",
+      "threshold": 30,
+      "operator": "<",
+      "target": "mood",
+      "perTurnDelta": -3,
+      "description": "信任值过低时，李伯伯抗拒沟通、隐瞒真实状况，内心孤独导致心情下降"
+    },
+    {
+      "source": "mood",
+      "threshold": 30,
+      "operator": "<",
+      "target": "health",
+      "perTurnDelta": -2,
+      "description": "心情值过低时，退休落差引发自我放纵，饮食运动失控，健康值下降"
+    }
+  ],
+  "storyActs": [
+    {
+      "act": 1,
+      "startDay": 1,
+      "endDay": 7,
+      "storyFile": "/data/stories/li_bobo/act1.json",
+      "title": "第一幕：新生活的开始",
+      "theme": "退休适应与慢性病管理"
+    },
+    {
+      "act": 2,
+      "startDay": 8,
+      "endDay": 21,
+      "storyFile": "/data/stories/li_bobo/act2.json",
+      "title": "第二幕：心声与社交",
+      "theme": "退休适应与心理支持"
+    },
+    {
+      "act": 3,
+      "startDay": 22,
+      "endDay": 30,
+      "storyFile": "/data/stories/li_bobo/act3.json",
+      "title": "第三幕：守护与成长",
+      "theme": "糖尿病急症应对与结局"
+    }
+  ],
+  "isLocked": false,
+  "spiritAppearance": {
+    "color": "#F5C842",
+    "lottieAnimation": "spirit_appear",
+    "name": "小精灵"
+  },
+  "endingWeights": {
+    "health": 0.25,
+    "mood": 0.2,
+    "independence": 0.35,
+    "trust": 0.2
+  }
+}

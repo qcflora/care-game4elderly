@@ -1,0 +1,89 @@
+/**
+ * 通用动画定义
+ */
+
+/* 淡入淡出 */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+/* 从下滑入 */
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* 从下滑出 */
+@keyframes slideDown {
+  from { transform: translateY(0); opacity: 1; }
+  to { transform: translateY(20px); opacity: 0; }
+}
+
+/* 水彩过渡效果 */
+@keyframes watercolorReveal {
+  0% { clip-path: circle(0% at 50% 50%); opacity: 0; }
+  100% { clip-path: circle(100% at 50% 50%); opacity: 1; }
+}
+
+/* 精灵浮动 */
+@keyframes spiritFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* 精灵光芒脉冲 */
+@keyframes spiritGlow {
+  0%, 100% { box-shadow: 0 0 10px var(--color-spirit-glow); }
+  50% { box-shadow: 0 0 25px var(--color-spirit-glow), 0 0 50px rgba(245, 200, 66, 0.2); }
+}
+
+/* 属性变化闪烁 */
+@keyframes attributeFlash {
+  0% { background-color: transparent; }
+  30% { background-color: var(--color-spirit-power-light); }
+  100% { background-color: transparent; }
+}
+
+/* 打字机光标 */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* 缩放弹入 */
+@keyframes scaleIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* 路由切换过渡 */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity var(--transition-normal);
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.slide-up-enter-active,
+.slide-up-leave-active {
+  transition: all var(--transition-normal);
+}
+
+.slide-up-enter-from {
+  transform: translateY(20px);
+  opacity: 0;
+}
+
+.slide-up-leave-to {
+  transform: translateY(-20px);
+  opacity: 0;
+}

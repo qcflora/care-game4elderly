@@ -1,0 +1,101 @@
+[
+  {
+    "id": "glucose_meter_app",
+    "name": "血糖管理App",
+    "description": "李伯伯手机上的智能血糖管理应用，连接蓝牙血糖仪。可以记录每次测量的血糖值，自动生成趋势图，还能设置餐前餐后标签。屏幕上的数据曲线从最初的居高不下，慢慢变得平缓正常。",
+    "icon": "/images/props/glucose_meter_app.svg",
+    "image": "/images/props/glucose_meter_app_large.svg",
+    "layer": "inspect",
+    "isCollectible": false,
+    "characterId": "li_bobo",
+    "category": "tool"
+  },
+  {
+    "id": "smartwatch_heart_rate",
+    "name": "心率监测手表",
+    "description": "一款黑色的智能手表，可以实时监测心率、血氧和睡眠质量。表盘上显示着当前心率78次/分。李伯伯从最初抗拒戴手表，到现在每天起床第一件事就是看睡眠数据。",
+    "icon": "/images/props/smartwatch_heart_rate.svg",
+    "image": "/images/props/smartwatch_heart_rate_large.svg",
+    "layer": "display",
+    "isCollectible": true,
+    "characterId": "li_bobo",
+    "category": "tool"
+  },
+  {
+    "id": "smartwatch_alert",
+    "name": "心率异常提醒",
+    "description": "智能手表的心率异常提醒功能截图。当李伯伯的心率超出正常范围（静息时低于40或高于120）时，手表会自动震动并发出警报，同时向紧急联系人发送通知。",
+    "icon": "/images/props/smartwatch_alert.svg",
+    "image": "/images/props/smartwatch_alert_large.svg",
+    "layer": "inspect",
+    "isCollectible": false,
+    "characterId": "li_bobo",
+    "category": "tool"
+  },
+  {
+    "id": "foot_check_mirror",
+    "name": "脚部检查镜",
+    "description": "一个带长柄的圆形小镜子，专门用来检查脚底。李伯伯每天出门前都会用它检查脚部有无伤口、红肿或水泡。镜面很干净，手柄上缠了一圈防滑胶带，方便握持。",
+    "icon": "/images/props/foot_check_mirror.svg",
+    "image": "/images/props/foot_check_mirror_large.svg",
+    "layer": "display",
+    "isCollectible": true,
+    "characterId": "li_bobo",
+    "category": "tool"
+  },
+  {
+    "id": "wechat_sport_record",
+    "name": "微信运动记录",
+    "description": "李伯伯手机上的微信运动界面截图。他每天的步数从最开始的3000步增长到了6000步，好友排行榜上他的排名稳步上升。他最大的对手是老张，两人每天都在暗暗较劲。",
+    "icon": "/images/props/wechat_sport_record.svg",
+    "image": "/images/props/wechat_sport_record_large.svg",
+    "layer": "inspect",
+    "isCollectible": false,
+    "characterId": "li_bobo",
+    "category": "tool"
+  },
+  {
+    "id": "li_diet_plan",
+    "name": "饮食计划表",
+    "description": "一张贴在冰箱上的饮食计划表，用磁铁固定着。表格左栏写着“早餐““午餐““晚餐““加餐“，右栏是推荐的食物和分量。表上还有一行李伯伯手写的备注“少油少盐，多吃菜”。",
+    "icon": "/images/props/li_diet_plan.svg",
+    "image": "/images/props/li_diet_plan_large.svg",
+    "layer": "display",
+    "isCollectible": true,
+    "characterId": "li_bobo",
+    "category": "document"
+  },
+  {
+    "id": "li_insulin_case",
+    "name": "胰岛素冷藏包",
+    "description": "一个小型便携冷藏包，米白色，用来存放胰岛素笔。包内有一个温度计，显示当前温度8°C。李伯伯出门的时候会带上它，里面还放着一包备用针头和酒精棉片。",
+    "icon": "/images/props/li_insulin_case.svg",
+    "image": "/images/props/li_insulin_case_large.svg",
+    "layer": "display",
+    "isCollectible": true,
+    "characterId": "li_bobo",
+    "category": "medicine"
+  },
+  {
+    "id": "li_comfortable_shoes",
+    "name": "软底舒适鞋",
+    "description": "一双深蓝色的软底运动鞋，鞋垫是记忆棉材质，鞋头宽大不挤脚。自从上次脚磨破之后，李伯伯就换上了这双鞋，每天散步都穿着它。鞋底有些磨损，看得出来经常穿。",
+    "icon": "/images/props/li_comfortable_shoes.svg",
+    "image": "/images/props/li_comfortable_shoes_large.svg",
+    "layer": "display",
+    "isCollectible": false,
+    "characterId": "li_bobo",
+    "category": "tool"
+  },
+  {
+    "id": "li_healthy_recipe",
+    "name": "健康食谱卡",
+    "description": "一套带塑封的食谱卡片，共10张，每张正面是一道适合糖尿病患者的家常菜图片，背面是详细的食材和做法。卡片边缘用圆角处理，方便翻阅。李伯伯最爱看的是“清蒸鲈鱼“那张。",
+    "icon": "/images/props/li_healthy_recipe.svg",
+    "image": "/images/props/li_healthy_recipe_large.svg",
+    "layer": "display",
+    "isCollectible": true,
+    "characterId": "li_bobo",
+    "category": "document"
+  }
+]
