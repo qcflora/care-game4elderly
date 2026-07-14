@@ -1,54 +1,54 @@
 /**
  * 全局CSS变量定义
- * 色彩系统、字体、间距、动画等设计规范
+ * Vibe Coding 风格：玻璃拟态、精致阴影、弹性动画
  */
 
 :root {
   /* === 色彩系统 === */
 
-  /* 主色调 */
+  /* 主背景色 */
   --color-bg-primary: #FAF6F0;           /* 主背景 - 暖白 */
   --color-bg-secondary: #F3EDE4;         /* 次背景 */
-  --color-bg-card: #FFFFFF;               /* 卡片背景 */
-  --color-bg-overlay: rgba(62, 39, 35, 0.5); /* 遮罩背景 */
+  --color-bg-card: rgba(255, 255, 255, 0.85); /* 卡片背景 - 玻璃拟态基底 */
+  --color-bg-overlay: rgba(30, 20, 15, 0.4); /* 遮罩背景 */
 
   /* 精灵魔力色 */
   --color-spirit-power: #F5C842;          /* 精灵魔力 - 金色 */
-  --color-spirit-power-light: #FFF3CD;    /* 魔力浅色 */
+  --color-spirit-power-light: #FFF8E6;    /* 魔力浅色 */
   --color-spirit-power-dark: #D4A017;     /* 魔力深色 */
   --color-spirit-glow: rgba(245, 200, 66, 0.4); /* 魔力光晕 */
 
   /* 四维属性色 */
-  --color-health: #81C784;                /* 健康值 - 绿色 */
-  --color-health-light: #C8E6C9;          /* 健康浅色 */
-  --color-health-dark: #4CAF50;           /* 健康深色 */
-  --color-mood: #FFB74D;                  /* 心情值 - 橙色 */
-  --color-mood-light: #FFE0B2;            /* 心情浅色 */
-  --color-mood-dark: #FF9800;             /* 心情深色 */
-  --color-independence: #4FC3F7;          /* 独立值 - 蓝色 */
-  --color-independence-light: #B3E5FC;    /* 独立浅色 */
-  --color-independence-dark: #039BE5;     /* 独立深色 */
-  --color-trust: #CE93D8;                 /* 信任值 - 紫色 */
-  --color-trust-light: #E1BEE7;           /* 信任浅色 */
-  --color-trust-dark: #AB47BC;            /* 信任深色 */
+  --color-health: #66BB6A;                /* 健康值 - 翠绿 */
+  --color-health-light: #E8F5E9;          /* 健康浅色 */
+  --color-health-dark: #388E3C;           /* 健康深色 */
+  --color-mood: #FF9800;                  /* 心情值 - 琥珀 */
+  --color-mood-light: #FFF3E0;            /* 心情浅色 */
+  --color-mood-dark: #E65100;             /* 心情深色 */
+  --color-independence: #29B6F6;          /* 独立值 - 天蓝 */
+  --color-independence-light: #E1F5FE;    /* 独立浅色 */
+  --color-independence-dark: #0288D1;     /* 独立深色 */
+  --color-trust: #AB47BC;                 /* 信任值 - 紫罗兰 */
+  --color-trust-light: #F3E5F5;           /* 信任浅色 */
+  --color-trust-dark: #7B1FA2;            /* 信任深色 */
 
   /* 状态色 */
-  --color-warning: #EF5350;               /* 警告/紧急 - 红色 */
-  --color-warning-light: #FFCDD2;         /* 警告浅色 */
+  --color-warning: #EF5350;               /* 警告/紧急 */
+  --color-warning-light: #FFEBEE;         /* 警告浅色 */
   --color-success: #66BB6A;               /* 成功 */
   --color-info: #42A5F5;                  /* 提示 */
 
   /* 文字色 */
-  --color-text-primary: #3E2723;          /* 文字主色 - 深棕 */
-  --color-text-secondary: #8D6E63;        /* 文字辅色 - 棕色 */
-  --color-text-tertiary: #BCAAA4;         /* 文字三色 - 浅棕 */
+  --color-text-primary: #2D1F1A;          /* 文字主色 - 深棕黑 */
+  --color-text-secondary: #6D5E55;        /* 文字辅色 - 暖棕 */
+  --color-text-tertiary: #A89B93;         /* 文字三色 - 浅暖灰 */
   --color-text-inverse: #FFFFFF;          /* 反色文字 */
   --color-text-spirit: #F5C842;          /* 精灵台词色 */
 
   /* 边框与分隔 */
-  --color-border: rgba(62, 39, 35, 0.12);   /* 边框色 */
-  --color-border-light: rgba(62, 39, 35, 0.06); /* 浅边框 */
-  --color-divider: rgba(62, 39, 35, 0.08);    /* 分隔线 */
+  --color-border: rgba(45, 31, 26, 0.08);   /* 边框色 */
+  --color-border-light: rgba(45, 31, 26, 0.04); /* 浅边框 */
+  --color-divider: rgba(45, 31, 26, 0.06);    /* 分隔线 */
 
   /* === 字体系统 === */
   --font-family-primary: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -82,24 +82,25 @@
   --spacing-3xl: 4rem;     /* 64px */
 
   /* === 圆角 === */
-  --radius-sm: 0.375rem;   /* 6px */
-  --radius-md: 0.5rem;     /* 8px */
-  --radius-lg: 0.75rem;    /* 12px */
-  --radius-xl: 1rem;       /* 16px */
+  --radius-sm: 0.5rem;     /* 8px */
+  --radius-md: 0.75rem;    /* 12px */
+  --radius-lg: 1rem;       /* 16px */
+  --radius-xl: 1.25rem;    /* 20px */
   --radius-2xl: 1.5rem;    /* 24px */
   --radius-full: 9999px;
 
   /* === 阴影 === */
-  --shadow-sm: 0 1px 2px rgba(62, 39, 35, 0.05);
-  --shadow-md: 0 4px 6px rgba(62, 39, 35, 0.07);
-  --shadow-lg: 0 10px 15px rgba(62, 39, 35, 0.1);
-  --shadow-xl: 0 20px 25px rgba(62, 39, 35, 0.15);
-  --shadow-spirit: 0 0 20px rgba(245, 200, 66, 0.3); /* 精灵光效 */
+  --shadow-sm: 0 1px 3px rgba(45, 31, 26, 0.04), 0 1px 2px rgba(45, 31, 26, 0.03);
+  --shadow-md: 0 4px 6px rgba(45, 31, 26, 0.05), 0 2px 4px rgba(45, 31, 26, 0.04);
+  --shadow-lg: 0 10px 15px rgba(45, 31, 26, 0.06), 0 4px 6px rgba(45, 31, 26, 0.04);
+  --shadow-xl: 0 20px 25px rgba(45, 31, 26, 0.08), 0 8px 10px rgba(45, 31, 26, 0.04);
+  --shadow-spirit: 0 0 20px rgba(245, 200, 66, 0.25), 0 0 40px rgba(245, 200, 66, 0.1); /* 精灵光效 */
 
   /* === 动画 === */
-  --transition-fast: 150ms ease;
-  --transition-normal: 300ms ease;
-  --transition-slow: 500ms ease;
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-bounce: 400ms cubic-bezier(0.34, 1.56, 0.64, 1);
 
   /* === 布局 === */
   --game-max-width: 430px;           /* 游戏最大宽度（H5竖屏） */

@@ -9,49 +9,75 @@
     </div>
 
     <!-- 场景插画区 -->
-    <div class="game-view__scene" :class="`game-view__scene--${controller.currentSceneDesc.value || 'default'}`">
-      <img
-        v-if="sceneImagePath"
-        :src="sceneImagePath"
-        :alt="currentSceneName"
-        class="game-view__scene-img"
-        @error="handleSceneImgError"
-      />
+    <div class="game-view__scene" :class="`game-view__scene--${sceneClass}`">
+      <Transition name="scene-fade" mode="out-in">
+        <img
+          v-if="sceneImagePath"
+          :key="sceneImagePath"
+          :src="sceneImagePath"
+          :alt="currentSceneName"
+          class="game-view__scene-img"
+          loading="eager"
+          decoding="async"
+          @error="handleSceneImgError"
+        />
+      </Transition>
       <div class="game-view__scene-overlay" v-if="currentSceneName">
         <span class="game-view__scene-label">{{ currentSceneName }}</span>
       </div>
-      <div class="game-view__spirit" v-if="isSpiritSpeaking">
-        <SpiritAvatar emotion="cheerful" :color="spiritColor" />
-      </div>
+      <Transition name="spirit-pop">
+        <div class="game-view__spirit" v-if="isSpiritSpeaking">
+          <SpiritAvatar emotion="cheerful" :color="spiritColor" />
+        </div>
+      </Transition>
     </div>
 
     <!-- 对话区 -->
-    <div class="game-view__dialogue" v-if="controller.currentDialogue.value" @click="handleAdvance">
-      <div class="dialogue-box" :class="`dialogue-box--${controller.currentDialogue.value.speaker}`">
-        <div class="dialogue-box__speaker">
-          {{ speakerName }}
+    <Transition name="dialogue-slide">
+      <div
+        class="game-view__dialogue"
+        v-if="controller.currentDialogue.value"
+        @click="handleAdvance"
+      >
+        <div
+          class="dialogue-box"
+          :class="`dialogue-box--${controller.currentDialogue.value.speaker}`"
+        >
+          <div class="dialogue-box__speaker">
+            <span class="dialogue-box__speaker-dot" />
+            {{ speakerName }}
+          </div>
+          <p class="dialogue-box__text" ref="textRef">{{ displayedText }}<span v-if="isTyping" class="cursor-blink" /></p>
+          <div class="dialogue-box__hint" :class="{ 'is-visible': !isTyping }">
+            <span class="hint-pulse">点击继续</span>
+          </div>
         </div>
-        <p class="dialogue-box__text">{{ displayedText }}</p>
-        <div class="dialogue-box__hint" :class="{ 'is-hidden': isTyping }" v-if="!isTyping">点击继续</div>
       </div>
-    </div>
+    </Transition>
 
     <!-- 选项区 -->
-    <div class="game-view__choices" v-if="controller.currentChoices.value.length > 0">
+    <TransitionGroup
+      name="choice-stagger"
+      tag="div"
+      class="game-view__choices"
+      v-if="controller.currentChoices.value.length > 0"
+    >
       <button
-        v-for="choice in controller.currentChoices.value"
+        v-for="(choice, i) in controller.currentChoices.value"
         :key="choice.id"
         class="choice-btn"
+        :style="{ '--stagger-delay': `${i * 60}ms` }"
         @click="handleSelect(choice)"
       >
         <span class="choice-btn__text">{{ choice.text }}</span>
         <span class="choice-btn__desc" v-if="choice.description">{{ choice.description }}</span>
+        <span class="choice-btn__ripple" />
       </button>
-    </div>
+    </TransitionGroup>
 
     <!-- 反馈弹窗 -->
-    <Transition name="fade">
-      <div class="game-view__feedback" v-if="controller.isShowingFeedback.value">
+    <Transition name="feedback-scale">
+      <div class="game-view__feedback" v-if="controller.isShowingFeedback.value" @click.self="handleDismissFeedback">
         <div class="feedback-card">
           <div class="feedback-card__icon" :class="`feedback-card__icon--${controller.currentFeedback.value?.type}`">
             {{ feedbackIcon }}
@@ -63,15 +89,21 @@
           <p class="feedback-card__explanation" v-if="controller.currentFeedback.value?.explanation">
             {{ controller.currentFeedback.value?.explanation }}
           </p>
-          <button class="feedback-card__btn" @click="handleDismissFeedback">继续</button>
+          <button class="feedback-card__btn" @click="handleDismissFeedback">
+            <span>继续</span>
+            <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </button>
         </div>
       </div>
     </Transition>
 
     <!-- 结局画面 -->
-    <Transition name="fade">
+    <Transition name="ending-reveal">
       <div class="game-view__ending" v-if="controller.isGameEnded.value && controller.endingInfo.value">
         <div class="ending-card">
+          <div class="ending-card__glow" />
           <h2 class="ending-card__title">{{ controller.endingInfo.value.title }}</h2>
           <p class="ending-card__desc">{{ controller.endingInfo.value.description }}</p>
           <div class="ending-card__score" v-if="controller.endingInfo.value?.score">
@@ -79,29 +111,15 @@
             <span class="ending-score__value">{{ controller.endingInfo.value.score }}</span>
           </div>
           <div class="ending-card__stats">
-            <div class="ending-stat">
-              <span class="ending-stat__label">健康值</span>
-              <span class="ending-stat__value">{{ attributeStore.attributes.health }}</span>
-            </div>
-            <div class="ending-stat">
-              <span class="ending-stat__label">心情值</span>
-              <span class="ending-stat__value">{{ attributeStore.attributes.mood }}</span>
-            </div>
-            <div class="ending-stat">
-              <span class="ending-stat__label">独立值</span>
-              <span class="ending-stat__value">{{ attributeStore.attributes.independence }}</span>
-            </div>
-            <div class="ending-stat">
-              <span class="ending-stat__label">信任值</span>
-              <span class="ending-stat__value">{{ attributeStore.attributes.trust }}</span>
-            </div>
-            <div class="ending-stat">
-              <span class="ending-stat__label">精灵魔力</span>
-              <span class="ending-stat__value">{{ attributeStore.spiritPower.current }}</span>
+            <div class="ending-stat" v-for="(label, key) in statLabels" :key="key">
+              <span class="ending-stat__label">{{ label }}</span>
+              <span class="ending-stat__value">{{ statValues[key] }}</span>
             </div>
           </div>
           <div class="ending-card__actions">
-            <button class="ending-card__btn ending-card__btn--primary" @click="goHome">回到首页</button>
+            <button class="ending-card__btn ending-card__btn--primary" @click="goHome">
+              <span>回到首页</span>
+            </button>
             <button class="ending-card__btn" @click="goSelect">选择其他角色</button>
           </div>
         </div>
@@ -109,14 +127,19 @@
     </Transition>
 
     <!-- 加载状态 -->
-    <div class="game-view__loading" v-if="isLoading">
-      <div class="loading-spirit">精灵正在苏醒...</div>
-    </div>
+    <Transition name="fade">
+      <div class="game-view__loading" v-if="isLoading">
+        <div class="loading-spirit">
+          <div class="loading-spirit__orb" />
+          <p>精灵正在苏醒...</p>
+        </div>
+      </div>
+    </Transition>
   </GameContainer>
 </template>
 
 <script setup lang="ts">
-import { ref, computed, watch, onMounted, onUnmounted } from 'vue';
+import { ref, computed, watch, onMounted, onUnmounted, nextTick } from 'vue';
 import { useRouter } from 'vue-router';
 import { useGameStore } from '@/stores/gameStore';
 import { useAttributeStore } from '@/stores/attributeStore';
@@ -134,7 +157,13 @@ const controller = useGameController();
 const isLoading = ref(true);
 const isTyping = ref(false);
 const displayedText = ref('');
-const typingTimer = ref<number | null>(null);
+const textRef = ref<HTMLParagraphElement | null>(null);
+
+// RAF 打字机状态
+let rafId: number | null = null;
+let typingStartTime = 0;
+let fullText = '';
+const TYPING_SPEED = 45; // 毫秒/字符 (比原来30ms更流畅，但通过RAF批量更新)
 
 const spiritColor = computed(() => {
   return gameStore.currentCharacter?.spiritAppearance?.color ?? '#F5C842';
@@ -159,11 +188,15 @@ const sceneNameMap: Record<string, string> = {
   study: '书房',
   outdoors: '室外',
 };
+
+const sceneClass = computed(() => controller.currentSceneDesc.value || 'default');
+
 const currentSceneName = computed(() => {
   const scene = controller.currentSceneDesc.value;
   if (!scene) return '';
   return sceneNameMap[scene] ?? '';
 });
+
 /** 场景插画图片路径 */
 const sceneImagePath = computed(() => {
   const scene = controller.currentSceneDesc.value;
@@ -198,16 +231,40 @@ const feedbackIcon = computed(() => {
   return iconMap[type ?? ''] ?? '?';
 });
 
+const statLabels: Record<string, string> = {
+  health: '健康值',
+  mood: '心情值',
+  independence: '独立值',
+  trust: '信任值',
+  spiritPower: '精灵魔力',
+};
+
+const statValues = computed<Record<string, number>>(() => ({
+  health: attributeStore.attributes.health,
+  mood: attributeStore.attributes.mood,
+  independence: attributeStore.attributes.independence,
+  trust: attributeStore.attributes.trust,
+  spiritPower: attributeStore.spiritPower.current,
+}));
+
+// 预加载场景图片
+const preloadedScenes = new Set<string>();
+function preloadScene(scene: string) {
+  if (!scene || preloadedScenes.has(scene)) return;
+  const img = new Image();
+  img.src = `/images/scenes/${scene}.jpg`;
+  preloadedScenes.add(scene);
+}
+
 function handleAdvance() {
   if (isTyping.value) {
     // 立即完成打字机效果
-    const fullText = controller.currentDialogue.value?.text ?? '';
+    if (rafId !== null) {
+      cancelAnimationFrame(rafId);
+      rafId = null;
+    }
     displayedText.value = fullText;
     isTyping.value = false;
-    if (typingTimer.value !== null) {
-      clearTimeout(typingTimer.value);
-      typingTimer.value = null;
-    }
     return;
   }
   controller.advanceDialogue();
@@ -235,30 +292,46 @@ function handleSceneImgError() {
   // 图片加载失败时静默处理，回退到背景色
 }
 
-// 当第一条对话出现时，关闭加载状态
+/** RAF 批量打字机效果 */
+function startTypewriter(text: string) {
+  if (rafId !== null) cancelAnimationFrame(rafId);
+  fullText = text;
+  displayedText.value = '';
+  isTyping.value = true;
+  typingStartTime = performance.now();
+
+  const typeFrame = (now: number) => {
+    const elapsed = now - typingStartTime;
+    const targetIndex = Math.min(Math.floor(elapsed / TYPING_SPEED), fullText.length);
+
+    if (targetIndex > displayedText.value.length) {
+      displayedText.value = fullText.slice(0, targetIndex);
+    }
+
+    if (targetIndex < fullText.length) {
+      rafId = requestAnimationFrame(typeFrame);
+    } else {
+      isTyping.value = false;
+      rafId = null;
+    }
+  };
+
+  rafId = requestAnimationFrame(typeFrame);
+}
+
+// 当对话变化时更新
 watch(() => controller.currentDialogue.value, (dialogue) => {
   if (dialogue && isLoading.value) {
     isLoading.value = false;
   }
-
-  // 打字机效果
   if (dialogue) {
-    // 清空并启动打字机
-    displayedText.value = '';
-    isTyping.value = true;
-    let index = 0;
-    const text = dialogue.text;
-    typingTimer.value = window.setTimeout(function type() {
-      if (index < text.length) {
-        displayedText.value += text[index];
-        index++;
-        typingTimer.value = window.setTimeout(type, 30);
-      } else {
-        isTyping.value = false;
-        typingTimer.value = null;
-      }
-    }, 30);
+    startTypewriter(dialogue.text);
   }
+});
+
+// 预加载当前场景
+watch(() => controller.currentSceneDesc.value, (scene) => {
+  if (scene) preloadScene(scene);
 });
 
 onMounted(() => {
@@ -275,32 +348,43 @@ onMounted(() => {
 });
 
 onUnmounted(() => {
-  if (typingTimer.value !== null) {
-    clearTimeout(typingTimer.value);
+  if (rafId !== null) {
+    cancelAnimationFrame(rafId);
   }
   controller.dispose();
 });
 </script>
 
 <style scoped>
+/* ========== 属性栏 ========== */
 .game-view__attributes {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0 var(--spacing-md);
   padding: var(--spacing-xs) var(--spacing-base);
-  background: var(--color-bg-card);
-  border-bottom: 1px solid var(--color-border);
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px) saturate(1.2);
+  -webkit-backdrop-filter: blur(12px) saturate(1.2);
+  border-bottom: 1px solid rgba(62, 39, 35, 0.06);
+  position: sticky;
+  top: 0;
+  z-index: var(--z-status-bar);
+  contain: layout style paint;
 }
 
+/* ========== 场景区域 ========== */
 .game-view__scene {
   flex: 1;
-  min-height: 180px;
+  min-height: 200px;
+  max-height: 320px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   position: relative;
   overflow: hidden;
+  background: linear-gradient(160deg, #F5EDE4 0%, #EDE4D8 50%, #E8DDD0 100%);
+  contain: layout style paint;
 }
 
 .game-view__scene-img {
@@ -310,7 +394,8 @@ onUnmounted(() => {
   height: 100%;
   object-fit: cover;
   object-position: center;
-  transition: opacity 0.5s ease;
+  will-change: transform, opacity;
+  transform: translateZ(0);
 }
 
 .game-view__scene-overlay {
@@ -319,18 +404,22 @@ onUnmounted(() => {
   left: 0;
   right: 0;
   padding: var(--spacing-sm) var(--spacing-base);
-  background: linear-gradient(transparent, rgba(0,0,0,0.35));
+  background: linear-gradient(transparent, rgba(30, 20, 15, 0.45));
   pointer-events: none;
   z-index: 1;
 }
 
 .game-view__scene-label {
   font-size: var(--font-size-xs);
-  color: rgba(255, 255, 255, 0.85);
-  background: rgba(0, 0, 0, 0.25);
-  padding: 2px var(--spacing-sm);
+  font-weight: var(--font-weight-medium);
+  color: rgba(255, 255, 255, 0.92);
+  background: rgba(0, 0, 0, 0.2);
+  padding: 3px 12px;
   border-radius: var(--radius-full);
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  letter-spacing: 0.5px;
 }
 
 .game-view__spirit {
@@ -338,50 +427,112 @@ onUnmounted(() => {
   top: var(--spacing-base);
   right: var(--spacing-base);
   z-index: 2;
+  filter: drop-shadow(0 4px 12px rgba(245, 200, 66, 0.25));
+  will-change: transform;
 }
 
+/* ========== 对话区域 ========== */
 .game-view__dialogue {
   padding: var(--spacing-base);
   cursor: pointer;
   min-height: 100px;
+  contain: layout style paint;
 }
 
 .dialogue-box {
-  background: var(--color-bg-card);
-  border-radius: var(--radius-lg);
-  padding: var(--spacing-base);
-  border: 2px solid var(--color-border);
-  box-shadow: var(--shadow-sm);
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(16px) saturate(1.3);
+  -webkit-backdrop-filter: blur(16px) saturate(1.3);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-base) var(--spacing-lg);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow:
+    0 1px 2px rgba(62, 39, 35, 0.04),
+    0 4px 16px rgba(62, 39, 35, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.dialogue-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+  opacity: 0.7;
 }
 
 .dialogue-box--spirit {
-  border-color: var(--color-spirit-power);
-  background: var(--color-spirit-power-light);
+  background: rgba(255, 248, 230, 0.85);
+  border-color: rgba(245, 200, 66, 0.25);
+  box-shadow:
+    0 1px 2px rgba(245, 200, 66, 0.08),
+    0 4px 20px rgba(245, 200, 66, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
 }
+.dialogue-box--spirit::before { background: var(--color-spirit-power); }
 
 .dialogue-box--elder {
-  border-color: var(--color-trust);
+  background: rgba(255, 245, 245, 0.85);
+  border-color: rgba(206, 147, 216, 0.2);
+  box-shadow:
+    0 1px 2px rgba(206, 147, 216, 0.06),
+    0 4px 16px rgba(206, 147, 216, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
 }
+.dialogue-box--elder::before { background: var(--color-trust); }
 
 .dialogue-box--narrator {
+  background: rgba(250, 246, 240, 0.7);
   border-style: dashed;
-  background: transparent;
+  border-color: rgba(62, 39, 35, 0.1);
 }
+.dialogue-box--narrator::before { background: var(--color-text-tertiary); opacity: 0.4; }
 
 .dialogue-box__speaker {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-bold);
   color: var(--color-text-secondary);
   margin-bottom: var(--spacing-xs);
 }
 
+.dialogue-box__speaker-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-text-tertiary);
+  flex-shrink: 0;
+}
+
 .dialogue-box--spirit .dialogue-box__speaker { color: var(--color-spirit-power-dark); }
-.dialogue-box--elder .dialogue-box__speaker { color: var(--color-trust); }
+.dialogue-box--spirit .dialogue-box__speaker-dot { background: var(--color-spirit-power); box-shadow: 0 0 6px var(--color-spirit-glow); }
+.dialogue-box--elder .dialogue-box__speaker { color: var(--color-trust-dark); }
+.dialogue-box--elder .dialogue-box__speaker-dot { background: var(--color-trust); }
 
 .dialogue-box__text {
   font-size: var(--font-size-base);
   line-height: var(--line-height-relaxed);
   color: var(--color-text-primary);
+  min-height: 1.5em;
+  word-break: break-word;
+}
+
+.cursor-blink {
+  display: inline-block;
+  width: 2px;
+  height: 1.1em;
+  background: var(--color-spirit-power);
+  margin-left: 2px;
+  vertical-align: text-bottom;
+  animation: cursorBlink 0.8s ease-in-out infinite;
+  border-radius: 1px;
 }
 
 .dialogue-box__hint {
@@ -389,14 +540,28 @@ onUnmounted(() => {
   font-size: var(--font-size-xs);
   color: var(--color-text-tertiary);
   margin-top: var(--spacing-xs);
-  animation: fadeIn 1s ease-in-out infinite;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
+.dialogue-box__hint.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hint-pulse {
+  display: inline-block;
+  animation: hintPulse 2s ease-in-out infinite;
+}
+
+/* ========== 选项区域 ========== */
 .game-view__choices {
   padding: var(--spacing-base);
   display: flex;
   flex-direction: column;
   gap: var(--spacing-sm);
+  contain: layout style paint;
 }
 
 .choice-btn {
@@ -404,68 +569,106 @@ onUnmounted(() => {
   flex-direction: column;
   align-items: flex-start;
   gap: var(--spacing-xs);
-  padding: var(--spacing-md) var(--spacing-base);
-  background: var(--color-bg-card);
-  border: 2px solid var(--color-border);
-  border-radius: var(--radius-lg);
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(12px) saturate(1.2);
+  -webkit-backdrop-filter: blur(12px) saturate(1.2);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: var(--radius-xl);
   text-align: left;
-  transition: all 0.15s ease;
+  transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow:
+    0 1px 2px rgba(62, 39, 35, 0.04),
+    0 2px 8px rgba(62, 39, 35, 0.04);
+  position: relative;
+  overflow: hidden;
+  will-change: transform;
+  transform: translateZ(0);
 }
 
 .choice-btn:active {
-  transform: scale(0.98);
+  transform: scale(0.97) translateZ(0);
   border-color: var(--color-spirit-power);
-  background: var(--color-spirit-power-light);
+  background: rgba(255, 248, 230, 0.9);
+  box-shadow:
+    0 1px 2px rgba(245, 200, 66, 0.1),
+    0 4px 16px rgba(245, 200, 66, 0.12);
 }
 
 .choice-btn__text {
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-medium);
   color: var(--color-text-primary);
+  line-height: 1.5;
 }
 
 .choice-btn__desc {
   font-size: var(--font-size-xs);
   color: var(--color-text-secondary);
+  line-height: 1.4;
 }
 
+.choice-btn__ripple {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at var(--ripple-x, 50%) var(--ripple-y, 50%), rgba(245, 200, 66, 0.15) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.choice-btn:active .choice-btn__ripple {
+  opacity: 1;
+}
+
+/* ========== 反馈弹窗 ========== */
 .game-view__feedback {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(30, 20, 15, 0.35);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 100;
   padding: var(--spacing-base);
+  contain: layout style paint;
 }
 
 .feedback-card {
-  background: var(--color-bg-card);
-  border-radius: var(--radius-xl);
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(24px) saturate(1.4);
+  -webkit-backdrop-filter: blur(24px) saturate(1.4);
+  border-radius: var(--radius-2xl);
   padding: var(--spacing-xl);
   max-width: 400px;
   width: 100%;
   text-align: center;
-  box-shadow: var(--shadow-lg);
+  box-shadow:
+    0 1px 2px rgba(62, 39, 35, 0.04),
+    0 8px 32px rgba(62, 39, 35, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  contain: layout style paint;
 }
 
 .feedback-card__icon {
-  width: 48px;
-  height: 48px;
+  width: 52px;
+  height: 52px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto var(--spacing-base);
-  font-size: 24px;
+  font-size: 26px;
   font-weight: bold;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
-.feedback-card__icon--correct { background: #E8F5E9; color: #2E7D32; }
-.feedback-card__icon--partial { background: #FFF3E0; color: #E65100; }
-.feedback-card__icon--incorrect { background: #FFEBEE; color: #C62828; }
-.feedback-card__icon--neutral { background: #E3F2FD; color: #1565C0; }
+.feedback-card__icon--correct { background: linear-gradient(135deg, #E8F5E9, #C8E6C9); color: #2E7D32; }
+.feedback-card__icon--partial { background: linear-gradient(135deg, #FFF3E0, #FFE0B2); color: #E65100; }
+.feedback-card__icon--incorrect { background: linear-gradient(135deg, #FFEBEE, #FFCDD2); color: #C62828; }
+.feedback-card__icon--neutral { background: linear-gradient(135deg, #E3F2FD, #BBDEFB); color: #1565C0; }
 
 .feedback-card__spirit {
   margin-bottom: var(--spacing-base);
@@ -476,49 +679,91 @@ onUnmounted(() => {
   line-height: var(--line-height-relaxed);
   color: var(--color-text-primary);
   margin-bottom: var(--spacing-sm);
+  font-weight: var(--font-weight-medium);
 }
 
 .feedback-card__explanation {
   font-size: var(--font-size-sm);
   color: var(--color-text-secondary);
   line-height: var(--line-height-normal);
-  margin-bottom: var(--spacing-base);
+  margin-bottom: var(--spacing-lg);
   padding: var(--spacing-sm) var(--spacing-base);
-  background: var(--color-bg-primary);
-  border-radius: var(--radius-md);
+  background: rgba(250, 246, 240, 0.8);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(62, 39, 35, 0.06);
 }
 
 .feedback-card__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
   padding: var(--spacing-sm) var(--spacing-xl);
-  background: var(--color-spirit-power);
-  color: var(--color-text-primary);
+  background: linear-gradient(135deg, var(--color-spirit-power), #E8B828);
+  color: #3E2723;
   border: none;
   border-radius: var(--radius-lg);
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-bold);
+  box-shadow: 0 2px 8px rgba(245, 200, 66, 0.3);
+  transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+  cursor: pointer;
 }
 
+.feedback-card__btn:active {
+  transform: scale(0.96);
+  box-shadow: 0 1px 4px rgba(245, 200, 66, 0.2);
+}
+
+.btn-arrow {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.2s ease;
+}
+
+.feedback-card__btn:active .btn-arrow {
+  transform: translateX(3px);
+}
+
+/* ========== 结局画面 ========== */
 .game-view__ending {
   position: fixed;
   inset: 0;
-  background: var(--color-bg-primary);
+  background: linear-gradient(160deg, #FAF6F0 0%, #F3EDE4 50%, #EDE4D8 100%);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 200;
   padding: var(--spacing-base);
+  contain: layout style paint;
+  overflow-y: auto;
 }
 
 .ending-card {
   text-align: center;
   max-width: 400px;
   width: 100%;
+  position: relative;
+  padding: var(--spacing-xl);
+}
+
+.ending-card__glow {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(245, 200, 66, 0.15) 0%, transparent 70%);
+  pointer-events: none;
 }
 
 .ending-card__title {
   font-size: var(--font-size-2xl);
   color: var(--color-spirit-power-dark);
   margin-bottom: var(--spacing-base);
+  font-weight: var(--font-weight-bold);
+  text-shadow: 0 2px 8px rgba(245, 200, 66, 0.15);
 }
 
 .ending-card__desc {
@@ -534,10 +779,11 @@ onUnmounted(() => {
   align-items: baseline;
   gap: var(--spacing-sm);
   margin-bottom: var(--spacing-base);
-  padding: var(--spacing-base);
-  background: var(--color-spirit-power-light);
-  border-radius: var(--radius-lg);
-  border: 2px solid var(--color-spirit-power);
+  padding: var(--spacing-base) var(--spacing-lg);
+  background: linear-gradient(135deg, rgba(255, 248, 230, 0.9), rgba(255, 243, 205, 0.8));
+  border-radius: var(--radius-xl);
+  border: 1px solid rgba(245, 200, 66, 0.2);
+  box-shadow: 0 2px 8px rgba(245, 200, 66, 0.08);
 }
 
 .ending-score__label {
@@ -557,14 +803,18 @@ onUnmounted(() => {
   gap: var(--spacing-sm);
   margin-bottom: var(--spacing-xl);
   padding: var(--spacing-base);
-  background: var(--color-bg-card);
-  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  border-radius: var(--radius-xl);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 2px 8px rgba(62, 39, 35, 0.04);
 }
 
 .ending-stat {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: var(--spacing-xs) 0;
 }
 
 .ending-stat__label {
@@ -586,39 +836,198 @@ onUnmounted(() => {
 
 .ending-card__btn {
   padding: var(--spacing-md) var(--spacing-xl);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-xl);
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-bold);
-  border: 2px solid var(--color-border);
-  background: var(--color-bg-card);
+  border: 1px solid rgba(62, 39, 35, 0.1);
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
   color: var(--color-text-primary);
+  transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+  cursor: pointer;
+}
+
+.ending-card__btn:active {
+  transform: scale(0.97);
 }
 
 .ending-card__btn--primary {
-  background: var(--color-spirit-power);
-  border-color: var(--color-spirit-power);
+  background: linear-gradient(135deg, var(--color-spirit-power), #E8B828);
+  border-color: transparent;
+  color: #3E2723;
+  box-shadow: 0 2px 12px rgba(245, 200, 66, 0.25);
 }
 
+.ending-card__btn--primary:active {
+  box-shadow: 0 1px 6px rgba(245, 200, 66, 0.15);
+}
+
+/* ========== 加载状态 ========== */
 .game-view__loading {
   position: fixed;
   inset: 0;
-  background: var(--color-bg-primary);
+  background: linear-gradient(160deg, #FAF6F0 0%, #F3EDE4 100%);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 300;
+  contain: layout style paint;
 }
 
 .loading-spirit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-base);
   font-size: var(--font-size-lg);
   color: var(--color-spirit-power-dark);
-  animation: fadeIn 1.5s ease-in-out infinite;
 }
 
-.fade-enter-active, .fade-leave-active {
+.loading-spirit__orb {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-spirit-power), #E8B828);
+  box-shadow: 0 0 20px rgba(245, 200, 66, 0.3), 0 0 60px rgba(245, 200, 66, 0.1);
+  animation: spiritPulse 1.5s ease-in-out infinite;
+}
+
+/* ========== Transition 动画 ========== */
+
+/* 场景淡入淡出 */
+.scene-fade-enter-active,
+.scene-fade-leave-active {
+  transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1), transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scene-fade-enter-from {
+  opacity: 0;
+  transform: scale(1.04);
+}
+
+.scene-fade-leave-to {
+  opacity: 0;
+  transform: scale(0.98);
+}
+
+/* 精灵弹出 */
+.spirit-pop-enter-active {
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.spirit-pop-leave-active {
+  transition: all 0.2s ease;
+}
+
+.spirit-pop-enter-from {
+  opacity: 0;
+  transform: scale(0.6) translateY(-10px);
+}
+
+.spirit-pop-leave-to {
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+/* 对话滑入 */
+.dialogue-slide-enter-active {
+  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.dialogue-slide-leave-active {
+  transition: all 0.2s ease;
+}
+
+.dialogue-slide-enter-from {
+  opacity: 0;
+  transform: translateY(16px);
+}
+
+.dialogue-slide-leave-to {
+  opacity: 0;
+  transform: translateY(-8px);
+}
+
+/* 选项交错滑入 */
+.choice-stagger-enter-active {
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition-delay: var(--stagger-delay, 0ms);
+}
+
+.choice-stagger-leave-active {
+  transition: all 0.2s ease;
+}
+
+.choice-stagger-enter-from {
+  opacity: 0;
+  transform: translateY(20px) scale(0.96);
+}
+
+.choice-stagger-leave-to {
+  opacity: 0;
+  transform: translateX(-20px);
+}
+
+/* 反馈弹性缩放 */
+.feedback-scale-enter-active {
+  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.feedback-scale-leave-active {
+  transition: all 0.2s ease;
+}
+
+.feedback-scale-enter-from {
+  opacity: 0;
+  transform: scale(0.85);
+}
+
+.feedback-scale-leave-to {
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+/* 结局揭示 */
+.ending-reveal-enter-active {
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ending-reveal-leave-active {
+  transition: all 0.3s ease;
+}
+
+.ending-reveal-enter-from {
+  opacity: 0;
+}
+
+.ending-reveal-leave-to {
+  opacity: 0;
+}
+
+/* 基础淡入淡出 */
+.fade-enter-active,
+.fade-leave-active {
   transition: opacity 0.3s ease;
 }
-.fade-enter-from, .fade-leave-to {
+
+.fade-enter-from,
+.fade-leave-to {
   opacity: 0;
+}
+
+/* ========== Keyframes ========== */
+@keyframes cursorBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes hintPulse {
+  0%, 100% { opacity: 0.6; transform: translateY(0); }
+  50% { opacity: 1; transform: translateY(-1px); }
+}
+
+@keyframes spiritPulse {
+  0%, 100% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.1); opacity: 1; }
 }
 </style>
