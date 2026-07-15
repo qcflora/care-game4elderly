@@ -5,9 +5,23 @@
 import type { AlbumEntry } from '@/types/album';
 import type { DiaryEntry } from '@/types/diary';
 import type { Prop } from '@/types/prop';
-import type { SkillTree } from '@/types/skill';
+import type { SkillTree, SkillCategory, Skill } from '@/types/skill';
 
 const __DEV__ = import.meta.env.DEV;
+
+/**
+ * 解析静态资源路径，自动拼接 Vite base URL
+ * 解决 GitHub Pages 子路径部署时绝对路径失效问题
+ */
+export function resolveAsset(path: string): string {
+  if (path.startsWith('/')) {
+    const base = import.meta.env.BASE_URL;
+    // 确保 base 以 / 结尾，path 去掉开头的 /
+    const normalizedBase = base.endsWith('/') ? base : base + '/';
+    return normalizedBase + path.slice(1);
+  }
+  return path;
+}
 
 /** 所有相册数据文件的懒加载映射 */
 const albumModules = import.meta.glob<{ default: AlbumEntry[] }>(
@@ -30,7 +44,7 @@ const skillTreeModules = import.meta.glob<{ default: SkillTree }>(
 );
 
 /**
- * 加载指定角色的相册数据
+ * 加载指定角色的相册数据（自动处理图片路径）
  */
 export async function loadAlbumData(characterId: string): Promise<AlbumEntry[]> {
   const modulePath = `../data/albums/${characterId}.json`;
@@ -41,7 +55,12 @@ export async function loadAlbumData(characterId: string): Promise<AlbumEntry[]> 
   }
   try {
     const data = await loader();
-    return data.default || data;
+    const entries: AlbumEntry[] = data.default || data;
+    // 处理图片路径
+    for (const entry of entries) {
+      if (entry.image) entry.image = resolveAsset(entry.image);
+    }
+    return entries;
   } catch (error) {
     console.error(`[DataLoader] 加载相册数据失败: ${modulePath}`, error);
     return [];
@@ -87,7 +106,17 @@ export async function loadPropData(characterId: string): Promise<Prop[]> {
 }
 
 /**
- * 加载技能树数据（全局，不依赖角色）
+ * 递归处理技能树中的 icon 路径
+ */
+function resolveSkillIcons(category: SkillCategory): void {
+  if (category.icon) category.icon = resolveAsset(category.icon);
+  for (const skill of category.skills) {
+    if (skill.icon) skill.icon = resolveAsset(skill.icon);
+  }
+}
+
+/**
+ * 加载技能树数据（全局，不依赖角色，自动处理 icon 路径）
  */
 export async function loadSkillTreeData(): Promise<SkillTree | null> {
   const modulePath = `../data/skills/skillTree.json`;
@@ -98,7 +127,12 @@ export async function loadSkillTreeData(): Promise<SkillTree | null> {
   }
   try {
     const data = await loader();
-    return data.default || data;
+    const tree: SkillTree = data.default || data;
+    // 处理所有 icon 路径
+    for (const category of tree.categories) {
+      resolveSkillIcons(category);
+    }
+    return tree;
   } catch (error) {
     console.error(`[DataLoader] 加载技能树数据失败`, error);
     return null;

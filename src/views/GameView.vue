@@ -201,7 +201,7 @@ const currentSceneName = computed(() => {
 const sceneImagePath = computed(() => {
   const scene = controller.currentSceneDesc.value;
   if (!scene) return '';
-  return `/images/scenes/${scene}.jpg`;
+  return `${import.meta.env.BASE_URL}images/scenes/${scene}.jpg`;
 });
 
 const isSpiritSpeaking = computed(() => {
@@ -252,7 +252,7 @@ const preloadedScenes = new Set<string>();
 function preloadScene(scene: string) {
   if (!scene || preloadedScenes.has(scene)) return;
   const img = new Image();
-  img.src = `/images/scenes/${scene}.jpg`;
+  img.src = `${import.meta.env.BASE_URL}images/scenes/${scene}.jpg`;
   preloadedScenes.add(scene);
 }
 

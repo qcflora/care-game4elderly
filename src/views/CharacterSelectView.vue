@@ -23,7 +23,7 @@
         <!-- 水彩人物图 -->
         <div class="character-card__portrait">
           <img
-            :src="character.portrait"
+            :src="resolvePortrait(character.portrait)"
             :alt="character.nickname"
             class="character-card__img"
             @error="handleImgError"
@@ -69,7 +69,7 @@
       <div class="select-view__detail" v-if="selectedCharacter && !selectedCharacter.isLocked">
         <div class="detail-panel">
           <div class="detail-panel__portrait">
-            <img :src="selectedCharacter.portrait" :alt="selectedCharacter.nickname" />
+            <img :src="resolvePortrait(selectedCharacter.portrait)" :alt="selectedCharacter.nickname" />
           </div>
           <div class="detail-panel__content">
             <h3 class="detail-panel__name">{{ selectedCharacter.nickname }}（{{ selectedCharacter.name }}）</h3>
@@ -150,6 +150,14 @@ function getUnlockHint(character: CharacterConfig): string {
 function handleImgError(e: Event) {
   const img = e.target as HTMLImageElement;
   img.style.display = 'none';
+}
+
+/** 拼接 base URL 处理图片路径 */
+function resolvePortrait(portrait: string): string {
+  if (portrait.startsWith('/')) {
+    return `${import.meta.env.BASE_URL}${portrait.slice(1)}`;
+  }
+  return portrait;
 }
 </script>
 

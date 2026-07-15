@@ -16,7 +16,7 @@ const props = defineProps<{
 
 const bgStyle = computed(() => ({
   background: props.scene
-    ? `url('/images/scenes/${props.scene}.webp') center/cover no-repeat`
+    ? `url('${import.meta.env.BASE_URL}images/scenes/${props.scene}.webp') center/cover no-repeat`
     : 'var(--color-bg-secondary)',
 }));
 </script>

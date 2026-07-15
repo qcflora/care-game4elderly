@@ -3,6 +3,7 @@
  * 负责动态加载角色配置和剧情数据
  */
 import type { CharacterConfig } from '@/types/character';
+import { resolveAsset } from './dataLoader';
 
 /** 所有角色配置文件（Vite 静态导入） */
 const characterModules = import.meta.glob<{ default: CharacterConfig }>(
@@ -13,10 +14,14 @@ const characterModules = import.meta.glob<{ default: CharacterConfig }>(
 /** 角色ID到配置的映射 */
 const characterMap: Record<string, CharacterConfig> = {};
 
-// 初始化角色映射
+// 初始化角色映射，并处理图片路径
 for (const [path, module] of Object.entries(characterModules)) {
   const config = module.default;
   if (config && config.id) {
+    // 处理静态资源路径（适配 GitHub Pages 子路径部署）
+    if (config.avatar) config.avatar = resolveAsset(config.avatar);
+    if (config.portrait) config.portrait = resolveAsset(config.portrait);
+    if (config.watercolorBase) config.watercolorBase = resolveAsset(config.watercolorBase);
     characterMap[config.id] = config;
   }
 }
