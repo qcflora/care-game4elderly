@@ -373,22 +373,24 @@ onUnmounted(() => {
   contain: layout style paint;
 }
 
-/* ========== 场景区域 - 大圆角突出 ========== */
+/* ========== 场景区域 - 固定比例防 CLS ========== */
 .game-view__scene {
   flex: 1;
-  min-height: 220px;
-  max-height: 340px;
+  min-height: 200px;
+  max-height: 260px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   position: relative;
   overflow: hidden;
-  margin: var(--spacing-base);
+  margin: 0 var(--spacing-base) var(--spacing-base);
   border-radius: var(--radius-xl);
   background: linear-gradient(160deg, #F0EDE8 0%, #E8E4DF 50%, #E0DAD4 100%);
   box-shadow: var(--shadow-md);
   contain: layout style paint;
+  /* 固定宽高比，图片加载时不跳动 */
+  aspect-ratio: 16 / 10;
 }
 
 .game-view__scene-img {

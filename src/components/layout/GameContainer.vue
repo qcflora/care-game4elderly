@@ -21,16 +21,21 @@ const containerRef = ref<HTMLElement | null>(null);
 <style scoped>
 .game-container {
   width: 100%;
-  min-height: 100vh;
-  min-height: 100dvh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   background: var(--color-bg-primary);
+  /* 禁止弹性回弹 */
+  overscroll-behavior: none;
+  -webkit-overflow-scrolling: auto;
 }
+
 .game-container__content {
   flex: 1;
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  /* 禁止弹性回弹 */
+  overscroll-behavior: none;
 }
 </style>

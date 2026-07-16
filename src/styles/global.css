@@ -1,6 +1,7 @@
 /**
  * 全局重置样式 + 基础样式
  * Travel APP 框架：现代、清爽、大圆角、大量留白
+ * 手机端稳定性优化：固定高度、防飘动、防弹性回弹
  */
 @import './variables.css';
 
@@ -16,7 +17,11 @@ html {
   font-size: 16px;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
-  scroll-behavior: smooth;
+  /* 禁止弹性滚动，防止页面飘动 */
+  overscroll-behavior: none;
+  -webkit-overflow-scrolling: auto;
+  /* 禁止 smooth scroll 在 iOS 上的抖动 */
+  scroll-behavior: auto;
 }
 
 body {
@@ -25,24 +30,32 @@ body {
   line-height: var(--line-height-normal);
   color: var(--color-text-primary);
   background-color: #E8E4DF;
-  min-height: 100vh;
-  min-height: 100dvh;
-  overflow-x: hidden;
+  /* 固定视口高度，内容变化也不抖动 */
+  height: 100vh;
+  height: 100dvh;
+  max-height: 100vh;
+  max-height: 100dvh;
+  overflow: hidden;
+  position: fixed;
+  inset: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  /* 防止软键盘弹起时页面被顶起 */
+  touch-action: pan-y;
 }
 
 #app {
   width: 100%;
-  min-height: 100vh;
-  min-height: 100dvh;
+  height: 100%;
   max-width: var(--game-max-width);
   margin: 0 auto;
   position: relative;
   background: var(--color-bg-primary);
   box-shadow: 0 0 60px rgba(26, 26, 46, 0.08);
   overflow: hidden;
+  /* 禁止弹性回弹 */
+  overscroll-behavior: none;
 }
 
 a {
@@ -72,6 +85,12 @@ textarea,
 select {
   font-family: inherit;
   font-size: inherit;
+}
+
+/* 全局禁止弹性回弹（iOS Safari） */
+html, body, #app {
+  overscroll-behavior: none;
+  -webkit-overscroll-behavior: none;
 }
 
 /* 滚动条美化 */
