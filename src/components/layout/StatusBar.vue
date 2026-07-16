@@ -8,8 +8,14 @@
       </div>
     </div>
     <div class="status-bar__right">
-      <button class="status-bar__nav-btn" @click="goAlbum" title="时光相册">相册</button>
-      <button class="status-bar__nav-btn" @click="goDiary" title="守护日记">日记</button>
+      <button class="status-bar__nav-btn" @click="goAlbum" title="时光相册">
+        相册
+        <span class="status-bar__badge" v-if="albumUnlocked > 0">{{ albumUnlocked > 99 ? '99+' : albumUnlocked }}</span>
+      </button>
+      <button class="status-bar__nav-btn" @click="goDiary" title="守护日记">
+        日记
+        <span class="status-bar__badge" v-if="diaryUnlocked > 0">{{ diaryUnlocked > 99 ? '99+' : diaryUnlocked }}</span>
+      </button>
       <SpiritPowerBar :percent="spiritPowerPercent" :level="spiritPowerLevel" />
     </div>
   </header>
@@ -20,6 +26,7 @@ import { computed } from 'vue';
 import { useRouter } from 'vue-router';
 import { useGameStore } from '@/stores/gameStore';
 import { useAttributeStore } from '@/stores/attributeStore';
+import { useStoryStore } from '@/stores/storyStore';
 import ElderAvatar from '@/components/status/ElderAvatar.vue';
 import DayCounter from '@/components/status/DayCounter.vue';
 import SpiritPowerBar from '@/components/status/SpiritPowerBar.vue';
@@ -27,12 +34,17 @@ import SpiritPowerBar from '@/components/status/SpiritPowerBar.vue';
 const router = useRouter();
 const gameStore = useGameStore();
 const attributeStore = useAttributeStore();
+const storyStore = useStoryStore();
 
 const characterName = computed(() => gameStore.currentCharacter?.nickname ?? '');
 const day = computed(() => gameStore.currentDay);
 const spiritPowerPercent = computed(() => attributeStore.spiritPowerPercent);
 const spiritPowerLevel = computed(() => attributeStore.spiritPowerLevel);
 const hasCritical = computed(() => attributeStore.criticalAttributes.length > 0);
+
+// 红点徽章：显示已解锁但可能未查看的数量
+const albumUnlocked = computed(() => storyStore.unlockedAlbumEntries.length);
+const diaryUnlocked = computed(() => storyStore.unlockedDiaryEntries.length);
 
 function goAlbum() {
   router.push('/album');
@@ -56,6 +68,7 @@ function goDiary() {
   z-index: var(--z-status-bar);
   height: var(--status-bar-height);
   transition: background-color var(--transition-fast);
+  flex-shrink: 0;
 }
 .status-bar.is-critical {
   background: var(--color-warning-light);
@@ -90,9 +103,35 @@ function goDiary() {
   cursor: pointer;
   transition: all var(--transition-fast);
   white-space: nowrap;
+  position: relative;
 }
 .status-bar__nav-btn:active {
   background: var(--color-spirit-power-light);
   border-color: var(--color-spirit-power);
+}
+
+/* 红点徽章 */
+.status-bar__badge {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  min-width: 16px;
+  height: 16px;
+  padding: 0 4px;
+  border-radius: var(--radius-full);
+  background: linear-gradient(135deg, #FF6B6B, #EF5350);
+  color: #fff;
+  font-size: 9px;
+  font-weight: var(--font-weight-bold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 4px rgba(239, 83, 80, 0.4);
+  animation: badgePop 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes badgePop {
+  from { transform: scale(0); }
+  to { transform: scale(1); }
 }
 </style>

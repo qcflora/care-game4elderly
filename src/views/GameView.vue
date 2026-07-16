@@ -138,6 +138,11 @@
       </div>
     </Transition>
   </GameContainer>
+
+  <!-- 全局浮动组件 -->
+  <AttributeFloaters ref="floaterRef" />
+  <UnlockToast ref="toastRef" />
+  <DailySummary ref="summaryRef" />
 </template>
 
 <script setup lang="ts">
@@ -150,6 +155,9 @@ import type { Choice } from '@/types/story';
 import GameContainer from '@/components/layout/GameContainer.vue';
 import AttributeBar from '@/components/status/AttributeBar.vue';
 import SpiritAvatar from '@/components/spirit/SpiritAvatar.vue';
+import AttributeFloaters from '@/components/feedback/AttributeFloaters.vue';
+import UnlockToast from '@/components/feedback/UnlockToast.vue';
+import DailySummary from '@/components/feedback/DailySummary.vue';
 
 const router = useRouter();
 const gameStore = useGameStore();
@@ -160,6 +168,10 @@ const isLoading = ref(true);
 const isTyping = ref(false);
 const displayedText = ref('');
 const textRef = ref<HTMLParagraphElement | null>(null);
+const floaterRef = ref<InstanceType<typeof AttributeFloaters> | null>(null);
+const toastRef = ref<InstanceType<typeof UnlockToast> | null>(null);
+const summaryRef = ref<InstanceType<typeof DailySummary> | null>(null);
+const isShowingSummary = ref(false);
 
 // RAF 打字机状态
 let rafId: number | null = null;
@@ -333,6 +345,29 @@ watch(() => controller.currentDialogue.value, (dialogue) => {
 // 预加载当前场景
 watch(() => controller.currentSceneDesc.value, (scene) => {
   if (scene) preloadScene(scene);
+});
+
+// 属性变化飘字动画
+watch(() => controller.pendingAttributeEffects.value, (effects) => {
+  if (effects && effects.length > 0 && floaterRef.value) {
+    floaterRef.value.showFloaters(effects);
+  }
+});
+
+// 解锁 Toast 通知
+watch(() => controller.pendingUnlockEvent.value, (event) => {
+  if (event && toastRef.value) {
+    toastRef.value.showUnlock(event.kind, event.text);
+  }
+});
+
+// 每日小结
+watch(() => controller.pendingDaySummary.value, async (summary) => {
+  if (summary && summaryRef.value && !isShowingSummary.value) {
+    isShowingSummary.value = true;
+    await summaryRef.value.show(summary.day, summary.effects, summary.spiritDelta);
+    isShowingSummary.value = false;
+  }
 });
 
 onMounted(() => {

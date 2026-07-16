@@ -14,7 +14,7 @@ import { useAttributeStore } from '@/stores/attributeStore';
 import { usePropStore } from '@/stores/propStore';
 import { useSkillStore } from '@/stores/skillStore';
 import { useSaveStore } from '@/stores/saveStore';
-import { loadPropData, loadSkillTreeData } from '@/utils/dataLoader';
+import { loadPropData, loadSkillTreeData, loadAlbumData, loadDiaryData } from '@/utils/dataLoader';
 
 const __DEV__ = import.meta.env.DEV;
 
@@ -45,6 +45,11 @@ const endingInfo = ref<{
   weights: { health: number; mood: number; independence: number; trust: number };
 } | null>(null);
 
+// UI 反馈事件（供组件订阅）
+const pendingAttributeEffects = ref<AttributeEffect[]>([]);
+const pendingUnlockEvent = ref<{ kind: 'diary' | 'album'; text: string } | null>(null);
+const pendingDaySummary = ref<{ day: number; effects: AttributeEffect[]; spiritDelta: number } | null>(null);
+
 // Promise resolve 函数持有
 let resolveDialogueAdvance: (() => void) | null = null;
 let resolveChoiceRequired: ((choice: Choice) => void) | null = null;
@@ -62,6 +67,9 @@ export function useGameController() {
   const saveStore = useSaveStore();
 
   let engine: StoryEngine | null = null;
+  // 记录每日属性变化，用于 dailySummary
+  let dailyEffects: AttributeEffect[] = [];
+  let dailySpiritDelta = 0;
 
   /**
    * 初始化并开始游戏
@@ -69,6 +77,8 @@ export function useGameController() {
   async function startGame(character: CharacterConfig): Promise<void> {
     // 重置状态
     resetState();
+    dailyEffects = [];
+    dailySpiritDelta = 0;
 
     // 设置角色
     gameStore.setCharacter(character);
@@ -96,6 +106,9 @@ export function useGameController() {
       }
     }
 
+    // 预加载日记/相册名称映射
+    await preloadUnlockNames(character.id);
+
     // 获取引擎并设置回调
     engine = getStoryEngine();
     setupEngineCallbacks(engine);
@@ -109,6 +122,30 @@ export function useGameController() {
 
     // 开始剧情
     await engine.enterNode(startNodeId);
+  }
+
+  /**
+   * 预加载日记/相册名称（用于 Toast 显示）
+   */
+  const diaryNameMap = new Map<string, string>();
+  const albumNameMap = new Map<string, string>();
+
+  async function preloadUnlockNames(characterId: string) {
+    try {
+      const prefix = characterId.split('_')[0];
+      const [diaries, albums] = await Promise.all([
+        loadDiaryData(characterId),
+        loadAlbumData(characterId),
+      ]);
+      for (const d of diaries) {
+        diaryNameMap.set(d.id, d.title);
+      }
+      for (const a of albums) {
+        albumNameMap.set(a.id, a.title);
+      }
+    } catch (e) {
+      __DEV__ && console.warn('[GameController] 预加载名称失败', e);
+    }
   }
 
   /**
@@ -127,8 +164,6 @@ export function useGameController() {
         return new Promise<void>((resolve) => {
           currentDialogue.value = dialogue;
           isPlayingDialogue.value = true;
-
-          // 等待玩家点击继续
           resolveDialogueAdvance = resolve;
         });
       },
@@ -185,12 +220,21 @@ export function useGameController() {
 
       // 属性变化
       onAttributeEffect: (effects) => {
-        attributeStore.applyEffects(effects as AttributeEffect[]);
+        const typedEffects = effects as AttributeEffect[];
+        attributeStore.applyEffects(typedEffects);
+        // 累积到每日记录
+        for (const e of typedEffects) {
+          dailyEffects.push({ ...e });
+        }
+        // 触发飘字动画
+        pendingAttributeEffects.value = [...typedEffects];
+        setTimeout(() => { pendingAttributeEffects.value = []; }, 100);
       },
 
       // 魔力变化
       onSpiritPowerChange: (delta: number) => {
         attributeStore.modifySpiritPower(delta);
+        dailySpiritDelta += delta;
       },
 
       // 检查点存档
@@ -201,6 +245,16 @@ export function useGameController() {
       // 解锁内容
       onUnlock: (unlock: ChoiceUnlock) => {
         storyStore.processUnlocks(unlock);
+        // 触发 Toast 通知
+        if (unlock.diaryEntryId) {
+          const name = diaryNameMap.get(unlock.diaryEntryId) || '新日记';
+          pendingUnlockEvent.value = { kind: 'diary', text: name };
+          setTimeout(() => { pendingUnlockEvent.value = null; }, 100);
+        } else if (unlock.albumEntryId) {
+          const name = albumNameMap.get(unlock.albumEntryId) || '新相册';
+          pendingUnlockEvent.value = { kind: 'album', text: name };
+          setTimeout(() => { pendingUnlockEvent.value = null; }, 100);
+        }
       },
     });
   }
@@ -254,9 +308,9 @@ export function useGameController() {
   }
 
   /**
-   * 处理一天结束
+   * 处理一天结束 — 弹出每日小结
    */
-  function handleDayEnd(_node: StoryNode): void {
+  function handleDayEnd(node: StoryNode): void {
     // 应用每日衰减
     const character = gameStore.currentCharacter;
     if (character?.healthCondition?.dailyDecay) {
@@ -269,12 +323,23 @@ export function useGameController() {
     // 重置回合统计
     attributeStore.resetTurnStats();
 
+    // 触发每日小结
+    const dayNum = node.day ?? gameStore.currentDay;
+    pendingDaySummary.value = {
+      day: dayNum,
+      effects: [...dailyEffects],
+      spiritDelta: dailySpiritDelta,
+    };
+    // 重置每日累积
+    dailyEffects = [];
+    dailySpiritDelta = 0;
+
     // 自动存档
     saveStore.autoSave();
   }
 
   /**
-   * 处理结局 — 使用角色专属 endingWeights 计算加权得分
+   * 处理结局
    */
   function handleEnding(_node: StoryNode): void {
     isGameEnded.value = true;
@@ -285,14 +350,12 @@ export function useGameController() {
       health: 0.25, mood: 0.25, independence: 0.25, trust: 0.25,
     };
 
-    // 计算加权综合得分 (0-100)
     const weightedScore =
       attrs.health * weights.health +
       attrs.mood * weights.mood +
       attrs.independence * weights.independence +
       attrs.trust * weights.trust;
 
-    // 判定结局
     let endingTitle = '反思空间';
     let endingDesc = '也许还有更好的方式，回溯试试看？';
     let endingType = 'reflection';
@@ -338,6 +401,11 @@ export function useGameController() {
     isShowingFeedback.value = false;
     isGameEnded.value = false;
     endingInfo.value = null;
+    pendingAttributeEffects.value = [];
+    pendingUnlockEvent.value = null;
+    pendingDaySummary.value = null;
+    dailyEffects = [];
+    dailySpiritDelta = 0;
 
     resolveDialogueAdvance = null;
     resolveChoiceRequired = null;
@@ -365,6 +433,11 @@ export function useGameController() {
     isShowingFeedback,
     isGameEnded,
     endingInfo,
+
+    // UI 反馈事件
+    pendingAttributeEffects,
+    pendingUnlockEvent,
+    pendingDaySummary,
 
     // 方法
     startGame,
