@@ -71,7 +71,6 @@
       >
         <span class="choice-btn__text">{{ choice.text }}</span>
         <span class="choice-btn__desc" v-if="choice.description">{{ choice.description }}</span>
-        <span class="choice-btn__ripple" />
       </button>
     </TransitionGroup>
 
@@ -104,6 +103,9 @@
       <div class="game-view__ending" v-if="controller.isGameEnded.value && controller.endingInfo.value">
         <div class="ending-card">
           <div class="ending-card__glow" />
+          <div class="ending-card__icon">
+            <div class="ending-icon__orb"></div>
+          </div>
           <h2 class="ending-card__title">{{ controller.endingInfo.value.title }}</h2>
           <p class="ending-card__desc">{{ controller.endingInfo.value.description }}</p>
           <div class="ending-card__score" v-if="controller.endingInfo.value?.score">
@@ -163,10 +165,10 @@ const textRef = ref<HTMLParagraphElement | null>(null);
 let rafId: number | null = null;
 let typingStartTime = 0;
 let fullText = '';
-const TYPING_SPEED = 45; // 毫秒/字符 (比原来30ms更流畅，但通过RAF批量更新)
+const TYPING_SPEED = 45;
 
 const spiritColor = computed(() => {
-  return gameStore.currentCharacter?.spiritAppearance?.color ?? '#F5C842';
+  return gameStore.currentCharacter?.spiritAppearance?.color ?? '#F2B705';
 });
 
 /** 场景中文映射 */
@@ -258,7 +260,6 @@ function preloadScene(scene: string) {
 
 function handleAdvance() {
   if (isTyping.value) {
-    // 立即完成打字机效果
     if (rafId !== null) {
       cancelAnimationFrame(rafId);
       rafId = null;
@@ -289,7 +290,7 @@ function goSelect() {
 }
 
 function handleSceneImgError() {
-  // 图片加载失败时静默处理，回退到背景色
+  // 图片加载失败时静默处理
 }
 
 /** RAF 批量打字机效果 */
@@ -356,34 +357,37 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
-/* ========== 属性栏 ========== */
+/* ========== 属性栏 - 现代紧凑 ========== */
 .game-view__attributes {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0 var(--spacing-md);
-  padding: var(--spacing-xs) var(--spacing-base);
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(12px) saturate(1.2);
-  -webkit-backdrop-filter: blur(12px) saturate(1.2);
-  border-bottom: 1px solid rgba(62, 39, 35, 0.06);
+  gap: var(--spacing-sm) var(--spacing-md);
+  padding: var(--spacing-sm) var(--spacing-base);
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(16px) saturate(1.2);
+  -webkit-backdrop-filter: blur(16px) saturate(1.2);
+  border-bottom: 1px solid var(--color-border);
   position: sticky;
   top: 0;
   z-index: var(--z-status-bar);
   contain: layout style paint;
 }
 
-/* ========== 场景区域 ========== */
+/* ========== 场景区域 - 大圆角突出 ========== */
 .game-view__scene {
   flex: 1;
-  min-height: 200px;
-  max-height: 320px;
+  min-height: 220px;
+  max-height: 340px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(160deg, #F5EDE4 0%, #EDE4D8 50%, #E8DDD0 100%);
+  margin: var(--spacing-base);
+  border-radius: var(--radius-xl);
+  background: linear-gradient(160deg, #F0EDE8 0%, #E8E4DF 50%, #E0DAD4 100%);
+  box-shadow: var(--shadow-md);
   contain: layout style paint;
 }
 
@@ -396,29 +400,25 @@ onUnmounted(() => {
   object-position: center;
   will-change: transform, opacity;
   transform: translateZ(0);
+  border-radius: var(--radius-xl);
 }
 
 .game-view__scene-overlay {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: var(--spacing-sm) var(--spacing-base);
-  background: linear-gradient(transparent, rgba(30, 20, 15, 0.45));
-  pointer-events: none;
+  bottom: var(--spacing-base);
+  left: var(--spacing-base);
   z-index: 1;
 }
 
 .game-view__scene-label {
   font-size: var(--font-size-xs);
-  font-weight: var(--font-weight-medium);
-  color: rgba(255, 255, 255, 0.92);
-  background: rgba(0, 0, 0, 0.2);
-  padding: 3px 12px;
+  font-weight: var(--font-weight-bold);
+  color: rgba(255, 255, 255, 0.95);
+  background: rgba(26, 26, 46, 0.5);
+  padding: 5px 14px;
   border-radius: var(--radius-full);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   letter-spacing: 0.5px;
 }
 
@@ -427,29 +427,24 @@ onUnmounted(() => {
   top: var(--spacing-base);
   right: var(--spacing-base);
   z-index: 2;
-  filter: drop-shadow(0 4px 12px rgba(245, 200, 66, 0.25));
+  filter: drop-shadow(0 4px 16px rgba(242, 183, 5, 0.3));
   will-change: transform;
 }
 
-/* ========== 对话区域 ========== */
+/* ========== 对话区域 - 大圆角卡片 ========== */
 .game-view__dialogue {
-  padding: var(--spacing-base);
+  padding: 0 var(--spacing-base) var(--spacing-base);
   cursor: pointer;
   min-height: 100px;
   contain: layout style paint;
 }
 
 .dialogue-box {
-  background: rgba(255, 255, 255, 0.82);
-  backdrop-filter: blur(16px) saturate(1.3);
-  -webkit-backdrop-filter: blur(16px) saturate(1.3);
+  background: var(--color-bg-card);
   border-radius: var(--radius-xl);
-  padding: var(--spacing-base) var(--spacing-lg);
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  box-shadow:
-    0 1px 2px rgba(62, 39, 35, 0.04),
-    0 4px 16px rgba(62, 39, 35, 0.06),
-    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  padding: var(--spacing-lg);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-card);
   transition: box-shadow 0.3s ease, transform 0.2s ease;
   position: relative;
   overflow: hidden;
@@ -461,60 +456,54 @@ onUnmounted(() => {
   top: 0;
   left: 0;
   right: 0;
-  height: 3px;
+  height: 4px;
   border-radius: var(--radius-xl) var(--radius-xl) 0 0;
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
 .dialogue-box--spirit {
-  background: rgba(255, 248, 230, 0.85);
-  border-color: rgba(245, 200, 66, 0.25);
-  box-shadow:
-    0 1px 2px rgba(245, 200, 66, 0.08),
-    0 4px 20px rgba(245, 200, 66, 0.1),
-    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  background: linear-gradient(135deg, #FFFDF5 0%, #FFF8E7 100%);
+  border-color: rgba(242, 183, 5, 0.2);
+  box-shadow: 0 4px 24px rgba(242, 183, 5, 0.08), var(--shadow-sm);
 }
-.dialogue-box--spirit::before { background: var(--color-spirit-power); }
+.dialogue-box--spirit::before { background: linear-gradient(90deg, #F2B705, #FFD54F); }
 
 .dialogue-box--elder {
-  background: rgba(255, 245, 245, 0.85);
-  border-color: rgba(206, 147, 216, 0.2);
-  box-shadow:
-    0 1px 2px rgba(206, 147, 216, 0.06),
-    0 4px 16px rgba(206, 147, 216, 0.08),
-    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  background: linear-gradient(135deg, #FFF5F5 0%, #FFEEEE 100%);
+  border-color: rgba(255, 107, 107, 0.15);
+  box-shadow: 0 4px 24px rgba(255, 107, 107, 0.06), var(--shadow-sm);
 }
-.dialogue-box--elder::before { background: var(--color-trust); }
+.dialogue-box--elder::before { background: linear-gradient(90deg, #FF6B6B, #FF8E8E); }
 
 .dialogue-box--narrator {
-  background: rgba(250, 246, 240, 0.7);
+  background: var(--color-bg-secondary);
   border-style: dashed;
-  border-color: rgba(62, 39, 35, 0.1);
+  border-color: var(--color-border);
 }
-.dialogue-box--narrator::before { background: var(--color-text-tertiary); opacity: 0.4; }
+.dialogue-box--narrator::before { background: var(--color-text-tertiary); opacity: 0.3; }
 
 .dialogue-box__speaker {
   display: flex;
   align-items: center;
-  gap: var(--spacing-xs);
+  gap: var(--spacing-sm);
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-bold);
   color: var(--color-text-secondary);
-  margin-bottom: var(--spacing-xs);
+  margin-bottom: var(--spacing-sm);
 }
 
 .dialogue-box__speaker-dot {
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   background: var(--color-text-tertiary);
   flex-shrink: 0;
 }
 
 .dialogue-box--spirit .dialogue-box__speaker { color: var(--color-spirit-power-dark); }
-.dialogue-box--spirit .dialogue-box__speaker-dot { background: var(--color-spirit-power); box-shadow: 0 0 6px var(--color-spirit-glow); }
-.dialogue-box--elder .dialogue-box__speaker { color: var(--color-trust-dark); }
-.dialogue-box--elder .dialogue-box__speaker-dot { background: var(--color-trust); }
+.dialogue-box--spirit .dialogue-box__speaker-dot { background: var(--color-spirit-power); box-shadow: 0 0 8px var(--color-spirit-glow); }
+.dialogue-box--elder .dialogue-box__speaker { color: var(--color-health-dark); }
+.dialogue-box--elder .dialogue-box__speaker-dot { background: var(--color-health); }
 
 .dialogue-box__text {
   font-size: var(--font-size-base);
@@ -539,7 +528,7 @@ onUnmounted(() => {
   text-align: right;
   font-size: var(--font-size-xs);
   color: var(--color-text-tertiary);
-  margin-top: var(--spacing-xs);
+  margin-top: var(--spacing-sm);
   opacity: 0;
   transform: translateY(4px);
   transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -555,9 +544,9 @@ onUnmounted(() => {
   animation: hintPulse 2s ease-in-out infinite;
 }
 
-/* ========== 选项区域 ========== */
+/* ========== 选项区域 - Pill 按钮 ========== */
 .game-view__choices {
-  padding: var(--spacing-base);
+  padding: 0 var(--spacing-base) var(--spacing-base);
   display: flex;
   flex-direction: column;
   gap: var(--spacing-sm);
@@ -569,17 +558,13 @@ onUnmounted(() => {
   flex-direction: column;
   align-items: flex-start;
   gap: var(--spacing-xs);
-  padding: var(--spacing-md) var(--spacing-lg);
-  background: rgba(255, 255, 255, 0.78);
-  backdrop-filter: blur(12px) saturate(1.2);
-  -webkit-backdrop-filter: blur(12px) saturate(1.2);
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: var(--radius-xl);
+  padding: var(--spacing-md) var(--spacing-xl);
+  background: var(--color-bg-card);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-full);
   text-align: left;
   transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
-  box-shadow:
-    0 1px 2px rgba(62, 39, 35, 0.04),
-    0 2px 8px rgba(62, 39, 35, 0.04);
+  box-shadow: var(--shadow-sm);
   position: relative;
   overflow: hidden;
   will-change: transform;
@@ -589,10 +574,8 @@ onUnmounted(() => {
 .choice-btn:active {
   transform: scale(0.97) translateZ(0);
   border-color: var(--color-spirit-power);
-  background: rgba(255, 248, 230, 0.9);
-  box-shadow:
-    0 1px 2px rgba(245, 200, 66, 0.1),
-    0 4px 16px rgba(245, 200, 66, 0.12);
+  background: linear-gradient(135deg, #FFFDF5 0%, #FFF8E7 100%);
+  box-shadow: 0 4px 20px rgba(242, 183, 5, 0.15);
 }
 
 .choice-btn__text {
@@ -608,26 +591,13 @@ onUnmounted(() => {
   line-height: 1.4;
 }
 
-.choice-btn__ripple {
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at var(--ripple-x, 50%) var(--ripple-y, 50%), rgba(245, 200, 66, 0.15) 0%, transparent 60%);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  pointer-events: none;
-}
-
-.choice-btn:active .choice-btn__ripple {
-  opacity: 1;
-}
-
 /* ========== 反馈弹窗 ========== */
 .game-view__feedback {
   position: fixed;
   inset: 0;
-  background: rgba(30, 20, 15, 0.35);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+  background: rgba(26, 26, 46, 0.3);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -637,32 +607,28 @@ onUnmounted(() => {
 }
 
 .feedback-card {
-  background: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(24px) saturate(1.4);
-  -webkit-backdrop-filter: blur(24px) saturate(1.4);
+  background: var(--color-bg-card);
   border-radius: var(--radius-2xl);
-  padding: var(--spacing-xl);
-  max-width: 400px;
+  padding: var(--spacing-2xl) var(--spacing-xl);
+  max-width: 380px;
   width: 100%;
   text-align: center;
-  box-shadow:
-    0 1px 2px rgba(62, 39, 35, 0.04),
-    0 8px 32px rgba(62, 39, 35, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: var(--shadow-xl);
+  border: 1px solid var(--color-border);
   contain: layout style paint;
 }
 
 .feedback-card__icon {
-  width: 52px;
-  height: 52px;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto var(--spacing-base);
-  font-size: 26px;
+  font-size: 28px;
   font-weight: bold;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  box-shadow: var(--shadow-sm);
 }
 
 .feedback-card__icon--correct { background: linear-gradient(135deg, #E8F5E9, #C8E6C9); color: #2E7D32; }
@@ -688,9 +654,8 @@ onUnmounted(() => {
   line-height: var(--line-height-normal);
   margin-bottom: var(--spacing-lg);
   padding: var(--spacing-sm) var(--spacing-base);
-  background: rgba(250, 246, 240, 0.8);
+  background: var(--color-bg-secondary);
   border-radius: var(--radius-lg);
-  border: 1px solid rgba(62, 39, 35, 0.06);
 }
 
 .feedback-card__btn {
@@ -698,26 +663,26 @@ onUnmounted(() => {
   align-items: center;
   justify-content: center;
   gap: var(--spacing-sm);
-  padding: var(--spacing-sm) var(--spacing-xl);
-  background: linear-gradient(135deg, var(--color-spirit-power), #E8B828);
-  color: #3E2723;
+  padding: var(--spacing-md) var(--spacing-2xl);
+  background: linear-gradient(135deg, #F2B705 0%, #E8A500 100%);
+  color: #FFFFFF;
   border: none;
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-full);
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-bold);
-  box-shadow: 0 2px 8px rgba(245, 200, 66, 0.3);
+  box-shadow: 0 4px 16px rgba(242, 183, 5, 0.3);
   transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
   cursor: pointer;
 }
 
 .feedback-card__btn:active {
   transform: scale(0.96);
-  box-shadow: 0 1px 4px rgba(245, 200, 66, 0.2);
+  box-shadow: 0 2px 8px rgba(242, 183, 5, 0.2);
 }
 
 .btn-arrow {
-  width: 16px;
-  height: 16px;
+  width: 18px;
+  height: 18px;
   transition: transform 0.2s ease;
 }
 
@@ -729,7 +694,7 @@ onUnmounted(() => {
 .game-view__ending {
   position: fixed;
   inset: 0;
-  background: linear-gradient(160deg, #FAF6F0 0%, #F3EDE4 50%, #EDE4D8 100%);
+  background: linear-gradient(160deg, #F8F6F3 0%, #F0EDE8 50%, #E8E4DF 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -741,7 +706,7 @@ onUnmounted(() => {
 
 .ending-card {
   text-align: center;
-  max-width: 400px;
+  max-width: 380px;
   width: 100%;
   position: relative;
   padding: var(--spacing-xl);
@@ -749,21 +714,46 @@ onUnmounted(() => {
 
 .ending-card__glow {
   position: absolute;
-  top: -40px;
+  top: -30px;
   left: 50%;
   transform: translateX(-50%);
-  width: 200px;
-  height: 200px;
-  background: radial-gradient(circle, rgba(245, 200, 66, 0.15) 0%, transparent 70%);
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(circle, rgba(242, 183, 5, 0.12) 0%, transparent 70%);
   pointer-events: none;
+}
+
+.ending-card__icon {
+  margin-bottom: var(--spacing-lg);
+}
+
+.ending-icon__orb {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #FFE082 0%, #F2B705 50%, #D49A00 100%);
+  box-shadow: 0 8px 32px rgba(242, 183, 5, 0.3), 0 0 60px rgba(242, 183, 5, 0.1);
+  margin: 0 auto;
+  position: relative;
+  animation: spiritFloat 3s ease-in-out infinite;
+}
+
+.ending-icon__orb::before {
+  content: '';
+  position: absolute;
+  top: 14px;
+  left: 16px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
 }
 
 .ending-card__title {
   font-size: var(--font-size-2xl);
-  color: var(--color-spirit-power-dark);
+  color: var(--color-text-primary);
   margin-bottom: var(--spacing-base);
   font-weight: var(--font-weight-bold);
-  text-shadow: 0 2px 8px rgba(245, 200, 66, 0.15);
 }
 
 .ending-card__desc {
@@ -780,10 +770,10 @@ onUnmounted(() => {
   gap: var(--spacing-sm);
   margin-bottom: var(--spacing-base);
   padding: var(--spacing-base) var(--spacing-lg);
-  background: linear-gradient(135deg, rgba(255, 248, 230, 0.9), rgba(255, 243, 205, 0.8));
+  background: linear-gradient(135deg, #FFFDF5 0%, #FFF8E7 100%);
   border-radius: var(--radius-xl);
-  border: 1px solid rgba(245, 200, 66, 0.2);
-  box-shadow: 0 2px 8px rgba(245, 200, 66, 0.08);
+  border: 1.5px solid rgba(242, 183, 5, 0.2);
+  box-shadow: var(--shadow-sm);
 }
 
 .ending-score__label {
@@ -803,11 +793,10 @@ onUnmounted(() => {
   gap: var(--spacing-sm);
   margin-bottom: var(--spacing-xl);
   padding: var(--spacing-base);
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(12px);
+  background: var(--color-bg-card);
   border-radius: var(--radius-xl);
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  box-shadow: 0 2px 8px rgba(62, 39, 35, 0.04);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
 }
 
 .ending-stat {
@@ -836,13 +825,12 @@ onUnmounted(() => {
 
 .ending-card__btn {
   padding: var(--spacing-md) var(--spacing-xl);
-  border-radius: var(--radius-xl);
+  border-radius: var(--radius-full);
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-bold);
-  border: 1px solid rgba(62, 39, 35, 0.1);
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(8px);
-  color: var(--color-text-primary);
+  border: 1.5px solid var(--color-border);
+  background: var(--color-bg-card);
+  color: var(--color-text-secondary);
   transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
   cursor: pointer;
 }
@@ -852,21 +840,21 @@ onUnmounted(() => {
 }
 
 .ending-card__btn--primary {
-  background: linear-gradient(135deg, var(--color-spirit-power), #E8B828);
+  background: linear-gradient(135deg, #F2B705 0%, #E8A500 100%);
   border-color: transparent;
-  color: #3E2723;
-  box-shadow: 0 2px 12px rgba(245, 200, 66, 0.25);
+  color: #FFFFFF;
+  box-shadow: 0 4px 20px rgba(242, 183, 5, 0.25);
 }
 
 .ending-card__btn--primary:active {
-  box-shadow: 0 1px 6px rgba(245, 200, 66, 0.15);
+  box-shadow: 0 2px 10px rgba(242, 183, 5, 0.15);
 }
 
 /* ========== 加载状态 ========== */
 .game-view__loading {
   position: fixed;
   inset: 0;
-  background: linear-gradient(160deg, #FAF6F0 0%, #F3EDE4 100%);
+  background: linear-gradient(160deg, #F8F6F3 0%, #F0EDE8 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -878,23 +866,34 @@ onUnmounted(() => {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--spacing-base);
+  gap: var(--spacing-lg);
   font-size: var(--font-size-lg);
-  color: var(--color-spirit-power-dark);
+  color: var(--color-text-secondary);
+  font-weight: var(--font-weight-medium);
 }
 
 .loading-spirit__orb {
-  width: 48px;
-  height: 48px;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--color-spirit-power), #E8B828);
-  box-shadow: 0 0 20px rgba(245, 200, 66, 0.3), 0 0 60px rgba(245, 200, 66, 0.1);
+  background: linear-gradient(135deg, #FFE082 0%, #F2B705 50%, #D49A00 100%);
+  box-shadow: 0 0 30px rgba(242, 183, 5, 0.35), 0 0 80px rgba(242, 183, 5, 0.1);
   animation: spiritPulse 1.5s ease-in-out infinite;
+  position: relative;
+}
+
+.loading-spirit__orb::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
 }
 
 /* ========== Transition 动画 ========== */
-
-/* 场景淡入淡出 */
 .scene-fade-enter-active,
 .scene-fade-leave-active {
   transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1), transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
@@ -910,7 +909,6 @@ onUnmounted(() => {
   transform: scale(0.98);
 }
 
-/* 精灵弹出 */
 .spirit-pop-enter-active {
   transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
@@ -929,7 +927,6 @@ onUnmounted(() => {
   transform: scale(0.8);
 }
 
-/* 对话滑入 */
 .dialogue-slide-enter-active {
   transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
@@ -948,7 +945,6 @@ onUnmounted(() => {
   transform: translateY(-8px);
 }
 
-/* 选项交错滑入 */
 .choice-stagger-enter-active {
   transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
   transition-delay: var(--stagger-delay, 0ms);
@@ -968,7 +964,6 @@ onUnmounted(() => {
   transform: translateX(-20px);
 }
 
-/* 反馈弹性缩放 */
 .feedback-scale-enter-active {
   transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
@@ -987,7 +982,6 @@ onUnmounted(() => {
   transform: scale(0.95);
 }
 
-/* 结局揭示 */
 .ending-reveal-enter-active {
   transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -1004,7 +998,6 @@ onUnmounted(() => {
   opacity: 0;
 }
 
-/* 基础淡入淡出 */
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.3s ease;

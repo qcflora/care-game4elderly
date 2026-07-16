@@ -1,54 +1,55 @@
 /**
  * 全局CSS变量定义
- * Vibe Coding 风格：玻璃拟态、精致阴影、弹性动画
+ * 基于 Travel APP Figma 设计框架适配
+ * 特征：超大圆角、大阴影、大量留白、渐变强调、现代清爽
  */
 
 :root {
   /* === 色彩系统 === */
 
-  /* 主背景色 */
-  --color-bg-primary: #FAF6F0;           /* 主背景 - 暖白 */
-  --color-bg-secondary: #F3EDE4;         /* 次背景 */
-  --color-bg-card: rgba(255, 255, 255, 0.85); /* 卡片背景 - 玻璃拟态基底 */
-  --color-bg-overlay: rgba(30, 20, 15, 0.4); /* 遮罩背景 */
+  /* 主背景色 - 极淡暖白，类似 Travel APP 的淡蓝但改为暖调 */
+  --color-bg-primary: #F8F6F3;
+  --color-bg-secondary: #F0EDE8;
+  --color-bg-card: #FFFFFF;
+  --color-bg-overlay: rgba(30, 25, 20, 0.45);
 
-  /* 精灵魔力色 */
-  --color-spirit-power: #F5C842;          /* 精灵魔力 - 金色 */
-  --color-spirit-power-light: #FFF8E6;    /* 魔力浅色 */
-  --color-spirit-power-dark: #D4A017;     /* 魔力深色 */
-  --color-spirit-glow: rgba(245, 200, 66, 0.4); /* 魔力光晕 */
+  /* 精灵魔力色 - 保持金色主题但更现代 */
+  --color-spirit-power: #F2B705;
+  --color-spirit-power-light: #FFF8E7;
+  --color-spirit-power-dark: #D49A00;
+  --color-spirit-glow: rgba(242, 183, 5, 0.35);
 
-  /* 四维属性色 */
-  --color-health: #66BB6A;                /* 健康值 - 翠绿 */
-  --color-health-light: #E8F5E9;          /* 健康浅色 */
-  --color-health-dark: #388E3C;           /* 健康深色 */
-  --color-mood: #FF9800;                  /* 心情值 - 琥珀 */
-  --color-mood-light: #FFF3E0;            /* 心情浅色 */
-  --color-mood-dark: #E65100;             /* 心情深色 */
-  --color-independence: #29B6F6;          /* 独立值 - 天蓝 */
-  --color-independence-light: #E1F5FE;    /* 独立浅色 */
-  --color-independence-dark: #0288D1;     /* 独立深色 */
-  --color-trust: #AB47BC;                 /* 信任值 - 紫罗兰 */
-  --color-trust-light: #F3E5F5;           /* 信任浅色 */
-  --color-trust-dark: #7B1FA2;            /* 信任深色 */
+  /* 四维属性色 - 更鲜明现代 */
+  --color-health: #FF6B6B;
+  --color-health-light: #FFF0F0;
+  --color-health-dark: #E85555;
+  --color-mood: #FFB347;
+  --color-mood-light: #FFF5E6;
+  --color-mood-dark: #E89A30;
+  --color-independence: #4ECDC4;
+  --color-independence-light: #E8FAF8;
+  --color-independence-dark: #3BA89F;
+  --color-trust: #C77DFF;
+  --color-trust-light: #F5E8FF;
+  --color-trust-dark: #A855F7;
 
   /* 状态色 */
-  --color-warning: #EF5350;               /* 警告/紧急 */
-  --color-warning-light: #FFEBEE;         /* 警告浅色 */
-  --color-success: #66BB6A;               /* 成功 */
-  --color-info: #42A5F5;                  /* 提示 */
+  --color-warning: #FF6B6B;
+  --color-warning-light: #FFF0F0;
+  --color-success: #51CF66;
+  --color-info: #339AF0;
 
-  /* 文字色 */
-  --color-text-primary: #2D1F1A;          /* 文字主色 - 深棕黑 */
-  --color-text-secondary: #6D5E55;        /* 文字辅色 - 暖棕 */
-  --color-text-tertiary: #A89B93;         /* 文字三色 - 浅暖灰 */
-  --color-text-inverse: #FFFFFF;          /* 反色文字 */
-  --color-text-spirit: #F5C842;          /* 精灵台词色 */
+  /* 文字色 - 更深更现代 */
+  --color-text-primary: #1A1A2E;
+  --color-text-secondary: #5C5C7A;
+  --color-text-tertiary: #9CA3AF;
+  --color-text-inverse: #FFFFFF;
+  --color-text-spirit: #F2B705;
 
   /* 边框与分隔 */
-  --color-border: rgba(45, 31, 26, 0.08);   /* 边框色 */
-  --color-border-light: rgba(45, 31, 26, 0.04); /* 浅边框 */
-  --color-divider: rgba(45, 31, 26, 0.06);    /* 分隔线 */
+  --color-border: rgba(26, 26, 46, 0.06);
+  --color-border-light: rgba(26, 26, 46, 0.03);
+  --color-divider: rgba(26, 26, 46, 0.05);
 
   /* === 字体系统 === */
   --font-family-primary: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -60,9 +61,9 @@
   --font-size-base: 0.875rem; /* 14px */
   --font-size-md: 1rem;       /* 16px */
   --font-size-lg: 1.125rem;   /* 18px */
-  --font-size-xl: 1.25rem;    /* 20px */
-  --font-size-2xl: 1.5rem;    /* 24px */
-  --font-size-3xl: 2rem;      /* 32px */
+  --font-size-xl: 1.375rem;   /* 22px */
+  --font-size-2xl: 1.75rem;   /* 28px */
+  --font-size-3xl: 2.25rem;   /* 36px */
 
   --font-weight-normal: 400;
   --font-weight-medium: 500;
@@ -71,7 +72,7 @@
   --line-height-normal: 1.5;
   --line-height-relaxed: 1.75;
 
-  /* === 间距系统 === */
+  /* === 间距系统 - Travel APP 风格：更大更呼吸 === */
   --spacing-xs: 0.25rem;   /* 4px */
   --spacing-sm: 0.5rem;    /* 8px */
   --spacing-md: 0.75rem;   /* 12px */
@@ -81,20 +82,22 @@
   --spacing-2xl: 3rem;     /* 48px */
   --spacing-3xl: 4rem;     /* 64px */
 
-  /* === 圆角 === */
-  --radius-sm: 0.5rem;     /* 8px */
-  --radius-md: 0.75rem;    /* 12px */
-  --radius-lg: 1rem;       /* 16px */
-  --radius-xl: 1.25rem;    /* 20px */
-  --radius-2xl: 1.5rem;    /* 24px */
+  /* === 圆角 - Travel APP 特征：超大圆角 === */
+  --radius-sm: 0.75rem;    /* 12px */
+  --radius-md: 1rem;       /* 16px */
+  --radius-lg: 1.25rem;    /* 20px */
+  --radius-xl: 1.5rem;     /* 24px */
+  --radius-2xl: 2rem;      /* 32px */
   --radius-full: 9999px;
 
-  /* === 阴影 === */
-  --shadow-sm: 0 1px 3px rgba(45, 31, 26, 0.04), 0 1px 2px rgba(45, 31, 26, 0.03);
-  --shadow-md: 0 4px 6px rgba(45, 31, 26, 0.05), 0 2px 4px rgba(45, 31, 26, 0.04);
-  --shadow-lg: 0 10px 15px rgba(45, 31, 26, 0.06), 0 4px 6px rgba(45, 31, 26, 0.04);
-  --shadow-xl: 0 20px 25px rgba(45, 31, 26, 0.08), 0 8px 10px rgba(45, 31, 26, 0.04);
-  --shadow-spirit: 0 0 20px rgba(245, 200, 66, 0.25), 0 0 40px rgba(245, 200, 66, 0.1); /* 精灵光效 */
+  /* === 阴影 - Travel APP 特征：多层柔和阴影 === */
+  --shadow-sm: 0 2px 8px rgba(26, 26, 46, 0.04);
+  --shadow-md: 0 4px 16px rgba(26, 26, 46, 0.06), 0 2px 4px rgba(26, 26, 46, 0.03);
+  --shadow-lg: 0 8px 32px rgba(26, 26, 46, 0.08), 0 4px 8px rgba(26, 26, 46, 0.04);
+  --shadow-xl: 0 16px 48px rgba(26, 26, 46, 0.1), 0 8px 16px rgba(26, 26, 46, 0.05);
+  --shadow-card: 0 4px 24px rgba(26, 26, 46, 0.06), 0 1px 3px rgba(26, 26, 46, 0.03);
+  --shadow-spirit: 0 4px 20px rgba(242, 183, 5, 0.25), 0 0 40px rgba(242, 183, 5, 0.1);
+  --shadow-float: 0 -4px 24px rgba(26, 26, 46, 0.06);
 
   /* === 动画 === */
   --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -103,10 +106,8 @@
   --transition-bounce: 400ms cubic-bezier(0.34, 1.56, 0.64, 1);
 
   /* === 布局 === */
-  --game-max-width: 430px;           /* 游戏最大宽度（H5竖屏） */
-  --status-bar-height: 56px;        /* 状态栏高度 */
-  --dialogue-area-height: 200px;    /* 对话区高度 */
-  --choice-panel-height: 180px;     /* 选项区高度 */
+  --game-max-width: 430px;
+  --status-bar-height: 56px;
   --safe-area-top: env(safe-area-inset-top, 0px);
   --safe-area-bottom: env(safe-area-inset-bottom, 0px);
 
