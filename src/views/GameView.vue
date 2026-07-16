@@ -143,6 +143,9 @@
   <AttributeFloaters ref="floaterRef" />
   <UnlockToast ref="toastRef" />
   <DailySummary ref="summaryRef" />
+  <ActTransition ref="actTransitionRef" />
+  <EndingMontage ref="montageRef" />
+  <TutorialOverlay ref="tutorialRef" />
 </template>
 
 <script setup lang="ts">
@@ -158,6 +161,9 @@ import SpiritAvatar from '@/components/spirit/SpiritAvatar.vue';
 import AttributeFloaters from '@/components/feedback/AttributeFloaters.vue';
 import UnlockToast from '@/components/feedback/UnlockToast.vue';
 import DailySummary from '@/components/feedback/DailySummary.vue';
+import ActTransition from '@/components/feedback/ActTransition.vue';
+import EndingMontage from '@/components/feedback/EndingMontage.vue';
+import TutorialOverlay from '@/components/feedback/TutorialOverlay.vue';
 
 const router = useRouter();
 const gameStore = useGameStore();
@@ -171,7 +177,11 @@ const textRef = ref<HTMLParagraphElement | null>(null);
 const floaterRef = ref<InstanceType<typeof AttributeFloaters> | null>(null);
 const toastRef = ref<InstanceType<typeof UnlockToast> | null>(null);
 const summaryRef = ref<InstanceType<typeof DailySummary> | null>(null);
+const actTransitionRef = ref<InstanceType<typeof ActTransition> | null>(null);
+const montageRef = ref<InstanceType<typeof EndingMontage> | null>(null);
+const tutorialRef = ref<InstanceType<typeof TutorialOverlay> | null>(null);
 const isShowingSummary = ref(false);
+const isShowingOverlay = ref(false);
 
 // RAF 打字机状态
 let rafId: number | null = null;
@@ -370,13 +380,48 @@ watch(() => controller.pendingDaySummary.value, async (summary) => {
   }
 });
 
-onMounted(() => {
+// 幕间过渡
+watch(() => controller.pendingActTransition.value, async (event) => {
+  if (event && actTransitionRef.value && !isShowingOverlay.value) {
+    isShowingOverlay.value = true;
+    await actTransitionRef.value.show(event.act);
+    isShowingOverlay.value = false;
+  }
+});
+
+// 结局回忆蒙太奇
+watch(() => controller.pendingEndingMontage.value, async (event) => {
+  if (event && montageRef.value && !isShowingOverlay.value) {
+    isShowingOverlay.value = true;
+    await montageRef.value.show(event.texts);
+    isShowingOverlay.value = false;
+  }
+});
+
+onMounted(async () => {
   if (!gameStore.currentCharacter) {
     router.push('/select');
     return;
   }
 
+  // 如果游戏已在进行中（用户从相册/日记等页面返回），不重新开始
+  if (gameStore.gamePhase === 'playing') {
+    isLoading.value = false;
+    controller.resumeGame(gameStore.currentCharacter);
+    return;
+  }
+
   isLoading.value = true;
+
+  // 首次进入游戏显示新手引导
+  if (!gameStore.settings.hasSeenTutorial) {
+    isLoading.value = false;
+    if (tutorialRef.value) {
+      await tutorialRef.value.show();
+      gameStore.updateSettings({ hasSeenTutorial: true });
+    }
+  }
+
   controller.startGame(gameStore.currentCharacter).catch(e => {
     console.error('[GameView] 游戏启动失败:', e);
     isLoading.value = false;
@@ -387,7 +432,8 @@ onUnmounted(() => {
   if (rafId !== null) {
     cancelAnimationFrame(rafId);
   }
-  controller.dispose();
+  // 不销毁引擎实例，只做轻量清理（引擎状态保留，支持从相册/日记返回后继续游戏）
+  controller.pause();
 });
 </script>
 

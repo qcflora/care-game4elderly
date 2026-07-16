@@ -49,6 +49,8 @@ const endingInfo = ref<{
 const pendingAttributeEffects = ref<AttributeEffect[]>([]);
 const pendingUnlockEvent = ref<{ kind: 'diary' | 'album'; text: string } | null>(null);
 const pendingDaySummary = ref<{ day: number; effects: AttributeEffect[]; spiritDelta: number } | null>(null);
+const pendingActTransition = ref<{ act: number } | null>(null);
+const pendingEndingMontage = ref<{ texts: Array<{ day: number; text: string }> } | null>(null);
 
 // Promise resolve 函数持有
 let resolveDialogueAdvance: (() => void) | null = null;
@@ -199,7 +201,13 @@ export function useGameController() {
           gameStore.setCurrentDay(node.day);
         }
         if (node.act && node.act !== gameStore.currentAct) {
+          const prevAct = gameStore.currentAct;
           gameStore.setCurrentAct(node.act);
+          // 如果进入了新幕（非第一天第一幕），触发幕间过渡
+          if (node.act > prevAct && node.day && node.day > 1) {
+            pendingActTransition.value = { act: node.act };
+            setTimeout(() => { pendingActTransition.value = null; }, 100);
+          }
         }
 
         // 更新场景描述
@@ -344,6 +352,17 @@ export function useGameController() {
   function handleEnding(_node: StoryNode): void {
     isGameEnded.value = true;
 
+    // 触发结局回忆蒙太奇
+    pendingEndingMontage.value = {
+      texts: [
+        { day: 1, text: '初次相遇，一切从陌生开始' },
+        { day: 10, text: '渐渐熟悉，学会了理解' },
+        { day: 20, text: '面对挑战，依然选择守护' },
+        { day: 30, text: '30天的陪伴，一段温暖的旅程' },
+      ],
+    };
+    setTimeout(() => { pendingEndingMontage.value = null; }, 100);
+
     const attrs = attributeStore.attributes;
     const character = gameStore.currentCharacter;
     const weights = character?.endingWeights ?? {
@@ -415,12 +434,65 @@ export function useGameController() {
   }
 
   /**
-   * 清理
+   * 清理（完全退出游戏时调用）
    */
   function dispose(): void {
     destroyStoryEngine();
     resetState();
     engine = null;
+  }
+
+  /**
+   * 暂停游戏（导航离开游戏页面时调用）
+   * 不销毁引擎实例，保留 nodeCache 和游戏进度
+   *
+   * 策略：resolve 对话/反馈的 pending promise 让引擎可以推进到
+   * 下一个交互节点（choice 或 ending），引擎会在 choice 节点自然停住。
+   * 这样用户返回后不会看到"回到第一天"的问题。
+   */
+  function pause(): void {
+    // resolve 对话和反馈的 pending promise（让引擎推进到下一个交互点）
+    if (resolveDialogueAdvance) {
+      resolveDialogueAdvance();
+      resolveDialogueAdvance = null;
+    }
+    if (resolveShowFeedback) {
+      resolveShowFeedback();
+      resolveShowFeedback = null;
+    }
+    // choice 不能自动 resolve — 引擎会自然停在这里等待用户选择
+    // resolveChoiceRequired 保留不清除，让引擎的 async 流程保持挂起
+
+    // 清理 UI 状态
+    isPlayingDialogue.value = false;
+    isShowingFeedback.value = false;
+    currentDialogue.value = null;
+    currentFeedback.value = null;
+    // currentChoices 保留不清除 — 如果引擎停在 choice 节点，用户返回后可以看到选项
+  }
+
+  /**
+   * 恢复游戏（从相册/日记等页面返回时调用）
+   * 不重置 gameStore，不重新加载剧情数据
+   * 只重新获取引擎实例并绑定回调
+   */
+  function resumeGame(character: CharacterConfig): void {
+    // 重置 UI 状态
+    isPlayingDialogue.value = false;
+    isShowingFeedback.value = false;
+    currentDialogue.value = null;
+    currentChoices.value = [];
+    currentFeedback.value = null;
+    dailyEffects = [];
+    dailySpiritDelta = 0;
+
+    // 重新获取引擎实例（引擎可能在上次 pause 时被保留）
+    engine = getStoryEngine();
+
+    // 重新绑定回调
+    setupEngineCallbacks(engine);
+
+    __DEV__ && console.log('[GameController] 恢复游戏，当前 day=' + gameStore.currentDay + ' act=' + gameStore.currentAct);
   }
 
   return {
@@ -438,6 +510,8 @@ export function useGameController() {
     pendingAttributeEffects,
     pendingUnlockEvent,
     pendingDaySummary,
+    pendingActTransition,
+    pendingEndingMontage,
 
     // 方法
     startGame,
@@ -446,5 +520,7 @@ export function useGameController() {
     dismissFeedback,
     rollback,
     dispose,
+    pause,
+    resumeGame,
   };
 }
