@@ -98,7 +98,8 @@ function continueGame() {
   box-shadow: 0 8px 32px rgba(242, 183, 5, 0.35), 0 0 60px rgba(242, 183, 5, 0.15);
   position: relative;
   z-index: 2;
-  animation: spiritFloat 4s ease-in-out infinite;
+  animation: spiritFloat 4s ease-in-out infinite, spiritBreath 4s ease-in-out infinite;
+  scale: 1;
 }
 
 .home-view__spirit-core::before {
@@ -117,7 +118,7 @@ function continueGame() {
   inset: 10px;
   border-radius: 50%;
   background: radial-gradient(circle, rgba(242, 183, 5, 0.25) 0%, transparent 70%);
-  animation: glowPulse 3s ease-in-out infinite;
+  animation: glowPulse 3s ease-in-out infinite, glowColorShift 8s ease-in-out infinite;
   z-index: 1;
 }
 
@@ -126,7 +127,7 @@ function continueGame() {
   inset: 0;
   border-radius: 50%;
   border: 1.5px solid rgba(242, 183, 5, 0.15);
-  animation: ringExpand 3s ease-out infinite;
+  animation: ringExpand 3s ease-out infinite, ringRotate 12s linear infinite;
   z-index: 0;
 }
 
@@ -165,7 +166,11 @@ function continueGame() {
   width: 100%;
 }
 
-.home-view__btn:active { transform: scale(0.97); }
+.home-view__btn:hover {
+  transform: translateY(-3px);
+}
+
+.home-view__btn:active { transform: translateY(0) scale(0.97); }
 
 .home-view__btn--primary {
   background: linear-gradient(135deg, #F2B705 0%, #E8A500 100%);
@@ -210,13 +215,28 @@ function continueGame() {
   66% { transform: translateY(-4px) rotate(-1deg); }
 }
 
+@keyframes spiritBreath {
+  0%, 100% { scale: 0.95; }
+  50% { scale: 1.05; }
+}
+
 @keyframes glowPulse {
   0%, 100% { opacity: 0.5; transform: scale(1); }
   50% { opacity: 0.8; transform: scale(1.2); }
 }
 
+@keyframes glowColorShift {
+  0%, 100% { filter: hue-rotate(0deg) brightness(1); }
+  50% { filter: hue-rotate(160deg) brightness(0.9); }
+}
+
 @keyframes ringExpand {
-  0% { transform: scale(0.8); opacity: 0.6; }
-  100% { transform: scale(1.4); opacity: 0; }
+  0% { transform: scale(0.8) rotate(0deg); opacity: 0.6; }
+  100% { transform: scale(1.4) rotate(30deg); opacity: 0; }
+}
+
+@keyframes ringRotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 </style>

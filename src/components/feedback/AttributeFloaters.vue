@@ -8,7 +8,7 @@
         :class="[`attr-floater--${item.type}`, { 'is-negative': item.delta < 0 }]"
         :style="{ '--start-x': item.x + 'px' }"
       >
-        <span class="attr-floater__icon">{{ item.delta > 0 ? '+' : '' }}{{ item.delta }}</span>
+        <span class="attr-floater__icon">{{ item.delta > 0 ? '↑+' : '↓' }}{{ item.delta }}</span>
         <span class="attr-floater__label">{{ labelMap[item.type] }}</span>
       </div>
     </TransitionGroup>
@@ -43,7 +43,7 @@ function showFloaters(effects: AttributeEffect[], originX: number = 0) {
 
     setTimeout(() => {
       floaters.value = floaters.value.filter(f => f.id !== id);
-    }, 1200);
+    }, 1800);
   }
 }
 
@@ -75,19 +75,21 @@ defineExpose({ showFloaters });
 }
 
 .attr-floater.is-negative {
-  background: rgba(255, 107, 107, 0.92);
+  background: linear-gradient(135deg, #FF6B6B 0%, #FF4444 100%);
   color: #fff;
+  text-shadow: 0 1px 4px rgba(255, 0, 0, 0.3);
 }
 
 .attr-floater:not(.is-negative) {
-  background: rgba(81, 207, 102, 0.92);
+  background: linear-gradient(135deg, #4CAF50 0%, #66BB6A 100%);
   color: #fff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.6), 0 0 20px rgba(102, 187, 106, 0.4);
 }
 
-.attr-floater--health:not(.is-negative) { background: rgba(102, 187, 106, 0.92); }
-.attr-floater--mood:not(.is-negative) { background: rgba(255, 179, 71, 0.92); color: #3E2723; }
-.attr-floater--independence:not(.is-negative) { background: rgba(78, 205, 196, 0.92); }
-.attr-floater--trust:not(.is-negative) { background: rgba(199, 125, 255, 0.92); }
+.attr-floater--health:not(.is-negative) { background: linear-gradient(135deg, #66BB6A 0%, #81C784 100%); text-shadow: 0 0 10px rgba(255, 255, 255, 0.6), 0 0 20px rgba(102, 187, 106, 0.4); }
+.attr-floater--mood:not(.is-negative) { background: linear-gradient(135deg, #FFB347 0%, #FFA726 100%); color: #3E2723; text-shadow: 0 0 8px rgba(255, 200, 100, 0.5); }
+.attr-floater--independence:not(.is-negative) { background: linear-gradient(135deg, #4ECDC4 0%, #26A69A 100%); text-shadow: 0 0 10px rgba(255, 255, 255, 0.6), 0 0 20px rgba(78, 205, 196, 0.4); }
+.attr-floater--trust:not(.is-negative) { background: linear-gradient(135deg, #CE7CFF 0%, #AB47BC 100%); text-shadow: 0 0 10px rgba(255, 255, 255, 0.6), 0 0 20px rgba(199, 125, 255, 0.4); }
 
 .attr-floater__icon {
   font-size: var(--font-size-lg);
@@ -101,26 +103,26 @@ defineExpose({ showFloaters });
 
 /* 飘字动画 */
 .float-up-enter-active {
-  transition: all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: all 1.2s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .float-up-leave-active {
-  transition: all 0.4s ease;
+  transition: all 0.6s ease;
 }
 
 .float-up-enter-from {
   opacity: 0;
-  transform: translateX(var(--start-x, 0px)) translateY(0);
+  transform: translateX(var(--start-x, 0px)) translateY(0) scale(1.2);
 }
 
 .float-up-enter-to,
 .float-up-leave-from {
   opacity: 1;
-  transform: translateX(var(--start-x, 0px)) translateY(-60px);
+  transform: translateX(var(--start-x, 0px)) translateY(-60px) scale(1);
 }
 
 .float-up-leave-to {
   opacity: 0;
-  transform: translateX(var(--start-x, 0px)) translateY(-100px);
+  transform: translateX(var(--start-x, 0px)) translateY(-100px) scale(0.9);
 }
 </style>

@@ -47,7 +47,7 @@ export const useGameStore = defineStore('game', () => {
     currentCharacter.value = character;
     currentDay.value = 1;
     currentAct.value = 1;
-    gamePhase.value = 'playing';
+    gamePhase.value = 'start';
   }
 
   function setCurrentDay(day: number) {

@@ -524,10 +524,10 @@ onUnmounted(() => {
 
 .dialogue-box {
   background: var(--color-bg-card);
-  border-radius: var(--radius-xl);
+  border-radius: 20px;
   padding: var(--spacing-lg);
   border: 1px solid var(--color-border);
-  box-shadow: var(--shadow-card);
+  box-shadow: 0 6px 28px rgba(0, 0, 0, 0.06), 0 2px 8px rgba(0, 0, 0, 0.04);
   transition: box-shadow 0.3s ease, transform 0.2s ease;
   position: relative;
   overflow: hidden;
@@ -545,21 +545,21 @@ onUnmounted(() => {
 }
 
 .dialogue-box--spirit {
-  background: linear-gradient(135deg, #FFFDF5 0%, #FFF8E7 100%);
-  border-color: rgba(242, 183, 5, 0.2);
-  box-shadow: 0 4px 24px rgba(242, 183, 5, 0.08), var(--shadow-sm);
+  background: linear-gradient(135deg, #F0F4FF 0%, #E8EEFF 100%);
+  border-color: rgba(100, 140, 255, 0.15);
+  box-shadow: 0 6px 28px rgba(100, 140, 255, 0.08), 0 0 20px rgba(100, 140, 255, 0.04), var(--shadow-sm);
 }
-.dialogue-box--spirit::before { background: linear-gradient(90deg, #F2B705, #FFD54F); }
+.dialogue-box--spirit::before { background: linear-gradient(90deg, #6B8AFF, #A0B4FF); }
 
 .dialogue-box--elder {
-  background: linear-gradient(135deg, #FFF5F5 0%, #FFEEEE 100%);
-  border-color: rgba(255, 107, 107, 0.15);
-  box-shadow: 0 4px 24px rgba(255, 107, 107, 0.06), var(--shadow-sm);
+  background: linear-gradient(135deg, #FFF8F0 0%, #FFF2E5 100%);
+  border-color: rgba(255, 160, 100, 0.15);
+  box-shadow: 0 6px 28px rgba(255, 140, 80, 0.06), var(--shadow-sm);
 }
-.dialogue-box--elder::before { background: linear-gradient(90deg, #FF6B6B, #FF8E8E); }
+.dialogue-box--elder::before { background: linear-gradient(90deg, #FF9A6C, #FFB899); }
 
 .dialogue-box--narrator {
-  background: var(--color-bg-secondary);
+  background: #F5F5F5;
   border-style: dashed;
   border-color: var(--color-border);
 }
@@ -589,8 +589,8 @@ onUnmounted(() => {
 .dialogue-box--elder .dialogue-box__speaker-dot { background: var(--color-health); }
 
 .dialogue-box__text {
-  font-size: var(--font-size-base);
-  line-height: var(--line-height-relaxed);
+  font-size: 16px;
+  line-height: 1.7;
   color: var(--color-text-primary);
   min-height: 1.5em;
   word-break: break-word;
@@ -598,13 +598,14 @@ onUnmounted(() => {
 
 .cursor-blink {
   display: inline-block;
-  width: 2px;
-  height: 1.1em;
+  width: 6px;
+  height: 6px;
   background: var(--color-spirit-power);
-  margin-left: 2px;
-  vertical-align: text-bottom;
+  margin-left: 3px;
+  vertical-align: middle;
   animation: cursorBlink 0.8s ease-in-out infinite;
   border-radius: 1px;
+  opacity: 0.7;
 }
 
 .dialogue-box__hint {
@@ -644,19 +645,28 @@ onUnmounted(() => {
   padding: var(--spacing-md) var(--spacing-xl);
   background: var(--color-bg-card);
   border: 1.5px solid var(--color-border);
-  border-radius: var(--radius-full);
+  border-left: 3px solid var(--color-spirit-power);
+  border-radius: 16px;
   text-align: left;
   transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
   position: relative;
   overflow: hidden;
   will-change: transform;
   transform: translateZ(0);
 }
 
+.choice-btn:hover {
+  transform: translateX(4px) translateZ(0);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-left-color: var(--color-spirit-power-dark);
+  border-left-width: 5px;
+}
+
 .choice-btn:active {
-  transform: scale(0.97) translateZ(0);
+  transform: translateX(4px) scale(0.97) translateZ(0);
   border-color: var(--color-spirit-power);
+  border-left-width: 5px;
   background: linear-gradient(135deg, #FFFDF5 0%, #FFF8E7 100%);
   box-shadow: 0 4px 20px rgba(242, 183, 5, 0.15);
 }
@@ -669,8 +679,8 @@ onUnmounted(() => {
 }
 
 .choice-btn__desc {
-  font-size: var(--font-size-xs);
-  color: var(--color-text-secondary);
+  font-size: 13px;
+  color: var(--color-text-primary);
   line-height: 1.4;
 }
 
@@ -977,19 +987,23 @@ onUnmounted(() => {
 }
 
 /* ========== Transition 动画 ========== */
-.scene-fade-enter-active,
+.scene-fade-enter-active {
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out, filter 0.8s ease-in-out;
+}
+
 .scene-fade-leave-active {
-  transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1), transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
 .scene-fade-enter-from {
   opacity: 0;
-  transform: scale(1.04);
+  transform: scale(1.03);
+  filter: brightness(1.1);
 }
 
 .scene-fade-leave-to {
   opacity: 0;
-  transform: scale(0.98);
+  transform: scale(0.97);
 }
 
 .spirit-pop-enter-active {
