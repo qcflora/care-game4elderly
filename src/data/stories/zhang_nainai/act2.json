@@ -34,7 +34,10 @@
         }
       ],
       "nextNode": "zhang_act2_d8_002",
-      "tags": ["pain-communication", "psychology"]
+      "tags": [
+        "pain-communication",
+        "psychology"
+      ]
     },
     {
       "id": "zhang_act2_d8_002",
@@ -61,8 +64,16 @@
           "description": "平等的姿态，温和地邀请",
           "isCorrect": true,
           "effects": [
-            { "type": "trust", "delta": 8, "reason": "被认真关注" },
-            { "type": "mood", "delta": 3, "reason": "被在乎的温暖" }
+            {
+              "type": "trust",
+              "delta": 8,
+              "reason": "被认真关注"
+            },
+            {
+              "type": "mood",
+              "delta": 3,
+              "reason": "被在乎的温暖"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhang_act2_d8_003",
@@ -78,8 +89,16 @@
           "description": "直接追问",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": -3, "reason": "感到被逼问" },
-            { "type": "mood", "delta": -2, "reason": "有压力" }
+            {
+              "type": "trust",
+              "delta": -3,
+              "reason": "感到被逼问"
+            },
+            {
+              "type": "mood",
+              "delta": -2,
+              "reason": "有压力"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhang_act2_d8_003",
@@ -95,8 +114,16 @@
           "description": "等她主动开口",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": -5, "reason": "疼痛被忽视" },
-            { "type": "trust", "delta": -3, "reason": "没被注意到" }
+            {
+              "type": "health",
+              "delta": -5,
+              "reason": "疼痛被忽视"
+            },
+            {
+              "type": "trust",
+              "delta": -3,
+              "reason": "没被注意到"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhang_act2_d8_003",
@@ -107,7 +134,11 @@
           }
         }
       ],
-      "tags": ["choice", "pain-communication", "psychology"]
+      "tags": [
+        "choice",
+        "pain-communication",
+        "psychology"
+      ]
     },
     {
       "id": "zhang_act2_d8_003",
@@ -157,7 +188,17 @@
           "emotion": "encouraging"
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ],
+      "unlocks": [
+        {
+          "diaryEntryId": "zhang_diary_d8"
+        },
+        {
+          "albumEntryId": "album_zhang_safe_home"
+        }
+      ]
     },
     {
       "id": "zhang_act2_d9_001",
@@ -195,7 +236,10 @@
         }
       ],
       "nextNode": "zhang_act2_d9_002",
-      "tags": ["pain-communication", "psychology"]
+      "tags": [
+        "pain-communication",
+        "psychology"
+      ]
     },
     {
       "id": "zhang_act2_d9_002",
@@ -222,8 +266,16 @@
           "description": "倾听+确认+记录+评估",
           "isCorrect": true,
           "effects": [
-            { "type": "trust", "delta": 8, "reason": "被认真倾听" },
-            { "type": "health", "delta": 3, "reason": "疼痛被记录关注" }
+            {
+              "type": "trust",
+              "delta": 8,
+              "reason": "被认真倾听"
+            },
+            {
+              "type": "health",
+              "delta": 3,
+              "reason": "疼痛被记录关注"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhang_act2_d9_003",
@@ -239,8 +291,16 @@
           "description": "责怪中带着关心",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": -5, "reason": "被责怪" },
-            { "type": "mood", "delta": -3, "reason": "内疚和委屈" }
+            {
+              "type": "trust",
+              "delta": -5,
+              "reason": "被责怪"
+            },
+            {
+              "type": "mood",
+              "delta": -3,
+              "reason": "内疚和委屈"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhang_act2_d9_003",
@@ -256,8 +316,16 @@
           "description": "马上行动",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": 4, "reason": "及时就医意识" },
-            { "type": "trust", "delta": 1, "reason": "有在关心" }
+            {
+              "type": "health",
+              "delta": 4,
+              "reason": "及时就医意识"
+            },
+            {
+              "type": "trust",
+              "delta": 1,
+              "reason": "有在关心"
+            }
           ],
           "spiritPowerChange": 5,
           "nextNode": "zhang_act2_d9_003",
@@ -268,7 +336,11 @@
           }
         }
       ],
-      "tags": ["choice", "pain-communication", "psychology"]
+      "tags": [
+        "choice",
+        "pain-communication",
+        "psychology"
+      ]
     },
     {
       "id": "zhang_act2_d9_003",
@@ -322,7 +394,9 @@
           "emotion": "encouraging"
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ]
     },
     {
       "id": "zhang_act2_d10_001",
@@ -359,7 +433,10 @@
           "autoShow": true
         }
       ],
-      "tags": ["fall-prevention", "home-safety"]
+      "tags": [
+        "fall-prevention",
+        "home-safety"
+      ]
     },
     {
       "id": "zhang_act2_d10_002",
@@ -386,8 +463,16 @@
           "description": "系统评估全部高风险区域",
           "isCorrect": true,
           "effects": [
-            { "type": "health", "delta": 8, "reason": "消除跌倒隐患" },
-            { "type": "independence", "delta": 3, "reason": "安全环境让她敢活动" }
+            {
+              "type": "health",
+              "delta": 8,
+              "reason": "消除跌倒隐患"
+            },
+            {
+              "type": "independence",
+              "delta": 3,
+              "reason": "安全环境让她敢活动"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhang_act2_d10_003",
@@ -403,8 +488,16 @@
           "description": "重点排查卫生间",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": 4, "reason": "部分改善" },
-            { "type": "trust", "delta": 1, "reason": "有在检查" }
+            {
+              "type": "health",
+              "delta": 4,
+              "reason": "部分改善"
+            },
+            {
+              "type": "trust",
+              "delta": 1,
+              "reason": "有在检查"
+            }
           ],
           "spiritPowerChange": 5,
           "nextNode": "zhang_act2_d10_003",
@@ -420,7 +513,11 @@
           "description": "信任现有的环境",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": -5, "reason": "隐患未排除" }
+            {
+              "type": "health",
+              "delta": -5,
+              "reason": "隐患未排除"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhang_act2_d10_003",
@@ -431,7 +528,11 @@
           }
         }
       ],
-      "tags": ["choice", "fall-prevention", "home-safety"]
+      "tags": [
+        "choice",
+        "fall-prevention",
+        "home-safety"
+      ]
     },
     {
       "id": "zhang_act2_d10_003",
@@ -485,7 +586,14 @@
           "emotion": "encouraging"
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ],
+      "unlocks": [
+        {
+          "albumEntryId": "album_zhang_pain_managed"
+        }
+      ]
     },
     {
       "id": "zhang_act2_d11_001",
@@ -523,7 +631,10 @@
         }
       ],
       "nextNode": "zhang_act2_d11_002",
-      "tags": ["assist-balance", "psychology"]
+      "tags": [
+        "assist-balance",
+        "psychology"
+      ]
     },
     {
       "id": "zhang_act2_d11_002",
@@ -550,9 +661,21 @@
           "description": "尊重+引导+自主选择",
           "isCorrect": true,
           "effects": [
-            { "type": "independence", "delta": 8, "reason": "用辅具恢复行动力" },
-            { "type": "mood", "delta": 3, "reason": "被理解和尊重" },
-            { "type": "trust", "delta": 3, "reason": "不强人所难" }
+            {
+              "type": "independence",
+              "delta": 8,
+              "reason": "用辅具恢复行动力"
+            },
+            {
+              "type": "mood",
+              "delta": 3,
+              "reason": "被理解和尊重"
+            },
+            {
+              "type": "trust",
+              "delta": 3,
+              "reason": "不强人所难"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhang_act2_d11_003",
@@ -568,9 +691,21 @@
           "description": "直说道理",
           "isCorrect": false,
           "effects": [
-            { "type": "independence", "delta": -3, "reason": "被迫使用" },
-            { "type": "mood", "delta": -3, "reason": "自尊受伤" },
-            { "type": "trust", "delta": -5, "reason": "不被理解" }
+            {
+              "type": "independence",
+              "delta": -3,
+              "reason": "被迫使用"
+            },
+            {
+              "type": "mood",
+              "delta": -3,
+              "reason": "自尊受伤"
+            },
+            {
+              "type": "trust",
+              "delta": -5,
+              "reason": "不被理解"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhang_act2_d11_003",
@@ -586,8 +721,16 @@
           "description": "尊重她的选择",
           "isCorrect": false,
           "effects": [
-            { "type": "independence", "delta": 2, "reason": "有在走" },
-            { "type": "mood", "delta": 1, "reason": "不被强迫" }
+            {
+              "type": "independence",
+              "delta": 2,
+              "reason": "有在走"
+            },
+            {
+              "type": "mood",
+              "delta": 1,
+              "reason": "不被强迫"
+            }
           ],
           "spiritPowerChange": 5,
           "nextNode": "zhang_act2_d11_003",
@@ -598,7 +741,11 @@
           }
         }
       ],
-      "tags": ["choice", "assist-balance", "psychology"]
+      "tags": [
+        "choice",
+        "assist-balance",
+        "psychology"
+      ]
     },
     {
       "id": "zhang_act2_d11_003",
@@ -652,7 +799,14 @@
           "emotion": "proud"
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ],
+      "unlocks": [
+        {
+          "diaryEntryId": "zhang_diary_d11"
+        }
+      ]
     },
     {
       "id": "zhang_act2_d12_001",
@@ -690,7 +844,10 @@
         }
       ],
       "nextNode": "zhang_act2_d12_002",
-      "tags": ["psychology", "depression-sign"]
+      "tags": [
+        "psychology",
+        "depression-sign"
+      ]
     },
     {
       "id": "zhang_act2_d12_002",
@@ -717,8 +874,16 @@
           "description": "真诚回应+具体肯定",
           "isCorrect": true,
           "effects": [
-            { "type": "mood", "delta": 8, "reason": "被肯定和价值感" },
-            { "type": "trust", "delta": 3, "reason": "被认真对待" }
+            {
+              "type": "mood",
+              "delta": 8,
+              "reason": "被肯定和价值感"
+            },
+            {
+              "type": "trust",
+              "delta": 3,
+              "reason": "被认真对待"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhang_act2_d12_003",
@@ -734,8 +899,16 @@
           "description": "轻描淡写带过",
           "isCorrect": false,
           "effects": [
-            { "type": "mood", "delta": -5, "reason": "感受被忽视" },
-            { "type": "trust", "delta": -3, "reason": "不被理解" }
+            {
+              "type": "mood",
+              "delta": -5,
+              "reason": "感受被忽视"
+            },
+            {
+              "type": "trust",
+              "delta": -3,
+              "reason": "不被理解"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhang_act2_d12_003",
@@ -751,8 +924,16 @@
           "description": "宽慰她",
           "isCorrect": false,
           "effects": [
-            { "type": "mood", "delta": 2, "reason": "被安慰" },
-            { "type": "trust", "delta": 1, "reason": "有回应" }
+            {
+              "type": "mood",
+              "delta": 2,
+              "reason": "被安慰"
+            },
+            {
+              "type": "trust",
+              "delta": 1,
+              "reason": "有回应"
+            }
           ],
           "spiritPowerChange": 5,
           "nextNode": "zhang_act2_d12_003",
@@ -763,7 +944,11 @@
           }
         }
       ],
-      "tags": ["choice", "psychology", "depression-sign"]
+      "tags": [
+        "choice",
+        "psychology",
+        "depression-sign"
+      ]
     },
     {
       "id": "zhang_act2_d12_003",
@@ -812,7 +997,14 @@
           "emotion": "gentle"
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ],
+      "unlocks": [
+        {
+          "albumEntryId": "album_zhang_cane_accept"
+        }
+      ]
     },
     {
       "id": "zhang_act2_d13_001",
@@ -850,7 +1042,10 @@
         }
       ],
       "nextNode": "zhang_act2_d13_002",
-      "tags": ["psychology", "reminiscence"]
+      "tags": [
+        "psychology",
+        "reminiscence"
+      ]
     },
     {
       "id": "zhang_act2_d13_002",
@@ -877,8 +1072,16 @@
           "description": "回忆疗法，引导正向回忆",
           "isCorrect": true,
           "effects": [
-            { "type": "mood", "delta": 8, "reason": "价值感被唤醒" },
-            { "type": "trust", "delta": 3, "reason": "被耐心倾听" }
+            {
+              "type": "mood",
+              "delta": 8,
+              "reason": "价值感被唤醒"
+            },
+            {
+              "type": "trust",
+              "delta": 3,
+              "reason": "被耐心倾听"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhang_act2_d13_003",
@@ -894,8 +1097,16 @@
           "description": "提醒她重复了",
           "isCorrect": false,
           "effects": [
-            { "type": "mood", "delta": -5, "reason": "被打断和否定" },
-            { "type": "trust", "delta": -5, "reason": "不被尊重" }
+            {
+              "type": "mood",
+              "delta": -5,
+              "reason": "被打断和否定"
+            },
+            {
+              "type": "trust",
+              "delta": -5,
+              "reason": "不被尊重"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhang_act2_d13_003",
@@ -911,8 +1122,16 @@
           "description": "安静陪伴",
           "isCorrect": false,
           "effects": [
-            { "type": "mood", "delta": 2, "reason": "有人在听" },
-            { "type": "trust", "delta": 1, "reason": "陪伴" }
+            {
+              "type": "mood",
+              "delta": 2,
+              "reason": "有人在听"
+            },
+            {
+              "type": "trust",
+              "delta": 1,
+              "reason": "陪伴"
+            }
           ],
           "spiritPowerChange": 5,
           "nextNode": "zhang_act2_d13_003",
@@ -923,7 +1142,11 @@
           }
         }
       ],
-      "tags": ["choice", "psychology", "reminiscence"]
+      "tags": [
+        "choice",
+        "psychology",
+        "reminiscence"
+      ]
     },
     {
       "id": "zhang_act2_d13_003",
@@ -977,7 +1200,9 @@
           "emotion": "encouraging"
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ]
     },
     {
       "id": "zhang_act2_d14_001",
@@ -1007,7 +1232,10 @@
         }
       ],
       "nextNode": "zhang_act2_d14_002",
-      "tags": ["social", "psychology"]
+      "tags": [
+        "social",
+        "psychology"
+      ]
     },
     {
       "id": "zhang_act2_d14_002",
@@ -1034,8 +1262,16 @@
           "description": "尊重意愿+降低门槛",
           "isCorrect": true,
           "effects": [
-            { "type": "mood", "delta": 8, "reason": "期待社交" },
-            { "type": "independence", "delta": 3, "reason": "尊重她的选择" }
+            {
+              "type": "mood",
+              "delta": 8,
+              "reason": "期待社交"
+            },
+            {
+              "type": "independence",
+              "delta": 3,
+              "reason": "尊重她的选择"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhang_act2_d14_003",
@@ -1051,8 +1287,16 @@
           "description": "替她安排好",
           "isCorrect": false,
           "effects": [
-            { "type": "independence", "delta": -5, "reason": "被替做决定" },
-            { "type": "mood", "delta": -3, "reason": "被安排的不适" }
+            {
+              "type": "independence",
+              "delta": -5,
+              "reason": "被替做决定"
+            },
+            {
+              "type": "mood",
+              "delta": -3,
+              "reason": "被安排的不适"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhang_act2_d14_003",
@@ -1068,8 +1312,16 @@
           "description": "让她自己决定",
           "isCorrect": false,
           "effects": [
-            { "type": "mood", "delta": 2, "reason": "有建议" },
-            { "type": "trust", "delta": 1, "reason": "不强迫" }
+            {
+              "type": "mood",
+              "delta": 2,
+              "reason": "有建议"
+            },
+            {
+              "type": "trust",
+              "delta": 1,
+              "reason": "不强迫"
+            }
           ],
           "spiritPowerChange": 5,
           "nextNode": "zhang_act2_d14_003",
@@ -1080,7 +1332,11 @@
           }
         }
       ],
-      "tags": ["choice", "social", "psychology"]
+      "tags": [
+        "choice",
+        "social",
+        "psychology"
+      ]
     },
     {
       "id": "zhang_act2_d14_003",
@@ -1129,7 +1385,17 @@
           "emotion": "hopeful"
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ],
+      "unlocks": [
+        {
+          "diaryEntryId": "zhang_diary_d14"
+        },
+        {
+          "albumEntryId": "album_zhang_fall_handled"
+        }
+      ]
     },
     {
       "id": "zhang_act2_d15_001",
@@ -1167,7 +1433,10 @@
         }
       ],
       "nextNode": "zhang_act2_d15_002",
-      "tags": ["social", "psychology"]
+      "tags": [
+        "social",
+        "psychology"
+      ]
     },
     {
       "id": "zhang_act2_d15_002",
@@ -1194,8 +1463,16 @@
           "description": "倾听真实感受",
           "isCorrect": true,
           "effects": [
-            { "type": "mood", "delta": 8, "reason": "被理解" },
-            { "type": "trust", "delta": 3, "reason": "被关注" }
+            {
+              "type": "mood",
+              "delta": 8,
+              "reason": "被理解"
+            },
+            {
+              "type": "trust",
+              "delta": 3,
+              "reason": "被关注"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhang_act2_d15_003",
@@ -1211,7 +1488,11 @@
           "description": "鼓励她坚持",
           "isCorrect": false,
           "effects": [
-            { "type": "mood", "delta": -3, "reason": "感受被忽视" }
+            {
+              "type": "mood",
+              "delta": -3,
+              "reason": "感受被忽视"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhang_act2_d15_003",
@@ -1227,8 +1508,16 @@
           "description": "换一个试试",
           "isCorrect": false,
           "effects": [
-            { "type": "mood", "delta": 2, "reason": "有退路" },
-            { "type": "trust", "delta": 1, "reason": "不强求" }
+            {
+              "type": "mood",
+              "delta": 2,
+              "reason": "有退路"
+            },
+            {
+              "type": "trust",
+              "delta": 1,
+              "reason": "不强求"
+            }
           ],
           "spiritPowerChange": 5,
           "nextNode": "zhang_act2_d15_003",
@@ -1239,7 +1528,11 @@
           }
         }
       ],
-      "tags": ["choice", "social", "psychology"]
+      "tags": [
+        "choice",
+        "social",
+        "psychology"
+      ]
     },
     {
       "id": "zhang_act2_d15_003",
@@ -1288,7 +1581,9 @@
           "emotion": "thoughtful"
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ]
     },
     {
       "id": "zhang_act2_d16_001",
@@ -1326,7 +1621,10 @@
         }
       ],
       "nextNode": "zhang_act2_d16_002",
-      "tags": ["cognition-foreshadow", "psychology"]
+      "tags": [
+        "cognition-foreshadow",
+        "psychology"
+      ]
     },
     {
       "id": "zhang_act2_d16_002",
@@ -1353,8 +1651,16 @@
           "description": "温和处理+持续观察",
           "isCorrect": true,
           "effects": [
-            { "type": "trust", "delta": 8, "reason": "不让她难堪" },
-            { "type": "mood", "delta": 2, "reason": "被温和对待" }
+            {
+              "type": "trust",
+              "delta": 8,
+              "reason": "不让她难堪"
+            },
+            {
+              "type": "mood",
+              "delta": 2,
+              "reason": "被温和对待"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhang_act2_d16_003",
@@ -1370,8 +1676,16 @@
           "description": "开玩笑活跃气氛",
           "isCorrect": false,
           "effects": [
-            { "type": "mood", "delta": -5, "reason": "自尊受损" },
-            { "type": "trust", "delta": -3, "reason": "被取笑" }
+            {
+              "type": "mood",
+              "delta": -5,
+              "reason": "自尊受损"
+            },
+            {
+              "type": "trust",
+              "delta": -3,
+              "reason": "被取笑"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhang_act2_d16_003",
@@ -1387,7 +1701,11 @@
           "description": "完全不在意",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": -2, "reason": "忽视潜在信号" }
+            {
+              "type": "health",
+              "delta": -2,
+              "reason": "忽视潜在信号"
+            }
           ],
           "spiritPowerChange": 5,
           "nextNode": "zhang_act2_d16_003",
@@ -1398,7 +1716,11 @@
           }
         }
       ],
-      "tags": ["choice", "cognition-foreshadow", "psychology"]
+      "tags": [
+        "choice",
+        "cognition-foreshadow",
+        "psychology"
+      ]
     },
     {
       "id": "zhang_act2_d16_003",
@@ -1418,7 +1740,14 @@
           "emotion": "thoughtful"
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ],
+      "unlocks": [
+        {
+          "albumEntryId": "album_zhang_pain_shared"
+        }
+      ]
     },
     {
       "id": "zhang_act2_d17_001",
@@ -1448,7 +1777,10 @@
         }
       ],
       "nextNode": "zhang_act2_d17_002",
-      "tags": ["cognition-foreshadow", "psychology"]
+      "tags": [
+        "cognition-foreshadow",
+        "psychology"
+      ]
     },
     {
       "id": "zhang_act2_d17_002",
@@ -1475,8 +1807,16 @@
           "description": "耐心重复+继续观察",
           "isCorrect": true,
           "effects": [
-            { "type": "mood", "delta": 8, "reason": "不被纠正的安心" },
-            { "type": "trust", "delta": 3, "reason": "被耐心对待" }
+            {
+              "type": "mood",
+              "delta": 8,
+              "reason": "不被纠正的安心"
+            },
+            {
+              "type": "trust",
+              "delta": 3,
+              "reason": "被耐心对待"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhang_act2_d17_003",
@@ -1492,8 +1832,16 @@
           "description": "提醒她重复了",
           "isCorrect": false,
           "effects": [
-            { "type": "mood", "delta": -5, "reason": "被指出遗忘" },
-            { "type": "trust", "delta": -5, "reason": "感到被嫌弃" }
+            {
+              "type": "mood",
+              "delta": -5,
+              "reason": "被指出遗忘"
+            },
+            {
+              "type": "trust",
+              "delta": -5,
+              "reason": "感到被嫌弃"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhang_act2_d17_003",
@@ -1509,7 +1857,11 @@
           "description": "转移注意力",
           "isCorrect": false,
           "effects": [
-            { "type": "mood", "delta": 2, "reason": "没被追问" }
+            {
+              "type": "mood",
+              "delta": 2,
+              "reason": "没被追问"
+            }
           ],
           "spiritPowerChange": 5,
           "nextNode": "zhang_act2_d17_003",
@@ -1520,7 +1872,11 @@
           }
         }
       ],
-      "tags": ["choice", "cognition-foreshadow", "psychology"]
+      "tags": [
+        "choice",
+        "cognition-foreshadow",
+        "psychology"
+      ]
     },
     {
       "id": "zhang_act2_d17_003",
@@ -1540,7 +1896,14 @@
           "emotion": "thoughtful"
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ],
+      "unlocks": [
+        {
+          "diaryEntryId": "zhang_diary_d17"
+        }
+      ]
     },
     {
       "id": "zhang_act2_d18_001",
@@ -1579,7 +1942,10 @@
         }
       ],
       "nextNode": "zhang_act2_d18_002",
-      "tags": ["cognition-foreshadow", "psychology"]
+      "tags": [
+        "cognition-foreshadow",
+        "psychology"
+      ]
     },
     {
       "id": "zhang_act2_d18_002",
@@ -1606,8 +1972,16 @@
           "description": "理性面对+适时就医",
           "isCorrect": true,
           "effects": [
-            { "type": "health", "delta": 8, "reason": "关注认知健康" },
-            { "type": "trust", "delta": 3, "reason": "认真对待" }
+            {
+              "type": "health",
+              "delta": 8,
+              "reason": "关注认知健康"
+            },
+            {
+              "type": "trust",
+              "delta": 3,
+              "reason": "认真对待"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhang_act2_d18_003",
@@ -1623,8 +1997,16 @@
           "description": "直接下结论",
           "isCorrect": false,
           "effects": [
-            { "type": "mood", "delta": -8, "reason": "极度恐慌" },
-            { "type": "trust", "delta": -3, "reason": "被吓到" }
+            {
+              "type": "mood",
+              "delta": -8,
+              "reason": "极度恐慌"
+            },
+            {
+              "type": "trust",
+              "delta": -3,
+              "reason": "被吓到"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhang_act2_d18_003",
@@ -1640,8 +2022,16 @@
           "description": "安慰她别多想",
           "isCorrect": false,
           "effects": [
-            { "type": "mood", "delta": 2, "reason": "被安慰" },
-            { "type": "health", "delta": -3, "reason": "忽视信号" }
+            {
+              "type": "mood",
+              "delta": 2,
+              "reason": "被安慰"
+            },
+            {
+              "type": "health",
+              "delta": -3,
+              "reason": "忽视信号"
+            }
           ],
           "spiritPowerChange": 5,
           "nextNode": "zhang_act2_d18_003",
@@ -1652,7 +2042,11 @@
           }
         }
       ],
-      "tags": ["choice", "cognition-foreshadow", "psychology"]
+      "tags": [
+        "choice",
+        "cognition-foreshadow",
+        "psychology"
+      ]
     },
     {
       "id": "zhang_act2_d18_003",
@@ -1672,7 +2066,14 @@
           "emotion": "thoughtful"
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ],
+      "unlocks": [
+        {
+          "albumEntryId": "album_zhang_reminisce"
+        }
+      ]
     },
     {
       "id": "zhang_act2_d19_001",
@@ -1710,7 +2111,10 @@
         }
       ],
       "nextNode": "zhang_act2_d19_002",
-      "tags": ["emotional-conflict", "psychology"]
+      "tags": [
+        "emotional-conflict",
+        "psychology"
+      ]
     },
     {
       "id": "zhang_act2_d19_002",
@@ -1737,8 +2141,16 @@
           "description": "倾听+理解+真诚表达",
           "isCorrect": true,
           "effects": [
-            { "type": "trust", "delta": 8, "reason": "被认真对待" },
-            { "type": "mood", "delta": 3, "reason": "被理解" }
+            {
+              "type": "trust",
+              "delta": 8,
+              "reason": "被认真对待"
+            },
+            {
+              "type": "mood",
+              "delta": 3,
+              "reason": "被理解"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhang_act2_d19_003",
@@ -1754,8 +2166,16 @@
           "description": "指出风险",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": -5, "reason": "被否定" },
-            { "type": "mood", "delta": -3, "reason": "觉得自己是麻烦" }
+            {
+              "type": "trust",
+              "delta": -5,
+              "reason": "被否定"
+            },
+            {
+              "type": "mood",
+              "delta": -3,
+              "reason": "觉得自己是麻烦"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhang_act2_d19_003",
@@ -1771,8 +2191,16 @@
           "description": "回避话题",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": 1, "reason": "没争执" },
-            { "type": "mood", "delta": -2, "reason": "被敷衍" }
+            {
+              "type": "trust",
+              "delta": 1,
+              "reason": "没争执"
+            },
+            {
+              "type": "mood",
+              "delta": -2,
+              "reason": "被敷衍"
+            }
           ],
           "spiritPowerChange": 5,
           "nextNode": "zhang_act2_d19_003",
@@ -1783,7 +2211,11 @@
           }
         }
       ],
-      "tags": ["choice", "emotional-conflict", "psychology"]
+      "tags": [
+        "choice",
+        "emotional-conflict",
+        "psychology"
+      ]
     },
     {
       "id": "zhang_act2_d19_003",
@@ -1832,7 +2264,9 @@
           "emotion": "gentle"
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ]
     },
     {
       "id": "zhang_act2_d20_001",
@@ -1862,7 +2296,10 @@
         }
       ],
       "nextNode": "zhang_act2_d20_002",
-      "tags": ["emotional-conflict", "depression-sign"]
+      "tags": [
+        "emotional-conflict",
+        "depression-sign"
+      ]
     },
     {
       "id": "zhang_act2_d20_002",
@@ -1889,8 +2326,16 @@
           "description": "陪伴+找到根源+针对性支持",
           "isCorrect": true,
           "effects": [
-            { "type": "mood", "delta": 8, "reason": "被陪伴和理解" },
-            { "type": "trust", "delta": 3, "reason": "不孤独了" }
+            {
+              "type": "mood",
+              "delta": 8,
+              "reason": "被陪伴和理解"
+            },
+            {
+              "type": "trust",
+              "delta": 3,
+              "reason": "不孤独了"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhang_act2_d20_003",
@@ -1906,8 +2351,16 @@
           "description": "带她出去走走",
           "isCorrect": false,
           "effects": [
-            { "type": "mood", "delta": -5, "reason": "被强迫" },
-            { "type": "trust", "delta": -3, "reason": "不被理解" }
+            {
+              "type": "mood",
+              "delta": -5,
+              "reason": "被强迫"
+            },
+            {
+              "type": "trust",
+              "delta": -3,
+              "reason": "不被理解"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhang_act2_d20_003",
@@ -1923,8 +2376,16 @@
           "description": "给她空间",
           "isCorrect": false,
           "effects": [
-            { "type": "mood", "delta": 1, "reason": "不被打扰" },
-            { "type": "trust", "delta": -2, "reason": "觉得被冷落" }
+            {
+              "type": "mood",
+              "delta": 1,
+              "reason": "不被打扰"
+            },
+            {
+              "type": "trust",
+              "delta": -2,
+              "reason": "觉得被冷落"
+            }
           ],
           "spiritPowerChange": 5,
           "nextNode": "zhang_act2_d20_003",
@@ -1935,7 +2396,11 @@
           }
         }
       ],
-      "tags": ["choice", "emotional-conflict", "depression-sign"]
+      "tags": [
+        "choice",
+        "emotional-conflict",
+        "depression-sign"
+      ]
     },
     {
       "id": "zhang_act2_d20_003",
@@ -1984,7 +2449,17 @@
           "emotion": "hopeful"
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ],
+      "unlocks": [
+        {
+          "diaryEntryId": "zhang_diary_d20"
+        },
+        {
+          "albumEntryId": "album_zhang_act2_complete"
+        }
+      ]
     },
     {
       "id": "zhang_act2_d21_001",
@@ -2030,7 +2505,10 @@
         }
       ],
       "nextNode": "zhang_act2_d21_002",
-      "tags": ["emotional-conflict", "climax"]
+      "tags": [
+        "emotional-conflict",
+        "climax"
+      ]
     },
     {
       "id": "zhang_act2_d21_002",
@@ -2057,8 +2535,16 @@
           "description": "真诚+反思+改变承诺",
           "isCorrect": true,
           "effects": [
-            { "type": "trust", "delta": 8, "reason": "被真诚对待" },
-            { "type": "mood", "delta": 8, "reason": "被理解和接纳" }
+            {
+              "type": "trust",
+              "delta": 8,
+              "reason": "被真诚对待"
+            },
+            {
+              "type": "mood",
+              "delta": 8,
+              "reason": "被理解和接纳"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhang_act2_d21_003",
@@ -2074,8 +2560,16 @@
           "description": "觉得委屈",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": -5, "reason": "被反驳" },
-            { "type": "mood", "delta": -3, "reason": "内疚和失望" }
+            {
+              "type": "trust",
+              "delta": -5,
+              "reason": "被反驳"
+            },
+            {
+              "type": "mood",
+              "delta": -3,
+              "reason": "内疚和失望"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhang_act2_d21_003",
@@ -2091,8 +2585,16 @@
           "description": "简单承诺",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": 4, "reason": "有回应" },
-            { "type": "mood", "delta": 4, "reason": "被安抚" }
+            {
+              "type": "trust",
+              "delta": 4,
+              "reason": "有回应"
+            },
+            {
+              "type": "mood",
+              "delta": 4,
+              "reason": "被安抚"
+            }
           ],
           "spiritPowerChange": 5,
           "nextNode": "zhang_act2_d21_003",
@@ -2103,7 +2605,11 @@
           }
         }
       ],
-      "tags": ["choice", "emotional-conflict", "climax"]
+      "tags": [
+        "choice",
+        "emotional-conflict",
+        "climax"
+      ]
     },
     {
       "id": "zhang_act2_d21_003",
@@ -2146,7 +2652,9 @@
           "albumEntryId": "album_zhang_act2_complete"
         }
       ],
-      "tags": ["act-end"],
+      "tags": [
+        "act-end"
+      ],
       "devNote": "第二幕结束，硬抄本伏笔揭示——它不只记血压，还记着她不敢说的话"
     }
   ]

@@ -36,7 +36,10 @@
       ],
       "nextNode": "chen_act3_d22_002",
       "isCheckpoint": true,
-      "tags": ["condition-fluctuation", "silent-day"],
+      "tags": [
+        "condition-fluctuation",
+        "silent-day"
+      ],
       "devNote": "Day 22 病情波动——认知功能下降的暗日"
     },
     {
@@ -64,8 +67,16 @@
           "description": "试图唤醒她的互动能力",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": -4, "reason": "被反复催促，感到压力和不安" },
-            { "type": "mood", "delta": -4, "reason": "无法回应的挫败感" }
+            {
+              "type": "trust",
+              "delta": -4,
+              "reason": "被反复催促，感到压力和不安"
+            },
+            {
+              "type": "mood",
+              "delta": -4,
+              "reason": "无法回应的挫败感"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "chen_act3_d22_003",
@@ -81,8 +92,16 @@
           "description": "不强求互动，用音乐和陪伴默默守候",
           "isCorrect": true,
           "effects": [
-            { "type": "trust", "delta": 5, "reason": "没有压力的陪伴，让她感到安全" },
-            { "type": "mood", "delta": 3, "reason": "音乐带来微弱的安抚" }
+            {
+              "type": "trust",
+              "delta": 5,
+              "reason": "没有压力的陪伴，让她感到安全"
+            },
+            {
+              "type": "mood",
+              "delta": 3,
+              "reason": "音乐带来微弱的安抚"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "chen_act3_d22_003",
@@ -98,8 +117,16 @@
           "description": "放弃当天的陪伴",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": -3, "reason": "被独自留在暗日里" },
-            { "type": "mood", "delta": -3, "reason": "孤独感加深" }
+            {
+              "type": "trust",
+              "delta": -3,
+              "reason": "被独自留在暗日里"
+            },
+            {
+              "type": "mood",
+              "delta": -3,
+              "reason": "孤独感加深"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "chen_act3_d22_003",
@@ -110,7 +137,12 @@
           }
         }
       ],
-      "tags": ["choice", "condition-fluctuation", "silent-day", "music-therapy"],
+      "tags": [
+        "choice",
+        "condition-fluctuation",
+        "silent-day",
+        "music-therapy"
+      ],
       "devNote": "教学：认知症暗日——不强求互动，用陪伴和音乐守候"
     },
     {
@@ -140,7 +172,9 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ]
     },
     {
       "id": "chen_act3_d23_001",
@@ -179,7 +213,11 @@
       ],
       "nextNode": "chen_act3_d23_002",
       "isCheckpoint": true,
-      "tags": ["inspect-prop", "textbook", "emotional"],
+      "tags": [
+        "inspect-prop",
+        "textbook",
+        "emotional"
+      ],
       "devNote": "Day 23 旧语文课本再次检视——字迹更歪斜，但多了一行感谢"
     },
     {
@@ -207,8 +245,16 @@
           "description": "惊讶地追问，试图确认她的认知状态",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": -2, "reason": "被追问认知状态，感到压力" },
-            { "type": "mood", "delta": -2, "reason": "好意被当成测试" }
+            {
+              "type": "trust",
+              "delta": -2,
+              "reason": "被追问认知状态，感到压力"
+            },
+            {
+              "type": "mood",
+              "delta": -2,
+              "reason": "好意被当成测试"
+            }
           ],
           "spiritPowerChange": 5,
           "nextNode": "chen_act3_d23_003",
@@ -224,8 +270,16 @@
           "description": "接受她的感谢，肯定她的表达",
           "isCorrect": true,
           "effects": [
-            { "type": "trust", "delta": 6, "reason": "她的情感表达被珍视和回应" },
-            { "type": "mood", "delta": 5, "reason": "被感谢的温暖，感到被认可" }
+            {
+              "type": "trust",
+              "delta": 6,
+              "reason": "她的情感表达被珍视和回应"
+            },
+            {
+              "type": "mood",
+              "delta": 5,
+              "reason": "被感谢的温暖，感到被认可"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "chen_act3_d23_003",
@@ -241,8 +295,16 @@
           "description": "回避，藏起课本",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": -3, "reason": "她的东西被拿走，感到不安" },
-            { "type": "mood", "delta": -2, "reason": "找不到心爱的课本，焦虑" }
+            {
+              "type": "trust",
+              "delta": -3,
+              "reason": "她的东西被拿走，感到不安"
+            },
+            {
+              "type": "mood",
+              "delta": -2,
+              "reason": "找不到心爱的课本，焦虑"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "chen_act3_d23_003",
@@ -253,7 +315,12 @@
           }
         }
       ],
-      "tags": ["choice", "inspect-prop", "textbook", "emotional"],
+      "tags": [
+        "choice",
+        "inspect-prop",
+        "textbook",
+        "emotional"
+      ],
       "devNote": "教学：接受认知症老人的情感表达，不追问不回避"
     },
     {
@@ -283,7 +350,9 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ]
     },
     {
       "id": "chen_act3_d24_001",
@@ -324,7 +393,11 @@
       ],
       "nextNode": "chen_act3_d24_002",
       "isCheckpoint": true,
-      "tags": ["lucid-moment", "emotional", "heartbreak"],
+      "tags": [
+        "lucid-moment",
+        "emotional",
+        "heartbreak"
+      ],
       "devNote": "Day 24 一次长时间的清醒——'今天我脑子清楚，跟你好好说说话'"
     },
     {
@@ -352,8 +425,16 @@
           "description": "用清醒时刻进行疾病教育",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": -3, "reason": "清醒时刻被用来讨论疾病，沉重且不必要" },
-            { "type": "mood", "delta": -4, "reason": "被迫直面疾病进程，恐惧加深" }
+            {
+              "type": "trust",
+              "delta": -3,
+              "reason": "清醒时刻被用来讨论疾病，沉重且不必要"
+            },
+            {
+              "type": "mood",
+              "delta": -4,
+              "reason": "被迫直面疾病进程，恐惧加深"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "chen_act3_d24_003",
@@ -369,8 +450,16 @@
           "description": "让她主导，倾听她想说的一切",
           "isCorrect": true,
           "effects": [
-            { "type": "trust", "delta": 7, "reason": "被认真倾听，感到被完全尊重和珍惜" },
-            { "type": "mood", "delta": 6, "reason": "清醒时刻被珍视，情感得到释放" }
+            {
+              "type": "trust",
+              "delta": 7,
+              "reason": "被认真倾听，感到被完全尊重和珍惜"
+            },
+            {
+              "type": "mood",
+              "delta": 6,
+              "reason": "清醒时刻被珍视，情感得到释放"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "chen_act3_d24_003",
@@ -386,8 +475,16 @@
           "description": "否定她的清醒觉察，给虚假希望",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": -5, "reason": "她的清醒和真诚被否定" },
-            { "type": "mood", "delta": -5, "reason": "好不容易说出口的话被堵回去" }
+            {
+              "type": "trust",
+              "delta": -5,
+              "reason": "她的清醒和真诚被否定"
+            },
+            {
+              "type": "mood",
+              "delta": -5,
+              "reason": "好不容易说出口的话被堵回去"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "chen_act3_d24_003",
@@ -398,7 +495,12 @@
           }
         }
       ],
-      "tags": ["choice", "lucid-moment", "emotional", "listening"],
+      "tags": [
+        "choice",
+        "lucid-moment",
+        "emotional",
+        "listening"
+      ],
       "devNote": "教学：长时清醒时刻——让她主导，倾听是最珍贵的回应"
     },
     {
@@ -428,7 +530,17 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ],
+      "unlocks": [
+        {
+          "diaryEntryId": "chen_diary_d24"
+        },
+        {
+          "albumEntryId": "album_chen_recite"
+        }
+      ]
     },
     {
       "id": "chen_act3_d25_001",
@@ -465,9 +577,21 @@
           "description": "否定她的能力，替代完成",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": -3, "reason": "能力被否定，感到挫败" },
-            { "type": "independence", "delta": -4, "reason": "被替代，自理感下降" },
-            { "type": "mood", "delta": -3, "reason": "想做的事做不成，更加焦虑" }
+            {
+              "type": "trust",
+              "delta": -3,
+              "reason": "能力被否定，感到挫败"
+            },
+            {
+              "type": "independence",
+              "delta": -4,
+              "reason": "被替代，自理感下降"
+            },
+            {
+              "type": "mood",
+              "delta": -3,
+              "reason": "想做的事做不成，更加焦虑"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "chen_act3_d25_002",
@@ -483,9 +607,21 @@
           "description": "辅助而非替代，帮她完成想做的事",
           "isCorrect": true,
           "effects": [
-            { "type": "trust", "delta": 6, "reason": "帮她完成了想做的事，感到被理解" },
-            { "type": "mood", "delta": 5, "reason": "信写好了，如释重负" },
-            { "type": "independence", "delta": 3, "reason": "她主导内容，你辅助书写，保留了参与感" }
+            {
+              "type": "trust",
+              "delta": 6,
+              "reason": "帮她完成了想做的事，感到被理解"
+            },
+            {
+              "type": "mood",
+              "delta": 5,
+              "reason": "信写好了，如释重负"
+            },
+            {
+              "type": "independence",
+              "delta": 3,
+              "reason": "她主导内容，你辅助书写，保留了参与感"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "chen_act3_d25_002",
@@ -501,8 +637,16 @@
           "description": "等待她自然遗忘",
           "isCorrect": false,
           "effects": [
-            { "type": "mood", "delta": -3, "reason": "执念没有被回应，持续焦虑" },
-            { "type": "trust", "delta": -2, "reason": "想做的事被忽视" }
+            {
+              "type": "mood",
+              "delta": -3,
+              "reason": "执念没有被回应，持续焦虑"
+            },
+            {
+              "type": "trust",
+              "delta": -2,
+              "reason": "想做的事被忽视"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "chen_act3_d25_002",
@@ -513,7 +657,12 @@
           }
         }
       ],
-      "tags": ["choice", "emotional", "independence", "family"],
+      "tags": [
+        "choice",
+        "emotional",
+        "independence",
+        "family"
+      ],
       "devNote": "教学：辅助而非替代——帮她完成想做的事"
     },
     {
@@ -543,7 +692,9 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ]
     },
     {
       "id": "chen_act3_d26_001",
@@ -575,7 +726,11 @@
       ],
       "nextNode": "chen_act3_d26_002",
       "isCheckpoint": true,
-      "tags": ["wandering", "risk-event", "emergency"],
+      "tags": [
+        "wandering",
+        "risk-event",
+        "emergency"
+      ],
       "devNote": "Day 26 走失事件——这一次有预防工具辅助"
     },
     {
@@ -604,8 +759,16 @@
           "description": "焦急地拽她回去",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": -5, "reason": "被陌生人拽住，恐惧和抗拒" },
-            { "type": "mood", "delta": -5, "reason": "被当众训斥，羞耻和恐惧" }
+            {
+              "type": "trust",
+              "delta": -5,
+              "reason": "被陌生人拽住，恐惧和抗拒"
+            },
+            {
+              "type": "mood",
+              "delta": -5,
+              "reason": "被当众训斥，羞耻和恐惧"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "chen_act3_d26_003",
@@ -621,9 +784,21 @@
           "description": "进入她的场景，自然地接她回家",
           "isCorrect": true,
           "effects": [
-            { "type": "health", "delta": 3, "reason": "快速安全地接回" },
-            { "type": "trust", "delta": 5, "reason": "没有惊吓，自然地被引导回家" },
-            { "type": "mood", "delta": 3, "reason": "被'学生'请教，感到被尊重" }
+            {
+              "type": "health",
+              "delta": 3,
+              "reason": "快速安全地接回"
+            },
+            {
+              "type": "trust",
+              "delta": 5,
+              "reason": "没有惊吓，自然地被引导回家"
+            },
+            {
+              "type": "mood",
+              "delta": 3,
+              "reason": "被'学生'请教，感到被尊重"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "chen_act3_d26_003",
@@ -639,8 +814,16 @@
           "description": "远程监视，不主动接近",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": -3, "reason": "在外时间越长风险越高" },
-            { "type": "trust", "delta": -1, "reason": "没有及时接回" }
+            {
+              "type": "health",
+              "delta": -3,
+              "reason": "在外时间越长风险越高"
+            },
+            {
+              "type": "trust",
+              "delta": -1,
+              "reason": "没有及时接回"
+            }
           ],
           "spiritPowerChange": 5,
           "nextNode": "chen_act3_d26_003",
@@ -651,7 +834,12 @@
           }
         }
       ],
-      "tags": ["choice", "wandering", "emergency", "safety"],
+      "tags": [
+        "choice",
+        "wandering",
+        "emergency",
+        "safety"
+      ],
       "devNote": "教学：走失寻找进阶——用学到的技巧自然地接她回家"
     },
     {
@@ -681,7 +869,9 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ]
     },
     {
       "id": "chen_act3_d27_001",
@@ -713,7 +903,10 @@
       ],
       "nextNode": "chen_act3_d27_002",
       "isCheckpoint": true,
-      "tags": ["family", "care-decision"],
+      "tags": [
+        "family",
+        "care-decision"
+      ],
       "devNote": "Day 27 走失后的家庭照护决策"
     },
     {
@@ -741,8 +934,16 @@
           "description": "全力照护，牺牲女儿的生活",
           "isCorrect": false,
           "effects": [
-            { "type": "mood", "delta": -4, "reason": "陈奶奶知道女儿为自己辞职会内疚" },
-            { "type": "trust", "delta": -2, "reason": "违背了她'别添麻烦'的意愿" }
+            {
+              "type": "mood",
+              "delta": -4,
+              "reason": "陈奶奶知道女儿为自己辞职会内疚"
+            },
+            {
+              "type": "trust",
+              "delta": -2,
+              "reason": "违背了她'别添麻烦'的意愿"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "chen_act3_d27_003",
@@ -758,9 +959,21 @@
           "description": "平衡方案：远程关怀+社区资源",
           "isCorrect": true,
           "effects": [
-            { "type": "health", "delta": 4, "reason": "社区日间照料提供专业照护" },
-            { "type": "trust", "delta": 5, "reason": "尊重了她的意愿，同时保障了安全" },
-            { "type": "mood", "delta": 4, "reason": "女儿不用辞职，她安心；社区有同伴，不孤独" }
+            {
+              "type": "health",
+              "delta": 4,
+              "reason": "社区日间照料提供专业照护"
+            },
+            {
+              "type": "trust",
+              "delta": 5,
+              "reason": "尊重了她的意愿，同时保障了安全"
+            },
+            {
+              "type": "mood",
+              "delta": 4,
+              "reason": "女儿不用辞职，她安心；社区有同伴，不孤独"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "chen_act3_d27_003",
@@ -776,7 +989,11 @@
           "description": "维持现状，独自承担",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": -3, "reason": "走失风险持续存在，缺乏专业照护" }
+            {
+              "type": "health",
+              "delta": -3,
+              "reason": "走失风险持续存在，缺乏专业照护"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "chen_act3_d27_003",
@@ -787,7 +1004,12 @@
           }
         }
       ],
-      "tags": ["choice", "family", "resource-coordination", "care-decision"],
+      "tags": [
+        "choice",
+        "family",
+        "resource-coordination",
+        "care-decision"
+      ],
       "devNote": "教学：资源协调——平衡老人尊严、家庭负担和专业照护"
     },
     {
@@ -817,7 +1039,14 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ],
+      "unlocks": [
+        {
+          "diaryEntryId": "chen_diary_d27"
+        }
+      ]
     },
     {
       "id": "chen_act3_d28_001",
@@ -849,7 +1078,11 @@
       ],
       "nextNode": "chen_act3_d28_002",
       "isCheckpoint": true,
-      "tags": ["diary", "reflection", "emotional"],
+      "tags": [
+        "diary",
+        "reflection",
+        "emotional"
+      ],
       "devNote": "Day 28 最后的日记——回顾三十天"
     },
     {
@@ -877,7 +1110,11 @@
           "description": "以知识总结为核心",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": 0, "reason": "没有情感连接" }
+            {
+              "type": "trust",
+              "delta": 0,
+              "reason": "没有情感连接"
+            }
           ],
           "spiritPowerChange": 5,
           "nextNode": "chen_act3_d28_003",
@@ -893,8 +1130,16 @@
           "description": "以情感回忆为核心",
           "isCorrect": true,
           "effects": [
-            { "type": "trust", "delta": 7, "reason": "三十天的陪伴被珍视和记录" },
-            { "type": "mood", "delta": 6, "reason": "温暖的回忆被唤醒" }
+            {
+              "type": "trust",
+              "delta": 7,
+              "reason": "三十天的陪伴被珍视和记录"
+            },
+            {
+              "type": "mood",
+              "delta": 6,
+              "reason": "温暖的回忆被唤醒"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "chen_act3_d28_003",
@@ -910,7 +1155,11 @@
           "description": "留白，不记录",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": -1, "reason": "三十天的故事没有被记录" }
+            {
+              "type": "trust",
+              "delta": -1,
+              "reason": "三十天的故事没有被记录"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "chen_act3_d28_003",
@@ -921,7 +1170,12 @@
           }
         }
       ],
-      "tags": ["choice", "diary", "reflection", "emotional"],
+      "tags": [
+        "choice",
+        "diary",
+        "reflection",
+        "emotional"
+      ],
       "devNote": "教学：最后的日记——记录温暖瞬间，让陪伴留下痕迹"
     },
     {
@@ -951,7 +1205,14 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ],
+      "unlocks": [
+        {
+          "albumEntryId": "album_chen_routine"
+        }
+      ]
     },
     {
       "id": "chen_act3_d29_001",
@@ -999,7 +1260,11 @@
       ],
       "nextNode": "chen_act3_d29_002",
       "isCheckpoint": true,
-      "tags": ["textbook", "emotional", "lucid-moment"],
+      "tags": [
+        "textbook",
+        "emotional",
+        "lucid-moment"
+      ],
       "devNote": "Day 29 最后的语文课本——她写下了最后一行字"
     },
     {
@@ -1027,8 +1292,16 @@
           "description": "想说真话但欲言又止",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": -3, "reason": "她的真诚时刻被打断" },
-            { "type": "mood", "delta": -3, "reason": "情感被悬在半空" }
+            {
+              "type": "trust",
+              "delta": -3,
+              "reason": "她的真诚时刻被打断"
+            },
+            {
+              "type": "mood",
+              "delta": -3,
+              "reason": "情感被悬在半空"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "chen_act3_d29_003",
@@ -1044,8 +1317,16 @@
           "description": "接受她的称呼，以学生身份回应她的老师身份",
           "isCorrect": true,
           "effects": [
-            { "type": "trust", "delta": 8, "reason": "三十天的信任在这一刻达到顶点" },
-            { "type": "mood", "delta": 7, "reason": "被肯定为'最好的老师'，圆满和幸福" }
+            {
+              "type": "trust",
+              "delta": 8,
+              "reason": "三十天的信任在这一刻达到顶点"
+            },
+            {
+              "type": "mood",
+              "delta": 7,
+              "reason": "被肯定为'最好的老师'，圆满和幸福"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "chen_act3_d29_003",
@@ -1061,8 +1342,16 @@
           "description": "无言以对，用肢体语言回应",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": 3, "reason": "陪伴本身有力量，但少了语言的回应" },
-            { "type": "mood", "delta": 2, "reason": "感到被陪伴，但期待落空了一点" }
+            {
+              "type": "trust",
+              "delta": 3,
+              "reason": "陪伴本身有力量，但少了语言的回应"
+            },
+            {
+              "type": "mood",
+              "delta": 2,
+              "reason": "感到被陪伴，但期待落空了一点"
+            }
           ],
           "spiritPowerChange": 5,
           "nextNode": "chen_act3_d29_003",
@@ -1073,7 +1362,13 @@
           }
         }
       ],
-      "tags": ["choice", "textbook", "emotional", "lucid-moment", "identity"],
+      "tags": [
+        "choice",
+        "textbook",
+        "emotional",
+        "lucid-moment",
+        "identity"
+      ],
       "devNote": "教学：接受身份——以学生身份完成师生关系的闭环"
     },
     {
@@ -1103,7 +1398,9 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ]
     },
     {
       "id": "chen_act3_d30_001",
@@ -1144,7 +1441,10 @@
       ],
       "nextNode": "chen_act3_d30_002",
       "isCheckpoint": true,
-      "tags": ["final-day", "emotional"],
+      "tags": [
+        "final-day",
+        "emotional"
+      ],
       "devNote": "Day 30 最后一天——回到起点，她还是叫你'同学'"
     },
     {
@@ -1172,8 +1472,16 @@
           "description": "试图让她记住这三十天",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": -3, "reason": "被要求记住做不到的事，感到挫败" },
-            { "type": "mood", "delta": -3, "reason": "记不住的焦虑" }
+            {
+              "type": "trust",
+              "delta": -3,
+              "reason": "被要求记住做不到的事，感到挫败"
+            },
+            {
+              "type": "mood",
+              "delta": -3,
+              "reason": "记不住的焦虑"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "chen_act3_d30_003",
@@ -1189,8 +1497,16 @@
           "description": "回到起点，以陪伴结束",
           "isCorrect": true,
           "effects": [
-            { "type": "trust", "delta": 8, "reason": "三十天的陪伴在这一刻圆满" },
-            { "type": "mood", "delta": 7, "reason": "被倾听的幸福" }
+            {
+              "type": "trust",
+              "delta": 8,
+              "reason": "三十天的陪伴在这一刻圆满"
+            },
+            {
+              "type": "mood",
+              "delta": 7,
+              "reason": "被倾听的幸福"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "chen_act3_d30_003",
@@ -1206,8 +1522,16 @@
           "description": "告别，解释离开",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": -4, "reason": "被抛弃的不安" },
-            { "type": "mood", "delta": -5, "reason": "失去陪伴的恐惧" }
+            {
+              "type": "trust",
+              "delta": -4,
+              "reason": "被抛弃的不安"
+            },
+            {
+              "type": "mood",
+              "delta": -5,
+              "reason": "失去陪伴的恐惧"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "chen_act3_d30_003",
@@ -1218,7 +1542,12 @@
           }
         }
       ],
-      "tags": ["choice", "final-day", "emotional", "ending"],
+      "tags": [
+        "choice",
+        "final-day",
+        "emotional",
+        "ending"
+      ],
       "devNote": "Day 30 最终选择——回到起点，以陪伴结束"
     },
     {
@@ -1274,8 +1603,19 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["ending", "deep-understanding"],
-      "devNote": "结局节点：深层理解——不是治愈，是陪伴"
+      "tags": [
+        "ending",
+        "deep-understanding"
+      ],
+      "devNote": "结局节点：深层理解——不是治愈，是陪伴",
+      "unlocks": [
+        {
+          "diaryEntryId": "chen_diary_d30"
+        },
+        {
+          "albumEntryId": "album_chen_ending"
+        }
+      ]
     }
   ]
 }

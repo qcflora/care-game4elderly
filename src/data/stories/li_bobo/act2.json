@@ -40,8 +40,16 @@
           "description": "直接追问原因",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": -7, "reason": "被监视、被质问" },
-            { "type": "mood", "delta": -5, "reason": "压力更大" }
+            {
+              "type": "trust",
+              "delta": -7,
+              "reason": "被监视、被质问"
+            },
+            {
+              "type": "mood",
+              "delta": -5,
+              "reason": "压力更大"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "li_act2_d8_002",
@@ -57,8 +65,16 @@
           "description": "温和关心，留退路",
           "isCorrect": true,
           "effects": [
-            { "type": "trust", "delta": 6, "reason": "被关心又不丢面子" },
-            { "type": "mood", "delta": 4, "reason": "有台阶可下" }
+            {
+              "type": "trust",
+              "delta": 6,
+              "reason": "被关心又不丢面子"
+            },
+            {
+              "type": "mood",
+              "delta": 4,
+              "reason": "有台阶可下"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "li_act2_d8_002",
@@ -74,8 +90,16 @@
           "description": "给他空间",
           "isCorrect": false,
           "effects": [
-            { "type": "mood", "delta": -3, "reason": "没人关注更失落" },
-            { "type": "trust", "delta": -2, "reason": "感觉被忽视" }
+            {
+              "type": "mood",
+              "delta": -3,
+              "reason": "没人关注更失落"
+            },
+            {
+              "type": "trust",
+              "delta": -2,
+              "reason": "感觉被忽视"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "li_act2_d8_002",
@@ -93,7 +117,11 @@
           "autoShow": true
         }
       ],
-      "tags": ["choice", "psychology", "social-withdrawal"],
+      "tags": [
+        "choice",
+        "psychology",
+        "social-withdrawal"
+      ],
       "devNote": "社交退缩识别，微信运动数据异常"
     },
     {
@@ -123,7 +151,14 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ],
+      "unlocks": [
+        {
+          "diaryEntryId": "li_diary_d8"
+        }
+      ]
     },
     {
       "id": "li_act2_d9_001",
@@ -159,9 +194,21 @@
           "description": "用健康数据施压",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": -8, "reason": "被施压、被说教" },
-            { "type": "mood", "delta": -5, "reason": "压力更大" },
-            { "type": "health", "delta": -2, "reason": "应激升血糖" }
+            {
+              "type": "trust",
+              "delta": -8,
+              "reason": "被施压、被说教"
+            },
+            {
+              "type": "mood",
+              "delta": -5,
+              "reason": "压力更大"
+            },
+            {
+              "type": "health",
+              "delta": -2,
+              "reason": "应激升血糖"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "li_act2_d9_002",
@@ -177,9 +224,21 @@
           "description": "用陪伴和请教把他带出家门",
           "isCorrect": true,
           "effects": [
-            { "type": "mood", "delta": 8, "reason": "被需要、被陪伴" },
-            { "type": "health", "delta": 5, "reason": "出门散步+情绪改善" },
-            { "type": "trust", "delta": 6, "reason": "没被说教" }
+            {
+              "type": "mood",
+              "delta": 8,
+              "reason": "被需要、被陪伴"
+            },
+            {
+              "type": "health",
+              "delta": 5,
+              "reason": "出门散步+情绪改善"
+            },
+            {
+              "type": "trust",
+              "delta": 6,
+              "reason": "没被说教"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "li_act2_d9_002",
@@ -195,8 +254,16 @@
           "description": "减少家庭压力",
           "isCorrect": false,
           "effects": [
-            { "type": "mood", "delta": -2, "reason": "虽减压力但仍孤独" },
-            { "type": "health", "delta": -4, "reason": "持续不运动饮食失控" }
+            {
+              "type": "mood",
+              "delta": -2,
+              "reason": "虽减压力但仍孤独"
+            },
+            {
+              "type": "health",
+              "delta": -4,
+              "reason": "持续不运动饮食失控"
+            }
           ],
           "spiritPowerChange": 2,
           "nextNode": "li_act2_d9_002",
@@ -207,7 +274,11 @@
           }
         }
       ],
-      "tags": ["choice", "psychology", "behavioral-activation"],
+      "tags": [
+        "choice",
+        "psychology",
+        "behavioral-activation"
+      ],
       "devNote": "行为激活教学"
     },
     {
@@ -237,7 +308,14 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ],
+      "unlocks": [
+        {
+          "albumEntryId": "album_li_cooking"
+        }
+      ]
     },
     {
       "id": "li_act2_d10_001",
@@ -273,8 +351,16 @@
           "description": "直接说教",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": -3, "reason": "被说教" },
-            { "type": "mood", "delta": -2, "reason": "被否定" }
+            {
+              "type": "trust",
+              "delta": -3,
+              "reason": "被说教"
+            },
+            {
+              "type": "mood",
+              "delta": -2,
+              "reason": "被否定"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "li_act2_d10_002",
@@ -290,8 +376,16 @@
           "description": "温和解释背后原因，唤起同理心",
           "isCorrect": true,
           "effects": [
-            { "type": "mood", "delta": 5, "reason": "理解他人也理解自己" },
-            { "type": "trust", "delta": 6, "reason": "被平等对待" }
+            {
+              "type": "mood",
+              "delta": 5,
+              "reason": "理解他人也理解自己"
+            },
+            {
+              "type": "trust",
+              "delta": 6,
+              "reason": "被平等对待"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "li_act2_d10_002",
@@ -307,8 +401,16 @@
           "description": "用行动解决，绕过情绪",
           "isCorrect": false,
           "effects": [
-            { "type": "mood", "delta": 2, "reason": "问题暂时缓解" },
-            { "type": "trust", "delta": 1, "reason": "效果有限" }
+            {
+              "type": "mood",
+              "delta": 2,
+              "reason": "问题暂时缓解"
+            },
+            {
+              "type": "trust",
+              "delta": 1,
+              "reason": "效果有限"
+            }
           ],
           "spiritPowerChange": 4,
           "nextNode": "li_act2_d10_002",
@@ -319,7 +421,11 @@
           }
         }
       ],
-      "tags": ["choice", "psychology", "empathy"],
+      "tags": [
+        "choice",
+        "psychology",
+        "empathy"
+      ],
       "devNote": "同理心教学，为认知伏笔铺垫"
     },
     {
@@ -349,7 +455,14 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ],
+      "unlocks": [
+        {
+          "diaryEntryId": "li_diary_d10"
+        }
+      ]
     },
     {
       "id": "li_act2_d11_001",
@@ -385,8 +498,16 @@
           "description": "维持健康监控",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": -6, "reason": "被查岗感持续" },
-            { "type": "mood", "delta": -4, "reason": "通话变成负担" }
+            {
+              "type": "trust",
+              "delta": -6,
+              "reason": "被查岗感持续"
+            },
+            {
+              "type": "mood",
+              "delta": -4,
+              "reason": "通话变成负担"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "li_act2_d11_002",
@@ -402,8 +523,16 @@
           "description": "调整沟通顺序，先情感后健康",
           "isCorrect": true,
           "effects": [
-            { "type": "trust", "delta": 7, "reason": "被当成父亲而非病人" },
-            { "type": "mood", "delta": 6, "reason": "通话变愉快" }
+            {
+              "type": "trust",
+              "delta": 7,
+              "reason": "被当成父亲而非病人"
+            },
+            {
+              "type": "mood",
+              "delta": 6,
+              "reason": "通话变愉快"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "li_act2_d11_002",
@@ -419,8 +548,16 @@
           "description": "把主动权交给他",
           "isCorrect": false,
           "effects": [
-            { "type": "independence", "delta": 3, "reason": "主动权在他" },
-            { "type": "health", "delta": -2, "reason": "他还没养成习惯" }
+            {
+              "type": "independence",
+              "delta": 3,
+              "reason": "主动权在他"
+            },
+            {
+              "type": "health",
+              "delta": -2,
+              "reason": "他还没养成习惯"
+            }
           ],
           "spiritPowerChange": 4,
           "nextNode": "li_act2_d11_002",
@@ -431,7 +568,11 @@
           }
         }
       ],
-      "tags": ["choice", "psychology", "remote-care"],
+      "tags": [
+        "choice",
+        "psychology",
+        "remote-care"
+      ],
       "devNote": "远程照护沟通教学"
     },
     {
@@ -461,7 +602,9 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ]
     },
     {
       "id": "li_act2_d12_001",
@@ -497,8 +640,16 @@
           "description": "扩大贡献",
           "isCorrect": false,
           "effects": [
-            { "type": "mood", "delta": -3, "reason": "好事变任务" },
-            { "type": "trust", "delta": -2, "reason": "又被安排" }
+            {
+              "type": "mood",
+              "delta": -3,
+              "reason": "好事变任务"
+            },
+            {
+              "type": "trust",
+              "delta": -2,
+              "reason": "又被安排"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "li_act2_d12_002",
@@ -514,9 +665,21 @@
           "description": "肯定+激发自主规划",
           "isCorrect": true,
           "effects": [
-            { "type": "mood", "delta": 7, "reason": "被专业地认可" },
-            { "type": "trust", "delta": 6, "reason": "被尊重专长" },
-            { "type": "independence", "delta": 4, "reason": "自己规划" }
+            {
+              "type": "mood",
+              "delta": 7,
+              "reason": "被专业地认可"
+            },
+            {
+              "type": "trust",
+              "delta": 6,
+              "reason": "被尊重专长"
+            },
+            {
+              "type": "independence",
+              "delta": 4,
+              "reason": "自己规划"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "li_act2_d12_002",
@@ -532,8 +695,16 @@
           "description": "扩大正向反馈",
           "isCorrect": true,
           "effects": [
-            { "type": "mood", "delta": 5, "reason": "被全家认可" },
-            { "type": "trust", "delta": 3, "reason": "被骄傲地展示" }
+            {
+              "type": "mood",
+              "delta": 5,
+              "reason": "被全家认可"
+            },
+            {
+              "type": "trust",
+              "delta": 3,
+              "reason": "被骄傲地展示"
+            }
           ],
           "spiritPowerChange": 7,
           "nextNode": "li_act2_d12_002",
@@ -544,7 +715,11 @@
           }
         }
       ],
-      "tags": ["choice", "psychology", "strength-perspective"],
+      "tags": [
+        "choice",
+        "psychology",
+        "strength-perspective"
+      ],
       "devNote": "优势视角教学，巩固退休适应"
     },
     {
@@ -574,7 +749,14 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ],
+      "unlocks": [
+        {
+          "albumEntryId": "album_li_walking"
+        }
+      ]
     },
     {
       "id": "li_act2_d13_001",
@@ -610,8 +792,16 @@
           "description": "安慰否认",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": -4, "reason": "真心话被敷衍" },
-            { "type": "mood", "delta": -2, "reason": "没被真正听见" }
+            {
+              "type": "trust",
+              "delta": -4,
+              "reason": "真心话被敷衍"
+            },
+            {
+              "type": "mood",
+              "delta": -2,
+              "reason": "没被真正听见"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "li_act2_d13_002",
@@ -627,8 +817,16 @@
           "description": "接纳+行动",
           "isCorrect": true,
           "effects": [
-            { "type": "trust", "delta": 8, "reason": "被接纳、被陪伴" },
-            { "type": "mood", "delta": 6, "reason": "脆弱被托住" }
+            {
+              "type": "trust",
+              "delta": 8,
+              "reason": "被接纳、被陪伴"
+            },
+            {
+              "type": "mood",
+              "delta": 6,
+              "reason": "脆弱被托住"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "li_act2_d13_002",
@@ -644,8 +842,16 @@
           "description": "淡化处理",
           "isCorrect": false,
           "effects": [
-            { "type": "mood", "delta": -1, "reason": "虽平常心但缺温度" },
-            { "type": "trust", "delta": -2, "reason": "没被特殊对待" }
+            {
+              "type": "mood",
+              "delta": -1,
+              "reason": "虽平常心但缺温度"
+            },
+            {
+              "type": "trust",
+              "delta": -2,
+              "reason": "没被特殊对待"
+            }
           ],
           "spiritPowerChange": 2,
           "nextNode": "li_act2_d13_002",
@@ -656,7 +862,11 @@
           }
         }
       ],
-      "tags": ["choice", "psychology", "listening"],
+      "tags": [
+        "choice",
+        "psychology",
+        "listening"
+      ],
       "devNote": "倾听技巧教学，承认衰老的脆弱时刻"
     },
     {
@@ -686,7 +896,14 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ],
+      "unlocks": [
+        {
+          "diaryEntryId": "li_diary_d13"
+        }
+      ]
     },
     {
       "id": "li_act2_d14_001",
@@ -722,7 +939,11 @@
           "description": "用类比淡化",
           "isCorrect": false,
           "effects": [
-            { "type": "mood", "delta": -2, "reason": "还是被当成老人" }
+            {
+              "type": "mood",
+              "delta": -2,
+              "reason": "还是被当成老人"
+            }
           ],
           "spiritPowerChange": 3,
           "nextNode": "li_act2_d14_002",
@@ -738,9 +959,21 @@
           "description": "用科技属性重新定义辅具",
           "isCorrect": true,
           "effects": [
-            { "type": "mood", "delta": 7, "reason": "被理解死不认老的心思" },
-            { "type": "trust", "delta": 7, "reason": "没被当成'老人'" },
-            { "type": "health", "delta": 5, "reason": "听力改善利于社交和情绪" }
+            {
+              "type": "mood",
+              "delta": 7,
+              "reason": "被理解死不认老的心思"
+            },
+            {
+              "type": "trust",
+              "delta": 7,
+              "reason": "没被当成'老人'"
+            },
+            {
+              "type": "health",
+              "delta": 5,
+              "reason": "听力改善利于社交和情绪"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "li_act2_d14_002",
@@ -756,8 +989,16 @@
           "description": "回避问题",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": -4, "reason": "听力下降会加重社交退缩" },
-            { "type": "mood", "delta": -3, "reason": "课堂上听不清更挫败" }
+            {
+              "type": "health",
+              "delta": -4,
+              "reason": "听力下降会加重社交退缩"
+            },
+            {
+              "type": "mood",
+              "delta": -3,
+              "reason": "课堂上听不清更挫败"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "li_act2_d14_002",
@@ -768,7 +1009,11 @@
           }
         }
       ],
-      "tags": ["choice", "psychology", "assistive-device"],
+      "tags": [
+        "choice",
+        "psychology",
+        "assistive-device"
+      ],
       "devNote": "辅具接受心理教学"
     },
     {
@@ -798,7 +1043,9 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ]
     },
     {
       "id": "li_act2_d15_001",
@@ -834,7 +1081,11 @@
           "description": "中国式谦虚",
           "isCorrect": false,
           "effects": [
-            { "type": "mood", "delta": -1, "reason": "感谢被推开" }
+            {
+              "type": "mood",
+              "delta": -1,
+              "reason": "感谢被推开"
+            }
           ],
           "spiritPowerChange": 3,
           "nextNode": "li_act2_d15_002",
@@ -850,8 +1101,16 @@
           "description": "接纳感谢+肯定对方",
           "isCorrect": true,
           "effects": [
-            { "type": "mood", "delta": 8, "reason": "双向的价值确认" },
-            { "type": "trust", "delta": 5, "reason": "社交连接加深" }
+            {
+              "type": "mood",
+              "delta": 8,
+              "reason": "双向的价值确认"
+            },
+            {
+              "type": "trust",
+              "delta": 5,
+              "reason": "社交连接加深"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "li_act2_d15_002",
@@ -867,7 +1126,11 @@
           "description": "重点关照",
           "isCorrect": false,
           "effects": [
-            { "type": "mood", "delta": 1, "reason": "善意但形成依赖" }
+            {
+              "type": "mood",
+              "delta": 1,
+              "reason": "善意但形成依赖"
+            }
           ],
           "spiritPowerChange": 2,
           "nextNode": "li_act2_d15_002",
@@ -878,7 +1141,11 @@
           }
         }
       ],
-      "tags": ["choice", "psychology", "social"],
+      "tags": [
+        "choice",
+        "psychology",
+        "social"
+      ],
       "devNote": "社交促进教学，同理心闭环"
     },
     {
@@ -908,7 +1175,17 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ],
+      "unlocks": [
+        {
+          "diaryEntryId": "li_diary_d15"
+        },
+        {
+          "albumEntryId": "album_li_son_call"
+        }
+      ]
     },
     {
       "id": "li_act2_d16_001",
@@ -944,8 +1221,16 @@
           "description": "关心但否定情绪",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": -3, "reason": "情绪又被否定" },
-            { "type": "mood", "delta": -2, "reason": "没被理解" }
+            {
+              "type": "trust",
+              "delta": -3,
+              "reason": "情绪又被否定"
+            },
+            {
+              "type": "mood",
+              "delta": -2,
+              "reason": "没被理解"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "li_act2_d16_002",
@@ -961,8 +1246,16 @@
           "description": "非语言陪伴，留空间",
           "isCorrect": true,
           "effects": [
-            { "type": "mood", "delta": 6, "reason": "被无声地托住" },
-            { "type": "trust", "delta": 7, "reason": "不逼问的尊重" }
+            {
+              "type": "mood",
+              "delta": 6,
+              "reason": "被无声地托住"
+            },
+            {
+              "type": "trust",
+              "delta": 7,
+              "reason": "不逼问的尊重"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "li_act2_d16_002",
@@ -978,8 +1271,16 @@
           "description": "移除触发物",
           "isCorrect": false,
           "effects": [
-            { "type": "mood", "delta": -4, "reason": "旧物被夺，更失落" },
-            { "type": "trust", "delta": -3, "reason": "没被尊重" }
+            {
+              "type": "mood",
+              "delta": -4,
+              "reason": "旧物被夺，更失落"
+            },
+            {
+              "type": "trust",
+              "delta": -3,
+              "reason": "没被尊重"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "li_act2_d16_002",
@@ -990,7 +1291,11 @@
           }
         }
       ],
-      "tags": ["choice", "psychology", "depression-signs"],
+      "tags": [
+        "choice",
+        "psychology",
+        "depression-signs"
+      ],
       "devNote": "抑郁信号识别教学"
     },
     {
@@ -1020,7 +1325,9 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ]
     },
     {
       "id": "li_act2_d17_001",
@@ -1056,8 +1363,16 @@
           "description": "明确诊断建议",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": -8, "reason": "被贴'精神病'标签" },
-            { "type": "mood", "delta": -6, "reason": "羞耻感" }
+            {
+              "type": "trust",
+              "delta": -8,
+              "reason": "被贴'精神病'标签"
+            },
+            {
+              "type": "mood",
+              "delta": -6,
+              "reason": "羞耻感"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "li_act2_d17_002",
@@ -1073,9 +1388,21 @@
           "description": "去污名化包装，先迈出第一步",
           "isCorrect": true,
           "effects": [
-            { "type": "mood", "delta": 5, "reason": "被关心睡眠，不丢面子" },
-            { "type": "trust", "delta": 7, "reason": "尊重他的自尊" },
-            { "type": "health", "delta": 4, "reason": "有望获得专业帮助" }
+            {
+              "type": "mood",
+              "delta": 5,
+              "reason": "被关心睡眠，不丢面子"
+            },
+            {
+              "type": "trust",
+              "delta": 7,
+              "reason": "尊重他的自尊"
+            },
+            {
+              "type": "health",
+              "delta": 4,
+              "reason": "有望获得专业帮助"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "li_act2_d17_002",
@@ -1091,7 +1418,11 @@
           "description": "亲情陪伴，自行疏导",
           "isCorrect": false,
           "effects": [
-            { "type": "mood", "delta": 2, "reason": "陪伴有帮助但不够" }
+            {
+              "type": "mood",
+              "delta": 2,
+              "reason": "陪伴有帮助但不够"
+            }
           ],
           "spiritPowerChange": 4,
           "nextNode": "li_act2_d17_002",
@@ -1102,7 +1433,11 @@
           }
         }
       ],
-      "tags": ["choice", "psychology", "depression"],
+      "tags": [
+        "choice",
+        "psychology",
+        "depression"
+      ],
       "devNote": "抑郁识别与就医策略"
     },
     {
@@ -1132,7 +1467,9 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ]
     },
     {
       "id": "li_act2_d18_001",
@@ -1171,7 +1508,11 @@
       ],
       "nextNode": "li_act2_d18_002",
       "isCheckpoint": true,
-      "tags": ["psychology", "cognitive-foreshadow", "setup"]
+      "tags": [
+        "psychology",
+        "cognitive-foreshadow",
+        "setup"
+      ]
     },
     {
       "id": "li_act2_d18_002",
@@ -1198,8 +1539,16 @@
           "description": "正面戳破",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": -7, "reason": "被贴标签、被否定" },
-            { "type": "mood", "delta": -5, "reason": "羞耻抗拒" }
+            {
+              "type": "trust",
+              "delta": -7,
+              "reason": "被贴标签、被否定"
+            },
+            {
+              "type": "mood",
+              "delta": -5,
+              "reason": "羞耻抗拒"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "li_act2_d18_003",
@@ -1215,8 +1564,16 @@
           "description": "共情+去污名化+正常化",
           "isCorrect": true,
           "effects": [
-            { "type": "trust", "delta": 8, "reason": "被理解、被尊重" },
-            { "type": "mood", "delta": 6, "reason": "心理负担减轻" }
+            {
+              "type": "trust",
+              "delta": 8,
+              "reason": "被理解、被尊重"
+            },
+            {
+              "type": "mood",
+              "delta": 6,
+              "reason": "心理负担减轻"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "li_act2_d18_003",
@@ -1232,7 +1589,11 @@
           "description": "回避冲突",
           "isCorrect": false,
           "effects": [
-            { "type": "mood", "delta": -2, "reason": "情绪没被接住" }
+            {
+              "type": "mood",
+              "delta": -2,
+              "reason": "情绪没被接住"
+            }
           ],
           "spiritPowerChange": 2,
           "nextNode": "li_act2_d18_003",
@@ -1243,7 +1604,12 @@
           }
         }
       ],
-      "tags": ["choice", "psychology", "emotional-conflict", "cognitive-foreshadow"],
+      "tags": [
+        "choice",
+        "psychology",
+        "emotional-conflict",
+        "cognitive-foreshadow"
+      ],
       "devNote": "情感冲突高潮+认知伏笔"
     },
     {
@@ -1273,8 +1639,19 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end", "cognitive-foreshadow"],
-      "devNote": "认知症伏笔，为陈奶奶线铺垫"
+      "tags": [
+        "day-end",
+        "cognitive-foreshadow"
+      ],
+      "devNote": "认知症伏笔，为陈奶奶线铺垫",
+      "unlocks": [
+        {
+          "diaryEntryId": "li_letter_to_young_self"
+        },
+        {
+          "albumEntryId": "album_li_community"
+        }
+      ]
     },
     {
       "id": "li_act2_d19_001",
@@ -1310,8 +1687,16 @@
           "description": "固定角色",
           "isCorrect": false,
           "effects": [
-            { "type": "mood", "delta": -2, "reason": "又变任务" },
-            { "type": "trust", "delta": -2, "reason": "被安排" }
+            {
+              "type": "mood",
+              "delta": -2,
+              "reason": "又变任务"
+            },
+            {
+              "type": "trust",
+              "delta": -2,
+              "reason": "被安排"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "li_act2_d19_002",
@@ -1327,8 +1712,16 @@
           "description": "肯定行为+引导觉察",
           "isCorrect": true,
           "effects": [
-            { "type": "mood", "delta": 8, "reason": "被看见、被引导表达" },
-            { "type": "trust", "delta": 6, "reason": "被真诚关心" }
+            {
+              "type": "mood",
+              "delta": 8,
+              "reason": "被看见、被引导表达"
+            },
+            {
+              "type": "trust",
+              "delta": 6,
+              "reason": "被真诚关心"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "li_act2_d19_002",
@@ -1344,8 +1737,16 @@
           "description": "动员家庭支持",
           "isCorrect": true,
           "effects": [
-            { "type": "mood", "delta": 4, "reason": "家庭关注增加" },
-            { "type": "trust", "delta": 3, "reason": "被默默关心" }
+            {
+              "type": "mood",
+              "delta": 4,
+              "reason": "家庭关注增加"
+            },
+            {
+              "type": "trust",
+              "delta": 3,
+              "reason": "被默默关心"
+            }
           ],
           "spiritPowerChange": 7,
           "nextNode": "li_act2_d19_002",
@@ -1356,7 +1757,12 @@
           }
         }
       ],
-      "tags": ["choice", "psychology", "recovery", "family-care"],
+      "tags": [
+        "choice",
+        "psychology",
+        "recovery",
+        "family-care"
+      ],
       "devNote": "心理恢复巩固+家庭分工"
     },
     {
@@ -1386,7 +1792,9 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ]
     },
     {
       "id": "li_act2_d20_001",
@@ -1422,8 +1830,16 @@
           "description": "优先健康监测",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": -6, "reason": "自主权被技术蚕食" },
-            { "type": "independence", "delta": -5, "reason": "被远程监控" }
+            {
+              "type": "trust",
+              "delta": -6,
+              "reason": "自主权被技术蚕食"
+            },
+            {
+              "type": "independence",
+              "delta": -5,
+              "reason": "被远程监控"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "li_act2_d20_002",
@@ -1439,9 +1855,21 @@
           "description": "把数据主权交给老人",
           "isCorrect": true,
           "effects": [
-            { "type": "trust", "delta": 8, "reason": "自主权被尊重" },
-            { "type": "independence", "delta": 5, "reason": "自己掌控" },
-            { "type": "mood", "delta": 5, "reason": "被当成大人" }
+            {
+              "type": "trust",
+              "delta": 8,
+              "reason": "自主权被尊重"
+            },
+            {
+              "type": "independence",
+              "delta": 5,
+              "reason": "自己掌控"
+            },
+            {
+              "type": "mood",
+              "delta": 5,
+              "reason": "被当成大人"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "li_act2_d20_002",
@@ -1457,8 +1885,16 @@
           "description": "技术折中方案",
           "isCorrect": true,
           "effects": [
-            { "type": "trust", "delta": 5, "reason": "部分尊重自主" },
-            { "type": "health", "delta": 3, "reason": "异常能被及时发现" }
+            {
+              "type": "trust",
+              "delta": 5,
+              "reason": "部分尊重自主"
+            },
+            {
+              "type": "health",
+              "delta": 3,
+              "reason": "异常能被及时发现"
+            }
           ],
           "spiritPowerChange": 7,
           "nextNode": "li_act2_d20_002",
@@ -1469,7 +1905,11 @@
           }
         }
       ],
-      "tags": ["choice", "family-care", "resource-coordination"],
+      "tags": [
+        "choice",
+        "family-care",
+        "resource-coordination"
+      ],
       "devNote": "家庭照护分工+资源协调"
     },
     {
@@ -1499,7 +1939,14 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ],
+      "unlocks": [
+        {
+          "albumEntryId": "album_li_act2_complete"
+        }
+      ]
     },
     {
       "id": "li_act2_d21_001",
@@ -1530,7 +1977,10 @@
       ],
       "nextNode": "li_act2_d21_002",
       "isCheckpoint": true,
-      "tags": ["act-review", "act-end"]
+      "tags": [
+        "act-review",
+        "act-end"
+      ]
     },
     {
       "id": "li_act2_d21_002",
@@ -1557,7 +2007,11 @@
           "description": "强调监测",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": -4, "reason": "方向性错误" }
+            {
+              "type": "trust",
+              "delta": -4,
+              "reason": "方向性错误"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "li_act2_d21_003",
@@ -1573,8 +2027,16 @@
           "description": "关系优先",
           "isCorrect": true,
           "effects": [
-            { "type": "trust", "delta": 8, "reason": "抓到了核心" },
-            { "type": "mood", "delta": 6, "reason": "被深刻理解" }
+            {
+              "type": "trust",
+              "delta": 8,
+              "reason": "抓到了核心"
+            },
+            {
+              "type": "mood",
+              "delta": 6,
+              "reason": "被深刻理解"
+            }
           ],
           "spiritPowerChange": 15,
           "nextNode": "li_act2_d21_003",
@@ -1590,8 +2052,16 @@
           "description": "强调社交康复",
           "isCorrect": true,
           "effects": [
-            { "type": "mood", "delta": 7, "reason": "理解了康复动力" },
-            { "type": "trust", "delta": 5, "reason": "方向正确" }
+            {
+              "type": "mood",
+              "delta": 7,
+              "reason": "理解了康复动力"
+            },
+            {
+              "type": "trust",
+              "delta": 5,
+              "reason": "方向正确"
+            }
           ],
           "spiritPowerChange": 12,
           "nextNode": "li_act2_d21_003",
@@ -1602,7 +2072,11 @@
           }
         }
       ],
-      "tags": ["choice", "act-review", "act-end"],
+      "tags": [
+        "choice",
+        "act-review",
+        "act-end"
+      ],
       "devNote": "第二幕总结，照护哲学凝练"
     },
     {
@@ -1645,8 +2119,15 @@
         "illustrationTransition": "watercolor",
         "duration": 1000
       },
-      "tags": ["act-end"],
-      "devNote": "第二幕结束，过渡到第三幕应急主题"
+      "tags": [
+        "act-end"
+      ],
+      "devNote": "第二幕结束，过渡到第三幕应急主题",
+      "unlocks": [
+        {
+          "diaryEntryId": "li_diary_d21"
+        }
+      ]
     }
   ]
 }

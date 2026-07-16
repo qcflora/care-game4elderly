@@ -69,7 +69,10 @@
         "duration": 800
       },
       "isCheckpoint": true,
-      "tags": ["intro", "tutorial"],
+      "tags": [
+        "intro",
+        "tutorial"
+      ],
       "devNote": "开场节点，精灵首次登场，周爷爷被动接受型性格，引入语音灯控"
     },
     {
@@ -97,8 +100,16 @@
           "description": "快速解决问题，替他完成",
           "isCorrect": false,
           "effects": [
-            { "type": "independence", "delta": -8, "reason": "过度代劳，剥夺自理机会" },
-            { "type": "mood", "delta": -3, "reason": "觉得自己连关灯都做不了" }
+            {
+              "type": "independence",
+              "delta": -8,
+              "reason": "过度代劳，剥夺自理机会"
+            },
+            {
+              "type": "mood",
+              "delta": -3,
+              "reason": "觉得自己连关灯都做不了"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhou_act1_d1_003",
@@ -114,9 +125,21 @@
           "description": "辅助而非替代，调整环境让他能自己做",
           "isCorrect": true,
           "effects": [
-            { "type": "independence", "delta": 8, "reason": "调整环境后他能自己完成" },
-            { "type": "mood", "delta": 3, "reason": "保住了自理的尊严" },
-            { "type": "trust", "delta": 3, "reason": "感受到被理解而非被代劳" }
+            {
+              "type": "independence",
+              "delta": 8,
+              "reason": "调整环境后他能自己完成"
+            },
+            {
+              "type": "mood",
+              "delta": 3,
+              "reason": "保住了自理的尊严"
+            },
+            {
+              "type": "trust",
+              "delta": 3,
+              "reason": "感受到被理解而非被代劳"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhou_act1_d1_003",
@@ -132,8 +155,16 @@
           "description": "利用已安装的智能家居功能",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": 2, "reason": "提供了新方法" },
-            { "type": "mood", "delta": -1, "reason": "又要学新东西，有点烦" }
+            {
+              "type": "trust",
+              "delta": 2,
+              "reason": "提供了新方法"
+            },
+            {
+              "type": "mood",
+              "delta": -1,
+              "reason": "又要学新东西，有点烦"
+            }
           ],
           "spiritPowerChange": 5,
           "nextNode": "zhou_act1_d1_003",
@@ -151,7 +182,12 @@
           "autoShow": true
         }
       ],
-      "tags": ["choice", "tutorial", "basic-care", "digital-life"],
+      "tags": [
+        "choice",
+        "tutorial",
+        "basic-care",
+        "digital-life"
+      ],
       "devNote": "第一个选择节点，教学辅助而非替代 + 被动接受型数字生活"
     },
     {
@@ -189,8 +225,18 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"],
-      "devNote": "Day 1 结束节点"
+      "tags": [
+        "day-end"
+      ],
+      "devNote": "Day 1 结束节点",
+      "unlocks": [
+        {
+          "diaryEntryId": "zhou_diary_d1"
+        },
+        {
+          "albumEntryId": "album_zhou_old_photo"
+        }
+      ]
     },
     {
       "id": "zhou_act1_d2_001",
@@ -230,7 +276,11 @@
       ],
       "nextNode": "zhou_act1_d2_002",
       "isCheckpoint": true,
-      "tags": ["morning", "dressing", "basic-care"],
+      "tags": [
+        "morning",
+        "dressing",
+        "basic-care"
+      ],
       "devNote": "Day 2 起床穿衣，教学偏瘫侧穿衣法：先患侧后健侧"
     },
     {
@@ -258,8 +308,16 @@
           "description": "先穿健侧——顺序错了",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": -3, "reason": "穿衣顺序错误，增加患侧关节拉伤风险" },
-            { "type": "mood", "delta": -2, "reason": "穿得更费劲，挫败感增加" }
+            {
+              "type": "health",
+              "delta": -3,
+              "reason": "穿衣顺序错误，增加患侧关节拉伤风险"
+            },
+            {
+              "type": "mood",
+              "delta": -2,
+              "reason": "穿得更费劲，挫败感增加"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhou_act1_d2_003",
@@ -275,9 +333,21 @@
           "description": "先穿患侧后穿健侧——正确顺序，辅助而非替代",
           "isCorrect": true,
           "effects": [
-            { "type": "health", "delta": 5, "reason": "正确穿衣法避免关节损伤" },
-            { "type": "independence", "delta": 5, "reason": "让他自己完成健侧穿衣" },
-            { "type": "mood", "delta": 3, "reason": "顺利穿好衣服的成就感" }
+            {
+              "type": "health",
+              "delta": 5,
+              "reason": "正确穿衣法避免关节损伤"
+            },
+            {
+              "type": "independence",
+              "delta": 5,
+              "reason": "让他自己完成健侧穿衣"
+            },
+            {
+              "type": "mood",
+              "delta": 3,
+              "reason": "顺利穿好衣服的成就感"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhou_act1_d2_003",
@@ -293,9 +363,21 @@
           "description": "过度代劳，替他完成全部",
           "isCorrect": false,
           "effects": [
-            { "type": "independence", "delta": -8, "reason": "过度代劳，剥夺自理能力" },
-            { "type": "mood", "delta": -5, "reason": "连穿衣都要全靠别人，挫败感强" },
-            { "type": "trust", "delta": -2, "reason": "感受到被当成完全的废人" }
+            {
+              "type": "independence",
+              "delta": -8,
+              "reason": "过度代劳，剥夺自理能力"
+            },
+            {
+              "type": "mood",
+              "delta": -5,
+              "reason": "连穿衣都要全靠别人，挫败感强"
+            },
+            {
+              "type": "trust",
+              "delta": -2,
+              "reason": "感受到被当成完全的废人"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhou_act1_d2_003",
@@ -306,7 +388,12 @@
           }
         }
       ],
-      "tags": ["choice", "basic-care", "dressing", "hemiplegia"],
+      "tags": [
+        "choice",
+        "basic-care",
+        "dressing",
+        "hemiplegia"
+      ],
       "devNote": "教学：偏瘫侧穿衣法——先患侧后健侧 + 辅助而非替代"
     },
     {
@@ -336,7 +423,14 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ],
+      "unlocks": [
+        {
+          "albumEntryId": "album_zhou_rehab_start"
+        }
+      ]
     },
     {
       "id": "zhou_act1_d3_001",
@@ -383,7 +477,10 @@
       ],
       "nextNode": "zhou_act1_d3_002",
       "isCheckpoint": true,
-      "tags": ["mobility-aid", "rehabilitation"],
+      "tags": [
+        "mobility-aid",
+        "rehabilitation"
+      ],
       "devNote": "Day 3 辅具选择，展示型道具：辅具对比图"
     },
     {
@@ -411,7 +508,11 @@
           "description": "最小改变，维持行走能力",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": -5, "reason": "拐杖支撑面小，平衡差时跌倒风险高" }
+            {
+              "type": "health",
+              "delta": -5,
+              "reason": "拐杖支撑面小，平衡差时跌倒风险高"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhou_act1_d3_003",
@@ -427,9 +528,21 @@
           "description": "支撑面大、稳定性好，保留行走能力",
           "isCorrect": true,
           "effects": [
-            { "type": "health", "delta": 8, "reason": "助行器提供稳定支撑，降低跌倒风险" },
-            { "type": "independence", "delta": 5, "reason": "保留自主行走能力" },
-            { "type": "mood", "delta": 3, "reason": "能自己走，不用坐轮椅" }
+            {
+              "type": "health",
+              "delta": 8,
+              "reason": "助行器提供稳定支撑，降低跌倒风险"
+            },
+            {
+              "type": "independence",
+              "delta": 5,
+              "reason": "保留自主行走能力"
+            },
+            {
+              "type": "mood",
+              "delta": 3,
+              "reason": "能自己走，不用坐轮椅"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhou_act1_d3_003",
@@ -445,8 +558,16 @@
           "description": "最安全，但放弃行走能力",
           "isCorrect": false,
           "effects": [
-            { "type": "independence", "delta": -8, "reason": "长期坐轮椅导致肌力退化" },
-            { "type": "mood", "delta": -5, "reason": "坐轮椅等于承认彻底走不了了" }
+            {
+              "type": "independence",
+              "delta": -8,
+              "reason": "长期坐轮椅导致肌力退化"
+            },
+            {
+              "type": "mood",
+              "delta": -5,
+              "reason": "坐轮椅等于承认彻底走不了了"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhou_act1_d3_003",
@@ -457,7 +578,11 @@
           }
         }
       ],
-      "tags": ["choice", "mobility-aid", "rehabilitation"],
+      "tags": [
+        "choice",
+        "mobility-aid",
+        "rehabilitation"
+      ],
       "devNote": "教学：辅具选择三原则——匹配肌力、保留自理空间、留康复余地"
     },
     {
@@ -487,7 +612,14 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ],
+      "unlocks": [
+        {
+          "diaryEntryId": "zhou_diary_d3"
+        }
+      ]
     },
     {
       "id": "zhou_act1_d4_001",
@@ -527,7 +659,10 @@
       ],
       "nextNode": "zhou_act1_d4_002",
       "isCheckpoint": true,
-      "tags": ["rehabilitation", "psychology"],
+      "tags": [
+        "rehabilitation",
+        "psychology"
+      ],
       "devNote": "Day 4 康复训练，教学康复坚持与强度控制"
     },
     {
@@ -555,8 +690,16 @@
           "description": "顺从他，今天跳过训练",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": -5, "reason": "康复训练中断，机能可能退化" },
-            { "type": "independence", "delta": -2, "reason": "训练不规律影响恢复" }
+            {
+              "type": "health",
+              "delta": -5,
+              "reason": "康复训练中断，机能可能退化"
+            },
+            {
+              "type": "independence",
+              "delta": -2,
+              "reason": "训练不规律影响恢复"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhou_act1_d4_003",
@@ -572,9 +715,21 @@
           "description": "循序渐进，调整强度但不断训练",
           "isCorrect": true,
           "effects": [
-            { "type": "health", "delta": 8, "reason": "坚持完成训练，维持恢复节奏" },
-            { "type": "mood", "delta": 3, "reason": "完成训练的成就感" },
-            { "type": "independence", "delta": 3, "reason": "上肢功能逐步恢复" }
+            {
+              "type": "health",
+              "delta": 8,
+              "reason": "坚持完成训练，维持恢复节奏"
+            },
+            {
+              "type": "mood",
+              "delta": 3,
+              "reason": "完成训练的成就感"
+            },
+            {
+              "type": "independence",
+              "delta": 3,
+              "reason": "上肢功能逐步恢复"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhou_act1_d4_003",
@@ -590,9 +745,21 @@
           "description": "强迫完成，不顾疲劳",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": -3, "reason": "过度训练可能导致肌肉拉伤" },
-            { "type": "mood", "delta": -5, "reason": "被强迫的挫败和痛苦" },
-            { "type": "trust", "delta": -3, "reason": "觉得你不顾及他的感受" }
+            {
+              "type": "health",
+              "delta": -3,
+              "reason": "过度训练可能导致肌肉拉伤"
+            },
+            {
+              "type": "mood",
+              "delta": -5,
+              "reason": "被强迫的挫败和痛苦"
+            },
+            {
+              "type": "trust",
+              "delta": -3,
+              "reason": "觉得你不顾及他的感受"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhou_act1_d4_003",
@@ -603,7 +770,11 @@
           }
         }
       ],
-      "tags": ["choice", "rehabilitation", "psychology"],
+      "tags": [
+        "choice",
+        "rehabilitation",
+        "psychology"
+      ],
       "devNote": "教学：康复训练——循序渐进、持之以恒、调整强度而非中断"
     },
     {
@@ -633,7 +804,14 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ],
+      "unlocks": [
+        {
+          "albumEntryId": "album_zhou_left_hand"
+        }
+      ]
     },
     {
       "id": "zhou_act1_d5_001",
@@ -673,7 +851,10 @@
       ],
       "nextNode": "zhou_act1_d5_002",
       "isCheckpoint": true,
-      "tags": ["medication", "stroke-prevention"],
+      "tags": [
+        "medication",
+        "stroke-prevention"
+      ],
       "devNote": "Day 5 用药管理，教学脑梗二级预防药物不可擅自停减"
     },
     {
@@ -701,7 +882,11 @@
           "description": "顺从他，自行减药",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": -8, "reason": "擅自停用二级预防药物，脑梗复发风险大增" }
+            {
+              "type": "health",
+              "delta": -8,
+              "reason": "擅自停用二级预防药物，脑梗复发风险大增"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhou_act1_d5_003",
@@ -717,9 +902,21 @@
           "description": "健康教育，讲道理让他理解",
           "isCorrect": true,
           "effects": [
-            { "type": "health", "delta": 8, "reason": "规律服药，二级预防到位" },
-            { "type": "trust", "delta": 5, "reason": "尊重他的理解力，讲道理而非命令" },
-            { "type": "independence", "delta": 2, "reason": "理解后主动配合用药" }
+            {
+              "type": "health",
+              "delta": 8,
+              "reason": "规律服药，二级预防到位"
+            },
+            {
+              "type": "trust",
+              "delta": 5,
+              "reason": "尊重他的理解力，讲道理而非命令"
+            },
+            {
+              "type": "independence",
+              "delta": 2,
+              "reason": "理解后主动配合用药"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhou_act1_d5_003",
@@ -735,8 +932,16 @@
           "description": "图省事，不分类不讲解",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": -5, "reason": "药物同服可能影响吸收，存在相互作用风险" },
-            { "type": "trust", "delta": -2, "reason": "觉得不负责任" }
+            {
+              "type": "health",
+              "delta": -5,
+              "reason": "药物同服可能影响吸收，存在相互作用风险"
+            },
+            {
+              "type": "trust",
+              "delta": -2,
+              "reason": "觉得不负责任"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhou_act1_d5_003",
@@ -754,7 +959,11 @@
           "autoShow": true
         }
       ],
-      "tags": ["choice", "medication", "stroke-prevention"],
+      "tags": [
+        "choice",
+        "medication",
+        "stroke-prevention"
+      ],
       "devNote": "教学：脑梗二级预防药物不可擅自停减 + 用老人能听懂的方式做健康教育"
     },
     {
@@ -784,7 +993,9 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ]
     },
     {
       "id": "zhou_act1_d6_001",
@@ -830,7 +1041,10 @@
       ],
       "nextNode": "zhou_act1_d6_002",
       "isCheckpoint": true,
-      "tags": ["home-safety", "fall-prevention"],
+      "tags": [
+        "home-safety",
+        "fall-prevention"
+      ],
       "devNote": "Day 6 家居安全排查，引入紧急呼叫按钮和安全隐患"
     },
     {
@@ -858,9 +1072,21 @@
           "description": "优先处理跌倒最高风险区域",
           "isCorrect": true,
           "effects": [
-            { "type": "health", "delta": 8, "reason": "卫生间跌倒风险大幅降低" },
-            { "type": "independence", "delta": 3, "reason": "有扶手支撑，如厕更自主" },
-            { "type": "trust", "delta": 3, "reason": "感受到被认真保护" }
+            {
+              "type": "health",
+              "delta": 8,
+              "reason": "卫生间跌倒风险大幅降低"
+            },
+            {
+              "type": "independence",
+              "delta": 3,
+              "reason": "有扶手支撑，如厕更自主"
+            },
+            {
+              "type": "trust",
+              "delta": 3,
+              "reason": "感受到被认真保护"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhou_act1_d6_003",
@@ -876,7 +1102,11 @@
           "description": "处理门槛绊脚隐患",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": 4, "reason": "门槛隐患解决，但卫生间风险仍在" }
+            {
+              "type": "health",
+              "delta": 4,
+              "reason": "门槛隐患解决，但卫生间风险仍在"
+            }
           ],
           "spiritPowerChange": 5,
           "nextNode": "zhou_act1_d6_003",
@@ -892,7 +1122,11 @@
           "description": "解决起夜照明问题",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": 3, "reason": "起夜照明改善，但卫生间和门槛风险仍在" }
+            {
+              "type": "health",
+              "delta": 3,
+              "reason": "起夜照明改善，但卫生间和门槛风险仍在"
+            }
           ],
           "spiritPowerChange": 5,
           "nextNode": "zhou_act1_d6_003",
@@ -903,7 +1137,11 @@
           }
         }
       ],
-      "tags": ["choice", "home-safety", "fall-prevention"],
+      "tags": [
+        "choice",
+        "home-safety",
+        "fall-prevention"
+      ],
       "devNote": "教学：安全排查优先级——频率×后果，卫生间优先"
     },
     {
@@ -933,7 +1171,17 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ],
+      "unlocks": [
+        {
+          "diaryEntryId": "zhou_diary_d6"
+        },
+        {
+          "albumEntryId": "album_zhou_walking_assis"
+        }
+      ]
     },
     {
       "id": "zhou_act1_d7_001",
@@ -973,7 +1221,9 @@
       ],
       "nextNode": "zhou_act1_d7_002",
       "isCheckpoint": true,
-      "tags": ["week-summary"],
+      "tags": [
+        "week-summary"
+      ],
       "devNote": "Day 7 第一幕周总结，回顾本周知识点"
     },
     {
@@ -1001,8 +1251,16 @@
           "description": "过度关注身体恢复",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": -3, "reason": "过度康复可能适得其反" },
-            { "type": "mood", "delta": -2, "reason": "压力过大影响心态" }
+            {
+              "type": "health",
+              "delta": -3,
+              "reason": "过度康复可能适得其反"
+            },
+            {
+              "type": "mood",
+              "delta": -2,
+              "reason": "压力过大影响心态"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhou_act1_d7_003",
@@ -1018,8 +1276,16 @@
           "description": "系统改造环境 + 对接照护资源",
           "isCorrect": true,
           "effects": [
-            { "type": "trust", "delta": 5, "reason": "系统化照护让周爷爷更有安全感" },
-            { "type": "mood", "delta": 3, "reason": "看到家在为他改变" }
+            {
+              "type": "trust",
+              "delta": 5,
+              "reason": "系统化照护让周爷爷更有安全感"
+            },
+            {
+              "type": "mood",
+              "delta": 3,
+              "reason": "看到家在为他改变"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhou_act1_d7_003",
@@ -1035,8 +1301,16 @@
           "description": "只关注心理，忽视实际需求",
           "isCorrect": false,
           "effects": [
-            { "type": "mood", "delta": 2, "reason": "陪伴确实让他开心" },
-            { "type": "health", "delta": -2, "reason": "安全隐患和用药风险被忽视" }
+            {
+              "type": "mood",
+              "delta": 2,
+              "reason": "陪伴确实让他开心"
+            },
+            {
+              "type": "health",
+              "delta": -2,
+              "reason": "安全隐患和用药风险被忽视"
+            }
           ],
           "spiritPowerChange": 5,
           "nextNode": "zhou_act1_d7_003",
@@ -1047,7 +1321,11 @@
           }
         }
       ],
-      "tags": ["choice", "week-summary", "strategy"],
+      "tags": [
+        "choice",
+        "week-summary",
+        "strategy"
+      ],
       "devNote": "Day 7 周总结选择：第二幕策略方向——适老化改造+长护险"
     },
     {
@@ -1085,8 +1363,15 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["act-end"],
-      "devNote": "第一幕结束节点"
+      "tags": [
+        "act-end"
+      ],
+      "devNote": "第一幕结束节点",
+      "unlocks": [
+        {
+          "albumEntryId": "album_zhou_act1_complete"
+        }
+      ]
     }
   ]
 }

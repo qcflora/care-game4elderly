@@ -51,7 +51,10 @@
         "duration": 800
       },
       "isCheckpoint": true,
-      "tags": ["intro", "tutorial"],
+      "tags": [
+        "intro",
+        "tutorial"
+      ],
       "devNote": "开场节点，精灵登场介绍李伯伯"
     },
     {
@@ -87,9 +90,21 @@
           "description": "远程监控，确保按时测血糖",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": -8, "reason": "被监视感，抗拒被管" },
-            { "type": "mood", "delta": -3, "reason": "不被信任的不快" },
-            { "type": "independence", "delta": -2, "reason": "自主权被剥夺" }
+            {
+              "type": "trust",
+              "delta": -8,
+              "reason": "被监视感，抗拒被管"
+            },
+            {
+              "type": "mood",
+              "delta": -3,
+              "reason": "不被信任的不快"
+            },
+            {
+              "type": "independence",
+              "delta": -2,
+              "reason": "自主权被剥夺"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "li_act1_d1_003",
@@ -105,8 +120,16 @@
           "description": "先建立情感连接，再关心健康",
           "isCorrect": true,
           "effects": [
-            { "type": "trust", "delta": 8, "reason": "被理解、被尊重" },
-            { "type": "mood", "delta": 5, "reason": "情绪被关注" }
+            {
+              "type": "trust",
+              "delta": 8,
+              "reason": "被理解、被尊重"
+            },
+            {
+              "type": "mood",
+              "delta": 5,
+              "reason": "情绪被关注"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "li_act1_d1_003",
@@ -122,9 +145,21 @@
           "description": "以请教姿态拉近距离，顺带引导健康监测",
           "isCorrect": true,
           "effects": [
-            { "type": "trust", "delta": 6, "reason": "被尊重、被需要" },
-            { "type": "mood", "delta": 6, "reason": "成就感" },
-            { "type": "independence", "delta": 3, "reason": "主动权在他手里" }
+            {
+              "type": "trust",
+              "delta": 6,
+              "reason": "被尊重、被需要"
+            },
+            {
+              "type": "mood",
+              "delta": 6,
+              "reason": "成就感"
+            },
+            {
+              "type": "independence",
+              "delta": 3,
+              "reason": "主动权在他手里"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "li_act1_d1_003",
@@ -135,7 +170,11 @@
           }
         }
       ],
-      "tags": ["choice", "tutorial", "trust"],
+      "tags": [
+        "choice",
+        "tutorial",
+        "trust"
+      ],
       "devNote": "第一个选择，教学信任值的重要性"
     },
     {
@@ -165,8 +204,18 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"],
-      "devNote": "Day 1 结束节点"
+      "tags": [
+        "day-end"
+      ],
+      "devNote": "Day 1 结束节点",
+      "unlocks": [
+        {
+          "diaryEntryId": "li_diary_d1"
+        },
+        {
+          "albumEntryId": "album_li_retirement"
+        }
+      ]
     },
     {
       "id": "li_act1_d2_001",
@@ -197,7 +246,10 @@
       ],
       "nextNode": "li_act1_d2_002",
       "isCheckpoint": true,
-      "tags": ["blood-sugar", "setup"]
+      "tags": [
+        "blood-sugar",
+        "setup"
+      ]
     },
     {
       "id": "li_act1_d2_002",
@@ -224,9 +276,21 @@
           "description": "严格管控饮食",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": -10, "reason": "被戳穿、被管束，丢面子" },
-            { "type": "mood", "delta": -5, "reason": "羞恼" },
-            { "type": "independence", "delta": -5, "reason": "自主权被夺" }
+            {
+              "type": "trust",
+              "delta": -10,
+              "reason": "被戳穿、被管束，丢面子"
+            },
+            {
+              "type": "mood",
+              "delta": -5,
+              "reason": "羞恼"
+            },
+            {
+              "type": "independence",
+              "delta": -5,
+              "reason": "自主权被夺"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "li_act1_d2_003",
@@ -242,8 +306,16 @@
           "description": "不干预，让数据说话",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": -5, "reason": "血糖波动持续伤身" },
-            { "type": "trust", "delta": -2, "reason": "没被真正关心" }
+            {
+              "type": "health",
+              "delta": -5,
+              "reason": "血糖波动持续伤身"
+            },
+            {
+              "type": "trust",
+              "delta": -2,
+              "reason": "没被真正关心"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "li_act1_d2_003",
@@ -259,9 +331,21 @@
           "description": "给台阶下，用知识替代指责",
           "isCorrect": true,
           "effects": [
-            { "type": "health", "delta": 5, "reason": "饮食逐步改善" },
-            { "type": "trust", "delta": 6, "reason": "保住面子又被关心" },
-            { "type": "mood", "delta": 4, "reason": "不用憋着嘴馋" }
+            {
+              "type": "health",
+              "delta": 5,
+              "reason": "饮食逐步改善"
+            },
+            {
+              "type": "trust",
+              "delta": 6,
+              "reason": "保住面子又被关心"
+            },
+            {
+              "type": "mood",
+              "delta": 4,
+              "reason": "不用憋着嘴馋"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "li_act1_d2_003",
@@ -279,7 +363,11 @@
           "autoShow": true
         }
       ],
-      "tags": ["choice", "blood-sugar", "diet"],
+      "tags": [
+        "choice",
+        "blood-sugar",
+        "diet"
+      ],
       "devNote": "血糖管理教学，糖尿病饮食"
     },
     {
@@ -309,7 +397,14 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ],
+      "unlocks": [
+        {
+          "albumEntryId": "album_li_blood_test"
+        }
+      ]
     },
     {
       "id": "li_act1_d3_001",
@@ -340,7 +435,10 @@
       ],
       "nextNode": "li_act1_d3_002",
       "isCheckpoint": true,
-      "tags": ["exercise", "setup"]
+      "tags": [
+        "exercise",
+        "setup"
+      ]
     },
     {
       "id": "li_act1_d3_002",
@@ -367,9 +465,21 @@
           "description": "保守起见，减少运动",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": -5, "reason": "缺乏运动血糖控制变差" },
-            { "type": "independence", "delta": -5, "reason": "被限制自由" },
-            { "type": "mood", "delta": -4, "reason": "闷得慌" }
+            {
+              "type": "health",
+              "delta": -5,
+              "reason": "缺乏运动血糖控制变差"
+            },
+            {
+              "type": "independence",
+              "delta": -5,
+              "reason": "被限制自由"
+            },
+            {
+              "type": "mood",
+              "delta": -4,
+              "reason": "闷得慌"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "li_act1_d3_003",
@@ -385,9 +495,21 @@
           "description": "科学方法，把判断权交给他",
           "isCorrect": true,
           "effects": [
-            { "type": "health", "delta": 8, "reason": "运动强度合理，血糖改善" },
-            { "type": "trust", "delta": 5, "reason": "学到有用知识" },
-            { "type": "independence", "delta": 4, "reason": "自己能判断" }
+            {
+              "type": "health",
+              "delta": 8,
+              "reason": "运动强度合理，血糖改善"
+            },
+            {
+              "type": "trust",
+              "delta": 5,
+              "reason": "学到有用知识"
+            },
+            {
+              "type": "independence",
+              "delta": 4,
+              "reason": "自己能判断"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "li_act1_d3_003",
@@ -403,8 +525,16 @@
           "description": "换低冲击运动，保护关节",
           "isCorrect": true,
           "effects": [
-            { "type": "health", "delta": 6, "reason": "运动方式更安全" },
-            { "type": "trust", "delta": 4, "reason": "建议合理" }
+            {
+              "type": "health",
+              "delta": 6,
+              "reason": "运动方式更安全"
+            },
+            {
+              "type": "trust",
+              "delta": 4,
+              "reason": "建议合理"
+            }
           ],
           "spiritPowerChange": 8,
           "nextNode": "li_act1_d3_003",
@@ -422,7 +552,10 @@
           "autoShow": true
         }
       ],
-      "tags": ["choice", "exercise"],
+      "tags": [
+        "choice",
+        "exercise"
+      ],
       "devNote": "运动指导教学"
     },
     {
@@ -452,7 +585,14 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ],
+      "unlocks": [
+        {
+          "diaryEntryId": "li_diary_d3"
+        }
+      ]
     },
     {
       "id": "li_act1_d4_001",
@@ -483,7 +623,10 @@
       ],
       "nextNode": "li_act1_d4_002",
       "isCheckpoint": true,
-      "tags": ["diet", "setup"]
+      "tags": [
+        "diet",
+        "setup"
+      ]
     },
     {
       "id": "li_act1_d4_002",
@@ -510,8 +653,16 @@
           "description": "明确指出问题",
           "isCorrect": false,
           "effects": [
-            { "type": "mood", "delta": -6, "reason": "老伴心意被否定" },
-            { "type": "trust", "delta": -3, "reason": "家庭气氛僵" }
+            {
+              "type": "mood",
+              "delta": -6,
+              "reason": "老伴心意被否定"
+            },
+            {
+              "type": "trust",
+              "delta": -3,
+              "reason": "家庭气氛僵"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "li_act1_d4_003",
@@ -527,9 +678,21 @@
           "description": "优化搭配和进餐顺序",
           "isCorrect": true,
           "effects": [
-            { "type": "health", "delta": 8, "reason": "升糖负荷降低" },
-            { "type": "mood", "delta": 4, "reason": "老伴心意被保留" },
-            { "type": "trust", "delta": 5, "reason": "建议贴心" }
+            {
+              "type": "health",
+              "delta": 8,
+              "reason": "升糖负荷降低"
+            },
+            {
+              "type": "mood",
+              "delta": 4,
+              "reason": "老伴心意被保留"
+            },
+            {
+              "type": "trust",
+              "delta": 5,
+              "reason": "建议贴心"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "li_act1_d4_003",
@@ -545,8 +708,16 @@
           "description": "尊重他的自主权",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": -4, "reason": "他还缺乏控糖意识" },
-            { "type": "independence", "delta": 3, "reason": "自主权被尊重" }
+            {
+              "type": "health",
+              "delta": -4,
+              "reason": "他还缺乏控糖意识"
+            },
+            {
+              "type": "independence",
+              "delta": 3,
+              "reason": "自主权被尊重"
+            }
           ],
           "spiritPowerChange": 3,
           "nextNode": "li_act1_d4_003",
@@ -557,7 +728,10 @@
           }
         }
       ],
-      "tags": ["choice", "diet"],
+      "tags": [
+        "choice",
+        "diet"
+      ],
       "devNote": "饮食控制教学"
     },
     {
@@ -587,7 +761,14 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ],
+      "unlocks": [
+        {
+          "albumEntryId": "album_li_diet_plan"
+        }
+      ]
     },
     {
       "id": "li_act1_d5_001",
@@ -618,7 +799,11 @@
       ],
       "nextNode": "li_act1_d5_002",
       "isCheckpoint": true,
-      "tags": ["psychology", "retirement", "setup"]
+      "tags": [
+        "psychology",
+        "retirement",
+        "setup"
+      ]
     },
     {
       "id": "li_act1_d5_002",
@@ -653,8 +838,16 @@
           "description": "安慰他放下",
           "isCorrect": false,
           "effects": [
-            { "type": "mood", "delta": -5, "reason": "情绪被否定，更觉没人懂" },
-            { "type": "trust", "delta": -3, "reason": "没被真正倾听" }
+            {
+              "type": "mood",
+              "delta": -5,
+              "reason": "情绪被否定，更觉没人懂"
+            },
+            {
+              "type": "trust",
+              "delta": -3,
+              "reason": "没被真正倾听"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "li_act1_d5_003",
@@ -670,8 +863,16 @@
           "description": "倾听+引导正向回忆",
           "isCorrect": true,
           "effects": [
-            { "type": "mood", "delta": 8, "reason": "被倾听、被重视" },
-            { "type": "trust", "delta": 7, "reason": "真正关心他这个人" }
+            {
+              "type": "mood",
+              "delta": 8,
+              "reason": "被倾听、被重视"
+            },
+            {
+              "type": "trust",
+              "delta": 7,
+              "reason": "真正关心他这个人"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "li_act1_d5_003",
@@ -687,8 +888,16 @@
           "description": "直接给方案，找新事做",
           "isCorrect": false,
           "effects": [
-            { "type": "mood", "delta": 2, "reason": "有被需要的可能" },
-            { "type": "trust", "delta": -2, "reason": "感觉被安排" }
+            {
+              "type": "mood",
+              "delta": 2,
+              "reason": "有被需要的可能"
+            },
+            {
+              "type": "trust",
+              "delta": -2,
+              "reason": "感觉被安排"
+            }
           ],
           "spiritPowerChange": 3,
           "nextNode": "li_act1_d5_003",
@@ -699,7 +908,11 @@
           }
         }
       ],
-      "tags": ["choice", "psychology", "retirement"],
+      "tags": [
+        "choice",
+        "psychology",
+        "retirement"
+      ],
       "devNote": "心理落差教学，回忆疗法伏笔"
     },
     {
@@ -729,7 +942,14 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ],
+      "unlocks": [
+        {
+          "diaryEntryId": "li_diary_d5"
+        }
+      ]
     },
     {
       "id": "li_act1_d6_001",
@@ -760,7 +980,11 @@
       ],
       "nextNode": "li_act1_d6_002",
       "isCheckpoint": true,
-      "tags": ["retirement", "social", "setup"]
+      "tags": [
+        "retirement",
+        "social",
+        "setup"
+      ]
     },
     {
       "id": "li_act1_d6_002",
@@ -787,9 +1011,21 @@
           "description": "替他做决定，推动行动",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": -8, "reason": "又被安排了" },
-            { "type": "independence", "delta": -5, "reason": "自主权被夺" },
-            { "type": "mood", "delta": -3, "reason": "不情愿" }
+            {
+              "type": "trust",
+              "delta": -8,
+              "reason": "又被安排了"
+            },
+            {
+              "type": "independence",
+              "delta": -5,
+              "reason": "自主权被夺"
+            },
+            {
+              "type": "mood",
+              "delta": -3,
+              "reason": "不情愿"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "li_act1_d6_003",
@@ -805,9 +1041,21 @@
           "description": "让他先感受被需要，自己产生兴趣",
           "isCorrect": true,
           "effects": [
-            { "type": "mood", "delta": 7, "reason": "被需要的成就感" },
-            { "type": "trust", "delta": 6, "reason": "被尊重专长" },
-            { "type": "independence", "delta": 4, "reason": "主动权在他" }
+            {
+              "type": "mood",
+              "delta": 7,
+              "reason": "被需要的成就感"
+            },
+            {
+              "type": "trust",
+              "delta": 6,
+              "reason": "被尊重专长"
+            },
+            {
+              "type": "independence",
+              "delta": 4,
+              "reason": "主动权在他"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "li_act1_d6_003",
@@ -823,8 +1071,16 @@
           "description": "温和推荐，让他自己决定",
           "isCorrect": true,
           "effects": [
-            { "type": "mood", "delta": 4, "reason": "被认可能力" },
-            { "type": "trust", "delta": 4, "reason": "尊重他的选择" }
+            {
+              "type": "mood",
+              "delta": 4,
+              "reason": "被认可能力"
+            },
+            {
+              "type": "trust",
+              "delta": 4,
+              "reason": "尊重他的选择"
+            }
           ],
           "spiritPowerChange": 7,
           "nextNode": "li_act1_d6_003",
@@ -835,7 +1091,11 @@
           }
         }
       ],
-      "tags": ["choice", "retirement", "social"],
+      "tags": [
+        "choice",
+        "retirement",
+        "social"
+      ],
       "devNote": "退休适应教学"
     },
     {
@@ -865,7 +1125,14 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ],
+      "unlocks": [
+        {
+          "albumEntryId": "album_li_smart_watch"
+        }
+      ]
     },
     {
       "id": "li_act1_d7_001",
@@ -896,7 +1163,10 @@
       ],
       "nextNode": "li_act1_d7_002",
       "isCheckpoint": true,
-      "tags": ["week-review", "act-end"]
+      "tags": [
+        "week-review",
+        "act-end"
+      ]
     },
     {
       "id": "li_act1_d7_002",
@@ -923,8 +1193,16 @@
           "description": "强化管理，巩固成果",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": -5, "reason": "又被管起来了" },
-            { "type": "independence", "delta": -4, "reason": "自主权被规划掉" }
+            {
+              "type": "trust",
+              "delta": -5,
+              "reason": "又被管起来了"
+            },
+            {
+              "type": "independence",
+              "delta": -4,
+              "reason": "自主权被规划掉"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "li_act1_d7_003",
@@ -940,9 +1218,21 @@
           "description": "引导自我觉察，巩固正向改变",
           "isCorrect": true,
           "effects": [
-            { "type": "health", "delta": 5, "reason": "自我管理意识增强" },
-            { "type": "mood", "delta": 6, "reason": "看到自己的进步" },
-            { "type": "trust", "delta": 6, "reason": "被尊重、被倾听" }
+            {
+              "type": "health",
+              "delta": 5,
+              "reason": "自我管理意识增强"
+            },
+            {
+              "type": "mood",
+              "delta": 6,
+              "reason": "看到自己的进步"
+            },
+            {
+              "type": "trust",
+              "delta": 6,
+              "reason": "被尊重、被倾听"
+            }
           ],
           "spiritPowerChange": 15,
           "nextNode": "li_act1_d7_003",
@@ -958,8 +1248,16 @@
           "description": "正向激励",
           "isCorrect": false,
           "effects": [
-            { "type": "mood", "delta": 3, "reason": "被肯定" },
-            { "type": "health", "delta": -3, "reason": "大餐破坏控糖" }
+            {
+              "type": "mood",
+              "delta": 3,
+              "reason": "被肯定"
+            },
+            {
+              "type": "health",
+              "delta": -3,
+              "reason": "大餐破坏控糖"
+            }
           ],
           "spiritPowerChange": 3,
           "nextNode": "li_act1_d7_003",
@@ -970,7 +1268,11 @@
           }
         }
       ],
-      "tags": ["choice", "week-review", "act-end"],
+      "tags": [
+        "choice",
+        "week-review",
+        "act-end"
+      ],
       "devNote": "第一幕总结，自我监控教学"
     },
     {
@@ -1013,8 +1315,15 @@
         "illustrationTransition": "watercolor",
         "duration": 1000
       },
-      "tags": ["act-end"],
-      "devNote": "第一幕结束，过渡到第二幕"
+      "tags": [
+        "act-end"
+      ],
+      "devNote": "第一幕结束，过渡到第二幕",
+      "unlocks": [
+        {
+          "albumEntryId": "album_li_act1_complete"
+        }
+      ]
     }
   ]
 }

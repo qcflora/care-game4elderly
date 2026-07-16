@@ -40,7 +40,11 @@
           "description": "误以为是劳累",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": -8, "reason": "低血糖持续恶化，可能昏迷" }
+            {
+              "type": "health",
+              "delta": -8,
+              "reason": "低血糖持续恶化，可能昏迷"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "li_act3_d22_002",
@@ -56,8 +60,16 @@
           "description": "识别低血糖，正确处置",
           "isCorrect": true,
           "effects": [
-            { "type": "health", "delta": 8, "reason": "低血糖及时纠正" },
-            { "type": "trust", "delta": 6, "reason": "危急时刻被正确守护" }
+            {
+              "type": "health",
+              "delta": 8,
+              "reason": "低血糖及时纠正"
+            },
+            {
+              "type": "trust",
+              "delta": 6,
+              "reason": "危急时刻被正确守护"
+            }
           ],
           "spiritPowerChange": 15,
           "nextNode": "li_act3_d22_002",
@@ -73,8 +85,16 @@
           "description": "过度反应",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": -3, "reason": "送医途中延误补糖" },
-            { "type": "mood", "delta": -3, "reason": "小题大做让他丢面子" }
+            {
+              "type": "health",
+              "delta": -3,
+              "reason": "送医途中延误补糖"
+            },
+            {
+              "type": "mood",
+              "delta": -3,
+              "reason": "小题大做让他丢面子"
+            }
           ],
           "spiritPowerChange": 2,
           "nextNode": "li_act3_d22_002",
@@ -92,7 +112,12 @@
           "autoShow": true
         }
       ],
-      "tags": ["choice", "emergency", "hypoglycemia", "timed-prep"],
+      "tags": [
+        "choice",
+        "emergency",
+        "hypoglycemia",
+        "timed-prep"
+      ],
       "devNote": "低血糖前兆识别，为Day23限时决策做铺垫"
     },
     {
@@ -122,7 +147,9 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ]
     },
     {
       "id": "li_act3_d23_001",
@@ -159,7 +186,11 @@
           "description": "现场补糖，自行处理",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": -8, "reason": "意识模糊有误吸风险，自行喂食危险" }
+            {
+              "type": "health",
+              "delta": -8,
+              "reason": "意识模糊有误吸风险，自行喂食危险"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "li_act3_d23_002",
@@ -175,8 +206,16 @@
           "description": "正确急救+呼叫专业救援",
           "isCorrect": true,
           "effects": [
-            { "type": "health", "delta": 8, "reason": "正确急救避免误吸，及时获救" },
-            { "type": "trust", "delta": 8, "reason": "危急时刻的专业守护" }
+            {
+              "type": "health",
+              "delta": 8,
+              "reason": "正确急救避免误吸，及时获救"
+            },
+            {
+              "type": "trust",
+              "delta": 8,
+              "reason": "危急时刻的专业守护"
+            }
           ],
           "spiritPowerChange": 15,
           "nextNode": "li_act3_d23_002",
@@ -192,7 +231,11 @@
           "description": "自行送医",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": -5, "reason": "搬运途中颠簸+无专业监护，风险高" }
+            {
+              "type": "health",
+              "delta": -5,
+              "reason": "搬运途中颠簸+无专业监护，风险高"
+            }
           ],
           "spiritPowerChange": 2,
           "nextNode": "li_act3_d23_002",
@@ -203,7 +246,13 @@
           }
         }
       ],
-      "tags": ["choice", "emergency", "timed-decision", "hypoglycemia", "call-120"],
+      "tags": [
+        "choice",
+        "emergency",
+        "timed-decision",
+        "hypoglycemia",
+        "call-120"
+      ],
       "devNote": "Day23限时决策节点（30秒），低血糖急症急救教学"
     },
     {
@@ -243,7 +292,10 @@
       ],
       "nextNode": "li_act3_d24_001",
       "isCheckpoint": true,
-      "tags": ["recovery", "turning-point"]
+      "tags": [
+        "recovery",
+        "turning-point"
+      ]
     },
     {
       "id": "li_act3_d24_001",
@@ -279,8 +331,16 @@
           "description": "专业检查最稳妥",
           "isCorrect": false,
           "effects": [
-            { "type": "independence", "delta": -5, "reason": "过度依赖医疗" },
-            { "type": "mood", "delta": -3, "reason": "每天跑医院太折腾" }
+            {
+              "type": "independence",
+              "delta": -5,
+              "reason": "过度依赖医疗"
+            },
+            {
+              "type": "mood",
+              "delta": -3,
+              "reason": "每天跑医院太折腾"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "li_act3_d24_002",
@@ -296,9 +356,21 @@
           "description": "建立每日自查习惯",
           "isCorrect": true,
           "effects": [
-            { "type": "health", "delta": 8, "reason": "早期发现足部问题" },
-            { "type": "independence", "delta": 5, "reason": "自己能管理" },
-            { "type": "trust", "delta": 5, "reason": "学到实用知识" }
+            {
+              "type": "health",
+              "delta": 8,
+              "reason": "早期发现足部问题"
+            },
+            {
+              "type": "independence",
+              "delta": 5,
+              "reason": "自己能管理"
+            },
+            {
+              "type": "trust",
+              "delta": 5,
+              "reason": "学到实用知识"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "li_act3_d24_002",
@@ -314,7 +386,11 @@
           "description": "忽视症状",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": -6, "reason": "神经病变进展，糖尿病足风险升高" }
+            {
+              "type": "health",
+              "delta": -6,
+              "reason": "神经病变进展，糖尿病足风险升高"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "li_act3_d24_002",
@@ -332,7 +408,11 @@
           "autoShow": true
         }
       ],
-      "tags": ["choice", "diabetic-foot", "self-care"],
+      "tags": [
+        "choice",
+        "diabetic-foot",
+        "self-care"
+      ],
       "devNote": "糖尿病足预防教学"
     },
     {
@@ -362,7 +442,9 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ]
     },
     {
       "id": "li_act3_d25_001",
@@ -398,8 +480,16 @@
           "description": "明确否定",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": -4, "reason": "又被否定" },
-            { "type": "mood", "delta": -3, "reason": "面子受损" }
+            {
+              "type": "trust",
+              "delta": -4,
+              "reason": "又被否定"
+            },
+            {
+              "type": "mood",
+              "delta": -3,
+              "reason": "面子受损"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "li_act3_d25_002",
@@ -415,9 +505,21 @@
           "description": "肯定+信息+自主判断",
           "isCorrect": true,
           "effects": [
-            { "type": "health", "delta": 7, "reason": "选对鞋预防足部损伤" },
-            { "type": "trust", "delta": 6, "reason": "被尊重又被科普" },
-            { "type": "mood", "delta": 4, "reason": "面子保住了" }
+            {
+              "type": "health",
+              "delta": 7,
+              "reason": "选对鞋预防足部损伤"
+            },
+            {
+              "type": "trust",
+              "delta": 6,
+              "reason": "被尊重又被科普"
+            },
+            {
+              "type": "mood",
+              "delta": 4,
+              "reason": "面子保住了"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "li_act3_d25_002",
@@ -433,7 +535,11 @@
           "description": "尊重选择，试错",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": -4, "reason": "糖尿病神经病变感觉迟钝，穿了不舒服也未必察觉" }
+            {
+              "type": "health",
+              "delta": -4,
+              "reason": "糖尿病神经病变感觉迟钝，穿了不舒服也未必察觉"
+            }
           ],
           "spiritPowerChange": 2,
           "nextNode": "li_act3_d25_002",
@@ -444,7 +550,11 @@
           }
         }
       ],
-      "tags": ["choice", "diabetic-foot", "footwear"],
+      "tags": [
+        "choice",
+        "diabetic-foot",
+        "footwear"
+      ],
       "devNote": "糖尿病足选鞋教学"
     },
     {
@@ -474,7 +584,17 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ],
+      "unlocks": [
+        {
+          "diaryEntryId": "li_diary_d25"
+        },
+        {
+          "albumEntryId": "album_li_wechat"
+        }
+      ]
     },
     {
       "id": "li_act3_d26_001",
@@ -510,8 +630,16 @@
           "description": "纠正+定标准",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": -3, "reason": "又被纠正" },
-            { "type": "mood", "delta": -2, "reason": "挫败感" }
+            {
+              "type": "trust",
+              "delta": -3,
+              "reason": "又被纠正"
+            },
+            {
+              "type": "mood",
+              "delta": -2,
+              "reason": "挫败感"
+            }
           ],
           "spiritPowerChange": 2,
           "nextNode": "li_act3_d26_002",
@@ -527,9 +655,21 @@
           "description": "用数据引导他自己发现规律",
           "isCorrect": true,
           "effects": [
-            { "type": "health", "delta": 7, "reason": "运动量回归合理" },
-            { "type": "trust", "delta": 6, "reason": "用他的数据而非说教" },
-            { "type": "independence", "delta": 4, "reason": "自己得出结论" }
+            {
+              "type": "health",
+              "delta": 7,
+              "reason": "运动量回归合理"
+            },
+            {
+              "type": "trust",
+              "delta": 6,
+              "reason": "用他的数据而非说教"
+            },
+            {
+              "type": "independence",
+              "delta": 4,
+              "reason": "自己得出结论"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "li_act3_d26_002",
@@ -545,7 +685,11 @@
           "description": "放任自流",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": -5, "reason": "运动过量反复，血糖波动大伤血管" }
+            {
+              "type": "health",
+              "delta": -5,
+              "reason": "运动过量反复，血糖波动大伤血管"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "li_act3_d26_002",
@@ -563,7 +707,11 @@
           "autoShow": true
         }
       ],
-      "tags": ["choice", "exercise", "glucose-management"],
+      "tags": [
+        "choice",
+        "exercise",
+        "glucose-management"
+      ],
       "devNote": "运动过量教学，反直觉知识"
     },
     {
@@ -593,7 +741,9 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ]
     },
     {
       "id": "li_act3_d27_001",
@@ -629,7 +779,11 @@
           "description": "基础信息",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": -3, "reason": "信息不全，急救时关键信息缺失" }
+            {
+              "type": "health",
+              "delta": -3,
+              "reason": "信息不全，急救时关键信息缺失"
+            }
           ],
           "spiritPowerChange": 2,
           "nextNode": "li_act3_d27_002",
@@ -645,9 +799,21 @@
           "description": "完整应急信息+处置流程",
           "isCorrect": true,
           "effects": [
-            { "type": "health", "delta": 8, "reason": "急救信息完备，争取黄金时间" },
-            { "type": "trust", "delta": 6, "reason": "全家共同参与" },
-            { "type": "mood", "delta": 5, "reason": "有安全感" }
+            {
+              "type": "health",
+              "delta": 8,
+              "reason": "急救信息完备，争取黄金时间"
+            },
+            {
+              "type": "trust",
+              "delta": 6,
+              "reason": "全家共同参与"
+            },
+            {
+              "type": "mood",
+              "delta": 5,
+              "reason": "有安全感"
+            }
           ],
           "spiritPowerChange": 15,
           "nextNode": "li_act3_d27_002",
@@ -663,8 +829,16 @@
           "description": "完全自主",
           "isCorrect": true,
           "effects": [
-            { "type": "independence", "delta": 5, "reason": "自己主导" },
-            { "type": "trust", "delta": 4, "reason": "被信任" }
+            {
+              "type": "independence",
+              "delta": 5,
+              "reason": "自己主导"
+            },
+            {
+              "type": "trust",
+              "delta": 4,
+              "reason": "被信任"
+            }
           ],
           "spiritPowerChange": 8,
           "nextNode": "li_act3_d27_002",
@@ -675,7 +849,12 @@
           }
         }
       ],
-      "tags": ["choice", "emergency", "family-plan", "real-world-tool"],
+      "tags": [
+        "choice",
+        "emergency",
+        "family-plan",
+        "real-world-tool"
+      ],
       "devNote": "应急处理技能总结，解锁真实世界工具"
     },
     {
@@ -705,7 +884,9 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ]
     },
     {
       "id": "li_act3_d28_001",
@@ -736,7 +917,10 @@
       ],
       "nextNode": "li_act3_d28_002",
       "isCheckpoint": true,
-      "tags": ["review", "album"]
+      "tags": [
+        "review",
+        "album"
+      ]
     },
     {
       "id": "li_act3_d28_002",
@@ -763,8 +947,16 @@
           "description": "健康管理成长",
           "isCorrect": true,
           "effects": [
-            { "type": "health", "delta": 5, "reason": "巩固健康意识" },
-            { "type": "mood", "delta": 4, "reason": "被肯定进步" }
+            {
+              "type": "health",
+              "delta": 5,
+              "reason": "巩固健康意识"
+            },
+            {
+              "type": "mood",
+              "delta": 4,
+              "reason": "被肯定进步"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "li_act3_d28_003",
@@ -780,8 +972,16 @@
           "description": "心理成长",
           "isCorrect": true,
           "effects": [
-            { "type": "trust", "delta": 6, "reason": "回顾加深理解" },
-            { "type": "mood", "delta": 5, "reason": "成长被看见" }
+            {
+              "type": "trust",
+              "delta": 6,
+              "reason": "回顾加深理解"
+            },
+            {
+              "type": "mood",
+              "delta": 5,
+              "reason": "成长被看见"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "li_act3_d28_003",
@@ -797,8 +997,16 @@
           "description": "危机后的顿悟",
           "isCorrect": true,
           "effects": [
-            { "type": "health", "delta": 4, "reason": "深刻领悟" },
-            { "type": "trust", "delta": 5, "reason": "危机中被守护" }
+            {
+              "type": "health",
+              "delta": 4,
+              "reason": "深刻领悟"
+            },
+            {
+              "type": "trust",
+              "delta": 5,
+              "reason": "危机中被守护"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "li_act3_d28_003",
@@ -809,7 +1017,10 @@
           }
         }
       ],
-      "tags": ["choice", "review"],
+      "tags": [
+        "choice",
+        "review"
+      ],
       "devNote": "三十天回顾"
     },
     {
@@ -839,7 +1050,9 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ]
     },
     {
       "id": "li_act3_d29_001",
@@ -878,7 +1091,10 @@
       ],
       "nextNode": "li_act3_d29_002",
       "isCheckpoint": true,
-      "tags": ["letter", "emotional"],
+      "tags": [
+        "letter",
+        "emotional"
+      ],
       "unlocks": [
         {
           "diaryEntryId": "li_letter_to_young_self"
@@ -910,7 +1126,11 @@
           "description": "尊重隐私",
           "isCorrect": false,
           "effects": [
-            { "type": "mood", "delta": -2, "reason": "坦诚没被接住，有点失落" }
+            {
+              "type": "mood",
+              "delta": -2,
+              "reason": "坦诚没被接住，有点失落"
+            }
           ],
           "spiritPowerChange": 3,
           "nextNode": "li_act3_d29_003",
@@ -926,8 +1146,16 @@
           "description": "确认并感谢他的坦诚",
           "isCorrect": true,
           "effects": [
-            { "type": "trust", "delta": 8, "reason": "脆弱被珍视" },
-            { "type": "mood", "delta": 7, "reason": "被深深理解" }
+            {
+              "type": "trust",
+              "delta": 8,
+              "reason": "脆弱被珍视"
+            },
+            {
+              "type": "mood",
+              "delta": 7,
+              "reason": "被深深理解"
+            }
           ],
           "spiritPowerChange": 12,
           "nextNode": "li_act3_d29_003",
@@ -943,8 +1171,16 @@
           "description": "扩大情感连接",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": -4, "reason": "私密被要求公开，安全感受损" },
-            { "type": "mood", "delta": -2, "reason": "被push了" }
+            {
+              "type": "trust",
+              "delta": -4,
+              "reason": "私密被要求公开，安全感受损"
+            },
+            {
+              "type": "mood",
+              "delta": -2,
+              "reason": "被push了"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "li_act3_d29_003",
@@ -955,7 +1191,11 @@
           }
         }
       ],
-      "tags": ["choice", "letter", "psychology"],
+      "tags": [
+        "choice",
+        "letter",
+        "psychology"
+      ],
       "devNote": "Day29选择节点，接住代际信件的坦诚时刻"
     },
     {
@@ -985,7 +1225,10 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end", "letter"],
+      "tags": [
+        "day-end",
+        "letter"
+      ],
       "devNote": "代际信件，心理支持技能精通解锁"
     },
     {
@@ -1025,7 +1268,10 @@
       ],
       "nextNode": "li_act3_d30_002",
       "isCheckpoint": true,
-      "tags": ["ending", "final-day"]
+      "tags": [
+        "ending",
+        "final-day"
+      ]
     },
     {
       "id": "li_act3_d30_002",
@@ -1052,8 +1298,16 @@
           "description": "知识与数据导向",
           "isCorrect": true,
           "effects": [
-            { "type": "health", "delta": 5, "reason": "知识内化" },
-            { "type": "trust", "delta": 4, "reason": "成长被确认" }
+            {
+              "type": "health",
+              "delta": 5,
+              "reason": "知识内化"
+            },
+            {
+              "type": "trust",
+              "delta": 4,
+              "reason": "成长被确认"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "li_act3_d30_003",
@@ -1069,8 +1323,16 @@
           "description": "关系与共情导向",
           "isCorrect": true,
           "effects": [
-            { "type": "mood", "delta": 6, "reason": "共情内化" },
-            { "type": "trust", "delta": 6, "reason": "深刻领悟" }
+            {
+              "type": "mood",
+              "delta": 6,
+              "reason": "共情内化"
+            },
+            {
+              "type": "trust",
+              "delta": 6,
+              "reason": "深刻领悟"
+            }
           ],
           "spiritPowerChange": 12,
           "nextNode": "li_act3_d30_004",
@@ -1086,8 +1348,16 @@
           "description": "自主与边界导向",
           "isCorrect": true,
           "effects": [
-            { "type": "independence", "delta": 5, "reason": "边界感内化" },
-            { "type": "trust", "delta": 5, "reason": "尊重被确认" }
+            {
+              "type": "independence",
+              "delta": 5,
+              "reason": "边界感内化"
+            },
+            {
+              "type": "trust",
+              "delta": 5,
+              "reason": "尊重被确认"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "li_act3_d30_003",
@@ -1098,7 +1368,10 @@
           }
         }
       ],
-      "tags": ["choice", "ending"],
+      "tags": [
+        "choice",
+        "ending"
+      ],
       "devNote": "最终选择，导向不同结局评价"
     },
     {
@@ -1150,8 +1423,19 @@
         "illustrationTransition": "watercolor",
         "duration": 1500
       },
-      "tags": ["ending", "growth-path"],
-      "devNote": "成长之路结局——李伯伯预期结局：独立值高、信任值中、健康值中"
+      "tags": [
+        "ending",
+        "growth-path"
+      ],
+      "devNote": "成长之路结局——李伯伯预期结局：独立值高、信任值中、健康值中",
+      "unlocks": [
+        {
+          "diaryEntryId": "li_diary_d30"
+        },
+        {
+          "albumEntryId": "album_li_ending"
+        }
+      ]
     },
     {
       "id": "li_act3_d30_004",
@@ -1202,8 +1486,19 @@
         "illustrationTransition": "watercolor",
         "duration": 1500
       },
-      "tags": ["ending", "deep-understanding"],
-      "devNote": "深层理解结局——心情值高、信任值高时触发"
+      "tags": [
+        "ending",
+        "deep-understanding"
+      ],
+      "devNote": "深层理解结局——心情值高、信任值高时触发",
+      "unlocks": [
+        {
+          "diaryEntryId": "li_diary_d30"
+        },
+        {
+          "albumEntryId": "album_li_ending"
+        }
+      ]
     },
     {
       "id": "li_act3_d30_005",
@@ -1254,8 +1549,19 @@
         "illustrationTransition": "watercolor",
         "duration": 1500
       },
-      "tags": ["ending", "warm-guardian"],
-      "devNote": "温暖守护结局——四项属性全高时触发（李伯伯线较难达成，需全程高质量照护）"
+      "tags": [
+        "ending",
+        "warm-guardian"
+      ],
+      "devNote": "温暖守护结局——四项属性全高时触发（李伯伯线较难达成，需全程高质量照护）",
+      "unlocks": [
+        {
+          "diaryEntryId": "li_diary_d30"
+        },
+        {
+          "albumEntryId": "album_li_ending"
+        }
+      ]
     }
   ]
 }

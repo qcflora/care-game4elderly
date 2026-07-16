@@ -40,8 +40,16 @@
           "description": "直言点破孤独",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": -5, "reason": "被戳中痛处，自尊受损" },
-            { "type": "mood", "delta": -3, "reason": "孤单被当面点破，更难堪" }
+            {
+              "type": "trust",
+              "delta": -5,
+              "reason": "被戳中痛处，自尊受损"
+            },
+            {
+              "type": "mood",
+              "delta": -3,
+              "reason": "孤单被当面点破，更难堪"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "wang_act2_d11_002",
@@ -57,9 +65,21 @@
           "description": "尊重尊严，温和建立连接",
           "isCorrect": true,
           "effects": [
-            { "type": "trust", "delta": 8, "reason": "被理解、被尊重地陪伴" },
-            { "type": "mood", "delta": 6, "reason": "想起儿子，心里暖了" },
-            { "type": "health", "delta": 4, "reason": "顺手提醒了吃药" }
+            {
+              "type": "trust",
+              "delta": 8,
+              "reason": "被理解、被尊重地陪伴"
+            },
+            {
+              "type": "mood",
+              "delta": 6,
+              "reason": "想起儿子，心里暖了"
+            },
+            {
+              "type": "health",
+              "delta": 4,
+              "reason": "顺手提醒了吃药"
+            }
           ],
           "spiritPowerChange": 15,
           "nextNode": "wang_act2_d11_002",
@@ -75,8 +95,16 @@
           "description": "只管吃药，回避情绪",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": 4, "reason": "药吃了" },
-            { "type": "trust", "delta": 2, "reason": "关心有限" }
+            {
+              "type": "health",
+              "delta": 4,
+              "reason": "药吃了"
+            },
+            {
+              "type": "trust",
+              "delta": 2,
+              "reason": "关心有限"
+            }
           ],
           "spiritPowerChange": 5,
           "nextNode": "wang_act2_d11_002",
@@ -94,7 +122,12 @@
           "autoShow": true
         }
       ],
-      "tags": ["choice", "loneliness", "medication", "companionship"],
+      "tags": [
+        "choice",
+        "loneliness",
+        "medication",
+        "companionship"
+      ],
       "devNote": "第二幕开场，发现隐藏的孤独，建立陪伴基调"
     },
     {
@@ -124,7 +157,9 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ]
     },
     {
       "id": "wang_act2_d13_001",
@@ -160,7 +195,11 @@
           "description": "附和停药",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": -8, "reason": "停药导致血压反弹，危象风险升高" }
+            {
+              "type": "health",
+              "delta": -8,
+              "reason": "停药导致血压反弹，危象风险升高"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "wang_act2_d13_002",
@@ -176,8 +215,16 @@
           "description": "用比喻讲清用药道理",
           "isCorrect": true,
           "effects": [
-            { "type": "health", "delta": 8, "reason": "规律服药，血压稳定" },
-            { "type": "trust", "delta": 6, "reason": "被讲道理说服，而非被命令" }
+            {
+              "type": "health",
+              "delta": 8,
+              "reason": "规律服药，血压稳定"
+            },
+            {
+              "type": "trust",
+              "delta": 6,
+              "reason": "被讲道理说服，而非被命令"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "wang_act2_d13_002",
@@ -193,8 +240,16 @@
           "description": "强制监督",
           "isCorrect": false,
           "effects": [
-            { "type": "independence", "delta": -5, "reason": "被当小孩监督" },
-            { "type": "trust", "delta": -3, "reason": "自尊受损" }
+            {
+              "type": "independence",
+              "delta": -5,
+              "reason": "被当小孩监督"
+            },
+            {
+              "type": "trust",
+              "delta": -3,
+              "reason": "自尊受损"
+            }
           ],
           "spiritPowerChange": 2,
           "nextNode": "wang_act2_d13_002",
@@ -212,7 +267,12 @@
           "autoShow": true
         }
       ],
-      "tags": ["choice", "medication", "adherence", "hypertension"],
+      "tags": [
+        "choice",
+        "medication",
+        "adherence",
+        "hypertension"
+      ],
       "devNote": "用药依从性教学，'见好就收'误区"
     },
     {
@@ -242,7 +302,9 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ]
     },
     {
       "id": "wang_act2_d15_001",
@@ -278,8 +340,16 @@
           "description": "一刀切禁食",
           "isCorrect": false,
           "effects": [
-            { "type": "mood", "delta": -5, "reason": "喜欢的菜被没收，委屈" },
-            { "type": "trust", "delta": -4, "reason": "被管束、被否定" }
+            {
+              "type": "mood",
+              "delta": -5,
+              "reason": "喜欢的菜被没收，委屈"
+            },
+            {
+              "type": "trust",
+              "delta": -4,
+              "reason": "被管束、被否定"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "wang_act2_d15_002",
@@ -295,9 +365,21 @@
           "description": "替代提鲜+渐进减盐",
           "isCorrect": true,
           "effects": [
-            { "type": "health", "delta": 8, "reason": "钠摄入降低，血压更稳" },
-            { "type": "mood", "delta": 5, "reason": "口味没受委屈" },
-            { "type": "trust", "delta": 4, "reason": "被尊重地引导" }
+            {
+              "type": "health",
+              "delta": 8,
+              "reason": "钠摄入降低，血压更稳"
+            },
+            {
+              "type": "mood",
+              "delta": 5,
+              "reason": "口味没受委屈"
+            },
+            {
+              "type": "trust",
+              "delta": 4,
+              "reason": "被尊重地引导"
+            }
           ],
           "spiritPowerChange": 12,
           "nextNode": "wang_act2_d15_002",
@@ -313,7 +395,11 @@
           "description": "放任不管",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": -5, "reason": "高钠饮食持续，血压难控" }
+            {
+              "type": "health",
+              "delta": -5,
+              "reason": "高钠饮食持续，血压难控"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "wang_act2_d15_002",
@@ -331,7 +417,12 @@
           "autoShow": true
         }
       ],
-      "tags": ["choice", "diet", "salt-control", "hypertension"],
+      "tags": [
+        "choice",
+        "diet",
+        "salt-control",
+        "hypertension"
+      ],
       "devNote": "低盐饮食教学，减盐不减味"
     },
     {
@@ -361,7 +452,14 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ],
+      "unlocks": [
+        {
+          "diaryEntryId": "wang_diary_d15"
+        }
+      ]
     },
     {
       "id": "wang_act2_d17_001",
@@ -400,7 +498,12 @@
       ],
       "nextNode": "wang_act2_d17_002",
       "isCheckpoint": true,
-      "tags": ["dialogue", "vulnerability", "loneliness", "turning-point"],
+      "tags": [
+        "dialogue",
+        "vulnerability",
+        "loneliness",
+        "turning-point"
+      ],
       "devNote": "第二幕情感转折点，她卸下防备吐露孤独"
     },
     {
@@ -428,8 +531,16 @@
           "description": "安慰但否定情绪",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": -4, "reason": "真心话被敷衍" },
-            { "type": "mood", "delta": -3, "reason": "没被真正听见" }
+            {
+              "type": "trust",
+              "delta": -4,
+              "reason": "真心话被敷衍"
+            },
+            {
+              "type": "mood",
+              "delta": -3,
+              "reason": "没被真正听见"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "wang_act2_d17_003",
@@ -445,9 +556,21 @@
           "description": "倾听陪伴+情绪血压关联提醒",
           "isCorrect": true,
           "effects": [
-            { "type": "trust", "delta": 8, "reason": "被无声地托住" },
-            { "type": "mood", "delta": 6, "reason": "脆弱被接住" },
-            { "type": "health", "delta": 4, "reason": "情绪平复+用药提醒到位" }
+            {
+              "type": "trust",
+              "delta": 8,
+              "reason": "被无声地托住"
+            },
+            {
+              "type": "mood",
+              "delta": 6,
+              "reason": "脆弱被接住"
+            },
+            {
+              "type": "health",
+              "delta": 4,
+              "reason": "情绪平复+用药提醒到位"
+            }
           ],
           "spiritPowerChange": 15,
           "nextNode": "wang_act2_d17_003",
@@ -463,8 +586,16 @@
           "description": "提议搬去同住",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": -5, "reason": "被暗示'该让人管了'" },
-            { "type": "independence", "delta": -4, "reason": "自主生活被否定" }
+            {
+              "type": "trust",
+              "delta": -5,
+              "reason": "被暗示'该让人管了'"
+            },
+            {
+              "type": "independence",
+              "delta": -4,
+              "reason": "自主生活被否定"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "wang_act2_d17_003",
@@ -475,7 +606,12 @@
           }
         }
       ],
-      "tags": ["choice", "psychology", "listening", "emotional-trigger"],
+      "tags": [
+        "choice",
+        "psychology",
+        "listening",
+        "emotional-trigger"
+      ],
       "devNote": "倾听教学+情绪与血压关联"
     },
     {
@@ -505,7 +641,9 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ]
     },
     {
       "id": "wang_act2_d19_001",
@@ -541,8 +679,16 @@
           "description": "先斩后奏",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": -5, "reason": "自作主张伤自尊" },
-            { "type": "independence", "delta": -4, "reason": "被剥夺决定权" }
+            {
+              "type": "trust",
+              "delta": -5,
+              "reason": "自作主张伤自尊"
+            },
+            {
+              "type": "independence",
+              "delta": -4,
+              "reason": "被剥夺决定权"
+            }
           ],
           "spiritPowerChange": 2,
           "nextNode": "wang_act2_d19_002",
@@ -558,9 +704,21 @@
           "description": "算账说服+运动定量",
           "isCorrect": true,
           "effects": [
-            { "type": "health", "delta": 8, "reason": "规律监测+运动适量，血压更稳" },
-            { "type": "trust", "delta": 6, "reason": "用她接受的方式讲理" },
-            { "type": "mood", "delta": 4, "reason": "广场舞还能跳，没被剥夺" }
+            {
+              "type": "health",
+              "delta": 8,
+              "reason": "规律监测+运动适量，血压更稳"
+            },
+            {
+              "type": "trust",
+              "delta": 6,
+              "reason": "用她接受的方式讲理"
+            },
+            {
+              "type": "mood",
+              "delta": 4,
+              "reason": "广场舞还能跳，没被剥夺"
+            }
           ],
           "spiritPowerChange": 12,
           "nextNode": "wang_act2_d19_002",
@@ -576,7 +734,11 @@
           "description": "迁就节俭",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": -5, "reason": "监测不规律，血压波动抓不住" }
+            {
+              "type": "health",
+              "delta": -5,
+              "reason": "监测不规律，血压波动抓不住"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "wang_act2_d19_002",
@@ -594,7 +756,13 @@
           "autoShow": true
         }
       ],
-      "tags": ["choice", "bp-monitoring", "exercise", "frugality", "hypertension"],
+      "tags": [
+        "choice",
+        "bp-monitoring",
+        "exercise",
+        "frugality",
+        "hypertension"
+      ],
       "devNote": "血压监测+运动适量教学，节俭心理应对"
     },
     {
@@ -624,7 +792,14 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ],
+      "unlocks": [
+        {
+          "diaryEntryId": "wang_diary_d19"
+        }
+      ]
     },
     {
       "id": "wang_act2_d20_001",
@@ -667,8 +842,15 @@
         "illustrationTransition": "watercolor",
         "duration": 1000
       },
-      "tags": ["act-end"],
-      "devNote": "第二幕结束，过渡到第三幕急症守护主题"
+      "tags": [
+        "act-end"
+      ],
+      "devNote": "第二幕结束，过渡到第三幕急症守护主题",
+      "unlocks": [
+        {
+          "albumEntryId": "album_wang_act2_complete"
+        }
+      ]
     }
   ]
 }

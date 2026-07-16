@@ -229,7 +229,15 @@
       "tags": [
         "day-end"
       ],
-      "devNote": "Day 1 结束节点"
+      "devNote": "Day 1 结束节点",
+      "unlocks": [
+        {
+          "diaryEntryId": "wang_diary_d1"
+        },
+        {
+          "albumEntryId": "album_wang_garden"
+        }
+      ]
     },
     {
       "id": "wang_act1_d2_001",
@@ -425,6 +433,14 @@
       ],
       "tags": [
         "day-end"
+      ],
+      "unlocks": [
+        {
+          "diaryEntryId": "wang_diary_d2"
+        },
+        {
+          "albumEntryId": "album_wang_blood_pressure"
+        }
       ]
     },
     {
@@ -804,6 +820,14 @@
       ],
       "tags": [
         "day-end"
+      ],
+      "unlocks": [
+        {
+          "diaryEntryId": "wang_diary_d4"
+        },
+        {
+          "albumEntryId": "album_wang_son_letter"
+        }
       ]
     },
     {
@@ -1202,6 +1226,11 @@
       ],
       "tags": [
         "day-end"
+      ],
+      "unlocks": [
+        {
+          "albumEntryId": "album_wang_low_salt"
+        }
       ]
     },
     {
@@ -1401,6 +1430,14 @@
       ],
       "tags": [
         "day-end"
+      ],
+      "unlocks": [
+        {
+          "diaryEntryId": "wang_diary_d7"
+        },
+        {
+          "albumEntryId": "album_wang_act1_complete"
+        }
       ]
     },
     {
@@ -1452,6 +1489,11 @@
         "day-end",
         "memory",
         "prop-discovery"
+      ],
+      "unlocks": [
+        {
+          "albumEntryId": "album_wang_dizziness"
+        }
       ]
     },
     {
@@ -1503,6 +1545,11 @@
         "day-end",
         "memory",
         "prop-discovery"
+      ],
+      "unlocks": [
+        {
+          "diaryEntryId": "wang_diary_d9"
+        }
       ]
     },
     {
@@ -1707,7 +1754,12 @@
       "tags": [
         "act-end"
       ],
-      "devNote": "第一幕结束，过渡到第二幕"
+      "devNote": "第一幕结束，过渡到第二幕",
+      "unlocks": [
+        {
+          "albumEntryId": "album_wang_morning_exercise"
+        }
+      ]
     }
   ]
 }

@@ -40,7 +40,11 @@
           "description": "放行出门",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": -5, "reason": "寒冷刺激+运动+高血压=心脑血管事件风险" }
+            {
+              "type": "health",
+              "delta": -5,
+              "reason": "寒冷刺激+运动+高血压=心脑血管事件风险"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "wang_act3_d21_002",
@@ -56,8 +60,16 @@
           "description": "避寒+代购+健康教育",
           "isCorrect": true,
           "effects": [
-            { "type": "health", "delta": 8, "reason": "避免寒冷刺激，血压平稳" },
-            { "type": "trust", "delta": 6, "reason": "帮她解决了买菜难题" }
+            {
+              "type": "health",
+              "delta": 8,
+              "reason": "避免寒冷刺激，血压平稳"
+            },
+            {
+              "type": "trust",
+              "delta": 6,
+              "reason": "帮她解决了买菜难题"
+            }
           ],
           "spiritPowerChange": 15,
           "nextNode": "wang_act3_d21_002",
@@ -73,8 +85,16 @@
           "description": "全面接管",
           "isCorrect": false,
           "effects": [
-            { "type": "independence", "delta": -4, "reason": "自主权被剥夺" },
-            { "type": "mood", "delta": -3, "reason": "被当成不能自理的人" }
+            {
+              "type": "independence",
+              "delta": -4,
+              "reason": "自主权被剥夺"
+            },
+            {
+              "type": "mood",
+              "delta": -3,
+              "reason": "被当成不能自理的人"
+            }
           ],
           "spiritPowerChange": 3,
           "nextNode": "wang_act3_d21_002",
@@ -85,7 +105,12 @@
           }
         }
       ],
-      "tags": ["choice", "winter-care", "hypertension", "bp-peak"],
+      "tags": [
+        "choice",
+        "winter-care",
+        "hypertension",
+        "bp-peak"
+      ],
       "devNote": "第三幕开场，冬季高血压防护，为急症铺垫"
     },
     {
@@ -115,7 +140,9 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ]
     },
     {
       "id": "wang_act3_d23_001",
@@ -152,7 +179,11 @@
           "description": "自行处理，观察等待",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": -8, "reason": "高血压危象延误就医，可能进展为脑卒中" }
+            {
+              "type": "health",
+              "delta": -8,
+              "reason": "高血压危象延误就医，可能进展为脑卒中"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "wang_act3_d23_002",
@@ -168,8 +199,16 @@
           "description": "正确急救+呼叫专业救援",
           "isCorrect": true,
           "effects": [
-            { "type": "health", "delta": 8, "reason": "正确急救+及时送医，避免脑卒中" },
-            { "type": "trust", "delta": 8, "reason": "危急时刻的专业守护" }
+            {
+              "type": "health",
+              "delta": 8,
+              "reason": "正确急救+及时送医，避免脑卒中"
+            },
+            {
+              "type": "trust",
+              "delta": 8,
+              "reason": "危急时刻的专业守护"
+            }
           ],
           "spiritPowerChange": 15,
           "nextNode": "wang_act3_d23_002",
@@ -185,7 +224,11 @@
           "description": "自行送医",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": -5, "reason": "搬动+颠簸+无监护，途中风险高" }
+            {
+              "type": "health",
+              "delta": -5,
+              "reason": "搬动+颠簸+无监护，途中风险高"
+            }
           ],
           "spiritPowerChange": 2,
           "nextNode": "wang_act3_d23_002",
@@ -203,7 +246,14 @@
           "autoShow": true
         }
       ],
-      "tags": ["event", "emergency", "timed-decision", "hypertension-crisis", "call-120", "emotional-trigger"],
+      "tags": [
+        "event",
+        "emergency",
+        "timed-decision",
+        "hypertension-crisis",
+        "call-120",
+        "emotional-trigger"
+      ],
       "devNote": "Day23限时决策节点（30秒），高血压危象急救教学，情绪诱发"
     },
     {
@@ -243,7 +293,11 @@
       ],
       "nextNode": "wang_act3_d25_001",
       "isCheckpoint": true,
-      "tags": ["recovery", "turning-point", "emotional-trigger"]
+      "tags": [
+        "recovery",
+        "turning-point",
+        "emotional-trigger"
+      ]
     },
     {
       "id": "wang_act3_d25_001",
@@ -280,7 +334,11 @@
           "description": "鼓励自行起身",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": -8, "reason": "可能有骨折，强行起身加重损伤" }
+            {
+              "type": "health",
+              "delta": -8,
+              "reason": "可能有骨折，强行起身加重损伤"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "wang_act3_d25_002",
@@ -296,8 +354,16 @@
           "description": "正确处置+呼叫救援",
           "isCorrect": true,
           "effects": [
-            { "type": "health", "delta": 8, "reason": "正确处置避免二次损伤，及时获救" },
-            { "type": "trust", "delta": 8, "reason": "危急时刻的冷静守护" }
+            {
+              "type": "health",
+              "delta": 8,
+              "reason": "正确处置避免二次损伤，及时获救"
+            },
+            {
+              "type": "trust",
+              "delta": 8,
+              "reason": "危急时刻的冷静守护"
+            }
           ],
           "spiritPowerChange": 15,
           "nextNode": "wang_act3_d25_002",
@@ -313,7 +379,11 @@
           "description": "强行破门搀扶",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": -5, "reason": "粗暴搬动可能加重骨折或损伤" }
+            {
+              "type": "health",
+              "delta": -5,
+              "reason": "粗暴搬动可能加重骨折或损伤"
+            }
           ],
           "spiritPowerChange": 2,
           "nextNode": "wang_act3_d25_002",
@@ -331,7 +401,13 @@
           "autoShow": true
         }
       ],
-      "tags": ["event", "emergency", "timed-decision", "fall-risk", "call-120"],
+      "tags": [
+        "event",
+        "emergency",
+        "timed-decision",
+        "fall-risk",
+        "call-120"
+      ],
       "devNote": "Day25限时决策节点（30秒），跌倒应急处置教学，独居风险"
     },
     {
@@ -371,7 +447,11 @@
       ],
       "nextNode": "wang_act3_d26_001",
       "isCheckpoint": true,
-      "tags": ["recovery", "fall-prevention", "turning-point"]
+      "tags": [
+        "recovery",
+        "fall-prevention",
+        "turning-point"
+      ]
     },
     {
       "id": "wang_act3_d26_001",
@@ -407,8 +487,16 @@
           "description": "全包代办",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": -4, "reason": "被施舍感" },
-            { "type": "independence", "delta": -3, "reason": "决定权被夺" }
+            {
+              "type": "trust",
+              "delta": -4,
+              "reason": "被施舍感"
+            },
+            {
+              "type": "independence",
+              "delta": -3,
+              "reason": "决定权被夺"
+            }
           ],
           "spiritPowerChange": 2,
           "nextNode": "wang_act3_d26_002",
@@ -424,9 +512,21 @@
           "description": "清单+参与+用药复核",
           "isCorrect": true,
           "effects": [
-            { "type": "health", "delta": 8, "reason": "防跌倒+用药规范，双管齐下" },
-            { "type": "trust", "delta": 6, "reason": "被尊重地参与" },
-            { "type": "independence", "delta": 4, "reason": "自己拍板装哪些" }
+            {
+              "type": "health",
+              "delta": 8,
+              "reason": "防跌倒+用药规范，双管齐下"
+            },
+            {
+              "type": "trust",
+              "delta": 6,
+              "reason": "被尊重地参与"
+            },
+            {
+              "type": "independence",
+              "delta": 4,
+              "reason": "自己拍板装哪些"
+            }
           ],
           "spiritPowerChange": 12,
           "nextNode": "wang_act3_d26_002",
@@ -442,7 +542,11 @@
           "description": "最低限度",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": -5, "reason": "防护不足，再跌倒风险仍高" }
+            {
+              "type": "health",
+              "delta": -5,
+              "reason": "防护不足，再跌倒风险仍高"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "wang_act3_d26_002",
@@ -460,7 +564,12 @@
           "autoShow": true
         }
       ],
-      "tags": ["choice", "fall-prevention", "home-modification", "medication-review"],
+      "tags": [
+        "choice",
+        "fall-prevention",
+        "home-modification",
+        "medication-review"
+      ],
       "devNote": "防跌倒居家改造+出院用药复核教学"
     },
     {
@@ -490,7 +599,14 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ],
+      "unlocks": [
+        {
+          "albumEntryId": "album_wang_bp_stable"
+        }
+      ]
     },
     {
       "id": "wang_act3_d28_001",
@@ -529,7 +645,12 @@
       ],
       "nextNode": "wang_act3_d29_001",
       "isCheckpoint": true,
-      "tags": ["dialogue", "emotional", "family", "loneliness"],
+      "tags": [
+        "dialogue",
+        "emotional",
+        "family",
+        "loneliness"
+      ],
       "devNote": "情感高潮，'一切都好'背后的孤独，引导家庭沟通"
     },
     {
@@ -566,7 +687,11 @@
           "description": "轻描淡写",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": -4, "reason": "关键信息隐瞒，急症时家人无法配合" }
+            {
+              "type": "health",
+              "delta": -4,
+              "reason": "关键信息隐瞒，急症时家人无法配合"
+            }
           ],
           "spiritPowerChange": 2,
           "nextNode": "wang_act3_d30_001",
@@ -582,9 +707,21 @@
           "description": "完整坦白+应急卡",
           "isCorrect": true,
           "effects": [
-            { "type": "health", "delta": 8, "reason": "急救信息完备，争取黄金时间" },
-            { "type": "trust", "delta": 8, "reason": "全家共同参与" },
-            { "type": "mood", "delta": 6, "reason": "不再独自扛着，有安全感" }
+            {
+              "type": "health",
+              "delta": 8,
+              "reason": "急救信息完备，争取黄金时间"
+            },
+            {
+              "type": "trust",
+              "delta": 8,
+              "reason": "全家共同参与"
+            },
+            {
+              "type": "mood",
+              "delta": 6,
+              "reason": "不再独自扛着，有安全感"
+            }
           ],
           "spiritPowerChange": 15,
           "nextNode": "wang_act3_d30_001",
@@ -600,8 +737,16 @@
           "description": "要求子女返乡",
           "isCorrect": false,
           "effects": [
-            { "type": "independence", "delta": -4, "reason": "被暗示'不能自理'" },
-            { "type": "mood", "delta": -3, "reason": "成为儿子的负担，愧疚" }
+            {
+              "type": "independence",
+              "delta": -4,
+              "reason": "被暗示'不能自理'"
+            },
+            {
+              "type": "mood",
+              "delta": -3,
+              "reason": "成为儿子的负担，愧疚"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "wang_act3_d30_001",
@@ -612,7 +757,12 @@
           }
         }
       ],
-      "tags": ["choice", "family-care", "emergency-plan", "real-world-tool"],
+      "tags": [
+        "choice",
+        "family-care",
+        "emergency-plan",
+        "real-world-tool"
+      ],
       "devNote": "家庭应急预案+信息共享教学，解锁真实世界工具"
     },
     {
@@ -652,7 +802,10 @@
       ],
       "nextNode": "wang_act3_d30_002",
       "isCheckpoint": true,
-      "tags": ["ending", "final-day"]
+      "tags": [
+        "ending",
+        "final-day"
+      ]
     },
     {
       "id": "wang_act3_d30_002",
@@ -679,8 +832,16 @@
           "description": "健康守护导向",
           "isCorrect": true,
           "effects": [
-            { "type": "health", "delta": 5, "reason": "健康意识内化" },
-            { "type": "trust", "delta": 4, "reason": "成长被确认" }
+            {
+              "type": "health",
+              "delta": 5,
+              "reason": "健康意识内化"
+            },
+            {
+              "type": "trust",
+              "delta": 4,
+              "reason": "成长被确认"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "wang_act3_d30_003",
@@ -696,8 +857,16 @@
           "description": "关系与共情导向",
           "isCorrect": true,
           "effects": [
-            { "type": "mood", "delta": 6, "reason": "共情内化" },
-            { "type": "trust", "delta": 6, "reason": "深刻领悟" }
+            {
+              "type": "mood",
+              "delta": 6,
+              "reason": "共情内化"
+            },
+            {
+              "type": "trust",
+              "delta": 6,
+              "reason": "深刻领悟"
+            }
           ],
           "spiritPowerChange": 12,
           "nextNode": "wang_act3_d30_004",
@@ -713,8 +882,16 @@
           "description": "尊严与温情导向",
           "isCorrect": true,
           "effects": [
-            { "type": "independence", "delta": 5, "reason": "自主权被守护" },
-            { "type": "trust", "delta": 5, "reason": "分寸感内化" }
+            {
+              "type": "independence",
+              "delta": 5,
+              "reason": "自主权被守护"
+            },
+            {
+              "type": "trust",
+              "delta": 5,
+              "reason": "分寸感内化"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "wang_act3_d30_005",
@@ -725,7 +902,10 @@
           }
         }
       ],
-      "tags": ["choice", "ending"],
+      "tags": [
+        "choice",
+        "ending"
+      ],
       "devNote": "最终选择，导向不同结局评价"
     },
     {
@@ -777,8 +957,19 @@
         "illustrationTransition": "watercolor",
         "duration": 1500
       },
-      "tags": ["ending", "growth-path"],
-      "devNote": "成长之路结局——健康意识建立，但孤独与自尊仍需时间"
+      "tags": [
+        "ending",
+        "growth-path"
+      ],
+      "devNote": "成长之路结局——健康意识建立，但孤独与自尊仍需时间",
+      "unlocks": [
+        {
+          "diaryEntryId": "wang_diary_d30"
+        },
+        {
+          "albumEntryId": "album_wang_ending"
+        }
+      ]
     },
     {
       "id": "wang_act3_d30_004",
@@ -829,8 +1020,19 @@
         "illustrationTransition": "watercolor",
         "duration": 1500
       },
-      "tags": ["ending", "deep-understanding"],
-      "devNote": "深层理解结局——心情值高、信任值高时触发"
+      "tags": [
+        "ending",
+        "deep-understanding"
+      ],
+      "devNote": "深层理解结局——心情值高、信任值高时触发",
+      "unlocks": [
+        {
+          "diaryEntryId": "wang_diary_d30"
+        },
+        {
+          "albumEntryId": "album_wang_ending"
+        }
+      ]
     },
     {
       "id": "wang_act3_d30_005",
@@ -881,8 +1083,19 @@
         "illustrationTransition": "watercolor",
         "duration": 1500
       },
-      "tags": ["ending", "warm-guardian"],
-      "devNote": "温暖守护结局——四项属性全高时触发（需全程高质量照护）"
+      "tags": [
+        "ending",
+        "warm-guardian"
+      ],
+      "devNote": "温暖守护结局——四项属性全高时触发（需全程高质量照护）",
+      "unlocks": [
+        {
+          "diaryEntryId": "wang_diary_d30"
+        },
+        {
+          "albumEntryId": "album_wang_ending"
+        }
+      ]
     }
   ]
 }

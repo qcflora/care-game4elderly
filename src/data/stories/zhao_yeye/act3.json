@@ -44,7 +44,11 @@
       ],
       "nextNode": "zhao_act3_d22_002",
       "isCheckpoint": true,
-      "tags": ["emergency", "prostate", "timed"],
+      "tags": [
+        "emergency",
+        "prostate",
+        "timed"
+      ],
       "devNote": "Day 22 前列腺急症：急性尿潴留。限时决策，超时默认选择choice_a（拖延）"
     },
     {
@@ -72,8 +76,16 @@
           "description": "拖延就医（超时默认选项）",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": -10, "reason": "尿潴留拖延，膀胱和肾功能损伤风险" },
-            { "type": "trust", "delta": -3, "reason": "关键时刻没有帮助他" }
+            {
+              "type": "health",
+              "delta": -10,
+              "reason": "尿潴留拖延，膀胱和肾功能损伤风险"
+            },
+            {
+              "type": "trust",
+              "delta": -3,
+              "reason": "关键时刻没有帮助他"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhao_act3_d22_003",
@@ -89,7 +101,11 @@
           "description": "尝试保守方法诱导排尿",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": -5, "reason": "保守方法无效时延误了就医时间" }
+            {
+              "type": "health",
+              "delta": -5,
+              "reason": "保守方法无效时延误了就医时间"
+            }
           ],
           "spiritPowerChange": 5,
           "nextNode": "zhao_act3_d22_003",
@@ -105,8 +121,16 @@
           "description": "立即识别急症，果断就医",
           "isCorrect": true,
           "effects": [
-            { "type": "health", "delta": 3, "reason": "及时就医，避免并发症" },
-            { "type": "trust", "delta": 6, "reason": "关键时刻果断帮他，信任大增" }
+            {
+              "type": "health",
+              "delta": 3,
+              "reason": "及时就医，避免并发症"
+            },
+            {
+              "type": "trust",
+              "delta": 6,
+              "reason": "关键时刻果断帮他，信任大增"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhao_act3_d22_003",
@@ -117,7 +141,12 @@
           }
         }
       ],
-      "tags": ["choice", "emergency", "timed", "prostate"],
+      "tags": [
+        "choice",
+        "emergency",
+        "timed",
+        "prostate"
+      ],
       "devNote": "限时决策节点。超时默认选择choice_a（拖延就医），health -10"
     },
     {
@@ -147,7 +176,15 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end", "emergency"]
+      "tags": [
+        "day-end",
+        "emergency"
+      ],
+      "unlocks": [
+        {
+          "albumEntryId": "album_zhao_walking"
+        }
+      ]
     },
     {
       "id": "zhao_act3_d23_001",
@@ -183,8 +220,16 @@
           "description": "马后炮式说教",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": -6, "reason": "马后炮让他感到被嘲笑" },
-            { "type": "mood", "delta": -5, "reason": "羞辱感加剧" }
+            {
+              "type": "trust",
+              "delta": -6,
+              "reason": "马后炮让他感到被嘲笑"
+            },
+            {
+              "type": "mood",
+              "delta": -5,
+              "reason": "羞辱感加剧"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhao_act3_d23_002",
@@ -200,7 +245,11 @@
           "description": "回避问题，忽视心理创伤",
           "isCorrect": false,
           "effects": [
-            { "type": "mood", "delta": -3, "reason": "心理创伤被忽视，独自消化" }
+            {
+              "type": "mood",
+              "delta": -3,
+              "reason": "心理创伤被忽视，独自消化"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhao_act3_d23_002",
@@ -216,8 +265,16 @@
           "description": "正向引导+身份认同+给出明确预期",
           "isCorrect": true,
           "effects": [
-            { "type": "trust", "delta": 6, "reason": "在最脆弱时被理解和支持" },
-            { "type": "mood", "delta": 5, "reason": "尊严被维护，看到希望" }
+            {
+              "type": "trust",
+              "delta": 6,
+              "reason": "在最脆弱时被理解和支持"
+            },
+            {
+              "type": "mood",
+              "delta": 5,
+              "reason": "尊严被维护，看到希望"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhao_act3_d23_002",
@@ -228,7 +285,12 @@
           }
         }
       ],
-      "tags": ["choice", "psychology", "dignity", "recovery"],
+      "tags": [
+        "choice",
+        "psychology",
+        "dignity",
+        "recovery"
+      ],
       "devNote": "Day 23 急症后续教学：维护老人尊严 + 正向引导"
     },
     {
@@ -258,7 +320,9 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ]
     },
     {
       "id": "zhao_act3_d24_001",
@@ -294,9 +358,21 @@
           "description": "全包代劳，过度照顾",
           "isCorrect": false,
           "effects": [
-            { "type": "independence", "delta": -8, "reason": "过度代劳，自理能力退化" },
-            { "type": "mood", "delta": -3, "reason": "感到无用，自我价值下降" },
-            { "type": "health", "delta": 2, "reason": "短期安全，但长期机能退化" }
+            {
+              "type": "independence",
+              "delta": -8,
+              "reason": "过度代劳，自理能力退化"
+            },
+            {
+              "type": "mood",
+              "delta": -3,
+              "reason": "感到无用，自我价值下降"
+            },
+            {
+              "type": "health",
+              "delta": 2,
+              "reason": "短期安全，但长期机能退化"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhao_act3_d24_002",
@@ -312,8 +388,16 @@
           "description": "完全不管，忽视恢复期需求",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": -4, "reason": "恢复期缺乏必要辅助，风险增加" },
-            { "type": "trust", "delta": -3, "reason": "在最需要支持时被推开" }
+            {
+              "type": "health",
+              "delta": -4,
+              "reason": "恢复期缺乏必要辅助，风险增加"
+            },
+            {
+              "type": "trust",
+              "delta": -3,
+              "reason": "在最需要支持时被推开"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhao_act3_d24_002",
@@ -329,9 +413,21 @@
           "description": "辅助而非替代，分清能力边界",
           "isCorrect": true,
           "effects": [
-            { "type": "health", "delta": 4, "reason": "必要辅助到位，恢复顺利" },
-            { "type": "independence", "delta": 3, "reason": "能力范围内鼓励自理" },
-            { "type": "trust", "delta": 4, "reason": "恰到好处的支持" }
+            {
+              "type": "health",
+              "delta": 4,
+              "reason": "必要辅助到位，恢复顺利"
+            },
+            {
+              "type": "independence",
+              "delta": 3,
+              "reason": "能力范围内鼓励自理"
+            },
+            {
+              "type": "trust",
+              "delta": 4,
+              "reason": "恰到好处的支持"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhao_act3_d24_002",
@@ -342,7 +438,11 @@
           }
         }
       ],
-      "tags": ["choice", "recovery", "independence-balance"],
+      "tags": [
+        "choice",
+        "recovery",
+        "independence-balance"
+      ],
       "devNote": "Day 24 恢复期教学：辅助而非替代，分清能力边界"
     },
     {
@@ -372,7 +472,9 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ]
     },
     {
       "id": "zhao_act3_d25_001",
@@ -408,7 +510,11 @@
           "description": "全部冷藏",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": -3, "reason": "部分药物冷藏后影响药效" }
+            {
+              "type": "health",
+              "delta": -3,
+              "reason": "部分药物冷藏后影响药效"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhao_act3_d25_002",
@@ -424,7 +530,11 @@
           "description": "不重视储存条件",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": -2, "reason": "药品暴露在光照和高温下，药效降低" }
+            {
+              "type": "health",
+              "delta": -2,
+              "reason": "药品暴露在光照和高温下，药效降低"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhao_act3_d25_002",
@@ -440,8 +550,16 @@
           "description": "按规范分类储存，标注有效期",
           "isCorrect": true,
           "effects": [
-            { "type": "health", "delta": 4, "reason": "正确储存保证药效" },
-            { "type": "trust", "delta": 3, "reason": "专业细致的照护增加信任" }
+            {
+              "type": "health",
+              "delta": 4,
+              "reason": "正确储存保证药效"
+            },
+            {
+              "type": "trust",
+              "delta": 3,
+              "reason": "专业细致的照护增加信任"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhao_act3_d25_002",
@@ -452,7 +570,11 @@
           }
         }
       ],
-      "tags": ["choice", "medication", "storage"],
+      "tags": [
+        "choice",
+        "medication",
+        "storage"
+      ],
       "devNote": "Day 25 药品储存教学：避光防潮避高温 + 分类管理"
     },
     {
@@ -463,6 +585,11 @@
       "type": "dayEnd",
       "scene": "living_room",
       "illustrationId": "zhao_day25_end",
+      "unlocks": [
+        {
+          "diaryEntryId": "zhao_diary_d25"
+        }
+      ],
       "dialogues": [
         {
           "id": "dlg_017",
@@ -482,7 +609,9 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ]
     },
     {
       "id": "zhao_act3_d26_001",
@@ -518,8 +647,16 @@
           "description": "命令式阻止",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": -3, "reason": "被命令感到不被尊重" },
-            { "type": "mood", "delta": -2, "reason": "被当成小孩" }
+            {
+              "type": "trust",
+              "delta": -3,
+              "reason": "被命令感到不被尊重"
+            },
+            {
+              "type": "mood",
+              "delta": -2,
+              "reason": "被当成小孩"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhao_act3_d26_002",
@@ -535,7 +672,11 @@
           "description": "忽视风险",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": -5, "reason": "高风险环境未干预，跌倒概率极高" }
+            {
+              "type": "health",
+              "delta": -5,
+              "reason": "高风险环境未干预，跌倒概率极高"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhao_act3_d26_002",
@@ -551,8 +692,16 @@
           "description": "环境预防+陪伴辅助",
           "isCorrect": true,
           "effects": [
-            { "type": "health", "delta": 3, "reason": "环境安全+辅助到位，避免跌倒" },
-            { "type": "trust", "delta": 4, "reason": "不命令但默默保护" }
+            {
+              "type": "health",
+              "delta": 3,
+              "reason": "环境安全+辅助到位，避免跌倒"
+            },
+            {
+              "type": "trust",
+              "delta": 4,
+              "reason": "不命令但默默保护"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhao_act3_d26_002",
@@ -563,7 +712,11 @@
           }
         }
       ],
-      "tags": ["choice", "fall-prevention", "night-care"],
+      "tags": [
+        "choice",
+        "fall-prevention",
+        "night-care"
+      ],
       "devNote": "Day 26 跌倒前兆预防教学：夜间环境安全"
     },
     {
@@ -585,7 +738,9 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ]
     },
     {
       "id": "zhao_act3_d27_001",
@@ -625,7 +780,11 @@
       ],
       "nextNode": "zhao_act3_d27_002",
       "isCheckpoint": true,
-      "tags": ["emergency", "fall", "timed"],
+      "tags": [
+        "emergency",
+        "fall",
+        "timed"
+      ],
       "devNote": "Day 27 跌倒事件。限时30秒决策，超时默认选择choice_a（立即扶起，错误）"
     },
     {
@@ -653,8 +812,16 @@
           "description": "立即扶起（超时默认选项）",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": -8, "reason": "未评估直接扶起可能导致二次损伤" },
-            { "type": "trust", "delta": -2, "reason": "处理不当增加了痛苦" }
+            {
+              "type": "health",
+              "delta": -8,
+              "reason": "未评估直接扶起可能导致二次损伤"
+            },
+            {
+              "type": "trust",
+              "delta": -2,
+              "reason": "处理不当增加了痛苦"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhao_act3_d27_003",
@@ -670,8 +837,16 @@
           "description": "先询问意识，评估疼痛和肢体活动",
           "isCorrect": true,
           "effects": [
-            { "type": "health", "delta": 3, "reason": "正确评估避免二次损伤" },
-            { "type": "trust", "delta": 5, "reason": "冷静专业的处理让他安心" }
+            {
+              "type": "health",
+              "delta": 3,
+              "reason": "正确评估避免二次损伤"
+            },
+            {
+              "type": "trust",
+              "delta": 5,
+              "reason": "冷静专业的处理让他安心"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhao_act3_d27_003",
@@ -687,8 +862,16 @@
           "description": "过度反应，直接叫救护车",
           "isCorrect": false,
           "effects": [
-            { "type": "mood", "delta": -4, "reason": "小题大做让老人感到恐慌和挫败" },
-            { "type": "trust", "delta": -1, "reason": "过度反应让他觉得你不信任他的判断" }
+            {
+              "type": "mood",
+              "delta": -4,
+              "reason": "小题大做让老人感到恐慌和挫败"
+            },
+            {
+              "type": "trust",
+              "delta": -1,
+              "reason": "过度反应让他觉得你不信任他的判断"
+            }
           ],
           "spiritPowerChange": 5,
           "nextNode": "zhao_act3_d27_003",
@@ -699,7 +882,12 @@
           }
         }
       ],
-      "tags": ["choice", "emergency", "timed", "fall"],
+      "tags": [
+        "choice",
+        "emergency",
+        "timed",
+        "fall"
+      ],
       "devNote": "限时30秒决策。超时默认选择choice_a（立即扶起，错误）。教学：跌倒处置四步法"
     },
     {
@@ -729,7 +917,10 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end", "key-event"]
+      "tags": [
+        "day-end",
+        "key-event"
+      ]
     },
     {
       "id": "zhao_act3_d28_001",
@@ -774,8 +965,16 @@
           "description": "说教式回应",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": -4, "reason": "转变被说教否定" },
-            { "type": "mood", "delta": -3, "reason": "勇气被泼冷水" }
+            {
+              "type": "trust",
+              "delta": -4,
+              "reason": "转变被说教否定"
+            },
+            {
+              "type": "mood",
+              "delta": -3,
+              "reason": "勇气被泼冷水"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhao_act3_d28_002",
@@ -791,7 +990,11 @@
           "description": "行动导向但缺少情感回应",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": 2, "reason": "至少回应了" }
+            {
+              "type": "trust",
+              "delta": 2,
+              "reason": "至少回应了"
+            }
           ],
           "spiritPowerChange": 5,
           "nextNode": "zhao_act3_d28_002",
@@ -807,8 +1010,16 @@
           "description": "肯定决定+具体行动+情感陪伴",
           "isCorrect": true,
           "effects": [
-            { "type": "trust", "delta": 6, "reason": "转变被肯定和接住" },
-            { "type": "mood", "delta": 4, "reason": "被支持感到安心" }
+            {
+              "type": "trust",
+              "delta": 6,
+              "reason": "转变被肯定和接住"
+            },
+            {
+              "type": "mood",
+              "delta": 4,
+              "reason": "被支持感到安心"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhao_act3_d28_002",
@@ -819,7 +1030,11 @@
           }
         }
       ],
-      "tags": ["choice", "key-event", "hospital"],
+      "tags": [
+        "choice",
+        "key-event",
+        "hospital"
+      ],
       "devNote": "Day 28 赵爷爷终于愿意去医院——核心转变节点"
     },
     {
@@ -849,7 +1064,14 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ],
+      "unlocks": [
+        {
+          "albumEntryId": "album_zhao_health_check"
+        }
+      ]
     },
     {
       "id": "zhao_act3_d29_001",
@@ -885,8 +1107,16 @@
           "description": "总结式说教",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": -2, "reason": "被总结和说教感到不适" },
-            { "type": "mood", "delta": -2, "reason": "转变被轻描淡写" }
+            {
+              "type": "trust",
+              "delta": -2,
+              "reason": "被总结和说教感到不适"
+            },
+            {
+              "type": "mood",
+              "delta": -2,
+              "reason": "转变被轻描淡写"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhao_act3_d29_002",
@@ -902,8 +1132,16 @@
           "description": "默默陪伴",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": 3, "reason": "陪伴本身就是最好的回顾" },
-            { "type": "mood", "delta": 2, "reason": "安静的陪伴感" }
+            {
+              "type": "trust",
+              "delta": 3,
+              "reason": "陪伴本身就是最好的回顾"
+            },
+            {
+              "type": "mood",
+              "delta": 2,
+              "reason": "安静的陪伴感"
+            }
           ],
           "spiritPowerChange": 5,
           "nextNode": "zhao_act3_d29_002",
@@ -919,8 +1157,16 @@
           "description": "引导回忆，让他在讲述中完成自我回顾",
           "isCorrect": true,
           "effects": [
-            { "type": "trust", "delta": 5, "reason": "回顾让信任关系得到确认" },
-            { "type": "mood", "delta": 5, "reason": "在回忆中找到自我价值" }
+            {
+              "type": "trust",
+              "delta": 5,
+              "reason": "回顾让信任关系得到确认"
+            },
+            {
+              "type": "mood",
+              "delta": 5,
+              "reason": "在回忆中找到自我价值"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhao_act3_d29_002",
@@ -931,7 +1177,11 @@
           }
         }
       ],
-      "tags": ["choice", "review", "memory-therapy"],
+      "tags": [
+        "choice",
+        "review",
+        "memory-therapy"
+      ],
       "devNote": "Day 29 回顾教学：引导回忆完成自我回顾"
     },
     {
@@ -962,7 +1212,9 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ]
     },
     {
       "id": "zhao_act3_d30_001",
@@ -1003,7 +1255,10 @@
       ],
       "nextNode": "zhao_act3_d30_002",
       "isCheckpoint": true,
-      "tags": ["ending", "final-day"],
+      "tags": [
+        "ending",
+        "final-day"
+      ],
       "devNote": "Day 30 最终日开场"
     },
     {
@@ -1031,8 +1286,16 @@
           "description": "用记录总结三十天",
           "isCorrect": true,
           "effects": [
-            { "type": "trust", "delta": 3, "reason": "三十天的陪伴被看见" },
-            { "type": "mood", "delta": 3, "reason": "回顾温暖的历程" }
+            {
+              "type": "trust",
+              "delta": 3,
+              "reason": "三十天的陪伴被看见"
+            },
+            {
+              "type": "mood",
+              "delta": 3,
+              "reason": "回顾温暖的历程"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhao_act3_d30_003",
@@ -1048,8 +1311,16 @@
           "description": "安静的陪伴",
           "isCorrect": true,
           "effects": [
-            { "type": "trust", "delta": 4, "reason": "无言的陪伴最珍贵" },
-            { "type": "mood", "delta": 4, "reason": "阳光下的安静陪伴" }
+            {
+              "type": "trust",
+              "delta": 4,
+              "reason": "无言的陪伴最珍贵"
+            },
+            {
+              "type": "mood",
+              "delta": 4,
+              "reason": "阳光下的安静陪伴"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhao_act3_d30_003",
@@ -1065,8 +1336,16 @@
           "description": "引导他表达",
           "isCorrect": true,
           "effects": [
-            { "type": "trust", "delta": 5, "reason": "给他表达的空间" },
-            { "type": "mood", "delta": 3, "reason": "被重视的感觉" }
+            {
+              "type": "trust",
+              "delta": 5,
+              "reason": "给他表达的空间"
+            },
+            {
+              "type": "mood",
+              "delta": 3,
+              "reason": "被重视的感觉"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhao_act3_d30_003",
@@ -1077,7 +1356,10 @@
           }
         }
       ],
-      "tags": ["choice", "ending"],
+      "tags": [
+        "choice",
+        "ending"
+      ],
       "devNote": "最终选择——三个选项都是正确的，代表不同的告别方式"
     },
     {
@@ -1088,6 +1370,14 @@
       "type": "ending",
       "scene": "balcony",
       "illustrationId": "zhao_ending",
+      "unlocks": [
+        {
+          "diaryEntryId": "zhao_diary_d30"
+        },
+        {
+          "albumEntryId": "album_zhao_ending"
+        }
+      ],
       "dialogues": [
         {
           "id": "dlg_041",
@@ -1143,7 +1433,9 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["ending"],
+      "tags": [
+        "ending"
+      ],
       "devNote": "结局节点。根据三十天属性值生成不同结局评价。赵爷爷预期结局：成长之路"
     }
   ]

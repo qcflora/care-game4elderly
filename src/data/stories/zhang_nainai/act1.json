@@ -59,7 +59,11 @@
         "duration": 800
       },
       "isCheckpoint": true,
-      "tags": ["intro", "tutorial", "morning"],
+      "tags": [
+        "intro",
+        "tutorial",
+        "morning"
+      ],
       "devNote": "开场节点，精灵首次登场，介绍张奶奶背景"
     },
     {
@@ -87,9 +91,21 @@
           "description": "快速起身，避免她久坐受凉",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": 3, "reason": "减少了起身时间" },
-            { "type": "independence", "delta": -8, "reason": "过度代劳，剥夺自理" },
-            { "type": "mood", "delta": -3, "reason": "感到自己没用" }
+            {
+              "type": "health",
+              "delta": 3,
+              "reason": "减少了起身时间"
+            },
+            {
+              "type": "independence",
+              "delta": -8,
+              "reason": "过度代劳，剥夺自理"
+            },
+            {
+              "type": "mood",
+              "delta": -3,
+              "reason": "感到自己没用"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhang_act1_d1_003",
@@ -105,9 +121,21 @@
           "description": "辅助而非替代",
           "isCorrect": true,
           "effects": [
-            { "type": "health", "delta": 4, "reason": "预防体位性低血压" },
-            { "type": "independence", "delta": 8, "reason": "鼓励自理" },
-            { "type": "mood", "delta": 2, "reason": "被尊重的安心感" }
+            {
+              "type": "health",
+              "delta": 4,
+              "reason": "预防体位性低血压"
+            },
+            {
+              "type": "independence",
+              "delta": 8,
+              "reason": "鼓励自理"
+            },
+            {
+              "type": "mood",
+              "delta": 2,
+              "reason": "被尊重的安心感"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhang_act1_d1_003",
@@ -123,8 +151,16 @@
           "description": "尊重她的意愿",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": -5, "reason": "无人保护，跌倒风险" },
-            { "type": "independence", "delta": 3, "reason": "自主行动" }
+            {
+              "type": "health",
+              "delta": -5,
+              "reason": "无人保护，跌倒风险"
+            },
+            {
+              "type": "independence",
+              "delta": 3,
+              "reason": "自主行动"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhang_act1_d1_003",
@@ -142,7 +178,12 @@
           "autoShow": true
         }
       ],
-      "tags": ["choice", "tutorial", "morning", "fall-prevention"],
+      "tags": [
+        "choice",
+        "tutorial",
+        "morning",
+        "fall-prevention"
+      ],
       "devNote": "第一个选择，教学体位性低血压与辅助非替代"
     },
     {
@@ -201,8 +242,18 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"],
-      "devNote": "Day 1 结束，伏笔：纸质血压记录本"
+      "tags": [
+        "day-end"
+      ],
+      "devNote": "Day 1 结束，伏笔：纸质血压记录本",
+      "unlocks": [
+        {
+          "diaryEntryId": "zhang_diary_d1"
+        },
+        {
+          "albumEntryId": "album_zhang_notebook"
+        }
+      ]
     },
     {
       "id": "zhang_act1_d2_001",
@@ -240,7 +291,10 @@
         }
       ],
       "nextNode": "zhang_act1_d2_002",
-      "tags": ["morning", "fall-prevention"]
+      "tags": [
+        "morning",
+        "fall-prevention"
+      ]
     },
     {
       "id": "zhang_act1_d2_002",
@@ -267,8 +321,16 @@
           "description": "先观察评估再行动",
           "isCorrect": true,
           "effects": [
-            { "type": "health", "delta": 8, "reason": "及时监测血压" },
-            { "type": "trust", "delta": 3, "reason": "被认真对待" }
+            {
+              "type": "health",
+              "delta": 8,
+              "reason": "及时监测血压"
+            },
+            {
+              "type": "trust",
+              "delta": 3,
+              "reason": "被认真对待"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhang_act1_d2_003",
@@ -284,9 +346,21 @@
           "description": "让她休息恢复",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": 3, "reason": "暂时缓解" },
-            { "type": "independence", "delta": -8, "reason": "过度保护" },
-            { "type": "mood", "delta": -3, "reason": "感到被当成病人" }
+            {
+              "type": "health",
+              "delta": 3,
+              "reason": "暂时缓解"
+            },
+            {
+              "type": "independence",
+              "delta": -8,
+              "reason": "过度保护"
+            },
+            {
+              "type": "mood",
+              "delta": -3,
+              "reason": "感到被当成病人"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhang_act1_d2_003",
@@ -302,8 +376,16 @@
           "description": "测试她的状态",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": -5, "reason": "头晕时站立增加跌倒风险" },
-            { "type": "trust", "delta": 1, "reason": "鼓励尝试" }
+            {
+              "type": "health",
+              "delta": -5,
+              "reason": "头晕时站立增加跌倒风险"
+            },
+            {
+              "type": "trust",
+              "delta": 1,
+              "reason": "鼓励尝试"
+            }
           ],
           "spiritPowerChange": 5,
           "nextNode": "zhang_act1_d2_003",
@@ -321,7 +403,12 @@
           "autoShow": true
         }
       ],
-      "tags": ["choice", "morning", "fall-prevention", "heart-disease"]
+      "tags": [
+        "choice",
+        "morning",
+        "fall-prevention",
+        "heart-disease"
+      ]
     },
     {
       "id": "zhang_act1_d2_003",
@@ -370,7 +457,14 @@
           "emotion": "encouraging"
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ],
+      "unlocks": [
+        {
+          "albumEntryId": "album_zhang_bp_table"
+        }
+      ]
     },
     {
       "id": "zhang_act1_d3_001",
@@ -415,7 +509,10 @@
           "autoShow": true
         }
       ],
-      "tags": ["medication", "tutorial"]
+      "tags": [
+        "medication",
+        "tutorial"
+      ]
     },
     {
       "id": "zhang_act1_d3_002",
@@ -442,8 +539,16 @@
           "description": "严格按照每种药的要求分类",
           "isCorrect": true,
           "effects": [
-            { "type": "health", "delta": 8, "reason": "科学用药" },
-            { "type": "trust", "delta": 3, "reason": "认真负责" }
+            {
+              "type": "health",
+              "delta": 8,
+              "reason": "科学用药"
+            },
+            {
+              "type": "trust",
+              "delta": 3,
+              "reason": "认真负责"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhang_act1_d3_003",
@@ -459,8 +564,16 @@
           "description": "大致分类",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": 4, "reason": "基本按时吃药" },
-            { "type": "trust", "delta": 1, "reason": "有在帮忙" }
+            {
+              "type": "health",
+              "delta": 4,
+              "reason": "基本按时吃药"
+            },
+            {
+              "type": "trust",
+              "delta": 1,
+              "reason": "有在帮忙"
+            }
           ],
           "spiritPowerChange": 5,
           "nextNode": "zhang_act1_d3_003",
@@ -476,8 +589,16 @@
           "description": "尊重她的自主",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": -5, "reason": "容易吃错或漏服" },
-            { "type": "trust", "delta": -3, "reason": "感觉被敷衍" }
+            {
+              "type": "health",
+              "delta": -5,
+              "reason": "容易吃错或漏服"
+            },
+            {
+              "type": "trust",
+              "delta": -3,
+              "reason": "感觉被敷衍"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhang_act1_d3_003",
@@ -500,7 +621,11 @@
           "autoShow": false
         }
       ],
-      "tags": ["choice", "medication", "tutorial"],
+      "tags": [
+        "choice",
+        "medication",
+        "tutorial"
+      ],
       "devNote": "用药管理教学，操作型道具：药盒拖拽分类"
     },
     {
@@ -550,7 +675,17 @@
           "emotion": "encouraging"
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ],
+      "unlocks": [
+        {
+          "diaryEntryId": "zhang_diary_d3"
+        },
+        {
+          "albumEntryId": "album_zhang_first_walk"
+        }
+      ]
     },
     {
       "id": "zhang_act1_d4_001",
@@ -580,7 +715,10 @@
         }
       ],
       "nextNode": "zhang_act1_d4_002",
-      "tags": ["bath-safety", "fall-prevention"]
+      "tags": [
+        "bath-safety",
+        "fall-prevention"
+      ]
     },
     {
       "id": "zhang_act1_d4_002",
@@ -615,8 +753,16 @@
           "description": "做好安全准备，尊重她自己洗",
           "isCorrect": true,
           "effects": [
-            { "type": "health", "delta": 8, "reason": "安全的洗澡环境" },
-            { "type": "independence", "delta": 3, "reason": "尊重自理" }
+            {
+              "type": "health",
+              "delta": 8,
+              "reason": "安全的洗澡环境"
+            },
+            {
+              "type": "independence",
+              "delta": 3,
+              "reason": "尊重自理"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhang_act1_d4_003",
@@ -632,9 +778,21 @@
           "description": "确保万无一失",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": 3, "reason": "有人看着" },
-            { "type": "independence", "delta": -8, "reason": "剥夺自理" },
-            { "type": "mood", "delta": -3, "reason": "难堪和自尊受损" }
+            {
+              "type": "health",
+              "delta": 3,
+              "reason": "有人看着"
+            },
+            {
+              "type": "independence",
+              "delta": -8,
+              "reason": "剥夺自理"
+            },
+            {
+              "type": "mood",
+              "delta": -3,
+              "reason": "难堪和自尊受损"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhang_act1_d4_003",
@@ -650,8 +808,16 @@
           "description": "基本准备，漏了关键",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": -5, "reason": "湿滑地面跌倒风险高" },
-            { "type": "independence", "delta": 3, "reason": "让她自己洗" }
+            {
+              "type": "health",
+              "delta": -5,
+              "reason": "湿滑地面跌倒风险高"
+            },
+            {
+              "type": "independence",
+              "delta": 3,
+              "reason": "让她自己洗"
+            }
           ],
           "spiritPowerChange": 5,
           "nextNode": "zhang_act1_d4_003",
@@ -674,7 +840,11 @@
           "autoShow": false
         }
       ],
-      "tags": ["choice", "bath-safety", "fall-prevention"]
+      "tags": [
+        "choice",
+        "bath-safety",
+        "fall-prevention"
+      ]
     },
     {
       "id": "zhang_act1_d4_003",
@@ -723,7 +893,9 @@
           "emotion": "encouraging"
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ]
     },
     {
       "id": "zhang_act1_d5_001",
@@ -773,7 +945,10 @@
           "autoShow": true
         }
       ],
-      "tags": ["bp-record", "heart-disease"]
+      "tags": [
+        "bp-record",
+        "heart-disease"
+      ]
     },
     {
       "id": "zhang_act1_d5_002",
@@ -800,8 +975,16 @@
           "description": "顺应她的习惯，让记录更规范",
           "isCorrect": true,
           "effects": [
-            { "type": "trust", "delta": 8, "reason": "尊重她的习惯" },
-            { "type": "mood", "delta": 3, "reason": "被理解的温暖" }
+            {
+              "type": "trust",
+              "delta": 8,
+              "reason": "尊重她的习惯"
+            },
+            {
+              "type": "mood",
+              "delta": 3,
+              "reason": "被理解的温暖"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhang_act1_d5_003",
@@ -817,8 +1000,16 @@
           "description": "用科技解决",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": -5, "reason": "不尊重她的习惯" },
-            { "type": "mood", "delta": -3, "reason": "被强迫改变" }
+            {
+              "type": "trust",
+              "delta": -5,
+              "reason": "不尊重她的习惯"
+            },
+            {
+              "type": "mood",
+              "delta": -3,
+              "reason": "被强迫改变"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhang_act1_d5_003",
@@ -834,8 +1025,16 @@
           "description": "用手机管理",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": 4, "reason": "有在帮忙" },
-            { "type": "mood", "delta": 1, "reason": "新鲜感" }
+            {
+              "type": "trust",
+              "delta": 4,
+              "reason": "有在帮忙"
+            },
+            {
+              "type": "mood",
+              "delta": 1,
+              "reason": "新鲜感"
+            }
           ],
           "spiritPowerChange": 5,
           "nextNode": "zhang_act1_d5_003",
@@ -846,7 +1045,11 @@
           }
         }
       ],
-      "tags": ["choice", "bp-record", "heart-disease"]
+      "tags": [
+        "choice",
+        "bp-record",
+        "heart-disease"
+      ]
     },
     {
       "id": "zhang_act1_d5_003",
@@ -900,7 +1103,17 @@
           "emotion": "gentle"
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ],
+      "unlocks": [
+        {
+          "diaryEntryId": "zhang_diary_d5"
+        },
+        {
+          "albumEntryId": "album_zhang_angina_handled"
+        }
+      ]
     },
     {
       "id": "zhang_act1_d6_001",
@@ -938,7 +1151,10 @@
         }
       ],
       "nextNode": "zhang_act1_d6_002",
-      "tags": ["fall-fear", "psychology"]
+      "tags": [
+        "fall-fear",
+        "psychology"
+      ]
     },
     {
       "id": "zhang_act1_d6_002",
@@ -965,9 +1181,21 @@
           "description": "辅助而非替代，重建信心",
           "isCorrect": true,
           "effects": [
-            { "type": "independence", "delta": 8, "reason": "鼓励自主行走" },
-            { "type": "mood", "delta": 3, "reason": "重建信心" },
-            { "type": "trust", "delta": 2, "reason": "被支持的安全感" }
+            {
+              "type": "independence",
+              "delta": 8,
+              "reason": "鼓励自主行走"
+            },
+            {
+              "type": "mood",
+              "delta": 3,
+              "reason": "重建信心"
+            },
+            {
+              "type": "trust",
+              "delta": 2,
+              "reason": "被支持的安全感"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhang_act1_d6_003",
@@ -983,9 +1211,21 @@
           "description": "省事又安全",
           "isCorrect": false,
           "effects": [
-            { "type": "independence", "delta": -8, "reason": "剥夺行动" },
-            { "type": "mood", "delta": -3, "reason": "更加恐惧和无力" },
-            { "type": "health", "delta": 3, "reason": "避免了跌倒" }
+            {
+              "type": "independence",
+              "delta": -8,
+              "reason": "剥夺行动"
+            },
+            {
+              "type": "mood",
+              "delta": -3,
+              "reason": "更加恐惧和无力"
+            },
+            {
+              "type": "health",
+              "delta": 3,
+              "reason": "避免了跌倒"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhang_act1_d6_003",
@@ -1001,8 +1241,16 @@
           "description": "搀扶着走",
           "isCorrect": false,
           "effects": [
-            { "type": "independence", "delta": 2, "reason": "有在走" },
-            { "type": "mood", "delta": 1, "reason": "有人陪着" }
+            {
+              "type": "independence",
+              "delta": 2,
+              "reason": "有在走"
+            },
+            {
+              "type": "mood",
+              "delta": 1,
+              "reason": "有人陪着"
+            }
           ],
           "spiritPowerChange": 5,
           "nextNode": "zhang_act1_d6_003",
@@ -1020,7 +1268,12 @@
           "autoShow": true
         }
       ],
-      "tags": ["choice", "fall-fear", "psychology", "assist-balance"]
+      "tags": [
+        "choice",
+        "fall-fear",
+        "psychology",
+        "assist-balance"
+      ]
     },
     {
       "id": "zhang_act1_d6_003",
@@ -1074,7 +1327,9 @@
           "emotion": "proud"
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ]
     },
     {
       "id": "zhang_act1_d7_001",
@@ -1112,7 +1367,10 @@
         }
       ],
       "nextNode": "zhang_act1_d7_002",
-      "tags": ["week-review", "checkpoint"]
+      "tags": [
+        "week-review",
+        "checkpoint"
+      ]
     },
     {
       "id": "zhang_act1_d7_002",
@@ -1139,8 +1397,16 @@
           "description": "建立信任，破解沉默",
           "isCorrect": true,
           "effects": [
-            { "type": "trust", "delta": 8, "reason": "被认真对待" },
-            { "type": "mood", "delta": 3, "reason": "被关心的温暖" }
+            {
+              "type": "trust",
+              "delta": 8,
+              "reason": "被认真对待"
+            },
+            {
+              "type": "mood",
+              "delta": 3,
+              "reason": "被关心的温暖"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhang_act1_d7_003",
@@ -1156,8 +1422,16 @@
           "description": "以身体健康为优先",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": 4, "reason": "关注身体健康" },
-            { "type": "trust", "delta": 1, "reason": "有在照顾" }
+            {
+              "type": "health",
+              "delta": 4,
+              "reason": "关注身体健康"
+            },
+            {
+              "type": "trust",
+              "delta": 1,
+              "reason": "有在照顾"
+            }
           ],
           "spiritPowerChange": 5,
           "nextNode": "zhang_act1_d7_003",
@@ -1173,8 +1447,16 @@
           "description": "全程陪伴",
           "isCorrect": false,
           "effects": [
-            { "type": "independence", "delta": -8, "reason": "过度保护" },
-            { "type": "mood", "delta": -3, "reason": "感到被监视" }
+            {
+              "type": "independence",
+              "delta": -8,
+              "reason": "过度保护"
+            },
+            {
+              "type": "mood",
+              "delta": -3,
+              "reason": "感到被监视"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhang_act1_d7_003",
@@ -1185,7 +1467,10 @@
           }
         }
       ],
-      "tags": ["choice", "week-review"]
+      "tags": [
+        "choice",
+        "week-review"
+      ]
     },
     {
       "id": "zhang_act1_d7_003",
@@ -1228,7 +1513,9 @@
           "albumEntryId": "album_zhang_act1_complete"
         }
       ],
-      "tags": ["act-end"],
+      "tags": [
+        "act-end"
+      ],
       "devNote": "第一幕结束，过场进入第二幕"
     }
   ]

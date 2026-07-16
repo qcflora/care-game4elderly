@@ -53,7 +53,11 @@
       ],
       "nextNode": "zhou_act3_d22_002",
       "isCheckpoint": true,
-      "tags": ["tia", "emergency", "stroke-warning"],
+      "tags": [
+        "tia",
+        "emergency",
+        "stroke-warning"
+      ],
       "devNote": "Day 22 TIA风险征兆，教学TIA五个突然症状识别"
     },
     {
@@ -81,7 +85,11 @@
           "description": "忽视TIA预警信号",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": -8, "reason": "忽视TIA，二次脑梗风险大增" }
+            {
+              "type": "health",
+              "delta": -8,
+              "reason": "忽视TIA，二次脑梗风险大增"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhou_act3_d22_003",
@@ -97,8 +105,16 @@
           "description": "正确识别TIA，记录关键信息并就医",
           "isCorrect": true,
           "effects": [
-            { "type": "health", "delta": 8, "reason": "及时就医，预防二次脑梗" },
-            { "type": "trust", "delta": 5, "reason": "认真对待他的症状，被重视" }
+            {
+              "type": "health",
+              "delta": 8,
+              "reason": "及时就医，预防二次脑梗"
+            },
+            {
+              "type": "trust",
+              "delta": 5,
+              "reason": "认真对待他的症状，被重视"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhou_act3_d22_003",
@@ -114,7 +130,11 @@
           "description": "延误就医，等二次发作",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": -5, "reason": "延误TIA处理，脑梗风险持续升高" }
+            {
+              "type": "health",
+              "delta": -5,
+              "reason": "延误TIA处理，脑梗风险持续升高"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhou_act3_d22_003",
@@ -125,7 +145,12 @@
           }
         }
       ],
-      "tags": ["choice", "tia", "emergency", "stroke-warning"],
+      "tags": [
+        "choice",
+        "tia",
+        "emergency",
+        "stroke-warning"
+      ],
       "devNote": "教学：TIA识别——五个突然症状 + 立即记录就医不可等待"
     },
     {
@@ -155,7 +180,14 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ],
+      "unlocks": [
+        {
+          "diaryEntryId": "zhou_diary_d22"
+        }
+      ]
     },
     {
       "id": "zhou_act3_d23_001",
@@ -195,7 +227,12 @@
       ],
       "nextNode": "zhou_act3_d23_002",
       "isCheckpoint": true,
-      "tags": ["tia", "emergency", "timed-decision", "stroke-warning"],
+      "tags": [
+        "tia",
+        "emergency",
+        "timed-decision",
+        "stroke-warning"
+      ],
       "devNote": "Day 23 TIA第二次发作，限时决策关卡。设计意图：模拟紧急时间压力"
     },
     {
@@ -223,8 +260,16 @@
           "description": "最安全的送医方式——专业急救+途中监护",
           "isCorrect": true,
           "effects": [
-            { "type": "health", "delta": 8, "reason": "专业急救转运，途中可监护处理" },
-            { "type": "trust", "delta": 5, "reason": "果断正确的决策让他安心" }
+            {
+              "type": "health",
+              "delta": 8,
+              "reason": "专业急救转运，途中可监护处理"
+            },
+            {
+              "type": "trust",
+              "delta": 5,
+              "reason": "果断正确的决策让他安心"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhou_act3_d23_003",
@@ -240,7 +285,11 @@
           "description": "自行送医，无途中监护",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": 4, "reason": "送医了但途中无专业监护，风险增加" }
+            {
+              "type": "health",
+              "delta": 4,
+              "reason": "送医了但途中无专业监护，风险增加"
+            }
           ],
           "spiritPowerChange": 5,
           "nextNode": "zhou_act3_d23_003",
@@ -256,7 +305,11 @@
           "description": "延误时间，先咨询再行动",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": -5, "reason": "TIA急性发作时咨询家庭医生延误送医" }
+            {
+              "type": "health",
+              "delta": -5,
+              "reason": "TIA急性发作时咨询家庭医生延误送医"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhou_act3_d23_003",
@@ -267,7 +320,13 @@
           }
         }
       ],
-      "tags": ["choice", "tia", "emergency", "timed-decision", "stroke-warning"],
+      "tags": [
+        "choice",
+        "tia",
+        "emergency",
+        "timed-decision",
+        "stroke-warning"
+      ],
       "devNote": "限时决策关卡：TIA第二次发作，教学拨打120要点和脑梗黄金溶栓窗"
     },
     {
@@ -307,7 +366,10 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end", "hospital"],
+      "tags": [
+        "day-end",
+        "hospital"
+      ],
       "devNote": "TIA送医成功，药物调整为双抗治疗。为后续跌倒事件埋伏笔"
     },
     {
@@ -357,7 +419,11 @@
       ],
       "nextNode": "zhou_act3_d24_002",
       "isCheckpoint": true,
-      "tags": ["fall", "emergency", "timed-decision"],
+      "tags": [
+        "fall",
+        "emergency",
+        "timed-decision"
+      ],
       "devNote": "Day 24 跌倒事件，限时决策关卡。教学跌倒处置流程"
     },
     {
@@ -385,7 +451,11 @@
           "description": "急于扶起——最常见也最危险的错误",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": -5, "reason": "贸然搬动可能造成骨折移位或加重损伤" }
+            {
+              "type": "health",
+              "delta": -5,
+              "reason": "贸然搬动可能造成骨折移位或加重损伤"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhou_act3_d24_003",
@@ -401,8 +471,16 @@
           "description": "正确的跌倒处置流程：先询问评估",
           "isCorrect": true,
           "effects": [
-            { "type": "health", "delta": 8, "reason": "正确评估避免二次损伤" },
-            { "type": "trust", "delta": 5, "reason": "冷静专业地处理让他安心" }
+            {
+              "type": "health",
+              "delta": 8,
+              "reason": "正确评估避免二次损伤"
+            },
+            {
+              "type": "trust",
+              "delta": 5,
+              "reason": "冷静专业地处理让他安心"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhou_act3_d24_003",
@@ -418,8 +496,16 @@
           "description": "过度反应——评估后未必需要120",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": 3, "reason": "送医检查是安全的，但可能过度紧张" },
-            { "type": "mood", "delta": -3, "reason": "大半夜叫救护车，老人心理紧张" }
+            {
+              "type": "health",
+              "delta": 3,
+              "reason": "送医检查是安全的，但可能过度紧张"
+            },
+            {
+              "type": "mood",
+              "delta": -3,
+              "reason": "大半夜叫救护车，老人心理紧张"
+            }
           ],
           "spiritPowerChange": 5,
           "nextNode": "zhou_act3_d24_003",
@@ -430,7 +516,12 @@
           }
         }
       ],
-      "tags": ["choice", "fall", "emergency", "timed-decision"],
+      "tags": [
+        "choice",
+        "fall",
+        "emergency",
+        "timed-decision"
+      ],
       "devNote": "限时决策关卡：跌倒处置——先询问评估不急于扶起"
     },
     {
@@ -460,7 +551,9 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"],
+      "tags": [
+        "day-end"
+      ],
       "devNote": "跌倒后48小时观察期铺垫"
     },
     {
@@ -500,7 +593,11 @@
       ],
       "nextNode": "zhou_act3_d25_002",
       "isCheckpoint": true,
-      "tags": ["fall", "post-fall", "psychology"],
+      "tags": [
+        "fall",
+        "post-fall",
+        "psychology"
+      ],
       "devNote": "Day 25 跌倒后观察+跌倒恐惧处理+跌倒原因分析"
     },
     {
@@ -528,9 +625,21 @@
           "description": "观察+预防+逐步恢复行走",
           "isCorrect": true,
           "effects": [
-            { "type": "health", "delta": 8, "reason": "系统观察+预防+逐步恢复" },
-            { "type": "mood", "delta": 3, "reason": "有计划地恢复让他安心" },
-            { "type": "trust", "delta": 3, "reason": "专业处理增强信任" }
+            {
+              "type": "health",
+              "delta": 8,
+              "reason": "系统观察+预防+逐步恢复"
+            },
+            {
+              "type": "mood",
+              "delta": 3,
+              "reason": "有计划地恢复让他安心"
+            },
+            {
+              "type": "trust",
+              "delta": 3,
+              "reason": "专业处理增强信任"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhou_act3_d25_003",
@@ -546,7 +655,11 @@
           "description": "忽视48小时观察期",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": -5, "reason": "迟发性出血未被发现，风险持续" }
+            {
+              "type": "health",
+              "delta": -5,
+              "reason": "迟发性出血未被发现，风险持续"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhou_act3_d25_003",
@@ -562,8 +675,16 @@
           "description": "过度保护，加剧跌倒恐惧",
           "isCorrect": false,
           "effects": [
-            { "type": "independence", "delta": -5, "reason": "长期卧床导致肌力快速退化" },
-            { "type": "mood", "delta": -3, "reason": "卧床不动加剧恐惧和无力感" }
+            {
+              "type": "independence",
+              "delta": -5,
+              "reason": "长期卧床导致肌力快速退化"
+            },
+            {
+              "type": "mood",
+              "delta": -3,
+              "reason": "卧床不动加剧恐惧和无力感"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhou_act3_d25_003",
@@ -574,7 +695,12 @@
           }
         }
       ],
-      "tags": ["choice", "fall", "post-fall", "psychology"],
+      "tags": [
+        "choice",
+        "fall",
+        "post-fall",
+        "psychology"
+      ],
       "devNote": "教学：跌倒后处理——48小时观察+原因分析预防+克服跌倒恐惧逐步恢复"
     },
     {
@@ -604,7 +730,17 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ],
+      "unlocks": [
+        {
+          "diaryEntryId": "zhou_diary_d25"
+        },
+        {
+          "albumEntryId": "album_zhou_progress"
+        }
+      ]
     },
     {
       "id": "zhou_act3_d26_001",
@@ -644,7 +780,10 @@
       ],
       "nextNode": "zhou_act3_d26_002",
       "isCheckpoint": true,
-      "tags": ["rehabilitation", "psychology"],
+      "tags": [
+        "rehabilitation",
+        "psychology"
+      ],
       "devNote": "Day 26 康复评估——TIA后肌力退步，心理调适"
     },
     {
@@ -672,9 +811,21 @@
           "description": "接受现实+从小处重建",
           "isCorrect": true,
           "effects": [
-            { "type": "health", "delta": 8, "reason": "重新开始系统训练，逐步恢复" },
-            { "type": "mood", "delta": 5, "reason": "被理解，有了新的方向" },
-            { "type": "trust", "delta": 3, "reason": "没有虚假安慰，被真诚对待" }
+            {
+              "type": "health",
+              "delta": 8,
+              "reason": "重新开始系统训练，逐步恢复"
+            },
+            {
+              "type": "mood",
+              "delta": 5,
+              "reason": "被理解，有了新的方向"
+            },
+            {
+              "type": "trust",
+              "delta": 3,
+              "reason": "没有虚假安慰，被真诚对待"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhou_act3_d26_003",
@@ -690,8 +841,16 @@
           "description": "盲目鼓励，可能不切实际",
           "isCorrect": false,
           "effects": [
-            { "type": "mood", "delta": 2, "reason": "暂时被鼓励" },
-            { "type": "trust", "delta": -2, "reason": "工程师理性，知道这话不靠谱" }
+            {
+              "type": "mood",
+              "delta": 2,
+              "reason": "暂时被鼓励"
+            },
+            {
+              "type": "trust",
+              "delta": -2,
+              "reason": "工程师理性，知道这话不靠谱"
+            }
           ],
           "spiritPowerChange": 5,
           "nextNode": "zhou_act3_d26_003",
@@ -707,8 +866,16 @@
           "description": "暂停康复——会导致进一步退化",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": -5, "reason": "暂停康复导致肌力持续退化" },
-            { "type": "independence", "delta": -3, "reason": "机能进一步退化" }
+            {
+              "type": "health",
+              "delta": -5,
+              "reason": "暂停康复导致肌力持续退化"
+            },
+            {
+              "type": "independence",
+              "delta": -3,
+              "reason": "机能进一步退化"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhou_act3_d26_003",
@@ -719,7 +886,11 @@
           }
         }
       ],
-      "tags": ["choice", "rehabilitation", "psychology"],
+      "tags": [
+        "choice",
+        "rehabilitation",
+        "psychology"
+      ],
       "devNote": "教学：康复评估后心理调适——接受现实+小目标重建，不盲目乐观不放弃"
     },
     {
@@ -749,7 +920,9 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ]
     },
     {
       "id": "zhou_act3_d27_001",
@@ -796,7 +969,11 @@
       ],
       "nextNode": "zhou_act3_d27_002",
       "isCheckpoint": true,
-      "tags": ["emergency", "tutorial", "120-call"],
+      "tags": [
+        "emergency",
+        "tutorial",
+        "120-call"
+      ],
       "devNote": "Day 27 应急处理技能总结，教学拨打120四要点"
     },
     {
@@ -824,8 +1001,16 @@
           "description": "地址+症状+用药史+当前状态——四要素齐全",
           "isCorrect": true,
           "effects": [
-            { "type": "trust", "delta": 5, "reason": "专业能力让周爷爷安心" },
-            { "type": "health", "delta": 3, "reason": "应急能力强，风险降低" }
+            {
+              "type": "trust",
+              "delta": 5,
+              "reason": "专业能力让周爷爷安心"
+            },
+            {
+              "type": "health",
+              "delta": 3,
+              "reason": "应急能力强，风险降低"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhou_act3_d27_003",
@@ -841,7 +1026,11 @@
           "description": "只有情绪和模糊地址",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": -3, "reason": "信息不足延误急救准备" }
+            {
+              "type": "health",
+              "delta": -3,
+              "reason": "信息不足延误急救准备"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhou_act3_d27_003",
@@ -857,7 +1046,11 @@
           "description": "有地址和症状，但缺用药史和当前状态",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": 1, "reason": "部分信息，但不完整" }
+            {
+              "type": "health",
+              "delta": 1,
+              "reason": "部分信息，但不完整"
+            }
           ],
           "spiritPowerChange": 5,
           "nextNode": "zhou_act3_d27_003",
@@ -868,7 +1061,12 @@
           }
         }
       ],
-      "tags": ["choice", "emergency", "120-call", "tutorial"],
+      "tags": [
+        "choice",
+        "emergency",
+        "120-call",
+        "tutorial"
+      ],
       "devNote": "教学：拨打120四要点——地址、症状(含时间)、用药史、当前状态"
     },
     {
@@ -903,7 +1101,9 @@
           "flag": "zhou_emergency_skill_mastered"
         }
       ],
-      "tags": ["day-end"],
+      "tags": [
+        "day-end"
+      ],
       "devNote": "应急处理技能精通，解锁家庭应急联系卡"
     },
     {
@@ -944,7 +1144,10 @@
       ],
       "nextNode": "zhou_act3_d28_002",
       "isCheckpoint": true,
-      "tags": ["review", "album"],
+      "tags": [
+        "review",
+        "album"
+      ],
       "devNote": "Day 28 回顾——记忆相册，回顾30天历程"
     },
     {
@@ -972,8 +1175,16 @@
           "description": "看到环境改造的价值",
           "isCorrect": true,
           "effects": [
-            { "type": "mood", "delta": 5, "reason": "被理解的温暖" },
-            { "type": "trust", "delta": 3, "reason": "你看到了真正改变他的东西" }
+            {
+              "type": "mood",
+              "delta": 5,
+              "reason": "被理解的温暖"
+            },
+            {
+              "type": "trust",
+              "delta": 3,
+              "reason": "你看到了真正改变他的东西"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhou_act3_d28_003",
@@ -989,8 +1200,16 @@
           "description": "看到心理层面的价值",
           "isCorrect": true,
           "effects": [
-            { "type": "mood", "delta": 5, "reason": "被理解的温暖" },
-            { "type": "trust", "delta": 3, "reason": "你看到了他内心的成长" }
+            {
+              "type": "mood",
+              "delta": 5,
+              "reason": "被理解的温暖"
+            },
+            {
+              "type": "trust",
+              "delta": 3,
+              "reason": "你看到了他内心的成长"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhou_act3_d28_003",
@@ -1006,7 +1225,11 @@
           "description": "看到应急能力的价值",
           "isCorrect": false,
           "effects": [
-            { "type": "mood", "delta": 2, "reason": "认可了应急能力" }
+            {
+              "type": "mood",
+              "delta": 2,
+              "reason": "认可了应急能力"
+            }
           ],
           "spiritPowerChange": 5,
           "nextNode": "zhou_act3_d28_003",
@@ -1017,7 +1240,11 @@
           }
         }
       ],
-      "tags": ["choice", "review", "album"],
+      "tags": [
+        "choice",
+        "review",
+        "album"
+      ],
       "devNote": "回顾选择——看到环境改造或心理支持的核心价值"
     },
     {
@@ -1047,7 +1274,14 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ],
+      "unlocks": [
+        {
+          "diaryEntryId": "zhou_diary_d28"
+        }
+      ]
     },
     {
       "id": "zhou_act3_d29_001",
@@ -1087,7 +1321,11 @@
       ],
       "nextNode": "zhou_act3_d29_002",
       "isCheckpoint": true,
-      "tags": ["letter", "emotional", "psychology"],
+      "tags": [
+        "letter",
+        "emotional",
+        "psychology"
+      ],
       "devNote": "Day 29 情感沉淀——代际信件，心理支持技能树完成"
     },
     {
@@ -1115,8 +1353,16 @@
           "description": "真诚回应，表达陪伴承诺",
           "isCorrect": true,
           "effects": [
-            { "type": "mood", "delta": 8, "reason": "被真诚回应，情感连接达到顶点" },
-            { "type": "trust", "delta": 8, "reason": "陪伴承诺是最深的信任" }
+            {
+              "type": "mood",
+              "delta": 8,
+              "reason": "被真诚回应，情感连接达到顶点"
+            },
+            {
+              "type": "trust",
+              "delta": 8,
+              "reason": "陪伴承诺是最深的信任"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhou_act3_d29_003",
@@ -1132,8 +1378,16 @@
           "description": "简短回应，不深入",
           "isCorrect": false,
           "effects": [
-            { "type": "mood", "delta": 3, "reason": "被回应了，但不够深入" },
-            { "type": "trust", "delta": 2, "reason": "有回应但缺乏深度连接" }
+            {
+              "type": "mood",
+              "delta": 3,
+              "reason": "被回应了，但不够深入"
+            },
+            {
+              "type": "trust",
+              "delta": 2,
+              "reason": "有回应但缺乏深度连接"
+            }
           ],
           "spiritPowerChange": 5,
           "nextNode": "zhou_act3_d29_003",
@@ -1149,8 +1403,16 @@
           "description": "回避情感交流",
           "isCorrect": false,
           "effects": [
-            { "type": "mood", "delta": -3, "reason": "情感表达被回避，失落" },
-            { "type": "trust", "delta": -3, "reason": "觉得你不接受他的真心" }
+            {
+              "type": "mood",
+              "delta": -3,
+              "reason": "情感表达被回避，失落"
+            },
+            {
+              "type": "trust",
+              "delta": -3,
+              "reason": "觉得你不接受他的真心"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhou_act3_d29_003",
@@ -1161,7 +1423,12 @@
           }
         }
       ],
-      "tags": ["choice", "letter", "emotional", "psychology"],
+      "tags": [
+        "choice",
+        "letter",
+        "emotional",
+        "psychology"
+      ],
       "devNote": "教学：代际信件回应——真诚回应+陪伴承诺，情感双向流动"
     },
     {
@@ -1196,7 +1463,9 @@
           "flag": "zhou_psychology_skill_mastered"
         }
       ],
-      "tags": ["day-end"],
+      "tags": [
+        "day-end"
+      ],
       "devNote": "心理支持技能精通，解锁代际信件"
     },
     {
@@ -1238,7 +1507,10 @@
       ],
       "nextNode": "zhou_act3_d30_002",
       "isCheckpoint": true,
-      "tags": ["ending", "summary"],
+      "tags": [
+        "ending",
+        "summary"
+      ],
       "devNote": "Day 30 最终日，叙事铺垫结局"
     },
     {
@@ -1266,8 +1538,16 @@
           "description": "深层理解——看到照护的本质",
           "isCorrect": true,
           "effects": [
-            { "type": "mood", "delta": 8, "reason": "被深层理解的满足" },
-            { "type": "trust", "delta": 5, "reason": "你真正懂了照护的意义" }
+            {
+              "type": "mood",
+              "delta": 8,
+              "reason": "被深层理解的满足"
+            },
+            {
+              "type": "trust",
+              "delta": 5,
+              "reason": "你真正懂了照护的意义"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhou_act3_d30_003",
@@ -1283,7 +1563,11 @@
           "description": "反思空间——愿意继续学习",
           "isCorrect": false,
           "effects": [
-            { "type": "mood", "delta": 3, "reason": "你的真诚让他感动" }
+            {
+              "type": "mood",
+              "delta": 3,
+              "reason": "你的真诚让他感动"
+            }
           ],
           "spiritPowerChange": 5,
           "nextNode": "zhou_act3_d30_003",
@@ -1299,7 +1583,11 @@
           "description": "美好祝愿——但停留在身体层面",
           "isCorrect": false,
           "effects": [
-            { "type": "mood", "delta": 3, "reason": "被关心的温暖" }
+            {
+              "type": "mood",
+              "delta": 3,
+              "reason": "被关心的温暖"
+            }
           ],
           "spiritPowerChange": 5,
           "nextNode": "zhou_act3_d30_003",
@@ -1310,7 +1598,10 @@
           }
         }
       ],
-      "tags": ["choice", "ending"],
+      "tags": [
+        "choice",
+        "ending"
+      ],
       "devNote": "最终选择——深层理解结局的核心感悟"
     },
     {
@@ -1365,9 +1656,17 @@
         },
         {
           "flag": "unlock_home_safety_checklist"
+        },
+        {
+          "diaryEntryId": "zhou_diary_d30"
+        },
+        {
+          "albumEntryId": "album_zhou_ending"
         }
       ],
-      "tags": ["ending"],
+      "tags": [
+        "ending"
+      ],
       "devNote": "结局节点——深层理解结局。周爷爷推轮椅出门下棋，接受现实但活得有尊严"
     }
   ]

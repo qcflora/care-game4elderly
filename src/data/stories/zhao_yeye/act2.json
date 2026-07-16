@@ -40,8 +40,16 @@
           "description": "直接指出他的疏忽",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": -3, "reason": "被当众指出错误，面子受损" },
-            { "type": "mood", "delta": -4, "reason": "觉得自己老糊涂了" }
+            {
+              "type": "trust",
+              "delta": -3,
+              "reason": "被当众指出错误，面子受损"
+            },
+            {
+              "type": "mood",
+              "delta": -4,
+              "reason": "觉得自己老糊涂了"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhao_act2_d8_002",
@@ -57,8 +65,16 @@
           "description": "敷衍安抚，没有解决情绪根源",
           "isCorrect": false,
           "effects": [
-            { "type": "mood", "delta": -1, "reason": "觉得被敷衍" },
-            { "type": "trust", "delta": 1, "reason": "至少态度还行" }
+            {
+              "type": "mood",
+              "delta": -1,
+              "reason": "觉得被敷衍"
+            },
+            {
+              "type": "trust",
+              "delta": 1,
+              "reason": "至少态度还行"
+            }
           ],
           "spiritPowerChange": 5,
           "nextNode": "zhao_act2_d8_002",
@@ -74,8 +90,16 @@
           "description": "用自嘲化解尴尬，给他台阶下",
           "isCorrect": true,
           "effects": [
-            { "type": "trust", "delta": 5, "reason": "用自嘲让他不觉得被笑话" },
-            { "type": "mood", "delta": 4, "reason": "尴尬被化解，心情好转" }
+            {
+              "type": "trust",
+              "delta": 5,
+              "reason": "用自嘲让他不觉得被笑话"
+            },
+            {
+              "type": "mood",
+              "delta": 4,
+              "reason": "尴尬被化解，心情好转"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhao_act2_d8_002",
@@ -86,7 +110,11 @@
           }
         }
       ],
-      "tags": ["choice", "communication", "psychology"],
+      "tags": [
+        "choice",
+        "communication",
+        "psychology"
+      ],
       "devNote": "Day 8 沟通技巧教学：化解尴尬而非指出错误"
     },
     {
@@ -97,6 +125,14 @@
       "type": "dayEnd",
       "scene": "living_room",
       "illustrationId": "zhao_day8_end",
+      "unlocks": [
+        {
+          "diaryEntryId": "zhao_diary_d8"
+        },
+        {
+          "albumEntryId": "album_zhao_act1_complete"
+        }
+      ],
       "dialogues": [
         {
           "id": "dlg_003",
@@ -108,7 +144,9 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ]
     },
     {
       "id": "zhao_act2_d9_001",
@@ -144,8 +182,16 @@
           "description": "直接戳破，建议就医",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": -4, "reason": "隐性疼痛被戳破，感到被监视" },
-            { "type": "mood", "delta": -3, "reason": "逞强被看穿的挫败感" }
+            {
+              "type": "trust",
+              "delta": -4,
+              "reason": "隐性疼痛被戳破，感到被监视"
+            },
+            {
+              "type": "mood",
+              "delta": -3,
+              "reason": "逞强被看穿的挫败感"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhao_act2_d9_002",
@@ -161,7 +207,11 @@
           "description": "忽视疼痛信号",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": -4, "reason": "隐性疼痛持续，关节损伤加重" }
+            {
+              "type": "health",
+              "delta": -4,
+              "reason": "隐性疼痛持续，关节损伤加重"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhao_act2_d9_002",
@@ -177,9 +227,21 @@
           "description": "不点破疼痛，用关怀行动间接缓解",
           "isCorrect": true,
           "effects": [
-            { "type": "trust", "delta": 5, "reason": "关怀到位但不强迫承认" },
-            { "type": "mood", "delta": 3, "reason": "被关心感到温暖" },
-            { "type": "health", "delta": 3, "reason": "热敷缓解关节疼痛" }
+            {
+              "type": "trust",
+              "delta": 5,
+              "reason": "关怀到位但不强迫承认"
+            },
+            {
+              "type": "mood",
+              "delta": 3,
+              "reason": "被关心感到温暖"
+            },
+            {
+              "type": "health",
+              "delta": 3,
+              "reason": "热敷缓解关节疼痛"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhao_act2_d9_002",
@@ -190,7 +252,11 @@
           }
         }
       ],
-      "tags": ["choice", "hidden-pain", "observation"],
+      "tags": [
+        "choice",
+        "hidden-pain",
+        "observation"
+      ],
       "devNote": "Day 9 隐性疼痛识别教学：观察-行动而非观察-质问"
     },
     {
@@ -220,7 +286,9 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ]
     },
     {
       "id": "zhao_act2_d10_001",
@@ -263,8 +331,16 @@
           "description": "推销科技，否定他的方式",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": -4, "reason": "抗拒被改变生活方式" },
-            { "type": "mood", "delta": -3, "reason": "感到被否定和施压" }
+            {
+              "type": "trust",
+              "delta": -4,
+              "reason": "抗拒被改变生活方式"
+            },
+            {
+              "type": "mood",
+              "delta": -3,
+              "reason": "感到被否定和施压"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhao_act2_d10_002",
@@ -280,8 +356,16 @@
           "description": "完全顺从，不建立连接",
           "isCorrect": false,
           "effects": [
-            { "type": "mood", "delta": 1, "reason": "被认可" },
-            { "type": "trust", "delta": 0, "reason": "没有建立深层连接" }
+            {
+              "type": "mood",
+              "delta": 1,
+              "reason": "被认可"
+            },
+            {
+              "type": "trust",
+              "delta": 0,
+              "reason": "没有建立深层连接"
+            }
           ],
           "spiritPowerChange": 5,
           "nextNode": "zhao_act2_d10_002",
@@ -297,8 +381,16 @@
           "description": "用他的方式建立连接，让他成为信息的给予者",
           "isCorrect": true,
           "effects": [
-            { "type": "trust", "delta": 5, "reason": "尊重他的信息方式，让他有被需要感" },
-            { "type": "mood", "delta": 4, "reason": "被请教和被重视的满足感" }
+            {
+              "type": "trust",
+              "delta": 5,
+              "reason": "尊重他的信息方式，让他有被需要感"
+            },
+            {
+              "type": "mood",
+              "delta": 4,
+              "reason": "被请教和被重视的满足感"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhao_act2_d10_002",
@@ -309,7 +401,11 @@
           }
         }
       ],
-      "tags": ["choice", "digital-life", "connection"],
+      "tags": [
+        "choice",
+        "digital-life",
+        "connection"
+      ],
       "devNote": "Day 10 展示型道具：旧收音机与报纸，数字生活度主题"
     },
     {
@@ -320,6 +416,14 @@
       "type": "dayEnd",
       "scene": "living_room",
       "illustrationId": "zhao_day10_end",
+      "unlocks": [
+        {
+          "diaryEntryId": "zhao_diary_d10"
+        },
+        {
+          "albumEntryId": "album_zhao_exercise"
+        }
+      ],
       "dialogues": [
         {
           "id": "dlg_010",
@@ -339,7 +443,9 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ]
     },
     {
       "id": "zhao_act2_d11_001",
@@ -375,8 +481,16 @@
           "description": "敷衍回应",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": -3, "reason": "主动示好被忽视" },
-            { "type": "mood", "delta": -2, "reason": "热情被浇冷水" }
+            {
+              "type": "trust",
+              "delta": -3,
+              "reason": "主动示好被忽视"
+            },
+            {
+              "type": "mood",
+              "delta": -2,
+              "reason": "热情被浇冷水"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhao_act2_d11_002",
@@ -392,8 +506,16 @@
           "description": "过度热情，让他不自在",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": 1, "reason": "至少回应了" },
-            { "type": "mood", "delta": -1, "reason": "被过度关注反而不自在" }
+            {
+              "type": "trust",
+              "delta": 1,
+              "reason": "至少回应了"
+            },
+            {
+              "type": "mood",
+              "delta": -1,
+              "reason": "被过度关注反而不自在"
+            }
           ],
           "spiritPowerChange": 5,
           "nextNode": "zhao_act2_d11_002",
@@ -409,8 +531,16 @@
           "description": "自然回应，顺着话题聊下去",
           "isCorrect": true,
           "effects": [
-            { "type": "trust", "delta": 4, "reason": "自然回应让交流顺畅" },
-            { "type": "mood", "delta": 3, "reason": "被认可的满足感" }
+            {
+              "type": "trust",
+              "delta": 4,
+              "reason": "自然回应让交流顺畅"
+            },
+            {
+              "type": "mood",
+              "delta": 3,
+              "reason": "被认可的满足感"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhao_act2_d11_002",
@@ -421,7 +551,11 @@
           }
         }
       ],
-      "tags": ["choice", "communication", "daily-life"],
+      "tags": [
+        "choice",
+        "communication",
+        "daily-life"
+      ],
       "devNote": "Day 11 日常相处教学：自然回应老人的主动示好"
     },
     {
@@ -443,7 +577,9 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ]
     },
     {
       "id": "zhao_act2_d12_001",
@@ -479,8 +615,16 @@
           "description": "过度代劳 + 推销科技",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": -4, "reason": "被代劳感到被剥夺自主权" },
-            { "type": "independence", "delta": -5, "reason": "剥夺了他自己处理事务的机会" }
+            {
+              "type": "trust",
+              "delta": -4,
+              "reason": "被代劳感到被剥夺自主权"
+            },
+            {
+              "type": "independence",
+              "delta": -5,
+              "reason": "剥夺了他自己处理事务的机会"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhao_act2_d12_002",
@@ -496,7 +640,11 @@
           "description": "完全不管，忽视拖延风险",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": -4, "reason": "慢性病用药中断，症状反弹" }
+            {
+              "type": "health",
+              "delta": -4,
+              "reason": "慢性病用药中断，症状反弹"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhao_act2_d12_002",
@@ -512,9 +660,21 @@
           "description": "尊重自主权 + 陪伴引导，用出门散步作为理由",
           "isCorrect": true,
           "effects": [
-            { "type": "trust", "delta": 5, "reason": "陪伴而非代劳，尊重自主权" },
-            { "type": "health", "delta": 4, "reason": "及时续药，用药不断档" },
-            { "type": "mood", "delta": 2, "reason": "出门走走心情好" }
+            {
+              "type": "trust",
+              "delta": 5,
+              "reason": "陪伴而非代劳，尊重自主权"
+            },
+            {
+              "type": "health",
+              "delta": 4,
+              "reason": "及时续药，用药不断档"
+            },
+            {
+              "type": "mood",
+              "delta": 2,
+              "reason": "出门走走心情好"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhao_act2_d12_002",
@@ -525,7 +685,11 @@
           }
         }
       ],
-      "tags": ["choice", "medication", "chronic-disease"],
+      "tags": [
+        "choice",
+        "medication",
+        "chronic-disease"
+      ],
       "devNote": "Day 12 用药管理教学：慢性病续药的引导方式"
     },
     {
@@ -555,7 +719,14 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ],
+      "unlocks": [
+        {
+          "albumEntryId": "album_zhao_wife_help"
+        }
+      ]
     },
     {
       "id": "zhao_act2_d13_001",
@@ -591,8 +762,16 @@
           "description": "直接打断，指出重复",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": -5, "reason": "被打断感到不被尊重" },
-            { "type": "mood", "delta": -4, "reason": "意识到自己重复说话的尴尬" }
+            {
+              "type": "trust",
+              "delta": -5,
+              "reason": "被打断感到不被尊重"
+            },
+            {
+              "type": "mood",
+              "delta": -4,
+              "reason": "意识到自己重复说话的尴尬"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhao_act2_d13_002",
@@ -608,8 +787,16 @@
           "description": "敷衍倾听",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": -2, "reason": "感受到敷衍" },
-            { "type": "mood", "delta": -1, "reason": "被忽视的失落" }
+            {
+              "type": "trust",
+              "delta": -2,
+              "reason": "感受到敷衍"
+            },
+            {
+              "type": "mood",
+              "delta": -1,
+              "reason": "被忽视的失落"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhao_act2_d13_002",
@@ -625,8 +812,16 @@
           "description": "倾听+追问细节，延伸话题",
           "isCorrect": true,
           "effects": [
-            { "type": "trust", "delta": 6, "reason": "被认真倾听，感到被重视" },
-            { "type": "mood", "delta": 4, "reason": "回忆被认真对待的满足感" }
+            {
+              "type": "trust",
+              "delta": 6,
+              "reason": "被认真倾听，感到被重视"
+            },
+            {
+              "type": "mood",
+              "delta": 4,
+              "reason": "回忆被认真对待的满足感"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhao_act2_d13_002",
@@ -637,7 +832,11 @@
           }
         }
       ],
-      "tags": ["choice", "listening", "psychology"],
+      "tags": [
+        "choice",
+        "listening",
+        "psychology"
+      ],
       "devNote": "Day 13 倾听技巧教学：复述确认+追问延伸"
     },
     {
@@ -648,6 +847,11 @@
       "type": "dayEnd",
       "scene": "living_room",
       "illustrationId": "zhao_day13_end",
+      "unlocks": [
+        {
+          "diaryEntryId": "zhao_diary_d13"
+        }
+      ],
       "dialogues": [
         {
           "id": "dlg_021",
@@ -659,7 +863,9 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ]
     },
     {
       "id": "zhao_act2_d14_001",
@@ -695,8 +901,16 @@
           "description": "轻信'我没事'",
           "isCorrect": false,
           "effects": [
-            { "type": "mood", "delta": -4, "reason": "真正的需求被忽视" },
-            { "type": "health", "delta": -2, "reason": "前列腺症状加重未被关注" }
+            {
+              "type": "mood",
+              "delta": -4,
+              "reason": "真正的需求被忽视"
+            },
+            {
+              "type": "health",
+              "delta": -2,
+              "reason": "前列腺症状加重未被关注"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhao_act2_d14_002",
@@ -712,8 +926,16 @@
           "description": "追问到底，过度施压",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": -4, "reason": "被逼问感到压力" },
-            { "type": "mood", "delta": -3, "reason": "隐私被监控的愤怒" }
+            {
+              "type": "trust",
+              "delta": -4,
+              "reason": "被逼问感到压力"
+            },
+            {
+              "type": "mood",
+              "delta": -3,
+              "reason": "隐私被监控的愤怒"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhao_act2_d14_002",
@@ -729,8 +951,16 @@
           "description": "不逼问但陪伴，用行动表达关心",
           "isCorrect": true,
           "effects": [
-            { "type": "trust", "delta": 5, "reason": "不逼问但陪伴，被理解和尊重" },
-            { "type": "mood", "delta": 3, "reason": "有人在身边的安心感" }
+            {
+              "type": "trust",
+              "delta": 5,
+              "reason": "不逼问但陪伴，被理解和尊重"
+            },
+            {
+              "type": "mood",
+              "delta": 3,
+              "reason": "有人在身边的安心感"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhao_act2_d14_002",
@@ -741,7 +971,11 @@
           }
         }
       ],
-      "tags": ["choice", "psychology", "hidden-pain"],
+      "tags": [
+        "choice",
+        "psychology",
+        "hidden-pain"
+      ],
       "devNote": "Day 14 '我没事'的判断教学：不逼问但陪伴"
     },
     {
@@ -771,7 +1005,9 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ]
     },
     {
       "id": "zhao_act2_d15_001",
@@ -807,7 +1043,11 @@
           "description": "补服双倍剂量",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": -6, "reason": "双倍剂量可能导致体位性低血压" }
+            {
+              "type": "health",
+              "delta": -6,
+              "reason": "双倍剂量可能导致体位性低血压"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhao_act2_d15_002",
@@ -823,7 +1063,11 @@
           "description": "不补服，忽视漏药",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": -3, "reason": "前列腺症状可能反弹" }
+            {
+              "type": "health",
+              "delta": -3,
+              "reason": "前列腺症状可能反弹"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhao_act2_d15_002",
@@ -839,8 +1083,16 @@
           "description": "查说明书按漏服原则处理",
           "isCorrect": true,
           "effects": [
-            { "type": "health", "delta": 5, "reason": "正确补服，用药不断档" },
-            { "type": "trust", "delta": 4, "reason": "专业且负责任的指导" }
+            {
+              "type": "health",
+              "delta": 5,
+              "reason": "正确补服，用药不断档"
+            },
+            {
+              "type": "trust",
+              "delta": 4,
+              "reason": "专业且负责任的指导"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhao_act2_d15_002",
@@ -851,7 +1103,11 @@
           }
         }
       ],
-      "tags": ["choice", "medication", "missed-dose"],
+      "tags": [
+        "choice",
+        "medication",
+        "missed-dose"
+      ],
       "devNote": "Day 15 漏服补服原则教学"
     },
     {
@@ -862,6 +1118,14 @@
       "type": "dayEnd",
       "scene": "living_room",
       "illustrationId": "zhao_day15_end",
+      "unlocks": [
+        {
+          "diaryEntryId": "zhao_diary_d15"
+        },
+        {
+          "albumEntryId": "album_zhao_video_call"
+        }
+      ],
       "dialogues": [
         {
           "id": "dlg_028",
@@ -873,7 +1137,9 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ]
     },
     {
       "id": "zhao_act2_d16_001",
@@ -909,8 +1175,16 @@
           "description": "直接贴标签，建议看心理医生",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": -5, "reason": "被贴上'抑郁'标签，感到被侮辱" },
-            { "type": "mood", "delta": -5, "reason": "觉得自己'有病'更消沉" }
+            {
+              "type": "trust",
+              "delta": -5,
+              "reason": "被贴上'抑郁'标签，感到被侮辱"
+            },
+            {
+              "type": "mood",
+              "delta": -5,
+              "reason": "觉得自己'有病'更消沉"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhao_act2_d16_002",
@@ -926,7 +1200,11 @@
           "description": "忽视心理信号",
           "isCorrect": false,
           "effects": [
-            { "type": "mood", "delta": -4, "reason": "心理需求被忽视，情绪持续低落" }
+            {
+              "type": "mood",
+              "delta": -4,
+              "reason": "心理需求被忽视，情绪持续低落"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhao_act2_d16_002",
@@ -942,8 +1220,16 @@
           "description": "不提心理问题，用活动和社会连接间接改善",
           "isCorrect": true,
           "effects": [
-            { "type": "trust", "delta": 5, "reason": "不戳破但用行动关怀" },
-            { "type": "mood", "delta": 4, "reason": "出门活动，情绪改善" }
+            {
+              "type": "trust",
+              "delta": 5,
+              "reason": "不戳破但用行动关怀"
+            },
+            {
+              "type": "mood",
+              "delta": 4,
+              "reason": "出门活动，情绪改善"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhao_act2_d16_002",
@@ -954,7 +1240,11 @@
           }
         }
       ],
-      "tags": ["choice", "psychology", "depression-signs"],
+      "tags": [
+        "choice",
+        "psychology",
+        "depression-signs"
+      ],
       "devNote": "Day 16 心理信号识别教学：抑郁早期信号 + 间接干预"
     },
     {
@@ -976,7 +1266,9 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ]
     },
     {
       "id": "zhao_act2_d17_001",
@@ -1012,8 +1304,16 @@
           "description": "泛泛建议，不解决实际困难",
           "isCorrect": false,
           "effects": [
-            { "type": "mood", "delta": -1, "reason": "建议空洞，感到不被理解" },
-            { "type": "trust", "delta": 0, "reason": "没有建立连接" }
+            {
+              "type": "mood",
+              "delta": -1,
+              "reason": "建议空洞，感到不被理解"
+            },
+            {
+              "type": "trust",
+              "delta": 0,
+              "reason": "没有建立连接"
+            }
           ],
           "spiritPowerChange": 5,
           "nextNode": "zhao_act2_d17_002",
@@ -1029,8 +1329,16 @@
           "description": "过度代劳社交",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": -2, "reason": "社交被代劳，感到被当成小孩" },
-            { "type": "independence", "delta": -3, "reason": "剥夺了自主社交的机会" }
+            {
+              "type": "trust",
+              "delta": -2,
+              "reason": "社交被代劳，感到被当成小孩"
+            },
+            {
+              "type": "independence",
+              "delta": -3,
+              "reason": "剥夺了自主社交的机会"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhao_act2_d17_002",
@@ -1046,8 +1354,16 @@
           "description": "引导他主动分享和联系，尊重社交自主权",
           "isCorrect": true,
           "effects": [
-            { "type": "trust", "delta": 5, "reason": "关心他的社交关系" },
-            { "type": "mood", "delta": 4, "reason": "被关心朋友感到温暖" }
+            {
+              "type": "trust",
+              "delta": 5,
+              "reason": "关心他的社交关系"
+            },
+            {
+              "type": "mood",
+              "delta": 4,
+              "reason": "被关心朋友感到温暖"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhao_act2_d17_002",
@@ -1058,7 +1374,11 @@
           }
         }
       ],
-      "tags": ["choice", "social", "psychology"],
+      "tags": [
+        "choice",
+        "social",
+        "psychology"
+      ],
       "devNote": "Day 17 社交关怀教学：引导而非代劳社交"
     },
     {
@@ -1080,7 +1400,9 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ]
     },
     {
       "id": "zhao_act2_d18_001",
@@ -1144,7 +1466,11 @@
       ],
       "nextNode": "zhao_act2_d18_002",
       "isCheckpoint": true,
-      "tags": ["foreshadowing", "psychology", "key-event"],
+      "tags": [
+        "foreshadowing",
+        "psychology",
+        "key-event"
+      ],
       "devNote": "Day 18 伏笔日记：老陈头认不出人了。为陈奶奶线铺垫。精灵标注？图标"
     },
     {
@@ -1172,8 +1498,16 @@
           "description": "轻描淡写，否定他的恐惧",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": -4, "reason": "恐惧被否定，感到不被理解" },
-            { "type": "mood", "delta": -3, "reason": "孤独面对恐惧" }
+            {
+              "type": "trust",
+              "delta": -4,
+              "reason": "恐惧被否定，感到不被理解"
+            },
+            {
+              "type": "mood",
+              "delta": -3,
+              "reason": "孤独面对恐惧"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhao_act2_d18_003",
@@ -1189,8 +1523,16 @@
           "description": "直接建议检查，加剧恐惧",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": -3, "reason": "被暗示自己也可能有问题" },
-            { "type": "mood", "delta": -4, "reason": "恐惧被放大" }
+            {
+              "type": "trust",
+              "delta": -3,
+              "reason": "被暗示自己也可能有问题"
+            },
+            {
+              "type": "mood",
+              "delta": -4,
+              "reason": "恐惧被放大"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhao_act2_d18_003",
@@ -1206,8 +1548,16 @@
           "description": "引导他倾诉，用回忆重建安全感",
           "isCorrect": true,
           "effects": [
-            { "type": "trust", "delta": 6, "reason": "恐惧被倾听和接住" },
-            { "type": "mood", "delta": 3, "reason": "回忆美好的友情感到安慰" }
+            {
+              "type": "trust",
+              "delta": 6,
+              "reason": "恐惧被倾听和接住"
+            },
+            {
+              "type": "mood",
+              "delta": 3,
+              "reason": "回忆美好的友情感到安慰"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhao_act2_d18_003",
@@ -1218,7 +1568,12 @@
           }
         }
       ],
-      "tags": ["choice", "foreshadowing", "psychology", "memory-therapy"],
+      "tags": [
+        "choice",
+        "foreshadowing",
+        "psychology",
+        "memory-therapy"
+      ],
       "devNote": "伏笔回应教学：恐惧倾听 + 回忆疗法。精灵在此处标注？图标"
     },
     {
@@ -1229,6 +1584,11 @@
       "type": "dayEnd",
       "scene": "living_room",
       "illustrationId": "zhao_day18_end",
+      "unlocks": [
+        {
+          "diaryEntryId": "zhao_diary_d18_foreshadowing"
+        }
+      ],
       "dialogues": [
         {
           "id": "dlg_041",
@@ -1240,7 +1600,10 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end", "foreshadowing"]
+      "tags": [
+        "day-end",
+        "foreshadowing"
+      ]
     },
     {
       "id": "zhao_act2_d19_001",
@@ -1276,8 +1639,16 @@
           "description": "硬碰硬，用道理施压",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": -8, "reason": "被强迫和施压，信任严重受损" },
-            { "type": "mood", "delta": -5, "reason": "被当成不听话的小孩" }
+            {
+              "type": "trust",
+              "delta": -8,
+              "reason": "被强迫和施压，信任严重受损"
+            },
+            {
+              "type": "mood",
+              "delta": -5,
+              "reason": "被当成不听话的小孩"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhao_act2_d19_002",
@@ -1293,8 +1664,16 @@
           "description": "完全顺从，放弃就医引导",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": -5, "reason": "前列腺问题持续拖延，风险加剧" },
-            { "type": "trust", "delta": 1, "reason": "至少没逼他" }
+            {
+              "type": "health",
+              "delta": -5,
+              "reason": "前列腺问题持续拖延，风险加剧"
+            },
+            {
+              "type": "trust",
+              "delta": 1,
+              "reason": "至少没逼他"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhao_act2_d19_002",
@@ -1310,8 +1689,16 @@
           "description": "尊重恐惧+陪伴引导+用生活化理由降低压力",
           "isCorrect": true,
           "effects": [
-            { "type": "trust", "delta": 4, "reason": "理解了他的恐惧，没有强迫" },
-            { "type": "mood", "delta": 3, "reason": "恐惧被接住，压力降低" }
+            {
+              "type": "trust",
+              "delta": 4,
+              "reason": "理解了他的恐惧，没有强迫"
+            },
+            {
+              "type": "mood",
+              "delta": 3,
+              "reason": "恐惧被接住，压力降低"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhao_act2_d19_002",
@@ -1322,7 +1709,11 @@
           }
         }
       ],
-      "tags": ["choice", "conflict", "hospital-refusal"],
+      "tags": [
+        "choice",
+        "conflict",
+        "hospital-refusal"
+      ],
       "devNote": "Day 19 情感冲突：拒绝去医院。核心设计——硬碰硬和顺从都不是最优解"
     },
     {
@@ -1352,7 +1743,9 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ]
     },
     {
       "id": "zhao_act2_d20_001",
@@ -1388,8 +1781,16 @@
           "description": "催促表态",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": -5, "reason": "被催促感到施压" },
-            { "type": "mood", "delta": -3, "reason": "没有给他空间" }
+            {
+              "type": "trust",
+              "delta": -5,
+              "reason": "被催促感到施压"
+            },
+            {
+              "type": "mood",
+              "delta": -3,
+              "reason": "没有给他空间"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhao_act2_d20_002",
@@ -1405,7 +1806,11 @@
           "description": "完全给空间，但可能错过时机",
           "isCorrect": false,
           "effects": [
-            { "type": "mood", "delta": -1, "reason": "一个人消化恐惧，有些孤独" }
+            {
+              "type": "mood",
+              "delta": -1,
+              "reason": "一个人消化恐惧，有些孤独"
+            }
           ],
           "spiritPowerChange": 5,
           "nextNode": "zhao_act2_d20_002",
@@ -1421,8 +1826,16 @@
           "description": "用日常温暖破冰，不提体检",
           "isCorrect": true,
           "effects": [
-            { "type": "trust", "delta": 6, "reason": "不催促但陪伴，安全感建立" },
-            { "type": "mood", "delta": 4, "reason": "被温暖对待，心防松动" }
+            {
+              "type": "trust",
+              "delta": 6,
+              "reason": "不催促但陪伴，安全感建立"
+            },
+            {
+              "type": "mood",
+              "delta": 4,
+              "reason": "被温暖对待，心防松动"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhao_act2_d20_002",
@@ -1433,7 +1846,11 @@
           }
         }
       ],
-      "tags": ["choice", "conflict", "communication"],
+      "tags": [
+        "choice",
+        "conflict",
+        "communication"
+      ],
       "devNote": "Day 20 打破僵局教学：日常温暖破冰"
     },
     {
@@ -1463,7 +1880,14 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ],
+      "unlocks": [
+        {
+          "albumEntryId": "album_zhao_act2_complete"
+        }
+      ]
     },
     {
       "id": "zhao_act2_d21_001",
@@ -1503,7 +1927,10 @@
       ],
       "nextNode": "zhao_act2_d21_002",
       "isCheckpoint": true,
-      "tags": ["key-event", "trust-breakthrough"],
+      "tags": [
+        "key-event",
+        "trust-breakthrough"
+      ],
       "devNote": "Day 21 信任突破时刻——赵爷爷主动提出去医院"
     },
     {
@@ -1531,8 +1958,16 @@
           "description": "说教式回应，强调'早就该'",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": -5, "reason": "突破被否定，感到被说教" },
-            { "type": "mood", "delta": -4, "reason": "好不容易鼓起的勇气被泼冷水" }
+            {
+              "type": "trust",
+              "delta": -5,
+              "reason": "突破被否定，感到被说教"
+            },
+            {
+              "type": "mood",
+              "delta": -4,
+              "reason": "好不容易鼓起的勇气被泼冷水"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhao_act2_d21_003",
@@ -1548,8 +1983,16 @@
           "description": "轻描淡写，回应过于冷淡",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": 2, "reason": "至少回应了" },
-            { "type": "mood", "delta": -1, "reason": "感觉不被重视" }
+            {
+              "type": "trust",
+              "delta": 2,
+              "reason": "至少回应了"
+            },
+            {
+              "type": "mood",
+              "delta": -1,
+              "reason": "感觉不被重视"
+            }
           ],
           "spiritPowerChange": 5,
           "nextNode": "zhao_act2_d21_003",
@@ -1565,8 +2008,16 @@
           "description": "肯定+情感回应，接住他的勇气",
           "isCorrect": true,
           "effects": [
-            { "type": "trust", "delta": 10, "reason": "突破被肯定和接住，信任大幅提升" },
-            { "type": "mood", "delta": 6, "reason": "勇气被认可，感到被理解" }
+            {
+              "type": "trust",
+              "delta": 10,
+              "reason": "突破被肯定和接住，信任大幅提升"
+            },
+            {
+              "type": "mood",
+              "delta": 6,
+              "reason": "勇气被认可，感到被理解"
+            }
           ],
           "spiritPowerChange": 15,
           "nextNode": "zhao_act2_d21_003",
@@ -1577,7 +2028,11 @@
           }
         }
       ],
-      "tags": ["choice", "trust-breakthrough", "key-event"],
+      "tags": [
+        "choice",
+        "trust-breakthrough",
+        "key-event"
+      ],
       "devNote": "信任突破时刻——赵爷爷接受照护的转折点"
     },
     {
@@ -1588,6 +2043,11 @@
       "type": "actEnd",
       "scene": "living_room",
       "illustrationId": "zhao_act2_end",
+      "unlocks": [
+        {
+          "diaryEntryId": "zhao_diary_d21"
+        }
+      ],
       "dialogues": [
         {
           "id": "dlg_054",
@@ -1607,7 +2067,9 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["act-end"],
+      "tags": [
+        "act-end"
+      ],
       "devNote": "第二幕结束节点"
     }
   ]

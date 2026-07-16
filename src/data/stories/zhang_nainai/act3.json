@@ -34,7 +34,10 @@
         }
       ],
       "nextNode": "zhang_act3_d22_002",
-      "tags": ["night-care", "heart-disease"]
+      "tags": [
+        "night-care",
+        "heart-disease"
+      ]
     },
     {
       "id": "zhang_act3_d22_002",
@@ -61,8 +64,16 @@
           "description": "系统评估+环境保障",
           "isCorrect": true,
           "effects": [
-            { "type": "health", "delta": 8, "reason": "及时评估原因" },
-            { "type": "independence", "delta": 3, "reason": "保障安全行走" }
+            {
+              "type": "health",
+              "delta": 8,
+              "reason": "及时评估原因"
+            },
+            {
+              "type": "independence",
+              "delta": 3,
+              "reason": "保障安全行走"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhang_act3_d22_003",
@@ -78,7 +89,11 @@
           "description": "减少饮水",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": -5, "reason": "限水可能加重心脏负担" }
+            {
+              "type": "health",
+              "delta": -5,
+              "reason": "限水可能加重心脏负担"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhang_act3_d22_003",
@@ -94,8 +109,16 @@
           "description": "全程陪同",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": 4, "reason": "有人保护" },
-            { "type": "independence", "delta": -3, "reason": "形成依赖" }
+            {
+              "type": "health",
+              "delta": 4,
+              "reason": "有人保护"
+            },
+            {
+              "type": "independence",
+              "delta": -3,
+              "reason": "形成依赖"
+            }
           ],
           "spiritPowerChange": 5,
           "nextNode": "zhang_act3_d22_003",
@@ -106,7 +129,11 @@
           }
         }
       ],
-      "tags": ["choice", "night-care", "heart-disease"]
+      "tags": [
+        "choice",
+        "night-care",
+        "heart-disease"
+      ]
     },
     {
       "id": "zhang_act3_d22_003",
@@ -156,7 +183,9 @@
           "emotion": "thoughtful"
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ]
     },
     {
       "id": "zhang_act3_d23_001",
@@ -194,7 +223,10 @@
         }
       ],
       "nextNode": "zhang_act3_d23_002",
-      "tags": ["heart-disease", "warning-sign"]
+      "tags": [
+        "heart-disease",
+        "warning-sign"
+      ]
     },
     {
       "id": "zhang_act3_d23_002",
@@ -221,8 +253,16 @@
           "description": "重视信号+及时就医",
           "isCorrect": true,
           "effects": [
-            { "type": "health", "delta": 8, "reason": "及时就医评估" },
-            { "type": "trust", "delta": 3, "reason": "认真对待她的不适" }
+            {
+              "type": "health",
+              "delta": 8,
+              "reason": "及时就医评估"
+            },
+            {
+              "type": "trust",
+              "delta": 3,
+              "reason": "认真对待她的不适"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhang_act3_d23_003",
@@ -238,7 +278,11 @@
           "description": "当作正常老化",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": -8, "reason": "心功能恶化被忽视" }
+            {
+              "type": "health",
+              "delta": -8,
+              "reason": "心功能恶化被忽视"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhang_act3_d23_003",
@@ -254,8 +298,16 @@
           "description": "对症缓解",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": -5, "reason": "只缓解症状未治本" },
-            { "type": "mood", "delta": 1, "reason": "暂时舒服些" }
+            {
+              "type": "health",
+              "delta": -5,
+              "reason": "只缓解症状未治本"
+            },
+            {
+              "type": "mood",
+              "delta": 1,
+              "reason": "暂时舒服些"
+            }
           ],
           "spiritPowerChange": 5,
           "nextNode": "zhang_act3_d23_003",
@@ -266,7 +318,11 @@
           }
         }
       ],
-      "tags": ["choice", "heart-disease", "warning-sign"]
+      "tags": [
+        "choice",
+        "heart-disease",
+        "warning-sign"
+      ]
     },
     {
       "id": "zhang_act3_d23_003",
@@ -315,7 +371,9 @@
           "emotion": "serious"
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ]
     },
     {
       "id": "zhang_act3_d24_001",
@@ -360,7 +418,11 @@
           "autoShow": true
         }
       ],
-      "tags": ["heart-disease", "cognition-foreshadow", "warning-sign"]
+      "tags": [
+        "heart-disease",
+        "cognition-foreshadow",
+        "warning-sign"
+      ]
     },
     {
       "id": "zhang_act3_d24_002",
@@ -398,7 +460,10 @@
         }
       ],
       "nextNode": "zhang_act3_d24_003",
-      "tags": ["cognition-foreshadow", "foreshadow-diary"]
+      "tags": [
+        "cognition-foreshadow",
+        "foreshadow-diary"
+      ]
     },
     {
       "id": "zhang_act3_d24_003",
@@ -425,8 +490,16 @@
           "description": "重视+评估+备药+观察",
           "isCorrect": true,
           "effects": [
-            { "type": "health", "delta": 8, "reason": "及时识别心绞痛前兆" },
-            { "type": "trust", "delta": 3, "reason": "认真对待" }
+            {
+              "type": "health",
+              "delta": 8,
+              "reason": "及时识别心绞痛前兆"
+            },
+            {
+              "type": "trust",
+              "delta": 3,
+              "reason": "认真对待"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhang_act3_d24_004",
@@ -442,7 +515,11 @@
           "description": "等明天再说",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": -8, "reason": "心绞痛前兆被忽视" }
+            {
+              "type": "health",
+              "delta": -8,
+              "reason": "心绞痛前兆被忽视"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhang_act3_d24_004",
@@ -458,7 +535,11 @@
           "description": "休息缓解",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": -5, "reason": "未识别危险信号" }
+            {
+              "type": "health",
+              "delta": -5,
+              "reason": "未识别危险信号"
+            }
           ],
           "spiritPowerChange": 5,
           "nextNode": "zhang_act3_d24_004",
@@ -469,7 +550,11 @@
           }
         }
       ],
-      "tags": ["choice", "heart-disease", "warning-sign"]
+      "tags": [
+        "choice",
+        "heart-disease",
+        "warning-sign"
+      ]
     },
     {
       "id": "zhang_act3_d24_004",
@@ -489,8 +574,15 @@
           "emotion": "serious"
         }
       ],
-      "tags": ["day-end"],
-      "devNote": "Day 24伏笔日记：记性模糊，精灵标注。同时为Day 25心绞痛发作做铺垫"
+      "tags": [
+        "day-end"
+      ],
+      "devNote": "Day 24伏笔日记：记性模糊，精灵标注。同时为Day 25心绞痛发作做铺垫",
+      "unlocks": [
+        {
+          "diaryEntryId": "zhang_diary_d24"
+        }
+      ]
     },
     {
       "id": "zhang_act3_d25_001",
@@ -534,7 +626,11 @@
         "illustrationTransition": "zoom",
         "duration": 300
       },
-      "tags": ["emergency", "angina", "timed-15s"],
+      "tags": [
+        "emergency",
+        "angina",
+        "timed-15s"
+      ],
       "devNote": "心绞痛发作事件节点，限时15秒决策。超时默认选择「拨打120」(部分正确)"
     },
     {
@@ -562,7 +658,11 @@
           "description": "含药+静卧+准备呼救",
           "isCorrect": true,
           "effects": [
-            { "type": "health", "delta": 8, "reason": "正确处置心绞痛" }
+            {
+              "type": "health",
+              "delta": 8,
+              "reason": "正确处置心绞痛"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhang_act3_d25_003",
@@ -578,7 +678,11 @@
           "description": "先打急救电话",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": 4, "reason": "呼叫了急救但延误含药" }
+            {
+              "type": "health",
+              "delta": 4,
+              "reason": "呼叫了急救但延误含药"
+            }
           ],
           "spiritPowerChange": 5,
           "nextNode": "zhang_act3_d25_003",
@@ -594,7 +698,11 @@
           "description": "平躺休息",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": -8, "reason": "错误体位加重心脏负担" }
+            {
+              "type": "health",
+              "delta": -8,
+              "reason": "错误体位加重心脏负担"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhang_act3_d25_003",
@@ -605,7 +713,12 @@
           }
         }
       ],
-      "tags": ["choice", "emergency", "angina", "timed-15s"]
+      "tags": [
+        "choice",
+        "emergency",
+        "angina",
+        "timed-15s"
+      ]
     },
     {
       "id": "zhang_act3_d25_003",
@@ -668,7 +781,9 @@
           "emotion": "thoughtful"
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ]
     },
     {
       "id": "zhang_act3_d26_001",
@@ -712,7 +827,11 @@
         "illustrationTransition": "zoom",
         "duration": 300
       },
-      "tags": ["emergency", "fall", "timed-30s"],
+      "tags": [
+        "emergency",
+        "fall",
+        "timed-30s"
+      ],
       "devNote": "跌倒事件节点，限时30秒决策。超时默认选择「立即扶起」(错误)"
     },
     {
@@ -740,7 +859,11 @@
           "description": "先评估再行动",
           "isCorrect": true,
           "effects": [
-            { "type": "health", "delta": 8, "reason": "正确跌倒处置" }
+            {
+              "type": "health",
+              "delta": 8,
+              "reason": "正确跌倒处置"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhang_act3_d26_003",
@@ -756,7 +879,11 @@
           "description": "马上扶起",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": -8, "reason": "盲目搬动可能造成二次损伤" }
+            {
+              "type": "health",
+              "delta": -8,
+              "reason": "盲目搬动可能造成二次损伤"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhang_act3_d26_003",
@@ -772,7 +899,11 @@
           "description": "扶成坐姿",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": -5, "reason": "改变体位仍有风险" }
+            {
+              "type": "health",
+              "delta": -5,
+              "reason": "改变体位仍有风险"
+            }
           ],
           "spiritPowerChange": 5,
           "nextNode": "zhang_act3_d26_003",
@@ -783,7 +914,12 @@
           }
         }
       ],
-      "tags": ["choice", "emergency", "fall", "timed-30s"]
+      "tags": [
+        "choice",
+        "emergency",
+        "fall",
+        "timed-30s"
+      ]
     },
     {
       "id": "zhang_act3_d26_003",
@@ -850,7 +986,9 @@
           "emotion": "relieved"
         }
       ],
-      "tags": ["day-end"],
+      "tags": [
+        "day-end"
+      ],
       "unlocks": [
         {
           "albumEntryId": "album_zhang_fall_handled"
@@ -885,7 +1023,10 @@
         }
       ],
       "nextNode": "zhang_act3_d27_002",
-      "tags": ["emergency", "hospital"]
+      "tags": [
+        "emergency",
+        "hospital"
+      ]
     },
     {
       "id": "zhang_act3_d27_002",
@@ -912,8 +1053,16 @@
           "description": "完整传递关键信息",
           "isCorrect": true,
           "effects": [
-            { "type": "health", "delta": 8, "reason": "信息完整帮助医生判断" },
-            { "type": "trust", "delta": 3, "reason": "认真负责" }
+            {
+              "type": "health",
+              "delta": 8,
+              "reason": "信息完整帮助医生判断"
+            },
+            {
+              "type": "trust",
+              "delta": 3,
+              "reason": "认真负责"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhang_act3_d27_003",
@@ -929,7 +1078,11 @@
           "description": "简单描述",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": -3, "reason": "信息不足影响判断" }
+            {
+              "type": "health",
+              "delta": -3,
+              "reason": "信息不足影响判断"
+            }
           ],
           "spiritPowerChange": 5,
           "nextNode": "zhang_act3_d27_003",
@@ -945,7 +1098,11 @@
           "description": "自行送医",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": -5, "reason": "搬动不当可能加重损伤" }
+            {
+              "type": "health",
+              "delta": -5,
+              "reason": "搬动不当可能加重损伤"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhang_act3_d27_003",
@@ -956,7 +1113,11 @@
           }
         }
       ],
-      "tags": ["choice", "emergency", "hospital"]
+      "tags": [
+        "choice",
+        "emergency",
+        "hospital"
+      ]
     },
     {
       "id": "zhang_act3_d27_003",
@@ -1014,7 +1175,14 @@
           "emotion": "encouraging"
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ],
+      "unlocks": [
+        {
+          "diaryEntryId": "zhang_diary_d27"
+        }
+      ]
     },
     {
       "id": "zhang_act3_d28_001",
@@ -1052,7 +1220,10 @@
         }
       ],
       "nextNode": "zhang_act3_d28_002",
-      "tags": ["pain-management", "psychology"]
+      "tags": [
+        "pain-management",
+        "psychology"
+      ]
     },
     {
       "id": "zhang_act3_d28_002",
@@ -1079,8 +1250,16 @@
           "description": "规律用药+记录+非药物+复查",
           "isCorrect": true,
           "effects": [
-            { "type": "health", "delta": 8, "reason": "科学疼痛管理" },
-            { "type": "mood", "delta": 3, "reason": "疼痛被关注" }
+            {
+              "type": "health",
+              "delta": 8,
+              "reason": "科学疼痛管理"
+            },
+            {
+              "type": "mood",
+              "delta": 3,
+              "reason": "疼痛被关注"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhang_act3_d28_003",
@@ -1096,8 +1275,16 @@
           "description": "按需服药",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": -5, "reason": "按需服药效果不稳定" },
-            { "type": "mood", "delta": -2, "reason": "反复疼痛影响情绪" }
+            {
+              "type": "health",
+              "delta": -5,
+              "reason": "按需服药效果不稳定"
+            },
+            {
+              "type": "mood",
+              "delta": -2,
+              "reason": "反复疼痛影响情绪"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhang_act3_d28_003",
@@ -1113,8 +1300,16 @@
           "description": "尊重她的说法",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": -5, "reason": "疼痛被忽视影响恢复" },
-            { "type": "mood", "delta": -3, "reason": "忍痛的痛苦" }
+            {
+              "type": "health",
+              "delta": -5,
+              "reason": "疼痛被忽视影响恢复"
+            },
+            {
+              "type": "mood",
+              "delta": -3,
+              "reason": "忍痛的痛苦"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhang_act3_d28_003",
@@ -1125,7 +1320,11 @@
           }
         }
       ],
-      "tags": ["choice", "pain-management", "psychology"]
+      "tags": [
+        "choice",
+        "pain-management",
+        "psychology"
+      ]
     },
     {
       "id": "zhang_act3_d28_003",
@@ -1179,7 +1378,9 @@
           "emotion": "proud"
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ]
     },
     {
       "id": "zhang_act3_d29_001",
@@ -1217,7 +1418,10 @@
         }
       ],
       "nextNode": "zhang_act3_d29_002",
-      "tags": ["review", "emotional"]
+      "tags": [
+        "review",
+        "emotional"
+      ]
     },
     {
       "id": "zhang_act3_d29_002",
@@ -1244,8 +1448,16 @@
           "description": "看到最核心的转变",
           "isCorrect": true,
           "effects": [
-            { "type": "mood", "delta": 8, "reason": "被真正理解" },
-            { "type": "trust", "delta": 3, "reason": "被看见" }
+            {
+              "type": "mood",
+              "delta": 8,
+              "reason": "被真正理解"
+            },
+            {
+              "type": "trust",
+              "delta": 3,
+              "reason": "被看见"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhang_act3_d29_003",
@@ -1261,8 +1473,16 @@
           "description": "关注身体指标",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": 4, "reason": "关注身体" },
-            { "type": "mood", "delta": 1, "reason": "有进步" }
+            {
+              "type": "health",
+              "delta": 4,
+              "reason": "关注身体"
+            },
+            {
+              "type": "mood",
+              "delta": 1,
+              "reason": "有进步"
+            }
           ],
           "spiritPowerChange": 5,
           "nextNode": "zhang_act3_d29_003",
@@ -1278,7 +1498,11 @@
           "description": "觉得没太大改变",
           "isCorrect": false,
           "effects": [
-            { "type": "mood", "delta": -3, "reason": "被低估" }
+            {
+              "type": "mood",
+              "delta": -3,
+              "reason": "被低估"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhang_act3_d29_003",
@@ -1289,7 +1513,11 @@
           }
         }
       ],
-      "tags": ["choice", "review", "emotional"]
+      "tags": [
+        "choice",
+        "review",
+        "emotional"
+      ]
     },
     {
       "id": "zhang_act3_d29_003",
@@ -1352,7 +1580,9 @@
           "emotion": "gentle"
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ]
     },
     {
       "id": "zhang_act3_d30_001",
@@ -1390,7 +1620,10 @@
         }
       ],
       "nextNode": "zhang_act3_d30_002",
-      "tags": ["ending", "emotional"]
+      "tags": [
+        "ending",
+        "emotional"
+      ]
     },
     {
       "id": "zhang_act3_d30_002",
@@ -1417,8 +1650,16 @@
           "description": "肯定价值+延续信任",
           "isCorrect": true,
           "effects": [
-            { "type": "mood", "delta": 8, "reason": "被肯定和接纳" },
-            { "type": "trust", "delta": 5, "reason": "信任的承诺" }
+            {
+              "type": "mood",
+              "delta": 8,
+              "reason": "被肯定和接纳"
+            },
+            {
+              "type": "trust",
+              "delta": 5,
+              "reason": "信任的承诺"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhang_act3_d30_003",
@@ -1434,8 +1675,16 @@
           "description": "关注后续治疗",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": 4, "reason": "关注健康" },
-            { "type": "mood", "delta": 2, "reason": "被关心" }
+            {
+              "type": "health",
+              "delta": 4,
+              "reason": "关注健康"
+            },
+            {
+              "type": "mood",
+              "delta": 2,
+              "reason": "被关心"
+            }
           ],
           "spiritPowerChange": 5,
           "nextNode": "zhang_act3_d30_003",
@@ -1451,7 +1700,11 @@
           "description": "客套收尾",
           "isCorrect": false,
           "effects": [
-            { "type": "mood", "delta": 2, "reason": "有回应" }
+            {
+              "type": "mood",
+              "delta": 2,
+              "reason": "有回应"
+            }
           ],
           "spiritPowerChange": 5,
           "nextNode": "zhang_act3_d30_003",
@@ -1462,7 +1715,11 @@
           }
         }
       ],
-      "tags": ["choice", "ending", "emotional"]
+      "tags": [
+        "choice",
+        "ending",
+        "emotional"
+      ]
     },
     {
       "id": "zhang_act3_d30_003",
@@ -1524,9 +1781,15 @@
         },
         {
           "flag": "zhang_nainai_complete"
+        },
+        {
+          "diaryEntryId": "zhang_diary_d30"
         }
       ],
-      "tags": ["ending", "act-end"],
+      "tags": [
+        "ending",
+        "act-end"
+      ],
       "devNote": "Day 30结局节点。根据属性值判定结局类型：温暖守护/成长之路/深层理解/反思空间。张奶奶线预期结局为「深层理解」——健康值提升有限但心情和信任提升大"
     }
   ]

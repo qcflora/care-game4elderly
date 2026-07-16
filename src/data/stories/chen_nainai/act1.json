@@ -60,7 +60,11 @@
         "duration": 800
       },
       "isCheckpoint": true,
-      "tags": ["intro", "unlock-ceremony", "letter"],
+      "tags": [
+        "intro",
+        "unlock-ceremony",
+        "letter"
+      ],
       "devNote": "解锁仪式节点：精灵收到陈奶奶女儿陈晓梅的求助信"
     },
     {
@@ -88,7 +92,11 @@
           "description": "想用'治愈'来定义目标",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": 0, "reason": "尚未见面，无直接影响" }
+            {
+              "type": "trust",
+              "delta": 0,
+              "reason": "尚未见面，无直接影响"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "chen_act1_d1_003",
@@ -104,7 +112,11 @@
           "description": "以陪伴和安心为目标",
           "isCorrect": true,
           "effects": [
-            { "type": "trust", "delta": 3, "reason": "带着正确的心态开始守护" }
+            {
+              "type": "trust",
+              "delta": 3,
+              "reason": "带着正确的心态开始守护"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "chen_act1_d1_003",
@@ -120,7 +132,11 @@
           "description": "担心沟通困难",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": 0, "reason": "尚未见面，无直接影响" }
+            {
+              "type": "trust",
+              "delta": 0,
+              "reason": "尚未见面，无直接影响"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "chen_act1_d1_003",
@@ -131,7 +147,11 @@
           }
         }
       ],
-      "tags": ["choice", "unlock-ceremony", "mindset"],
+      "tags": [
+        "choice",
+        "unlock-ceremony",
+        "mindset"
+      ],
       "devNote": "解锁仪式选择：确立认知症照护心态——陪伴而非治愈"
     },
     {
@@ -173,7 +193,10 @@
       ],
       "nextNode": "chen_act1_d1_004",
       "isCheckpoint": true,
-      "tags": ["first-meeting", "identity-confusion"],
+      "tags": [
+        "first-meeting",
+        "identity-confusion"
+      ],
       "devNote": "初见陈奶奶，她叫你'同学'——身份混淆"
     },
     {
@@ -201,8 +224,16 @@
           "description": "直接纠正她的认知",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": -5, "reason": "被纠正后感到困惑和不安" },
-            { "type": "mood", "delta": -4, "reason": "自己坚信的事被否定，产生挫败感" }
+            {
+              "type": "trust",
+              "delta": -5,
+              "reason": "被纠正后感到困惑和不安"
+            },
+            {
+              "type": "mood",
+              "delta": -4,
+              "reason": "自己坚信的事被否定，产生挫败感"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "chen_act1_d1_005",
@@ -218,8 +249,16 @@
           "description": "顺着她的身份设定，以助手身份融入",
           "isCorrect": true,
           "effects": [
-            { "type": "trust", "delta": 6, "reason": "没有纠正她，进入她的世界，让她感到被尊重" },
-            { "type": "mood", "delta": 4, "reason": "被叫'老师'感到熟悉和安心" }
+            {
+              "type": "trust",
+              "delta": 6,
+              "reason": "没有纠正她，进入她的世界，让她感到被尊重"
+            },
+            {
+              "type": "mood",
+              "delta": 4,
+              "reason": "被叫'老师'感到熟悉和安心"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "chen_act1_d1_005",
@@ -235,8 +274,16 @@
           "description": "完全配合她的认知，但可能加重混淆",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": 2, "reason": "至少没有纠正她" },
-            { "type": "mood", "delta": 1, "reason": "暂时安心" }
+            {
+              "type": "trust",
+              "delta": 2,
+              "reason": "至少没有纠正她"
+            },
+            {
+              "type": "mood",
+              "delta": 1,
+              "reason": "暂时安心"
+            }
           ],
           "spiritPowerChange": 5,
           "nextNode": "chen_act1_d1_005",
@@ -247,7 +294,12 @@
           }
         }
       ],
-      "tags": ["choice", "first-meeting", "communication", "identity"],
+      "tags": [
+        "choice",
+        "first-meeting",
+        "communication",
+        "identity"
+      ],
       "devNote": "教学：认知症沟通——不要纠正，进入她的现实"
     },
     {
@@ -285,8 +337,18 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"],
-      "devNote": "Day 1 结束节点"
+      "tags": [
+        "day-end"
+      ],
+      "devNote": "Day 1 结束节点",
+      "unlocks": [
+        {
+          "diaryEntryId": "chen_diary_d1"
+        },
+        {
+          "albumEntryId": "album_chen_teacher"
+        }
+      ]
     },
     {
       "id": "chen_act1_d2_001",
@@ -327,7 +389,10 @@
       ],
       "nextNode": "chen_act1_d2_002",
       "isCheckpoint": true,
-      "tags": ["kitchen-safety", "forgetfulness"],
+      "tags": [
+        "kitchen-safety",
+        "forgetfulness"
+      ],
       "devNote": "Day 2 厨房忘关火事件"
     },
     {
@@ -362,9 +427,21 @@
           "description": "全面代劳，禁止她做饭",
           "isCorrect": false,
           "effects": [
-            { "type": "independence", "delta": -8, "reason": "剥夺她最后的自理能力" },
-            { "type": "mood", "delta": -5, "reason": "教师尊严受挫，感到自己没用" },
-            { "type": "trust", "delta": -4, "reason": "被当成废人对待" }
+            {
+              "type": "independence",
+              "delta": -8,
+              "reason": "剥夺她最后的自理能力"
+            },
+            {
+              "type": "mood",
+              "delta": -5,
+              "reason": "教师尊严受挫，感到自己没用"
+            },
+            {
+              "type": "trust",
+              "delta": -4,
+              "reason": "被当成废人对待"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "chen_act1_d2_003",
@@ -380,8 +457,16 @@
           "description": "口头安慰，没有实际措施",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": -3, "reason": "没有实际安全措施，风险依然存在" },
-            { "type": "trust", "delta": 2, "reason": "至少没有责怪她" }
+            {
+              "type": "health",
+              "delta": -3,
+              "reason": "没有实际安全措施，风险依然存在"
+            },
+            {
+              "type": "trust",
+              "delta": 2,
+              "reason": "至少没有责怪她"
+            }
           ],
           "spiritPowerChange": 5,
           "nextNode": "chen_act1_d2_003",
@@ -397,10 +482,26 @@
           "description": "用工具辅助而非替代，保留她的做饭能力",
           "isCorrect": true,
           "effects": [
-            { "type": "health", "delta": 5, "reason": "安装定时器消除灶台风险" },
-            { "type": "independence", "delta": 4, "reason": "保留做饭能力，维护尊严" },
-            { "type": "trust", "delta": 5, "reason": "没有剥夺她的能力，反而帮她安心" },
-            { "type": "mood", "delta": 3, "reason": "还能继续做饭，感到被尊重" }
+            {
+              "type": "health",
+              "delta": 5,
+              "reason": "安装定时器消除灶台风险"
+            },
+            {
+              "type": "independence",
+              "delta": 4,
+              "reason": "保留做饭能力，维护尊严"
+            },
+            {
+              "type": "trust",
+              "delta": 5,
+              "reason": "没有剥夺她的能力，反而帮她安心"
+            },
+            {
+              "type": "mood",
+              "delta": 3,
+              "reason": "还能继续做饭，感到被尊重"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "chen_act1_d2_003",
@@ -411,7 +512,11 @@
           }
         }
       ],
-      "tags": ["choice", "kitchen-safety", "independence"],
+      "tags": [
+        "choice",
+        "kitchen-safety",
+        "independence"
+      ],
       "devNote": "教学：灶台安全 + 辅助而非替代"
     },
     {
@@ -441,7 +546,14 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ],
+      "unlocks": [
+        {
+          "albumEntryId": "album_chen_forget"
+        }
+      ]
     },
     {
       "id": "chen_act1_d3_001",
@@ -482,7 +594,10 @@
       ],
       "nextNode": "chen_act1_d3_002",
       "isCheckpoint": true,
-      "tags": ["medication", "forgetfulness"],
+      "tags": [
+        "medication",
+        "forgetfulness"
+      ],
       "devNote": "Day 3 用药管理：她忘了吃没吃药"
     },
     {
@@ -510,7 +625,11 @@
           "description": "凭推测判断，跳过本次",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": -4, "reason": "可能漏服药物，认知症状波动" }
+            {
+              "type": "health",
+              "delta": -4,
+              "reason": "可能漏服药物，认知症状波动"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "chen_act1_d3_003",
@@ -526,7 +645,11 @@
           "description": "重复服药",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": -6, "reason": "重复服药可能导致副作用" }
+            {
+              "type": "health",
+              "delta": -6,
+              "reason": "重复服药可能导致副作用"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "chen_act1_d3_003",
@@ -542,9 +665,21 @@
           "description": "跳过本次+建立可视化记录系统",
           "isCorrect": true,
           "effects": [
-            { "type": "health", "delta": 3, "reason": "避免重复服药风险" },
-            { "type": "trust", "delta": 4, "reason": "用她能理解的方式帮她管理" },
-            { "type": "independence", "delta": 3, "reason": "让她参与自己的用药管理" }
+            {
+              "type": "health",
+              "delta": 3,
+              "reason": "避免重复服药风险"
+            },
+            {
+              "type": "trust",
+              "delta": 4,
+              "reason": "用她能理解的方式帮她管理"
+            },
+            {
+              "type": "independence",
+              "delta": 3,
+              "reason": "让她参与自己的用药管理"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "chen_act1_d3_003",
@@ -562,7 +697,11 @@
           "autoShow": true
         }
       ],
-      "tags": ["choice", "medication", "memory-aid"],
+      "tags": [
+        "choice",
+        "medication",
+        "memory-aid"
+      ],
       "devNote": "教学：认知症用药管理——可视化记录系统"
     },
     {
@@ -592,7 +731,14 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ],
+      "unlocks": [
+        {
+          "diaryEntryId": "chen_diary_d3"
+        }
+      ]
     },
     {
       "id": "chen_act1_d4_001",
@@ -624,7 +770,11 @@
       ],
       "nextNode": "chen_act1_d4_002",
       "isCheckpoint": true,
-      "tags": ["inspect-prop", "textbook", "memory"],
+      "tags": [
+        "inspect-prop",
+        "textbook",
+        "memory"
+      ],
       "devNote": "Day 4 旧语文课本——检视型道具：工整批注→字迹歪斜→'今天是几号'"
     },
     {
@@ -678,8 +828,16 @@
           "description": "直接指出她字迹退化的变化",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": -5, "reason": "被指出退化，感到羞耻和恐惧" },
-            { "type": "mood", "delta": -6, "reason": "教师尊严被击碎" }
+            {
+              "type": "trust",
+              "delta": -5,
+              "reason": "被指出退化，感到羞耻和恐惧"
+            },
+            {
+              "type": "mood",
+              "delta": -6,
+              "reason": "教师尊严被击碎"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "chen_act1_d4_003",
@@ -695,8 +853,16 @@
           "description": "引导正向回忆，关注她的成就而非退化",
           "isCorrect": true,
           "effects": [
-            { "type": "trust", "delta": 6, "reason": "关注她的过去而非退化，感到被尊重" },
-            { "type": "mood", "delta": 5, "reason": "回忆教学生涯，尊严感被唤醒" }
+            {
+              "type": "trust",
+              "delta": 6,
+              "reason": "关注她的过去而非退化，感到被尊重"
+            },
+            {
+              "type": "mood",
+              "delta": 5,
+              "reason": "回忆教学生涯，尊严感被唤醒"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "chen_act1_d4_003",
@@ -712,8 +878,16 @@
           "description": "回避问题，藏起证据",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": -2, "reason": "她发现自己东西被动过会更不安" },
-            { "type": "mood", "delta": -2, "reason": "找不到心爱的东西会焦虑" }
+            {
+              "type": "trust",
+              "delta": -2,
+              "reason": "她发现自己东西被动过会更不安"
+            },
+            {
+              "type": "mood",
+              "delta": -2,
+              "reason": "找不到心爱的东西会焦虑"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "chen_act1_d4_003",
@@ -724,7 +898,13 @@
           }
         }
       ],
-      "tags": ["choice", "inspect-prop", "textbook", "identity", "memory"],
+      "tags": [
+        "choice",
+        "inspect-prop",
+        "textbook",
+        "identity",
+        "memory"
+      ],
       "devNote": "教学：检视型道具 + 回忆疗法 + 身份认同维护"
     },
     {
@@ -754,7 +934,14 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ],
+      "unlocks": [
+        {
+          "albumEntryId": "album_chen_diagnosis"
+        }
+      ]
     },
     {
       "id": "chen_act1_d5_001",
@@ -802,7 +989,11 @@
       ],
       "nextNode": "chen_act1_d5_002",
       "isCheckpoint": true,
-      "tags": ["time-confusion", "inspect-prop", "calendar"],
+      "tags": [
+        "time-confusion",
+        "inspect-prop",
+        "calendar"
+      ],
       "devNote": "Day 5 挂历停在3月——时间错位"
     },
     {
@@ -830,8 +1021,16 @@
           "description": "用事实纠正她的时间认知",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": -5, "reason": "被否定现实，感到恐慌和混乱" },
-            { "type": "mood", "delta": -5, "reason": "发现自己'记错了'，挫败和恐惧" }
+            {
+              "type": "trust",
+              "delta": -5,
+              "reason": "被否定现实，感到恐慌和混乱"
+            },
+            {
+              "type": "mood",
+              "delta": -5,
+              "reason": "发现自己'记错了'，挫败和恐惧"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "chen_act1_d5_003",
@@ -847,8 +1046,16 @@
           "description": "顺着她的现实，用'改期'安抚，转移注意力",
           "isCorrect": true,
           "effects": [
-            { "type": "trust", "delta": 5, "reason": "没有否定她，进入她的现实" },
-            { "type": "mood", "delta": 4, "reason": "焦虑被安抚，感到被理解" }
+            {
+              "type": "trust",
+              "delta": 5,
+              "reason": "没有否定她，进入她的现实"
+            },
+            {
+              "type": "mood",
+              "delta": 4,
+              "reason": "焦虑被安抚，感到被理解"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "chen_act1_d5_003",
@@ -864,8 +1071,16 @@
           "description": "用视觉纠正时间",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": -3, "reason": "她的东西被动过，感到不安" },
-            { "type": "mood", "delta": -3, "reason": "看到不对的月份更困惑" }
+            {
+              "type": "trust",
+              "delta": -3,
+              "reason": "她的东西被动过，感到不安"
+            },
+            {
+              "type": "mood",
+              "delta": -3,
+              "reason": "看到不对的月份更困惑"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "chen_act1_d5_003",
@@ -876,7 +1091,11 @@
           }
         }
       ],
-      "tags": ["choice", "time-confusion", "communication"],
+      "tags": [
+        "choice",
+        "time-confusion",
+        "communication"
+      ],
       "devNote": "教学：时间错位应对——进入她的现实而非纠正"
     },
     {
@@ -906,7 +1125,14 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ],
+      "unlocks": [
+        {
+          "diaryEntryId": "chen_diary_d5"
+        }
+      ]
     },
     {
       "id": "chen_act1_d6_001",
@@ -947,7 +1173,10 @@
       ],
       "nextNode": "chen_act1_d6_002",
       "isCheckpoint": true,
-      "tags": ["repeated-question", "communication"],
+      "tags": [
+        "repeated-question",
+        "communication"
+      ],
       "devNote": "Day 6 反复问'吃饭了吗'——认知症反复提问"
     },
     {
@@ -975,8 +1204,16 @@
           "description": "指出她反复提问的事实",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": -4, "reason": "被指出反复，感到羞愧和困惑" },
-            { "type": "mood", "delta": -4, "reason": "好意被拒绝，感到受伤" }
+            {
+              "type": "trust",
+              "delta": -4,
+              "reason": "被指出反复，感到羞愧和困惑"
+            },
+            {
+              "type": "mood",
+              "delta": -4,
+              "reason": "好意被拒绝，感到受伤"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "chen_act1_d6_003",
@@ -992,8 +1229,16 @@
           "description": "每次都像第一次一样接受她的关心",
           "isCorrect": true,
           "effects": [
-            { "type": "trust", "delta": 5, "reason": "接受她的关心，让她感到自己有用" },
-            { "type": "mood", "delta": 5, "reason": "被需要、被感激的满足感" }
+            {
+              "type": "trust",
+              "delta": 5,
+              "reason": "接受她的关心，让她感到自己有用"
+            },
+            {
+              "type": "mood",
+              "delta": 5,
+              "reason": "被需要、被感激的满足感"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "chen_act1_d6_003",
@@ -1009,8 +1254,16 @@
           "description": "回避，忽视她的关心",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": -3, "reason": "关心被忽视，感到失落" },
-            { "type": "mood", "delta": -3, "reason": "被无视的挫败感" }
+            {
+              "type": "trust",
+              "delta": -3,
+              "reason": "关心被忽视，感到失落"
+            },
+            {
+              "type": "mood",
+              "delta": -3,
+              "reason": "被无视的挫败感"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "chen_act1_d6_003",
@@ -1021,7 +1274,12 @@
           }
         }
       ],
-      "tags": ["choice", "repeated-question", "communication", "empathy"],
+      "tags": [
+        "choice",
+        "repeated-question",
+        "communication",
+        "empathy"
+      ],
       "devNote": "教学：认知症反复提问应对——每一次都像第一次"
     },
     {
@@ -1051,7 +1309,17 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ],
+      "unlocks": [
+        {
+          "albumEntryId": "album_chen_old_photo"
+        },
+        {
+          "albumEntryId": "album_chen_act1_complete"
+        }
+      ]
     },
     {
       "id": "chen_act1_d7_001",
@@ -1092,7 +1360,9 @@
       ],
       "nextNode": "chen_act1_d7_002",
       "isCheckpoint": true,
-      "tags": ["week-summary"],
+      "tags": [
+        "week-summary"
+      ],
       "devNote": "Day 7 第一幕周总结：精灵统计称呼数据"
     },
     {
@@ -1120,8 +1390,16 @@
           "description": "以纠正记忆为目标",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": -3, "reason": "强行纠正记忆会增加她的焦虑" },
-            { "type": "mood", "delta": -2, "reason": "被反复'教导'感到压力" }
+            {
+              "type": "trust",
+              "delta": -3,
+              "reason": "强行纠正记忆会增加她的焦虑"
+            },
+            {
+              "type": "mood",
+              "delta": -2,
+              "reason": "被反复'教导'感到压力"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "chen_act1_d7_003",
@@ -1137,8 +1415,16 @@
           "description": "以沟通能力和理解为核心",
           "isCorrect": true,
           "effects": [
-            { "type": "trust", "delta": 5, "reason": "方向正确，持续用对方式建立信任" },
-            { "type": "mood", "delta": 3, "reason": "被理解的安全感" }
+            {
+              "type": "trust",
+              "delta": 5,
+              "reason": "方向正确，持续用对方式建立信任"
+            },
+            {
+              "type": "mood",
+              "delta": 3,
+              "reason": "被理解的安全感"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "chen_act1_d7_003",
@@ -1154,8 +1440,16 @@
           "description": "以代劳为核心",
           "isCorrect": false,
           "effects": [
-            { "type": "independence", "delta": -5, "reason": "过度代劳加速自理能力退化" },
-            { "type": "mood", "delta": -3, "reason": "感到自己没用，教师尊严受损" }
+            {
+              "type": "independence",
+              "delta": -5,
+              "reason": "过度代劳加速自理能力退化"
+            },
+            {
+              "type": "mood",
+              "delta": -3,
+              "reason": "感到自己没用，教师尊严受损"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "chen_act1_d7_003",
@@ -1166,7 +1460,11 @@
           }
         }
       ],
-      "tags": ["choice", "week-summary", "strategy"],
+      "tags": [
+        "choice",
+        "week-summary",
+        "strategy"
+      ],
       "devNote": "Day 7 周总结选择：第二周策略方向"
     },
     {
@@ -1204,7 +1502,9 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["act-end"],
+      "tags": [
+        "act-end"
+      ],
       "devNote": "第一幕结束节点"
     }
   ]

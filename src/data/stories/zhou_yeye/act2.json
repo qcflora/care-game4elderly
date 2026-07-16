@@ -52,7 +52,10 @@
       ],
       "nextNode": "zhou_act2_d8_002",
       "isCheckpoint": true,
-      "tags": ["renovation", "resource-coordination"],
+      "tags": [
+        "renovation",
+        "resource-coordination"
+      ],
       "devNote": "Day 8 适老化改造启动，评估师上门，引入预算约束"
     },
     {
@@ -80,9 +83,21 @@
           "description": "优先消除跌倒风险，预算花在刀刃上",
           "isCorrect": true,
           "effects": [
-            { "type": "health", "delta": 8, "reason": "系统性消除跌倒隐患" },
-            { "type": "independence", "delta": 5, "reason": "有扶手护栏后能更自主活动" },
-            { "type": "trust", "delta": 3, "reason": "把安全放在第一位让他安心" }
+            {
+              "type": "health",
+              "delta": 8,
+              "reason": "系统性消除跌倒隐患"
+            },
+            {
+              "type": "independence",
+              "delta": 5,
+              "reason": "有扶手护栏后能更自主活动"
+            },
+            {
+              "type": "trust",
+              "delta": 3,
+              "reason": "把安全放在第一位让他安心"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhou_act2_d8_003",
@@ -98,8 +113,16 @@
           "description": "先改善居住环境美观度",
           "isCorrect": false,
           "effects": [
-            { "type": "mood", "delta": 3, "reason": "环境变好看确实心情好" },
-            { "type": "health", "delta": -5, "reason": "安全隐患未解决，跌倒风险持续" }
+            {
+              "type": "mood",
+              "delta": 3,
+              "reason": "环境变好看确实心情好"
+            },
+            {
+              "type": "health",
+              "delta": -5,
+              "reason": "安全隐患未解决，跌倒风险持续"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhou_act2_d8_003",
@@ -115,8 +138,16 @@
           "description": "不计成本全部改造",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": 4, "reason": "全部改造安全确实到位" },
-            { "type": "mood", "delta": -3, "reason": "周爷爷心疼超出的钱，有心理负担" }
+            {
+              "type": "health",
+              "delta": 4,
+              "reason": "全部改造安全确实到位"
+            },
+            {
+              "type": "mood",
+              "delta": -3,
+              "reason": "周爷爷心疼超出的钱，有心理负担"
+            }
           ],
           "spiritPowerChange": 5,
           "nextNode": "zhou_act2_d8_003",
@@ -127,7 +158,11 @@
           }
         }
       ],
-      "tags": ["choice", "renovation", "resource-coordination"],
+      "tags": [
+        "choice",
+        "renovation",
+        "resource-coordination"
+      ],
       "devNote": "教学：适老化改造优先级——安全必改项优先 + 预算约束下的资源配置"
     },
     {
@@ -157,7 +192,17 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ],
+      "unlocks": [
+        {
+          "diaryEntryId": "zhou_diary_d8"
+        },
+        {
+          "albumEntryId": "album_zhou_daughter_care"
+        }
+      ]
     },
     {
       "id": "zhou_act2_d9_001",
@@ -204,7 +249,11 @@
       ],
       "nextNode": "zhou_act2_d9_002",
       "isCheckpoint": true,
-      "tags": ["renovation", "operate-prop", "floor-plan"],
+      "tags": [
+        "renovation",
+        "operate-prop",
+        "floor-plan"
+      ],
       "devNote": "Day 9 家居平面图操作型道具，拖拽放置扶手/坡道/防滑垫"
     },
     {
@@ -232,9 +281,21 @@
           "description": "每个位置都放了最匹配的配件",
           "isCorrect": true,
           "effects": [
-            { "type": "health", "delta": 8, "reason": "系统性消除所有跌倒高风险点" },
-            { "type": "independence", "delta": 5, "reason": "有扶手和坡道后行动更自主" },
-            { "type": "mood", "delta": 3, "reason": "家变得安全方便，安心" }
+            {
+              "type": "health",
+              "delta": 8,
+              "reason": "系统性消除所有跌倒高风险点"
+            },
+            {
+              "type": "independence",
+              "delta": 5,
+              "reason": "有扶手和坡道后行动更自主"
+            },
+            {
+              "type": "mood",
+              "delta": 3,
+              "reason": "家变得安全方便，安心"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhou_act2_d9_003",
@@ -250,7 +311,11 @@
           "description": "只改了一个位置",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": -3, "reason": "卫生间和门槛等高风险点未解决" }
+            {
+              "type": "health",
+              "delta": -3,
+              "reason": "卫生间和门槛等高风险点未解决"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhou_act2_d9_003",
@@ -266,9 +331,21 @@
           "description": "过度改造，遍地扶手",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": 3, "reason": "扶手多了确实安全些" },
-            { "type": "mood", "delta": -4, "reason": "家变得像医院病房，心理不适" },
-            { "type": "independence", "delta": -2, "reason": "过度依赖扶手，减少自主平衡训练" }
+            {
+              "type": "health",
+              "delta": 3,
+              "reason": "扶手多了确实安全些"
+            },
+            {
+              "type": "mood",
+              "delta": -4,
+              "reason": "家变得像医院病房，心理不适"
+            },
+            {
+              "type": "independence",
+              "delta": -2,
+              "reason": "过度依赖扶手，减少自主平衡训练"
+            }
           ],
           "spiritPowerChange": 5,
           "nextNode": "zhou_act2_d9_003",
@@ -286,7 +363,12 @@
           "autoShow": true
         }
       ],
-      "tags": ["choice", "renovation", "operate-prop", "floor-plan"],
+      "tags": [
+        "choice",
+        "renovation",
+        "operate-prop",
+        "floor-plan"
+      ],
       "devNote": "关键道具：操作型家居平面图——拖拽放置扶手/坡道/防滑垫/夜灯"
     },
     {
@@ -321,7 +403,9 @@
           "flag": "zhou_renovation_plan_complete"
         }
       ],
-      "tags": ["day-end"],
+      "tags": [
+        "day-end"
+      ],
       "devNote": "完成适老化改造方案，解锁家居安全自查清单flag"
     },
     {
@@ -369,7 +453,10 @@
       ],
       "nextNode": "zhou_act2_d10_002",
       "isCheckpoint": true,
-      "tags": ["long-term-care", "resource-coordination"],
+      "tags": [
+        "long-term-care",
+        "resource-coordination"
+      ],
       "devNote": "Day 10 长护险介绍，检视型道具：长护险宣传册"
     },
     {
@@ -397,9 +484,21 @@
           "description": "消除误解，主动对接资源",
           "isCorrect": true,
           "effects": [
-            { "type": "health", "delta": 4, "reason": "专业护理员上门，照护质量提升" },
-            { "type": "independence", "delta": 5, "reason": "专业康复指导提升自理能力" },
-            { "type": "trust", "delta": 5, "reason": "帮他争取应得权益，被尊重" }
+            {
+              "type": "health",
+              "delta": 4,
+              "reason": "专业护理员上门，照护质量提升"
+            },
+            {
+              "type": "independence",
+              "delta": 5,
+              "reason": "专业康复指导提升自理能力"
+            },
+            {
+              "type": "trust",
+              "delta": 5,
+              "reason": "帮他争取应得权益，被尊重"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhou_act2_d10_003",
@@ -415,8 +514,16 @@
           "description": "放弃长护险资源",
           "isCorrect": false,
           "effects": [
-            { "type": "independence", "delta": -3, "reason": "缺少专业护理，照护质量下降" },
-            { "type": "mood", "delta": -2, "reason": "女儿照护负担重，周爷爷有心理负担" }
+            {
+              "type": "independence",
+              "delta": -3,
+              "reason": "缺少专业护理，照护质量下降"
+            },
+            {
+              "type": "mood",
+              "delta": -2,
+              "reason": "女儿照护负担重，周爷爷有心理负担"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhou_act2_d10_003",
@@ -432,8 +539,16 @@
           "description": "尊重自主权但不提供信息",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": 2, "reason": "尊重了他的意愿" },
-            { "type": "health", "delta": -2, "reason": "可能因误解错过资源" }
+            {
+              "type": "trust",
+              "delta": 2,
+              "reason": "尊重了他的意愿"
+            },
+            {
+              "type": "health",
+              "delta": -2,
+              "reason": "可能因误解错过资源"
+            }
           ],
           "spiritPowerChange": 5,
           "nextNode": "zhou_act2_d10_003",
@@ -444,7 +559,11 @@
           }
         }
       ],
-      "tags": ["choice", "long-term-care", "resource-coordination"],
+      "tags": [
+        "choice",
+        "long-term-care",
+        "resource-coordination"
+      ],
       "devNote": "教学：长护险是保险待遇非评残 + 资源协调中消除老人心理障碍"
     },
     {
@@ -474,7 +593,17 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ],
+      "unlocks": [
+        {
+          "diaryEntryId": "zhou_diary_d10"
+        },
+        {
+          "albumEntryId": "album_zhou_speech"
+        }
+      ]
     },
     {
       "id": "zhou_act2_d11_001",
@@ -505,7 +634,10 @@
       ],
       "nextNode": "zhou_act2_d11_002",
       "isCheckpoint": true,
-      "tags": ["long-term-care", "resource-coordination"],
+      "tags": [
+        "long-term-care",
+        "resource-coordination"
+      ],
       "devNote": "Day 11 长护险申请材料准备"
     },
     {
@@ -533,8 +665,16 @@
           "description": "系统规划，高效完成",
           "isCorrect": true,
           "effects": [
-            { "type": "trust", "delta": 5, "reason": "做事有条理，周爷爷放心" },
-            { "type": "mood", "delta": 3, "reason": "一次办成不用反复折腾" }
+            {
+              "type": "trust",
+              "delta": 5,
+              "reason": "做事有条理，周爷爷放心"
+            },
+            {
+              "type": "mood",
+              "delta": 3,
+              "reason": "一次办成不用反复折腾"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhou_act2_d11_003",
@@ -550,8 +690,16 @@
           "description": "走一步看一步",
           "isCorrect": false,
           "effects": [
-            { "type": "mood", "delta": -3, "reason": "反复跑腿折腾老人和家属" },
-            { "type": "trust", "delta": -2, "reason": "觉得做事不靠谱" }
+            {
+              "type": "mood",
+              "delta": -3,
+              "reason": "反复跑腿折腾老人和家属"
+            },
+            {
+              "type": "trust",
+              "delta": -2,
+              "reason": "觉得做事不靠谱"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhou_act2_d11_003",
@@ -567,9 +715,21 @@
           "description": "让他自己跑",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": -5, "reason": "行动不便的老人独自跑行政手续，体力消耗大且有跌倒风险" },
-            { "type": "mood", "delta": -5, "reason": "独自面对繁琐手续的挫败感" },
-            { "type": "trust", "delta": -3, "reason": "觉得不被关心" }
+            {
+              "type": "health",
+              "delta": -5,
+              "reason": "行动不便的老人独自跑行政手续，体力消耗大且有跌倒风险"
+            },
+            {
+              "type": "mood",
+              "delta": -5,
+              "reason": "独自面对繁琐手续的挫败感"
+            },
+            {
+              "type": "trust",
+              "delta": -3,
+              "reason": "觉得不被关心"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhou_act2_d11_003",
@@ -580,7 +740,11 @@
           }
         }
       ],
-      "tags": ["choice", "long-term-care", "resource-coordination"],
+      "tags": [
+        "choice",
+        "long-term-care",
+        "resource-coordination"
+      ],
       "devNote": "教学：资源协调——先规划后执行，家属代办行政事务"
     },
     {
@@ -610,7 +774,9 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ]
     },
     {
       "id": "zhou_act2_d12_001",
@@ -658,7 +824,11 @@
       ],
       "nextNode": "zhou_act2_d12_002",
       "isCheckpoint": true,
-      "tags": ["psychology", "emotional-support", "diary"],
+      "tags": [
+        "psychology",
+        "emotional-support",
+        "diary"
+      ],
       "devNote": "Day 12 心理支持，周爷爷日记——不甘心的第一次流露"
     },
     {
@@ -686,8 +856,16 @@
           "description": "否定感受，强行乐观",
           "isCorrect": false,
           "effects": [
-            { "type": "mood", "delta": -5, "reason": "感受被否定，更加封闭" },
-            { "type": "trust", "delta": -3, "reason": "觉得你不懂他" }
+            {
+              "type": "mood",
+              "delta": -5,
+              "reason": "感受被否定，更加封闭"
+            },
+            {
+              "type": "trust",
+              "delta": -3,
+              "reason": "觉得你不懂他"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhou_act2_d12_003",
@@ -703,8 +881,16 @@
           "description": "虚假鼓励，给不切实际的希望",
           "isCorrect": false,
           "effects": [
-            { "type": "mood", "delta": 2, "reason": "暂时被安慰" },
-            { "type": "trust", "delta": -1, "reason": "工程师理性，知道这话不现实" }
+            {
+              "type": "mood",
+              "delta": 2,
+              "reason": "暂时被安慰"
+            },
+            {
+              "type": "trust",
+              "delta": -1,
+              "reason": "工程师理性，知道这话不现实"
+            }
           ],
           "spiritPowerChange": 5,
           "nextNode": "zhou_act2_d12_003",
@@ -720,8 +906,16 @@
           "description": "倾听共情，引导他表达感受",
           "isCorrect": true,
           "effects": [
-            { "type": "mood", "delta": 5, "reason": "被理解、被倾听的温暖" },
-            { "type": "trust", "delta": 5, "reason": "你懂他的失落" }
+            {
+              "type": "mood",
+              "delta": 5,
+              "reason": "被理解、被倾听的温暖"
+            },
+            {
+              "type": "trust",
+              "delta": 5,
+              "reason": "你懂他的失落"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhou_act2_d12_003",
@@ -732,7 +926,12 @@
           }
         }
       ],
-      "tags": ["choice", "psychology", "emotional-support", "listening"],
+      "tags": [
+        "choice",
+        "psychology",
+        "emotional-support",
+        "listening"
+      ],
       "devNote": "教学：倾听技巧——不否定不虚假鼓励，共情+引导表达+回忆疗法"
     },
     {
@@ -762,7 +961,9 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ]
     },
     {
       "id": "zhou_act2_d13_001",
@@ -802,7 +1003,11 @@
       ],
       "nextNode": "zhou_act2_d13_002",
       "isCheckpoint": true,
-      "tags": ["psychology", "emotional-support", "self-worth"],
+      "tags": [
+        "psychology",
+        "emotional-support",
+        "self-worth"
+      ],
       "devNote": "Day 13 心理支持——自我价值重建"
     },
     {
@@ -830,9 +1035,21 @@
           "description": "用请教的方式让他发挥经验价值",
           "isCorrect": true,
           "effects": [
-            { "type": "mood", "delta": 8, "reason": "被需要、被尊重的价值感回归" },
-            { "type": "independence", "delta": 3, "reason": "重新找到能做的事" },
-            { "type": "trust", "delta": 3, "reason": "感受到真诚的尊重" }
+            {
+              "type": "mood",
+              "delta": 8,
+              "reason": "被需要、被尊重的价值感回归"
+            },
+            {
+              "type": "independence",
+              "delta": 3,
+              "reason": "重新找到能做的事"
+            },
+            {
+              "type": "trust",
+              "delta": 3,
+              "reason": "感受到真诚的尊重"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhou_act2_d13_003",
@@ -848,8 +1065,16 @@
           "description": "忽视心理需求，转移话题",
           "isCorrect": false,
           "effects": [
-            { "type": "mood", "delta": -3, "reason": "心理需求被忽视，更加失落" },
-            { "type": "trust", "delta": -2, "reason": "觉得你不理解他" }
+            {
+              "type": "mood",
+              "delta": -3,
+              "reason": "心理需求被忽视，更加失落"
+            },
+            {
+              "type": "trust",
+              "delta": -2,
+              "reason": "觉得你不理解他"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhou_act2_d13_003",
@@ -865,8 +1090,16 @@
           "description": "陪伴但不引导",
           "isCorrect": false,
           "effects": [
-            { "type": "mood", "delta": 2, "reason": "有人陪伴确实好一些" },
-            { "type": "trust", "delta": 1, "reason": "至少没有否定他" }
+            {
+              "type": "mood",
+              "delta": 2,
+              "reason": "有人陪伴确实好一些"
+            },
+            {
+              "type": "trust",
+              "delta": 1,
+              "reason": "至少没有否定他"
+            }
           ],
           "spiritPowerChange": 5,
           "nextNode": "zhou_act2_d13_003",
@@ -877,7 +1110,12 @@
           }
         }
       ],
-      "tags": ["choice", "psychology", "emotional-support", "self-worth"],
+      "tags": [
+        "choice",
+        "psychology",
+        "emotional-support",
+        "self-worth"
+      ],
       "devNote": "教学：自我价值重建——用请教的方式激活老人经验价值"
     },
     {
@@ -907,7 +1145,14 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ],
+      "unlocks": [
+        {
+          "diaryEntryId": "zhou_diary_d13"
+        }
+      ]
     },
     {
       "id": "zhou_act2_d14_001",
@@ -946,7 +1191,10 @@
       ],
       "nextNode": "zhou_act2_d14_002",
       "isCheckpoint": true,
-      "tags": ["rehabilitation", "goal-setting"],
+      "tags": [
+        "rehabilitation",
+        "goal-setting"
+      ],
       "devNote": "Day 14 康复进展评估，SMART目标设定"
     },
     {
@@ -974,8 +1222,16 @@
           "description": "目标过高，不切实际",
           "isCorrect": false,
           "effects": [
-            { "type": "mood", "delta": -5, "reason": "目标过高无法达成，挫败感" },
-            { "type": "health", "delta": -3, "reason": "为达目标可能过度训练导致损伤" }
+            {
+              "type": "mood",
+              "delta": -5,
+              "reason": "目标过高无法达成，挫败感"
+            },
+            {
+              "type": "health",
+              "delta": -3,
+              "reason": "为达目标可能过度训练导致损伤"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhou_act2_d14_003",
@@ -991,9 +1247,21 @@
           "description": "SMART目标——具体、可衡量、可实现",
           "isCorrect": true,
           "effects": [
-            { "type": "health", "delta": 8, "reason": "合理目标驱动有效训练" },
-            { "type": "mood", "delta": 3, "reason": "有明确可达成的小目标，有动力" },
-            { "type": "independence", "delta": 3, "reason": "站立平衡提升后自理能力增强" }
+            {
+              "type": "health",
+              "delta": 8,
+              "reason": "合理目标驱动有效训练"
+            },
+            {
+              "type": "mood",
+              "delta": 3,
+              "reason": "有明确可达成的小目标，有动力"
+            },
+            {
+              "type": "independence",
+              "delta": 3,
+              "reason": "站立平衡提升后自理能力增强"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhou_act2_d14_003",
@@ -1009,8 +1277,16 @@
           "description": "没有目标，缺乏动力",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": 2, "reason": "训练在继续但缺乏方向性" },
-            { "type": "mood", "delta": -1, "reason": "看不到进步的里程碑，动力不足" }
+            {
+              "type": "health",
+              "delta": 2,
+              "reason": "训练在继续但缺乏方向性"
+            },
+            {
+              "type": "mood",
+              "delta": -1,
+              "reason": "看不到进步的里程碑，动力不足"
+            }
           ],
           "spiritPowerChange": 5,
           "nextNode": "zhou_act2_d14_003",
@@ -1021,7 +1297,11 @@
           }
         }
       ],
-      "tags": ["choice", "rehabilitation", "goal-setting"],
+      "tags": [
+        "choice",
+        "rehabilitation",
+        "goal-setting"
+      ],
       "devNote": "教学：康复目标SMART原则——具体、可衡量、可实现、相关、有时限"
     },
     {
@@ -1051,7 +1331,14 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ],
+      "unlocks": [
+        {
+          "albumEntryId": "album_zhou_medication"
+        }
+      ]
     },
     {
       "id": "zhou_act2_d15_001",
@@ -1091,7 +1378,11 @@
       ],
       "nextNode": "zhou_act2_d15_002",
       "isCheckpoint": true,
-      "tags": ["social", "psychology", "wheelchair"],
+      "tags": [
+        "social",
+        "psychology",
+        "wheelchair"
+      ],
       "devNote": "Day 15 社交促进——轮椅出行的心理障碍"
     },
     {
@@ -1119,8 +1410,16 @@
           "description": "尊重意愿但放弃社交机会",
           "isCorrect": false,
           "effects": [
-            { "type": "mood", "delta": 2, "reason": "被尊重，暂时安心" },
-            { "type": "health", "delta": -2, "reason": "长期不出门机能可能退化" }
+            {
+              "type": "mood",
+              "delta": 2,
+              "reason": "被尊重，暂时安心"
+            },
+            {
+              "type": "health",
+              "delta": -2,
+              "reason": "长期不出门机能可能退化"
+            }
           ],
           "spiritPowerChange": 5,
           "nextNode": "zhou_act2_d15_003",
@@ -1136,9 +1435,21 @@
           "description": "尊重感受+温和鼓励+留退路",
           "isCorrect": true,
           "effects": [
-            { "type": "mood", "delta": 5, "reason": "被理解又被鼓励" },
-            { "type": "trust", "delta": 3, "reason": "没有强迫，给了安全感" },
-            { "type": "independence", "delta": 2, "reason": "走出家门拓展活动范围" }
+            {
+              "type": "mood",
+              "delta": 5,
+              "reason": "被理解又被鼓励"
+            },
+            {
+              "type": "trust",
+              "delta": 3,
+              "reason": "没有强迫，给了安全感"
+            },
+            {
+              "type": "independence",
+              "delta": 2,
+              "reason": "走出家门拓展活动范围"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhou_act2_d15_003",
@@ -1154,8 +1465,16 @@
           "description": "不顾感受，强行推他出门",
           "isCorrect": false,
           "effects": [
-            { "type": "mood", "delta": -8, "reason": "被强迫出门的屈辱感" },
-            { "type": "trust", "delta": -5, "reason": "感受被忽视" }
+            {
+              "type": "mood",
+              "delta": -8,
+              "reason": "被强迫出门的屈辱感"
+            },
+            {
+              "type": "trust",
+              "delta": -5,
+              "reason": "感受被忽视"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhou_act2_d15_003",
@@ -1166,7 +1485,12 @@
           }
         }
       ],
-      "tags": ["choice", "social", "psychology", "wheelchair"],
+      "tags": [
+        "choice",
+        "social",
+        "psychology",
+        "wheelchair"
+      ],
       "devNote": "教学：社交退缩的处理——尊重感受+温和鼓励+留退路"
     },
     {
@@ -1196,7 +1520,9 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ]
     },
     {
       "id": "zhou_act2_d16_001",
@@ -1236,7 +1562,10 @@
       ],
       "nextNode": "zhou_act2_d16_002",
       "isCheckpoint": true,
-      "tags": ["social", "community"],
+      "tags": [
+        "social",
+        "community"
+      ],
       "devNote": "Day 16 社区花园社交，偶遇老同事"
     },
     {
@@ -1264,9 +1593,21 @@
           "description": "促进自主社交，不插手",
           "isCorrect": true,
           "effects": [
-            { "type": "mood", "delta": 8, "reason": "老友重逢的喜悦和归属感" },
-            { "type": "trust", "delta": 3, "reason": "带他出来做了正确的事" },
-            { "type": "independence", "delta": 2, "reason": "自主社交提升自信" }
+            {
+              "type": "mood",
+              "delta": 8,
+              "reason": "老友重逢的喜悦和归属感"
+            },
+            {
+              "type": "trust",
+              "delta": 3,
+              "reason": "带他出来做了正确的事"
+            },
+            {
+              "type": "independence",
+              "delta": 2,
+              "reason": "自主社交提升自信"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhou_act2_d16_003",
@@ -1282,7 +1623,11 @@
           "description": "过早结束社交",
           "isCorrect": false,
           "effects": [
-            { "type": "mood", "delta": -3, "reason": "社交被打断，意犹未尽" }
+            {
+              "type": "mood",
+              "delta": -3,
+              "reason": "社交被打断，意犹未尽"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhou_act2_d16_003",
@@ -1298,8 +1643,16 @@
           "description": "代替老人社交",
           "isCorrect": false,
           "effects": [
-            { "type": "independence", "delta": -3, "reason": "社交自主权被剥夺" },
-            { "type": "mood", "delta": -2, "reason": "觉得自己连话都不会说了" }
+            {
+              "type": "independence",
+              "delta": -3,
+              "reason": "社交自主权被剥夺"
+            },
+            {
+              "type": "mood",
+              "delta": -2,
+              "reason": "觉得自己连话都不会说了"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhou_act2_d16_003",
@@ -1310,7 +1663,11 @@
           }
         }
       ],
-      "tags": ["choice", "social", "community"],
+      "tags": [
+        "choice",
+        "social",
+        "community"
+      ],
       "devNote": "教学：社交促进——创造机会不插手，让老人自主建立连接"
     },
     {
@@ -1340,7 +1697,14 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ],
+      "unlocks": [
+        {
+          "diaryEntryId": "zhou_diary_d16"
+        }
+      ]
     },
     {
       "id": "zhou_act2_d17_001",
@@ -1389,7 +1753,11 @@
       ],
       "nextNode": "zhou_act2_d17_002",
       "isCheckpoint": true,
-      "tags": ["cognition", "foreshadowing", "diary"],
+      "tags": [
+        "cognition",
+        "foreshadowing",
+        "diary"
+      ],
       "devNote": "Day 17 认知伏笔——记忆模糊日记，为陈奶奶线铺垫，精灵标注问号"
     },
     {
@@ -1417,8 +1785,16 @@
           "description": "科学记录+持续监测",
           "isCorrect": true,
           "effects": [
-            { "type": "health", "delta": 3, "reason": "持续监测有助于早期发现问题" },
-            { "type": "trust", "delta": 3, "reason": "细心观察让他安心" }
+            {
+              "type": "health",
+              "delta": 3,
+              "reason": "持续监测有助于早期发现问题"
+            },
+            {
+              "type": "trust",
+              "delta": 3,
+              "reason": "细心观察让他安心"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhou_act2_d17_003",
@@ -1434,7 +1810,11 @@
           "description": "忽视认知信号",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": -3, "reason": "认知变化未被监测，可能延误干预" }
+            {
+              "type": "health",
+              "delta": -3,
+              "reason": "认知变化未被监测，可能延误干预"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhou_act2_d17_003",
@@ -1450,8 +1830,16 @@
           "description": "直接指出，可能造成恐慌",
           "isCorrect": false,
           "effects": [
-            { "type": "mood", "delta": -5, "reason": "被告知记性变差，恐慌和焦虑" },
-            { "type": "trust", "delta": -2, "reason": "觉得被监视" }
+            {
+              "type": "mood",
+              "delta": -5,
+              "reason": "被告知记性变差，恐慌和焦虑"
+            },
+            {
+              "type": "trust",
+              "delta": -2,
+              "reason": "觉得被监视"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhou_act2_d17_003",
@@ -1462,7 +1850,11 @@
           }
         }
       ],
-      "tags": ["choice", "cognition", "foreshadowing"],
+      "tags": [
+        "choice",
+        "cognition",
+        "foreshadowing"
+      ],
       "devNote": "教学：认知变化观察——记录频率+持续监测+必要时专业评估，不直接告知避免恐慌"
     },
     {
@@ -1484,7 +1876,9 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ]
     },
     {
       "id": "zhou_act2_d18_001",
@@ -1524,7 +1918,10 @@
       ],
       "nextNode": "zhou_act2_d18_002",
       "isCheckpoint": true,
-      "tags": ["psychology", "emotional-conflict"],
+      "tags": [
+        "psychology",
+        "emotional-conflict"
+      ],
       "devNote": "Day 18 情感冲突酝酿——身份落差"
     },
     {
@@ -1552,8 +1949,16 @@
           "description": "表面安慰，未触及核心",
           "isCorrect": false,
           "effects": [
-            { "type": "mood", "delta": 2, "reason": "暂时被安慰" },
-            { "type": "trust", "delta": -1, "reason": "觉得你不懂他真正在意什么" }
+            {
+              "type": "mood",
+              "delta": 2,
+              "reason": "暂时被安慰"
+            },
+            {
+              "type": "trust",
+              "delta": -1,
+              "reason": "觉得你不懂他真正在意什么"
+            }
           ],
           "spiritPowerChange": 5,
           "nextNode": "zhou_act2_d18_003",
@@ -1569,8 +1974,16 @@
           "description": "引导表达，触及核心",
           "isCorrect": true,
           "effects": [
-            { "type": "mood", "delta": 5, "reason": "被理解核心感受" },
-            { "type": "trust", "delta": 5, "reason": "你听懂了他没说出口的话" }
+            {
+              "type": "mood",
+              "delta": 5,
+              "reason": "被理解核心感受"
+            },
+            {
+              "type": "trust",
+              "delta": 5,
+              "reason": "你听懂了他没说出口的话"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhou_act2_d18_003",
@@ -1586,8 +1999,16 @@
           "description": "回避冲突，强化退缩",
           "isCorrect": false,
           "effects": [
-            { "type": "mood", "delta": 1, "reason": "暂时不用面对" },
-            { "type": "independence", "delta": -3, "reason": "回避强化了社交退缩" }
+            {
+              "type": "mood",
+              "delta": 1,
+              "reason": "暂时不用面对"
+            },
+            {
+              "type": "independence",
+              "delta": -3,
+              "reason": "回避强化了社交退缩"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhou_act2_d18_003",
@@ -1598,7 +2019,11 @@
           }
         }
       ],
-      "tags": ["choice", "psychology", "emotional-conflict"],
+      "tags": [
+        "choice",
+        "psychology",
+        "emotional-conflict"
+      ],
       "devNote": "教学：情感冲突——引导表达比表面安慰有效，帮老人命名情绪"
     },
     {
@@ -1628,7 +2053,14 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ],
+      "unlocks": [
+        {
+          "albumEntryId": "album_zhou_balance"
+        }
+      ]
     },
     {
       "id": "zhou_act2_d19_001",
@@ -1668,7 +2100,11 @@
       ],
       "nextNode": "zhou_act2_d19_002",
       "isCheckpoint": true,
-      "tags": ["psychology", "emotional-conflict", "fall-risk"],
+      "tags": [
+        "psychology",
+        "emotional-conflict",
+        "fall-risk"
+      ],
       "devNote": "Day 19 情感冲突高潮——藏轮椅硬走，安全vs尊严"
     },
     {
@@ -1696,8 +2132,16 @@
           "description": "放弃安全底线",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": -8, "reason": "左侧肌力不足硬走，跌倒风险极高" },
-            { "type": "trust", "delta": -3, "reason": "放任他冒险让他觉得不被在乎" }
+            {
+              "type": "health",
+              "delta": -8,
+              "reason": "左侧肌力不足硬走，跌倒风险极高"
+            },
+            {
+              "type": "trust",
+              "delta": -3,
+              "reason": "放任他冒险让他觉得不被在乎"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhou_act2_d19_003",
@@ -1713,8 +2157,16 @@
           "description": "强迫接受，无视尊严",
           "isCorrect": false,
           "effects": [
-            { "type": "mood", "delta": -8, "reason": "被强迫，尊严被践踏" },
-            { "type": "trust", "delta": -5, "reason": "觉得你只把他当病人不当人" }
+            {
+              "type": "mood",
+              "delta": -8,
+              "reason": "被强迫，尊严被践踏"
+            },
+            {
+              "type": "trust",
+              "delta": -5,
+              "reason": "觉得你只把他当病人不当人"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhou_act2_d19_003",
@@ -1730,10 +2182,26 @@
           "description": "平衡安全与尊严，折中方案",
           "isCorrect": true,
           "effects": [
-            { "type": "health", "delta": 8, "reason": "合理的辅具配置降低跌倒风险" },
-            { "type": "mood", "delta": 5, "reason": "被理解，尊严得到维护" },
-            { "type": "independence", "delta": 5, "reason": "室内仍能自主行走" },
-            { "type": "trust", "delta": 5, "reason": "你尊重他同时保护他" }
+            {
+              "type": "health",
+              "delta": 8,
+              "reason": "合理的辅具配置降低跌倒风险"
+            },
+            {
+              "type": "mood",
+              "delta": 5,
+              "reason": "被理解，尊严得到维护"
+            },
+            {
+              "type": "independence",
+              "delta": 5,
+              "reason": "室内仍能自主行走"
+            },
+            {
+              "type": "trust",
+              "delta": 5,
+              "reason": "你尊重他同时保护他"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhou_act2_d19_003",
@@ -1744,7 +2212,12 @@
           }
         }
       ],
-      "tags": ["choice", "psychology", "emotional-conflict", "fall-risk"],
+      "tags": [
+        "choice",
+        "psychology",
+        "emotional-conflict",
+        "fall-risk"
+      ],
       "devNote": "教学：安全vs尊严的平衡——分层使用辅具，重新定义辅具意义"
     },
     {
@@ -1774,7 +2247,14 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ],
+      "unlocks": [
+        {
+          "diaryEntryId": "zhou_diary_d19"
+        }
+      ]
     },
     {
       "id": "zhou_act2_d20_001",
@@ -1814,7 +2294,10 @@
       ],
       "nextNode": "zhou_act2_d20_002",
       "isCheckpoint": true,
-      "tags": ["psychology", "reconciliation"],
+      "tags": [
+        "psychology",
+        "reconciliation"
+      ],
       "devNote": "Day 20 和解——周爷爷主动接受轮椅出门"
     },
     {
@@ -1842,9 +2325,21 @@
           "description": "制度化巩固，尊重自主权",
           "isCorrect": true,
           "effects": [
-            { "type": "trust", "delta": 5, "reason": "尊重他的决定权" },
-            { "type": "mood", "delta": 5, "reason": "有了清晰的安排，安心" },
-            { "type": "independence", "delta": 3, "reason": "自主选择辅具使用场景" }
+            {
+              "type": "trust",
+              "delta": 5,
+              "reason": "尊重他的决定权"
+            },
+            {
+              "type": "mood",
+              "delta": 5,
+              "reason": "有了清晰的安排，安心"
+            },
+            {
+              "type": "independence",
+              "delta": 3,
+              "reason": "自主选择辅具使用场景"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhou_act2_d20_003",
@@ -1860,8 +2355,16 @@
           "description": "借机收紧，推翻折中方案",
           "isCorrect": false,
           "effects": [
-            { "type": "trust", "delta": -5, "reason": "觉得被套路了" },
-            { "type": "mood", "delta": -3, "reason": "刚建立的信任被推翻" }
+            {
+              "type": "trust",
+              "delta": -5,
+              "reason": "觉得被套路了"
+            },
+            {
+              "type": "mood",
+              "delta": -3,
+              "reason": "刚建立的信任被推翻"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhou_act2_d20_003",
@@ -1877,7 +2380,11 @@
           "description": "物质奖励而非心理巩固",
           "isCorrect": false,
           "effects": [
-            { "type": "mood", "delta": 2, "reason": "收到礼物开心" }
+            {
+              "type": "mood",
+              "delta": 2,
+              "reason": "收到礼物开心"
+            }
           ],
           "spiritPowerChange": 5,
           "nextNode": "zhou_act2_d20_003",
@@ -1888,7 +2395,11 @@
           }
         }
       ],
-      "tags": ["choice", "psychology", "reconciliation"],
+      "tags": [
+        "choice",
+        "psychology",
+        "reconciliation"
+      ],
       "devNote": "教学：巩固心理突破——制度化方案+尊重自主权参与决策"
     },
     {
@@ -1918,7 +2429,14 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["day-end"]
+      "tags": [
+        "day-end"
+      ],
+      "unlocks": [
+        {
+          "albumEntryId": "album_zhou_act2_complete"
+        }
+      ]
     },
     {
       "id": "zhou_act2_d21_001",
@@ -1958,7 +2476,9 @@
       ],
       "nextNode": "zhou_act2_d21_002",
       "isCheckpoint": true,
-      "tags": ["week-summary"],
+      "tags": [
+        "week-summary"
+      ],
       "devNote": "Day 21 第二幕总结"
     },
     {
@@ -1986,8 +2506,16 @@
           "description": "看到心理层面的成长",
           "isCorrect": true,
           "effects": [
-            { "type": "mood", "delta": 5, "reason": "被理解的温暖" },
-            { "type": "trust", "delta": 3, "reason": "你看到了他真正的成长" }
+            {
+              "type": "mood",
+              "delta": 5,
+              "reason": "被理解的温暖"
+            },
+            {
+              "type": "trust",
+              "delta": 3,
+              "reason": "你看到了他真正的成长"
+            }
           ],
           "spiritPowerChange": 10,
           "nextNode": "zhou_act2_d21_003",
@@ -2003,7 +2531,11 @@
           "description": "高估身体恢复",
           "isCorrect": false,
           "effects": [
-            { "type": "health", "delta": -2, "reason": "对恢复的误判可能导致第三幕冒进" }
+            {
+              "type": "health",
+              "delta": -2,
+              "reason": "对恢复的误判可能导致第三幕冒进"
+            }
           ],
           "spiritPowerChange": 0,
           "nextNode": "zhou_act2_d21_003",
@@ -2019,7 +2551,11 @@
           "description": "焦虑未来",
           "isCorrect": false,
           "effects": [
-            { "type": "mood", "delta": -2, "reason": "焦虑情绪传递给老人" }
+            {
+              "type": "mood",
+              "delta": -2,
+              "reason": "焦虑情绪传递给老人"
+            }
           ],
           "spiritPowerChange": 5,
           "nextNode": "zhou_act2_d21_003",
@@ -2030,7 +2566,11 @@
           }
         }
       ],
-      "tags": ["choice", "week-summary", "strategy"],
+      "tags": [
+        "choice",
+        "week-summary",
+        "strategy"
+      ],
       "devNote": "Day 21 第二幕总结选择——看到心理成长而非高估身体恢复"
     },
     {
@@ -2068,7 +2608,9 @@
           "typingSpeed": 40
         }
       ],
-      "tags": ["act-end"],
+      "tags": [
+        "act-end"
+      ],
       "devNote": "第二幕结束节点，为第三幕夜间风险铺垫"
     }
   ]

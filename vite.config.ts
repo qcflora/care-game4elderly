@@ -5,7 +5,7 @@ import { resolve } from 'path'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [vue()],
-  base: '/care-game4elderly/',
+  base: process.env.NODE_ENV === 'production' ? '/care-game4elderly/' : '/',
   resolve: {
     alias: {
       '@': resolve(__dirname, 'src'),
