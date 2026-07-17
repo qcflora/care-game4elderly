@@ -24,7 +24,7 @@
         <!-- 肖像区 - 大圆角 -->
         <div class="character-card__portrait">
           <img
-            :src="resolvePortrait(character.portrait)"
+            :src="character.portrait"
             :alt="character.nickname"
             class="character-card__img"
             @error="handleImgError"
@@ -69,7 +69,7 @@
         <div class="detail-sheet">
           <div class="detail-sheet__handle"></div>
           <div class="detail-sheet__portrait">
-            <img :src="resolvePortrait(selectedCharacter.portrait)" :alt="selectedCharacter.nickname" />
+            <img :src="selectedCharacter.portrait" :alt="selectedCharacter.nickname" @error="handleImgError" />
             <div class="detail-sheet__spirit">
               <div class="spirit-orb-lg" :style="{ background: selectedCharacter.spiritAppearance.color }"></div>
               <span>{{ selectedCharacter.spiritAppearance.name }}</span>
@@ -153,15 +153,17 @@ function getUnlockHint(character: CharacterConfig): string {
 
 function handleImgError(e: Event) {
   const img = e.target as HTMLImageElement;
+  // 显示fallback占位
   img.style.display = 'none';
+  const parent = img.parentElement;
+  if (parent && !parent.querySelector('.img-fallback')) {
+    const fallback = document.createElement('div');
+    fallback.className = 'img-fallback';
+    fallback.textContent = img.alt?.charAt(0) || '?';
+    parent.appendChild(fallback);
+  }
 }
 
-function resolvePortrait(portrait: string): string {
-  if (portrait.startsWith('/')) {
-    return `${import.meta.env.BASE_URL}${portrait.slice(1)}`;
-  }
-  return portrait;
-}
 </script>
 
 <style scoped>
@@ -267,6 +269,25 @@ function resolvePortrait(portrait: string): string {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+/* 图片加载失败时角色名首字占位 */
+.character-card__portrait .img-fallback,
+.detail-sheet__portrait .img-fallback {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--color-bg-secondary), var(--color-bg-card));
+  font-size: 56px;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-secondary);
+  opacity: 0.5;
+}
+
+.detail-sheet__portrait .img-fallback {
+  font-size: 72px;
 }
 
 .character-card__overlay {
