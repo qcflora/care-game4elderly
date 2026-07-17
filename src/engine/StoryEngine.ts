@@ -40,7 +40,11 @@ export class StoryEngine {
   /** 检查点回调 */
   private onCheckpoint?: (nodeId: string) => void;
   /** 解锁内容回调 */
-  private onUnlock?: (unlocks: ChoiceUnlock) => void;
+  private onUnlock?: (unlock: ChoiceUnlock) => void;
+
+  /** UI 过渡等待状态 — dayEnd/actEnd 时阻塞引擎直到 UI 过渡完成 */
+  private _waitingForTransition = false;
+  private _transitionResolve: (() => void) | null = null;
 
   /**
    * 绑定条件求值器的属性/Flag获取器
@@ -74,6 +78,27 @@ export class StoryEngine {
     this.onSpiritPowerChange = callbacks.onSpiritPowerChange;
     this.onCheckpoint = callbacks.onCheckpoint;
     this.onUnlock = callbacks.onUnlock;
+  }
+
+  /**
+   * 等待 UI 过渡完成（dayEnd/actEnd 时调用）
+   */
+  waitForTransition(): Promise<void> {
+    this._waitingForTransition = true;
+    return new Promise(resolve => {
+      this._transitionResolve = resolve;
+    });
+  }
+
+  /**
+   * 通知引擎 UI 过渡已完成，可以继续执行
+   */
+  resumeFromTransition(): void {
+    if (this._waitingForTransition && this._transitionResolve) {
+      this._transitionResolve();
+      this._transitionResolve = null;
+      this._waitingForTransition = false;
+    }
   }
 
   /**
@@ -275,8 +300,9 @@ export class StoryEngine {
         break;
 
       case 'dayEnd':
-        // 一天结束：结算 + 存档（后续流程由节点 nextNode 驱动）
+        // 一天结束：等待每日小结 UI 过渡完成后，再继续到下一个节点
         console.log(`[StoryEngine] Day End: Day ${node.day}`);
+        await this.waitForTransition();
         if (node.nextNode) {
           await this.enterNode(node.nextNode);
         } else {
@@ -289,8 +315,9 @@ export class StoryEngine {
         break;
 
       case 'actEnd':
-        // 一幕结束，过渡到下一幕
+        // 一幕结束：等待幕间过渡 UI 完成后，再过渡到下一幕
         console.log(`[StoryEngine] Act End: Act ${node.act}`);
+        await this.waitForTransition();
         if (node.nextNode) {
           await this.enterNode(node.nextNode);
         } else {

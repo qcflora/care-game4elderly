@@ -477,11 +477,11 @@ export function useGameController() {
    * 只重新获取引擎实例并绑定回调
    */
   function resumeGame(character: CharacterConfig): void {
-    // 重置 UI 状态
+    // 重置 UI 状态（保留 currentChoices — 如果引擎停在 choice 节点，返回后仍可见选项）
     isPlayingDialogue.value = false;
     isShowingFeedback.value = false;
     currentDialogue.value = null;
-    currentChoices.value = [];
+    // currentChoices 保留不清除
     currentFeedback.value = null;
     dailyEffects = [];
     dailySpiritDelta = 0;
@@ -493,6 +493,13 @@ export function useGameController() {
     setupEngineCallbacks(engine);
 
     __DEV__ && console.log('[GameController] 恢复游戏，当前 day=' + gameStore.currentDay + ' act=' + gameStore.currentAct);
+  }
+
+  /**
+   * 通知引擎 UI 过渡已完成（每日小结/幕间过渡关闭后调用）
+   */
+  function resumeFromTransition(): void {
+    engine?.resumeFromTransition();
   }
 
   return {
@@ -522,5 +529,6 @@ export function useGameController() {
     dispose,
     pause,
     resumeGame,
+    resumeFromTransition,
   };
 }

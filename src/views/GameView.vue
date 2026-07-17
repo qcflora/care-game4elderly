@@ -12,7 +12,7 @@
     <div class="game-view__scene" :class="`game-view__scene--${sceneClass}`">
       <Transition name="scene-fade" mode="out-in">
         <img
-          v-if="sceneImagePath"
+          v-if="sceneImagePath && !sceneImgError"
           :key="sceneImagePath"
           :src="sceneImagePath"
           :alt="currentSceneName"
@@ -22,6 +22,10 @@
           @error="handleSceneImgError"
         />
       </Transition>
+      <div v-if="sceneImgError" class="game-view__scene-fallback">
+        <span class="scene-fallback__label">{{ currentSceneName }}</span>
+        <span class="scene-fallback__hint">场景插画加载中</span>
+      </div>
       <div class="game-view__scene-overlay" v-if="currentSceneName">
         <span class="game-view__scene-label">{{ currentSceneName }}</span>
       </div>
@@ -182,6 +186,7 @@ const montageRef = ref<InstanceType<typeof EndingMontage> | null>(null);
 const tutorialRef = ref<InstanceType<typeof TutorialOverlay> | null>(null);
 const isShowingSummary = ref(false);
 const isShowingOverlay = ref(false);
+const sceneImgError = ref(false);
 
 // RAF 打字机状态
 let rafId: number | null = null;
@@ -225,6 +230,8 @@ const currentSceneName = computed(() => {
 const sceneImagePath = computed(() => {
   const scene = controller.currentSceneDesc.value;
   if (!scene) return '';
+  // 场景变化时重置错误状态
+  sceneImgError.value = false;
   return `${import.meta.env.BASE_URL}images/scenes/${scene}.jpg`;
 });
 
@@ -312,7 +319,7 @@ function goSelect() {
 }
 
 function handleSceneImgError() {
-  // 图片加载失败时静默处理
+  sceneImgError.value = true;
 }
 
 /** RAF 批量打字机效果 */
@@ -371,30 +378,35 @@ watch(() => controller.pendingUnlockEvent.value, (event) => {
   }
 });
 
-// 每日小结
+// 每日小结 — 关闭后通知引擎继续
 watch(() => controller.pendingDaySummary.value, async (summary) => {
   if (summary && summaryRef.value && !isShowingSummary.value) {
     isShowingSummary.value = true;
     await summaryRef.value.show(summary.day, summary.effects, summary.spiritDelta);
     isShowingSummary.value = false;
+    controller.pendingDaySummary.value = null;
+    controller.resumeFromTransition();
   }
 });
 
-// 幕间过渡
+// 幕间过渡 — 关闭后通知引擎继续
 watch(() => controller.pendingActTransition.value, async (event) => {
   if (event && actTransitionRef.value && !isShowingOverlay.value) {
     isShowingOverlay.value = true;
     await actTransitionRef.value.show(event.act);
     isShowingOverlay.value = false;
+    controller.pendingActTransition.value = null;
+    controller.resumeFromTransition();
   }
 });
 
-// 结局回忆蒙太奇
+// 结局回忆蒙太奇 — 关闭后清除状态
 watch(() => controller.pendingEndingMontage.value, async (event) => {
   if (event && montageRef.value && !isShowingOverlay.value) {
     isShowingOverlay.value = true;
     await montageRef.value.show(event.texts);
     isShowingOverlay.value = false;
+    controller.pendingEndingMontage.value = null;
   }
 });
 
@@ -503,6 +515,30 @@ onUnmounted(() => {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   letter-spacing: 0.5px;
+}
+
+.game-view__scene-fallback {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #E8E4F0 0%, #F0ECE8 100%);
+  gap: var(--spacing-sm);
+}
+
+.scene-fallback__label {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  opacity: 0.6;
+}
+
+.scene-fallback__hint {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  opacity: 0.5;
 }
 
 .game-view__spirit {
