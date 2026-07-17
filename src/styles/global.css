@@ -120,6 +120,41 @@ html, body, #app {
   backface-visibility: hidden;
 }
 
+/* 动态水彩背景 - 缓慢流动的径向渐变 */
+body::before {
+  content: '';
+  position: fixed;
+  inset: -50%;
+  background:
+    radial-gradient(circle at 30% 30%, rgba(242, 183, 5, 0.25) 0%, transparent 50%),
+    radial-gradient(circle at 70% 60%, rgba(199, 125, 255, 0.18) 0%, transparent 50%),
+    radial-gradient(circle at 50% 80%, rgba(78, 205, 196, 0.15) 0%, transparent 50%);
+  mix-blend-mode: soft-light;
+  opacity: 0.3;
+  filter: blur(80px);
+  animation: watercolorFlow 20s linear infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes watercolorFlow {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(3%, 2%) scale(1.05);
+  }
+  50% {
+    transform: translate(-2%, 4%) scale(1);
+  }
+  75% {
+    transform: translate(2%, -3%) scale(1.03);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
 /* 水彩纹理背景 - 更 subtle */
 .watercolor-bg {
   position: relative;

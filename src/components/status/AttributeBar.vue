@@ -1,5 +1,5 @@
 <template>
-  <div class="attribute-bar" :class="[`attribute-bar--${type}`, { 'is-changed': isChanged }]">
+  <div class="attribute-bar" :class="[`attribute-bar--${type}`, { 'is-changed': isChanged, 'is-bouncing': isBouncing, 'bounce-up': bounceDirection === 'up', 'bounce-down': bounceDirection === 'down' }]">
     <div class="attribute-bar__label">
       <span class="attribute-bar__icon" :class="`icon--${type}`">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -40,7 +40,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue';
+import { computed, ref, watch } from 'vue';
 import type { AttributeType } from '@/types/attribute';
 
 const props = defineProps<{
@@ -50,6 +50,17 @@ const props = defineProps<{
 }>();
 
 const percent = computed(() => Math.max(0, Math.min(100, props.value)));
+
+const isBouncing = ref(false);
+const bounceDirection = ref<'up' | 'down'>('up');
+
+watch(() => props.value, (newVal, oldVal) => {
+  if (oldVal !== undefined && newVal !== oldVal) {
+    bounceDirection.value = newVal > oldVal ? 'up' : 'down';
+    isBouncing.value = true;
+    setTimeout(() => { isBouncing.value = false; }, 500);
+  }
+});
 
 const nameMap: Record<string, string> = {
   health: '健康',
@@ -159,5 +170,23 @@ const nameMap: Record<string, string> = {
 
 .attribute-bar.is-changed {
   animation: attributeFlash 1s ease;
+}
+
+.attribute-bar.is-bouncing {
+  animation: attributeBounce 0.5s ease-out;
+}
+
+.attribute-bar--health.is-bouncing.bounce-up { --bounce-shadow: 0 0 12px rgba(239, 83, 80, 0.45); }
+.attribute-bar--mood.is-bouncing.bounce-up { --bounce-shadow: 0 0 12px rgba(255, 183, 77, 0.45); }
+.attribute-bar--independence.is-bouncing.bounce-up { --bounce-shadow: 0 0 12px rgba(79, 195, 247, 0.45); }
+.attribute-bar--trust.is-bouncing.bounce-up { --bounce-shadow: 0 0 12px rgba(206, 147, 216, 0.45); }
+
+.attribute-bar.is-bouncing.bounce-down { --bounce-shadow: 0 0 8px rgba(120, 120, 120, 0.25); }
+
+@keyframes attributeBounce {
+  0% { transform: scale(1); box-shadow: none; }
+  30% { transform: scale(1.04); box-shadow: var(--bounce-shadow); }
+  60% { transform: scale(0.98); box-shadow: var(--bounce-shadow); }
+  100% { transform: scale(1); box-shadow: none; }
 }
 </style>

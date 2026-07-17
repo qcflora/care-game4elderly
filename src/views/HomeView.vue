@@ -1,5 +1,6 @@
 <template>
   <div class="home-view watercolor-bg">
+    <ParticleField variant="home" />
     <div class="home-view__content">
       <!-- 精灵核心视觉 -->
       <div class="home-view__hero">
@@ -39,6 +40,7 @@
 import { ref, onMounted } from 'vue';
 import { useRouter } from 'vue-router';
 import { useSaveStore } from '@/stores/saveStore';
+import ParticleField from '@/components/effects/ParticleField.vue';
 
 const router = useRouter();
 const saveStore = useSaveStore();
@@ -164,6 +166,23 @@ function continueGame() {
   font-weight: var(--font-weight-bold);
   transition: all var(--transition-fast);
   width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.home-view__btn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(242, 183, 5, 0.25) 0%, transparent 70%);
+  opacity: 0;
+  transform: scale(0.5);
+  transition: none;
+  pointer-events: none;
+}
+
+.home-view__btn:active::after {
+  animation: rippleBurst 0.6s ease-out;
 }
 
 .home-view__btn:hover {
@@ -238,5 +257,10 @@ function continueGame() {
 @keyframes ringRotate {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+@keyframes rippleBurst {
+  0% { opacity: 0.6; transform: scale(0.3); }
+  100% { opacity: 0; transform: scale(2); }
 }
 </style>

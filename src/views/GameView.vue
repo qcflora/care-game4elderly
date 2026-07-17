@@ -1,5 +1,6 @@
 <template>
   <GameContainer :show-status-bar="true">
+    <ParticleField variant="game" />
     <!-- 属性栏区域 -->
     <div class="game-view__attributes">
       <AttributeBar type="health" :value="attributeStore.attributes.health" />
@@ -17,6 +18,7 @@
           :src="sceneImagePath"
           :alt="currentSceneName"
           class="game-view__scene-img"
+          :class="{ 'is-animating': !sceneImgError }"
           loading="eager"
           decoding="async"
           @error="handleSceneImgError"
@@ -31,7 +33,7 @@
       </div>
       <Transition name="spirit-pop">
         <div class="game-view__spirit" v-if="isSpiritSpeaking">
-          <SpiritAvatar emotion="cheerful" :color="spiritColor" />
+          <SpiritAvatar :emotion="spiritEmotion" :color="spiritColor" />
         </div>
       </Transition>
     </div>
@@ -86,7 +88,7 @@
             {{ feedbackIcon }}
           </div>
           <div class="feedback-card__spirit">
-            <SpiritAvatar emotion="cheerful" :color="spiritColor" />
+            <SpiritAvatar :emotion="spiritEmotion" :color="spiritColor" />
           </div>
           <p class="feedback-card__dialogue">{{ controller.currentFeedback.value?.spiritDialogue }}</p>
           <p class="feedback-card__explanation" v-if="controller.currentFeedback.value?.explanation">
@@ -163,6 +165,7 @@ import GameContainer from '@/components/layout/GameContainer.vue';
 import AttributeBar from '@/components/status/AttributeBar.vue';
 import SpiritAvatar from '@/components/spirit/SpiritAvatar.vue';
 import AttributeFloaters from '@/components/feedback/AttributeFloaters.vue';
+import ParticleField from '@/components/effects/ParticleField.vue';
 import UnlockToast from '@/components/feedback/UnlockToast.vue';
 import DailySummary from '@/components/feedback/DailySummary.vue';
 import ActTransition from '@/components/feedback/ActTransition.vue';
@@ -196,6 +199,17 @@ const TYPING_SPEED = 45;
 
 const spiritColor = computed(() => {
   return gameStore.currentCharacter?.spiritAppearance?.color ?? '#F2B705';
+});
+
+const spiritEmotion = computed(() => {
+  const d = controller.currentDialogue.value;
+  if (!d || d.speaker !== 'spirit') return 'gentle';
+  const text = d.text;
+  if (text.includes('恭喜') || text.includes('太棒了') || text.includes('很好')) return 'celebrating';
+  if (text.includes('思考') || text.includes('考虑') || text.includes('建议')) return 'thinking';
+  if (text.includes('担心') || text.includes('注意') || text.includes('不太好')) return 'concerned';
+  if (text.includes('你好') || text.includes('加油') || text.includes('相信')) return 'cheerful';
+  return 'gentle';
 });
 
 /** 场景中文映射 */
@@ -493,9 +507,13 @@ onUnmounted(() => {
   height: 100%;
   object-fit: cover;
   object-position: center;
-  will-change: transform, opacity;
+  will-change: transform;
   transform: translateZ(0);
   border-radius: var(--radius-xl);
+}
+
+.game-view__scene-img.is-animating {
+  animation: kenBurns 20s ease-in-out infinite alternate;
 }
 
 .game-view__scene-overlay {
@@ -707,6 +725,21 @@ onUnmounted(() => {
   box-shadow: 0 4px 20px rgba(242, 183, 5, 0.15);
 }
 
+.choice-btn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(242, 183, 5, 0.2) 0%, transparent 70%);
+  opacity: 0;
+  transform: scale(0.5);
+  transition: none;
+  pointer-events: none;
+}
+
+.choice-btn:active::after {
+  animation: rippleBurst 0.5s ease-out;
+}
+
 .choice-btn__text {
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-medium);
@@ -802,6 +835,23 @@ onUnmounted(() => {
   box-shadow: 0 4px 16px rgba(242, 183, 5, 0.3);
   transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.feedback-card__btn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(242, 183, 5, 0.25) 0%, transparent 70%);
+  opacity: 0;
+  transform: scale(0.5);
+  transition: none;
+  pointer-events: none;
+}
+
+.feedback-card__btn:active::after {
+  animation: rippleBurst 0.6s ease-out;
 }
 
 .feedback-card__btn:active {
@@ -1155,5 +1205,15 @@ onUnmounted(() => {
 @keyframes spiritPulse {
   0%, 100% { transform: scale(1); opacity: 0.8; }
   50% { transform: scale(1.1); opacity: 1; }
+}
+
+@keyframes kenBurns {
+  0% { transform: scale(1) translate(0, 0); }
+  100% { transform: scale(1.08) translate(-1%, -1%); }
+}
+
+@keyframes rippleBurst {
+  0% { opacity: 0.6; transform: scale(0.3); }
+  100% { opacity: 0; transform: scale(2); }
 }
 </style>

@@ -3,6 +3,11 @@
     <div class="spirit-avatar__body" :style="{ '--spirit-color': color }">
       <div class="spirit-orb"></div>
       <div class="spirit-glow"></div>
+      <div class="spirit-thought-bubble" v-if="emotion === 'thinking'">
+        <span class="spirit-thought-bubble__dot"></span>
+        <span class="spirit-thought-bubble__dot"></span>
+        <span class="spirit-thought-bubble__dot"></span>
+      </div>
     </div>
     <div class="spirit-avatar__bubble" v-if="text">
       <p class="spirit-avatar__text">{{ text }}</p>
@@ -89,6 +94,64 @@ const props = withDefaults(defineProps<{
   box-shadow: 0 0 12px color-mix(in srgb, var(--spirit-color, #FF8A65) 40%, transparent);
 }
 
+.spirit-avatar--concerned .spirit-orb {
+  background: radial-gradient(circle at 35% 35%, #B39DDB, #7E57C2 60%, #4527A0);
+  box-shadow: 0 0 12px rgba(126, 87, 194, 0.4);
+}
+
+.spirit-avatar--thinking .spirit-orb {
+  background: radial-gradient(circle at 35% 35%, #80DEEA, #26C6DA 60%, #00838F);
+  box-shadow: 0 0 12px rgba(38, 198, 218, 0.4);
+  animation: spiritFloat 2.2s ease-in-out infinite;
+}
+
+.spirit-avatar--celebrating .spirit-orb {
+  background: radial-gradient(circle at 35% 35%, #FFF59D, #FFD54F 60%, #FF8F00);
+  box-shadow: 0 0 20px rgba(255, 213, 79, 0.6);
+  animation: spiritFloat 1.8s ease-in-out infinite;
+}
+
+.spirit-avatar--cheerful .spirit-glow {
+  animation: spiritGlowPulse 1.8s ease-in-out infinite;
+}
+
+.spirit-avatar--gentle .spirit-glow {
+  animation: spiritGlowSoft 3s ease-in-out infinite;
+}
+
+.spirit-avatar--concerned .spirit-glow {
+  animation: spiritGlowSoft 3.5s ease-in-out infinite;
+}
+
+.spirit-avatar--thinking .spirit-glow {
+  animation: spiritGlowSoft 2.5s ease-in-out infinite;
+}
+
+.spirit-avatar--celebrating .spirit-glow {
+  animation: spiritFlash 0.6s ease-in-out infinite;
+}
+
+.spirit-thought-bubble {
+  position: absolute;
+  top: -4px;
+  right: -8px;
+  display: flex;
+  gap: 2px;
+  z-index: 2;
+}
+
+.spirit-thought-bubble__dot {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--spirit-color, #26C6DA);
+  opacity: 0.7;
+  animation: thoughtDot 1.2s ease-in-out infinite;
+}
+
+.spirit-thought-bubble__dot:nth-child(2) { animation-delay: 0.2s; }
+.spirit-thought-bubble__dot:nth-child(3) { animation-delay: 0.4s; }
+
 .spirit-avatar__bubble {
   background: var(--color-spirit-power-light);
   border: 2px solid var(--color-spirit-power);
@@ -118,5 +181,20 @@ const props = withDefaults(defineProps<{
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(4px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes spiritGlowSoft {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(1.15); }
+}
+
+@keyframes spiritFlash {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.3); }
+}
+
+@keyframes thoughtDot {
+  0%, 100% { transform: translateY(0); opacity: 0.4; }
+  50% { transform: translateY(-3px); opacity: 1; }
 }
 </style>
